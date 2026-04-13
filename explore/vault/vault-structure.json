@@ -1,0 +1,22 @@
+{
+  "version": "1.0.0",
+  "plugin": "aireadylife-explore",
+  "structure": {
+    "subfolders": [
+      {"folder": "00_current", "description": "Active travel state and upcoming trip details"},
+      {"folder": "01_trips", "description": "Booked and past trips with itineraries and receipts"},
+      {"folder": "02_wishlist", "description": "Destination wishlist with budget estimates"},
+      {"folder": "03_briefs", "description": "Monthly explore review briefs"},
+      {"folder": "04_archive", "description": "Past trips by year"}
+    ]
+  },
+  "domains": [
+    {"id": "documents", "folder": "documents", "agent": "explore-agent", "description": "Passport scans, visa copies, Global Entry and NEXUS cards, travel insurance policies per trip"},
+    {"id": "trips", "folder": "trips", "agent": "explore-agent", "description": "Upcoming booked trips with itinerary, confirmation numbers, and preparation checklists; past trip archives"},
+    {"id": "wishlist", "folder": "wishlist", "agent": "explore-agent", "description": "Destination ideas with rough budget estimates, timing targets, and travel party details"}
+  ],
+  "config": {
+    "template": "vault/explore/config.md",
+    "fields": ["travelers", "passport_expiry_dates", "global_entry_expiry", "travel_insurance_provider", "home_airport"]
+  }
+}

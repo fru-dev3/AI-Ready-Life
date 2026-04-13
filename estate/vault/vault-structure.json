@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0",
+  "plugin": "aireadylife-estate",
+  "structure": {
+    "subfolders": [
+      {"folder": "00_current", "description": "Active portfolio state and current property status"},
+      {"folder": "01_cashflow", "description": "Monthly income and expense records by property"},
+      {"folder": "02_maintenance", "description": "Open and completed maintenance requests, vendor contacts"},
+      {"folder": "03_briefs", "description": "Monthly portfolio review briefs"},
+      {"folder": "04_archive", "description": "Prior years by year"}
+    ]
+  },
+  "domains": [
+    {"id": "properties", "folder": "properties", "agent": "estate-agent", "description": "Individual property files — lease documents, photos, purchase docs, mortgage statements, deed"},
+    {"id": "cashflow", "folder": "cashflow", "agent": "estate-agent", "description": "Monthly income and expense records by property, NOI calculations, net cash flow history"},
+    {"id": "maintenance", "folder": "maintenance", "agent": "estate-agent", "description": "Open maintenance requests, vendor contacts and quotes, repair history, warranty records"},
+    {"id": "documents", "folder": "documents", "agent": "estate-agent", "description": "Insurance declarations pages, mortgage statements, property tax records, HOA documents"},
+    {"id": "tenants", "folder": "tenants", "agent": "estate-agent", "description": "Lease agreements, payment history, tenant communications, security deposit records"}
+  ],
+  "config": {
+    "template": "vault/estate/config.md",
+    "fields": ["properties", "mortgage_servicers", "insurance_carriers", "property_tax_counties", "tenant_names", "lease_end_dates"]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "@aireadylife/insurance-plugin",
+  "version": "1.0.0",
+  "description": "AI Ready Life — Insurance Plugin: AI agent for insurance portfolio management",
+  "type": "module",
+  "main": "index.js",
+  "bin": { "aireadylife-insurance": "index.js" },
+  "scripts": { "start": "node index.js", "demo": "VAULT_MODE=demo node index.js" },
+  "keywords": ["mcp", "claude", "ai", "insurance", "coverage", "policies", "risk", "aireadylife"],
+  "author": "fru.dev",
+  "license": "MIT",
+  "dependencies": { "@modelcontextprotocol/sdk": "^1.0.0" },
+  "engines": { "node": ">=18.0.0" }
+}

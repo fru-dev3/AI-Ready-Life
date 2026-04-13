@@ -1,0 +1,23 @@
+{
+  "version": "1.0.0",
+  "plugin": "aireadylife-home",
+  "structure": {
+    "subfolders": [
+      {"folder": "00_current", "description": "Active home state, open maintenance list, and current expenses"},
+      {"folder": "01_maintenance", "description": "Open and completed maintenance tasks, vendor contacts"},
+      {"folder": "02_expenses", "description": "Monthly home expense records by category"},
+      {"folder": "03_briefs", "description": "Monthly home review briefs"},
+      {"folder": "04_archive", "description": "Prior years by year"}
+    ]
+  },
+  "domains": [
+    {"id": "maintenance", "folder": "maintenance", "agent": "home-agent", "description": "Open and completed maintenance tasks, vendor contacts and quotes, repair history, appliance warranty records"},
+    {"id": "expenses", "folder": "expenses", "agent": "home-agent", "description": "Monthly home expense tracking by category — rent/mortgage, utilities, cleaning, internet, repairs"},
+    {"id": "seasonal", "folder": "seasonal", "agent": "home-agent", "description": "Seasonal task checklists by quarter — spring prep, summer, fall prep, winter prep"},
+    {"id": "documents", "folder": "documents", "agent": "home-agent", "description": "Lease agreement, HOA documents, home warranties, renters or homeowners insurance declarations"}
+  ],
+  "config": {
+    "template": "vault/home/config.md",
+    "fields": ["home_type", "address", "monthly_payment", "landlord_or_servicer", "lease_end_date", "maintenance_contacts"]
+  }
+}

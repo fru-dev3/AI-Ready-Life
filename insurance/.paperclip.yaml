@@ -1,0 +1,6 @@
+schema: paperclip/v1
+
+plugin:
+  brandColor: "#8B3A3A"
+  description: "2 AI agents that manage all your insurance policies — health, life, auto, home/renters, umbrella, and more. Renewal tracking, coverage gap analysis, and claims management. 9 skills."
+  requireBoardApprovalForNewAgents: false

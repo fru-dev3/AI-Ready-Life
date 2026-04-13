@@ -1,0 +1,6 @@
+schema: paperclip/v1
+
+plugin:
+  brandColor: "#8B6B4A"
+  description: "2 AI agents that manage your rental property portfolio — cash flow tracking, tenant management, maintenance, insurance, property tax, and investment performance. 13 skills. For individual real estate investors."
+  requireBoardApprovalForNewAgents: false

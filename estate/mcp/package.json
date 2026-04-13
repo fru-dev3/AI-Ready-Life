@@ -1,0 +1,14 @@
+{
+  "name": "@aireadylife/estate-plugin",
+  "version": "1.0.0",
+  "description": "AI Ready Life — Estate Plugin: AI agent for rental property portfolio management",
+  "type": "module",
+  "main": "index.js",
+  "bin": { "aireadylife-estate": "index.js" },
+  "scripts": { "start": "node index.js", "demo": "VAULT_MODE=demo node index.js" },
+  "keywords": ["mcp", "claude", "ai", "real-estate", "rental", "property", "cash-flow", "aireadylife"],
+  "author": "fru.dev",
+  "license": "MIT",
+  "dependencies": { "@modelcontextprotocol/sdk": "^1.0.0" },
+  "engines": { "node": ">=18.0.0" }
+}
