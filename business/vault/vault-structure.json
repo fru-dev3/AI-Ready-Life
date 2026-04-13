@@ -1,0 +1,20 @@
+{
+  "version": "1.0.0",
+  "plugin": "aireadylife-business",
+  "structure": {
+    "subfolders": [
+      {"folder": "01_revenue", "description": "Invoices, payment records, revenue by stream"},
+      {"folder": "02_expenses", "description": "Receipts and categorized expense reports"},
+      {"folder": "03_compliance", "description": "Annual reports, registered agent, EIN docs, operating agreements"},
+      {"folder": "04_payroll", "description": "Owner distributions, contractor payments, 1099 preparation"},
+      {"folder": "05_contracts", "description": "Active contracts, SOWs, NDAs"}
+    ]
+  },
+  "domains": [
+    {"id": "revenue", "folder": "revenue", "agent": "business-agent", "description": "Invoices, payment records, and revenue tracking by stream and client"},
+    {"id": "expenses", "folder": "expenses", "agent": "business-agent", "description": "Business expense receipts organized by category with deductibility notes"},
+    {"id": "compliance", "folder": "compliance", "agent": "business-agent", "description": "State annual reports, registered agent confirmations, EIN letters, operating agreements"},
+    {"id": "payroll", "folder": "payroll", "agent": "business-agent", "description": "Owner draw and distribution records, contractor payment history, 1099 preparation"},
+    {"id": "contracts", "folder": "contracts", "agent": "business-agent", "description": "Active client contracts, SOWs with milestone tracking, NDAs, and renewal dates"}
+  ]
+}

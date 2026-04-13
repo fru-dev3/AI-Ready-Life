@@ -1,0 +1,5 @@
+schema: paperclip/v1
+plugin:
+  brandColor: "#2C4A7B"
+  description: "2 AI agents for business operations: LLC/entity revenue tracking, expense management, compliance deadlines, and monthly P&L. 10 skills."
+  requireBoardApprovalForNewAgents: false

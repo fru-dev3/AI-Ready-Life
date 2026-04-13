@@ -1,0 +1,18 @@
+{
+  "version": "1.0.0",
+  "plugin": "aireadylife-calendar",
+  "structure": {
+    "subfolders": [
+      {"folder": "01_events", "description": "Key event archive by month"},
+      {"folder": "02_deadlines", "description": "Cross-domain deadline registry"},
+      {"folder": "03_focus-time", "description": "Deep work audit history"},
+      {"folder": "04_reviews", "description": "Weekly and quarterly review notes"}
+    ]
+  },
+  "domains": [
+    {"id": "events", "folder": "events", "agent": "calendar-agent", "description": "Key events archive organized by month — interviews, appointments, milestones"},
+    {"id": "deadlines", "folder": "deadlines", "agent": "calendar-agent", "description": "Cross-domain deadline registry: tax, business, benefits, wealth, career deadlines"},
+    {"id": "focus-time", "folder": "focus-time", "agent": "calendar-agent", "description": "Weekly deep work block audit — hours logged vs. target, fragmentation scoring"},
+    {"id": "reviews", "folder": "reviews", "agent": "calendar-agent", "description": "Weekly review notes and quarterly priority alignment documents"}
+  ]
+}

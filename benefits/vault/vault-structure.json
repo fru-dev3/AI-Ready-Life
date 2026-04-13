@@ -1,0 +1,20 @@
+{
+  "version": "1.0.0",
+  "plugin": "aireadylife-benefits",
+  "structure": {
+    "subfolders": [
+      {"folder": "01_retirement", "description": "401k statements and employer match records"},
+      {"folder": "02_hsa", "description": "HSA statements, investment elections, and receipts"},
+      {"folder": "03_coverage", "description": "Insurance cards, SBCs, EOBs, and coverage docs"},
+      {"folder": "04_enrollment", "description": "Annual enrollment choices and beneficiary forms"},
+      {"folder": "05_documents", "description": "All benefit documents organized by year"}
+    ]
+  },
+  "domains": [
+    {"id": "retirement", "folder": "retirement", "agent": "benefits-agent", "description": "401k statements, employer match records, contribution history, investment elections"},
+    {"id": "hsa", "folder": "hsa", "agent": "benefits-agent", "description": "HSA statements, investment threshold tracking, qualified expense receipts"},
+    {"id": "coverage", "folder": "coverage", "agent": "benefits-agent", "description": "Health, dental, vision insurance cards, SBCs, EOBs, coverage comparisons"},
+    {"id": "enrollment", "folder": "enrollment", "agent": "benefits-agent", "description": "Annual open enrollment decisions, beneficiary designations, plan elections"},
+    {"id": "documents", "folder": "documents", "agent": "benefits-agent", "description": "All benefit documents organized by year for audit completeness"}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "@aireadylife/benefits-plugin",
+  "version": "1.0.0",
+  "description": "AI Ready Life — Benefits Plugin: 401k, HSA, coverage, and open enrollment management",
+  "type": "module",
+  "main": "index.js",
+  "bin": { "aireadylife-benefits": "index.js" },
+  "scripts": { "start": "node index.js", "demo": "VAULT_MODE=demo node index.js" },
+  "keywords": ["mcp", "claude", "ai", "benefits", "401k", "hsa", "aireadylife"],
+  "author": "fru.dev",
+  "license": "MIT",
+  "dependencies": { "@modelcontextprotocol/sdk": "^1.0.0" },
+  "engines": { "node": ">=18.0.0" }
+}
