@@ -1,0 +1,6 @@
+schema: paperclip/v1
+
+plugin:
+  brandColor: "#8B3A6B"
+  description: "1 AI agent that manages your personal relationships — birthday and milestone tracking, relationship health scores, check-in reminders, and weekly outreach queue. Everything runs locally. Private. On your machine."
+  requireBoardApprovalForNewAgents: false

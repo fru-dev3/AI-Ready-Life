@@ -1,0 +1,23 @@
+{
+  "version": "1.0.0",
+  "plugin": "aireadylife-realestate",
+  "structure": {
+    "subfolders": [
+      {"folder": "00_current", "description": "Active market snapshots and current strategy"},
+      {"folder": "01_market", "description": "Market reports by city and date"},
+      {"folder": "02_analysis", "description": "Buy vs. rent worksheets and property evaluation models"},
+      {"folder": "03_briefs", "description": "Monthly real estate review briefs"},
+      {"folder": "04_archive", "description": "Prior year reports by market"}
+    ]
+  },
+  "domains": [
+    {"id": "market", "folder": "market", "agent": "real-estate-agent", "description": "Market reports, Zillow/Redfin data, affordability metrics — median price, rent, mortgage rates by city"},
+    {"id": "analysis", "folder": "analysis", "agent": "real-estate-agent", "description": "Buy vs. rent worksheets, property evaluation models, cash flow projections"},
+    {"id": "properties", "folder": "properties", "agent": "real-estate-agent", "description": "Potential acquisitions being evaluated — address, price, estimated cash flow, decision status"},
+    {"id": "strategy", "folder": "strategy", "agent": "real-estate-agent", "description": "Portfolio goal documents, target market criteria, acquisition timeline"}
+  ],
+  "config": {
+    "template": "vault/real-estate/config.md",
+    "fields": ["target_markets", "acquisition_criteria", "portfolio_goal", "down_payment_available_date", "primary_residence_situation", "cap_rate_floor"]
+  }
+}

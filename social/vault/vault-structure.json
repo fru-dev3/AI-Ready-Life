@@ -1,0 +1,23 @@
+{
+  "version": "1.0.0",
+  "plugin": "aireadylife-social",
+  "structure": {
+    "subfolders": [
+      {"folder": "00_current", "description": "Active contact list and current relationship health"},
+      {"folder": "01_contacts", "description": "Contact profiles by tier with birthday and notes"},
+      {"folder": "02_birthdays", "description": "Birthday and milestone calendar by month"},
+      {"folder": "03_briefs", "description": "Weekly social review briefs"},
+      {"folder": "04_archive", "description": "Outreach log history by year"}
+    ]
+  },
+  "domains": [
+    {"id": "contacts", "folder": "contacts", "agent": "social-agent", "description": "Key relationships organized by tier — close friends, family, professional, acquaintances — with birthday and last-contact date"},
+    {"id": "birthdays", "folder": "birthdays", "agent": "social-agent", "description": "Upcoming birthdays and milestones organized by month with suggested actions"},
+    {"id": "outreach", "folder": "outreach", "agent": "social-agent", "description": "Outreach log, planned reconnections, and completed check-ins with notes"},
+    {"id": "events", "folder": "events", "agent": "social-agent", "description": "Upcoming social events, gatherings, and commitments with RSVPs"}
+  ],
+  "config": {
+    "template": "vault/social/config.md",
+    "fields": ["contact_list", "tier_definitions", "checkin_cadence_by_tier", "health_score_thresholds", "birthday_alert_days"]
+  }
+}

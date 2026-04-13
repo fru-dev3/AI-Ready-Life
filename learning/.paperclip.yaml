@@ -1,0 +1,6 @@
+schema: paperclip/v1
+
+plugin:
+  brandColor: "#8B7B1A"
+  description: "1 AI agent that manages your skill development — active courses, reading list, certifications, and learning goals. Tracks progress, flags falling-behind timelines, and surfaces weekly learning briefs. Everything runs locally. Private. On your machine."
+  requireBoardApprovalForNewAgents: false

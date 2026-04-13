@@ -1,0 +1,6 @@
+schema: paperclip/v1
+
+plugin:
+  brandColor: "#3A6B3A"
+  description: "1 AI agent that manages your document inventory and subscriptions — tracks expiring IDs, memberships, and subscriptions to cancel, and maintains a complete document checklist. Monthly reviews. Everything runs locally. Private. On your machine."
+  requireBoardApprovalForNewAgents: false

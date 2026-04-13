@@ -1,0 +1,25 @@
+{
+  "version": "1.0.0",
+  "plugin": "aireadylife-vision",
+  "structure": {
+    "subfolders": [
+      {"folder": "00_current", "description": "Active vision document and current OKRs"},
+      {"folder": "01_goals", "description": "Quarterly OKR history by year/quarter"},
+      {"folder": "02_scorecard", "description": "Monthly 13-domain life scorecard history"},
+      {"folder": "03_briefs", "description": "Monthly vision review briefs"},
+      {"folder": "04_planning", "description": "Quarterly planning session notes and outcomes"},
+      {"folder": "05_archive", "description": "Prior year vision docs and annual reviews"}
+    ]
+  },
+  "domains": [
+    {"id": "vision", "folder": "vision", "agent": "vision-agent", "description": "Life vision document, 1-year and 5-year goals, values statement, and life design principles"},
+    {"id": "goals", "folder": "goals", "agent": "vision-agent", "description": "Quarterly OKRs and goal tracking — objectives, key results, current status, and progress notes"},
+    {"id": "scorecard", "folder": "scorecard", "agent": "vision-agent", "description": "Monthly 13-domain life scorecard history — career, health, wealth, relationships, personal growth, content, home, business, travel, mental/mind, learning, social, vision/purpose"},
+    {"id": "alignment", "folder": "alignment", "agent": "vision-agent", "description": "Calendar vs. priorities gap analysis — time allocation actuals vs. targets by life area"},
+    {"id": "planning", "folder": "planning", "agent": "vision-agent", "description": "Quarterly planning session notes, retrospective summaries, and next-quarter OKR drafts"}
+  ],
+  "config": {
+    "template": "vault/vision/config.md",
+    "fields": ["life_vision_1yr", "life_vision_5yr", "current_okrs", "scorecard_domains", "time_allocation_targets", "values_statement"]
+  }
+}

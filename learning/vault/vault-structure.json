@@ -1,0 +1,23 @@
+{
+  "version": "1.0.0",
+  "plugin": "aireadylife-learning",
+  "structure": {
+    "subfolders": [
+      {"folder": "00_current", "description": "Active learning state and current goals"},
+      {"folder": "01_courses", "description": "Course notes organized by platform and course"},
+      {"folder": "02_books", "description": "Reading notes and highlights by book"},
+      {"folder": "03_briefs", "description": "Weekly learning review briefs"},
+      {"folder": "04_archive", "description": "Completed courses and books by year"}
+    ]
+  },
+  "domains": [
+    {"id": "courses", "folder": "courses", "agent": "learning-agent", "description": "Active and completed courses with progress notes, module summaries, and completion certificates"},
+    {"id": "books", "folder": "books", "agent": "learning-agent", "description": "Reading list — current book, queue, and completed with notes and highlights"},
+    {"id": "certifications", "folder": "certifications", "agent": "learning-agent", "description": "Active certification pursuits with study plans, practice exam scores, and completed certs"},
+    {"id": "goals", "folder": "goals", "agent": "learning-agent", "description": "Quarterly learning goals and progress — OKRs for skill development"}
+  ],
+  "config": {
+    "template": "vault/learning/config.md",
+    "fields": ["active_courses", "reading_list", "active_certifications", "quarterly_goals", "daily_study_minutes", "preferred_platforms"]
+  }
+}

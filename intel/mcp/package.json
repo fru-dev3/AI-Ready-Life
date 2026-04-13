@@ -1,0 +1,23 @@
+{
+  "name": "@aireadylife/intel-plugin",
+  "version": "1.0.0",
+  "description": "AI Ready Life — Intel Plugin: AI agent for daily news intelligence briefs",
+  "type": "module",
+  "main": "index.js",
+  "bin": {
+    "aireadylife-intel": "index.js"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "demo": "VAULT_MODE=demo node index.js"
+  },
+  "keywords": ["mcp", "claude", "ai", "intel", "news", "intelligence", "briefs", "aireadylife"],
+  "author": "fru.dev",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

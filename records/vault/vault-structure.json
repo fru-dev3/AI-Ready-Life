@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0",
+  "plugin": "aireadylife-records",
+  "structure": {
+    "subfolders": [
+      {"folder": "00_current", "description": "Active document inventory and subscription list"},
+      {"folder": "01_ids", "description": "ID document scans and expiration tracking"},
+      {"folder": "02_legal", "description": "Legal document index with storage locations"},
+      {"folder": "03_briefs", "description": "Monthly records review briefs"},
+      {"folder": "04_archive", "description": "Expired documents and cancelled subscriptions"}
+    ]
+  },
+  "domains": [
+    {"id": "ids", "folder": "ids", "agent": "records-agent", "description": "Passports, driver's licenses, Global Entry, TSA PreCheck — with expiration dates and renewal instructions"},
+    {"id": "legal", "folder": "legal", "agent": "records-agent", "description": "Birth certificates, marriage license, SS cards, wills, trusts — with storage locations and last-updated dates"},
+    {"id": "licenses", "folder": "licenses", "agent": "records-agent", "description": "Professional licenses, certifications with expiration dates and renewal requirements"},
+    {"id": "subscriptions", "folder": "subscriptions", "agent": "records-agent", "description": "All active subscriptions with monthly cost, renewal date, and usage assessment"},
+    {"id": "memberships", "folder": "memberships", "agent": "records-agent", "description": "Gym memberships, clubs, professional organizations with cost and renewal dates"}
+  ],
+  "config": {
+    "template": "vault/records/config.md",
+    "fields": ["document_inventory", "subscription_list", "expiration_alert_days", "storage_locations", "household_members"]
+  }
+}

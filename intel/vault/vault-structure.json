@@ -1,0 +1,22 @@
+{
+  "version": "1.0.0",
+  "plugin": "aireadylife-intel",
+  "structure": {
+    "subfolders": [
+      {"folder": "00_current", "description": "Active config and today's brief"},
+      {"folder": "01_briefs", "description": "Daily brief archive organized by year/month"},
+      {"folder": "02_threads", "description": "Multi-day story threads being tracked"},
+      {"folder": "03_archive", "description": "Prior months by year"}
+    ]
+  },
+  "domains": [
+    {"id": "briefs", "folder": "briefs", "agent": "intel-agent", "description": "Daily brief archive — morning and evening briefs with story summaries and source links"},
+    {"id": "sources", "folder": "sources", "agent": "intel-agent", "description": "Source list and health — RSS feeds, newsletters, web sources with active/inactive status"},
+    {"id": "topics", "folder": "topics", "agent": "intel-agent", "description": "Topic preferences and filters — interest lens keywords, include/exclude lists, category weights"},
+    {"id": "threads", "folder": "threads", "agent": "intel-agent", "description": "Multi-day story threads being tracked — context, history, and latest developments"}
+  ],
+  "config": {
+    "template": "vault/intel/config.md",
+    "fields": ["source_list", "interest_lens_topics", "exclude_keywords", "brief_cadence", "market_alert_threshold", "thread_tracking_topics"]
+  }
+}

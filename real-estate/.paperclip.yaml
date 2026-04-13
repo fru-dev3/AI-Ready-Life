@@ -1,0 +1,6 @@
+schema: paperclip/v1
+
+plugin:
+  brandColor: "#5B3A8B"
+  description: "1 AI agent focused on real estate market research — home purchase analysis, buy vs. rent decisions, market trends, and portfolio expansion strategy. Monthly market updates. Everything runs locally. Private. On your machine."
+  requireBoardApprovalForNewAgents: false
