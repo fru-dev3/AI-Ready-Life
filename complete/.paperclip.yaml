@@ -1,0 +1,6 @@
+schema: paperclip/v1
+
+plugin:
+  brandColor: "#C4A35A"
+  description: "All 20 life domain plugins in one bundle — health, wealth, tax, career, and 16 more. Coordinated by a Chief of Life agent. 21 agents, 260+ skills, one vault. The complete AI operating system for your personal life."
+  requireBoardApprovalForNewAgents: false

@@ -1,0 +1,23 @@
+{
+  "name": "@aireadylife/complete-plugin",
+  "version": "1.0.0",
+  "description": "AI Ready Life — Complete: All 20 domain plugins in one bundle. 21 agents, 260+ skills.",
+  "type": "module",
+  "main": "index.js",
+  "bin": {
+    "aireadylife-complete": "index.js"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "demo": "VAULT_MODE=demo node index.js"
+  },
+  "keywords": ["mcp", "claude", "ai", "life", "health", "wealth", "tax", "career", "aireadylife"],
+  "author": "fru.dev",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
