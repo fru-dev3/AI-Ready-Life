@@ -1,0 +1,6 @@
+schema: paperclip/v1
+
+plugin:
+  brandColor: "#1A3A6B"
+  description: "2 AI agents that manage your career across 4 domains — compensation, market, pipeline, and network. Monthly reviews with market benchmarking and skills gap analysis. Everything runs locally. Private. On your machine."
+  requireBoardApprovalForNewAgents: false

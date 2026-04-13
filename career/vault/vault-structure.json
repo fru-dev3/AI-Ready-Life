@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0",
+  "plugin": "aireadylife-career",
+  "structure": {
+    "subfolders": [
+      {"folder": "00_current", "description": "Current comp, open loops, config"},
+      {"folder": "01_compensation", "description": "Pay stubs, equity statements, offer letters, comp history"},
+      {"folder": "02_market", "description": "Market surveys, benchmark data, target role requirements"},
+      {"folder": "03_pipeline", "description": "Active applications, interview notes, offer comparisons"},
+      {"folder": "04_briefs", "description": "Monthly career review briefs"},
+      {"folder": "05_archive", "description": "Prior employers and closed searches"}
+    ]
+  },
+  "domains": [
+    {"id": "compensation", "folder": "compensation", "agent": "career-agent", "description": "Pay stubs, W-2s, RSU/ESPP records, bonus letters, offer letter"},
+    {"id": "market", "folder": "market", "agent": "career-agent", "description": "Salary benchmarks, target role postings, skills gap analysis, market trend notes"},
+    {"id": "pipeline", "folder": "pipeline", "agent": "career-agent", "description": "Applications, interviews, recruiter contacts, follow-up tracker"},
+    {"id": "network", "folder": "network", "agent": "career-agent", "description": "Warm contacts, outreach history, referral pipeline, LinkedIn connections worth nurturing"}
+  ],
+  "config": {
+    "template": "vault/career/config.md",
+    "fields": ["employer", "title", "base_salary", "equity_type", "payroll_portal", "linkedin_url", "target_role", "target_level"]
+  }
+}

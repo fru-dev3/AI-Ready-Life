@@ -1,0 +1,25 @@
+{
+  "version": "1.0.0",
+  "plugin": "aireadylife-wealth",
+  "structure": {
+    "subfolders": [
+      {"folder": "00_current", "description": "Current state: net worth, open loops, config"},
+      {"folder": "01_statements", "description": "Monthly statements by institution/year"},
+      {"folder": "02_investments", "description": "Investment account history and performance"},
+      {"folder": "03_estate", "description": "Estate planning docs: trust, will, beneficiaries"},
+      {"folder": "04_briefs", "description": "Monthly wealth synthesis and review briefs"},
+      {"folder": "05_archive", "description": "Prior years by year"}
+    ]
+  },
+  "domains": [
+    {"id": "networth", "folder": "networth", "agent": "wealth-agent", "description": "Monthly net worth snapshots, tracker history, delta calculations"},
+    {"id": "investments", "folder": "investments", "agent": "wealth-agent", "description": "Account statements, performance history, dividend records, RSU/ESPP tracking"},
+    {"id": "cashflow", "folder": "cashflow", "agent": "wealth-agent", "description": "Income sources, expense categories, monthly summaries, anomaly flags"},
+    {"id": "estate", "folder": "estate", "agent": "wealth-agent", "description": "Trust documents, will, POA, beneficiary designations, asset inventory"},
+    {"id": "debt", "folder": "debt", "agent": "wealth-agent", "description": "Loan statements, payoff schedules, interest rate tracker, paydown strategy"}
+  ],
+  "config": {
+    "template": "vault/wealth/config.md",
+    "fields": ["institutions", "investment_accounts", "checking_accounts", "savings_accounts", "real_estate", "debts"]
+  }
+}

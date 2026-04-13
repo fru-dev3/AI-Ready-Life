@@ -1,0 +1,6 @@
+schema: paperclip/v1
+
+plugin:
+  brandColor: "#2E7D6B"
+  description: "2 AI agents that manage your personal health across 4 domains — wellness, labs, medications, and insurance. Orchestrated by a Chief of Staff with monthly reviews and weekly anomaly watches. Everything runs locally. Private. On your machine."
+  requireBoardApprovalForNewAgents: false

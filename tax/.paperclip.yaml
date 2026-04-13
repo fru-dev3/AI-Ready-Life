@@ -1,0 +1,6 @@
+schema: paperclip/v1
+
+plugin:
+  brandColor: "#7B3F00"
+  description: "2 AI agents that manage your personal tax picture across 4 domains — federal, state, entity, and estimated payments. Year-round deadline tracking and deduction reviews. Everything runs locally. Private. On your machine."
+  requireBoardApprovalForNewAgents: false

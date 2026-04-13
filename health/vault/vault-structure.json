@@ -1,0 +1,23 @@
+{
+  "version": "1.0.0",
+  "plugin": "aireadylife-health",
+  "structure": {
+    "subfolders": [
+      {"folder": "00_current", "description": "Active health documents and current state"},
+      {"folder": "01_labs", "description": "Lab results organized by year/month"},
+      {"folder": "02_visits", "description": "Visit notes and medical records"},
+      {"folder": "03_briefs", "description": "Monthly health review briefs"},
+      {"folder": "04_archive", "description": "Prior years by year"}
+    ]
+  },
+  "domains": [
+    {"id": "wellness", "folder": "wellness", "agent": "health-agent", "description": "Wearable exports, sleep data, HRV trends, activity scores, weight history"},
+    {"id": "labs", "folder": "labs", "agent": "health-agent", "description": "Lab result PDFs, extracted values, trend history, reference range flags"},
+    {"id": "medications", "folder": "medications", "agent": "health-agent", "description": "Active medication list, refill schedule, pharmacy info, prior auth records"},
+    {"id": "insurance", "folder": "insurance", "agent": "health-agent", "description": "Insurance cards, EOBs, deductible tracker, HSA statements, prior auth history"}
+  ],
+  "config": {
+    "template": "vault/health/config.md",
+    "fields": ["primary_care_provider", "insurance_carrier", "insurance_plan", "hsa_account", "wearable_device", "patient_portal_url"]
+  }
+}

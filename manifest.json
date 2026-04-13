@@ -1,0 +1,54 @@
+{
+  "name": "AI Ready Life",
+  "slug": "aireadyu-life",
+  "version": "1.0.0",
+  "schema": "agentcompanies/v1",
+  "license": "MIT",
+  "authors": [{ "name": "fru.dev", "url": "https://fru.dev" }],
+  "plugins": [
+    {
+      "id": "health",
+      "name": "AI Ready Life: Health",
+      "description": "Personal health management — labs, wellness, medications, appointments, insurance",
+      "agents": 2,
+      "skills": 11,
+      "price": 2900,
+      "gumroad": "https://fruverse.gumroad.com/l/aireadylife-health",
+      "mcp": "@aireadylife/health-plugin"
+    },
+    {
+      "id": "wealth",
+      "name": "AI Ready Life: Wealth",
+      "description": "Wealth management — net worth, investments, cash flow, estate planning",
+      "agents": 2,
+      "skills": 21,
+      "price": 2900,
+      "gumroad": "https://fruverse.gumroad.com/l/aireadylife-wealth",
+      "mcp": "@aireadylife/wealth-plugin"
+    },
+    {
+      "id": "tax",
+      "name": "AI Ready Life: Tax",
+      "description": "Tax planning — deadlines, estimates, deductions, entity compliance, filing",
+      "agents": 2,
+      "skills": 10,
+      "price": 2900,
+      "gumroad": "https://fruverse.gumroad.com/l/aireadylife-tax",
+      "mcp": "@aireadylife/tax-plugin"
+    },
+    {
+      "id": "career",
+      "name": "AI Ready Life: Career",
+      "description": "Career management — compensation benchmarks, job search, market scanning, skills gaps",
+      "agents": 2,
+      "skills": 10,
+      "price": 2900,
+      "gumroad": "https://fruverse.gumroad.com/l/aireadylife-career",
+      "mcp": "@aireadylife/career-plugin"
+    }
+  ],
+  "bundle": {
+    "price": 7900,
+    "gumroad": "https://fruverse.gumroad.com/l/aireadylife-bundle"
+  }
+}
