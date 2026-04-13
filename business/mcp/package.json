@@ -1,0 +1,14 @@
+{
+  "name": "@aireadylife/business-plugin",
+  "version": "1.0.0",
+  "description": "AI Ready Life — Business Plugin: LLC revenue tracking, expense management, and compliance monitoring",
+  "type": "module",
+  "main": "index.js",
+  "bin": { "aireadylife-business": "index.js" },
+  "scripts": { "start": "node index.js", "demo": "VAULT_MODE=demo node index.js" },
+  "keywords": ["mcp", "claude", "ai", "business", "llc", "compliance", "aireadylife"],
+  "author": "fru.dev",
+  "license": "MIT",
+  "dependencies": { "@modelcontextprotocol/sdk": "^1.0.0" },
+  "engines": { "node": ">=18.0.0" }
+}

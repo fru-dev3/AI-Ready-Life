@@ -1,0 +1,16 @@
+{
+  "version": "1.0.0",
+  "plugin": "aireadylife-ben",
+  "structure": {
+    "subfolders": [
+      {"folder": "01_briefs", "description": "Daily AM/PM briefs archive"},
+      {"folder": "02_open-loops", "description": "Cross-domain open items tracker"},
+      {"folder": "03_system", "description": "Agent health reports, vault completeness"}
+    ]
+  },
+  "domains": [
+    {"id": "briefs", "folder": "briefs", "agent": "chief-of-staff", "description": "Daily AM and PM brief archives, indexed by date"},
+    {"id": "open-loops", "folder": "open-loops", "agent": "chief-of-staff", "description": "Cross-domain open items aggregated from all plugins"},
+    {"id": "system", "folder": "system", "agent": "chief-of-staff", "description": "Agent health status, vault completeness, Notion sync logs"}
+  ]
+}

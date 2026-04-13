@@ -1,0 +1,5 @@
+schema: paperclip/v1
+plugin:
+  brandColor: "#6B3A9E"
+  description: "2 AI agents to protect focus time, surface cross-domain deadlines before they're urgent, and align weekly schedule with priorities. 8 skills."
+  requireBoardApprovalForNewAgents: false

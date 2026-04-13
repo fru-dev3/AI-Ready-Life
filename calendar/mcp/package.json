@@ -1,0 +1,14 @@
+{
+  "name": "@aireadylife/calendar-plugin",
+  "version": "1.0.0",
+  "description": "AI Ready Life — Calendar Plugin: Focus time protection, cross-domain deadline sync, and weekly schedule alignment",
+  "type": "module",
+  "main": "index.js",
+  "bin": { "aireadylife-calendar": "index.js" },
+  "scripts": { "start": "node index.js", "demo": "VAULT_MODE=demo node index.js" },
+  "keywords": ["mcp", "claude", "ai", "calendar", "deadlines", "focus-time", "aireadylife"],
+  "author": "fru.dev",
+  "license": "MIT",
+  "dependencies": { "@modelcontextprotocol/sdk": "^1.0.0" },
+  "engines": { "node": ">=18.0.0" }
+}

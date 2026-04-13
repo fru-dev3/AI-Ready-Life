@@ -1,0 +1,18 @@
+{
+  "version": "1.0.0",
+  "plugin": "aireadylife-brand",
+  "structure": {
+    "subfolders": [
+      {"folder": "01_analytics", "description": "Platform metrics history by month"},
+      {"folder": "02_assets", "description": "Headshots, logos, bio copy, brand guidelines"},
+      {"folder": "03_mentions", "description": "Mention logs and sentiment tracking"},
+      {"folder": "04_profiles", "description": "Screenshot audits of each platform profile"}
+    ]
+  },
+  "domains": [
+    {"id": "analytics", "folder": "analytics", "agent": "brand-agent", "description": "Monthly platform metrics: LinkedIn, Twitter/X, YouTube, newsletter followers and engagement"},
+    {"id": "assets", "folder": "assets", "agent": "brand-agent", "description": "Brand assets: headshots, logos, bio copy variants, brand guidelines document"},
+    {"id": "mentions", "folder": "mentions", "agent": "brand-agent", "description": "Mention logs by platform with sentiment classification (positive/neutral/negative)"},
+    {"id": "profiles", "folder": "profiles", "agent": "brand-agent", "description": "Screenshot audits of each social platform profile for consistency review"}
+  ]
+}

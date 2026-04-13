@@ -1,0 +1,5 @@
+schema: paperclip/v1
+plugin:
+  brandColor: "#C4A35A"
+  description: "2 AI agents for personal brand management. Consistent profiles, mention monitoring, cross-platform analytics, and monthly brand health scoring. 8 skills."
+  requireBoardApprovalForNewAgents: false
