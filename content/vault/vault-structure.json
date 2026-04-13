@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0",
+  "plugin": "aireadylife-content",
+  "structure": {
+    "subfolders": [
+      {"folder": "00_current", "description": "Active content state and current publishing schedule"},
+      {"folder": "01_analytics", "description": "YouTube and platform analytics by month"},
+      {"folder": "02_revenue", "description": "Revenue records by platform and month"},
+      {"folder": "03_briefs", "description": "Monthly content review briefs"},
+      {"folder": "04_archive", "description": "Prior years by year"}
+    ]
+  },
+  "domains": [
+    {"id": "youtube", "folder": "youtube", "agent": "content-agent", "description": "Channel analytics, video performance history, CTR trends, subscriber growth, watch time by video"},
+    {"id": "newsletter", "folder": "newsletter", "agent": "content-agent", "description": "Subscriber history, open rate trends, click-through rates, campaign archive"},
+    {"id": "revenue", "folder": "revenue", "agent": "content-agent", "description": "Gumroad product sales, AdSense earnings, sponsorship income, monthly and YTD totals"},
+    {"id": "seo", "folder": "seo", "agent": "content-agent", "description": "Title A/B tests, keyword opportunities, thumbnail CTR audit, search impression data"},
+    {"id": "social", "folder": "social", "agent": "content-agent", "description": "LinkedIn follower growth, post engagement, Twitter/X metrics"}
+  ],
+  "config": {
+    "template": "vault/content/config.md",
+    "fields": ["youtube_channel_ids", "newsletter_platform", "newsletter_list_id", "gumroad_account", "linkedin_url", "publishing_cadence_per_week"]
+  }
+}

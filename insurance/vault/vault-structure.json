@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0",
+  "plugin": "aireadylife-insurance",
+  "structure": {
+    "subfolders": [
+      {"folder": "00_current", "description": "Active policy summary, current premiums, and open claims"},
+      {"folder": "01_policies", "description": "Policy documents organized by type"},
+      {"folder": "02_claims", "description": "Active and resolved claims with documentation"},
+      {"folder": "03_briefs", "description": "Monthly insurance review briefs"},
+      {"folder": "04_archive", "description": "Prior policy versions by year"}
+    ]
+  },
+  "domains": [
+    {"id": "health", "folder": "health", "agent": "insurance-agent", "description": "Health, dental, and vision insurance — insurance cards, EOBs, claims history, deductible tracker, HSA statements"},
+    {"id": "life", "folder": "life", "agent": "insurance-agent", "description": "Term and whole life insurance — policy documents, beneficiary designations, employer life coverage"},
+    {"id": "auto", "folder": "auto", "agent": "insurance-agent", "description": "Auto insurance — declarations pages, vehicle details, claims history, coverage limits"},
+    {"id": "property", "folder": "property", "agent": "insurance-agent", "description": "Renters and homeowners insurance, umbrella policy — declarations pages, personal property inventory, claims"},
+    {"id": "disability", "folder": "disability", "agent": "insurance-agent", "description": "Short-term and long-term disability policies — employer STD/LTD details, supplemental disability coverage"}
+  ],
+  "config": {
+    "template": "vault/insurance/config.md",
+    "fields": ["health_carrier", "life_carrier_and_amount", "auto_carrier", "property_carrier", "umbrella_amount", "disability_coverage_percent", "total_monthly_premiums"]
+  }
+}
