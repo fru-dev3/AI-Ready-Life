@@ -1,0 +1,8 @@
+{
+  "name": "benefits",
+  "description": "Benefits management — 401k, HSA, open enrollment, equity, ESPP",
+  "version": "1.0.0",
+  "author": { "name": "fru.dev", "email": "hello@fru.dev" },
+  "license": "MIT",
+  "homepage": "https://aireadyu.dev"
+}

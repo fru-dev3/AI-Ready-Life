@@ -1,0 +1,8 @@
+{
+  "name": "real-estate",
+  "description": "Real estate — market data, mortgage tracking, home search, investment analysis",
+  "version": "1.0.0",
+  "author": { "name": "fru.dev", "email": "hello@fru.dev" },
+  "license": "MIT",
+  "homepage": "https://aireadyu.dev"
+}

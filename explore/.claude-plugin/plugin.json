@@ -1,0 +1,8 @@
+{
+  "name": "explore",
+  "description": "Travel management — trip planning, visa tracking, loyalty rewards, itineraries",
+  "version": "1.0.0",
+  "author": { "name": "fru.dev", "email": "hello@fru.dev" },
+  "license": "MIT",
+  "homepage": "https://aireadyu.dev"
+}

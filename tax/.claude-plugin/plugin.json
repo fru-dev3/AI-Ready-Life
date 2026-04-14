@@ -1,0 +1,8 @@
+{
+  "name": "tax",
+  "description": "Tax planning — deadlines, estimates, deductions, entity compliance, filing",
+  "version": "1.0.0",
+  "author": { "name": "fru.dev", "email": "hello@fru.dev" },
+  "license": "MIT",
+  "homepage": "https://aireadyu.dev"
+}
