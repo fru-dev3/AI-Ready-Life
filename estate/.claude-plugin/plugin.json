@@ -1,0 +1,8 @@
+{
+  "name": "estate",
+  "description": "Property management — rentals, leases, maintenance, cash flow, occupancy",
+  "version": "1.0.0",
+  "author": { "name": "fru.dev", "email": "hello@fru.dev" },
+  "license": "MIT",
+  "homepage": "https://aireadyu.dev"
+}

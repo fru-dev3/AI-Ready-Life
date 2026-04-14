@@ -1,0 +1,8 @@
+{
+  "name": "home",
+  "description": "Home management — maintenance tracking, contractor reviews, home value",
+  "version": "1.0.0",
+  "author": { "name": "fru.dev", "email": "hello@fru.dev" },
+  "license": "MIT",
+  "homepage": "https://aireadyu.dev"
+}

@@ -1,0 +1,8 @@
+{
+  "name": "vision",
+  "description": "Goals and life planning — OKRs, annual review, vision tracking, milestones",
+  "version": "1.0.0",
+  "author": { "name": "fru.dev", "email": "hello@fru.dev" },
+  "license": "MIT",
+  "homepage": "https://aireadyu.dev"
+}

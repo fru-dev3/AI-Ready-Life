@@ -1,0 +1,8 @@
+{
+  "name": "social",
+  "description": "Relationship management — network health, outreach, contacts, social capital",
+  "version": "1.0.0",
+  "author": { "name": "fru.dev", "email": "hello@fru.dev" },
+  "license": "MIT",
+  "homepage": "https://aireadyu.dev"
+}

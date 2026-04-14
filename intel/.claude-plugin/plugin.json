@@ -1,0 +1,8 @@
+{
+  "name": "intel",
+  "description": "News intelligence — daily briefing filtered to your interests",
+  "version": "1.0.0",
+  "author": { "name": "fru.dev", "email": "hello@fru.dev" },
+  "license": "MIT",
+  "homepage": "https://aireadyu.dev"
+}
