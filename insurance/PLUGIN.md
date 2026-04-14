@@ -30,7 +30,7 @@ Tracks every policy, monitors renewals, surfaces coverage gaps, and manages clai
 
 ## What's Paid ($29)
 
-**[Get AI Ready Life: Insurance on Gumroad → $29](https://fruverse.gumroad.com/l/aireadylife-insurance)**
+**[Get AI Ready Life: Insurance on Gumroad → $29](https://frudev.gumroad.com/l/aireadylife-insurance)**
 
 Includes:
 - Full agent instructions with insurance domain expertise

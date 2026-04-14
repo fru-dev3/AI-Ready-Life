@@ -30,7 +30,7 @@ Know your brand health score. Catch inconsistent bios before a recruiter does. S
 
 ## What's Paid ($29)
 
-**[Get AI Ready Life: Brand on Gumroad → $29](https://fruverse.gumroad.com/l/aireadylife-brand)**
+**[Get AI Ready Life: Brand on Gumroad → $29](https://frudev.gumroad.com/l/aireadylife-brand)**
 
 Includes full agent instructions, platform-by-platform audit checklists, sentiment classification rules, brand scoring rubric, and 35+ brand management prompts.
 

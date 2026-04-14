@@ -32,7 +32,7 @@ The complete AI operating system for your personal life. Every domain — health
 
 ## What's Paid ($199)
 
-**[Get AI Ready Life: Complete on Gumroad → $199](https://fruverse.gumroad.com/l/aireadylife-complete)**
+**[Get AI Ready Life: Complete on Gumroad → $199](https://frudev.gumroad.com/l/aireadylife-complete)**
 
 Everything from all 20 individual plugins, plus:
 - Full agent instructions for all 21 agents (2,000+ lines of domain expertise)

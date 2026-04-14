@@ -30,7 +30,7 @@ Stop being surprised by deadlines. Know your focus time health every week. Sync 
 
 ## What's Paid ($29)
 
-**[Get AI Ready Life: Calendar on Gumroad → $29](https://fruverse.gumroad.com/l/aireadylife-calendar)**
+**[Get AI Ready Life: Calendar on Gumroad → $29](https://frudev.gumroad.com/l/aireadylife-calendar)**
 
 Includes full agent instructions, cross-domain deadline registry setup, focus time scoring rubric, quarterly alignment templates, and 35+ calendar management prompts.
 

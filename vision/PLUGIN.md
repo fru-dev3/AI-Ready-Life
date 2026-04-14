@@ -32,7 +32,7 @@ Your personal AI Chief Strategy Officer. Maintains your life vision document and
 
 ## What's Paid ($29)
 
-**[Get AI Ready Life: Vision on Gumroad → $29](https://fruverse.gumroad.com/l/aireadylife-vision)**
+**[Get AI Ready Life: Vision on Gumroad → $29](https://frudev.gumroad.com/l/aireadylife-vision)**
 
 Includes:
 - Full agent instructions (120+ lines with strategic planning and life design expertise)

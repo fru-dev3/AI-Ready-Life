@@ -30,7 +30,7 @@ Tracks YouTube channels, newsletters, LinkedIn, and digital product revenue in o
 
 ## What's Paid ($29)
 
-**[Get AI Ready Life: Content on Gumroad → $29](https://fruverse.gumroad.com/l/aireadylife-content)**
+**[Get AI Ready Life: Content on Gumroad → $29](https://frudev.gumroad.com/l/aireadylife-content)**
 
 Includes:
 - Full agent instructions with content domain expertise

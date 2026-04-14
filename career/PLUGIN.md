@@ -32,7 +32,7 @@ Your personal AI career partner. The Career Agent benchmarks your comp against m
 
 ## What's Paid ($29)
 
-**[Get AI Ready Life: Career on Gumroad → $29](https://fruverse.gumroad.com/l/aireadylife-career)**
+**[Get AI Ready Life: Career on Gumroad → $29](https://frudev.gumroad.com/l/aireadylife-career)**
 
 ## Install
 

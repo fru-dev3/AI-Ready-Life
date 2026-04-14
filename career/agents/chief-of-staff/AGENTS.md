@@ -15,7 +15,7 @@ budgetMonthlyCents: 3000
 
 # Life Operations Director — Setup
 
-1. Download AI Ready Life: Career from [Gumroad](https://fruverse.gumroad.com/l/aireadylife-career)
+1. Download AI Ready Life: Career from [Gumroad](https://frudev.gumroad.com/l/aireadylife-career)
 2. Extract to `~/Documents/AIReadyLife-Career/`
 3. Paperclip → this agent → Advanced → External
 4. Path: `~/Documents/AIReadyLife-Career/agents/chief-of-staff`

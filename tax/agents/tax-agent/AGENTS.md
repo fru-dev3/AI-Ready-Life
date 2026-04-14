@@ -15,7 +15,7 @@ budgetMonthlyCents: 2000
 
 # Chief Tax Officer — Setup
 
-1. Download AI Ready Life: Tax from [Gumroad](https://fruverse.gumroad.com/l/aireadylife-tax)
+1. Download AI Ready Life: Tax from [Gumroad](https://frudev.gumroad.com/l/aireadylife-tax)
 2. Extract to `~/Documents/AIReadyLife-Tax/`
 3. Paperclip → this agent → Advanced → External
 4. Path: `~/Documents/AIReadyLife-Tax/agents/tax-agent`

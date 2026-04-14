@@ -32,7 +32,7 @@ Your personal AI Social Director. Maintains a relationship CRM for important per
 
 ## What's Paid ($19)
 
-**[Get AI Ready Life: Social on Gumroad → $19](https://fruverse.gumroad.com/l/aireadylife-social)**
+**[Get AI Ready Life: Social on Gumroad → $19](https://frudev.gumroad.com/l/aireadylife-social)**
 
 Includes:
 - Full agent instructions (80+ lines with relationship management and social coordination expertise)

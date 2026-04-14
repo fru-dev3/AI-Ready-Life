@@ -17,7 +17,7 @@ budgetMonthlyCents: 3000
 # Chief of Staff — Setup
 
 1. Install at least 2 other AI Ready Life plugins first
-2. Download AI Ready Life: Chief from [Gumroad](https://fruverse.gumroad.com/l/aireadylife-chief)
+2. Download AI Ready Life: Chief from [Gumroad](https://frudev.gumroad.com/l/aireadylife-chief)
 3. Extract to `~/Documents/AIReadyLife-Ben/`
 4. Paperclip → this agent → Advanced → External
 5. Path: `~/Documents/AIReadyLife-Ben/agents/chief-of-staff`

@@ -30,7 +30,7 @@ Never miss an LLC annual report. Know your P&L every month. Stay ahead of compli
 
 ## What's Paid ($29)
 
-**[Get AI Ready Life: Business on Gumroad → $29](https://fruverse.gumroad.com/l/aireadylife-business)**
+**[Get AI Ready Life: Business on Gumroad → $29](https://frudev.gumroad.com/l/aireadylife-business)**
 
 Includes full agent instructions, P&L templates, compliance calendar by state, S-corp election analysis rules, and 40+ business management prompts.
 

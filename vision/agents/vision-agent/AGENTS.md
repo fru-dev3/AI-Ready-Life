@@ -17,7 +17,7 @@ budgetMonthlyCents: 2000
 
 ## Connect External Instructions
 
-1. **Download the AI Ready Life: Vision pack** from [Gumroad](https://fruverse.gumroad.com/l/aireadylife-vision)
+1. **Download the AI Ready Life: Vision pack** from [Gumroad](https://frudev.gumroad.com/l/aireadylife-vision)
 2. **Extract to** `~/Documents/AIReadyLife-Vision/`
 3. **In the Paperclip dashboard**, click on this agent
 4. **Click Advanced → Switch from Managed to External**

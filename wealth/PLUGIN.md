@@ -32,7 +32,7 @@ Your personal AI wealth partner. The Wealth Agent tracks your net worth across a
 
 ## What's Paid ($29)
 
-**[Get AI Ready Life: Wealth on Gumroad → $29](https://fruverse.gumroad.com/l/aireadylife-wealth)**
+**[Get AI Ready Life: Wealth on Gumroad → $29](https://frudev.gumroad.com/l/aireadylife-wealth)**
 
 Includes:
 - Full agent instructions with wealth management expertise
