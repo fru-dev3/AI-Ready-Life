@@ -40,7 +40,7 @@ POST https://getpocket.com/v3/get?access_token={token}&tag=research
 
 ## Used By
 
-- `arlive-intel-topic-deep-dive` — retrieve saved articles tagged for a specific research topic
+- `aireadylife-intel-topic-deep-dive` — retrieve saved articles tagged for a specific research topic
 
 ## Vault Output
 

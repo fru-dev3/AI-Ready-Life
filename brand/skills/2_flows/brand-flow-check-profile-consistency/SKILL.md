@@ -1,5 +1,5 @@
 ---
-name: arlive-brand-flow-check-profile-consistency
+name: aireadylife-brand-flow-check-profile-consistency
 type: flow
 trigger: called-by-op
 description: >
@@ -7,9 +7,9 @@ description: >
   brand profile and flags any discrepancies.
 ---
 
-# arlive-brand-check-profile-consistency
+# aireadylife-brand-check-profile-consistency
 
-**Trigger:** Called by `arlive-brand-profile-audit`
+**Trigger:** Called by `aireadylife-brand-profile-audit`
 **Produces:** Per-platform consistency check results with specific discrepancy details for each field that has drifted
 
 ## What it does

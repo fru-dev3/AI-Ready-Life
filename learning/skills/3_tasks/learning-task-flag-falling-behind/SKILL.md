@@ -1,12 +1,12 @@
 ---
-name: arlive-learning-task-flag-falling-behind
+name: aireadylife-learning-task-flag-falling-behind
 type: task
 description: >
   Writes a flag to vault/learning/open-loops.md when a course or book is behind pace to complete
   by its target date, with item title, % complete, target date, days remaining, and required daily pace.
 ---
 
-# arlive-learning-flag-falling-behind
+# aireadylife-learning-flag-falling-behind
 
 **Trigger:** Called by learning progress flows
 **Produces:** Behind-pace flag in `vault/learning/open-loops.md`

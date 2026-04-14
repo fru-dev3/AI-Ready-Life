@@ -1,5 +1,5 @@
 ---
-name: arlive-records-task-log-document
+name: aireadylife-records-task-log-document
 type: task
 cadence: as-received
 description: >
@@ -7,7 +7,7 @@ description: >
   issuing authority, and storage location (physical and digital).
 ---
 
-# arlive-records-log-document
+# aireadylife-records-log-document
 
 **Cadence:** As-received (when a new document is issued, renewed, or discovered during a cleanout)
 **Produces:** Document record in the appropriate `vault/records/` subfolder

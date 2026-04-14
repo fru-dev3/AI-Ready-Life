@@ -1,5 +1,5 @@
 ---
-name: arlive-calendar-op-focus-time-review
+name: aireadylife-calendar-op-focus-time-review
 type: op
 cadence: weekly
 description: >
@@ -9,7 +9,7 @@ description: >
   Triggers: "focus review", "meeting overload", "deep work time", "calendar audit".
 ---
 
-# arlive-calendar-focus-time-review
+# aireadylife-calendar-focus-time-review
 
 **Cadence:** Weekly (Friday or Sunday)
 **Produces:** A focus-time audit report in `vault/calendar/01_focus/` with meeting hours, focus hours, deficit flags, and calendar change recommendations.
@@ -20,8 +20,8 @@ Analyzes the balance between meeting commitments and unblocked deep work time fo
 
 ## Calls
 
-- **Flows:** `arlive-calendar-analyze-focus-time`
-- **Tasks:** `arlive-calendar-update-open-loops`
+- **Flows:** `aireadylife-calendar-analyze-focus-time`
+- **Tasks:** `aireadylife-calendar-update-open-loops`
 
 ## Apps
 

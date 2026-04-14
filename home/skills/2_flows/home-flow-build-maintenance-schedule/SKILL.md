@@ -1,5 +1,5 @@
 ---
-name: arlive-home-flow-build-maintenance-schedule
+name: aireadylife-home-flow-build-maintenance-schedule
 type: flow
 trigger: called-by-op
 description: >
@@ -7,9 +7,9 @@ description: >
   date, assigned vendor, and estimated cost.
 ---
 
-# arlive-home-build-maintenance-schedule
+# aireadylife-home-build-maintenance-schedule
 
-**Trigger:** Called by `arlive-home-seasonal-maintenance`
+**Trigger:** Called by `aireadylife-home-seasonal-maintenance`
 **Produces:** Structured maintenance schedule table sorted by urgency and due date
 
 ## What it does

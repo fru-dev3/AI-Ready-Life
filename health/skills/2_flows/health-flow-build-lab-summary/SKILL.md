@@ -1,5 +1,5 @@
 ---
-name: arlive-health-flow-build-lab-summary
+name: aireadylife-health-flow-build-lab-summary
 type: flow
 trigger: called-by-op
 description: >
@@ -7,9 +7,9 @@ description: >
   comparison, reference ranges, and flagged out-of-range items grouped by panel type.
 ---
 
-# arlive-health-build-lab-summary
+# aireadylife-health-build-lab-summary
 
-**Trigger:** Called by `arlive-health-lab-review`
+**Trigger:** Called by `aireadylife-health-lab-review`
 **Produces:** Formatted lab summary document in vault/health/01_labs/ with out-of-range items surfaced first
 
 ## What it does

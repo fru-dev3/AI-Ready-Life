@@ -41,8 +41,8 @@ Scopes: https://www.googleapis.com/auth/calendar
 
 ## Used By
 
-- `arlive-calendar-weekly-agenda` — pull and format upcoming week's events
-- `arlive-calendar-build-agenda` — create structured agenda with deadlines and priorities
+- `aireadylife-calendar-weekly-agenda` — pull and format upcoming week's events
+- `aireadylife-calendar-build-agenda` — create structured agenda with deadlines and priorities
 
 ## Vault Output
 

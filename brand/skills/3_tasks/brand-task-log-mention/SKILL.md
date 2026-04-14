@@ -1,5 +1,5 @@
 ---
-name: arlive-brand-task-log-mention
+name: aireadylife-brand-task-log-mention
 type: task
 cadence: as-received
 description: >
@@ -8,7 +8,7 @@ description: >
   immediate action.
 ---
 
-# arlive-brand-log-mention
+# aireadylife-brand-log-mention
 
 **Trigger:** Called when a brand mention is received or discovered, as-received
 **Produces:** Mention log entry in vault/brand/01_mentions/ and an urgent flag in open-loops.md if high-priority

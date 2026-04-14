@@ -40,7 +40,7 @@ Authorization: Bearer $GUMROAD_API_KEY
 
 ## Used By
 
-- `arlive-content-revenue-review` — pull product sales and revenue by product per period
+- `aireadylife-content-revenue-review` — pull product sales and revenue by product per period
 
 ## Vault Output
 

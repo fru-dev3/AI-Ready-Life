@@ -1,5 +1,5 @@
 ---
-name: arlive-brand-op-monthly-synthesis
+name: aireadylife-brand-op-monthly-synthesis
 type: op
 cadence: monthly
 description: >
@@ -7,7 +7,7 @@ description: >
   Triggers: "brand synthesis", "brand score", "monthly brand report", "brand analytics summary".
 ---
 
-# arlive-brand-monthly-synthesis
+# aireadylife-brand-monthly-synthesis
 
 **Cadence:** Monthly (end of month)
 **Produces:** Unified brand health score and cross-platform analytics synthesis

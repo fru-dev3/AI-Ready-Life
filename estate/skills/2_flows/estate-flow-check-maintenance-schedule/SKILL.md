@@ -1,5 +1,5 @@
 ---
-name: arlive-estate-flow-check-maintenance-schedule
+name: aireadylife-estate-flow-check-maintenance-schedule
 type: flow
 trigger: called-by-op
 description: >
@@ -7,9 +7,9 @@ description: >
   current date, flagging items overdue or due within 30 days across all properties.
 ---
 
-# arlive-estate-check-maintenance-schedule
+# aireadylife-estate-check-maintenance-schedule
 
-**Trigger:** Called by `arlive-estate-maintenance-review`
+**Trigger:** Called by `aireadylife-estate-maintenance-review`
 **Produces:** A maintenance status list with open items, overdue flags, and upcoming seasonal tasks returned to the calling op.
 
 ## What it does

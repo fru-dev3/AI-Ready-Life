@@ -1,5 +1,5 @@
 ---
-name: arlive-insurance-flow-check-renewal-dates
+name: aireadylife-insurance-flow-check-renewal-dates
 type: flow
 trigger: called-by-op
 description: >
@@ -8,9 +8,9 @@ description: >
   or coverage review (limits need reassessment before renewal).
 ---
 
-# arlive-insurance-check-renewal-dates
+# aireadylife-insurance-check-renewal-dates
 
-**Trigger:** Called by `arlive-insurance-renewal-watch`
+**Trigger:** Called by `aireadylife-insurance-renewal-watch`
 **Produces:** A renewal timeline with action-categorized renewals and recommended next steps per policy returned to the calling op.
 
 ## What it does

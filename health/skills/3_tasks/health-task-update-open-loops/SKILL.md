@@ -1,5 +1,5 @@
 ---
-name: arlive-health-task-update-open-loops
+name: aireadylife-health-task-update-open-loops
 type: task
 cadence: called-by-op
 description: >
@@ -7,7 +7,7 @@ description: >
   and resolves items that have been completed or expired.
 ---
 
-# arlive-health-update-open-loops
+# aireadylife-health-update-open-loops
 
 **Cadence:** Called at the end of every health op and flow
 **Produces:** Updated vault/health/open-loops.md with new flags added and resolved items closed

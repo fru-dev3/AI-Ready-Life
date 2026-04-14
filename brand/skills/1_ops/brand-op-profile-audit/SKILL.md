@@ -1,5 +1,5 @@
 ---
-name: arlive-brand-op-profile-audit
+name: aireadylife-brand-op-profile-audit
 type: op
 cadence: quarterly
 description: >
@@ -8,7 +8,7 @@ description: >
   profile. Triggers: "profile audit", "brand consistency", "update my profiles".
 ---
 
-# arlive-brand-profile-audit
+# aireadylife-brand-profile-audit
 
 **Cadence:** Quarterly (January, April, July, October)
 **Produces:** Profile consistency report, flagged discrepancies per platform, updated open-loops entries
@@ -31,8 +31,8 @@ fields. Store per-platform snapshots (last known profile state) in vault/brand/0
 
 ## Calls
 
-- **Flows:** `arlive-brand-check-profile-consistency`
-- **Tasks:** `arlive-brand-flag-profile-inconsistency`, `arlive-brand-update-open-loops`
+- **Flows:** `aireadylife-brand-check-profile-consistency`
+- **Tasks:** `aireadylife-brand-flag-profile-inconsistency`, `aireadylife-brand-update-open-loops`
 
 ## Apps
 

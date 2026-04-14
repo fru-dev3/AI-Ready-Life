@@ -1,5 +1,5 @@
 ---
-name: arlive-wealth-flow-build-debt-summary
+name: aireadylife-wealth-flow-build-debt-summary
 type: flow
 trigger: called-by-op
 description: >
@@ -7,9 +7,9 @@ description: >
   remaining interest cost, and extra-payment impact scenarios.
 ---
 
-# arlive-wealth-build-debt-summary
+# aireadylife-wealth-build-debt-summary
 
-**Trigger:** Called by `arlive-wealth-debt-review`
+**Trigger:** Called by `aireadylife-wealth-debt-review`
 **Produces:** Debt summary table in vault/wealth/02_debt/ with payoff timelines and extra-payment models
 
 ## What it does

@@ -55,15 +55,15 @@ npx companies.sh add fru-dev3/aireadyu-life/insurance --include plugin,agents,sk
 
 | Skill | Cadence | Produces |
 |-------|---------|---------|
-| `arlive-insurance-review-brief` | Monthly | Insurance review brief |
-| `arlive-insurance-coverage-review` | Annually | Full coverage adequacy review |
-| `arlive-insurance-claims-review` | Monthly | Active claims status |
-| `arlive-insurance-renewal-watch` | Monthly | Policies renewing within 60 days |
-| `arlive-insurance-gap-review` | Annually | Coverage gap analysis |
-| `arlive-insurance-cost-review` | Annually | Premium optimization review |
-| `arlive-insurance-property-review` | Annually | Property coverage audit |
-| `arlive-insurance-document-completeness` | Quarterly | Policy document audit |
-| `arlive-insurance-monthly-sync` | Monthly | Vault refresh |
+| `aireadylife-insurance-review-brief` | Monthly | Insurance review brief |
+| `aireadylife-insurance-coverage-review` | Annually | Full coverage adequacy review |
+| `aireadylife-insurance-claims-review` | Monthly | Active claims status |
+| `aireadylife-insurance-renewal-watch` | Monthly | Policies renewing within 60 days |
+| `aireadylife-insurance-gap-review` | Annually | Coverage gap analysis |
+| `aireadylife-insurance-cost-review` | Annually | Premium optimization review |
+| `aireadylife-insurance-property-review` | Annually | Property coverage audit |
+| `aireadylife-insurance-document-completeness` | Quarterly | Policy document audit |
+| `aireadylife-insurance-monthly-sync` | Monthly | Vault refresh |
 
 ## MCP Integration (Claude.ai)
 

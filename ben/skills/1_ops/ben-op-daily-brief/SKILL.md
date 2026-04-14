@@ -1,5 +1,5 @@
 ---
-name: arlive-ben-op-daily-brief
+name: aireadylife-ben-op-daily-brief
 type: op
 cadence: daily
 description: >
@@ -8,7 +8,7 @@ description: >
   "ben brief", "what do I need to do today".
 ---
 
-# arlive-ben-daily-brief
+# aireadylife-ben-daily-brief
 
 **Cadence:** Daily (morning)
 **Produces:** Prioritized daily brief written to vault/ben/00_briefs/ with Top 3 actions, domain alert table, calendar, and open loops
@@ -35,8 +35,8 @@ flow will auto-discover them from the vault/ directory structure.
 
 ## Calls
 
-- **Flows:** `arlive-ben-collect-domain-alerts`, `arlive-ben-build-daily-brief`
-- **Tasks:** `arlive-ben-pull-domain-status`
+- **Flows:** `aireadylife-ben-collect-domain-alerts`, `aireadylife-ben-build-daily-brief`
+- **Tasks:** `aireadylife-ben-pull-domain-status`
 
 ## Apps
 

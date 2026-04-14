@@ -1,5 +1,5 @@
 ---
-name: arlive-social-task-log-interaction
+name: aireadylife-social-task-log-interaction
 type: task
 cadence: as-happened
 description: >
@@ -7,7 +7,7 @@ description: >
   notes, and any follow-up promised.
 ---
 
-# arlive-social-log-interaction
+# aireadylife-social-log-interaction
 
 **Cadence:** As-happened (after a meaningful interaction with a tracked contact)
 **Produces:** Interaction record in `vault/social/01_interactions/`

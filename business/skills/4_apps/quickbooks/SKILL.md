@@ -40,8 +40,8 @@ quickbooks_chrome_profile: /Users/YOU/Library/Application Support/Google/Chrome/
 
 ## Used By
 
-- `arlive-business-pl-review` — generate monthly P&L and flag variances
-- `arlive-business-build-pl-summary` — produce formatted P&L summary report
+- `aireadylife-business-pl-review` — generate monthly P&L and flag variances
+- `aireadylife-business-build-pl-summary` — produce formatted P&L summary report
 
 ## Vault Output
 

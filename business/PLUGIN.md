@@ -51,13 +51,13 @@ VAULT_MODE=demo npx -y @aireadylife/business-plugin
 
 | Skill | Cadence | Produces |
 |-------|---------|---------|
-| `arlive-business-review-brief` | Monthly | Business brief — revenue, expenses, P&L, compliance |
-| `arlive-business-revenue-review` | Monthly | Revenue by stream, invoicing status, YTD totals |
-| `arlive-business-expense-review` | Monthly | Expenses by category, deductibility review |
-| `arlive-business-compliance-review` | Quarterly | Annual report deadlines, registered agent status |
-| `arlive-business-tax-readiness` | Quarterly | Estimated tax set-aside, quarterly payment prep |
-| `arlive-business-monthly-synthesis` | Monthly | Full P&L synthesis with compliance calendar check |
-| `arlive-business-annual-filing-watch` | Jan-Apr | Monitor state annual report and federal filing deadlines |
-| `arlive-business-banking-review` | Monthly | Business account reconciliation and cash flow review |
-| `arlive-business-contract-review` | Quarterly | Active contract status, renewal dates, SOW milestones |
-| `arlive-business-payroll-review` | Monthly | Owner distributions, contractor payments, 1099 prep |
+| `aireadylife-business-review-brief` | Monthly | Business brief — revenue, expenses, P&L, compliance |
+| `aireadylife-business-revenue-review` | Monthly | Revenue by stream, invoicing status, YTD totals |
+| `aireadylife-business-expense-review` | Monthly | Expenses by category, deductibility review |
+| `aireadylife-business-compliance-review` | Quarterly | Annual report deadlines, registered agent status |
+| `aireadylife-business-tax-readiness` | Quarterly | Estimated tax set-aside, quarterly payment prep |
+| `aireadylife-business-monthly-synthesis` | Monthly | Full P&L synthesis with compliance calendar check |
+| `aireadylife-business-annual-filing-watch` | Jan-Apr | Monitor state annual report and federal filing deadlines |
+| `aireadylife-business-banking-review` | Monthly | Business account reconciliation and cash flow review |
+| `aireadylife-business-contract-review` | Quarterly | Active contract status, renewal dates, SOW milestones |
+| `aireadylife-business-payroll-review` | Monthly | Owner distributions, contractor payments, 1099 prep |

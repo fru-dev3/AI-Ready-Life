@@ -1,5 +1,5 @@
 ---
-name: arlive-wealth-task-update-open-loops
+name: aireadylife-wealth-task-update-open-loops
 type: task
 cadence: called-by-op
 description: >
@@ -7,7 +7,7 @@ description: >
   resolves completed items. Called at the end of every wealth op.
 ---
 
-# arlive-wealth-update-open-loops
+# aireadylife-wealth-update-open-loops
 
 **Cadence:** Called at the end of every wealth op
 **Produces:** Updated vault/wealth/open-loops.md with new flags appended and resolved items closed

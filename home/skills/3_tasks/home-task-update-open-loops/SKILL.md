@@ -1,12 +1,12 @@
 ---
-name: arlive-home-task-update-open-loops
+name: aireadylife-home-task-update-open-loops
 type: task
 description: >
   Writes all home flags (overdue maintenance, budget overruns, expiring warranties) to
   vault/home/open-loops.md and resolves completed items.
 ---
 
-# arlive-home-update-open-loops
+# aireadylife-home-update-open-loops
 
 **Trigger:** Called by home ops and flows
 **Produces:** Updated `vault/home/open-loops.md` with current action items

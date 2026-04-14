@@ -54,7 +54,7 @@ VAULT_MODE=demo npx -y @aireadylife/ben-plugin
 
 | Skill | Cadence | Produces |
 |-------|---------|---------|
-| `arlive-ben-morning-brief` | Daily 7am | Executive AM brief across all domains |
-| `arlive-ben-evening-brief` | Daily 8pm | Day close + next-day prep |
-| `arlive-ben-notion-sync` | Daily | Notion task sync from all agents |
-| `arlive-ben-system-health` | Weekly | Agent health + vault completeness check |
+| `aireadylife-ben-morning-brief` | Daily 7am | Executive AM brief across all domains |
+| `aireadylife-ben-evening-brief` | Daily 8pm | Day close + next-day prep |
+| `aireadylife-ben-notion-sync` | Daily | Notion task sync from all agents |
+| `aireadylife-ben-system-health` | Weekly | Agent health + vault completeness check |

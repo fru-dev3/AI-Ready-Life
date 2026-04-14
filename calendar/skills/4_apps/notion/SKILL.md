@@ -41,8 +41,8 @@ Notion-Version: 2022-06-28
 
 ## Used By
 
-- `arlive-calendar-weekly-agenda` — write finalized weekly agenda to Notion
-- `arlive-calendar-build-agenda` — sync deadline items to Notion task database
+- `aireadylife-calendar-weekly-agenda` — write finalized weekly agenda to Notion
+- `aireadylife-calendar-build-agenda` — sync deadline items to Notion task database
 
 ## Vault Output
 

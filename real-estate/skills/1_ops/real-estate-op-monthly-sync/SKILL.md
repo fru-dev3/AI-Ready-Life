@@ -1,5 +1,5 @@
 ---
-name: arlive-real-estate-op-monthly-sync
+name: aireadylife-real-estate-op-monthly-sync
 type: op
 cadence: monthly
 description: >
@@ -9,7 +9,7 @@ description: >
   Triggers: "real estate monthly sync", "sync market data", "refresh real estate vault".
 ---
 
-# arlive-realestate-monthly-sync
+# aireadylife-realestate-monthly-sync
 
 **Cadence:** Monthly (1st of month)
 **Produces:** Real estate vault refreshed with current market data and updated analysis
@@ -24,8 +24,8 @@ Set your target markets and data sources in `vault/real-estate/config.md`. Suppo
 
 ## Calls
 
-- **Flows:** `arlive-realestate-pull-market-data`, `arlive-realestate-update-affordability-model`, `arlive-realestate-check-acquisition-thresholds`
-- **Then triggers:** `arlive-realestate-review-brief`
+- **Flows:** `aireadylife-realestate-pull-market-data`, `aireadylife-realestate-update-affordability-model`, `aireadylife-realestate-check-acquisition-thresholds`
+- **Then triggers:** `aireadylife-realestate-review-brief`
 
 ## Apps
 

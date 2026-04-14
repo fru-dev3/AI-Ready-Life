@@ -38,7 +38,7 @@ explore_target_destinations: [NYC, LAX, MIA, CDG]
 
 ## Used By
 
-- `arlive-explore-trip-planning-review` — pull fare options and cheapest travel window for planned destinations
+- `aireadylife-explore-trip-planning-review` — pull fare options and cheapest travel window for planned destinations
 
 ## Vault Output
 

@@ -1,5 +1,5 @@
 ---
-name: arlive-business-op-pl-review
+name: aireadylife-business-op-pl-review
 type: op
 cadence: monthly
 description: >
@@ -8,7 +8,7 @@ description: >
   financials", "how is my business doing".
 ---
 
-# arlive-business-pl-review
+# aireadylife-business-pl-review
 
 **Cadence:** Monthly (1st of month)
 **Produces:** Monthly P&L brief, variance analysis, overdue invoice flags, updated open-loops entries
@@ -33,8 +33,8 @@ monthly revenue and expense targets for variance analysis.
 
 ## Calls
 
-- **Flows:** `arlive-business-build-pl-summary`
-- **Tasks:** `arlive-business-flag-overdue-invoice`, `arlive-business-update-open-loops`
+- **Flows:** `aireadylife-business-build-pl-summary`
+- **Tasks:** `aireadylife-business-flag-overdue-invoice`, `aireadylife-business-update-open-loops`
 
 ## Apps
 

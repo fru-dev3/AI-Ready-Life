@@ -39,8 +39,8 @@ contacts_export_path: vault/social/contacts/contacts-export.vcf
 
 ## Used By
 
-- `arlive-social-birthday-watch` — scan for upcoming birthdays in the next 30 days
-- `arlive-social-log-interaction` — update contact note with most recent interaction date
+- `aireadylife-social-birthday-watch` — scan for upcoming birthdays in the next 30 days
+- `aireadylife-social-log-interaction` — update contact note with most recent interaction date
 
 ## Vault Output
 

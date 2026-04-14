@@ -39,7 +39,7 @@ Scopes: https://www.googleapis.com/auth/drive.file
 
 ## Used By
 
-- `arlive-ben-build-daily-brief` — write completed daily brief to Drive output folder
+- `aireadylife-ben-build-daily-brief` — write completed daily brief to Drive output folder
 
 ## Vault Output
 

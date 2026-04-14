@@ -1,5 +1,5 @@
 ---
-name: arlive-health-flow-build-wellness-summary
+name: aireadylife-health-flow-build-wellness-summary
 type: flow
 trigger: called-by-op
 description: >
@@ -7,9 +7,9 @@ description: >
   compared to the prior month and 90-day rolling baseline.
 ---
 
-# arlive-health-build-wellness-summary
+# aireadylife-health-build-wellness-summary
 
-**Trigger:** Called by `arlive-health-review-brief`
+**Trigger:** Called by `aireadylife-health-review-brief`
 **Produces:** Monthly wellness summary in vault/health/04_briefs/ with trend analysis and deviation flags
 
 ## What it does

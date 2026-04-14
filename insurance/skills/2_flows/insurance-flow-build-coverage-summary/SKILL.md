@@ -1,5 +1,5 @@
 ---
-name: arlive-insurance-flow-build-coverage-summary
+name: aireadylife-insurance-flow-build-coverage-summary
 type: flow
 trigger: called-by-op
 description: >
@@ -8,9 +8,9 @@ description: >
   the expected coverage set.
 ---
 
-# arlive-insurance-build-coverage-summary
+# aireadylife-insurance-build-coverage-summary
 
-**Trigger:** Called by `arlive-insurance-review-brief`, `arlive-insurance-claims-review`
+**Trigger:** Called by `aireadylife-insurance-review-brief`, `aireadylife-insurance-claims-review`
 **Produces:** A structured coverage matrix table with all active policies and a missing-policy flag list returned to the calling op.
 
 ## What it does

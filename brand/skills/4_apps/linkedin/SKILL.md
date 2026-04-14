@@ -38,8 +38,8 @@ linkedin_chrome_profile: /Users/YOU/Library/Application Support/Google/Chrome/De
 
 ## Used By
 
-- `arlive-brand-build-analytics-summary` — pull follower and post engagement metrics
-- `arlive-brand-check-profile-consistency` — audit profile content against brand voice
+- `aireadylife-brand-build-analytics-summary` — pull follower and post engagement metrics
+- `aireadylife-brand-check-profile-consistency` — audit profile content against brand voice
 
 ## Vault Output
 

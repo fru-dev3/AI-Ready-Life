@@ -1,5 +1,5 @@
 ---
-name: arlive-ben-flow-build-daily-brief
+name: aireadylife-ben-flow-build-daily-brief
 type: flow
 trigger: called-by-op
 description: >
@@ -7,9 +7,9 @@ description: >
   ACTION TODAY format with Top 3 callout, domain alert table, and full open-loops list.
 ---
 
-# arlive-ben-build-daily-brief
+# aireadylife-ben-build-daily-brief
 
-**Trigger:** Called by `arlive-ben-daily-brief`
+**Trigger:** Called by `aireadylife-ben-daily-brief`
 **Produces:** Fully formatted daily brief document ready to write to vault/ben/00_briefs/
 
 ## What it does

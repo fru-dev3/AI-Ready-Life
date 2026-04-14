@@ -1,12 +1,12 @@
 ---
-name: arlive-brand-task-update-open-loops
+name: aireadylife-brand-task-update-open-loops
 type: task
 description: >
   Writes all brand flags (profile inconsistencies, content gaps, unanswered mentions, publishing
   cadence misses) to vault/brand/open-loops.md. Resolves completed items.
 ---
 
-# arlive-brand-update-open-loops
+# aireadylife-brand-update-open-loops
 
 **Trigger:** Called at the end of every brand op
 **Produces:** Updated vault/brand/open-loops.md with current flags and resolved items cleared

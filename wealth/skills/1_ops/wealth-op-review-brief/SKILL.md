@@ -1,5 +1,5 @@
 ---
-name: arlive-wealth-op-review-brief
+name: aireadylife-wealth-op-review-brief
 type: op
 cadence: monthly
 description: >
@@ -8,9 +8,9 @@ description: >
   "wealth summary brief", "what happened with my wealth".
 ---
 
-# arlive-wealth-review-brief
+# aireadylife-wealth-review-brief
 
-**Cadence:** Monthly (after arlive-wealth-monthly-synthesis)
+**Cadence:** Monthly (after aireadylife-wealth-monthly-synthesis)
 **Produces:** Wealth review brief — net worth delta, flags, prioritized action items
 
 ## What it does
@@ -19,7 +19,7 @@ Generates the monthly wealth review brief after synthesis is complete. Consolida
 
 ## Calls
 
-- **Flows:** `arlive-wealth-build-review-brief`
+- **Flows:** `aireadylife-wealth-build-review-brief`
 
 ## Vault Output
 

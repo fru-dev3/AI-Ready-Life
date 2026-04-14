@@ -40,8 +40,8 @@ Authorization: Bearer $OURA_API_KEY
 
 ## Used By
 
-- `arlive-health-sync-wearable-data` — pull nightly sleep and readiness scores
-- `arlive-health-anomaly-watch` — flag HRV drops or low readiness streaks
+- `aireadylife-health-sync-wearable-data` — pull nightly sleep and readiness scores
+- `aireadylife-health-anomaly-watch` — flag HRV drops or low readiness streaks
 
 ## Vault Output
 

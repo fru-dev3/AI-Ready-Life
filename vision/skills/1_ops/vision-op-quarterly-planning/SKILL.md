@@ -1,5 +1,5 @@
 ---
-name: arlive-vision-op-quarterly-planning
+name: aireadylife-vision-op-quarterly-planning
 type: op
 cadence: quarterly
 description: >
@@ -8,7 +8,7 @@ description: >
   Triggers: "quarterly planning", "set goals", "quarterly review", "Q planning session".
 ---
 
-# arlive-vision-quarterly-planning
+# aireadylife-vision-quarterly-planning
 
 **Cadence:** Quarterly (first week of Jan, Apr, Jul, Oct)
 **Produces:** Quarterly review retrospective + new OKRs for next quarter
@@ -29,7 +29,7 @@ Life vision and prior OKRs live at `vault/vision/00_current/`. New OKRs are save
 
 ## Calls
 
-- **Flows:** `arlive-vision-run-retrospective`, `arlive-vision-build-quarterly-scorecard`, `arlive-vision-set-new-okrs`
+- **Flows:** `aireadylife-vision-run-retrospective`, `aireadylife-vision-build-quarterly-scorecard`, `aireadylife-vision-set-new-okrs`
 - **Notifies:** Chief of Staff — routes new OKRs to all relevant domain agents
 
 ## Apps

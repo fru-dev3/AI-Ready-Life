@@ -1,5 +1,5 @@
 ---
-name: arlive-estate-task-flag-maintenance-item
+name: aireadylife-estate-task-flag-maintenance-item
 type: task
 description: >
   Writes a maintenance flag to vault/estate/open-loops.md with property address,
@@ -7,7 +7,7 @@ description: >
   date.
 ---
 
-# arlive-estate-flag-maintenance-item
+# aireadylife-estate-flag-maintenance-item
 
 **Produces:** A new maintenance flag entry in `vault/estate/open-loops.md` and a corresponding item in `vault/estate/02_maintenance/`.
 

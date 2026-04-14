@@ -1,5 +1,5 @@
 ---
-name: arlive-career-flow-build-skills-gap-summary
+name: aireadylife-career-flow-build-skills-gap-summary
 type: flow
 trigger: called-by-op
 description: >
@@ -7,9 +7,9 @@ description: >
   the top 3-5 priority skills ranked by market demand and time to close.
 ---
 
-# arlive-career-build-skills-gap-summary
+# aireadylife-career-build-skills-gap-summary
 
-**Trigger:** Called by `arlive-career-skills-gap-review`
+**Trigger:** Called by `aireadylife-career-skills-gap-review`
 **Produces:** Skills gap analysis in vault/career/03_skills/ with prioritized learning recommendations
 
 ## What it does

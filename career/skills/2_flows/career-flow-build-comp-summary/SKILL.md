@@ -1,5 +1,5 @@
 ---
-name: arlive-career-flow-build-comp-summary
+name: aireadylife-career-flow-build-comp-summary
 type: flow
 trigger: called-by-op
 description: >
@@ -7,9 +7,9 @@ description: >
   for your role, level, and location.
 ---
 
-# arlive-career-build-comp-summary
+# aireadylife-career-build-comp-summary
 
-**Trigger:** Called by `arlive-career-comp-review`
+**Trigger:** Called by `aireadylife-career-comp-review`
 **Produces:** Comp benchmarking table in vault/career/02_compensation/ with current TC and market percentile position
 
 ## What it does

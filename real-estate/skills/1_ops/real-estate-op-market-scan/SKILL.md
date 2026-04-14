@@ -1,5 +1,5 @@
 ---
-name: arlive-real-estate-op-market-scan
+name: aireadylife-real-estate-op-market-scan
 type: op
 cadence: monthly
 description: >
@@ -8,7 +8,7 @@ description: >
   "housing market update".
 ---
 
-# arlive-real-estate-market-scan
+# aireadylife-real-estate-market-scan
 
 **Cadence:** Monthly (1st of month)
 **Produces:** Market trend report for configured target neighborhoods with key metrics and signals
@@ -25,8 +25,8 @@ writes them to open-loops.md.
 
 ## Calls
 
-- **Flows:** `arlive-real-estate-scan-market-listings`
-- **Tasks:** `arlive-real-estate-update-open-loops`
+- **Flows:** `aireadylife-real-estate-scan-market-listings`
+- **Tasks:** `aireadylife-real-estate-update-open-loops`
 
 ## Apps
 

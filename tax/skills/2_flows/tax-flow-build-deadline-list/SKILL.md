@@ -1,5 +1,5 @@
 ---
-name: arlive-tax-flow-build-deadline-list
+name: aireadylife-tax-flow-build-deadline-list
 type: flow
 trigger: called-by-op
 description: >
@@ -7,9 +7,9 @@ description: >
   sorted by urgency with payment amounts and entity context.
 ---
 
-# arlive-tax-build-deadline-list
+# aireadylife-tax-build-deadline-list
 
-**Trigger:** Called by `arlive-tax-deadline-watch`
+**Trigger:** Called by `aireadylife-tax-deadline-watch`
 **Produces:** Deadline list document in vault/tax/02_deadlines/ filtered to next 90 days and sorted by urgency
 
 ## What it does

@@ -1,5 +1,5 @@
 ---
-name: arlive-ben-op-system-health
+name: aireadylife-ben-op-system-health
 type: op
 cadence: weekly
 description: >
@@ -8,7 +8,7 @@ description: >
   Triggers: "system health", "check all agents", "life OS health".
 ---
 
-# arlive-ben-system-health
+# aireadylife-ben-system-health
 
 **Cadence:** Weekly (Sunday)
 **Produces:** System health report — installed plugins, vault status, stale domains

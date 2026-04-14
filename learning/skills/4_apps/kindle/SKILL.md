@@ -37,7 +37,7 @@ goodreads_rss_url: https://www.goodreads.com/review/list_rss/YOUR_USER_ID?shelf=
 
 ## Used By
 
-- `arlive-learning-build-reading-summary` — compile current reading list with progress and recent highlights
+- `aireadylife-learning-build-reading-summary` — compile current reading list with progress and recent highlights
 
 ## Vault Output
 

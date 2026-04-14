@@ -1,5 +1,5 @@
 ---
-name: arlive-benefits-op-review-brief
+name: aireadylife-benefits-op-review-brief
 type: op
 cadence: monthly
 description: >
@@ -7,7 +7,7 @@ description: >
   Triggers: "benefits brief", "show my benefits", "401k status", "HSA balance", "benefits summary".
 ---
 
-# arlive-benefits-review-brief
+# aireadylife-benefits-review-brief
 
 **Cadence:** Monthly (1st of month)
 **Produces:** Benefits brief — 401k status, HSA balance, coverage flags, open items

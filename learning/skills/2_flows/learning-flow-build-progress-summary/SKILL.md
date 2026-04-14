@@ -1,5 +1,5 @@
 ---
-name: arlive-learning-flow-build-progress-summary
+name: aireadylife-learning-flow-build-progress-summary
 type: flow
 trigger: called-by-op
 description: >
@@ -7,9 +7,9 @@ description: >
   and comparison to target deadlines.
 ---
 
-# arlive-learning-build-progress-summary
+# aireadylife-learning-build-progress-summary
 
-**Trigger:** Called by `arlive-learning-monthly-sync`
+**Trigger:** Called by `aireadylife-learning-monthly-sync`
 **Produces:** Progress table with % complete, pace status, and days-remaining per active item
 
 ## What it does

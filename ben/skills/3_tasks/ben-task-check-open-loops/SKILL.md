@@ -1,12 +1,12 @@
 ---
-name: arlive-ben-task-check-open-loops
+name: aireadylife-ben-task-check-open-loops
 type: task
 description: >
   Reads all open-loops.md files across installed plugin vaults and returns a count and priority
   summary. Used by ben flows to understand what needs attention.
 ---
 
-# arlive-ben-check-open-loops
+# aireadylife-ben-check-open-loops
 
 **Trigger:** Called by ben flows that need a current backlog snapshot before building a brief or agenda
 **Produces:** Structured summary: total open-loop count, count by domain, count by priority tier

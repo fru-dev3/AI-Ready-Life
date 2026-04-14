@@ -37,7 +37,7 @@ tripit_chrome_profile: /Users/YOU/Library/Application Support/Google/Chrome/Defa
 
 ## Used By
 
-- `arlive-explore-monthly-sync` — pull upcoming trip details and sync with calendar
+- `aireadylife-explore-monthly-sync` — pull upcoming trip details and sync with calendar
 
 ## Vault Output
 

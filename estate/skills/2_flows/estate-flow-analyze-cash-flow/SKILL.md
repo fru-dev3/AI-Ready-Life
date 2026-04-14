@@ -1,5 +1,5 @@
 ---
-name: arlive-estate-flow-analyze-cash-flow
+name: aireadylife-estate-flow-analyze-cash-flow
 type: flow
 trigger: called-by-op
 description: >
@@ -8,9 +8,9 @@ description: >
   flags properties with negative or declining cash flow.
 ---
 
-# arlive-estate-analyze-cash-flow
+# aireadylife-estate-analyze-cash-flow
 
-**Trigger:** Called by `arlive-estate-cash-flow-review`, `arlive-estate-portfolio-review`
+**Trigger:** Called by `aireadylife-estate-cash-flow-review`, `aireadylife-estate-portfolio-review`
 **Produces:** A per-property and portfolio-level cash flow breakdown with NOI, expense ratios, and anomaly flags returned to the calling op.
 
 ## What it does

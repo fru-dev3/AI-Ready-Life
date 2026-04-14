@@ -1,5 +1,5 @@
 ---
-name: arlive-explore-op-review-brief
+name: aireadylife-explore-op-review-brief
 type: op
 cadence: monthly
 description: >
@@ -8,7 +8,7 @@ description: >
   Triggers: "explore brief", "travel review", "trip status", "passport check".
 ---
 
-# arlive-explore-review-brief
+# aireadylife-explore-review-brief
 
 **Cadence:** Monthly (1st of month)
 **Produces:** Explore brief — upcoming trips, document expiration alerts, wishlist
@@ -23,8 +23,8 @@ Configure your vault at `vault/explore/config.md` with your travelers, passport 
 
 ## Calls
 
-- **Flows:** `arlive-explore-build-review-brief`
-- **Tasks:** `arlive-explore-update-open-loops`
+- **Flows:** `aireadylife-explore-build-review-brief`
+- **Tasks:** `aireadylife-explore-update-open-loops`
 
 ## Apps
 

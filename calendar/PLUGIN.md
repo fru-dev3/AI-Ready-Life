@@ -51,11 +51,11 @@ VAULT_MODE=demo npx -y @aireadylife/calendar-plugin
 
 | Skill | Cadence | Produces |
 |-------|---------|---------|
-| `arlive-calendar-review-brief` | Weekly | Weekly calendar brief — deadlines, focus health, flags |
-| `arlive-calendar-daily-review` | Daily | Today's schedule review with priority alignment |
-| `arlive-calendar-weekly-review` | Weekly | Week-ahead planning with deadline sync |
-| `arlive-calendar-deadline-alert` | Weekly | 30-day rolling deadline alert from all installed plugins |
-| `arlive-calendar-deadline-sync` | Weekly | Sync cross-domain deadlines into unified calendar |
-| `arlive-calendar-deep-work-audit` | Weekly | Deep work block health check vs. weekly targets |
-| `arlive-calendar-recurring-event-review` | Quarterly | Audit recurring events for continued relevance |
-| `arlive-calendar-quarterly-alignment` | Quarterly | Align weekly calendar structure with quarterly goals |
+| `aireadylife-calendar-review-brief` | Weekly | Weekly calendar brief — deadlines, focus health, flags |
+| `aireadylife-calendar-daily-review` | Daily | Today's schedule review with priority alignment |
+| `aireadylife-calendar-weekly-review` | Weekly | Week-ahead planning with deadline sync |
+| `aireadylife-calendar-deadline-alert` | Weekly | 30-day rolling deadline alert from all installed plugins |
+| `aireadylife-calendar-deadline-sync` | Weekly | Sync cross-domain deadlines into unified calendar |
+| `aireadylife-calendar-deep-work-audit` | Weekly | Deep work block health check vs. weekly targets |
+| `aireadylife-calendar-recurring-event-review` | Quarterly | Audit recurring events for continued relevance |
+| `aireadylife-calendar-quarterly-alignment` | Quarterly | Align weekly calendar structure with quarterly goals |

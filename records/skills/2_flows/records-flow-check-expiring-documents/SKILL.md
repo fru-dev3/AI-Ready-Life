@@ -1,5 +1,5 @@
 ---
-name: arlive-records-flow-check-expiring-documents
+name: aireadylife-records-flow-check-expiring-documents
 type: flow
 trigger: called-by-op
 description: >
@@ -7,9 +7,9 @@ description: >
   actions with appropriate lead times.
 ---
 
-# arlive-records-check-expiring-documents
+# aireadylife-records-check-expiring-documents
 
-**Trigger:** Called by `arlive-records-document-audit`
+**Trigger:** Called by `aireadylife-records-document-audit`
 **Produces:** Expiration report with per-document status, renewal lead times, and action steps
 
 ## What it does

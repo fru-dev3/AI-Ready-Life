@@ -37,7 +37,7 @@ apple_health_export_path: ~/Library/Mobile Documents/com~apple~CloudDocs/HealthE
 
 ## Used By
 
-- `arlive-health-sync-wearable-data` — merge Apple Health metrics with Oura data
+- `aireadylife-health-sync-wearable-data` — merge Apple Health metrics with Oura data
 
 ## Vault Output
 

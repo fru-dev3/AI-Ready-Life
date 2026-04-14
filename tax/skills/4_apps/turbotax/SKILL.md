@@ -40,8 +40,8 @@ My TurboTax → Tax Home → Download/Print return as PDF → save to `vault/tax
 
 ## Used By
 
-- `arlive-tax-document-sync` — download completed returns and confirmation PDFs
-- `arlive-tax-review-brief` — read prior year AGI and effective rate for planning
+- `aireadylife-tax-document-sync` — download completed returns and confirmation PDFs
+- `aireadylife-tax-review-brief` — read prior year AGI and effective rate for planning
 
 ## Vault Output
 

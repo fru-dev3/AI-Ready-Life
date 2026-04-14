@@ -1,5 +1,5 @@
 ---
-name: arlive-business-op-compliance-review
+name: aireadylife-business-op-compliance-review
 type: op
 cadence: quarterly
 description: >
@@ -8,7 +8,7 @@ description: >
   "annual report", "entity check".
 ---
 
-# arlive-business-compliance-review
+# aireadylife-business-compliance-review
 
 **Cadence:** Quarterly (January, April, July, October)
 **Produces:** Compliance status report, deadline flags, updated open-loops entries
@@ -34,8 +34,8 @@ after each filing to keep it accurate.
 
 ## Calls
 
-- **Flows:** `arlive-business-check-compliance-status`
-- **Tasks:** `arlive-business-update-open-loops`
+- **Flows:** `aireadylife-business-check-compliance-status`
+- **Tasks:** `aireadylife-business-update-open-loops`
 
 ## Apps
 

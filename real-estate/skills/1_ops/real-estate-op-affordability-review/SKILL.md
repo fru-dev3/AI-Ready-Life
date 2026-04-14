@@ -1,5 +1,5 @@
 ---
-name: arlive-real-estate-op-affordability-review
+name: aireadylife-real-estate-op-affordability-review
 type: op
 cadence: on-demand
 description: >
@@ -8,7 +8,7 @@ description: >
   "affordability", "how much house can I buy", "buy vs rent".
 ---
 
-# arlive-real-estate-affordability-review
+# aireadylife-real-estate-affordability-review
 
 **Cadence:** On-demand (when evaluating a purchase or rate change)
 **Produces:** Affordability analysis with max purchase price, payment breakdown, and buy vs. rent comparison
@@ -25,8 +25,8 @@ makes more financial sense at the current price point.
 
 ## Calls
 
-- **Flows:** `arlive-real-estate-build-affordability-analysis`
-- **Tasks:** `arlive-real-estate-run-buy-vs-rent`, `arlive-real-estate-update-open-loops`
+- **Flows:** `aireadylife-real-estate-build-affordability-analysis`
+- **Tasks:** `aireadylife-real-estate-run-buy-vs-rent`, `aireadylife-real-estate-update-open-loops`
 
 ## Apps
 

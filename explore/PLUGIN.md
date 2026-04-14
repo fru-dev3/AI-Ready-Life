@@ -53,8 +53,8 @@ npx companies.sh add fru-dev3/aireadyu-life/explore --include plugin,agents,skil
 
 | Skill | Cadence | Produces |
 |-------|---------|---------|
-| `arlive-explore-review-brief` | Monthly | Explore review brief |
-| `arlive-explore-monthly-sync` | Monthly | Document expiry + trip alerts |
+| `aireadylife-explore-review-brief` | Monthly | Explore review brief |
+| `aireadylife-explore-monthly-sync` | Monthly | Document expiry + trip alerts |
 
 ## MCP Integration (Claude.ai)
 

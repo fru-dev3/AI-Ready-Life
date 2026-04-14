@@ -1,5 +1,5 @@
 ---
-name: arlive-records-op-monthly-sync
+name: aireadylife-records-op-monthly-sync
 type: op
 cadence: monthly
 description: >
@@ -8,7 +8,7 @@ description: >
   Triggers: "records monthly sync", "sync records", "refresh records vault".
 ---
 
-# arlive-records-monthly-sync
+# aireadylife-records-monthly-sync
 
 **Cadence:** Monthly (1st of month)
 **Produces:** Records vault refreshed with updated expiration countdown and subscription review
@@ -23,8 +23,8 @@ Set your expiration alert threshold and household members in `vault/records/conf
 
 ## Calls
 
-- **Flows:** `arlive-records-check-expirations`, `arlive-records-review-subscriptions`, `arlive-records-check-legal-currency`
-- **Then triggers:** `arlive-records-review-brief`
+- **Flows:** `aireadylife-records-check-expirations`, `aireadylife-records-review-subscriptions`, `aireadylife-records-check-legal-currency`
+- **Then triggers:** `aireadylife-records-review-brief`
 
 ## Apps
 

@@ -1,5 +1,5 @@
 ---
-name: arlive-real-estate-flow-scan-market-listings
+name: aireadylife-real-estate-flow-scan-market-listings
 type: flow
 trigger: called-by-op
 description: >
@@ -7,9 +7,9 @@ description: >
   market stats including median price, active inventory, and average days on market.
 ---
 
-# arlive-real-estate-scan-market-listings
+# aireadylife-real-estate-scan-market-listings
 
-**Trigger:** Called by `arlive-real-estate-market-scan`
+**Trigger:** Called by `aireadylife-real-estate-market-scan`
 **Produces:** Market snapshot table with aggregate stats and filtered active listings per neighborhood
 
 ## What it does

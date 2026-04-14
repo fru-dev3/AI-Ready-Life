@@ -55,9 +55,9 @@ npx companies.sh add fru-dev3/aireadyu-life/learning --include plugin,agents,ski
 
 | Skill | Cadence | Produces |
 |-------|---------|---------|
-| `arlive-learning-review-brief` | Weekly | Learning brief — active courses progress, current book, cert timeline |
-| `arlive-learning-monthly-sync` | Monthly | Synced course progress and monthly learning goals review |
-| `arlive-learning-weekly-review` | Weekly | Weekly learning check-in — study time, progress toward goals |
+| `aireadylife-learning-review-brief` | Weekly | Learning brief — active courses progress, current book, cert timeline |
+| `aireadylife-learning-monthly-sync` | Monthly | Synced course progress and monthly learning goals review |
+| `aireadylife-learning-weekly-review` | Weekly | Weekly learning check-in — study time, progress toward goals |
 
 ## MCP Integration (Claude.ai)
 

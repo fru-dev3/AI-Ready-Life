@@ -1,5 +1,5 @@
 ---
-name: arlive-ben-flow-collect-domain-alerts
+name: aireadylife-ben-flow-collect-domain-alerts
 type: flow
 trigger: called-by-op
 description: >
@@ -7,9 +7,9 @@ description: >
   by priority and domain.
 ---
 
-# arlive-ben-collect-domain-alerts
+# aireadylife-ben-collect-domain-alerts
 
-**Trigger:** Called by `arlive-ben-daily-brief`, `arlive-ben-weekly-preview`
+**Trigger:** Called by `aireadylife-ben-daily-brief`, `aireadylife-ben-weekly-preview`
 **Produces:** Consolidated list of all unresolved domain flags across installed plugins, sorted by priority
 
 ## What it does

@@ -57,17 +57,17 @@ npx companies.sh add fru-dev3/aireadyu-life/health --include plugin,agents,skill
 
 | Skill | Cadence | Produces |
 |-------|---------|---------|
-| `arlive-health-review-brief` | Monthly | Health review brief |
-| `arlive-health-monthly-sync` | Monthly | Refreshed vault |
-| `arlive-health-lab-review` | On-demand | Lab analysis |
-| `arlive-health-medication-review` | Monthly | Refill status |
-| `arlive-health-wellness-review` | Monthly | Wellness score |
-| `arlive-health-cost-review` | Monthly | Cost + HSA status |
-| `arlive-health-anomaly-watch` | Weekly | Anomaly flags |
-| `arlive-health-appointment-review` | Monthly | Upcoming care |
-| `arlive-health-preventive-care-review` | Monthly | Gap analysis |
-| `arlive-health-insurance-readiness` | Quarterly | Coverage review |
-| `arlive-health-document-completeness` | Quarterly | Doc audit |
+| `aireadylife-health-review-brief` | Monthly | Health review brief |
+| `aireadylife-health-monthly-sync` | Monthly | Refreshed vault |
+| `aireadylife-health-lab-review` | On-demand | Lab analysis |
+| `aireadylife-health-medication-review` | Monthly | Refill status |
+| `aireadylife-health-wellness-review` | Monthly | Wellness score |
+| `aireadylife-health-cost-review` | Monthly | Cost + HSA status |
+| `aireadylife-health-anomaly-watch` | Weekly | Anomaly flags |
+| `aireadylife-health-appointment-review` | Monthly | Upcoming care |
+| `aireadylife-health-preventive-care-review` | Monthly | Gap analysis |
+| `aireadylife-health-insurance-readiness` | Quarterly | Coverage review |
+| `aireadylife-health-document-completeness` | Quarterly | Doc audit |
 
 ## MCP Integration (Claude.ai)
 

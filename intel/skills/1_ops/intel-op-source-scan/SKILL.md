@@ -1,5 +1,5 @@
 ---
-name: arlive-intel-op-source-scan
+name: aireadylife-intel-op-source-scan
 type: op
 cadence: weekly
 description: >
@@ -8,7 +8,7 @@ description: >
   Triggers: "source scan", "audit sources", "source health", "check my news sources".
 ---
 
-# arlive-intel-source-scan
+# aireadylife-intel-source-scan
 
 **Cadence:** Weekly (Sunday)
 **Produces:** Source health report — stale or low-quality source flags with replacement suggestions
@@ -23,8 +23,8 @@ Source list lives at `vault/intel/sources/source-list.md`. Add, remove, or adjus
 
 ## Calls
 
-- **Flows:** `arlive-intel-check-source-availability`, `arlive-intel-assess-source-quality`
-- **Tasks:** `arlive-intel-update-source-list`
+- **Flows:** `aireadylife-intel-check-source-availability`, `aireadylife-intel-assess-source-quality`
+- **Tasks:** `aireadylife-intel-update-source-list`
 
 ## Apps
 

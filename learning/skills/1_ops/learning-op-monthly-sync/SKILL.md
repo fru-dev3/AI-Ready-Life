@@ -1,5 +1,5 @@
 ---
-name: arlive-learning-op-monthly-sync
+name: aireadylife-learning-op-monthly-sync
 type: op
 cadence: monthly
 description: >
@@ -8,7 +8,7 @@ description: >
   Triggers: "learning monthly sync", "sync learning data", "refresh learning vault".
 ---
 
-# arlive-learning-monthly-sync
+# aireadylife-learning-monthly-sync
 
 **Cadence:** Monthly (1st of month)
 **Produces:** Learning vault refreshed with updated course progress, book status, and goal assessment
@@ -23,8 +23,8 @@ Set your platform list and daily study target in `vault/learning/config.md`. Sup
 
 ## Calls
 
-- **Flows:** `arlive-learning-sync-course-progress`, `arlive-learning-update-reading-list`, `arlive-learning-review-monthly-goals`
-- **Then triggers:** `arlive-learning-review-brief`
+- **Flows:** `aireadylife-learning-sync-course-progress`, `aireadylife-learning-update-reading-list`, `aireadylife-learning-review-monthly-goals`
+- **Then triggers:** `aireadylife-learning-review-brief`
 
 ## Apps
 

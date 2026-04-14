@@ -57,14 +57,14 @@ npx companies.sh add fru-dev3/aireadyu-life/vision --include plugin,agents,skill
 
 | Skill | Cadence | Produces |
 |-------|---------|---------|
-| `arlive-vision-review-brief` | Monthly | Vision brief — 13-domain scorecard, top 3 at-risk goals, alignment flags |
-| `arlive-vision-quarterly-planning` | Quarterly | Structured quarterly review and OKRs for next quarter |
-| `arlive-vision-alignment-review` | Monthly | Calendar vs. priorities gap analysis |
-| `arlive-vision-annual-review` | Annual | Full year-in-review and 1-year vision reset |
-| `arlive-vision-goal-gap-review` | Monthly | Goal trajectory analysis — on track vs. at-risk goals |
-| `arlive-vision-monthly-review` | Monthly | Monthly life scorecard across all 13 domains |
-| `arlive-vision-weekly-checkin` | Weekly | Weekly pulse — top priorities and progress |
-| `arlive-vision-life-vision-refresh` | Quarterly | Values and vision document review and update |
+| `aireadylife-vision-review-brief` | Monthly | Vision brief — 13-domain scorecard, top 3 at-risk goals, alignment flags |
+| `aireadylife-vision-quarterly-planning` | Quarterly | Structured quarterly review and OKRs for next quarter |
+| `aireadylife-vision-alignment-review` | Monthly | Calendar vs. priorities gap analysis |
+| `aireadylife-vision-annual-review` | Annual | Full year-in-review and 1-year vision reset |
+| `aireadylife-vision-goal-gap-review` | Monthly | Goal trajectory analysis — on track vs. at-risk goals |
+| `aireadylife-vision-monthly-review` | Monthly | Monthly life scorecard across all 13 domains |
+| `aireadylife-vision-weekly-checkin` | Weekly | Weekly pulse — top priorities and progress |
+| `aireadylife-vision-life-vision-refresh` | Quarterly | Values and vision document review and update |
 
 ## MCP Integration (Claude.ai)
 

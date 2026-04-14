@@ -38,7 +38,7 @@ thumbtack_chrome_profile: /Users/YOU/Library/Application Support/Google/Chrome/D
 
 ## Used By
 
-- `arlive-home-seasonal-maintenance` — solicit quotes from multiple pros for seasonal projects
+- `aireadylife-home-seasonal-maintenance` — solicit quotes from multiple pros for seasonal projects
 
 ## Vault Output
 

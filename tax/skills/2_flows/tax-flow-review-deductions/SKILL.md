@@ -1,5 +1,5 @@
 ---
-name: arlive-tax-flow-review-deductions
+name: aireadylife-tax-flow-review-deductions
 type: flow
 trigger: called-by-op
 description: >
@@ -7,9 +7,9 @@ description: >
   them, calculates YTD totals per category, and flags categories below prior year pace.
 ---
 
-# arlive-tax-review-deductions
+# aireadylife-tax-review-deductions
 
-**Trigger:** Called by `arlive-tax-deduction-review`
+**Trigger:** Called by `aireadylife-tax-deduction-review`
 **Produces:** Updated deduction category totals in vault/tax/03_deductions/ with YTD summary and pace flags
 
 ## What it does

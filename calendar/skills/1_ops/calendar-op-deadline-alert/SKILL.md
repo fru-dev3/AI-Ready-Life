@@ -1,5 +1,5 @@
 ---
-name: arlive-calendar-op-deadline-alert
+name: aireadylife-calendar-op-deadline-alert
 type: op
 cadence: weekly
 description: >
@@ -7,7 +7,7 @@ description: >
   Triggers: "deadline alert", "what's due", "upcoming deadlines", "30-day deadlines".
 ---
 
-# arlive-calendar-deadline-alert
+# aireadylife-calendar-deadline-alert
 
 **Cadence:** Weekly (Monday)
 **Produces:** 30-day deadline alert report across all installed plugins

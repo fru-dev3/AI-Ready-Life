@@ -38,8 +38,8 @@ adp_chrome_profile: /Users/YOU/Library/Application Support/Google/Chrome/Default
 
 ## Used By
 
-- `arlive-benefits-401k-review` — verify 401k deductions match elected rate
-- `arlive-benefits-coverage-review` — confirm benefit deductions are correct per plan
+- `aireadylife-benefits-401k-review` — verify 401k deductions match elected rate
+- `aireadylife-benefits-coverage-review` — confirm benefit deductions are correct per plan
 
 ## Vault Output
 

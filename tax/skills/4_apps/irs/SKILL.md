@@ -42,8 +42,8 @@ irs_chrome_profile: /Users/YOU/Library/Application Support/Google/Chrome/Default
 
 ## Used By
 
-- `arlive-tax-quarterly-estimate` — verify prior payments, submit quarterly estimated tax
-- `arlive-tax-deadline-watch` — confirm payment received and transcript updated
+- `aireadylife-tax-quarterly-estimate` — verify prior payments, submit quarterly estimated tax
+- `aireadylife-tax-deadline-watch` — confirm payment received and transcript updated
 
 ## Vault Output
 

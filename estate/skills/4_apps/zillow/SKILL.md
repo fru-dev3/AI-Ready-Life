@@ -39,7 +39,7 @@ estate_properties:
 
 ## Used By
 
-- `arlive-estate-portfolio-review` — pull Zestimate for each owned property
+- `aireadylife-estate-portfolio-review` — pull Zestimate for each owned property
 
 ## Vault Output
 

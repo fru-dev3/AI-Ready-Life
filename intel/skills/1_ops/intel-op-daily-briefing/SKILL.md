@@ -1,5 +1,5 @@
 ---
-name: arlive-intel-op-daily-briefing
+name: aireadylife-intel-op-daily-briefing
 type: op
 cadence: daily
 description: >
@@ -7,7 +7,7 @@ description: >
   "daily briefing", "news briefing", "what's happening today", "morning news".
 ---
 
-# arlive-intel-daily-briefing
+# aireadylife-intel-daily-briefing
 
 **Cadence:** Daily (morning)
 **Produces:** Scannable daily news digest filtered to priority topics and credibility-ranked sources
@@ -24,8 +24,8 @@ follow-up if warranted.
 
 ## Calls
 
-- **Flows:** `arlive-intel-build-news-digest`
-- **Tasks:** `arlive-intel-flag-priority-story`, `arlive-intel-update-open-loops`
+- **Flows:** `aireadylife-intel-build-news-digest`
+- **Tasks:** `aireadylife-intel-flag-priority-story`, `aireadylife-intel-update-open-loops`
 
 ## Apps
 

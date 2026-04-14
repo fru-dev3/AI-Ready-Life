@@ -1,5 +1,5 @@
 ---
-name: arlive-insurance-op-claims-review
+name: aireadylife-insurance-op-claims-review
 type: op
 cadence: on-demand
 description: >
@@ -9,7 +9,7 @@ description: >
   Triggers: "claim status", "insurance claim", "file a claim", "claims review".
 ---
 
-# arlive-insurance-claims-review
+# aireadylife-insurance-claims-review
 
 **Cadence:** On-demand (triggered whenever a claim is active or a new claim needs to be filed)
 **Produces:** A claims status report in `vault/insurance/01_claims/` with action items and open loop entries for pending steps.
@@ -20,8 +20,8 @@ Manages the complete lifecycle of active insurance claims from initial filing th
 
 ## Calls
 
-- **Flows:** `arlive-insurance-build-coverage-summary`
-- **Tasks:** `arlive-insurance-update-open-loops`
+- **Flows:** `aireadylife-insurance-build-coverage-summary`
+- **Tasks:** `aireadylife-insurance-update-open-loops`
 
 ## Apps
 

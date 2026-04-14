@@ -1,5 +1,5 @@
 ---
-name: arlive-home-op-seasonal-maintenance
+name: aireadylife-home-op-seasonal-maintenance
 type: op
 cadence: quarterly
 description: >
@@ -8,7 +8,7 @@ description: >
   "home maintenance", "maintenance checklist", "spring maintenance".
 ---
 
-# arlive-home-seasonal-maintenance
+# aireadylife-home-seasonal-maintenance
 
 **Cadence:** Quarterly (Mar, Jun, Sep, Dec)
 **Produces:** Seasonal maintenance checklist with due dates, vendors, and estimated costs
@@ -24,8 +24,8 @@ until completed.
 
 ## Calls
 
-- **Flows:** `arlive-home-build-maintenance-schedule`
-- **Tasks:** `arlive-home-flag-maintenance-item`, `arlive-home-update-open-loops`
+- **Flows:** `aireadylife-home-build-maintenance-schedule`
+- **Tasks:** `aireadylife-home-flag-maintenance-item`, `aireadylife-home-update-open-loops`
 
 ## Apps
 

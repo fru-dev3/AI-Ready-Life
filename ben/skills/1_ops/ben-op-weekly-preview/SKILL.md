@@ -1,5 +1,5 @@
 ---
-name: arlive-ben-op-weekly-preview
+name: aireadylife-ben-op-weekly-preview
 type: op
 cadence: weekly
 description: >
@@ -8,7 +8,7 @@ description: >
   "monday brief".
 ---
 
-# arlive-ben-weekly-preview
+# aireadylife-ben-weekly-preview
 
 **Cadence:** Weekly (Monday morning)
 **Produces:** Weekly agenda written to vault/ben/02_agenda/ with cross-domain deadlines, priorities, and focus time recommendations
@@ -34,8 +34,8 @@ auto-generated ones.
 
 ## Calls
 
-- **Flows:** `arlive-ben-build-weekly-agenda`, `arlive-ben-collect-domain-alerts`
-- **Tasks:** `arlive-ben-check-open-loops`
+- **Flows:** `aireadylife-ben-build-weekly-agenda`, `aireadylife-ben-collect-domain-alerts`
+- **Tasks:** `aireadylife-ben-check-open-loops`
 
 ## Apps
 

@@ -1,5 +1,5 @@
 ---
-name: arlive-learning-task-log-completion
+name: aireadylife-learning-task-log-completion
 type: task
 cadence: as-completed
 description: >
@@ -7,7 +7,7 @@ description: >
   type, date completed, key takeaways, and rating.
 ---
 
-# arlive-learning-log-completion
+# aireadylife-learning-log-completion
 
 **Cadence:** As-completed (when a course, certification, or book is finished)
 **Produces:** Completion record in `vault/learning/02_completed/`

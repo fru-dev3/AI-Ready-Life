@@ -1,5 +1,5 @@
 ---
-name: arlive-social-op-review-brief
+name: aireadylife-social-op-review-brief
 type: op
 cadence: weekly
 description: >
@@ -8,7 +8,7 @@ description: >
   Triggers: "social brief", "relationship update", "who should I reach out to", "birthday reminders".
 ---
 
-# arlive-social-review-brief
+# aireadylife-social-review-brief
 
 **Cadence:** Weekly (Monday)
 **Produces:** Social brief — upcoming birthdays, relationship health flags, outreach suggestions
@@ -23,8 +23,8 @@ Configure your contact list and tier structure at `vault/social/config.md`. In d
 
 ## Calls
 
-- **Flows:** `arlive-social-build-review-brief`
-- **Tasks:** `arlive-social-update-open-loops`
+- **Flows:** `aireadylife-social-build-review-brief`
+- **Tasks:** `aireadylife-social-update-open-loops`
 
 ## Apps
 

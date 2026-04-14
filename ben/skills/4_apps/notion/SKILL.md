@@ -42,7 +42,7 @@ Notion-Version: 2022-06-28
 
 ## Used By
 
-- `arlive-ben-daily-brief` — write formatted daily brief to Notion page
+- `aireadylife-ben-daily-brief` — write formatted daily brief to Notion page
 
 ## Vault Output
 

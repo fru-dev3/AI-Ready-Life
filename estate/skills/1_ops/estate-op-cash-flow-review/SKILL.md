@@ -1,5 +1,5 @@
 ---
-name: arlive-estate-op-cash-flow-review
+name: aireadylife-estate-op-cash-flow-review
 type: op
 cadence: monthly
 description: >
@@ -7,7 +7,7 @@ description: >
   Triggers: "cash flow review", "rental income", "NOI", "property cash flow".
 ---
 
-# arlive-estate-cash-flow-review
+# aireadylife-estate-cash-flow-review
 
 **Cadence:** Monthly (after rent collection — 5th of month)
 **Produces:** Cash flow report — gross rent, expenses, NOI, net cash flow per property
@@ -22,7 +22,7 @@ Uses rent and expense data from `vault/estate/cashflow/`. Mortgage PITI pulled f
 
 ## Calls
 
-- **Flows:** `arlive-estate-compute-noi`, `arlive-estate-update-cashflow-tracker`
+- **Flows:** `aireadylife-estate-compute-noi`, `aireadylife-estate-update-cashflow-tracker`
 
 ## Vault Output
 

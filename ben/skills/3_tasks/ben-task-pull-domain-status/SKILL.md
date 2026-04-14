@@ -1,14 +1,14 @@
 ---
-name: arlive-ben-task-pull-domain-status
+name: aireadylife-ben-task-pull-domain-status
 type: task
 description: >
   Reads the state.md file from a specified plugin vault and returns a summary of current domain
   status: last updated, wellness or score if present, and open item count.
 ---
 
-# arlive-ben-pull-domain-status
+# aireadylife-ben-pull-domain-status
 
-**Trigger:** Called by `arlive-ben-daily-brief` for each installed plugin
+**Trigger:** Called by `aireadylife-ben-daily-brief` for each installed plugin
 **Produces:** Per-domain status snapshot: last-updated date, domain score/wellness indicator if present, open item count
 
 ## What it does

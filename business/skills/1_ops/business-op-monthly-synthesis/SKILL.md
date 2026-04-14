@@ -1,5 +1,5 @@
 ---
-name: arlive-business-op-monthly-synthesis
+name: aireadylife-business-op-monthly-synthesis
 type: op
 cadence: monthly
 description: >
@@ -7,7 +7,7 @@ description: >
   Triggers: "monthly P&L", "business synthesis", "revenue and expenses", "net income this month".
 ---
 
-# arlive-business-monthly-synthesis
+# aireadylife-business-monthly-synthesis
 
 **Cadence:** Monthly (end of month)
 **Produces:** Monthly P&L report with compliance calendar check

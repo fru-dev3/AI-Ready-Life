@@ -40,8 +40,8 @@ https://www.levels.fyi/comp.html
 
 ## Used By
 
-- `arlive-career-comp-review` — benchmark current comp against market p50/p75
-- `arlive-career-build-comp-summary` — generate formatted compensation analysis report
+- `aireadylife-career-comp-review` — benchmark current comp against market p50/p75
+- `aireadylife-career-build-comp-summary` — generate formatted compensation analysis report
 
 ## Vault Output
 

@@ -42,8 +42,8 @@ twitter_chrome_profile: /Users/YOU/Library/Application Support/Google/Chrome/Def
 
 ## Used By
 
-- `arlive-brand-monthly-synthesis` — pull monthly impressions and follower delta
-- `arlive-brand-analyze-mentions` — surface brand mentions and sentiment
+- `aireadylife-brand-monthly-synthesis` — pull monthly impressions and follower delta
+- `aireadylife-brand-analyze-mentions` — surface brand mentions and sentiment
 
 ## Vault Output
 

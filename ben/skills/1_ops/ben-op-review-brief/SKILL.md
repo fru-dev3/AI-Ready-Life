@@ -1,5 +1,5 @@
 ---
-name: arlive-ben-op-review-brief
+name: aireadylife-ben-op-review-brief
 type: op
 cadence: daily
 description: >
@@ -8,7 +8,7 @@ description: >
   Triggers: "morning brief", "daily brief", "what's on my plate today", "life summary".
 ---
 
-# arlive-ben-morning-brief
+# aireadylife-ben-morning-brief
 
 **Cadence:** Daily (7 AM)
 **Produces:** Executive AM brief — domain alerts, urgent items, top 3 actions, calendar

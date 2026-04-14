@@ -39,8 +39,8 @@ stessa_chrome_profile: /Users/YOU/Library/Application Support/Google/Chrome/Defa
 
 ## Used By
 
-- `arlive-estate-cash-flow-review` — pull property-level income and expense report
-- `arlive-estate-portfolio-review` — generate cross-property NOI summary
+- `aireadylife-estate-cash-flow-review` — pull property-level income and expense report
+- `aireadylife-estate-portfolio-review` — generate cross-property NOI summary
 
 ## Vault Output
 

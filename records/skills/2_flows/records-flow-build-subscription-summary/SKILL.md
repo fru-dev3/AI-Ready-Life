@@ -1,5 +1,5 @@
 ---
-name: arlive-records-flow-build-subscription-summary
+name: aireadylife-records-flow-build-subscription-summary
 type: flow
 trigger: called-by-op
 description: >
@@ -7,9 +7,9 @@ description: >
   estimate, and keep/cancel recommendation.
 ---
 
-# arlive-records-build-subscription-summary
+# aireadylife-records-build-subscription-summary
 
-**Trigger:** Called by `arlive-records-subscription-review`
+**Trigger:** Called by `aireadylife-records-subscription-review`
 **Produces:** Subscription summary table sorted by cost with usage flags and recommendations
 
 ## What it does

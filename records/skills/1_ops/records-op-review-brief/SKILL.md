@@ -1,5 +1,5 @@
 ---
-name: arlive-records-op-review-brief
+name: aireadylife-records-op-review-brief
 type: op
 cadence: monthly
 description: >
@@ -8,7 +8,7 @@ description: >
   Triggers: "records brief", "document review", "subscription audit", "what's expiring".
 ---
 
-# arlive-records-review-brief
+# aireadylife-records-review-brief
 
 **Cadence:** Monthly (1st of month)
 **Produces:** Records brief — expiring documents, subscription cost review, document gaps
@@ -23,8 +23,8 @@ Configure your document inventory and subscription list at `vault/records/config
 
 ## Calls
 
-- **Flows:** `arlive-records-build-review-brief`
-- **Tasks:** `arlive-records-update-open-loops`
+- **Flows:** `aireadylife-records-build-review-brief`
+- **Tasks:** `aireadylife-records-update-open-loops`
 
 ## Apps
 

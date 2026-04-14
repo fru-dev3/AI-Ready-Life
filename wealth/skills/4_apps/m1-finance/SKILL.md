@@ -37,7 +37,7 @@ m1_chrome_profile: /Users/YOU/Library/Application Support/Google/Chrome/Profile 
 
 ## Used By
 
-- `arlive-wealth-investment-review` — pull portfolio value, allocation, and dividends
+- `aireadylife-wealth-investment-review` — pull portfolio value, allocation, and dividends
 
 ## Vault Output
 

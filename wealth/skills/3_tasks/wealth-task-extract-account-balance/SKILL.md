@@ -1,5 +1,5 @@
 ---
-name: arlive-wealth-task-extract-account-balance
+name: aireadylife-wealth-task-extract-account-balance
 type: task
 cadence: called-by-op
 description: >
@@ -7,7 +7,7 @@ description: >
   Returns current balance, prior balance, and institution name.
 ---
 
-# arlive-wealth-extract-account-balance
+# aireadylife-wealth-extract-account-balance
 
 **Cadence:** Called by wealth flows that need a specific account balance
 **Produces:** Structured balance record (current balance, prior balance, institution, account type) returned to calling flow

@@ -40,7 +40,7 @@ Scopes: https://www.googleapis.com/auth/analytics.readonly
 
 ## Used By
 
-- `arlive-brand-monthly-synthesis` — pull site traffic and top content metrics
+- `aireadylife-brand-monthly-synthesis` — pull site traffic and top content metrics
 
 ## Vault Output
 

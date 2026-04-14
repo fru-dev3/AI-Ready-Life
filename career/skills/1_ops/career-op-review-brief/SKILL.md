@@ -1,5 +1,5 @@
 ---
-name: arlive-career-op-review-brief
+name: aireadylife-career-op-review-brief
 type: op
 cadence: monthly
 description: >
@@ -7,7 +7,7 @@ description: >
   skills gaps, and next actions. Triggers: "career brief", "career review", "career status", "how is my job search".
 ---
 
-# arlive-career-review-brief
+# aireadylife-career-review-brief
 
 **Cadence:** Monthly (1st of month)
 **Produces:** Career review brief — market position, pipeline, comp, gaps, next actions
@@ -18,8 +18,8 @@ Generates monthly career review brief: current market position, active applicati
 
 ## Calls
 
-- **Flows:** `arlive-career-build-review-brief`
-- **Tasks:** `arlive-career-update-open-loops`
+- **Flows:** `aireadylife-career-build-review-brief`
+- **Tasks:** `aireadylife-career-update-open-loops`
 
 ## Apps
 

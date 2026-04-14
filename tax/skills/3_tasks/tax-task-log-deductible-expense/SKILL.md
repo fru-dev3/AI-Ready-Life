@@ -1,5 +1,5 @@
 ---
-name: arlive-tax-task-log-deductible-expense
+name: aireadylife-tax-task-log-deductible-expense
 type: task
 cadence: as-received
 description: >
@@ -7,7 +7,7 @@ description: >
   date, vendor, and supporting document reference.
 ---
 
-# arlive-tax-log-deductible-expense
+# aireadylife-tax-log-deductible-expense
 
 **Cadence:** As-received (called by deduction review op or triggered directly)
 **Produces:** New deduction entry in vault/tax/03_deductions/ with full documentation metadata

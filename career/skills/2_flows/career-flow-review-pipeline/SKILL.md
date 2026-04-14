@@ -1,5 +1,5 @@
 ---
-name: arlive-career-flow-review-pipeline
+name: aireadylife-career-flow-review-pipeline
 type: flow
 trigger: called-by-op
 description: >
@@ -7,9 +7,9 @@ description: >
   identifies stalled opportunities by stage and recency.
 ---
 
-# arlive-career-review-pipeline
+# aireadylife-career-review-pipeline
 
-**Trigger:** Called by `arlive-career-monthly-sync`
+**Trigger:** Called by `aireadylife-career-monthly-sync`
 **Produces:** Pipeline status report in vault/career/01_pipeline/ with follow-up flags and stalled opportunity alerts
 
 ## What it does

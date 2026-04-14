@@ -1,5 +1,5 @@
 ---
-name: arlive-ben-flow-build-weekly-agenda
+name: aireadylife-ben-flow-build-weekly-agenda
 type: flow
 trigger: called-by-op
 description: >
@@ -7,9 +7,9 @@ description: >
   time block recommendations.
 ---
 
-# arlive-ben-build-weekly-agenda
+# aireadylife-ben-build-weekly-agenda
 
-**Trigger:** Called by `arlive-ben-weekly-preview`
+**Trigger:** Called by `aireadylife-ben-weekly-preview`
 **Produces:** Structured weekly agenda with deadline calendar, priorities, focus time recommendations, and backlog summary
 
 ## What it does

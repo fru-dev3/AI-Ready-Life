@@ -1,5 +1,5 @@
 ---
-name: arlive-home-op-monthly-sync
+name: aireadylife-home-op-monthly-sync
 type: op
 cadence: monthly
 description: >
@@ -7,7 +7,7 @@ description: >
   seasonal task completion. Triggers: "home monthly sync", "sync home data", "monthly home review".
 ---
 
-# arlive-home-monthly-sync
+# aireadylife-home-monthly-sync
 
 **Cadence:** Monthly (1st of month)
 **Produces:** Maintenance status update and monthly expense summary
@@ -22,8 +22,8 @@ Uses maintenance and expense data from `vault/home/`. In demo mode, reads from `
 
 ## Calls
 
-- **Flows:** `arlive-home-update-maintenance-status`, `arlive-home-log-monthly-expenses`, `arlive-home-check-seasonal-tasks`
-- **Then triggers:** `arlive-home-review-brief`
+- **Flows:** `aireadylife-home-update-maintenance-status`, `aireadylife-home-log-monthly-expenses`, `aireadylife-home-check-seasonal-tasks`
+- **Then triggers:** `aireadylife-home-review-brief`
 
 ## Vault Output
 

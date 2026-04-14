@@ -39,8 +39,8 @@ realestate_min_beds: 3
 
 ## Used By
 
-- `arlive-real-estate-market-scan` — scan active listings in target cities matching filters
-- `arlive-real-estate-scan-market-listings` — pull current inventory and price trends
+- `aireadylife-real-estate-market-scan` — scan active listings in target cities matching filters
+- `aireadylife-real-estate-scan-market-listings` — pull current inventory and price trends
 
 ## Vault Output
 

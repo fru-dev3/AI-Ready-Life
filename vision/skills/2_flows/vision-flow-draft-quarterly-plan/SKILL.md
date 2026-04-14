@@ -1,5 +1,5 @@
 ---
-name: arlive-vision-flow-draft-quarterly-plan
+name: aireadylife-vision-flow-draft-quarterly-plan
 type: flow
 trigger: called-by-op
 description: >
@@ -8,9 +8,9 @@ description: >
   key results per domain.
 ---
 
-# arlive-vision-draft-quarterly-plan
+# aireadylife-vision-draft-quarterly-plan
 
-**Trigger:** Called by `arlive-vision-quarterly-planning`, `arlive-vision-annual-review`
+**Trigger:** Called by `aireadylife-vision-quarterly-planning`, `aireadylife-vision-annual-review`
 **Produces:** A draft quarterly OKR plan written to `vault/vision/01_okrs/` for review and refinement.
 
 ## What it does

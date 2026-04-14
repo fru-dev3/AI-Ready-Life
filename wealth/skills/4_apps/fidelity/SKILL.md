@@ -36,8 +36,8 @@ fidelity_chrome_profile: /Users/YOU/Library/Application Support/Google/Chrome/Pr
 
 ## Used By
 
-- `arlive-wealth-investment-review` — pull balances, positions, and performance
-- `arlive-wealth-net-worth-review` — contribute account values to net worth snapshot
+- `aireadylife-wealth-investment-review` — pull balances, positions, and performance
+- `aireadylife-wealth-net-worth-review` — contribute account values to net worth snapshot
 
 ## Vault Output
 

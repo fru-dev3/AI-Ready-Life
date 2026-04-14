@@ -1,5 +1,5 @@
 ---
-name: arlive-health-op-review-brief
+name: aireadylife-health-op-review-brief
 type: op
 cadence: monthly
 description: >
@@ -8,7 +8,7 @@ description: >
   Triggers: "health brief", "health review", "monthly health summary", "how is my health".
 ---
 
-# arlive-health-review-brief
+# aireadylife-health-review-brief
 
 **Cadence:** Monthly (1st of month)
 **Produces:** Health review brief — wellness score, lab flags, meds, cost, preventive gaps
@@ -23,8 +23,8 @@ Configure your vault at `vault/health/config.md` with your providers, insurance 
 
 ## Calls
 
-- **Flows:** `arlive-health-build-review-brief`
-- **Tasks:** `arlive-health-update-open-loops`
+- **Flows:** `aireadylife-health-build-review-brief`
+- **Tasks:** `aireadylife-health-update-open-loops`
 
 ## Apps
 

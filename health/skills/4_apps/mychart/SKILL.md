@@ -38,8 +38,8 @@ mychart_username: YOUR_USERNAME
 
 ## Used By
 
-- `arlive-health-lab-review` — download and parse recent lab results
-- `arlive-health-monthly-sync` — pull new visit notes and upcoming appointments
+- `aireadylife-health-lab-review` — download and parse recent lab results
+- `aireadylife-health-monthly-sync` — pull new visit notes and upcoming appointments
 
 ## Vault Output
 

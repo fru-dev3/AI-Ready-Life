@@ -1,5 +1,5 @@
 ---
-name: arlive-insurance-op-renewal-watch
+name: aireadylife-insurance-op-renewal-watch
 type: op
 cadence: monthly
 description: >
@@ -8,7 +8,7 @@ description: >
   Triggers: "insurance renewals", "policy renewals", "renewal check", "insurance due".
 ---
 
-# arlive-insurance-renewal-watch
+# aireadylife-insurance-renewal-watch
 
 **Cadence:** Monthly (1st of month)
 **Produces:** Renewal alert list — policies renewing within 60 days with action steps
@@ -23,7 +23,7 @@ Uses renewal dates from `vault/insurance/`. In demo mode, reads from `vault-demo
 
 ## Calls
 
-- **Flows:** `arlive-insurance-check-renewal-dates`, `arlive-insurance-generate-renewal-actions`
+- **Flows:** `aireadylife-insurance-check-renewal-dates`, `aireadylife-insurance-generate-renewal-actions`
 
 ## Vault Output
 

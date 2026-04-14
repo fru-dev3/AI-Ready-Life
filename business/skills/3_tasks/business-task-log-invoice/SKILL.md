@@ -1,5 +1,5 @@
 ---
-name: arlive-business-task-log-invoice
+name: aireadylife-business-task-log-invoice
 type: task
 cadence: as-received
 description: >
@@ -7,7 +7,7 @@ description: >
   service description, and payment status.
 ---
 
-# arlive-business-log-invoice
+# aireadylife-business-log-invoice
 
 **Trigger:** Called when a new invoice is issued, as-received
 **Produces:** Invoice record in vault/business/01_invoices/ and an optional overdue flag if recording a late invoice

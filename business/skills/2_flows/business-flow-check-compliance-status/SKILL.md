@@ -1,5 +1,5 @@
 ---
-name: arlive-business-flow-check-compliance-status
+name: aireadylife-business-flow-check-compliance-status
 type: flow
 trigger: called-by-op
 description: >
@@ -7,9 +7,9 @@ description: >
   in place, and operating agreement updated. Flags anything due within 60 days or overdue.
 ---
 
-# arlive-business-check-compliance-status
+# aireadylife-business-check-compliance-status
 
-**Trigger:** Called by `arlive-business-compliance-review`
+**Trigger:** Called by `aireadylife-business-compliance-review`
 **Produces:** Compliance status table with green/yellow/red status per item and a sorted deadline list
 
 ## What it does

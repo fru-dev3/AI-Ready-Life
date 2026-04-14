@@ -1,12 +1,12 @@
 ---
-name: arlive-real-estate-task-update-open-loops
+name: aireadylife-real-estate-task-update-open-loops
 type: task
 description: >
   Writes all real-estate flags (market shifts, affordability changes, interesting listings, buy
   window signals) to vault/real-estate/open-loops.md and resolves completed items.
 ---
 
-# arlive-real-estate-update-open-loops
+# aireadylife-real-estate-update-open-loops
 
 **Trigger:** Called by real-estate ops and flows
 **Produces:** Updated `vault/real-estate/open-loops.md` with current action items

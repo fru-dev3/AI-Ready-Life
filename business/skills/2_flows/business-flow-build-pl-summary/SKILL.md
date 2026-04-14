@@ -1,5 +1,5 @@
 ---
-name: arlive-business-flow-build-pl-summary
+name: aireadylife-business-flow-build-pl-summary
 type: flow
 trigger: called-by-op
 description: >
@@ -7,9 +7,9 @@ description: >
   and comparison to prior month.
 ---
 
-# arlive-business-build-pl-summary
+# aireadylife-business-build-pl-summary
 
-**Trigger:** Called by `arlive-business-pl-review`
+**Trigger:** Called by `aireadylife-business-pl-review`
 **Produces:** Structured P&L table with revenue breakdown, expense categories, net profit, margin, and MoM delta
 
 ## What it does
