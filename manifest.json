@@ -48,12 +48,12 @@
     },
     {
       "id": "benefits",
-      "name": "AI Ready Life: Benefits",
+      "name": "AI Ready Life: Chiefefits",
       "description": "Benefits management — open enrollment, HSA, 401k, equity, ESPP",
       "agents": 2,
       "skills": 16,
       "price": 2900,
-      "gumroad": "https://fruverse.gumroad.com/l/aireadylife-benefits",
+      "gumroad": "https://fruverse.gumroad.com/l/aireadylife-chiefefits",
       "mcp": "@aireadylife/benefits-plugin"
     },
     {
@@ -77,14 +77,14 @@
       "mcp": "@aireadylife/business-plugin"
     },
     {
-      "id": "ben",
+      "id": "chief",
       "name": "AI Ready Life: Personal",
       "description": "Personal admin — inbox management, tasks, priorities, personal assistant",
       "agents": 2,
       "skills": 12,
       "price": 2900,
-      "gumroad": "https://fruverse.gumroad.com/l/aireadylife-ben",
-      "mcp": "@aireadylife/ben-plugin"
+      "gumroad": "https://fruverse.gumroad.com/l/aireadylife-chief",
+      "mcp": "@aireadylife/chief-plugin"
     },
     {
       "id": "calendar",

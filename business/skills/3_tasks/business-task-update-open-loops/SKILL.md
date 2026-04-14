@@ -21,7 +21,7 @@ marker (🔴 urgent / 🟡 watch / 🟢 info), the source op that generated it, 
 the required action, and the date raised. For time-sensitive items (overdue invoices, compliance
 deadlines within 30 days), always assigns 🔴 regardless of what the calling op suggests. Before
 appending new items, scans existing entries for resolved or completed items (checked checkboxes
-or resolution notes) and removes them. The resulting clean file is what ben's daily brief reads
+or resolution notes) and removes them. The resulting clean file is what chief's daily brief reads
 to surface business domain alerts.
 
 ## Configuration

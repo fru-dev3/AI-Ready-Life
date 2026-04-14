@@ -19,7 +19,7 @@ budgetMonthlyCents: 2500
 
 # Benefits Director — Setup
 
-1. Download AI Ready Life: Benefits from [Gumroad](https://fruverse.gumroad.com/l/aireadylife-benefits)
+1. Download AI Ready Life: Chiefefits from [Gumroad](https://fruverse.gumroad.com/l/aireadylife-benefits)
 2. Extract to `~/Documents/AIReadyLife-Benefits/`
 3. Paperclip → this agent → Advanced → External
 4. Path: `~/Documents/AIReadyLife-Benefits/agents/benefits-agent`

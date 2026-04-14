@@ -4,7 +4,7 @@ title: Life Operating Officer
 reportsTo: null
 capabilities: >
   Coordinates all 20 life domain agents — health, wealth, tax, career, benefits,
-  brand, business, ben, calendar, content, estate, explore, home, insurance,
+  brand, business, chief, calendar, content, estate, explore, home, insurance,
   intel, learning, real-estate, records, social, and vision. Runs weekly life
   briefings by polling each domain agent, surfaces the top cross-domain actions,
   flags conflicts between domains (e.g., a cash flow gap affecting both wealth and

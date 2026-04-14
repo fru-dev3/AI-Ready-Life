@@ -18,7 +18,7 @@ const VAULT_ROOT = VAULT_MODE === 'demo'
 
 const DOMAINS = [
   'health', 'wealth', 'tax', 'career', 'benefits', 'brand',
-  'business', 'ben', 'calendar', 'content', 'estate', 'explore',
+  'business', 'chief', 'calendar', 'content', 'estate', 'explore',
   'home', 'insurance', 'intel', 'learning', 'real-estate',
   'records', 'social', 'vision',
 ];

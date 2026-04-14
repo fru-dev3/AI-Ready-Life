@@ -21,7 +21,7 @@ during brand reviews. Appends new flags to vault/brand/open-loops.md with a prio
 description, and the date the flag was raised. Before writing new items, scans existing entries
 for any that are marked as resolved (checkbox checked or explicit resolution note) and removes
 them to keep the file clean and actionable. The resulting file serves as the live brand action
-list that ben's collect-domain-alerts flow reads on each daily brief cycle.
+list that chief's collect-domain-alerts flow reads on each daily brief cycle.
 
 ## Configuration
 

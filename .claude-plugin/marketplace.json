@@ -66,8 +66,8 @@
       "license": "MIT"
     },
     {
-      "name": "ben",
-      "source": "./ben",
+      "name": "chief",
+      "source": "./chief",
       "description": "1 AI agent — your personal Chief of Staff. Orchestrates all other life plugins, synthesizes daily briefs, syncs tasks, and monitors priorities.",
       "category": "personal",
       "keywords": ["chief-of-staff", "personal-assistant", "tasks", "priorities", "inbox"],

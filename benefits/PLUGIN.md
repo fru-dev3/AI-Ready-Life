@@ -1,5 +1,5 @@
 ---
-name: AI Ready Life: Benefits
+name: AI Ready Life: Chiefefits
 description: >
   2 AI agents — Chief of Staff + Benefits Director. Maximize your 401k match,
   HSA triple-tax advantage, and coverage optimization. 10 skills covering
@@ -16,7 +16,7 @@ goals:
   - Optimize coverage (health, dental, vision, life) relative to actual utilization and cost
 ---
 
-# AI Ready Life: Benefits
+# AI Ready Life: Chiefefits
 
 **2 agents. 10 skills. Benefits clarity year-round.**
 
@@ -31,7 +31,7 @@ Stop guessing whether you're capturing your full employer match. Know your HSA b
 
 ## What's Paid ($29)
 
-**[Get AI Ready Life: Benefits on Gumroad → $29](https://fruverse.gumroad.com/l/aireadylife-benefits)**
+**[Get AI Ready Life: Chiefefits on Gumroad → $29](https://fruverse.gumroad.com/l/aireadylife-benefits)**
 
 Includes full agent instructions, 401k match calculation rules, HSA investment threshold logic, coverage comparison templates, and 40+ benefits prompts.
 

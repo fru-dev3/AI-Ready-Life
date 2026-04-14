@@ -2,7 +2,7 @@
 name: AI Ready Life: Complete
 description: >
   All 20 domain plugins in one bundle — health, wealth, tax, career, benefits,
-  brand, business, ben, calendar, content, estate, explore, home, insurance,
+  brand, business, chief, calendar, content, estate, explore, home, insurance,
   intel, learning, real-estate, records, social, and vision. Coordinated by a
   Chief of Life agent. 21 agents, 260+ skills, one vault.
 slug: aireadylife-complete

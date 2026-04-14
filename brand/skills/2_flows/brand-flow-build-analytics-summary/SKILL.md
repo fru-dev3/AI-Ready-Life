@@ -21,7 +21,7 @@ and calculates an engagement rate (engagements / impressions). Compares current 
 prior month values to produce MoM growth figures — both absolute and percentage. Scans
 vault/brand/03_content/ for the content log to identify which individual posts drove the highest
 engagement, then surfaces the top 3 across all platforms. Formats the complete result as a structured
-summary table suitable for embedding in monthly briefs or the ben daily brief.
+summary table suitable for embedding in monthly briefs or the chief daily brief.
 
 ## Configuration
 
