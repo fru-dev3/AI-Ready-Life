@@ -8,38 +8,86 @@ description: >
   financials", "how is my business doing".
 ---
 
-# aireadylife-business-pl-review
+## What It Does
 
-**Cadence:** Monthly (1st of month)
-**Produces:** Monthly P&L brief, variance analysis, overdue invoice flags, updated open-loops entries
+Runs on the first of each month to produce a complete P&L statement for the prior month. Reads all revenue records from `~/Documents/AIReadyLife/vault/business/01_revenue/` and all expense records from `~/Documents/AIReadyLife/vault/business/02_expenses/` for the review period. Computes gross revenue (paid invoices only, not pending), total expenses by category, net income, and profit margin percentage. Applies the 50% meals and entertainment cap automatically when calculating deductible expense totals.
 
-## What it does
+Compares each figure to the prior month to surface MoM variances — dollar and percentage change for gross revenue, each expense category, net income, and margin. If a monthly budget is configured in `config.md`, flags any expense category running more than 10% over budget as a 🟡 watch item; more than 25% over budget as 🔴 urgent. Flags any revenue stream down more than 20% MoM for investigation.
 
-Reads all invoices for the current month from vault/business/01_invoices/ and all expense records
-from vault/business/02_expenses/ to build a complete P&L statement. Calculates gross revenue,
-total expenses by category, net profit, and profit margin percentage. Compares each figure to the
-prior month to surface MoM variances — both dollar and percentage changes. If the user has set a
-monthly budget in vault/business/, compares actuals to budget and flags any category that is
-over by more than 10%. Calls the flag-overdue-invoice task to check whether any invoices are
-unpaid past 30 days and write urgent flags. Writes a dated P&L brief to vault/business/04_briefs/
-and pushes all action items (overdue invoices, expense anomalies, revenue shortfalls) to
-vault/business/open-loops.md.
+Calls `aireadylife-business-task-flag-overdue-invoice` to scan the invoice file for any unpaid invoices where the due date has passed 30 days or more. Calls `aireadylife-business-flow-build-pl-summary` to produce the formatted P&L table. Writes the complete dated brief to `vault/business/04_briefs/pl-{YYYY-MM}.md` and pushes all action items to `vault/business/open-loops.md`.
+
+## Triggers
+
+- "P&L review"
+- "profit and loss"
+- "show me the business financials"
+- "how is my business doing this month"
+- "revenue and expenses"
+- "net income this month"
+- "did I make money last month"
+
+## Steps
+
+1. Confirm vault/business/ exists and config.md has required fields (entity name, accounting method); if missing, prompt for setup
+2. Determine the review period: prior full calendar month (1st through last day)
+3. Read all revenue records from vault/business/01_revenue/ for the review period; filter to paid status
+4. Read all expense records from vault/business/02_expenses/ for the review period
+5. Call `aireadylife-business-flow-build-pl-summary` to calculate and format the P&L table with MoM comparison
+6. If budget configured in config.md: compare each expense category to budget; flag overages >10% as 🟡, >25% as 🔴
+7. Flag any revenue stream down >20% MoM for investigation
+8. Call `aireadylife-business-task-flag-overdue-invoice` to scan for unpaid invoices >30 days past due
+9. Calculate estimated SE tax liability on net income for the period at 15.3% rate; surface as "estimated tax set-aside needed" line
+10. Compile all flags and action items
+11. Write complete P&L brief to vault/business/04_briefs/pl-{YYYY-MM}.md
+12. Call `aireadylife-business-task-update-open-loops` with all flags
+13. Present the brief to the user with a prioritized action list
+
+## Input
+
+- `~/Documents/AIReadyLife/vault/business/01_revenue/` — monthly revenue records
+- `~/Documents/AIReadyLife/vault/business/02_expenses/` — monthly expense records
+- `~/Documents/AIReadyLife/vault/business/config.md` — entity settings, budget targets, accounting method
+- `~/Documents/AIReadyLife/vault/business/04_briefs/pl-{prior month}.md` — prior month brief for MoM comparison (optional)
+
+## Output Format
+
+```
+# Business P&L Brief — {Month} {Year}
+
+**Status:** [Profitable / Break-even / Net loss]
+**Net Income:** $X,XXX | Margin: XX% | MoM: ±X%
+
+## P&L Table
+[Formatted table from build-pl-summary flow]
+
+## Flags
+🔴 [Overdue invoice / budget overrun / compliance item]
+🟡 [Watch item]
+🟢 [Info]
+
+## Estimated Tax Set-Aside
+Net income × 15.3% SE tax + estimated income tax rate = $X,XXX suggested set-aside for Q{X} estimated payment due {date}
+
+## Action Items
+1. [Highest priority action with specific deadline]
+2. [Next action]
+```
 
 ## Configuration
 
-Store invoices in vault/business/01_invoices/ and expense records in vault/business/02_expenses/
-using consistent monthly naming. Optionally maintain a budget file in vault/business/ with
-monthly revenue and expense targets for variance analysis.
+Required in `~/Documents/AIReadyLife/vault/business/config.md`:
+- `entity_name` — business name
+- `accounting_method` — cash or accrual
+- `fiscal_year_start` — month (e.g., January)
+- `budget_*` fields per expense category (optional)
 
-## Calls
+## Error Handling
 
-- **Flows:** `aireadylife-business-build-pl-summary`
-- **Tasks:** `aireadylife-business-flag-overdue-invoice`, `aireadylife-business-update-open-loops`
+- If vault/business/ does not exist: "Vault not found. Purchase at frudev.gumroad.com/l/aireadylife-business and set up at ~/Documents/AIReadyLife/vault/business/."
+- If revenue and expense folders are empty: produce a $0/$0 P&L and note "No records found for {month}. Add data to run a real review."
+- If config.md is missing required fields: list which fields are missing and what each needs to contain.
 
-## Apps
+## Vault Paths
 
-None
-
-## Vault Output
-
-`vault/business/04_briefs/pl-{month}-{year}.md`
+- Reads from: `~/Documents/AIReadyLife/vault/business/01_revenue/`, `~/Documents/AIReadyLife/vault/business/02_expenses/`, `~/Documents/AIReadyLife/vault/business/config.md`
+- Writes to: `~/Documents/AIReadyLife/vault/business/04_briefs/pl-{YYYY-MM}.md`, `~/Documents/AIReadyLife/vault/business/open-loops.md`

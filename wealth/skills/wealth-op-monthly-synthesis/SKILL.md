@@ -3,34 +3,53 @@ name: aireadylife-wealth-op-monthly-synthesis
 type: op
 cadence: monthly
 description: >
-  Monthly wealth synthesis. Aggregates net worth delta, cash flow analysis, and investment
-  performance from all configured accounts. Triggers: "monthly wealth synthesis", "wealth
-  summary", "net worth delta", "how did my wealth change this month".
+  Full monthly wealth synthesis. Runs after monthly account statements are downloaded
+  (typically the 3rd of the month). Calls net worth review, cash flow review, and
+  investment review in sequence. Produces a consolidated wealth synthesis document and
+  then triggers the wealth review brief. Triggers: "monthly wealth synthesis", "wealth
+  summary", "net worth delta", "how did my wealth change this month", "run the monthly
+  wealth sync".
 ---
 
 # aireadylife-wealth-monthly-synthesis
 
-**Cadence:** Monthly (3rd of month, after statements downloaded)
-**Produces:** Wealth synthesis — net worth delta, cash flow, investment performance summary
+**Cadence:** Monthly (3rd of month, after statements are downloaded)
+**Produces:** Wealth synthesis at `vault/wealth/04_briefs/YYYY-MM-wealth-synthesis.md`; then triggers `aireadylife-wealth-review-brief`
 
-## What it does
+## What It Does
 
-Synthesizes the monthly wealth picture after statements are downloaded. Computes net worth change vs prior month, analyzes cash flow (all income minus all expenses), and summarizes investment performance by account. Flags unusual movements. Writes updated net worth to tracker. Then triggers wealth review brief.
+The monthly synthesis is the master wealth operation. It runs on the 3rd of each month — after most financial institutions have published the prior month's statements — and orchestrates the full wealth review across all sub-domains in sequence.
+
+**Phase 1: Net Worth.** Calls `aireadylife-wealth-net-worth-review` to aggregate all account balances and compute the authoritative net worth number with MoM delta.
+
+**Phase 2: Cash Flow.** Calls `aireadylife-wealth-cash-flow-review` to summarize income and expenses, compare to budget targets, and flag overages. At this phase, the synthesis also checks whether the MoM net worth change is broadly consistent with the net cash flow — large discrepancies surface data quality issues (missing accounts, unrecorded income, unrealized investment gains).
+
+**Phase 3: Investments.** Calls `aireadylife-wealth-investment-review` to compute account-level returns, check allocation drift, and verify 401k contribution pace.
+
+**Synthesis document.** After the three reviews complete, the op writes a synthesis document that combines the key outputs: net worth (number and MoM delta), net cash flow (total income minus total expenses), total investments (value and MoM change), savings rate for the month, active open-loop count by severity, and 3-5 prioritized actions for the month. The synthesis document is a single-page executive view that references the detailed sub-documents for anyone who wants to drill down.
+
+**Cross-domain signals.** The synthesis checks for events that affect other plugins: RSU vests or ESPP purchases that create taxable income (route note to tax plugin if installed), HSA balance crossing the investment threshold (note to benefits plugin), income change that affects tax estimated payment calculations.
+
+The synthesis concludes by triggering `aireadylife-wealth-review-brief` to produce the formatted monthly brief.
 
 ## Configuration
 
-Set your institutions and account list in `vault/wealth/config.md`. In demo mode, reads from `vault-demo/wealth/state.md`.
+Set in `vault/wealth/config.md`:
+- `monthly_sync_day` — override default (3) if needed
+- `institution_list` — all accounts for which statements should be downloaded before synthesis runs
 
 ## Calls
 
-- **Flows:** `aireadylife-wealth-build-monthly-summary`, `aireadylife-wealth-update-net-worth`, `aireadylife-wealth-estimate-cash-flow`
+- **Ops:** `aireadylife-wealth-net-worth-review`, `aireadylife-wealth-cash-flow-review`, `aireadylife-wealth-investment-review`
 - **Then triggers:** `aireadylife-wealth-review-brief`
 
 ## Apps
 
-`gdrive` (optional)
+None directly (each sub-op uses its own configured data sources)
 
 ## Vault Output
 
-`vault/wealth/04_briefs/YYYY-MM-wealth-synthesis.md`
-`vault/wealth/00_current/state.md`
+- `vault/wealth/04_briefs/YYYY-MM-wealth-synthesis.md` — cross-domain synthesis document
+- `vault/wealth/00_accounts/current-net-worth.md` — updated headline number
+- `vault/wealth/open-loops.md` — all new flags from all sub-reviews
+- `vault/wealth/04_briefs/YYYY-MM-wealth-brief.md` — monthly brief (produced by triggered op)

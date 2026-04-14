@@ -2,47 +2,64 @@
 name: redfin
 type: app
 description: >
-  Scrapes Redfin for active listings, comparable sales, and market statistics
-  for any search area or address. Used by real-estate-agent for market analysis
-  and affordability calculations. Configure in vault/real-estate/config.md.
+  Pulls active listings, comparable sales, market statistics, and property estimates from Redfin
+  via web research. Used by real-estate-agent for market analysis, affordability calculations,
+  and listing tracking. Configure target search areas in vault/real-estate/config.md.
 ---
 
 # Redfin
 
-**Auth:** None required for public listings (web scrape via Playwright)
+**Auth:** No authentication required for public data (web research)
 **URL:** https://www.redfin.com
-**Configuration:** Set target search areas in `vault/real-estate/config.md`
+**Configuration:** Set target search areas and filters in `~/Documents/AIReadyLife/vault/real-estate/config.md`
 
 ## Data Available
 
-- Active listings for a city/zip with filters (price, beds, baths, sqft)
-- Property detail: price, beds, baths, sqft, lot size, year built, HOA
-- Days on market and price history per listing
-- Estimated value (Redfin Estimate) for any address
-- Recent comparable sales (sold price, date, vs list price)
-- Market stats: median sale price, months of supply, sale-to-list ratio
-- School ratings per property
+- Active listings for a city, zip code, or neighborhood with all standard filters (price, beds, baths, sqft, home type)
+- Property detail: list price, beds, baths, sqft, lot size, year built, HOA fee, garage
+- Days on market and full price history per listing (reductions, relists)
+- Redfin Estimate (AVM — automated valuation model) for any address
+- Recent comparable sales: sold price, days on market before sale, sold vs. list price ratio, sale date
+- Market stats by city or zip: median sale price, homes sold per month, median DOM, sale-to-list ratio, percentage of homes that sold above list
+- School district ratings and walkability scores per listing
 
 ## Configuration
 
-Add to `vault/real-estate/config.md`:
+Add to `~/Documents/AIReadyLife/vault/real-estate/config.md`:
 ```
-realestate_target_cities: [YOUR_CITY STATE, YOUR_CITY2 STATE]
-realestate_max_price: YOUR_MAX_PRICE
-realestate_min_beds: 3
+listing_source: redfin
+target_markets:
+  - "Minneapolis MN"
+  - "Eden Prairie MN"
+max_price: 500000
+min_beds: 3
+min_baths: 2
+min_sqft: 1500
 ```
+
+## Key Data Points for Market Analysis
+
+- **Median Sale Price:** Use for price trend tracking; compare MoM and YoY
+- **Sale-to-List Ratio:** >100% = seller's market; <97% = buyer has leverage
+- **Median DOM:** <21 days = highly competitive; 30–60 = normal; >90 = buyer's market
+- **Homes Sold Above List:** >30% = offers need to be aggressive
+- **Months of Supply:** derived from active inventory ÷ monthly sales rate
 
 ## Notes
 
-- Redfin has a CSV download of search results (requires login for full export)
-- Requires headless=False for dynamic listing pages
-- Search URL: redfin.com/city/{id}/filter/max-price={price}
+- Redfin data is available publicly without login for most metrics
+- CSV download of search results available via search results page (may require login)
+- Market stats available under "Housing Market" section for each city: redfin.com/city/[name]/housing-market
+- Redfin Estimate may differ from Zillow Zestimate by 2–5%; use both when precision matters
+- For sold comparables, filter to "sold in the last 6 months" for most relevant pricing data
 
 ## Used By
 
-- `aireadylife-real-estate-market-scan` — pull active listings and market stats for target area
-- `aireadylife-real-estate-build-affordability-analysis` — collect comp data for buy vs rent analysis
+- `aireadylife-real-estate-market-scan` — pull active listings and market stats for all target markets
+- `aireadylife-real-estate-scan-market-listings` — get current inventory, prices, and DOM data
+- `aireadylife-real-estate-run-buy-vs-rent` — gather rental comp data for the rent side of the model
+- `aireadylife-real-estate-log-listing` — look up Redfin Estimate and price history for a saved listing
 
 ## Vault Output
 
-`vault/real-estate/market/`
+`~/Documents/AIReadyLife/vault/real-estate/00_markets/`

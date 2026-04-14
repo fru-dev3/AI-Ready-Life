@@ -8,19 +8,79 @@ description: >
   used by monthly revenue reviews.
 ---
 
-# aireadylife-content-log-revenue
+## What It Does
 
-**Cadence:** As-received (called after each revenue event or monthly batch from platform data)
-**Produces:** A structured revenue log entry appended to the appropriate subfolder in `vault/content/`.
+Records individual revenue events to the vault so `aireadylife-content-flow-build-revenue-summary` has clean, structured data to aggregate from. The log is the single source of truth for all content revenue — if it is not logged here, it will not appear in monthly revenue reviews, YTD calculations, or revenue trend analysis.
 
-## What it does
+Each log entry captures: the platform (YouTube AdSense, newsletter platform, Gumroad, direct, other), the revenue amount and currency, the date earned or paid, the revenue type (AdSense CPM payout, direct sponsorship fee, digital product sale, paid subscription renewal, tip/donation, affiliate commission), the product name or campaign name when relevant (for Gumroad product-level tracking and sponsorship source tracking), and optional notes.
 
-Records individual revenue events to the vault so `aireadylife-content-build-revenue-summary` has clean, structured data to aggregate from. Each log entry captures: the platform (YouTube AdSense, newsletter platform, Gumroad, other), the revenue amount, the date earned or paid, the revenue type (AdSense CPM, direct sponsorship, product sale, subscription renewal), and optional notes (campaign name, product name, sponsor). AdSense entries are typically logged in monthly batches when the payment arrives. Sponsorship and product sale entries should be logged at the time of the transaction to maintain an accurate running total. Writes to the platform-specific subfolder: YouTube earnings to `vault/content/00_youtube/`, newsletter revenue to `vault/content/01_newsletter/`, product revenue to `vault/content/02_gumroad/`. File naming follows `YYYY-MM-{platform}-revenue.md` for monthly batch entries or `YYYY-MM-DD-{platform}-{type}.md` for individual transactions. The accumulated log is the single source of truth for all content revenue analysis.
+Revenue entry cadences differ by type: AdSense payments arrive monthly in arrears (typically around the 21st of the month for the prior month's earnings) and are logged as a single monthly batch entry. Gumroad product sales can be logged as individual transactions when they occur or as a monthly batch from the dashboard export. Newsletter sponsorship fees are logged when the payment is received, not when the campaign runs. Paid subscription MRR is logged monthly when the platform reports the figure.
 
-## Apps
+Writes to the platform-specific subfolder using a consistent filename convention so monthly revenue reviews can find and aggregate files automatically. Returns the file path and a confirmation to the calling op or user.
 
-vault file system
+## Triggers
 
-## Vault Output
+- "log revenue"
+- "record my YouTube earnings"
+- "I got paid from Gumroad"
+- "newsletter sponsorship received"
+- "log a product sale"
+- Called by `aireadylife-content-op-revenue-review` after each monthly review cycle
 
-`vault/content/00_youtube/`, `vault/content/01_newsletter/`, `vault/content/02_gumroad/`
+## Steps
+
+1. Identify the revenue event: ask for platform, amount, date, and type if not provided
+2. Validate: amount must be a positive number; platform must be a recognized value; date must be parseable
+3. Determine the target subfolder: YouTube = 00_youtube/, newsletter = 01_newsletter/, Gumroad = 02_gumroad/
+4. Determine file type: monthly batch (if this covers a full month's earnings from one platform) or individual transaction
+5. For monthly batch: check if a revenue file already exists for this platform and month; if yes, ask whether to append or replace
+6. For individual transaction: generate a unique filename with date and type
+7. Write the structured revenue record with all fields
+8. Return file path and confirmation
+
+## Input
+
+User-provided or calling-op-provided:
+- Platform (required): YouTube, newsletter, Gumroad, direct, other
+- Amount (required): positive dollar value
+- Date (required): date of payment or transaction
+- Revenue type (required): AdSense, sponsorship, product-sale, subscription-mrr, affiliate, tip
+- Product or campaign name (recommended for Gumroad and sponsorship entries)
+- Notes (optional)
+
+## Output Format
+
+Monthly batch file at `~/Documents/AIReadyLife/vault/content/{subfolder}/{YYYY-MM}-{platform}-revenue.md`:
+```
+# Revenue Record — {Platform} | {Month} {Year}
+
+platform: {platform}
+period: {YYYY-MM}
+revenue_type: {type}
+amount: ${X,XXX.XX}
+currency: USD
+date_paid: {YYYY-MM-DD}
+product_name: {name or "N/A"}
+campaign_name: {name or "N/A"}
+notes: {optional}
+```
+
+Individual transaction file at `~/Documents/AIReadyLife/vault/content/{subfolder}/{YYYY-MM-DD}-{platform}-{type}.md`:
+Same fields with single-transaction data.
+
+## Configuration
+
+Optional in `~/Documents/AIReadyLife/vault/content/config.md`:
+- `revenue_platforms` — recognized platform names (prevents typos in log files)
+- `gumroad_products` — list of product names for consistent product-level tracking
+
+## Error Handling
+
+- If amount is zero or negative: "Revenue amount must be positive. Is this a refund? Log refunds as a negative amount with type 'refund'."
+- If platform is unrecognized: ask "Which platform is this from? Recognized platforms: YouTube, newsletter, Gumroad, direct, other."
+- If a monthly batch file already exists for the same platform and month: "A revenue record for {platform} in {month} already exists. Update the existing record, or log this as a separate transaction?"
+
+## Vault Paths
+
+- Reads from: `~/Documents/AIReadyLife/vault/content/config.md`, target subfolder for duplicate check
+- Writes to: `~/Documents/AIReadyLife/vault/content/00_youtube/` or `01_newsletter/` or `02_gumroad/` depending on platform

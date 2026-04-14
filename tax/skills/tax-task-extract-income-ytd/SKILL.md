@@ -3,18 +3,36 @@ name: aireadylife-tax-task-extract-income-ytd
 type: task
 cadence: called-by-op
 description: >
-  Reads YTD income totals from vault/tax/ for use by flows calculating estimated
-  tax. Returns income broken down by source type.
+  Reads YTD income totals from vault/tax/ across all income source types and returns
+  a structured breakdown for use by estimated tax flows. Income categories: W-2 wages
+  (gross and YTD withholding), 1099-NEC self-employment income, rental income (net
+  of expenses), short-term capital gains, long-term capital gains, qualified dividends,
+  ordinary dividends, interest income, and other income. Also returns total YTD federal
+  withholding and prior quarterly estimated payments.
 ---
 
 # aireadylife-tax-extract-income-ytd
 
-**Cadence:** Called by tax flows that need current YTD income figures
-**Produces:** Structured YTD income summary by source, returned to the calling flow
+**Cadence:** Called by `aireadylife-tax-build-estimate` and other flows needing YTD income figures
+**Produces:** Structured YTD income summary returned in memory to the calling flow
 
-## What it does
+## What It Does
 
-A utility task called by `aireadylife-tax-build-estimate` and other flows that need current year-to-date income figures without loading every income document individually. Reads from vault/tax/ across all income source files — W-2 pay stubs, 1099-NEC records, rental income logs, brokerage dividend and interest records, capital gains/loss records, and business profit/loss summaries — and returns a structured income total broken down by source type: W-2 wages, self-employment income, rental income, capital gains (short-term and long-term separately), dividend income, interest income, and other income. The task also returns total YTD federal and state withholding from W-2 and estimated payment records, so the calling flow has everything needed to compute a net tax estimate in a single call.
+A utility task called whenever a flow needs current year-to-date income and withholding figures. Rather than each flow reading every income document independently, this task centralizes income extraction and returns a clean, standardized record.
+
+**W-2 income.** Reads W-2 pay stub records from `vault/tax/00_documents/YYYY/` — either downloaded portal pay stubs or the user's most recent W-2 if available. Extracts: YTD gross wages, YTD federal income tax withheld, YTD Social Security withheld, YTD Medicare withheld, YTD state income tax withheld. If multiple employers are active (job change during the year), reads each separately and sums.
+
+**Self-employment income (1099-NEC).** Reads 1099-NEC records and any freelance income logs from `vault/tax/03_deductions/` or `vault/tax/00_documents/`. Returns gross 1099 income and deductible business expenses associated with each payer if available.
+
+**Rental income.** If the estate plugin is installed and cross-plugin sharing is configured, reads net rental income from `vault/wealth/` or estate records. Otherwise reads from any rental income logs in `vault/tax/`. Returns gross rent received and deductible expenses (mortgage interest, property tax, depreciation, maintenance) for net rental income.
+
+**Capital gains.** Reads realized gains and losses from brokerage records in `vault/wealth/01_investments/` (if cross-plugin sharing is configured) or from 1099-B records in `vault/tax/00_documents/`. Separates short-term gains (≤1 year holding period, taxed as ordinary income) from long-term gains (>1 year, taxed at preferential rates). Net capital gain/loss after applying losses against gains.
+
+**Dividends and interest.** From 1099-DIV records: qualified dividends (preferential tax rate) and ordinary dividends (ordinary income rate). From 1099-INT records: bank interest income.
+
+**YTD withholding and prior payments.** Total federal income tax withheld from W-2 records. Total estimated payments made YTD from `vault/tax/01_estimates/payment-log.md`. Prior year overpayment applied to current year (from config if applicable).
+
+**Return structure.** The task returns a structured record (not a vault-written document) with all the above fields populated and labeled, so the calling flow (`aireadylife-tax-build-estimate`) can immediately use the data without additional parsing.
 
 ## Apps
 
@@ -22,4 +40,5 @@ None
 
 ## Vault Output
 
-`vault/tax/`
+- None (read-only task; returns data to calling flow in memory)
+- No vault writes

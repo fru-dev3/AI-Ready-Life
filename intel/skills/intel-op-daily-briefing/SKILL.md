@@ -7,30 +7,93 @@ description: >
   "daily briefing", "news briefing", "what's happening today", "morning news".
 ---
 
-# aireadylife-intel-daily-briefing
+## What It Does
 
-**Cadence:** Daily (morning)
-**Produces:** Scannable daily news digest filtered to priority topics and credibility-ranked sources
+Produces the morning intelligence brief filtered to the user's configured interest lens. This is the core daily deliverable of the intel plugin — a 5-8 story digest that the user reads in under 3 minutes to know what happened overnight and this morning that matters to them.
 
-## What it does
+Calls `aireadylife-intel-flow-build-news-digest` to ingest, filter, deduplicate, and rank stories from all configured sources. The digest flow handles the heavy lifting of source quality scoring and relevance filtering; this op handles the additional intelligence layers: story thread updates, priority story flagging, and Ben routing.
 
-This op produces a concise morning briefing drawn from the user's configured source list and priority
-topic filters. It pulls recent articles and headlines from RSS feeds, newsletters, and saved sources,
-filters them to the topics defined in the vault's topic configuration, deduplicates overlapping
-coverage, and ranks items by recency and source credibility. The output is a scannable digest — not
-a wall of links — with each item as a one-sentence summary with source attribution. Priority stories
-(from high-credibility sources on configured top topics) are elevated to the top and flagged for
-follow-up if warranted.
+Updates active story threads in `vault/intel/02_threads/`: for each story in the digest that matches an existing tracked thread, appends a dated update entry to that thread file. This is what maintains context continuity across multi-day stories — the AI regulation story that has been developing for 2 weeks has all its daily updates in one thread file, so the user can review the full arc at any point.
 
-## Calls
+Calls `aireadylife-intel-task-flag-priority-story` for any digest story that: originates from a Tier 1 source on a configured top-priority topic, represents a significant development (first reporting, official government action, major market move), or has explicit action implications for the user (a personal finance rate change, a tech platform policy affecting the user's work).
 
-- **Flows:** `aireadylife-intel-build-news-digest`
-- **Tasks:** `aireadylife-intel-flag-priority-story`, `aireadylife-intel-update-open-loops`
+Routes market-moving stories (Federal Reserve actions, significant earnings releases, major market moves) to Wealth Agent via vault routing. Routes tech policy and AI regulation stories to Content Agent as potential content opportunities. Routes career-relevant stories to Career Agent.
 
-## Apps
+## Triggers
 
-None
+- "daily briefing"
+- "morning brief"
+- "morning news"
+- "what's happening today"
+- "news briefing"
+- "intel update"
+- "what's going on"
 
-## Vault Output
+## Steps
 
-`vault/intel/01_digests/`
+1. Confirm vault/intel/ is set up and config.md has at least 3 configured sources and at least 1 configured topic
+2. Call `aireadylife-intel-flow-build-news-digest` for the filtered, ranked, deduplicated daily digest
+3. Read `~/Documents/AIReadyLife/vault/intel/02_threads/` to get list of all active tracked threads
+4. For each story in the digest: check if it matches an active thread (same topic, same key entities); if yes, append a dated update to that thread file
+5. For each story that meets priority flagging criteria (Tier 1 source + top-priority topic, OR explicit action implication): call `aireadylife-intel-task-flag-priority-story`
+6. Identify any market-moving stories (interest rates, market indices, major policy action); route summary to Wealth Agent via vault/intel/routing/ note
+7. Identify any AI/tech platform stories relevant to content opportunities; route to Content Agent
+8. Call `aireadylife-intel-task-update-open-loops` with any new priority story flags
+9. Write the complete morning brief to `vault/intel/01_briefs/{YYYY-MM-DD}-morning.md`
+10. Present the formatted brief to the user
+
+## Input
+
+- `~/Documents/AIReadyLife/vault/intel/00_sources/source-list.md` — source registry
+- `~/Documents/AIReadyLife/vault/intel/config.md` — topics, keywords, source priorities
+- `~/Documents/AIReadyLife/vault/intel/02_threads/` — active story threads for update
+- Recent article data from configured sources
+
+## Output Format
+
+```
+# Morning Brief — {YYYY-MM-DD}
+
+## Top Stories
+
+**1. [Headline]** | Reuters | 3 hours ago [PRIORITY]
+{One-sentence summary, informative on its own.} Why it matters: {1-4 word tag}
+
+**2. [Headline]** | MIT Technology Review | 5 hours ago
+{One-sentence summary.} Why it matters: AI Breakthrough
+
+**3. [Headline]** | Financial Times | 7 hours ago
+{One-sentence summary.} Why it matters: Market-Moving → routed to Wealth Agent
+
+[4-8 more stories]
+
+## Thread Updates
+- **[Thread: AI Regulation]** — New: {1-sentence update from today's coverage}
+- **[Thread: Fed Policy]** — New: {1-sentence update}
+
+## Priority Flags
+🔴 [Story flagged for immediate read/action] — see open-loops.md
+
+---
+Sources scanned: {X} | Stories filtered: {Y} | Duplicates removed: {Z} | Stories in brief: {X}
+```
+
+## Configuration
+
+Required in `~/Documents/AIReadyLife/vault/intel/config.md`:
+- `topics_include` — interest topics (minimum 1)
+- `topics_priority` — top-priority topics for flag triggering
+- `keywords_exclude` — noise exclusion list
+- `sources` — at least 3 active sources
+- `routing_wealth_trigger_keywords` — keywords that trigger Wealth Agent routing (e.g., ["Fed", "interest rate", "inflation", "market"])
+
+## Error Handling
+
+- If source registry is empty: "No sources configured. Add at least one source to vault/intel/00_sources/source-list.md and run the source scan to validate it."
+- If fewer than 5 stories pass filtering: include all that pass; suggest broadening topic filters if the problem persists.
+- If config.md is missing or incomplete: "Intel vault not fully configured. Open vault/intel/config.md and complete the topics, keywords, and source settings."
+
+## Vault Paths
+
+- Reads from: `~/Documents/AIReadyLife/vault/intel/00_sources/`, `~/Documents/AIReadyLife/vault/intel/config.md`, `~/Documents/AIReadyLife/vault/intel/02_threads/`
+- Writes to: `~/Documents/AIReadyLife/vault/intel/01_briefs/{YYYY-MM-DD}-morning.md`, `~/Documents/AIReadyLife/vault/intel/02_threads/` (thread updates), `~/Documents/AIReadyLife/vault/intel/open-loops.md`

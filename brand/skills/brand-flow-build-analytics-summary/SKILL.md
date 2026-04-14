@@ -7,40 +7,78 @@ description: >
   platform with month-over-month deltas and top-performing content identified.
 ---
 
-# aireadylife-brand-build-analytics-summary
+## What It Does
 
-**Trigger:** Called by `aireadylife-brand-monthly-synthesis`, `aireadylife-brand-content-review`
-**Produces:** Analytics summary table with MoM growth, engagement rates, and top content callouts per platform
+Reads platform analytics data from `~/Documents/AIReadyLife/vault/brand/01_analytics/` where monthly metric snapshots are stored per platform. For each configured platform (LinkedIn, Twitter/X, YouTube, newsletter/Beehiiv, personal site via Google Analytics), extracts the current month's key metrics: follower or subscriber count, total impressions for the period, total engagements (likes, comments, shares, clicks), and calculates an engagement rate (engagements divided by impressions, expressed as a percentage).
 
-## What it does
+Compares each metric to the prior month's figures — both absolute change and percentage change — to produce MoM growth indicators. Growth direction is shown as ▲ (up), ▼ (down), or → (flat, within ±2%). Benchmarks the calculated engagement rate against platform-specific standards: LinkedIn 2-5% is good; Instagram 1-5%; Twitter/X 0.5-1%; newsletter 30-40% open rate, 2-5% CTR.
 
-Reads platform analytics data from vault/brand/00_analytics/ where monthly exports or manual
-snapshots are stored for each platform. For each platform present (LinkedIn, Twitter/X, GitHub,
-YouTube, personal site), extracts follower count, total impressions for the period, total engagements,
-and calculates an engagement rate (engagements / impressions). Compares current month values to
-prior month values to produce MoM growth figures — both absolute and percentage. Scans
-vault/brand/03_content/ for the content log to identify which individual posts drove the highest
-engagement, then surfaces the top 3 across all platforms. Formats the complete result as a structured
-summary table suitable for embedding in monthly briefs or the chief daily brief.
+Scans `~/Documents/AIReadyLife/vault/brand/04_content/` for the content performance log to identify the top 3 performing pieces across all platforms by engagement. These are surfaced as the "best of the period" in the analytics summary — understanding what performs best informs content strategy.
 
-## Configuration
+Formats the complete result as a structured summary table with one row per platform, metric columns for this month and prior month, delta indicators, and engagement rate vs benchmark. Flags any platform where engagement rate has dropped more than 20% MoM as 🟡 watch. Returns the formatted table to the calling op.
 
-Analytics data should be stored in vault/brand/00_analytics/ as monthly files named by platform
-and period (e.g. linkedin-2026-03.md). Consistent field naming across files is required for
-automated comparison.
+## Triggers
+
+Called internally by `aireadylife-brand-op-monthly-synthesis` and `aireadylife-brand-op-content-review`. Not invoked directly by the user.
 
 ## Steps
 
-1. Read platform analytics from vault/brand/00_analytics/ for current and prior month
-2. Calculate MoM growth (absolute and %) per platform for followers and impressions
-3. Calculate engagement rate per platform (engagements / impressions)
-4. Identify top-performing content by engagement across all platforms from vault/brand/03_content/
-5. Format summary table with platform rows, metric columns, deltas, and top content callouts
+1. Read all platform analytics files from `~/Documents/AIReadyLife/vault/brand/01_analytics/` for current and prior month; identify which platforms have data
+2. For each platform: extract follower count, total impressions, total engagements; calculate engagement rate = engagements / impressions
+3. Compare to prior month: calculate absolute delta and percentage change for followers, impressions, and engagement rate
+4. Benchmark engagement rate against platform-specific thresholds; flag if below benchmark or if dropped >20% MoM
+5. Read `~/Documents/AIReadyLife/vault/brand/04_content/` content log; identify top 3 posts by engagement across all platforms
+6. Calculate an overall reach metric: sum of all-platform impressions for the period
+7. Format structured summary table with platform rows, metric columns, delta indicators, and benchmark comparison
+8. Return formatted table, top content list, and any 🟡 engagement drop flags to calling op
 
-## Apps
+## Input
 
-None
+- `~/Documents/AIReadyLife/vault/brand/01_analytics/{platform}-{YYYY-MM}.md` — monthly analytics snapshot per platform; fields: followers, impressions, engagements
+- `~/Documents/AIReadyLife/vault/brand/01_analytics/{platform}-{prior YYYY-MM}.md` — prior month for MoM comparison
+- `~/Documents/AIReadyLife/vault/brand/04_content/` — content performance log for top content identification
+- `~/Documents/AIReadyLife/vault/brand/config.md` — configured platforms, engagement rate benchmarks
 
-## Vault Output
+## Output Format
 
-`vault/brand/00_analytics/`
+```
+## Cross-Platform Analytics — {Month} {Year}
+
+| Platform    | Followers | MoM    | Impressions | Engagements | Eng Rate | vs Benchmark |
+|-------------|-----------|--------|-------------|-------------|----------|--------------|
+| LinkedIn    | X,XXX     | ▲ +X%  | XX,XXX      | XXX         | 3.2%     | ✓ (2-5%)    |
+| Twitter/X   | X,XXX     | → 0%   | XX,XXX      | XXX         | 0.7%     | ✓ (0.5-1%) |
+| YouTube     | X,XXX     | ▲ +X%  | XX,XXX      | XXX         | N/A      | —           |
+| Newsletter  | X,XXX     | ▲ +X%  | XX,XXX      | XXX         | 34% OR  | ✓ (30-40%) |
+
+**Total Reach (all platforms):** XXX,XXX impressions
+
+## Top Content — {Month}
+1. "[Post title]" — {Platform} — {X,XXX} engagements
+2. "[Post title]" — {Platform} — {XXX} engagements
+3. "[Post title]" — {Platform} — {XXX} engagements
+
+## Flags
+🟡 [Platform]: engagement rate dropped from X% to X% (-X%) — investigate
+```
+
+## Configuration
+
+Required in `~/Documents/AIReadyLife/vault/brand/config.md`:
+- `platforms` — list of active platforms to include in analytics summary
+- `engagement_benchmark_{platform}` — override default benchmarks per platform (optional)
+
+Required file naming convention in `01_analytics/`:
+- `{platform}-{YYYY-MM}.md` — e.g., `linkedin-2026-03.md`
+
+## Error Handling
+
+- If a platform file is missing for the current month: include the platform row with "No data — update vault" and exclude from engagement calculations.
+- If prior month file is missing: show current month metrics but populate MoM columns with "N/A."
+- If `04_content/` is empty or missing: skip top content section and note "No content log — add entries to vault/brand/04_content/ to enable top content tracking."
+- If all platform files are missing: "No analytics data found. Export monthly metrics from each platform and add to vault/brand/01_analytics/."
+
+## Vault Paths
+
+- Reads from: `~/Documents/AIReadyLife/vault/brand/01_analytics/`, `~/Documents/AIReadyLife/vault/brand/04_content/`, `~/Documents/AIReadyLife/vault/brand/config.md`
+- Writes to: returns data to calling op; no direct file writes

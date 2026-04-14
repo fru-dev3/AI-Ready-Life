@@ -2,24 +2,31 @@
 name: irs
 type: app
 description: >
-  Accesses IRS.gov for account transcripts, Direct Pay payments, and notice
-  downloads via Playwright with ID.me authentication. Used by tax-agent for
-  quarterly estimates and deadline tracking. Configure in vault/tax/config.md.
+  Accesses IRS.gov for account transcripts (payments applied, balance due, prior
+  year tax summary), IRS Direct Pay for estimated tax payments (1040-ES), and
+  notice/letter downloads via Playwright with ID.me authentication. Also accesses
+  EFTPS (Electronic Federal Tax Payment System) for scheduled estimated payments.
+  Used by the tax agent for verifying prior quarterly payments and confirming payment
+  received on the IRS transcript. Requires headless=False (ID.me MFA). Configure
+  ID.me email and Chrome profile in vault/tax/config.md.
 ---
 
 # IRS
 
-**Auth:** Playwright + Chrome cookies (IRS ID.me login)
-**URL:** https://www.irs.gov
-**Configuration:** Set your ID.me credentials in `vault/tax/config.md`
+**Auth:** Playwright + Chrome cookies (IRS ID.me authentication; headless=False required)
+**Primary URL:** https://www.irs.gov
+**EFTPS URL:** https://www.eftps.gov
+**Configuration:** Set ID.me email and Chrome profile in `vault/tax/config.md`
 
 ## Data Available
 
-- Account transcript (payments applied, balance due)
-- Tax return transcript (prior year summary)
-- Notices and letters (PDF)
-- Payment history
-- Direct Pay confirmation numbers
+| Data Type | Navigation Path | Use Case |
+|-----------|----------------|----------|
+| Account transcript | IRS.gov → Your Online Account → Tax Records → View Account Transcript | Verify payments applied, check balance, see prior year tax |
+| Tax return transcript | IRS.gov → Your Online Account → Tax Records → Tax Return Transcript | Prior year AGI, deductions, and liability for safe harbor |
+| Notices and letters | IRS.gov → Your Online Account → Notices | Download CP2000, audit notices, balance due letters |
+| Payment history | IRS.gov → Your Online Account → View Tax Account | All payments: withholding, estimated payments, refunds applied |
+| Direct Pay | IRS.gov → Make a Payment → Direct Pay | Immediate estimated tax payment using bank account |
 
 ## Configuration
 
@@ -27,24 +34,42 @@ Add to `vault/tax/config.md`:
 ```
 irs_idme_email: YOUR_IDME_EMAIL
 irs_chrome_profile: /Users/YOU/Library/Application Support/Google/Chrome/Default
+eftps_enrolled: true
 ```
 
-## Key Actions
+## IRS Direct Pay: Making an Estimated Payment
 
-- View transcript: IRS.gov → Your Online Account
-- Make payment: IRS.gov → Direct Pay → "Estimated Tax" (1040-ES)
-- Download notices: IRS.gov → Notices & Letters
+1. Navigate to https://www.irs.gov/payments
+2. Click "Make a Payment"
+3. Select: "Estimated Tax" as reason for payment
+4. Select: "1040-ES" as tax form
+5. Enter tax year (current year)
+6. Enter payment amount from the quarterly estimate calculation
+7. Enter bank account information (routing + account number)
+8. Select payment date (can schedule up to 365 days in advance)
+9. Confirm and save confirmation number in `vault/tax/01_estimates/payment-log.md`
 
-## Notes
+## EFTPS for Scheduled Payments
 
-- Requires headless=False; ID.me MFA may trigger on new sessions
-- Re-authenticate if session expires (typically 30 days)
+EFTPS requires enrollment (5–7 business days to receive PIN by mail). Once enrolled:
+- Schedule payments up to 365 days in advance
+- Ideal for recurring quarterly estimated payments
+- Enrollment: eftps.gov → "Enroll" → Individual → follow prompts
+
+## Session Notes
+
+- IRS ID.me login requires identity verification on first use (ID upload, selfie)
+- MFA is triggered on new sessions or new IP addresses — complete in the Chrome window
+- Session cookies valid 30–90 days depending on activity
+- Transcript data is typically updated within 3 weeks of a payment being processed
 
 ## Used By
 
-- `aireadylife-tax-quarterly-estimate` — verify prior payments, submit quarterly estimated tax
-- `aireadylife-tax-deadline-watch` — confirm payment received and transcript updated
+- `aireadylife-tax-quarterly-estimate` — verify prior estimated payments on transcript before calculating new payment
+- `aireadylife-tax-deadline-watch` — confirm payment received and transcript updated; download any new notices
 
 ## Vault Output
 
-`vault/tax/irs/`
+- `vault/tax/irs/transcripts/` — downloaded account and return transcript PDFs
+- `vault/tax/irs/notices/` — downloaded IRS notices and letters
+- `vault/tax/01_estimates/payment-log.md` — confirmation numbers recorded after each Direct Pay submission

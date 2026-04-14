@@ -6,18 +6,76 @@ description: >
   anomalies) to vault/content/open-loops.md and resolves completed items.
 ---
 
-# aireadylife-content-update-open-loops
+## What It Does
 
-**Produces:** An updated `vault/content/open-loops.md` with new flags appended and resolved items marked complete.
+Maintains `~/Documents/AIReadyLife/vault/content/open-loops.md` as the live action list for the content domain. This file aggregates flags from every content op — channel underperformance, revenue declines, SEO drops, publishing gaps, and optimization opportunities — into a single prioritized list that drives the weekly and monthly action agenda.
 
-## What it does
+Receives flags from calling ops and writes them as structured entries with priority marker (🔴 / 🟡 / 🟢), flag type, specific finding, recommended action, and date raised. Before appending new items, scans existing entries for resolvable conditions: a revenue decline flag is resolved if the channel's most recent data shows recovery; an SEO gap flag is resolved if a new piece of content targeting that keyword has been published (check vault/content/00_current/ for new entries); a publishing gap flag is resolved if content has since been published on the flagged platform; a flag explicitly marked resolved by the user. Resolved items are moved to `vault/content/open-loops-archive.md` with a resolution date.
 
-Maintains the canonical open-loops file for the content domain. Receives flags from every content op (revenue dips, SEO ranking drops, channel underperformance, missed publishing targets, uncovered keywords) and writes them as structured entries to `vault/content/open-loops.md`. Each entry includes the flag type, the specific finding, the recommended action, a priority level, and the date it was surfaced. On every run, also checks existing open loop items against current vault data to resolve any that are no longer applicable — a revenue dip resolved, a flagged content piece updated, a keyword gap filled. Keeps the file to a manageable length by archiving resolved items to a separate `vault/content/open-loops-archive.md` rather than deleting them, preserving history for pattern analysis. The file is read by `aireadylife-calendar-collect-deadlines` for cross-domain deadline scanning, so entries with explicit action-by dates will surface in weekly agendas automatically.
+Deduplicates before writing: same SEO keyword, same platform gap, same revenue decline channel — if an existing unresolved entry exists for the same item, updates the date rather than adding a duplicate. After processing, sorts the file: 🔴 first (oldest within tier), 🟡 second, 🟢 third. The file is read by the weekly review op to surface the most urgent 3 action items for the week.
 
-## Apps
+Unlike the business and brand open-loops files, content open-loops also tracks opportunity flags (not just problems) — a high-performing topic area that should be doubled down on, a keyword gap that is a major opportunity, a repurposing opportunity from an existing video. These are flagged as 🟢 info and kept in the file until acted on or archived.
 
-vault file system
+## Triggers
 
-## Vault Output
+Called at the end of every content op: `aireadylife-content-op-channel-review`, `aireadylife-content-op-revenue-review`, `aireadylife-content-op-seo-review`, `aireadylife-content-op-weekly-review`, and `aireadylife-content-task-flag-seo-gap`.
 
-`vault/content/open-loops.md`
+## Steps
+
+1. Receive flag list from calling op
+2. Read vault/content/open-loops.md (or create if it does not exist)
+3. For each existing entry: check resolution conditions — revenue recovery, content published, gap filled, explicit resolution; move resolved items to archive
+4. Write resolved items to vault/content/open-loops-archive.md with resolution date and note
+5. For each new flag: check for duplicate (same keyword/platform/channel); if duplicate exists, update date; otherwise append new entry
+6. Apply priority standards: revenue decline >30% MoM = 🔴; publishing gap week 2 = 🔴; SEO drop with opportunity score 8+ = 🔴; everything else follows calling op's suggestion
+7. Sort file: 🔴 oldest first, then 🟡 oldest first, then 🟢
+8. Write updated file
+9. Return summary: "{X} 🔴 urgent, {Y} 🟡 watch, {Z} 🟢 info — {N} items resolved this cycle"
+
+## Input
+
+- Flag list from calling op
+- `~/Documents/AIReadyLife/vault/content/open-loops.md` — current file
+- `~/Documents/AIReadyLife/vault/content/00_current/` — for publishing resolution check
+- `~/Documents/AIReadyLife/vault/content/02_gumroad/` — for revenue recovery resolution check
+
+## Output Format
+
+`~/Documents/AIReadyLife/vault/content/open-loops.md`:
+```
+# Content Open Loops
+Last updated: {YYYY-MM-DD}
+Open: {X} 🔴 | {Y} 🟡 | {Z} 🟢
+
+---
+
+🔴 REVENUE — Gumroad declined 33% MoM | [Product A]
+From $540 → $360 (-33%) | Conversion rate dropped 2.8% → 1.9%
+Action: Review product page copy and traffic source quality
+Source: content-op-revenue-review | Raised: 2026-03-01
+
+🟡 SEO DROP — "keyword" | /blog/post-3 | Pos 4 → 9 (-5 positions)
+Traffic impact: ~-320 clicks/mo | Opportunity score: 7/10
+Action: Refresh content with 2026 data + update publish date
+Source: content-op-seo-review | Raised: 2026-03-01
+
+🟢 OPPORTUNITY — AI Tools pillar outperforming (3.8% vs 2.4% avg)
+Action: Publish 2 more AI Tools posts this month to capitalize
+Source: content-op-channel-review | Raised: 2026-03-01
+```
+
+## Configuration
+
+Optional in `~/Documents/AIReadyLife/vault/content/config.md`:
+- `open_loops_archive_after_days` — days before a 🟢 item auto-archives (default: 60)
+
+## Error Handling
+
+- If vault/content/open-loops.md does not exist: create with standard header.
+- If open-loops-archive.md does not exist: create when first item is archived.
+- If no flags received and no items to resolve: write a "no new items" update with the current date.
+
+## Vault Paths
+
+- Reads from: `~/Documents/AIReadyLife/vault/content/open-loops.md`, `~/Documents/AIReadyLife/vault/content/00_current/`, `~/Documents/AIReadyLife/vault/content/02_gumroad/`
+- Writes to: `~/Documents/AIReadyLife/vault/content/open-loops.md`, `~/Documents/AIReadyLife/vault/content/open-loops-archive.md`

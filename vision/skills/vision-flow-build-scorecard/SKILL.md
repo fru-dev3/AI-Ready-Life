@@ -10,28 +10,71 @@ description: >
 
 # aireadylife-vision-build-scorecard
 
-**Trigger:** Called by `aireadylife-vision-monthly-scorecard`
-**Produces:** A structured scorecard object with per-domain scores, trend indicators, and status notes returned to the calling op for report formatting.
+**Trigger:** Called by `aireadylife-vision-op-monthly-scorecard`, `aireadylife-vision-op-review-brief`
+**Produces:** Structured scorecard data with per-domain scores, trend indicators, and status notes returned to calling op
 
-## What it does
+## What It Does
 
-Collects data from every installed plugin vault to build the monthly life scorecard. For each installed plugin domain (health, wealth, tax, career, estate, insurance, content, calendar), reads the `open-loops.md` file to get two counts: items added this month (new flags surfaced) and items resolved this month (flags marked complete). The resolution ratio is the primary scoring input — a domain resolving more loops than it accumulates is trending positively. Reads `vault/vision/00_goals/` for any milestones logged in the current month per domain — each logged milestone adds positive weight to the score. For domains with active OKRs, checks the current key result progress percentages from the most recent `aireadylife-vision-score-domain-progress` run. Combines these inputs into a 1-10 score using a weighted formula: resolution ratio (50% weight), OKR pace (30% weight), milestone count (20% weight). Calculates trend by comparing this month's score to last month's: +1 or more = improving (↑), within 1 point = stable (→), -1 or more = declining (↓). Generates a 1-line status note for each domain that explains the score in plain language. Returns the full scorecard data structure to the calling op.
+This flow is the scoring engine for the monthly life scorecard. It collects data from across all installed plugin vaults and computes a 1-10 score for each of the 13 life domains using a three-factor weighted formula.
+
+**Factor 1 — Resolution Ratio (50% weight):** For each domain, the flow reads vault/{domain}/open-loops.md and counts two things: items that were added this month (new items flagged since the first day of the current month) and items that were resolved this month (items marked complete with `- [x]` since the first day of the current month). The resolution ratio is resolved / (resolved + added). A domain that resolved 4 items and added 2 this month has a ratio of 4/6 = 0.67. A domain that added 6 items and resolved 0 has a ratio of 0/6 = 0. The ratio is scaled 0-10 for the scoring formula: ratio of 1.0 (all resolved, nothing added) → 10 points; ratio of 0 (nothing resolved, items accumulating) → 0 points. A domain with no open-loops.md or with no activity this month receives a neutral score of 5 on this factor.
+
+**Factor 2 — OKR Pace (30% weight):** The flow reads vault/vision/01_okrs/ for the current quarter's Key Results that map to each domain. For quantitative KRs, it reads the relevant domain vault for the current metric value and calculates percentage of target achieved. For qualitative KRs, it looks for completion evidence. The expected completion percentage is calculated as: (days elapsed in quarter / total days in quarter) × 100. If the actual percentage is within 10 points of expected, the domain scores full OKR pace points. If the actual is 11-20 points behind expected, it scores partial OKR pace points. If 21+ points behind, it scores 0 OKR pace points. Domains with no OKRs this quarter receive the median score on this factor (5 points).
+
+**Factor 3 — Milestone Count (20% weight):** The flow reads vault/vision/00_goals/milestones.md and counts milestones logged this month with a domain tag matching the current domain. Zero milestones = 0 points on this factor. One milestone = 7 points. Two milestones = 9 points. Three or more milestones = 10 points.
+
+**Score assembly:** The three factor scores are combined: (Factor1 × 0.5) + (Factor2 × 0.3) + (Factor3 × 0.2). The result is the raw 1-10 domain score for the month.
+
+**Trend calculation:** The flow reads the prior month's scorecard from vault/vision/02_scorecard/ and compares scores domain by domain. If the score improved by 1.0 or more points: trend = ↑. If the score declined by 1.0 or more points: trend = ↓. Within 1.0 points: trend = →.
+
+**Status note generation:** Each domain receives a 1-line plain-language status note generated from the underlying data. The note explains the score rather than restating it: "Resolved 3/5 items; career OKR at 45% (expected 60%)" rather than "Score: 6.1."
 
 ## Steps
 
-1. Read `open-loops.md` from each installed plugin vault
-2. Count items added this month and items resolved this month per domain
-3. Read `vault/vision/00_goals/` for milestones logged in current month, categorized by domain
-4. Pull current OKR progress percentages from vault/vision/01_okrs/ for each domain
-5. Calculate per-domain score using weighted formula: resolution ratio (50%), OKR pace (30%), milestones (20%)
-6. Compare to prior month scores and assign trend indicators (↑ → ↓)
-7. Generate 1-line plain-language status note per domain
-8. Return full scorecard data structure to calling op
+1. Receive list of 13 domains and which are active/installed from calling op
+2. For each domain: read vault/{domain}/open-loops.md; count items added and resolved this month
+3. Calculate resolution ratio; scale to 0-10 factor score
+4. For each domain: read vault/vision/01_okrs/ for domain-mapped KRs; calculate OKR pace percentage
+5. Calculate expected OKR pace; compare to actual; assign OKR pace factor score
+6. Read vault/vision/00_goals/milestones.md; count this-month milestones per domain
+7. Assign milestone factor score based on count (0=0, 1=7, 2=9, 3+=10)
+8. Compute domain score: (F1 × 0.5) + (F2 × 0.3) + (F3 × 0.2)
+9. Read prior month scorecard from vault/vision/02_scorecard/ for trend calculation
+10. Assign trend indicator (↑/→/↓) per domain
+11. Generate 1-line status note per domain
+12. Return full scorecard data structure to calling op
 
-## Apps
+## Input
 
-vault file system
+- ~/Documents/AIReadyLife/vault/*/open-loops.md (all installed plugins)
+- ~/Documents/AIReadyLife/vault/vision/01_okrs/ (current quarter OKRs)
+- ~/Documents/AIReadyLife/vault/vision/00_goals/milestones.md
+- ~/Documents/AIReadyLife/vault/vision/02_scorecard/ (prior month scorecard for trend)
 
-## Vault Output
+## Output Format
 
-`vault/vision/02_scorecard/`
+Returns structured data to calling op:
+```
+[
+  { domain: "health", score: 7.2, trend: "↑", status: "Healthy — resolved 3/4 items; OKR on pace (72%)", resolution_ratio: 0.75, okr_pace: 0.72, milestone_count: 1 },
+  { domain: "wealth", score: 8.5, trend: "↑", status: "Momentum — savings milestone hit; OKR ahead of pace", resolution_ratio: 0.9, okr_pace: 0.85, milestone_count: 2 },
+  ...
+]
+```
+
+## Configuration
+
+Optional in vault/vision/config.md:
+- `scoring_weights` — override default 50/30/20 distribution
+- `domain_okr_map` — explicit mapping of OKR names to domains (if OKR naming doesn't match domain names)
+
+## Error Handling
+
+- **Domain plugin not installed:** Score using vision-owned data only (OKRs and milestones); set resolution ratio factor to 5 (neutral) with note "Domain plugin not installed."
+- **No prior month scorecard:** Return scores without trend indicators; note "Trend available after second monthly run."
+- **open-loops.md has no date information:** Cannot calculate monthly adds/resolves; set resolution factor to 5 (neutral); note "Add timestamps to open-loops.md items for resolution ratio calculation."
+
+## Vault Paths
+
+- Reads from: ~/Documents/AIReadyLife/vault/*/open-loops.md, ~/Documents/AIReadyLife/vault/vision/01_okrs/, ~/Documents/AIReadyLife/vault/vision/00_goals/milestones.md, ~/Documents/AIReadyLife/vault/vision/02_scorecard/
+- Writes to: none (returns data to calling op)
