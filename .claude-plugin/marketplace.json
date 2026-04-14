@@ -11,11 +11,7 @@
   "plugins": [
     {
       "name": "health",
-      "source": {
-        "source": "git-subdir",
-        "url": "fru-dev3/aireadyu-life",
-        "path": "health"
-      },
+      "source": "./health",
       "description": "2 AI agents that manage your personal health — wellness tracking, lab review, medication monitoring, appointment management, and insurance/HSA oversight.",
       "category": "personal",
       "keywords": ["health", "wellness", "labs", "medications", "appointments", "insurance", "hsa"],
@@ -23,11 +19,7 @@
     },
     {
       "name": "wealth",
-      "source": {
-        "source": "git-subdir",
-        "url": "fru-dev3/aireadyu-life",
-        "path": "wealth"
-      },
+      "source": "./wealth",
       "description": "2 AI agents that manage your personal wealth — net worth tracking, investment performance, cash flow analysis, and estate planning oversight.",
       "category": "finance",
       "keywords": ["wealth", "net-worth", "investments", "cash-flow", "estate-planning"],
@@ -35,11 +27,7 @@
     },
     {
       "name": "tax",
-      "source": {
-        "source": "git-subdir",
-        "url": "fru-dev3/aireadyu-life",
-        "path": "tax"
-      },
+      "source": "./tax",
       "description": "2 AI agents that manage your personal tax picture — deadline tracking, estimate calculations, deduction reviews, entity compliance, and accountant readiness.",
       "category": "finance",
       "keywords": ["tax", "deadlines", "estimates", "deductions", "compliance", "filing"],
@@ -47,11 +35,7 @@
     },
     {
       "name": "career",
-      "source": {
-        "source": "git-subdir",
-        "url": "fru-dev3/aireadyu-life",
-        "path": "career"
-      },
+      "source": "./career",
       "description": "2 AI agents that manage your career — compensation benchmarking, job market scanning, application pipeline, skills gap analysis, and network outreach.",
       "category": "career",
       "keywords": ["career", "compensation", "job-search", "market", "skills", "network"],
@@ -59,11 +43,7 @@
     },
     {
       "name": "benefits",
-      "source": {
-        "source": "git-subdir",
-        "url": "fru-dev3/aireadyu-life",
-        "path": "benefits"
-      },
+      "source": "./benefits",
       "description": "2 AI agents — Chief of Staff + Benefits Director. Maximize your 401k match, HSA triple-tax advantage, and coverage optimization.",
       "category": "finance",
       "keywords": ["benefits", "401k", "hsa", "open-enrollment", "equity", "espp"],
@@ -71,95 +51,63 @@
     },
     {
       "name": "brand",
-      "source": {
-        "source": "git-subdir",
-        "url": "fru-dev3/aireadyu-life",
-        "path": "brand"
-      },
-      "description": "2 AI agents — Chief of Staff + Brand Director. Consistent brand presence across all platforms, mention monitoring, analytics tracking, and monthly brand synthesis reports.",
+      "source": "./brand",
+      "description": "2 AI agents — Chief of Staff + Brand Director. Consistent brand presence, mention monitoring, analytics tracking, and monthly synthesis reports.",
       "category": "content",
       "keywords": ["brand", "online-presence", "reputation", "analytics", "social"],
       "license": "MIT"
     },
     {
       "name": "business",
-      "source": {
-        "source": "git-subdir",
-        "url": "fru-dev3/aireadyu-life",
-        "path": "business"
-      },
-      "description": "2 AI agents — Chief of Staff + Chief Corporate Officer. Track LLC/entity revenue and expenses, stay ahead of compliance deadlines, and keep your books organized.",
+      "source": "./business",
+      "description": "2 AI agents — Chief of Staff + Chief Corporate Officer. Track LLC/entity revenue and expenses, compliance deadlines, and books.",
       "category": "business",
       "keywords": ["business", "llc", "p-and-l", "invoicing", "compliance", "contractors"],
       "license": "MIT"
     },
     {
       "name": "ben",
-      "source": {
-        "source": "git-subdir",
-        "url": "fru-dev3/aireadyu-life",
-        "path": "ben"
-      },
-      "description": "1 AI agent — your personal Chief of Staff. Orchestrates all other life plugins, synthesizes daily briefs across every domain, syncs tasks, and monitors priorities.",
+      "source": "./ben",
+      "description": "1 AI agent — your personal Chief of Staff. Orchestrates all other life plugins, synthesizes daily briefs, syncs tasks, and monitors priorities.",
       "category": "personal",
       "keywords": ["chief-of-staff", "personal-assistant", "tasks", "priorities", "inbox"],
       "license": "MIT"
     },
     {
       "name": "calendar",
-      "source": {
-        "source": "git-subdir",
-        "url": "fru-dev3/aireadyu-life",
-        "path": "calendar"
-      },
-      "description": "2 AI agents — Chief of Staff + Calendar Director. Protect focus time, surface deadlines before they're urgent, and align your weekly schedule with quarterly priorities.",
+      "source": "./calendar",
+      "description": "2 AI agents — Chief of Staff + Calendar Director. Protect focus time, surface deadlines before they're urgent, align schedule with priorities.",
       "category": "personal",
       "keywords": ["calendar", "scheduling", "deadlines", "time-blocking", "focus"],
       "license": "MIT"
     },
     {
       "name": "content",
-      "source": {
-        "source": "git-subdir",
-        "url": "fru-dev3/aireadyu-life",
-        "path": "content"
-      },
-      "description": "2 AI agents that manage your content business — YouTube analytics, newsletter metrics, LinkedIn growth, Gumroad revenue, SEO priorities, and publishing schedule.",
+      "source": "./content",
+      "description": "2 AI agents that manage your content business — YouTube analytics, newsletter metrics, LinkedIn growth, Gumroad revenue, and publishing schedule.",
       "category": "content",
       "keywords": ["content", "youtube", "newsletter", "linkedin", "gumroad", "seo"],
       "license": "MIT"
     },
     {
       "name": "estate",
-      "source": {
-        "source": "git-subdir",
-        "url": "fru-dev3/aireadyu-life",
-        "path": "estate"
-      },
-      "description": "2 AI agents that manage your rental property portfolio — cash flow tracking, tenant management, maintenance, insurance, property tax, and investment performance.",
+      "source": "./estate",
+      "description": "2 AI agents that manage your rental property portfolio — cash flow tracking, tenant management, maintenance, insurance, and investment performance.",
       "category": "finance",
       "keywords": ["rentals", "property", "cash-flow", "tenants", "maintenance", "real-estate"],
       "license": "MIT"
     },
     {
       "name": "explore",
-      "source": {
-        "source": "git-subdir",
-        "url": "fru-dev3/aireadyu-life",
-        "path": "explore"
-      },
-      "description": "1 AI agent that manages your travel and adventure life — trip planning, passport and document status, travel wishlist, and upcoming adventure prep.",
+      "source": "./explore",
+      "description": "1 AI agent that manages your travel life — trip planning, passport and document status, travel wishlist, and upcoming adventure prep.",
       "category": "personal",
       "keywords": ["travel", "trips", "passport", "visa", "loyalty", "itineraries"],
       "license": "MIT"
     },
     {
       "name": "home",
-      "source": {
-        "source": "git-subdir",
-        "url": "fru-dev3/aireadyu-life",
-        "path": "home"
-      },
+      "source": "./home",
       "description": "1 AI agent that manages your home — maintenance tracking, home expenses, seasonal task lists, and household organization.",
       "category": "personal",
       "keywords": ["home", "maintenance", "contractors", "seasonal", "household"],
@@ -167,35 +115,23 @@
     },
     {
       "name": "insurance",
-      "source": {
-        "source": "git-subdir",
-        "url": "fru-dev3/aireadyu-life",
-        "path": "insurance"
-      },
-      "description": "2 AI agents that manage all your insurance policies — health, life, auto, home/renters, umbrella, and more. Renewal tracking, coverage gap analysis, and claims management.",
+      "source": "./insurance",
+      "description": "2 AI agents that manage all your insurance policies — health, life, auto, home/renters, umbrella. Renewal tracking, coverage gap analysis, and claims.",
       "category": "finance",
       "keywords": ["insurance", "policies", "renewals", "coverage", "claims", "gaps"],
       "license": "MIT"
     },
     {
       "name": "intel",
-      "source": {
-        "source": "git-subdir",
-        "url": "fru-dev3/aireadyu-life",
-        "path": "intel"
-      },
-      "description": "1 AI agent that scans your curated news sources daily — AI, tech, finance, and world news filtered to your interests. Produces morning and evening intelligence briefs.",
+      "source": "./intel",
+      "description": "1 AI agent that scans your curated news sources daily — AI, tech, finance, and world news filtered to your interests.",
       "category": "personal",
       "keywords": ["news", "intelligence", "research", "monitoring", "signals"],
       "license": "MIT"
     },
     {
       "name": "learning",
-      "source": {
-        "source": "git-subdir",
-        "url": "fru-dev3/aireadyu-life",
-        "path": "learning"
-      },
+      "source": "./learning",
       "description": "1 AI agent that manages your skill development — active courses, reading list, certifications, and learning goals.",
       "category": "career",
       "keywords": ["learning", "courses", "certifications", "reading", "skills", "development"],
@@ -203,11 +139,7 @@
     },
     {
       "name": "real-estate",
-      "source": {
-        "source": "git-subdir",
-        "url": "fru-dev3/aireadyu-life",
-        "path": "real-estate"
-      },
+      "source": "./real-estate",
       "description": "1 AI agent focused on real estate market research — home purchase analysis, buy vs. rent decisions, market trends, and portfolio expansion strategy.",
       "category": "finance",
       "keywords": ["real-estate", "buy-vs-rent", "market", "mortgage", "listings", "investment"],
@@ -215,36 +147,24 @@
     },
     {
       "name": "records",
-      "source": {
-        "source": "git-subdir",
-        "url": "fru-dev3/aireadyu-life",
-        "path": "records"
-      },
-      "description": "1 AI agent that manages your document inventory and subscriptions — tracks expiring IDs, memberships, subscriptions to cancel, and maintains a complete document register.",
+      "source": "./records",
+      "description": "1 AI agent that manages your document inventory and subscriptions — tracks expiring IDs, memberships, subscriptions to cancel.",
       "category": "personal",
       "keywords": ["records", "documents", "subscriptions", "vault", "passwords", "ids"],
       "license": "MIT"
     },
     {
       "name": "social",
-      "source": {
-        "source": "git-subdir",
-        "url": "fru-dev3/aireadyu-life",
-        "path": "social"
-      },
-      "description": "1 AI agent that manages your personal relationships — birthday and milestone tracking, relationship health scores, check-in reminders, and outreach queue.",
+      "source": "./social",
+      "description": "1 AI agent that manages your personal relationships — birthday and milestone tracking, relationship health scores, check-in reminders.",
       "category": "personal",
       "keywords": ["relationships", "network", "birthdays", "outreach", "contacts", "social"],
       "license": "MIT"
     },
     {
       "name": "vision",
-      "source": {
-        "source": "git-subdir",
-        "url": "fru-dev3/aireadyu-life",
-        "path": "vision"
-      },
-      "description": "2 AI agents focused on your life vision — quarterly planning, goal tracking, 13-domain life scorecard, and strategic alignment between your calendar and long-term goals.",
+      "source": "./vision",
+      "description": "2 AI agents focused on your life vision — quarterly planning, goal tracking, 13-domain life scorecard, and strategic alignment.",
       "category": "personal",
       "keywords": ["vision", "goals", "planning", "okrs", "life-scorecard", "milestones"],
       "license": "MIT"
