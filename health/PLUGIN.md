@@ -32,7 +32,7 @@ Your personal AI health partner. The Health Agent tracks your wellness score, fl
 
 ## What's Paid ($29)
 
-**[Get AI Ready Life: Health on Gumroad → $29](https://fruverse.gumroad.com/l/aireadylife-health)**
+**[Get AI Ready Life: Health on Gumroad → $29](https://frudev.gumroad.com/l/aireadylife-health)**
 
 Includes:
 - Full agent instructions (100+ lines with health domain expertise)

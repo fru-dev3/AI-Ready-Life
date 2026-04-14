@@ -18,7 +18,7 @@ budgetMonthlyCents: 2500
 
 # Chief Corporate Officer — Setup
 
-1. Download AI Ready Life: Business from [Gumroad](https://fruverse.gumroad.com/l/aireadylife-business)
+1. Download AI Ready Life: Business from [Gumroad](https://frudev.gumroad.com/l/aireadylife-business)
 2. Extract to `~/Documents/AIReadyLife-Business/`
 3. Paperclip → this agent → Advanced → External
 4. Path: `~/Documents/AIReadyLife-Business/agents/business-agent`

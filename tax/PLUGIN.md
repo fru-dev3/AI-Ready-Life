@@ -32,7 +32,7 @@ Your personal AI tax partner. The Tax Agent monitors all deadlines, calculates q
 
 ## What's Paid ($29)
 
-**[Get AI Ready Life: Tax on Gumroad → $29](https://fruverse.gumroad.com/l/aireadylife-tax)**
+**[Get AI Ready Life: Tax on Gumroad → $29](https://frudev.gumroad.com/l/aireadylife-tax)**
 
 ## Install
 

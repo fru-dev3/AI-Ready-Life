@@ -17,7 +17,7 @@ budgetMonthlyCents: 3000
 
 ## Connect External Instructions
 
-1. **Download the AI Ready Life: Records pack** from [Gumroad](https://fruverse.gumroad.com/l/aireadylife-records)
+1. **Download the AI Ready Life: Records pack** from [Gumroad](https://frudev.gumroad.com/l/aireadylife-records)
 2. **Extract to** `~/Documents/AIReadyLife-Records/`
 3. **In the Paperclip dashboard**, click on this agent
 4. **Click Advanced → Switch from Managed to External**

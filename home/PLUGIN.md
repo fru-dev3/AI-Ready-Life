@@ -29,7 +29,7 @@ Tracks maintenance, home expenses, and seasonal tasks for renters and homeowners
 
 ## What's Paid ($19)
 
-**[Get AI Ready Life: Home on Gumroad → $19](https://fruverse.gumroad.com/l/aireadylife-home)**
+**[Get AI Ready Life: Home on Gumroad → $19](https://frudev.gumroad.com/l/aireadylife-home)**
 
 Includes:
 - Full agent instructions with home management domain expertise

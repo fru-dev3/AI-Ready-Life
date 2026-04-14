@@ -29,7 +29,7 @@ Tracks passport status, upcoming trips, travel wishlist, and travel document rea
 
 ## What's Paid ($19)
 
-**[Get AI Ready Life: Explore on Gumroad → $19](https://fruverse.gumroad.com/l/aireadylife-explore)**
+**[Get AI Ready Life: Explore on Gumroad → $19](https://frudev.gumroad.com/l/aireadylife-explore)**
 
 Includes:
 - Full agent instructions with travel domain expertise

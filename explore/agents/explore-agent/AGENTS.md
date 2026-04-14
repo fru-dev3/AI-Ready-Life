@@ -14,7 +14,7 @@ budgetMonthlyCents: 1500
 
 # Adventure Director — Setup
 
-1. Download AI Ready Life: Explore from [Gumroad](https://fruverse.gumroad.com/l/aireadylife-explore)
+1. Download AI Ready Life: Explore from [Gumroad](https://frudev.gumroad.com/l/aireadylife-explore)
 2. Extract to `~/Documents/AIReadyLife-Explore/`
 3. Paperclip → this agent → Advanced → External
 4. Path: `~/Documents/AIReadyLife-Explore/agents/explore-agent`

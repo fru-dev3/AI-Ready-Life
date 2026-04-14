@@ -32,7 +32,7 @@ Your personal AI Records Director. Maintains a master inventory of all important
 
 ## What's Paid ($19)
 
-**[Get AI Ready Life: Records on Gumroad → $19](https://fruverse.gumroad.com/l/aireadylife-records)**
+**[Get AI Ready Life: Records on Gumroad → $19](https://frudev.gumroad.com/l/aireadylife-records)**
 
 Includes:
 - Full agent instructions (70+ lines with document management and subscription tracking expertise)

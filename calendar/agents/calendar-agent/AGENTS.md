@@ -18,7 +18,7 @@ budgetMonthlyCents: 2500
 
 # Calendar Director — Setup
 
-1. Download AI Ready Life: Calendar from [Gumroad](https://fruverse.gumroad.com/l/aireadylife-calendar)
+1. Download AI Ready Life: Calendar from [Gumroad](https://frudev.gumroad.com/l/aireadylife-calendar)
 2. Extract to `~/Documents/AIReadyLife-Calendar/`
 3. Paperclip → this agent → Advanced → External
 4. Path: `~/Documents/AIReadyLife-Calendar/agents/calendar-agent`

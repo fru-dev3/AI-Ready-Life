@@ -31,7 +31,7 @@ Ben is your Chief of Staff. Every morning he pulls from all installed life plugi
 
 ## What's Paid ($29)
 
-**[Get AI Ready Life: Chief on Gumroad → $29](https://fruverse.gumroad.com/l/aireadylife-chief)**
+**[Get AI Ready Life: Chief on Gumroad → $29](https://frudev.gumroad.com/l/aireadylife-chief)**
 
 Includes full agent instructions, domain alert routing rules, Notion sync configuration, and 30+ orchestration prompts.
 

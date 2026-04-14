@@ -17,7 +17,7 @@ budgetMonthlyCents: 2000
 
 ## Connect External Instructions
 
-1. **Download the AI Ready Life: Health pack** from [Gumroad](https://fruverse.gumroad.com/l/aireadylife-health)
+1. **Download the AI Ready Life: Health pack** from [Gumroad](https://frudev.gumroad.com/l/aireadylife-health)
 2. **Extract to** `~/Documents/AIReadyLife-Health/`
 3. **In the Paperclip dashboard**, click on this agent
 4. **Click Advanced → Switch from Managed to External**

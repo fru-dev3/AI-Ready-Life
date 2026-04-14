@@ -32,7 +32,7 @@ Your personal AI intelligence director. The Intel Agent scans 20+ curated RSS fe
 
 ## What's Paid ($19)
 
-**[Get AI Ready Life: Intel on Gumroad → $19](https://fruverse.gumroad.com/l/aireadylife-intel)**
+**[Get AI Ready Life: Intel on Gumroad → $19](https://frudev.gumroad.com/l/aireadylife-intel)**
 
 Includes:
 - Full agent instructions (80+ lines with news curation and filtering expertise)

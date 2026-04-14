@@ -31,7 +31,7 @@ Your personal AI Chief Learning Officer. The Learning Agent tracks active course
 
 ## What's Paid ($19)
 
-**[Get AI Ready Life: Learning on Gumroad → $19](https://fruverse.gumroad.com/l/aireadylife-learning)**
+**[Get AI Ready Life: Learning on Gumroad → $19](https://frudev.gumroad.com/l/aireadylife-learning)**
 
 Includes:
 - Full agent instructions (80+ lines with learning management and skill development expertise)

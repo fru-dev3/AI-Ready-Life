@@ -15,7 +15,7 @@ budgetMonthlyCents: 2000
 
 # Real Estate Portfolio Manager — Setup
 
-1. Download AI Ready Life: Estate from [Gumroad](https://fruverse.gumroad.com/l/aireadylife-estate)
+1. Download AI Ready Life: Estate from [Gumroad](https://frudev.gumroad.com/l/aireadylife-estate)
 2. Extract to `~/Documents/AIReadyLife-Estate/`
 3. Paperclip → this agent → Advanced → External
 4. Path: `~/Documents/AIReadyLife-Estate/agents/estate-agent`

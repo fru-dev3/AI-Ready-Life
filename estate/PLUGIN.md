@@ -30,7 +30,7 @@ Tracks cash flow, maintenance, tenant status, insurance, and property tax across
 
 ## What's Paid ($29)
 
-**[Get AI Ready Life: Estate on Gumroad → $29](https://fruverse.gumroad.com/l/aireadylife-estate)**
+**[Get AI Ready Life: Estate on Gumroad → $29](https://frudev.gumroad.com/l/aireadylife-estate)**
 
 Includes:
 - Full agent instructions with real estate domain expertise

@@ -31,7 +31,7 @@ Your personal AI Real Estate Analyst. Monitors housing market trends in your tar
 
 ## What's Paid ($19)
 
-**[Get AI Ready Life: Real Estate on Gumroad → $19](https://fruverse.gumroad.com/l/aireadylife-realestate)**
+**[Get AI Ready Life: Real Estate on Gumroad → $19](https://frudev.gumroad.com/l/aireadylife-realestate)**
 
 Includes:
 - Full agent instructions (80+ lines with real estate analysis and market research expertise)

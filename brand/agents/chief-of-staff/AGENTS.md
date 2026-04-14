@@ -17,7 +17,7 @@ budgetMonthlyCents: 500
 
 # Chief of Staff (Brand) — Setup
 
-1. Download AI Ready Life: Brand from [Gumroad](https://fruverse.gumroad.com/l/aireadylife-brand)
+1. Download AI Ready Life: Brand from [Gumroad](https://frudev.gumroad.com/l/aireadylife-brand)
 2. Extract to `~/Documents/AIReadyLife-Brand/`
 3. Paperclip → this agent → Advanced → External
 4. Path: `~/Documents/AIReadyLife-Brand/agents/chief-of-staff`

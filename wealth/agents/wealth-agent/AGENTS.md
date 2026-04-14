@@ -15,7 +15,7 @@ budgetMonthlyCents: 2000
 
 # Chief Capital Officer — Setup
 
-1. Download the AI Ready Life: Wealth pack from [Gumroad](https://fruverse.gumroad.com/l/aireadylife-wealth)
+1. Download the AI Ready Life: Wealth pack from [Gumroad](https://frudev.gumroad.com/l/aireadylife-wealth)
 2. Extract to `~/Documents/AIReadyLife-Wealth/`
 3. In Paperclip dashboard → this agent → Advanced → External
 4. Paste path: `~/Documents/AIReadyLife-Wealth/agents/wealth-agent`
