@@ -181,11 +181,18 @@ def main():
     print(f"    Output:  {DIST_DIR}")
     print(f"    Domains: {len(targets)}\n")
 
-    # Step 1: Generate PDFs
+    # Step 1: Generate PDFs (or pick up pre-existing ones from dist/pdfs/)
     pdf_map: dict[str, Path] = {}
     if not skip_pdf:
         pdf_map = generate_pdfs(targets)
         print()
+
+    # Always pick up any pre-existing PDFs not covered by generation
+    for domain in targets:
+        if domain not in pdf_map:
+            existing = PDF_DIR / f"aireadylife-{domain}-guide.pdf"
+            if existing.exists():
+                pdf_map[domain] = existing
 
     # Step 2: Package zips
     print(f"📦  Packaging vault zips…")
