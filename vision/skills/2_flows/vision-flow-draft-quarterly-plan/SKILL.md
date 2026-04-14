@@ -1,5 +1,5 @@
 ---
-name: arlive-vision-draft-quarterly-plan
+name: arlive-vision-flow-draft-quarterly-plan
 type: flow
 trigger: called-by-op
 description: >

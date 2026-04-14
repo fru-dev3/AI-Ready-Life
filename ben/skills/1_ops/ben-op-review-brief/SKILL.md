@@ -1,5 +1,5 @@
 ---
-name: arlive-ben-morning-brief
+name: arlive-ben-op-review-brief
 type: op
 cadence: daily
 description: >

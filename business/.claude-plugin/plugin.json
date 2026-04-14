@@ -1,8 +1,11 @@
 {
   "name": "business",
-  "description": "Business management — P&L, invoicing, contractors, entity compliance",
+  "description": "Business management \u2014 P&L, invoicing, contractors, entity compliance",
   "version": "1.0.0",
-  "author": { "name": "fru.dev", "email": "hello@fru.dev" },
+  "author": {
+    "name": "AI Ready You",
+    "email": "hello@fru.dev"
+  },
   "license": "MIT",
   "homepage": "https://aireadyu.dev"
 }

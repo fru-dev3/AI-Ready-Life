@@ -1,5 +1,5 @@
 ---
-name: arlive-calendar-collect-deadlines
+name: arlive-calendar-flow-collect-deadlines
 type: flow
 trigger: called-by-op
 description: >

@@ -1,5 +1,5 @@
 ---
-name: arlive-explore-review-brief
+name: arlive-explore-op-review-brief
 type: op
 cadence: monthly
 description: >

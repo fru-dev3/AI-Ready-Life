@@ -1,5 +1,5 @@
 ---
-name: arlive-career-comp-review
+name: arlive-career-op-comp-review
 type: op
 cadence: quarterly
 description: >

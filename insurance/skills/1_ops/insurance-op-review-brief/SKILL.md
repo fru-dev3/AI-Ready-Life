@@ -1,5 +1,5 @@
 ---
-name: arlive-insurance-review-brief
+name: arlive-insurance-op-review-brief
 type: op
 cadence: monthly
 description: >

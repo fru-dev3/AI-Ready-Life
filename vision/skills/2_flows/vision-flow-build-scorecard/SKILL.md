@@ -1,5 +1,5 @@
 ---
-name: arlive-vision-build-scorecard
+name: arlive-vision-flow-build-scorecard
 type: flow
 trigger: called-by-op
 description: >

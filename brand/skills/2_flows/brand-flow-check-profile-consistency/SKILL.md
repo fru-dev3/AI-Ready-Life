@@ -1,5 +1,5 @@
 ---
-name: arlive-brand-check-profile-consistency
+name: arlive-brand-flow-check-profile-consistency
 type: flow
 trigger: called-by-op
 description: >

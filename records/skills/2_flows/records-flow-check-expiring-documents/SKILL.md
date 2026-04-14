@@ -1,5 +1,5 @@
 ---
-name: arlive-records-check-expiring-documents
+name: arlive-records-flow-check-expiring-documents
 type: flow
 trigger: called-by-op
 description: >

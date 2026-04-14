@@ -1,5 +1,5 @@
 ---
-name: arlive-calendar-analyze-focus-time
+name: arlive-calendar-flow-analyze-focus-time
 type: flow
 trigger: called-by-op
 description: >

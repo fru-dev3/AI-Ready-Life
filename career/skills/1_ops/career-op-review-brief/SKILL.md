@@ -1,5 +1,5 @@
 ---
-name: arlive-career-review-brief
+name: arlive-career-op-review-brief
 type: op
 cadence: monthly
 description: >

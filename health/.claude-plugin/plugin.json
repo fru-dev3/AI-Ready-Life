@@ -1,8 +1,11 @@
 {
   "name": "health",
-  "description": "Personal health management — labs, wellness, medications, appointments, insurance",
+  "description": "Personal health management \u2014 labs, wellness, medications, appointments, insurance",
   "version": "1.0.0",
-  "author": { "name": "fru.dev", "email": "hello@fru.dev" },
+  "author": {
+    "name": "AI Ready You",
+    "email": "hello@fru.dev"
+  },
   "license": "MIT",
   "homepage": "https://aireadyu.dev"
 }

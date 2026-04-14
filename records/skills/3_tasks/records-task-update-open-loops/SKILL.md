@@ -1,5 +1,5 @@
 ---
-name: arlive-records-update-open-loops
+name: arlive-records-task-update-open-loops
 type: task
 description: >
   Writes all records flags (expiring IDs, outdated legal documents, unused subscriptions) to

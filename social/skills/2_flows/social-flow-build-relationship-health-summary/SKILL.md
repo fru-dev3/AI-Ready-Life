@@ -1,5 +1,5 @@
 ---
-name: arlive-social-build-relationship-health-summary
+name: arlive-social-flow-build-relationship-health-summary
 type: flow
 trigger: called-by-op
 description: >

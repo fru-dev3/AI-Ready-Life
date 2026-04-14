@@ -1,5 +1,5 @@
 ---
-name: arlive-career-skills-gap-review
+name: arlive-career-op-skills-gap-review
 type: op
 cadence: quarterly
 description: >

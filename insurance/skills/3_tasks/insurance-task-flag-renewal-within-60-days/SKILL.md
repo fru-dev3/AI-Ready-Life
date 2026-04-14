@@ -1,5 +1,5 @@
 ---
-name: arlive-insurance-flag-renewal-within-60-days
+name: arlive-insurance-task-flag-renewal-within-60-days
 type: task
 description: >
   Writes a renewal alert to vault/insurance/open-loops.md with policy type, carrier,

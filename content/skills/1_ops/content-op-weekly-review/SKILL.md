@@ -1,5 +1,5 @@
 ---
-name: arlive-content-weekly-review
+name: arlive-content-op-weekly-review
 type: op
 cadence: weekly
 description: >

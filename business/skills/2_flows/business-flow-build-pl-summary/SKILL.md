@@ -1,5 +1,5 @@
 ---
-name: arlive-business-build-pl-summary
+name: arlive-business-flow-build-pl-summary
 type: flow
 trigger: called-by-op
 description: >

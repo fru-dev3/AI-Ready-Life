@@ -1,5 +1,5 @@
 ---
-name: arlive-health-monthly-sync
+name: arlive-health-op-monthly-sync
 type: op
 cadence: monthly
 description: >

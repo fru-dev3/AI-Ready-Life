@@ -1,5 +1,5 @@
 ---
-name: arlive-explore-check-travel-docs
+name: arlive-explore-flow-check-travel-docs
 type: flow
 trigger: called-by-op
 description: >

@@ -1,5 +1,5 @@
 ---
-name: arlive-career-log-application
+name: arlive-career-task-log-application
 type: task
 cadence: as-received
 description: >

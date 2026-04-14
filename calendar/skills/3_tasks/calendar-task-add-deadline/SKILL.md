@@ -1,5 +1,5 @@
 ---
-name: arlive-calendar-add-deadline
+name: arlive-calendar-task-add-deadline
 type: task
 cadence: as-received
 description: >

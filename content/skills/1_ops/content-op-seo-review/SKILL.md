@@ -1,5 +1,5 @@
 ---
-name: arlive-content-seo-review
+name: arlive-content-op-seo-review
 type: op
 cadence: monthly
 description: >

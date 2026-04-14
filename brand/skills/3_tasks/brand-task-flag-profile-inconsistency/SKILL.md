@@ -1,5 +1,5 @@
 ---
-name: arlive-brand-flag-profile-inconsistency
+name: arlive-brand-task-flag-profile-inconsistency
 type: task
 description: >
   Writes a flag to vault/brand/open-loops.md when a platform profile field diverges from the

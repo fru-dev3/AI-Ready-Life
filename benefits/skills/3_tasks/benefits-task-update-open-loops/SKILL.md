@@ -1,5 +1,5 @@
 ---
-name: arlive-benefits-update-open-loops
+name: arlive-benefits-task-update-open-loops
 type: task
 description: >
   Writes all benefits flags (enrollment deadlines, coverage gaps, HSA action items, 401k

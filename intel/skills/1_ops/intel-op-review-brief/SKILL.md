@@ -1,5 +1,5 @@
 ---
-name: arlive-intel-morning-brief
+name: arlive-intel-op-review-brief
 type: op
 cadence: daily
 description: >

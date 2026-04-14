@@ -1,5 +1,5 @@
 ---
-name: arlive-health-review-brief
+name: arlive-health-op-review-brief
 type: op
 cadence: monthly
 description: >

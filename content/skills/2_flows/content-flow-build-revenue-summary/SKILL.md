@@ -1,5 +1,5 @@
 ---
-name: arlive-content-build-revenue-summary
+name: arlive-content-flow-build-revenue-summary
 type: flow
 trigger: called-by-op
 description: >

@@ -1,5 +1,5 @@
 ---
-name: arlive-brand-analyze-mentions
+name: arlive-brand-flow-analyze-mentions
 type: flow
 trigger: called-by-op
 description: >

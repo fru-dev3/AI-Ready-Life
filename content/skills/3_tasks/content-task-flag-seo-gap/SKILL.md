@@ -1,5 +1,5 @@
 ---
-name: arlive-content-flag-seo-gap
+name: arlive-content-task-flag-seo-gap
 type: task
 description: >
   Writes a flag to vault/content/open-loops.md when a content piece drops in ranking

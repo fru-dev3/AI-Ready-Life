@@ -1,5 +1,5 @@
 ---
-name: arlive-brand-log-mention
+name: arlive-brand-task-log-mention
 type: task
 cadence: as-received
 description: >

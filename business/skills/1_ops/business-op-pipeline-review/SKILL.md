@@ -1,5 +1,5 @@
 ---
-name: arlive-business-pipeline-review
+name: arlive-business-op-pipeline-review
 type: op
 cadence: monthly
 description: >

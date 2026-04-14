@@ -1,5 +1,5 @@
 ---
-name: arlive-ben-weekly-preview
+name: arlive-ben-op-weekly-preview
 type: op
 cadence: weekly
 description: >

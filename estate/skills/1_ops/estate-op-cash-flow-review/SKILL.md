@@ -1,5 +1,5 @@
 ---
-name: arlive-estate-cash-flow-review
+name: arlive-estate-op-cash-flow-review
 type: op
 cadence: monthly
 description: >

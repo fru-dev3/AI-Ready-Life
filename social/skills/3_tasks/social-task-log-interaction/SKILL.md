@@ -1,5 +1,5 @@
 ---
-name: arlive-social-log-interaction
+name: arlive-social-task-log-interaction
 type: task
 cadence: as-happened
 description: >

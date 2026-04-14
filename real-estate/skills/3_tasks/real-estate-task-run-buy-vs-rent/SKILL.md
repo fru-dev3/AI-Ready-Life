@@ -1,5 +1,5 @@
 ---
-name: arlive-real-estate-run-buy-vs-rent
+name: arlive-real-estate-task-run-buy-vs-rent
 type: task
 description: >
   Runs a buy vs. rent comparison for a specific property and holding period, returning the

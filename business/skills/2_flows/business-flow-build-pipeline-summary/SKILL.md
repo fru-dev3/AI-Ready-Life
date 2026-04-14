@@ -1,5 +1,5 @@
 ---
-name: arlive-business-build-pipeline-summary
+name: arlive-business-flow-build-pipeline-summary
 type: flow
 trigger: called-by-op
 description: >

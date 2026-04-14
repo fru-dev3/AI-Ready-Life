@@ -1,5 +1,5 @@
 ---
-name: arlive-explore-build-trip-summary
+name: arlive-explore-flow-build-trip-summary
 type: flow
 trigger: called-by-op
 description: >

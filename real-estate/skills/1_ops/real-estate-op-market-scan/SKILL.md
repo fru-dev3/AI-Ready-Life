@@ -1,5 +1,5 @@
 ---
-name: arlive-real-estate-market-scan
+name: arlive-real-estate-op-market-scan
 type: op
 cadence: monthly
 description: >

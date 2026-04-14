@@ -1,5 +1,5 @@
 ---
-name: arlive-ben-system-health
+name: arlive-ben-op-system-health
 type: op
 cadence: weekly
 description: >

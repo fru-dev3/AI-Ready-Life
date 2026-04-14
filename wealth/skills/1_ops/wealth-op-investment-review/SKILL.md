@@ -1,5 +1,5 @@
 ---
-name: arlive-wealth-investment-review
+name: arlive-wealth-op-investment-review
 type: op
 cadence: monthly
 description: >

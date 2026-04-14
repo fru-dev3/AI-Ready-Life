@@ -1,5 +1,5 @@
 ---
-name: arlive-learning-log-completion
+name: arlive-learning-task-log-completion
 type: task
 cadence: as-completed
 description: >

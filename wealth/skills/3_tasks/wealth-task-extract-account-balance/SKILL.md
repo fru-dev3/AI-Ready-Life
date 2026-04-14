@@ -1,5 +1,5 @@
 ---
-name: arlive-wealth-extract-account-balance
+name: arlive-wealth-task-extract-account-balance
 type: task
 cadence: called-by-op
 description: >

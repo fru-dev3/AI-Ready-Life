@@ -1,5 +1,5 @@
 ---
-name: arlive-content-revenue-review
+name: arlive-content-op-revenue-review
 type: op
 cadence: monthly
 description: >

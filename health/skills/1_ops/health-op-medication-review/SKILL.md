@@ -1,5 +1,5 @@
 ---
-name: arlive-health-medication-review
+name: arlive-health-op-medication-review
 type: op
 cadence: monthly
 description: >

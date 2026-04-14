@@ -1,5 +1,5 @@
 ---
-name: arlive-explore-monthly-sync
+name: arlive-explore-op-monthly-sync
 type: op
 cadence: monthly
 description: >

@@ -1,5 +1,5 @@
 ---
-name: arlive-career-monthly-sync
+name: arlive-career-op-monthly-sync
 type: op
 cadence: monthly
 description: >

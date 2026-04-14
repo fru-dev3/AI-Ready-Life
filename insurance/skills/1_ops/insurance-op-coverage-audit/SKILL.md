@@ -1,5 +1,5 @@
 ---
-name: arlive-insurance-coverage-audit
+name: arlive-insurance-op-coverage-audit
 type: op
 cadence: annual
 description: >

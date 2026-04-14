@@ -1,5 +1,5 @@
 ---
-name: arlive-insurance-update-open-loops
+name: arlive-insurance-task-update-open-loops
 type: task
 description: >
   Writes all insurance flags (upcoming renewals, coverage gaps, open claims,

@@ -1,5 +1,5 @@
 ---
-name: arlive-content-analyze-channel-performance
+name: arlive-content-flow-analyze-channel-performance
 type: flow
 trigger: called-by-op
 description: >

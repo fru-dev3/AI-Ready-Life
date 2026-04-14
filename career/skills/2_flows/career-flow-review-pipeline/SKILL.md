@@ -1,5 +1,5 @@
 ---
-name: arlive-career-review-pipeline
+name: arlive-career-flow-review-pipeline
 type: flow
 trigger: called-by-op
 description: >

@@ -1,5 +1,5 @@
 ---
-name: arlive-real-estate-update-open-loops
+name: arlive-real-estate-task-update-open-loops
 type: task
 description: >
   Writes all real-estate flags (market shifts, affordability changes, interesting listings, buy

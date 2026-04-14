@@ -1,5 +1,5 @@
 ---
-name: arlive-ben-collect-domain-alerts
+name: arlive-ben-flow-collect-domain-alerts
 type: flow
 trigger: called-by-op
 description: >

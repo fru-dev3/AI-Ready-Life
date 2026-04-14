@@ -1,5 +1,5 @@
 ---
-name: arlive-estate-build-portfolio-summary
+name: arlive-estate-flow-build-portfolio-summary
 type: flow
 trigger: called-by-op
 description: >

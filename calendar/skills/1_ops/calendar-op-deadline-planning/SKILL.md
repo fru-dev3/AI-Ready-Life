@@ -1,5 +1,5 @@
 ---
-name: arlive-calendar-deadline-planning
+name: arlive-calendar-op-deadline-planning
 type: op
 cadence: on-demand
 description: >

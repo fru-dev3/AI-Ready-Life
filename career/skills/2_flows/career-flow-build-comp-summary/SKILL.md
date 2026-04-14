@@ -1,5 +1,5 @@
 ---
-name: arlive-career-build-comp-summary
+name: arlive-career-flow-build-comp-summary
 type: flow
 trigger: called-by-op
 description: >

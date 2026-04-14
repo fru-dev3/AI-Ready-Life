@@ -1,5 +1,5 @@
 ---
-name: arlive-social-build-outreach-queue
+name: arlive-social-flow-build-outreach-queue
 type: flow
 trigger: called-by-op
 description: >

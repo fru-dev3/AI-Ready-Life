@@ -1,5 +1,5 @@
 ---
-name: arlive-estate-tenant-review
+name: arlive-estate-op-tenant-review
 type: op
 cadence: monthly
 description: >

@@ -1,5 +1,5 @@
 ---
-name: arlive-records-flag-expiring-id
+name: arlive-records-task-flag-expiring-id
 type: task
 description: >
   Writes an ID expiration flag to vault/records/open-loops.md with document type, person,

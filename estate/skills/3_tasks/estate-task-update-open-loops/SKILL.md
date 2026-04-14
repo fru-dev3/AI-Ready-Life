@@ -1,5 +1,5 @@
 ---
-name: arlive-estate-update-open-loops
+name: arlive-estate-task-update-open-loops
 type: task
 description: >
   Writes all estate flags (overdue maintenance, lease expirations within 90 days,

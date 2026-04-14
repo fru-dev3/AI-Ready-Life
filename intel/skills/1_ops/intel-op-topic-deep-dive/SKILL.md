@@ -1,5 +1,5 @@
 ---
-name: arlive-intel-topic-deep-dive
+name: arlive-intel-op-topic-deep-dive
 type: op
 cadence: on-demand
 description: >

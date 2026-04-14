@@ -1,5 +1,5 @@
 ---
-name: arlive-wealth-flag-budget-variance
+name: arlive-wealth-task-flag-budget-variance
 type: task
 cadence: monthly
 description: >

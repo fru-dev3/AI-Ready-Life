@@ -1,8 +1,11 @@
 {
   "name": "intel",
-  "description": "News intelligence — daily briefing filtered to your interests",
+  "description": "News intelligence \u2014 daily briefing filtered to your interests",
   "version": "1.0.0",
-  "author": { "name": "fru.dev", "email": "hello@fru.dev" },
+  "author": {
+    "name": "AI Ready You",
+    "email": "hello@fru.dev"
+  },
   "license": "MIT",
   "homepage": "https://aireadyu.dev"
 }

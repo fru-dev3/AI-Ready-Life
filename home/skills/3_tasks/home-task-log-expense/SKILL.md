@@ -1,5 +1,5 @@
 ---
-name: arlive-home-log-expense
+name: arlive-home-task-log-expense
 type: task
 cadence: as-received
 description: >

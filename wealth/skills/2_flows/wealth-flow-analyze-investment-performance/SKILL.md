@@ -1,5 +1,5 @@
 ---
-name: arlive-wealth-analyze-investment-performance
+name: arlive-wealth-flow-analyze-investment-performance
 type: flow
 trigger: called-by-op
 description: >

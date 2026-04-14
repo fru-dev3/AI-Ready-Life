@@ -1,5 +1,5 @@
 ---
-name: arlive-real-estate-build-affordability-analysis
+name: arlive-real-estate-flow-build-affordability-analysis
 type: flow
 trigger: called-by-op
 description: >

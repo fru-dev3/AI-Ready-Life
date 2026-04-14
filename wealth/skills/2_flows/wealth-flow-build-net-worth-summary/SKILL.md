@@ -1,5 +1,5 @@
 ---
-name: arlive-wealth-build-net-worth-summary
+name: arlive-wealth-flow-build-net-worth-summary
 type: flow
 trigger: called-by-op
 description: >

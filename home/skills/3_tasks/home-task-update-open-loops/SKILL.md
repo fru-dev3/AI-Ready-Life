@@ -1,5 +1,5 @@
 ---
-name: arlive-home-update-open-loops
+name: arlive-home-task-update-open-loops
 type: task
 description: >
   Writes all home flags (overdue maintenance, budget overruns, expiring warranties) to

@@ -1,5 +1,5 @@
 ---
-name: arlive-wealth-monthly-synthesis
+name: arlive-wealth-op-monthly-synthesis
 type: op
 cadence: monthly
 description: >

@@ -1,5 +1,5 @@
 ---
-name: arlive-home-flag-maintenance-item
+name: arlive-home-task-flag-maintenance-item
 type: task
 description: >
   Writes a maintenance flag to vault/home/open-loops.md with item description, location, urgency,

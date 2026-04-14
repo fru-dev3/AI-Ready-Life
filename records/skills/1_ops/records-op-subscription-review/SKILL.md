@@ -1,5 +1,5 @@
 ---
-name: arlive-records-subscription-review
+name: arlive-records-op-subscription-review
 type: op
 cadence: monthly
 description: >

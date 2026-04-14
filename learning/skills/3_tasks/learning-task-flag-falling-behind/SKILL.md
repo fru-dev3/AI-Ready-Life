@@ -1,5 +1,5 @@
 ---
-name: arlive-learning-flag-falling-behind
+name: arlive-learning-task-flag-falling-behind
 type: task
 description: >
   Writes a flag to vault/learning/open-loops.md when a course or book is behind pace to complete

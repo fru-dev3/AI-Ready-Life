@@ -1,5 +1,5 @@
 ---
-name: arlive-health-anomaly-watch
+name: arlive-health-op-anomaly-watch
 type: op
 cadence: weekly
 description: >

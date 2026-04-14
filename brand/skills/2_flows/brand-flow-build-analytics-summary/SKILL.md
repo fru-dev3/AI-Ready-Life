@@ -1,5 +1,5 @@
 ---
-name: arlive-brand-build-analytics-summary
+name: arlive-brand-flow-build-analytics-summary
 type: flow
 trigger: called-by-op
 description: >

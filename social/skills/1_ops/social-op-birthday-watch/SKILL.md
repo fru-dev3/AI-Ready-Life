@@ -1,5 +1,5 @@
 ---
-name: arlive-social-birthday-watch
+name: arlive-social-op-birthday-watch
 type: op
 cadence: weekly
 description: >

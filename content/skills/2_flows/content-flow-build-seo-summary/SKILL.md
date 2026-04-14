@@ -1,5 +1,5 @@
 ---
-name: arlive-content-build-seo-summary
+name: arlive-content-flow-build-seo-summary
 type: flow
 trigger: called-by-op
 description: >

@@ -1,5 +1,5 @@
 ---
-name: arlive-learning-monthly-sync
+name: arlive-learning-op-monthly-sync
 type: op
 cadence: monthly
 description: >

@@ -1,5 +1,5 @@
 ---
-name: arlive-insurance-build-coverage-summary
+name: arlive-insurance-flow-build-coverage-summary
 type: flow
 trigger: called-by-op
 description: >

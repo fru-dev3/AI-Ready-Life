@@ -1,5 +1,5 @@
 ---
-name: arlive-wealth-cash-flow-review
+name: arlive-wealth-op-cash-flow-review
 type: op
 cadence: monthly
 description: >

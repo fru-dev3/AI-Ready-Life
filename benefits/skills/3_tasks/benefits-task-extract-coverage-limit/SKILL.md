@@ -1,5 +1,5 @@
 ---
-name: arlive-benefits-extract-coverage-limit
+name: arlive-benefits-task-extract-coverage-limit
 type: task
 description: >
   Reads a specific coverage limit (deductible, OOP max, HSA limit, life insurance face value)

@@ -1,5 +1,5 @@
 ---
-name: arlive-real-estate-affordability-review
+name: arlive-real-estate-op-affordability-review
 type: op
 cadence: on-demand
 description: >

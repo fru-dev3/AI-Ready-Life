@@ -1,5 +1,5 @@
 ---
-name: arlive-learning-progress-review
+name: arlive-learning-op-progress-review
 type: op
 cadence: monthly
 description: >

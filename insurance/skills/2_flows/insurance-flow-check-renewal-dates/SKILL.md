@@ -1,5 +1,5 @@
 ---
-name: arlive-insurance-check-renewal-dates
+name: arlive-insurance-flow-check-renewal-dates
 type: flow
 trigger: called-by-op
 description: >

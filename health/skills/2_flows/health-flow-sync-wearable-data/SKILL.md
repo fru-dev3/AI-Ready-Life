@@ -1,5 +1,5 @@
 ---
-name: arlive-health-sync-wearable-data
+name: arlive-health-flow-sync-wearable-data
 type: flow
 trigger: called-by-op
 description: >

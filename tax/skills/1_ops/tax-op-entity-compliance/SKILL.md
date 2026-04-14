@@ -1,5 +1,5 @@
 ---
-name: arlive-tax-entity-compliance
+name: arlive-tax-op-entity-compliance
 type: op
 cadence: quarterly
 description: >

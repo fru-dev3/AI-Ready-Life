@@ -1,5 +1,5 @@
 ---
-name: arlive-content-log-revenue
+name: arlive-content-task-log-revenue
 type: task
 cadence: as-received
 description: >

@@ -1,5 +1,5 @@
 ---
-name: arlive-realestate-review-brief
+name: arlive-real-estate-op-review-brief
 type: op
 cadence: monthly
 description: >

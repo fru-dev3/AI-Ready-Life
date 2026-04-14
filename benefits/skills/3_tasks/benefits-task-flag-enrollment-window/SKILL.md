@@ -1,5 +1,5 @@
 ---
-name: arlive-benefits-flag-enrollment-window
+name: arlive-benefits-task-flag-enrollment-window
 type: task
 cadence: annual
 description: >

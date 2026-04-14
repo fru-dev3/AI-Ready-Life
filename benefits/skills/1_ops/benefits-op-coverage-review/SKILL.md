@@ -1,5 +1,5 @@
 ---
-name: arlive-benefits-coverage-review
+name: arlive-benefits-op-coverage-review
 type: op
 cadence: quarterly
 description: >

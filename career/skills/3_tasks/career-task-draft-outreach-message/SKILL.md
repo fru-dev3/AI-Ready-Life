@@ -1,5 +1,5 @@
 ---
-name: arlive-career-draft-outreach-message
+name: arlive-career-task-draft-outreach-message
 type: task
 cadence: called-by-op
 description: >

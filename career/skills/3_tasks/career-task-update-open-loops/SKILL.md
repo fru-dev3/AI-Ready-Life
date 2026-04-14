@@ -1,5 +1,5 @@
 ---
-name: arlive-career-update-open-loops
+name: arlive-career-task-update-open-loops
 type: task
 cadence: called-by-op
 description: >

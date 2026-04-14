@@ -1,5 +1,5 @@
 ---
-name: arlive-brand-review-brief
+name: arlive-brand-op-review-brief
 type: op
 cadence: monthly
 description: >

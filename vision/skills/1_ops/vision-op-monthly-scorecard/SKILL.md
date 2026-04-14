@@ -1,5 +1,5 @@
 ---
-name: arlive-vision-monthly-scorecard
+name: arlive-vision-op-monthly-scorecard
 type: op
 cadence: monthly
 description: >

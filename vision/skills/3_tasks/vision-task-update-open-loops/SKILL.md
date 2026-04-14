@@ -1,5 +1,5 @@
 ---
-name: arlive-vision-update-open-loops
+name: arlive-vision-task-update-open-loops
 type: task
 description: >
   Writes all vision flags (stalled goals, OKRs off-pace, domain score declines)

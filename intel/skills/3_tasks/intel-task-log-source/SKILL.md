@@ -1,5 +1,5 @@
 ---
-name: arlive-intel-log-source
+name: arlive-intel-task-log-source
 type: task
 cadence: as-added
 description: >

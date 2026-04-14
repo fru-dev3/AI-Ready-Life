@@ -1,5 +1,5 @@
 ---
-name: arlive-home-review-brief
+name: arlive-home-op-review-brief
 type: op
 cadence: weekly
 description: >

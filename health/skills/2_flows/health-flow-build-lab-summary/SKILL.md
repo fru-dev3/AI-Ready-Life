@@ -1,5 +1,5 @@
 ---
-name: arlive-health-build-lab-summary
+name: arlive-health-flow-build-lab-summary
 type: flow
 trigger: called-by-op
 description: >

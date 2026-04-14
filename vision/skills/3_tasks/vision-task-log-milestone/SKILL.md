@@ -1,5 +1,5 @@
 ---
-name: arlive-vision-log-milestone
+name: arlive-vision-task-log-milestone
 type: task
 cadence: as-achieved
 description: >

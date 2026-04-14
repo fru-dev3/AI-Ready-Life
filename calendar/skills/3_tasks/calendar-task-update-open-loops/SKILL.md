@@ -1,5 +1,5 @@
 ---
-name: arlive-calendar-update-open-loops
+name: arlive-calendar-task-update-open-loops
 type: task
 description: >
   Writes calendar flags (upcoming deadline clusters, focus time deficits, unscheduled

@@ -1,5 +1,5 @@
 ---
-name: arlive-business-log-invoice
+name: arlive-business-task-log-invoice
 type: task
 cadence: as-received
 description: >

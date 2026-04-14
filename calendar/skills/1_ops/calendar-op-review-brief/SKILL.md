@@ -1,5 +1,5 @@
 ---
-name: arlive-calendar-review-brief
+name: arlive-calendar-op-review-brief
 type: op
 cadence: weekly
 description: >

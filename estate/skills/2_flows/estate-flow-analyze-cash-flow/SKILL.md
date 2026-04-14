@@ -1,5 +1,5 @@
 ---
-name: arlive-estate-analyze-cash-flow
+name: arlive-estate-flow-analyze-cash-flow
 type: flow
 trigger: called-by-op
 description: >

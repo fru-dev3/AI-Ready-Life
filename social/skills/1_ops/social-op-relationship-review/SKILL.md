@@ -1,5 +1,5 @@
 ---
-name: arlive-social-relationship-review
+name: arlive-social-op-relationship-review
 type: op
 cadence: monthly
 description: >

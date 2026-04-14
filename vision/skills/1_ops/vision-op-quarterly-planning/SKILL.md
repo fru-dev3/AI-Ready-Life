@@ -1,5 +1,5 @@
 ---
-name: arlive-vision-quarterly-planning
+name: arlive-vision-op-quarterly-planning
 type: op
 cadence: quarterly
 description: >

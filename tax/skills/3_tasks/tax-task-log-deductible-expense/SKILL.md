@@ -1,5 +1,5 @@
 ---
-name: arlive-tax-log-deductible-expense
+name: arlive-tax-task-log-deductible-expense
 type: task
 cadence: as-received
 description: >

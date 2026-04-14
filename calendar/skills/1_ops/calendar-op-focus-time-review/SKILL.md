@@ -1,5 +1,5 @@
 ---
-name: arlive-calendar-focus-time-review
+name: arlive-calendar-op-focus-time-review
 type: op
 cadence: weekly
 description: >

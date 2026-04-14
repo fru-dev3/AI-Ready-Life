@@ -1,5 +1,5 @@
 ---
-name: arlive-intel-build-news-digest
+name: arlive-intel-flow-build-news-digest
 type: flow
 trigger: called-by-op
 description: >

@@ -1,5 +1,5 @@
 ---
-name: arlive-learning-goal-review
+name: arlive-learning-op-goal-review
 type: op
 cadence: quarterly
 description: >

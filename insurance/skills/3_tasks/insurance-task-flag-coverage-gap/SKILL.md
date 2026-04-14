@@ -1,5 +1,5 @@
 ---
-name: arlive-insurance-flag-coverage-gap
+name: arlive-insurance-task-flag-coverage-gap
 type: task
 description: >
   Writes a coverage gap flag to vault/insurance/open-loops.md with coverage type,

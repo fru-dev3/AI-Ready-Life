@@ -1,5 +1,5 @@
 ---
-name: arlive-wealth-debt-review
+name: arlive-wealth-op-debt-review
 type: op
 cadence: quarterly
 description: >

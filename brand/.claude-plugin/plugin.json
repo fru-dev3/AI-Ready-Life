@@ -1,8 +1,11 @@
 {
   "name": "brand",
-  "description": "Personal brand management — online presence, reputation, content performance",
+  "description": "Personal brand management \u2014 online presence, reputation, content performance",
   "version": "1.0.0",
-  "author": { "name": "fru.dev", "email": "hello@fru.dev" },
+  "author": {
+    "name": "AI Ready You",
+    "email": "hello@fru.dev"
+  },
   "license": "MIT",
   "homepage": "https://aireadyu.dev"
 }

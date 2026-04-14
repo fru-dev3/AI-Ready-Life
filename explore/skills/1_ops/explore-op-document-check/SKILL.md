@@ -1,5 +1,5 @@
 ---
-name: arlive-explore-document-check
+name: arlive-explore-op-document-check
 type: op
 cadence: quarterly
 description: >

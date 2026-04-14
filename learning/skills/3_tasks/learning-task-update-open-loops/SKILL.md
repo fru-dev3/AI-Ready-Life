@@ -1,5 +1,5 @@
 ---
-name: arlive-learning-update-open-loops
+name: arlive-learning-task-update-open-loops
 type: task
 description: >
   Writes all learning flags (courses falling behind, certifications expiring, goal misalignment) to

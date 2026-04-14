@@ -1,5 +1,5 @@
 ---
-name: arlive-learning-build-reading-summary
+name: arlive-learning-flow-build-reading-summary
 type: flow
 trigger: called-by-op
 description: >

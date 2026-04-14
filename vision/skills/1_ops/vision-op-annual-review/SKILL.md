@@ -1,5 +1,5 @@
 ---
-name: arlive-vision-annual-review
+name: arlive-vision-op-annual-review
 type: op
 cadence: annual
 description: >

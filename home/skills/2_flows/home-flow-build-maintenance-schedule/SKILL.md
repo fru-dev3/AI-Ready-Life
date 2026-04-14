@@ -1,5 +1,5 @@
 ---
-name: arlive-home-build-maintenance-schedule
+name: arlive-home-flow-build-maintenance-schedule
 type: flow
 trigger: called-by-op
 description: >

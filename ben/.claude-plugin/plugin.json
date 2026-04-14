@@ -1,8 +1,11 @@
 {
   "name": "ben",
-  "description": "Personal Chief of Staff — daily briefs, task orchestration, inbox management",
+  "description": "Personal Chief of Staff \u2014 daily briefs, task orchestration, inbox management",
   "version": "1.0.0",
-  "author": { "name": "fru.dev", "email": "hello@fru.dev" },
+  "author": {
+    "name": "AI Ready You",
+    "email": "hello@fru.dev"
+  },
   "license": "MIT",
   "homepage": "https://aireadyu.dev"
 }

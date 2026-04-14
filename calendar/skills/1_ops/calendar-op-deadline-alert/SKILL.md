@@ -1,5 +1,5 @@
 ---
-name: arlive-calendar-deadline-alert
+name: arlive-calendar-op-deadline-alert
 type: op
 cadence: weekly
 description: >

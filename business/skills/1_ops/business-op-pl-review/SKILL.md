@@ -1,5 +1,5 @@
 ---
-name: arlive-business-pl-review
+name: arlive-business-op-pl-review
 type: op
 cadence: monthly
 description: >

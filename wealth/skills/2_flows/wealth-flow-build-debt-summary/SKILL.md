@@ -1,5 +1,5 @@
 ---
-name: arlive-wealth-build-debt-summary
+name: arlive-wealth-flow-build-debt-summary
 type: flow
 trigger: called-by-op
 description: >

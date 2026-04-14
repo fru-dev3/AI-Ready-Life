@@ -1,5 +1,5 @@
 ---
-name: arlive-calendar-build-agenda
+name: arlive-calendar-flow-build-agenda
 type: flow
 trigger: called-by-op
 description: >

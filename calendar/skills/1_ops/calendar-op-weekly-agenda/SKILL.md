@@ -1,5 +1,5 @@
 ---
-name: arlive-calendar-weekly-agenda
+name: arlive-calendar-op-weekly-agenda
 type: op
 cadence: weekly
 description: >

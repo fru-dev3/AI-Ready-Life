@@ -1,5 +1,5 @@
 ---
-name: arlive-insurance-analyze-coverage-gaps
+name: arlive-insurance-flow-analyze-coverage-gaps
 type: flow
 trigger: called-by-op
 description: >

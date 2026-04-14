@@ -1,5 +1,5 @@
 ---
-name: arlive-social-review-brief
+name: arlive-social-op-review-brief
 type: op
 cadence: weekly
 description: >

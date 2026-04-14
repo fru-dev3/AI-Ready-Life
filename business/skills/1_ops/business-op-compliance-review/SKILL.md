@@ -1,5 +1,5 @@
 ---
-name: arlive-business-compliance-review
+name: arlive-business-op-compliance-review
 type: op
 cadence: quarterly
 description: >

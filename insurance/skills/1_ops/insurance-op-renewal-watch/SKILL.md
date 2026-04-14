@@ -1,5 +1,5 @@
 ---
-name: arlive-insurance-renewal-watch
+name: arlive-insurance-op-renewal-watch
 type: op
 cadence: monthly
 description: >

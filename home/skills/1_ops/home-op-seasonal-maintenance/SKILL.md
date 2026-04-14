@@ -1,5 +1,5 @@
 ---
-name: arlive-home-seasonal-maintenance
+name: arlive-home-op-seasonal-maintenance
 type: op
 cadence: quarterly
 description: >

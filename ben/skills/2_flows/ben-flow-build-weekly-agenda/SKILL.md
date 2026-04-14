@@ -1,5 +1,5 @@
 ---
-name: arlive-ben-build-weekly-agenda
+name: arlive-ben-flow-build-weekly-agenda
 type: flow
 trigger: called-by-op
 description: >

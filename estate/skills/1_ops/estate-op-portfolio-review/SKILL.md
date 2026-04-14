@@ -1,5 +1,5 @@
 ---
-name: arlive-estate-portfolio-review
+name: arlive-estate-op-portfolio-review
 type: op
 cadence: quarterly
 description: >

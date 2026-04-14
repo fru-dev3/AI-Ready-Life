@@ -1,5 +1,5 @@
 ---
-name: arlive-brand-monthly-synthesis
+name: arlive-brand-op-monthly-synthesis
 type: op
 cadence: monthly
 description: >

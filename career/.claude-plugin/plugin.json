@@ -1,8 +1,11 @@
 {
   "name": "career",
-  "description": "Career management — compensation benchmarks, job search, market scanning, skills gaps",
+  "description": "Career management \u2014 compensation benchmarks, job search, market scanning, skills gaps",
   "version": "1.0.0",
-  "author": { "name": "fru.dev", "email": "hello@fru.dev" },
+  "author": {
+    "name": "AI Ready You",
+    "email": "hello@fru.dev"
+  },
   "license": "MIT",
   "homepage": "https://aireadyu.dev"
 }

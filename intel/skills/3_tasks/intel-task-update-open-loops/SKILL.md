@@ -1,5 +1,5 @@
 ---
-name: arlive-intel-update-open-loops
+name: arlive-intel-task-update-open-loops
 type: task
 description: >
   Writes all intel flags (breaking priority stories, source gaps, follow-up items) to

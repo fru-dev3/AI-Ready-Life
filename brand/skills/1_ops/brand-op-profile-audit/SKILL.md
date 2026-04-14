@@ -1,5 +1,5 @@
 ---
-name: arlive-brand-profile-audit
+name: arlive-brand-op-profile-audit
 type: op
 cadence: quarterly
 description: >

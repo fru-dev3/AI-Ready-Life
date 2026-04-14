@@ -1,5 +1,5 @@
 ---
-name: arlive-intel-build-topic-summary
+name: arlive-intel-flow-build-topic-summary
 type: flow
 trigger: called-by-op
 description: >

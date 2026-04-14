@@ -1,5 +1,5 @@
 ---
-name: arlive-learning-review-brief
+name: arlive-learning-op-review-brief
 type: op
 cadence: weekly
 description: >

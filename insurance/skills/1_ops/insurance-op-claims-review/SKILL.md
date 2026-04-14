@@ -1,5 +1,5 @@
 ---
-name: arlive-insurance-claims-review
+name: arlive-insurance-op-claims-review
 type: op
 cadence: on-demand
 description: >

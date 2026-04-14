@@ -1,5 +1,5 @@
 ---
-name: arlive-intel-source-scan
+name: arlive-intel-op-source-scan
 type: op
 cadence: weekly
 description: >
