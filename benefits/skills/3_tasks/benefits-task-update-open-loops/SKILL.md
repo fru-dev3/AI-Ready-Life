@@ -1,12 +1,12 @@
 ---
-name: arlive-benefits-task-update-open-loops
+name: aireadylife-benefits-task-update-open-loops
 type: task
 description: >
   Writes all benefits flags (enrollment deadlines, coverage gaps, HSA action items, 401k
   contribution alerts) to vault/benefits/open-loops.md and resolves completed items.
 ---
 
-# arlive-benefits-update-open-loops
+# aireadylife-benefits-update-open-loops
 
 **Trigger:** Called at the end of every benefits op
 **Produces:** Updated vault/benefits/open-loops.md with current flags and resolved items cleared

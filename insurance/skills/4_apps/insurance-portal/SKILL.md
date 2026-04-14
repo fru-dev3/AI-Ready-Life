@@ -43,8 +43,8 @@ insurance_carriers:
 
 ## Used By
 
-- `arlive-insurance-renewal-watch` — check upcoming renewal dates and flag premium changes
-- `arlive-insurance-coverage-audit` — download and compare coverage limits across all policies
+- `aireadylife-insurance-renewal-watch` — check upcoming renewal dates and flag premium changes
+- `aireadylife-insurance-coverage-audit` — download and compare coverage limits across all policies
 
 ## Vault Output
 

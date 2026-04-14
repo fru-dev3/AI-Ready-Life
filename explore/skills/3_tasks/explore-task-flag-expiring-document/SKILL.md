@@ -1,12 +1,12 @@
 ---
-name: arlive-explore-task-flag-expiring-document
+name: aireadylife-explore-task-flag-expiring-document
 type: task
 description: >
   Writes a document expiration flag to vault/explore/open-loops.md with document type, person,
   expiration date, renewal timeline, and action needed.
 ---
 
-# arlive-explore-flag-expiring-document
+# aireadylife-explore-flag-expiring-document
 
 **Trigger:** Called by explore document flows
 **Produces:** Expiration flag entry in `vault/explore/open-loops.md`

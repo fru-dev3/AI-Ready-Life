@@ -1,5 +1,5 @@
 ---
-name: arlive-wealth-flow-analyze-investment-performance
+name: aireadylife-wealth-flow-analyze-investment-performance
 type: flow
 trigger: called-by-op
 description: >
@@ -7,9 +7,9 @@ description: >
   checks allocation vs. target, and flags any drift greater than 5%.
 ---
 
-# arlive-wealth-analyze-investment-performance
+# aireadylife-wealth-analyze-investment-performance
 
-**Trigger:** Called by `arlive-wealth-investment-review`
+**Trigger:** Called by `aireadylife-wealth-investment-review`
 **Produces:** Investment performance summary in vault/wealth/01_investments/ with return figures and rebalancing recommendations
 
 ## What it does

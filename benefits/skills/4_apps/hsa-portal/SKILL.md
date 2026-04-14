@@ -41,8 +41,8 @@ hsa_chrome_profile: /Users/YOU/Library/Application Support/Google/Chrome/Default
 
 ## Used By
 
-- `arlive-benefits-hsa-review` — check balance, contributions, and investment allocation
-- `arlive-benefits-enrollment-review` — confirm HSA election is active and funded
+- `aireadylife-benefits-hsa-review` — check balance, contributions, and investment allocation
+- `aireadylife-benefits-enrollment-review` — confirm HSA election is active and funded
 
 ## Vault Output
 

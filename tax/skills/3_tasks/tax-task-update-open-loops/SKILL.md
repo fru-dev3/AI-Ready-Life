@@ -1,5 +1,5 @@
 ---
-name: arlive-tax-task-update-open-loops
+name: aireadylife-tax-task-update-open-loops
 type: task
 cadence: called-by-op
 description: >
@@ -7,7 +7,7 @@ description: >
   completed items. Called at the end of every tax op.
 ---
 
-# arlive-tax-update-open-loops
+# aireadylife-tax-update-open-loops
 
 **Cadence:** Called at the end of every tax op
 **Produces:** Updated vault/tax/open-loops.md with new flags appended and resolved items closed

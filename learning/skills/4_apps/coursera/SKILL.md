@@ -39,8 +39,8 @@ coursera_chrome_profile: /Users/YOU/Library/Application Support/Google/Chrome/De
 
 ## Used By
 
-- `arlive-learning-progress-review` — check completion % and upcoming deadlines for active courses
-- `arlive-learning-build-progress-summary` — generate formatted learning progress report
+- `aireadylife-learning-progress-review` — check completion % and upcoming deadlines for active courses
+- `aireadylife-learning-build-progress-summary` — generate formatted learning progress report
 
 ## Vault Output
 

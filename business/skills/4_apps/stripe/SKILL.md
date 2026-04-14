@@ -42,8 +42,8 @@ Authorization: Bearer $STRIPE_API_KEY
 
 ## Used By
 
-- `arlive-business-pl-review` — pull gross and net revenue for P&L input
-- `arlive-business-revenue-review` — summarize revenue by product and period
+- `aireadylife-business-pl-review` — pull gross and net revenue for P&L input
+- `aireadylife-business-revenue-review` — summarize revenue by product and period
 
 ## Vault Output
 

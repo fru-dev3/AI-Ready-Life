@@ -40,7 +40,7 @@ explore_max_nightly_price: 250
 
 ## Used By
 
-- `arlive-explore-trip-planning-review` — find and compare accommodations for planned trips
+- `aireadylife-explore-trip-planning-review` — find and compare accommodations for planned trips
 
 ## Vault Output
 

@@ -1,12 +1,12 @@
 ---
-name: arlive-intel-task-flag-priority-story
+name: aireadylife-intel-task-flag-priority-story
 type: task
 description: >
   Writes a flag to vault/intel/open-loops.md when a story on a configured priority topic appears
   from a high-credibility source, with headline, source, summary, why it matters, and action needed.
 ---
 
-# arlive-intel-flag-priority-story
+# aireadylife-intel-flag-priority-story
 
 **Trigger:** Called by intel digest and briefing flows
 **Produces:** Priority story flag in `vault/intel/open-loops.md`

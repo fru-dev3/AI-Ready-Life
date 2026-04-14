@@ -1,5 +1,5 @@
 ---
-name: arlive-career-op-monthly-sync
+name: aireadylife-career-op-monthly-sync
 type: op
 cadence: monthly
 description: >
@@ -7,7 +7,7 @@ description: >
   LinkedIn activity, and career documents. Triggers: "career monthly sync", "sync career data".
 ---
 
-# arlive-career-monthly-sync
+# aireadylife-career-monthly-sync
 
 **Cadence:** Monthly (1st of month)
 **Produces:** Career vault refreshed with comp, LinkedIn activity, and organized documents
@@ -18,8 +18,8 @@ Full career data sync: pulls compensation data from ADP/Workday/payroll portal, 
 
 ## Calls
 
-- **Flows:** `arlive-career-sync-comp-data`, `arlive-career-sync-linkedin`, `arlive-career-organize-docs`
-- **Then triggers:** `arlive-career-review-brief`
+- **Flows:** `aireadylife-career-sync-comp-data`, `aireadylife-career-sync-linkedin`, `aireadylife-career-organize-docs`
+- **Then triggers:** `aireadylife-career-review-brief`
 
 ## Apps
 

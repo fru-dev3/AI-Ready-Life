@@ -1,5 +1,5 @@
 ---
-name: arlive-wealth-op-investment-review
+name: aireadylife-wealth-op-investment-review
 type: op
 cadence: monthly
 description: >
@@ -8,19 +8,19 @@ description: >
   review", "check my portfolio", "am I due for rebalancing".
 ---
 
-# arlive-wealth-investment-review
+# aireadylife-wealth-investment-review
 
 **Cadence:** Monthly (1st of month)
 **Produces:** Investment performance summary in vault/wealth/01_investments/, rebalancing flags in vault/wealth/open-loops.md
 
 ## What it does
 
-Pulls investment account data from vault/wealth/01_investments/ and runs `arlive-wealth-analyze-investment-performance` to calculate 30-day and year-to-date returns for each account. The op checks actual asset allocation (stocks/bonds/cash/international split) against the configured target allocation and flags any asset class that has drifted more than 5 percentage points from target. Rebalancing opportunities are surfaced as actionable flags: which funds to trim, which to add to, and the approximate dollar amounts involved. The review also checks that 401k contributions are on track to hit the annual maximum and flags if the contribution rate needs adjustment.
+Pulls investment account data from vault/wealth/01_investments/ and runs `aireadylife-wealth-analyze-investment-performance` to calculate 30-day and year-to-date returns for each account. The op checks actual asset allocation (stocks/bonds/cash/international split) against the configured target allocation and flags any asset class that has drifted more than 5 percentage points from target. Rebalancing opportunities are surfaced as actionable flags: which funds to trim, which to add to, and the approximate dollar amounts involved. The review also checks that 401k contributions are on track to hit the annual maximum and flags if the contribution rate needs adjustment.
 
 ## Calls
 
-- **Flows:** `arlive-wealth-analyze-investment-performance`
-- **Tasks:** `arlive-wealth-update-open-loops`
+- **Flows:** `aireadylife-wealth-analyze-investment-performance`
+- **Tasks:** `aireadylife-wealth-update-open-loops`
 
 ## Apps
 

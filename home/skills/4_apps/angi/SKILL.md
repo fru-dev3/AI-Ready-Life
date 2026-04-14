@@ -39,8 +39,8 @@ angi_email: YOUR_ANGI_EMAIL
 
 ## Used By
 
-- `arlive-home-seasonal-maintenance` — find top-rated pros for scheduled seasonal tasks
-- `arlive-home-flag-maintenance-item` — search for qualified contractor for flagged repair
+- `aireadylife-home-seasonal-maintenance` — find top-rated pros for scheduled seasonal tasks
+- `aireadylife-home-flag-maintenance-item` — search for qualified contractor for flagged repair
 
 ## Vault Output
 

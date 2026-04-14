@@ -1,5 +1,5 @@
 ---
-name: arlive-home-op-expense-review
+name: aireadylife-home-op-expense-review
 type: op
 cadence: monthly
 description: >
@@ -7,7 +7,7 @@ description: >
   unusual spend. Triggers: "home expenses", "utility review", "repair costs", "home budget".
 ---
 
-# arlive-home-expense-review
+# aireadylife-home-expense-review
 
 **Cadence:** Monthly (1st of month)
 **Produces:** Home expense summary with category totals, budget variance, and flagged overruns
@@ -23,8 +23,8 @@ specific system (HVAC, plumbing, appliances) are approaching replacement thresho
 
 ## Calls
 
-- **Flows:** `arlive-home-build-expense-summary`
-- **Tasks:** `arlive-home-log-expense`, `arlive-home-update-open-loops`
+- **Flows:** `aireadylife-home-build-expense-summary`
+- **Tasks:** `aireadylife-home-log-expense`, `aireadylife-home-update-open-loops`
 
 ## Apps
 

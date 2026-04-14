@@ -36,8 +36,8 @@ Settings → Export → Transactions CSV → save to `vault/wealth/cash-flow/`
 
 ## Used By
 
-- `arlive-wealth-cash-flow-review` — analyze monthly spending vs budget
-- `arlive-wealth-build-cash-flow-summary` — generate formatted cash flow report
+- `aireadylife-wealth-cash-flow-review` — analyze monthly spending vs budget
+- `aireadylife-wealth-build-cash-flow-summary` — generate formatted cash flow report
 
 ## Vault Output
 

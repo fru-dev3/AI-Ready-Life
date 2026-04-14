@@ -1,5 +1,5 @@
 ---
-name: arlive-explore-flow-build-trip-summary
+name: aireadylife-explore-flow-build-trip-summary
 type: flow
 trigger: called-by-op
 description: >
@@ -7,9 +7,9 @@ description: >
   total budget, and open booking items.
 ---
 
-# arlive-explore-build-trip-summary
+# aireadylife-explore-build-trip-summary
 
-**Trigger:** Called by `arlive-explore-monthly-sync`
+**Trigger:** Called by `aireadylife-explore-monthly-sync`
 **Produces:** Structured trip brief with booking status table and budget summary
 
 ## What it does

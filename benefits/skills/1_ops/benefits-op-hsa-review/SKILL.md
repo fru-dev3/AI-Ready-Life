@@ -1,5 +1,5 @@
 ---
-name: arlive-benefits-op-hsa-review
+name: aireadylife-benefits-op-hsa-review
 type: op
 cadence: monthly
 description: >
@@ -8,7 +8,7 @@ description: >
   "HSA balance", "HSA contributions".
 ---
 
-# arlive-benefits-hsa-review
+# aireadylife-benefits-hsa-review
 
 **Cadence:** Monthly (1st of month)
 **Produces:** HSA status summary, reimbursement action list, updated open-loops entries
@@ -31,8 +31,8 @@ threshold dollar amount in vault/benefits/02_hsa/config.md for the investment-th
 
 ## Calls
 
-- **Flows:** `arlive-benefits-check-hsa-balance`
-- **Tasks:** `arlive-benefits-update-open-loops`
+- **Flows:** `aireadylife-benefits-check-hsa-balance`
+- **Tasks:** `aireadylife-benefits-update-open-loops`
 
 ## Apps
 

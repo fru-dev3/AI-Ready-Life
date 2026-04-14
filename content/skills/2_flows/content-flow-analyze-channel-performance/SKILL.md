@@ -1,5 +1,5 @@
 ---
-name: arlive-content-flow-analyze-channel-performance
+name: aireadylife-content-flow-analyze-channel-performance
 type: flow
 trigger: called-by-op
 description: >
@@ -7,9 +7,9 @@ description: >
   MoM comparisons, and flags for channels underperforming vs. their 90-day average.
 ---
 
-# arlive-content-analyze-channel-performance
+# aireadylife-content-analyze-channel-performance
 
-**Trigger:** Called by `arlive-content-channel-review`
+**Trigger:** Called by `aireadylife-content-channel-review`
 **Produces:** A cross-channel performance analysis with per-platform metrics, trend indicators, and underperformance flags returned to the calling op.
 
 ## What it does

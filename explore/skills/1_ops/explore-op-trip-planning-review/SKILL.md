@@ -1,5 +1,5 @@
 ---
-name: arlive-explore-op-trip-planning-review
+name: aireadylife-explore-op-trip-planning-review
 type: op
 cadence: on-demand
 description: >
@@ -8,7 +8,7 @@ description: >
   "travel prep", "plan my trip", "travel checklist".
 ---
 
-# arlive-explore-trip-planning-review
+# aireadylife-explore-trip-planning-review
 
 **Cadence:** On-demand (before each upcoming trip)
 **Produces:** Trip readiness report with document status, booking checklist, and open action items
@@ -23,8 +23,8 @@ trip-readiness report with a clear list of actions sorted by urgency.
 
 ## Calls
 
-- **Flows:** `arlive-explore-build-trip-summary`, `arlive-explore-check-travel-docs`
-- **Tasks:** `arlive-explore-flag-expiring-document`, `arlive-explore-update-open-loops`
+- **Flows:** `aireadylife-explore-build-trip-summary`, `aireadylife-explore-check-travel-docs`
+- **Tasks:** `aireadylife-explore-flag-expiring-document`, `aireadylife-explore-update-open-loops`
 
 ## Apps
 

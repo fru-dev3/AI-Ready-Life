@@ -1,5 +1,5 @@
 ---
-name: arlive-insurance-flow-analyze-coverage-gaps
+name: aireadylife-insurance-flow-analyze-coverage-gaps
 type: flow
 trigger: called-by-op
 description: >
@@ -8,9 +8,9 @@ description: >
   limits vs. net worth, umbrella coverage adequacy.
 ---
 
-# arlive-insurance-analyze-coverage-gaps
+# aireadylife-insurance-analyze-coverage-gaps
 
-**Trigger:** Called by `arlive-insurance-coverage-audit`
+**Trigger:** Called by `aireadylife-insurance-coverage-audit`
 **Produces:** A coverage gap analysis with per-policy gap findings, gap severity ratings, and recommended coverage adjustments returned to the calling op.
 
 ## What it does

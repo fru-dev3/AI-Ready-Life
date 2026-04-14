@@ -1,5 +1,5 @@
 ---
-name: arlive-learning-flow-build-reading-summary
+name: aireadylife-learning-flow-build-reading-summary
 type: flow
 trigger: called-by-op
 description: >
@@ -7,9 +7,9 @@ description: >
   next up, and annual goal pace.
 ---
 
-# arlive-learning-build-reading-summary
+# aireadylife-learning-build-reading-summary
 
-**Trigger:** Called by `arlive-learning-progress-review`
+**Trigger:** Called by `aireadylife-learning-progress-review`
 **Produces:** Reading summary with YTD count, current pace, and projected year-end total
 
 ## What it does

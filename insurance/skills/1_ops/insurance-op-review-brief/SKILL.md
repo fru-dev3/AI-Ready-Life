@@ -1,5 +1,5 @@
 ---
-name: arlive-insurance-op-review-brief
+name: aireadylife-insurance-op-review-brief
 type: op
 cadence: monthly
 description: >
@@ -8,7 +8,7 @@ description: >
   Triggers: "insurance brief", "insurance review", "policy review", "coverage check".
 ---
 
-# arlive-insurance-review-brief
+# aireadylife-insurance-review-brief
 
 **Cadence:** Monthly (1st of month)
 **Produces:** Insurance brief — all policy premiums, renewal alerts, active claims, gap analysis
@@ -23,8 +23,8 @@ Configure your vault at `vault/insurance/config.md` with all your policies. In d
 
 ## Calls
 
-- **Flows:** `arlive-insurance-build-review-brief`
-- **Tasks:** `arlive-insurance-update-open-loops`
+- **Flows:** `aireadylife-insurance-build-review-brief`
+- **Tasks:** `aireadylife-insurance-update-open-loops`
 
 ## Apps
 

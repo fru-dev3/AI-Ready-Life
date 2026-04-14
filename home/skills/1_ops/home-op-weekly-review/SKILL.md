@@ -1,5 +1,5 @@
 ---
-name: arlive-home-op-weekly-review
+name: aireadylife-home-op-weekly-review
 type: op
 cadence: weekly
 description: >
@@ -8,7 +8,7 @@ description: >
   Triggers: "weekly home review", "home this week", "maintenance this week".
 ---
 
-# arlive-home-weekly-review
+# aireadylife-home-weekly-review
 
 **Cadence:** Weekly (Monday)
 **Produces:** Weekly home snapshot — open items, this week's seasonal tasks, any urgent flags
@@ -23,7 +23,7 @@ Uses maintenance and seasonal data from `vault/home/`. In demo mode, reads from 
 
 ## Calls
 
-- **Flows:** `arlive-home-check-urgent-maintenance`, `arlive-home-surface-seasonal-tasks`
+- **Flows:** `aireadylife-home-check-urgent-maintenance`, `aireadylife-home-surface-seasonal-tasks`
 
 ## Vault Output
 

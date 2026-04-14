@@ -1,5 +1,5 @@
 ---
-name: arlive-calendar-flow-collect-deadlines
+name: aireadylife-calendar-flow-collect-deadlines
 type: flow
 trigger: called-by-op
 description: >
@@ -8,9 +8,9 @@ description: >
   (due within 7 days) flagged separately.
 ---
 
-# arlive-calendar-collect-deadlines
+# aireadylife-calendar-collect-deadlines
 
-**Trigger:** Called by `arlive-calendar-deadline-alert`, `arlive-calendar-weekly-agenda`, `arlive-calendar-deadline-planning`
+**Trigger:** Called by `aireadylife-calendar-deadline-alert`, `aireadylife-calendar-weekly-agenda`, `aireadylife-calendar-deadline-planning`
 **Produces:** A sorted list of cross-domain deadline items with urgency flags, passed to the calling op for agenda building or deadline planning.
 
 ## What it does

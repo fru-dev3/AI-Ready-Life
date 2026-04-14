@@ -1,5 +1,5 @@
 ---
-name: arlive-brand-op-content-review
+name: aireadylife-brand-op-content-review
 type: op
 cadence: monthly
 description: >
@@ -7,7 +7,7 @@ description: >
   and top-performing content. Triggers: "content review", "brand performance", "how is my content doing".
 ---
 
-# arlive-brand-content-review
+# aireadylife-brand-content-review
 
 **Cadence:** Monthly (1st of month)
 **Produces:** Content performance brief, cadence scorecard, updated open-loops entries
@@ -32,8 +32,8 @@ vault/brand/03_content/cadence-targets.md.
 
 ## Calls
 
-- **Flows:** `arlive-brand-build-analytics-summary`
-- **Tasks:** `arlive-brand-update-open-loops`
+- **Flows:** `aireadylife-brand-build-analytics-summary`
+- **Tasks:** `aireadylife-brand-update-open-loops`
 
 ## Apps
 

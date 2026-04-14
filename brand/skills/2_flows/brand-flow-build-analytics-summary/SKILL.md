@@ -1,5 +1,5 @@
 ---
-name: arlive-brand-flow-build-analytics-summary
+name: aireadylife-brand-flow-build-analytics-summary
 type: flow
 trigger: called-by-op
 description: >
@@ -7,9 +7,9 @@ description: >
   platform with month-over-month deltas and top-performing content identified.
 ---
 
-# arlive-brand-build-analytics-summary
+# aireadylife-brand-build-analytics-summary
 
-**Trigger:** Called by `arlive-brand-monthly-synthesis`, `arlive-brand-content-review`
+**Trigger:** Called by `aireadylife-brand-monthly-synthesis`, `aireadylife-brand-content-review`
 **Produces:** Analytics summary table with MoM growth, engagement rates, and top content callouts per platform
 
 ## What it does

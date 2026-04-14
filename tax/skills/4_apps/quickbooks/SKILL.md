@@ -39,8 +39,8 @@ quickbooks_chrome_profile: /Users/YOU/Library/Application Support/Google/Chrome/
 
 ## Used By
 
-- `arlive-tax-deduction-review` — identify deductible business expenses by category
-- `arlive-business-pl-review` — pull P&L for business performance tracking
+- `aireadylife-tax-deduction-review` — identify deductible business expenses by category
+- `aireadylife-business-pl-review` — pull P&L for business performance tracking
 
 ## Vault Output
 

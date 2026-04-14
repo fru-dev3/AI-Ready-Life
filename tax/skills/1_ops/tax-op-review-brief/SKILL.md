@@ -1,5 +1,5 @@
 ---
-name: arlive-tax-op-review-brief
+name: aireadylife-tax-op-review-brief
 type: op
 cadence: monthly
 description: >
@@ -7,7 +7,7 @@ description: >
   and compliance status. Triggers: "tax brief", "tax status", "monthly tax review", "am I behind on taxes".
 ---
 
-# arlive-tax-review-brief
+# aireadylife-tax-review-brief
 
 **Cadence:** Monthly (1st of month)
 **Produces:** Tax review brief — YTD liability, payments, deadlines, flags
@@ -18,8 +18,8 @@ Generates monthly tax review brief: YTD liability estimate, all payments made YT
 
 ## Calls
 
-- **Flows:** `arlive-tax-build-brief`
-- **Tasks:** `arlive-tax-update-open-loops`
+- **Flows:** `aireadylife-tax-build-brief`
+- **Tasks:** `aireadylife-tax-update-open-loops`
 
 ## Vault Output
 

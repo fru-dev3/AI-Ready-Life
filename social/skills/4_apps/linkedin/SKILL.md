@@ -38,8 +38,8 @@ linkedin_chrome_profile: /Users/YOU/Library/Application Support/Google/Chrome/De
 
 ## Used By
 
-- `arlive-social-relationship-review` — audit dormant connections and flag relationships to re-engage
-- `arlive-social-build-outreach-queue` — compile list of priority contacts for reconnection
+- `aireadylife-social-relationship-review` — audit dormant connections and flag relationships to re-engage
+- `aireadylife-social-build-outreach-queue` — compile list of priority contacts for reconnection
 
 ## Vault Output
 

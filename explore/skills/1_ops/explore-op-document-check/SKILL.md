@@ -1,5 +1,5 @@
 ---
-name: arlive-explore-op-document-check
+name: aireadylife-explore-op-document-check
 type: op
 cadence: quarterly
 description: >
@@ -8,7 +8,7 @@ description: >
   "travel documents", "Global Entry renewal".
 ---
 
-# arlive-explore-document-check
+# aireadylife-explore-document-check
 
 **Cadence:** Quarterly (1st of Jan, Apr, Jul, Oct)
 **Produces:** Travel document status report with expiration flags and renewal action items
@@ -24,8 +24,8 @@ so renewal actions stay visible until resolved.
 
 ## Calls
 
-- **Flows:** `arlive-explore-check-travel-docs`
-- **Tasks:** `arlive-explore-flag-expiring-document`, `arlive-explore-update-open-loops`
+- **Flows:** `aireadylife-explore-check-travel-docs`
+- **Tasks:** `aireadylife-explore-flag-expiring-document`, `aireadylife-explore-update-open-loops`
 
 ## Apps
 

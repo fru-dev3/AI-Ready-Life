@@ -40,8 +40,8 @@ Authorization: Bearer $FEEDLY_API_KEY
 
 ## Used By
 
-- `arlive-intel-daily-briefing` — pull top unread articles from priority feeds
-- `arlive-intel-build-news-digest` — compile topic-filtered article digest
+- `aireadylife-intel-daily-briefing` — pull top unread articles from priority feeds
+- `aireadylife-intel-build-news-digest` — compile topic-filtered article digest
 
 ## Vault Output
 

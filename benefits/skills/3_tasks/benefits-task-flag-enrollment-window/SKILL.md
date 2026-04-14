@@ -1,5 +1,5 @@
 ---
-name: arlive-benefits-task-flag-enrollment-window
+name: aireadylife-benefits-task-flag-enrollment-window
 type: task
 cadence: annual
 description: >
@@ -7,9 +7,9 @@ description: >
   window opens. Includes enrollment period dates, decisions needed, and plan comparison link.
 ---
 
-# arlive-benefits-flag-enrollment-window
+# aireadylife-benefits-flag-enrollment-window
 
-**Trigger:** Called by `arlive-benefits-enrollment-review` when enrollment window is detected
+**Trigger:** Called by `aireadylife-benefits-enrollment-review` when enrollment window is detected
 **Produces:** Enrollment deadline flag in vault/benefits/open-loops.md
 
 ## What it does

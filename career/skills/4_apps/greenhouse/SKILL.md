@@ -38,8 +38,8 @@ greenhouse_chrome_profile: /Users/YOU/Library/Application Support/Google/Chrome/
 
 ## Used By
 
-- `arlive-career-log-application` — record new application and initial stage
-- `arlive-career-review-pipeline` — check status updates across active applications
+- `aireadylife-career-log-application` — record new application and initial stage
+- `aireadylife-career-review-pipeline` — check status updates across active applications
 
 ## Vault Output
 

@@ -1,5 +1,5 @@
 ---
-name: arlive-benefits-flow-analyze-401k-allocation
+name: aireadylife-benefits-flow-analyze-401k-allocation
 type: flow
 trigger: called-by-op
 description: >
@@ -7,9 +7,9 @@ description: >
   projection at current pace.
 ---
 
-# arlive-benefits-analyze-401k-allocation
+# aireadylife-benefits-analyze-401k-allocation
 
-**Trigger:** Called by `arlive-benefits-401k-review`
+**Trigger:** Called by `aireadylife-benefits-401k-review`
 **Produces:** 401k allocation review with match capture status, fund drift analysis, and retirement projection
 
 ## What it does

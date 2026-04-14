@@ -1,5 +1,5 @@
 ---
-name: arlive-brand-flow-analyze-mentions
+name: aireadylife-brand-flow-analyze-mentions
 type: flow
 trigger: called-by-op
 description: >
@@ -7,9 +7,9 @@ description: >
   response and surfaces notable sources.
 ---
 
-# arlive-brand-analyze-mentions
+# aireadylife-brand-analyze-mentions
 
-**Trigger:** Called by `arlive-brand-monthly-synthesis`
+**Trigger:** Called by `aireadylife-brand-monthly-synthesis`
 **Produces:** Mention analysis report with sentiment breakdown, notable source callouts, and response-needed flags
 
 ## What it does

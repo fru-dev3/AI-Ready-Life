@@ -46,8 +46,8 @@ op document list --vault "Personal"
 
 ## Used By
 
-- `arlive-records-document-audit` — list all document items and flag those nearing expiry
-- `arlive-records-log-document` — create or update secure note with new document metadata
+- `aireadylife-records-document-audit` — list all document items and flag those nearing expiry
+- `aireadylife-records-log-document` — create or update secure note with new document metadata
 
 ## Vault Output
 

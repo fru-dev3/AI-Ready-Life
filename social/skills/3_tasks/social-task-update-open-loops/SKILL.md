@@ -1,12 +1,12 @@
 ---
-name: arlive-social-task-update-open-loops
+name: aireadylife-social-task-update-open-loops
 type: task
 description: >
   Writes all social flags (overdue relationships, upcoming birthdays, promised follow-ups) to
   vault/social/open-loops.md and resolves completed items.
 ---
 
-# arlive-social-update-open-loops
+# aireadylife-social-update-open-loops
 
 **Trigger:** Called by social ops and flows
 **Produces:** Updated `vault/social/open-loops.md` with current relationship action items

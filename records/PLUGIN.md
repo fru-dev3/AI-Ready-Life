@@ -56,8 +56,8 @@ npx companies.sh add fru-dev3/aireadyu-life/records --include plugin,agents,skil
 
 | Skill | Cadence | Produces |
 |-------|---------|---------|
-| `arlive-records-review-brief` | Monthly | Records brief — expiring documents, subscription cost review, document gaps |
-| `arlive-records-monthly-sync` | Monthly | Checks expiration dates and reviews subscription costs |
+| `aireadylife-records-review-brief` | Monthly | Records brief — expiring documents, subscription cost review, document gaps |
+| `aireadylife-records-monthly-sync` | Monthly | Checks expiration dates and reviews subscription costs |
 
 ## MCP Integration (Claude.ai)
 

@@ -1,5 +1,5 @@
 ---
-name: arlive-home-task-log-expense
+name: aireadylife-home-task-log-expense
 type: task
 cadence: as-received
 description: >
@@ -7,7 +7,7 @@ description: >
   and receipt reference.
 ---
 
-# arlive-home-log-expense
+# aireadylife-home-log-expense
 
 **Cadence:** As-received (when a bill is paid or repair is completed)
 **Produces:** New expense record in `vault/home/01_expenses/`
@@ -19,7 +19,7 @@ arrives. It captures the date, expense category (utility, repair, supplies, serv
 amount paid, any relevant notes (e.g., "replaced garbage disposal motor"), and a reference to the
 receipt or invoice. Keeping expenses logged as they happen ensures the monthly expense review has
 complete data and prevents end-of-month scrambling to reconstruct what was spent. The category
-tagging feeds directly into the budget variance calculations run by `arlive-home-build-expense-summary`.
+tagging feeds directly into the budget variance calculations run by `aireadylife-home-build-expense-summary`.
 
 ## Apps
 

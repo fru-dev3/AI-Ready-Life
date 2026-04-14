@@ -55,16 +55,16 @@ npx companies.sh add fru-dev3/aireadyu-life/content --include plugin,agents,skil
 
 | Skill | Cadence | Produces |
 |-------|---------|---------|
-| `arlive-content-review-brief` | Monthly | Content review brief |
-| `arlive-content-monthly-synthesis` | Monthly | Revenue + growth synthesis |
-| `arlive-content-audience-review` | Monthly | Audience growth analysis |
-| `arlive-content-revenue-review` | Monthly | Revenue breakdown |
-| `arlive-content-seo-review` | Monthly | SEO + title opportunities |
-| `arlive-content-schedule-review` | Weekly | Publishing schedule health |
-| `arlive-content-thumbnail-review` | On-demand | Thumbnail CTR audit |
-| `arlive-content-newsletter-review` | Monthly | Newsletter metrics |
-| `arlive-content-linkedin-review` | Monthly | LinkedIn growth review |
-| `arlive-content-weekly-review` | Weekly | 7-day performance + gaps |
+| `aireadylife-content-review-brief` | Monthly | Content review brief |
+| `aireadylife-content-monthly-synthesis` | Monthly | Revenue + growth synthesis |
+| `aireadylife-content-audience-review` | Monthly | Audience growth analysis |
+| `aireadylife-content-revenue-review` | Monthly | Revenue breakdown |
+| `aireadylife-content-seo-review` | Monthly | SEO + title opportunities |
+| `aireadylife-content-schedule-review` | Weekly | Publishing schedule health |
+| `aireadylife-content-thumbnail-review` | On-demand | Thumbnail CTR audit |
+| `aireadylife-content-newsletter-review` | Monthly | Newsletter metrics |
+| `aireadylife-content-linkedin-review` | Monthly | LinkedIn growth review |
+| `aireadylife-content-weekly-review` | Weekly | 7-day performance + gaps |
 
 ## MCP Integration (Claude.ai)
 

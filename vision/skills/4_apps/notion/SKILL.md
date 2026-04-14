@@ -42,8 +42,8 @@ Notion-Version: 2022-06-28
 
 ## Used By
 
-- `arlive-vision-quarterly-planning` — read current goals and write updated quarterly plan
-- `arlive-vision-draft-quarterly-plan` — create new quarterly plan page from template
+- `aireadylife-vision-quarterly-planning` — read current goals and write updated quarterly plan
+- `aireadylife-vision-draft-quarterly-plan` — create new quarterly plan page from template
 
 ## Vault Output
 

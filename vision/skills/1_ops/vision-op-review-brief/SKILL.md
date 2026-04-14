@@ -1,5 +1,5 @@
 ---
-name: arlive-vision-op-review-brief
+name: aireadylife-vision-op-review-brief
 type: op
 cadence: monthly
 description: >
@@ -8,7 +8,7 @@ description: >
   Triggers: "vision brief", "life scorecard", "goal review", "how am I doing", "life check-in".
 ---
 
-# arlive-vision-review-brief
+# aireadylife-vision-review-brief
 
 **Cadence:** Monthly (1st of month)
 **Produces:** Vision brief — 13-domain scorecard, top 3 at-risk goals, alignment flags
@@ -23,8 +23,8 @@ Configure your life vision and OKRs at `vault/vision/config.md` with your 13-dom
 
 ## Calls
 
-- **Flows:** `arlive-vision-build-review-brief`, `arlive-vision-compile-scorecard`
-- **Tasks:** `arlive-vision-update-open-loops`, `arlive-vision-escalate-at-risk-goals`
+- **Flows:** `aireadylife-vision-build-review-brief`, `aireadylife-vision-compile-scorecard`
+- **Tasks:** `aireadylife-vision-update-open-loops`, `aireadylife-vision-escalate-at-risk-goals`
 
 ## Apps
 

@@ -55,19 +55,19 @@ npx companies.sh add fru-dev3/aireadyu-life/estate --include plugin,agents,skill
 
 | Skill | Cadence | Produces |
 |-------|---------|---------|
-| `arlive-estate-review-brief` | Monthly | Portfolio review brief |
-| `arlive-estate-monthly-synthesis` | Monthly | Cash flow + equity synthesis |
-| `arlive-estate-cash-flow-review` | Monthly | NOI and net cash flow per property |
-| `arlive-estate-maintenance-review` | Monthly | Open maintenance items |
-| `arlive-estate-tenant-review` | Monthly | Payment history + lease alerts |
-| `arlive-estate-valuation-review` | Quarterly | Market value + equity update |
-| `arlive-estate-insurance-review` | Annually | Coverage adequacy review |
-| `arlive-estate-property-tax-watch` | Monthly | Upcoming tax deadlines |
-| `arlive-estate-tax-readiness` | Annually | Schedule E prep checklist |
-| `arlive-estate-document-completeness-review` | Quarterly | Document audit |
-| `arlive-estate-monthly-sync` | Monthly | Vault refresh |
-| `arlive-estate-portfolio-review` | Quarterly | Portfolio performance |
-| `arlive-estate-weekly-sync` | Weekly | Rent + maintenance status |
+| `aireadylife-estate-review-brief` | Monthly | Portfolio review brief |
+| `aireadylife-estate-monthly-synthesis` | Monthly | Cash flow + equity synthesis |
+| `aireadylife-estate-cash-flow-review` | Monthly | NOI and net cash flow per property |
+| `aireadylife-estate-maintenance-review` | Monthly | Open maintenance items |
+| `aireadylife-estate-tenant-review` | Monthly | Payment history + lease alerts |
+| `aireadylife-estate-valuation-review` | Quarterly | Market value + equity update |
+| `aireadylife-estate-insurance-review` | Annually | Coverage adequacy review |
+| `aireadylife-estate-property-tax-watch` | Monthly | Upcoming tax deadlines |
+| `aireadylife-estate-tax-readiness` | Annually | Schedule E prep checklist |
+| `aireadylife-estate-document-completeness-review` | Quarterly | Document audit |
+| `aireadylife-estate-monthly-sync` | Monthly | Vault refresh |
+| `aireadylife-estate-portfolio-review` | Quarterly | Portfolio performance |
+| `aireadylife-estate-weekly-sync` | Weekly | Rent + maintenance status |
 
 ## MCP Integration (Claude.ai)
 

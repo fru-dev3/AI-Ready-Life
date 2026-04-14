@@ -1,5 +1,5 @@
 ---
-name: arlive-calendar-flow-analyze-focus-time
+name: aireadylife-calendar-flow-analyze-focus-time
 type: flow
 trigger: called-by-op
 description: >
@@ -8,9 +8,9 @@ description: >
   which days have the best and worst deep work conditions.
 ---
 
-# arlive-calendar-analyze-focus-time
+# aireadylife-calendar-analyze-focus-time
 
-**Trigger:** Called by `arlive-calendar-focus-time-review`
+**Trigger:** Called by `aireadylife-calendar-focus-time-review`
 **Produces:** A focus time analysis with meeting totals, focus totals, deficit flags, and per-day quality scores passed back to the calling op.
 
 ## What it does

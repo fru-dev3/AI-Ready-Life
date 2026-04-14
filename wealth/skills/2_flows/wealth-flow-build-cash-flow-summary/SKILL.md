@@ -1,5 +1,5 @@
 ---
-name: arlive-wealth-flow-build-cash-flow-summary
+name: aireadylife-wealth-flow-build-cash-flow-summary
 type: flow
 trigger: called-by-op
 description: >
@@ -7,14 +7,14 @@ description: >
   budget targets, and flags categories over budget.
 ---
 
-# arlive-wealth-build-cash-flow-summary
+# aireadylife-wealth-build-cash-flow-summary
 
-**Trigger:** Called by `arlive-wealth-cash-flow-review`
+**Trigger:** Called by `aireadylife-wealth-cash-flow-review`
 **Produces:** Cash flow summary document in vault/wealth/03_cashflow/ with income, expenses, net, and budget variances
 
 ## What it does
 
-Reads income and expense transaction records from vault/wealth/03_cashflow/ for the current month period. Income is aggregated by source: W-2 salary (net of taxes and benefits), rental income, business/freelance income, dividends, and interest. Expenses are grouped into standard budget categories: housing, transportation, food and dining, healthcare, subscriptions, entertainment, clothing, and savings contributions. Net cash flow (income minus total expenses) is calculated, and each expense category is compared to its configured budget target. Categories more than 20% over budget are flagged for `arlive-wealth-flag-budget-variance`. The output includes a simple month-over-month comparison showing which categories increased or decreased.
+Reads income and expense transaction records from vault/wealth/03_cashflow/ for the current month period. Income is aggregated by source: W-2 salary (net of taxes and benefits), rental income, business/freelance income, dividends, and interest. Expenses are grouped into standard budget categories: housing, transportation, food and dining, healthcare, subscriptions, entertainment, clothing, and savings contributions. Net cash flow (income minus total expenses) is calculated, and each expense category is compared to its configured budget target. Categories more than 20% over budget are flagged for `aireadylife-wealth-flag-budget-variance`. The output includes a simple month-over-month comparison showing which categories increased or decreased.
 
 ## Steps
 

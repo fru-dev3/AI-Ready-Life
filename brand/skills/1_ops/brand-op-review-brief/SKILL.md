@@ -1,5 +1,5 @@
 ---
-name: arlive-brand-op-review-brief
+name: aireadylife-brand-op-review-brief
 type: op
 cadence: monthly
 description: >
@@ -7,7 +7,7 @@ description: >
   Triggers: "brand brief", "brand summary", "how is my brand doing", "brand health", "brand check".
 ---
 
-# arlive-brand-review-brief
+# aireadylife-brand-review-brief
 
 **Cadence:** Monthly (1st of month)
 **Produces:** Brand brief — consistency score, mentions, analytics, reputation flags

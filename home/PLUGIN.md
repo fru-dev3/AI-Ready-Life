@@ -53,9 +53,9 @@ npx companies.sh add fru-dev3/aireadyu-life/home --include plugin,agents,skills
 
 | Skill | Cadence | Produces |
 |-------|---------|---------|
-| `arlive-home-review-brief` | Weekly (when flagged) | Home brief |
-| `arlive-home-monthly-sync` | Monthly | Maintenance + expense review |
-| `arlive-home-weekly-review` | Weekly | Open items + seasonal tasks |
+| `aireadylife-home-review-brief` | Weekly (when flagged) | Home brief |
+| `aireadylife-home-monthly-sync` | Monthly | Maintenance + expense review |
+| `aireadylife-home-weekly-review` | Weekly | Open items + seasonal tasks |
 
 ## MCP Integration (Claude.ai)
 

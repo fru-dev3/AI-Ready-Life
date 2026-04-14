@@ -1,5 +1,5 @@
 ---
-name: arlive-intel-op-review-brief
+name: aireadylife-intel-op-review-brief
 type: op
 cadence: daily
 description: >
@@ -8,7 +8,7 @@ description: >
   Triggers: "intel brief", "morning brief", "what's the news", "daily intel", "news summary".
 ---
 
-# arlive-intel-morning-brief
+# aireadylife-intel-morning-brief
 
 **Cadence:** Daily (6 AM)
 **Produces:** Morning intelligence brief — top stories filtered to user's interest lens
@@ -23,8 +23,8 @@ Configure your source list and interest lens at `vault/intel/config.md` with you
 
 ## Calls
 
-- **Flows:** `arlive-intel-scan-sources`, `arlive-intel-filter-stories`, `arlive-intel-build-brief`
-- **Tasks:** `arlive-intel-update-threads`, `arlive-intel-flag-market-news`
+- **Flows:** `aireadylife-intel-scan-sources`, `aireadylife-intel-filter-stories`, `aireadylife-intel-build-brief`
+- **Tasks:** `aireadylife-intel-update-threads`, `aireadylife-intel-flag-market-news`
 
 ## Apps
 

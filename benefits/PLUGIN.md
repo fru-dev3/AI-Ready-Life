@@ -52,13 +52,13 @@ VAULT_MODE=demo npx -y @aireadylife/benefits-plugin
 
 | Skill | Cadence | Produces |
 |-------|---------|---------|
-| `arlive-benefits-review-brief` | Monthly | Benefits brief — 401k status, HSA balance, coverage flags |
-| `arlive-benefits-401k-review` | Monthly | 401k contribution rate, match capture, YTD, allocation |
-| `arlive-benefits-hsa-review` | Monthly | HSA balance, investment threshold, YTD contributions |
-| `arlive-benefits-coverage-review` | Quarterly | Coverage adequacy review vs. actual utilization |
-| `arlive-benefits-annual-enrollment` | Annual | Open enrollment preparation and comparison |
-| `arlive-benefits-contribution-review` | Quarterly | Optimize contribution rates across all benefit accounts |
-| `arlive-benefits-open-enrollment-watch` | Oct-Nov | Monitor and alert when enrollment window opens |
-| `arlive-benefits-monthly-sync` | Monthly | Sync benefit account balances from statements |
-| `arlive-benefits-document-completeness` | Annual | Verify all benefit documents are stored in vault |
-| `arlive-benefits-total-comp-review` | Annual | Full total compensation analysis including all benefits |
+| `aireadylife-benefits-review-brief` | Monthly | Benefits brief — 401k status, HSA balance, coverage flags |
+| `aireadylife-benefits-401k-review` | Monthly | 401k contribution rate, match capture, YTD, allocation |
+| `aireadylife-benefits-hsa-review` | Monthly | HSA balance, investment threshold, YTD contributions |
+| `aireadylife-benefits-coverage-review` | Quarterly | Coverage adequacy review vs. actual utilization |
+| `aireadylife-benefits-annual-enrollment` | Annual | Open enrollment preparation and comparison |
+| `aireadylife-benefits-contribution-review` | Quarterly | Optimize contribution rates across all benefit accounts |
+| `aireadylife-benefits-open-enrollment-watch` | Oct-Nov | Monitor and alert when enrollment window opens |
+| `aireadylife-benefits-monthly-sync` | Monthly | Sync benefit account balances from statements |
+| `aireadylife-benefits-document-completeness` | Annual | Verify all benefit documents are stored in vault |
+| `aireadylife-benefits-total-comp-review` | Annual | Full total compensation analysis including all benefits |

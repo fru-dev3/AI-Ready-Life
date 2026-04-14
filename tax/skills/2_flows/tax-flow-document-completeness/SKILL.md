@@ -1,5 +1,5 @@
 ---
-name: arlive-tax-flow-document-completeness
+name: aireadylife-tax-flow-document-completeness
 type: flow
 trigger: called-by-op
 description: >
@@ -7,9 +7,9 @@ description: >
   vault and flags anything expected but not yet received.
 ---
 
-# arlive-tax-document-completeness
+# aireadylife-tax-document-completeness
 
-**Trigger:** Called by `arlive-tax-document-sync` and `arlive-tax-entity-compliance`
+**Trigger:** Called by `aireadylife-tax-document-sync` and `aireadylife-tax-entity-compliance`
 **Produces:** Completeness report in vault/tax/00_documents/ with received/missing/pending status for each expected document
 
 ## What it does

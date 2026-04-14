@@ -1,5 +1,5 @@
 ---
-name: arlive-intel-task-log-source
+name: aireadylife-intel-task-log-source
 type: task
 cadence: as-added
 description: >
@@ -7,7 +7,7 @@ description: >
   and credibility rating. Used to expand the intel source list.
 ---
 
-# arlive-intel-log-source
+# aireadylife-intel-log-source
 
 **Cadence:** As-added (when a new source is discovered or recommended)
 **Produces:** New source record in `vault/intel/00_sources/`

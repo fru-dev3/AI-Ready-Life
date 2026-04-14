@@ -1,5 +1,5 @@
 ---
-name: arlive-records-op-document-audit
+name: aireadylife-records-op-document-audit
 type: op
 cadence: quarterly
 description: >
@@ -8,7 +8,7 @@ description: >
   "ID expiration", "important documents".
 ---
 
-# arlive-records-document-audit
+# aireadylife-records-document-audit
 
 **Cadence:** Quarterly (1st of Jan, Apr, Jul, Oct)
 **Produces:** Document status report with expiration flags, missing document gaps, and renewal actions
@@ -25,8 +25,8 @@ expiration date, since life changes may render them outdated.
 
 ## Calls
 
-- **Flows:** `arlive-records-check-expiring-documents`
-- **Tasks:** `arlive-records-flag-expiring-id`, `arlive-records-update-open-loops`
+- **Flows:** `aireadylife-records-check-expiring-documents`
+- **Tasks:** `aireadylife-records-flag-expiring-id`, `aireadylife-records-update-open-loops`
 
 ## Apps
 

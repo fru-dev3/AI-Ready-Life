@@ -40,7 +40,7 @@ Scopes: https://www.googleapis.com/auth/drive.file
 
 ## Used By
 
-- `arlive-records-log-document` — upload scanned document to the appropriate Drive subfolder
+- `aireadylife-records-log-document` — upload scanned document to the appropriate Drive subfolder
 
 ## Vault Output
 

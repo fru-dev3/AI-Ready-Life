@@ -1,5 +1,5 @@
 ---
-name: arlive-records-op-subscription-review
+name: aireadylife-records-op-subscription-review
 type: op
 cadence: monthly
 description: >
@@ -8,7 +8,7 @@ description: >
   "cancel subscriptions", "subscription audit".
 ---
 
-# arlive-records-subscription-review
+# aireadylife-records-subscription-review
 
 **Cadence:** Monthly (1st of month)
 **Produces:** Subscription table with total recurring cost, usage flags, and cancel recommendations
@@ -25,8 +25,8 @@ to decide whether to renew or cancel before being charged.
 
 ## Calls
 
-- **Flows:** `arlive-records-build-subscription-summary`
-- **Tasks:** `arlive-records-update-open-loops`
+- **Flows:** `aireadylife-records-build-subscription-summary`
+- **Tasks:** `aireadylife-records-update-open-loops`
 
 ## Apps
 

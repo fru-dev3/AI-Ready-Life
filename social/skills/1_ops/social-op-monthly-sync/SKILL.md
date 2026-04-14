@@ -1,5 +1,5 @@
 ---
-name: arlive-social-op-monthly-sync
+name: aireadylife-social-op-monthly-sync
 type: op
 cadence: monthly
 description: >
@@ -8,7 +8,7 @@ description: >
   Triggers: "social monthly sync", "relationship review", "refresh social vault".
 ---
 
-# arlive-social-monthly-sync
+# aireadylife-social-monthly-sync
 
 **Cadence:** Monthly (1st of month)
 **Produces:** Social vault refreshed with updated relationship health scores and monthly outreach plan
@@ -23,8 +23,8 @@ Set your tier definitions and health score thresholds in `vault/social/config.md
 
 ## Calls
 
-- **Flows:** `arlive-social-recalculate-health-scores`, `arlive-social-build-monthly-outreach-plan`
-- **Then triggers:** `arlive-social-review-brief`
+- **Flows:** `aireadylife-social-recalculate-health-scores`, `aireadylife-social-build-monthly-outreach-plan`
+- **Then triggers:** `aireadylife-social-review-brief`
 
 ## Apps
 

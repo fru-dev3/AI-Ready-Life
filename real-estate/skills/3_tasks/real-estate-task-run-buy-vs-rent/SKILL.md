@@ -1,12 +1,12 @@
 ---
-name: arlive-real-estate-task-run-buy-vs-rent
+name: aireadylife-real-estate-task-run-buy-vs-rent
 type: task
 description: >
   Runs a buy vs. rent comparison for a specific property and holding period, returning the
   break-even year, total cost-to-own vs. rent, and recommendation.
 ---
 
-# arlive-real-estate-run-buy-vs-rent
+# aireadylife-real-estate-run-buy-vs-rent
 
 **Trigger:** Called by real-estate affordability and review flows
 **Produces:** Buy vs. rent analysis saved to `vault/real-estate/02_analysis/`

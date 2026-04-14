@@ -1,5 +1,5 @@
 ---
-name: arlive-real-estate-op-review-brief
+name: aireadylife-real-estate-op-review-brief
 type: op
 cadence: monthly
 description: >
@@ -9,7 +9,7 @@ description: >
   Triggers: "real estate brief", "housing update", "market analysis", "buy vs rent".
 ---
 
-# arlive-realestate-review-brief
+# aireadylife-realestate-review-brief
 
 **Cadence:** Monthly (1st of month)
 **Produces:** Real estate brief — market conditions, portfolio expansion opportunities, buy vs. rent update
@@ -24,8 +24,8 @@ Configure your target markets and acquisition criteria at `vault/real-estate/con
 
 ## Calls
 
-- **Flows:** `arlive-realestate-build-review-brief`
-- **Tasks:** `arlive-realestate-update-open-loops`
+- **Flows:** `aireadylife-realestate-build-review-brief`
+- **Tasks:** `aireadylife-realestate-update-open-loops`
 
 ## Apps
 

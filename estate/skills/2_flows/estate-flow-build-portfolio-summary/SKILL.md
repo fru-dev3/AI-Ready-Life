@@ -1,5 +1,5 @@
 ---
-name: arlive-estate-flow-build-portfolio-summary
+name: aireadylife-estate-flow-build-portfolio-summary
 type: flow
 trigger: called-by-op
 description: >
@@ -8,9 +8,9 @@ description: >
   and tenant review ops.
 ---
 
-# arlive-estate-build-portfolio-summary
+# aireadylife-estate-build-portfolio-summary
 
-**Trigger:** Called by `arlive-estate-portfolio-review`, `arlive-estate-tenant-review`
+**Trigger:** Called by `aireadylife-estate-portfolio-review`, `aireadylife-estate-tenant-review`
 **Produces:** A structured portfolio snapshot with per-property financials and a portfolio-level summary returned to the calling op.
 
 ## What it does

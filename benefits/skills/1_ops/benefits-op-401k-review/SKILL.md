@@ -1,5 +1,5 @@
 ---
-name: arlive-benefits-op-401k-review
+name: aireadylife-benefits-op-401k-review
 type: op
 cadence: monthly
 description: >
@@ -8,7 +8,7 @@ description: >
   Triggers: "401k review", "retirement contribution", "employer match", "401k allocation".
 ---
 
-# arlive-benefits-401k-review
+# aireadylife-benefits-401k-review
 
 **Cadence:** Monthly
 **Produces:** 401k review — match capture, YTD vs limit, allocation assessment

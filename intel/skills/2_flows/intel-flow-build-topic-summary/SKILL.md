@@ -1,5 +1,5 @@
 ---
-name: arlive-intel-flow-build-topic-summary
+name: aireadylife-intel-flow-build-topic-summary
 type: flow
 trigger: called-by-op
 description: >
@@ -7,9 +7,9 @@ description: >
   players, recent developments, and open questions.
 ---
 
-# arlive-intel-build-topic-summary
+# aireadylife-intel-build-topic-summary
 
-**Trigger:** Called by `arlive-intel-topic-deep-dive`
+**Trigger:** Called by `aireadylife-intel-topic-deep-dive`
 **Produces:** Multi-paragraph topic brief saved to vault/intel/02_topics/
 
 ## What it does

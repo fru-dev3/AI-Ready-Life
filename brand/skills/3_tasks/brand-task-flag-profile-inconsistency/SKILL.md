@@ -1,14 +1,14 @@
 ---
-name: arlive-brand-task-flag-profile-inconsistency
+name: aireadylife-brand-task-flag-profile-inconsistency
 type: task
 description: >
   Writes a flag to vault/brand/open-loops.md when a platform profile field diverges from the
   master brand profile. Records platform, field, current value, expected value, and fix action.
 ---
 
-# arlive-brand-flag-profile-inconsistency
+# aireadylife-brand-flag-profile-inconsistency
 
-**Trigger:** Called by `arlive-brand-profile-audit` when a discrepancy is found
+**Trigger:** Called by `aireadylife-brand-profile-audit` when a discrepancy is found
 **Produces:** Per-discrepancy flag entry in vault/brand/open-loops.md
 
 ## What it does

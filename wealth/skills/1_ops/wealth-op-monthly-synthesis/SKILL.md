@@ -1,5 +1,5 @@
 ---
-name: arlive-wealth-op-monthly-synthesis
+name: aireadylife-wealth-op-monthly-synthesis
 type: op
 cadence: monthly
 description: >
@@ -8,7 +8,7 @@ description: >
   summary", "net worth delta", "how did my wealth change this month".
 ---
 
-# arlive-wealth-monthly-synthesis
+# aireadylife-wealth-monthly-synthesis
 
 **Cadence:** Monthly (3rd of month, after statements downloaded)
 **Produces:** Wealth synthesis — net worth delta, cash flow, investment performance summary
@@ -23,8 +23,8 @@ Set your institutions and account list in `vault/wealth/config.md`. In demo mode
 
 ## Calls
 
-- **Flows:** `arlive-wealth-build-monthly-summary`, `arlive-wealth-update-net-worth`, `arlive-wealth-estimate-cash-flow`
-- **Then triggers:** `arlive-wealth-review-brief`
+- **Flows:** `aireadylife-wealth-build-monthly-summary`, `aireadylife-wealth-update-net-worth`, `aireadylife-wealth-estimate-cash-flow`
+- **Then triggers:** `aireadylife-wealth-review-brief`
 
 ## Apps
 

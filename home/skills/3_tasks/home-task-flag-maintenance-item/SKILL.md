@@ -1,12 +1,12 @@
 ---
-name: arlive-home-task-flag-maintenance-item
+name: aireadylife-home-task-flag-maintenance-item
 type: task
 description: >
   Writes a maintenance flag to vault/home/open-loops.md with item description, location, urgency,
   last serviced date, vendor, estimated cost, and target completion date.
 ---
 
-# arlive-home-flag-maintenance-item
+# aireadylife-home-flag-maintenance-item
 
 **Trigger:** Called by home maintenance flows
 **Produces:** Maintenance flag entry in `vault/home/open-loops.md`

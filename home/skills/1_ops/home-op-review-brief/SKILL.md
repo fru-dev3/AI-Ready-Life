@@ -1,5 +1,5 @@
 ---
-name: arlive-home-op-review-brief
+name: aireadylife-home-op-review-brief
 type: op
 cadence: weekly
 description: >
@@ -8,7 +8,7 @@ description: >
   Triggers: "home brief", "home review", "maintenance check", "home status".
 ---
 
-# arlive-home-review-brief
+# aireadylife-home-review-brief
 
 **Cadence:** Weekly (when items flagged) or on-demand
 **Produces:** Home brief — open maintenance, upcoming seasonal tasks, home expenses
@@ -23,8 +23,8 @@ Configure your vault at `vault/home/config.md` with your home type, address, and
 
 ## Calls
 
-- **Flows:** `arlive-home-build-review-brief`
-- **Tasks:** `arlive-home-update-open-loops`
+- **Flows:** `aireadylife-home-build-review-brief`
+- **Tasks:** `aireadylife-home-update-open-loops`
 
 ## Apps
 

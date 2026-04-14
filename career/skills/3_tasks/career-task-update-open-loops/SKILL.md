@@ -1,5 +1,5 @@
 ---
-name: arlive-career-task-update-open-loops
+name: aireadylife-career-task-update-open-loops
 type: task
 cadence: called-by-op
 description: >
@@ -7,7 +7,7 @@ description: >
   resolves completed items. Called at the end of every career op.
 ---
 
-# arlive-career-update-open-loops
+# aireadylife-career-update-open-loops
 
 **Cadence:** Called at the end of every career op
 **Produces:** Updated vault/career/open-loops.md with new flags appended and resolved items closed

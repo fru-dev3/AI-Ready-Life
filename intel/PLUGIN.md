@@ -56,9 +56,9 @@ npx companies.sh add fru-dev3/aireadyu-life/intel --include plugin,agents,skills
 
 | Skill | Cadence | Produces |
 |-------|---------|---------|
-| `arlive-intel-morning-brief` | Daily | Morning intelligence brief — top stories filtered to user's interest lens |
-| `arlive-intel-evening-brief` | Daily | Evening wrap-up brief — day's developments and story updates |
-| `arlive-intel-source-scan` | Weekly | Source health audit — stale or low-quality source flags |
+| `aireadylife-intel-morning-brief` | Daily | Morning intelligence brief — top stories filtered to user's interest lens |
+| `aireadylife-intel-evening-brief` | Daily | Evening wrap-up brief — day's developments and story updates |
+| `aireadylife-intel-source-scan` | Weekly | Source health audit — stale or low-quality source flags |
 
 ## MCP Integration (Claude.ai)
 

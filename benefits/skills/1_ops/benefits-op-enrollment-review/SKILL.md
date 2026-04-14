@@ -1,5 +1,5 @@
 ---
-name: arlive-benefits-op-enrollment-review
+name: aireadylife-benefits-op-enrollment-review
 type: op
 cadence: annual
 description: >
@@ -8,7 +8,7 @@ description: >
   "benefits review", "pick my benefits plan".
 ---
 
-# arlive-benefits-enrollment-review
+# aireadylife-benefits-enrollment-review
 
 **Cadence:** Annual (October–November, when open enrollment window opens)
 **Produces:** Plan comparison table, cost-modeling output, recommended elections written to vault/benefits/04_briefs/
@@ -29,8 +29,8 @@ year's EOB data in the same folder to enable claims-based cost modeling.
 
 ## Calls
 
-- **Flows:** `arlive-benefits-build-coverage-summary`
-- **Tasks:** `arlive-benefits-flag-enrollment-window`, `arlive-benefits-update-open-loops`
+- **Flows:** `aireadylife-benefits-build-coverage-summary`
+- **Tasks:** `aireadylife-benefits-flag-enrollment-window`, `aireadylife-benefits-update-open-loops`
 
 ## Apps
 

@@ -1,5 +1,5 @@
 ---
-name: arlive-health-op-monthly-sync
+name: aireadylife-health-op-monthly-sync
 type: op
 cadence: monthly
 description: >
@@ -8,7 +8,7 @@ description: >
   Triggers: "health monthly sync", "sync health data", "refresh health vault".
 ---
 
-# arlive-health-monthly-sync
+# aireadylife-health-monthly-sync
 
 **Cadence:** Monthly (1st of month)
 **Produces:** Health vault refreshed with wearable data, portal records, and organized documents
@@ -23,8 +23,8 @@ Set your wearable type and patient portal URL in `vault/health/config.md`. Suppo
 
 ## Calls
 
-- **Flows:** `arlive-health-sync-wearable-data`, `arlive-health-download-portal-records`, `arlive-health-organize-docs`
-- **Then triggers:** `arlive-health-wellness-review`, `arlive-health-review-brief`
+- **Flows:** `aireadylife-health-sync-wearable-data`, `aireadylife-health-download-portal-records`, `aireadylife-health-organize-docs`
+- **Then triggers:** `aireadylife-health-wellness-review`, `aireadylife-health-review-brief`
 
 ## Apps
 

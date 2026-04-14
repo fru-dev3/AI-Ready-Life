@@ -1,14 +1,14 @@
 ---
-name: arlive-business-task-flag-overdue-invoice
+name: aireadylife-business-task-flag-overdue-invoice
 type: task
 description: >
   Writes an overdue invoice flag to vault/business/open-loops.md when an invoice is unpaid more
   than 30 days past due. Includes client, invoice number, amount, days overdue, and recommended action.
 ---
 
-# arlive-business-flag-overdue-invoice
+# aireadylife-business-flag-overdue-invoice
 
-**Trigger:** Called by `arlive-business-pl-review` and `arlive-business-log-invoice` when an overdue invoice is detected
+**Trigger:** Called by `aireadylife-business-pl-review` and `aireadylife-business-log-invoice` when an overdue invoice is detected
 **Produces:** Overdue invoice flag entry in vault/business/open-loops.md with full invoice details and recommended action
 
 ## What it does

@@ -38,8 +38,8 @@ linkedin_chrome_profile: /Users/YOU/Library/Application Support/Google/Chrome/De
 
 ## Used By
 
-- `arlive-career-market-scan` — scan open roles matching target criteria
-- `arlive-career-network-review` — audit connections and flag dormant relationships
+- `aireadylife-career-market-scan` — scan open roles matching target criteria
+- `aireadylife-career-network-review` — audit connections and flag dormant relationships
 
 ## Vault Output
 

@@ -1,5 +1,5 @@
 ---
-name: arlive-calendar-op-review-brief
+name: aireadylife-calendar-op-review-brief
 type: op
 cadence: weekly
 description: >
@@ -7,7 +7,7 @@ description: >
   Triggers: "calendar brief", "what's due this week", "deadline check", "focus time", "schedule review".
 ---
 
-# arlive-calendar-review-brief
+# aireadylife-calendar-review-brief
 
 **Cadence:** Weekly (Monday morning)
 **Produces:** Weekly calendar brief — upcoming deadlines, focus time health, scheduling flags

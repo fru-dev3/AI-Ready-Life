@@ -1,5 +1,5 @@
 ---
-name: arlive-benefits-flow-build-coverage-summary
+name: aireadylife-benefits-flow-build-coverage-summary
 type: flow
 trigger: called-by-op
 description: >
@@ -7,9 +7,9 @@ description: >
   OOP max, HSA, 401k match, life insurance face value, and disability coverage.
 ---
 
-# arlive-benefits-build-coverage-summary
+# aireadylife-benefits-build-coverage-summary
 
-**Trigger:** Called by `arlive-benefits-enrollment-review`, `arlive-benefits-coverage-review`, `arlive-benefits-review-brief`
+**Trigger:** Called by `aireadylife-benefits-enrollment-review`, `aireadylife-benefits-coverage-review`, `aireadylife-benefits-review-brief`
 **Produces:** Structured coverage table with current values, limits, and YTD progress for all active benefits
 
 ## What it does

@@ -1,5 +1,5 @@
 ---
-name: arlive-learning-op-goal-review
+name: aireadylife-learning-op-goal-review
 type: op
 cadence: quarterly
 description: >
@@ -8,7 +8,7 @@ description: >
   "quarterly learning", "skills update", "certifications review".
 ---
 
-# arlive-learning-goal-review
+# aireadylife-learning-goal-review
 
 **Cadence:** Quarterly (1st of Jan, Apr, Jul, Oct)
 **Produces:** Learning goal alignment report with recommended additions, removals, and priority changes
@@ -24,8 +24,8 @@ and produces an updated learning plan for the next quarter with priority ranking
 
 ## Calls
 
-- **Flows:** `arlive-learning-build-progress-summary`
-- **Tasks:** `arlive-learning-update-open-loops`
+- **Flows:** `aireadylife-learning-build-progress-summary`
+- **Tasks:** `aireadylife-learning-update-open-loops`
 
 ## Apps
 

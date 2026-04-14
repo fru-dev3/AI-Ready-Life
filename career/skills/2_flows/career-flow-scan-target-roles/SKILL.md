@@ -1,5 +1,5 @@
 ---
-name: arlive-career-flow-scan-target-roles
+name: aireadylife-career-flow-scan-target-roles
 type: flow
 trigger: called-by-op
 description: >
@@ -7,9 +7,9 @@ description: >
   salary ranges, required skills, and company information.
 ---
 
-# arlive-career-scan-target-roles
+# aireadylife-career-scan-target-roles
 
-**Trigger:** Called by `arlive-career-market-scan`
+**Trigger:** Called by `aireadylife-career-market-scan`
 **Produces:** Market scan results in vault/career/04_briefs/ with top matching roles and compensation data
 
 ## What it does

@@ -1,5 +1,5 @@
 ---
-name: arlive-vision-flow-score-domain-progress
+name: aireadylife-vision-flow-score-domain-progress
 type: flow
 trigger: called-by-op
 description: >
@@ -8,9 +8,9 @@ description: >
   remaining in the quarter.
 ---
 
-# arlive-vision-score-domain-progress
+# aireadylife-vision-score-domain-progress
 
-**Trigger:** Called by `arlive-vision-quarterly-planning`, `arlive-vision-monthly-scorecard`, `arlive-vision-annual-review`
+**Trigger:** Called by `aireadylife-vision-quarterly-planning`, `aireadylife-vision-monthly-scorecard`, `aireadylife-vision-annual-review`
 **Produces:** A per-OKR progress report with completion percentages, pace-to-goal ratings, and at-risk flags returned to the calling op.
 
 ## What it does

@@ -1,5 +1,5 @@
 ---
-name: arlive-tax-op-deadline-watch
+name: aireadylife-tax-op-deadline-watch
 type: op
 cadence: monthly
 description: >
@@ -7,7 +7,7 @@ description: >
   action steps. Triggers: "check tax deadlines", "upcoming tax dates", "what tax is due".
 ---
 
-# arlive-tax-deadline-watch
+# aireadylife-tax-deadline-watch
 
 **Cadence:** Monthly (1st of month)
 **Produces:** Deadline alert list — all tax obligations due within 30 days
@@ -18,8 +18,8 @@ Monitors all tax deadlines for federal, state, and entity filings. Flags items d
 
 ## Calls
 
-- **Flows:** `arlive-tax-track-deadlines`, `arlive-tax-flag-deadlines`
-- **Tasks:** `arlive-tax-collect-deadlines`, `arlive-tax-flag-deadline`, `arlive-tax-update-open-loops`
+- **Flows:** `aireadylife-tax-track-deadlines`, `aireadylife-tax-flag-deadlines`
+- **Tasks:** `aireadylife-tax-collect-deadlines`, `aireadylife-tax-flag-deadline`, `aireadylife-tax-update-open-loops`
 
 ## Apps
 

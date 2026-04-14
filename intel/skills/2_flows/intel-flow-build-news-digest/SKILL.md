@@ -1,5 +1,5 @@
 ---
-name: arlive-intel-flow-build-news-digest
+name: aireadylife-intel-flow-build-news-digest
 type: flow
 trigger: called-by-op
 description: >
@@ -7,9 +7,9 @@ description: >
   formats as a scannable daily digest.
 ---
 
-# arlive-intel-build-news-digest
+# aireadylife-intel-build-news-digest
 
-**Trigger:** Called by `arlive-intel-daily-briefing`
+**Trigger:** Called by `aireadylife-intel-daily-briefing`
 **Produces:** Formatted daily digest with ranked, deduplicated, one-sentence summaries per story
 
 ## What it does

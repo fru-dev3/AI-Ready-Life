@@ -1,5 +1,5 @@
 ---
-name: arlive-content-op-review-brief
+name: aireadylife-content-op-review-brief
 type: op
 cadence: monthly
 description: >
@@ -8,7 +8,7 @@ description: >
   Triggers: "content brief", "content review", "monthly content summary", "how is my content".
 ---
 
-# arlive-content-review-brief
+# aireadylife-content-review-brief
 
 **Cadence:** Monthly (1st of month)
 **Produces:** Content review brief — channel analytics, revenue, schedule health, SEO flags
@@ -23,8 +23,8 @@ Configure your vault at `vault/content/config.md` with your channel IDs, newslet
 
 ## Calls
 
-- **Flows:** `arlive-content-build-review-brief`
-- **Tasks:** `arlive-content-update-open-loops`
+- **Flows:** `aireadylife-content-build-review-brief`
+- **Tasks:** `aireadylife-content-update-open-loops`
 
 ## Apps
 

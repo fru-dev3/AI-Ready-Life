@@ -51,11 +51,11 @@ VAULT_MODE=demo npx -y @aireadylife/brand-plugin
 
 | Skill | Cadence | Produces |
 |-------|---------|---------|
-| `arlive-brand-review-brief` | Monthly | Brand brief — consistency score, mentions, analytics |
-| `arlive-brand-analytics-review` | Monthly | Cross-platform follower, view, and engagement metrics |
-| `arlive-brand-mention-review` | Weekly | Mention log with sentiment classification |
-| `arlive-brand-profile-consistency-review` | Quarterly | Bio, headshot, and URL audit across all platforms |
-| `arlive-brand-monthly-synthesis` | Monthly | Unified brand health score across all platforms |
-| `arlive-brand-asset-review` | Quarterly | Headshots, logos, bio copy freshness check |
-| `arlive-brand-guidelines-review` | Annual | Brand voice, visual identity, and guidelines audit |
-| `arlive-brand-search-review` | Monthly | Search presence review — Google, LinkedIn, YouTube |
+| `aireadylife-brand-review-brief` | Monthly | Brand brief — consistency score, mentions, analytics |
+| `aireadylife-brand-analytics-review` | Monthly | Cross-platform follower, view, and engagement metrics |
+| `aireadylife-brand-mention-review` | Weekly | Mention log with sentiment classification |
+| `aireadylife-brand-profile-consistency-review` | Quarterly | Bio, headshot, and URL audit across all platforms |
+| `aireadylife-brand-monthly-synthesis` | Monthly | Unified brand health score across all platforms |
+| `aireadylife-brand-asset-review` | Quarterly | Headshots, logos, bio copy freshness check |
+| `aireadylife-brand-guidelines-review` | Annual | Brand voice, visual identity, and guidelines audit |
+| `aireadylife-brand-search-review` | Monthly | Search presence review — Google, LinkedIn, YouTube |

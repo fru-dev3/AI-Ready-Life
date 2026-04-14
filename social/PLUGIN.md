@@ -56,9 +56,9 @@ npx companies.sh add fru-dev3/aireadyu-life/social --include plugin,agents,skill
 
 | Skill | Cadence | Produces |
 |-------|---------|---------|
-| `arlive-social-review-brief` | Weekly | Social brief — upcoming birthdays, relationship health flags, outreach suggestions |
-| `arlive-social-monthly-sync` | Monthly | Reviews relationship health scores and identifies who needs a check-in |
-| `arlive-social-weekly-review` | Weekly | This week's outreach queue and upcoming social commitments |
+| `aireadylife-social-review-brief` | Weekly | Social brief — upcoming birthdays, relationship health flags, outreach suggestions |
+| `aireadylife-social-monthly-sync` | Monthly | Reviews relationship health scores and identifies who needs a check-in |
+| `aireadylife-social-weekly-review` | Weekly | This week's outreach queue and upcoming social commitments |
 
 ## MCP Integration (Claude.ai)
 

@@ -1,5 +1,5 @@
 ---
-name: arlive-benefits-flow-check-hsa-balance
+name: aireadylife-benefits-flow-check-hsa-balance
 type: flow
 trigger: called-by-op
 description: >
@@ -7,9 +7,9 @@ description: >
   qualified expense reimbursements.
 ---
 
-# arlive-benefits-check-hsa-balance
+# aireadylife-benefits-check-hsa-balance
 
-**Trigger:** Called by `arlive-benefits-hsa-review`
+**Trigger:** Called by `aireadylife-benefits-hsa-review`
 **Produces:** HSA snapshot with contribution pace, investment threshold status, and pending reimbursement list
 
 ## What it does

@@ -1,5 +1,5 @@
 ---
-name: arlive-business-op-pipeline-review
+name: aireadylife-business-op-pipeline-review
 type: op
 cadence: monthly
 description: >
@@ -8,7 +8,7 @@ description: >
   "sales pipeline".
 ---
 
-# arlive-business-pipeline-review
+# aireadylife-business-pipeline-review
 
 **Cadence:** Monthly (1st of month)
 **Produces:** Pipeline summary brief, follow-up flags, conversion rate trend, updated open-loops entries
@@ -32,8 +32,8 @@ date, and next action. A pipeline.md file with a structured table format works w
 
 ## Calls
 
-- **Flows:** `arlive-business-build-pipeline-summary`
-- **Tasks:** `arlive-business-update-open-loops`
+- **Flows:** `aireadylife-business-build-pipeline-summary`
+- **Tasks:** `aireadylife-business-update-open-loops`
 
 ## Apps
 

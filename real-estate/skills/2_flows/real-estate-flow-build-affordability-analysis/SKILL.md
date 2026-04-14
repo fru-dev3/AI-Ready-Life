@@ -1,5 +1,5 @@
 ---
-name: arlive-real-estate-flow-build-affordability-analysis
+name: aireadylife-real-estate-flow-build-affordability-analysis
 type: flow
 trigger: called-by-op
 description: >
@@ -7,9 +7,9 @@ description: >
   mortgage rates using 28/36 DTI rules.
 ---
 
-# arlive-real-estate-build-affordability-analysis
+# aireadylife-real-estate-build-affordability-analysis
 
-**Trigger:** Called by `arlive-real-estate-affordability-review`
+**Trigger:** Called by `aireadylife-real-estate-affordability-review`
 **Produces:** Affordability worksheet with max purchase price, required down payment, and payment breakdown
 
 ## What it does

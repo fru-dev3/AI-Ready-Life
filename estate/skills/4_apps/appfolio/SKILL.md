@@ -37,8 +37,8 @@ appfolio_chrome_profile: /Users/YOU/Library/Application Support/Google/Chrome/De
 
 ## Used By
 
-- `arlive-estate-cash-flow-review` — download and parse monthly owner statements
-- `arlive-estate-tenant-review` — check lease status and open maintenance requests
+- `aireadylife-estate-cash-flow-review` — download and parse monthly owner statements
+- `aireadylife-estate-tenant-review` — check lease status and open maintenance requests
 
 ## Vault Output
 

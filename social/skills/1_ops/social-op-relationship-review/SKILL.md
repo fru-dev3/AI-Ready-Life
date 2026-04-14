@@ -1,5 +1,5 @@
 ---
-name: arlive-social-op-relationship-review
+name: aireadylife-social-op-relationship-review
 type: op
 cadence: monthly
 description: >
@@ -8,7 +8,7 @@ description: >
   out to", "social health", "relationship check".
 ---
 
-# arlive-social-relationship-review
+# aireadylife-social-relationship-review
 
 **Cadence:** Monthly (1st of month)
 **Produces:** Relationship health table with health status per contact and prioritized outreach queue
@@ -25,8 +25,8 @@ flagged to open-loops.md so they stay visible.
 
 ## Calls
 
-- **Flows:** `arlive-social-build-relationship-health-summary`, `arlive-social-build-outreach-queue`
-- **Tasks:** `arlive-social-flag-overdue-contact`, `arlive-social-update-open-loops`
+- **Flows:** `aireadylife-social-build-relationship-health-summary`, `aireadylife-social-build-outreach-queue`
+- **Tasks:** `aireadylife-social-flag-overdue-contact`, `aireadylife-social-update-open-loops`
 
 ## Apps
 

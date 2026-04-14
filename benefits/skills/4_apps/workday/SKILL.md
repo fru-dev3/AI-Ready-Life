@@ -37,8 +37,8 @@ workday_chrome_profile: /Users/YOU/Library/Application Support/Google/Chrome/Def
 
 ## Used By
 
-- `arlive-benefits-enrollment-review` — review current elections and compare plan options
-- `arlive-benefits-401k-review` — check contribution rate and confirm employer match
+- `aireadylife-benefits-enrollment-review` — review current elections and compare plan options
+- `aireadylife-benefits-401k-review` — check contribution rate and confirm employer match
 
 ## Vault Output
 

@@ -38,7 +38,7 @@ policygenius_target_disability: true
 
 ## Used By
 
-- `arlive-insurance-coverage-audit` — compare existing coverage against market rates and alternatives
+- `aireadylife-insurance-coverage-audit` — compare existing coverage against market rates and alternatives
 
 ## Vault Output
 

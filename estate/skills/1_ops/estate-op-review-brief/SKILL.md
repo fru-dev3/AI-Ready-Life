@@ -1,5 +1,5 @@
 ---
-name: arlive-estate-op-review-brief
+name: aireadylife-estate-op-review-brief
 type: op
 cadence: monthly
 description: >
@@ -8,7 +8,7 @@ description: >
   Triggers: "estate brief", "estate review", "portfolio review", "rental property status".
 ---
 
-# arlive-estate-review-brief
+# aireadylife-estate-review-brief
 
 **Cadence:** Monthly (1st of month)
 **Produces:** Portfolio brief — cash flow per property, maintenance items, upcoming lease renewals, tax deadlines
@@ -23,8 +23,8 @@ Configure your vault at `vault/estate/config.md` with your property list, mortga
 
 ## Calls
 
-- **Flows:** `arlive-estate-build-review-brief`
-- **Tasks:** `arlive-estate-update-open-loops`
+- **Flows:** `aireadylife-estate-build-review-brief`
+- **Tasks:** `aireadylife-estate-update-open-loops`
 
 ## Apps
 

@@ -40,8 +40,8 @@ realestate_min_beds: 3
 
 ## Used By
 
-- `arlive-real-estate-market-scan` — pull active listings and market stats for target area
-- `arlive-real-estate-build-affordability-analysis` — collect comp data for buy vs rent analysis
+- `aireadylife-real-estate-market-scan` — pull active listings and market stats for target area
+- `aireadylife-real-estate-build-affordability-analysis` — collect comp data for buy vs rent analysis
 
 ## Vault Output
 

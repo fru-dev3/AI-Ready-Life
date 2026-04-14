@@ -39,8 +39,8 @@ Scopes: https://www.googleapis.com/auth/drive.file
 
 ## Used By
 
-- `arlive-vision-build-scorecard` — write annual scorecard to Drive folder
-- `arlive-vision-annual-review` — read prior year documents and write new review
+- `aireadylife-vision-build-scorecard` — write annual scorecard to Drive folder
+- `aireadylife-vision-annual-review` — read prior year documents and write new review
 
 ## Vault Output
 

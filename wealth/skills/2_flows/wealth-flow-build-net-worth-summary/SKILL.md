@@ -1,5 +1,5 @@
 ---
-name: arlive-wealth-flow-build-net-worth-summary
+name: aireadylife-wealth-flow-build-net-worth-summary
 type: flow
 trigger: called-by-op
 description: >
@@ -7,9 +7,9 @@ description: >
   month-over-month delta for each line item.
 ---
 
-# arlive-wealth-build-net-worth-summary
+# aireadylife-wealth-build-net-worth-summary
 
-**Trigger:** Called by `arlive-wealth-net-worth-review`
+**Trigger:** Called by `aireadylife-wealth-net-worth-review`
 **Produces:** Net worth table with asset/liability totals and MoM delta, written to vault/wealth/04_briefs/
 
 ## What it does

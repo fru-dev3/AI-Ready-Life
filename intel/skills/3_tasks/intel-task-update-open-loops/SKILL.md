@@ -1,12 +1,12 @@
 ---
-name: arlive-intel-task-update-open-loops
+name: aireadylife-intel-task-update-open-loops
 type: task
 description: >
   Writes all intel flags (breaking priority stories, source gaps, follow-up items) to
   vault/intel/open-loops.md and resolves completed items.
 ---
 
-# arlive-intel-update-open-loops
+# aireadylife-intel-update-open-loops
 
 **Trigger:** Called by intel ops and flows
 **Produces:** Updated `vault/intel/open-loops.md` with current action items

@@ -1,5 +1,5 @@
 ---
-name: arlive-estate-op-tenant-review
+name: aireadylife-estate-op-tenant-review
 type: op
 cadence: monthly
 description: >
@@ -9,7 +9,7 @@ description: >
   Triggers: "tenant review", "lease review", "rent status", "tenant update".
 ---
 
-# arlive-estate-tenant-review
+# aireadylife-estate-tenant-review
 
 **Cadence:** Monthly (1st of month)
 **Produces:** A tenant status report in `vault/estate/01_tenants/` with lease timelines, payment status, and renewal/vacancy flags in open loops.
@@ -20,8 +20,8 @@ Reviews the complete tenant picture across all rental properties monthly. Reads 
 
 ## Calls
 
-- **Flows:** `arlive-estate-build-portfolio-summary`
-- **Tasks:** `arlive-estate-update-open-loops`
+- **Flows:** `aireadylife-estate-build-portfolio-summary`
+- **Tasks:** `aireadylife-estate-update-open-loops`
 
 ## Apps
 

@@ -1,5 +1,5 @@
 ---
-name: arlive-explore-op-monthly-sync
+name: aireadylife-explore-op-monthly-sync
 type: op
 cadence: monthly
 description: >
@@ -7,7 +7,7 @@ description: >
   requiring preparation. Triggers: "explore monthly sync", "sync travel documents", "check passport".
 ---
 
-# arlive-explore-monthly-sync
+# aireadylife-explore-monthly-sync
 
 **Cadence:** Monthly (1st of month)
 **Produces:** Document expiry alerts and upcoming trip preparation checklist
@@ -22,8 +22,8 @@ Uses document details from `vault/explore/documents/`. Upcoming trips from `vaul
 
 ## Calls
 
-- **Flows:** `arlive-explore-check-document-expiry`, `arlive-explore-prep-upcoming-trips`
-- **Then triggers:** `arlive-explore-review-brief`
+- **Flows:** `aireadylife-explore-check-document-expiry`, `aireadylife-explore-prep-upcoming-trips`
+- **Then triggers:** `aireadylife-explore-review-brief`
 
 ## Vault Output
 

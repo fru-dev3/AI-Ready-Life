@@ -1,5 +1,5 @@
 ---
-name: arlive-business-op-review-brief
+name: aireadylife-business-op-review-brief
 type: op
 cadence: monthly
 description: >
@@ -7,7 +7,7 @@ description: >
   Triggers: "business brief", "LLC update", "P&L summary", "business status", "revenue this month".
 ---
 
-# arlive-business-review-brief
+# aireadylife-business-review-brief
 
 **Cadence:** Monthly (1st of month)
 **Produces:** Business brief — revenue, expenses, P&L, compliance status, open items

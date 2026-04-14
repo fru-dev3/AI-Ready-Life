@@ -1,5 +1,5 @@
 ---
-name: arlive-social-op-birthday-watch
+name: aireadylife-social-op-birthday-watch
 type: op
 cadence: weekly
 description: >
@@ -8,7 +8,7 @@ description: >
   a birthday", "milestone check".
 ---
 
-# arlive-social-birthday-watch
+# aireadylife-social-birthday-watch
 
 **Cadence:** Weekly (Monday morning)
 **Produces:** Upcoming birthday and milestone list with suggested actions for the next 14 days
@@ -25,8 +25,8 @@ accordingly.
 
 ## Calls
 
-- **Flows:** `arlive-social-build-outreach-queue`
-- **Tasks:** `arlive-social-update-open-loops`
+- **Flows:** `aireadylife-social-build-outreach-queue`
+- **Tasks:** `aireadylife-social-update-open-loops`
 
 ## Apps
 

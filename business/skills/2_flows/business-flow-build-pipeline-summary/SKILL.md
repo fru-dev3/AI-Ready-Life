@@ -1,5 +1,5 @@
 ---
-name: arlive-business-flow-build-pipeline-summary
+name: aireadylife-business-flow-build-pipeline-summary
 type: flow
 trigger: called-by-op
 description: >
@@ -7,9 +7,9 @@ description: >
   proposals needing follow-up due to inactivity.
 ---
 
-# arlive-business-build-pipeline-summary
+# aireadylife-business-build-pipeline-summary
 
-**Trigger:** Called by `arlive-business-pipeline-review`
+**Trigger:** Called by `aireadylife-business-pipeline-review`
 **Produces:** Pipeline stage breakdown, total value, stale proposal list, and conversion rate calculation
 
 ## What it does

@@ -1,5 +1,5 @@
 ---
-name: arlive-wealth-task-flag-savings-milestone
+name: aireadylife-wealth-task-flag-savings-milestone
 type: task
 cadence: called-by-op
 description: >
@@ -7,7 +7,7 @@ description: >
   hits a savings or payoff target. Includes goal name, amount, and suggested next action.
 ---
 
-# arlive-wealth-flag-savings-milestone
+# aireadylife-wealth-flag-savings-milestone
 
 **Cadence:** Called by debt review and net worth review ops
 **Produces:** Milestone entries in vault/wealth/open-loops.md with celebration note and cash reallocation suggestion

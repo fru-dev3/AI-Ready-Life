@@ -1,5 +1,5 @@
 ---
-name: arlive-intel-op-topic-deep-dive
+name: aireadylife-intel-op-topic-deep-dive
 type: op
 cadence: on-demand
 description: >
@@ -8,7 +8,7 @@ description: >
   "what's happening with".
 ---
 
-# arlive-intel-topic-deep-dive
+# aireadylife-intel-topic-deep-dive
 
 **Cadence:** On-demand (when topic research is needed)
 **Produces:** Structured topic summary with current state, key players, developments, and open questions
@@ -24,8 +24,8 @@ be revisited as the story develops.
 
 ## Calls
 
-- **Flows:** `arlive-intel-build-topic-summary`
-- **Tasks:** `arlive-intel-update-open-loops`
+- **Flows:** `aireadylife-intel-build-topic-summary`
+- **Tasks:** `aireadylife-intel-update-open-loops`
 
 ## Apps
 

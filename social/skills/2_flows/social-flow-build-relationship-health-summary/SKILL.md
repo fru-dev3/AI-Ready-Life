@@ -1,5 +1,5 @@
 ---
-name: arlive-social-flow-build-relationship-health-summary
+name: aireadylife-social-flow-build-relationship-health-summary
 type: flow
 trigger: called-by-op
 description: >
@@ -7,9 +7,9 @@ description: >
   status, and relationship tier.
 ---
 
-# arlive-social-build-relationship-health-summary
+# aireadylife-social-build-relationship-health-summary
 
-**Trigger:** Called by `arlive-social-relationship-review`
+**Trigger:** Called by `aireadylife-social-relationship-review`
 **Produces:** Relationship health table sorted by urgency with health status and days-since-contact per person
 
 ## What it does

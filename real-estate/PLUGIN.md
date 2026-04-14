@@ -55,9 +55,9 @@ npx companies.sh add fru-dev3/aireadyu-life/real-estate --include plugin,agents,
 
 | Skill | Cadence | Produces |
 |-------|---------|---------|
-| `arlive-realestate-review-brief` | Monthly | Real estate brief — market conditions, portfolio expansion opportunities, buy vs. rent update |
-| `arlive-realestate-monthly-sync` | Monthly | Pulls market data for target markets and updates affordability analysis |
-| `arlive-realestate-weekly-review` | Weekly | Weekly market pulse — rate changes, new listings in target criteria |
+| `aireadylife-realestate-review-brief` | Monthly | Real estate brief — market conditions, portfolio expansion opportunities, buy vs. rent update |
+| `aireadylife-realestate-monthly-sync` | Monthly | Pulls market data for target markets and updates affordability analysis |
+| `aireadylife-realestate-weekly-review` | Weekly | Weekly market pulse — rate changes, new listings in target criteria |
 
 ## MCP Integration (Claude.ai)
 

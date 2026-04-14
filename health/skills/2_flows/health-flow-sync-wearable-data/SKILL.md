@@ -1,5 +1,5 @@
 ---
-name: arlive-health-flow-sync-wearable-data
+name: aireadylife-health-flow-sync-wearable-data
 type: flow
 trigger: called-by-op
 description: >
@@ -7,9 +7,9 @@ description: >
   appending new data and confirming date range coverage.
 ---
 
-# arlive-health-sync-wearable-data
+# aireadylife-health-sync-wearable-data
 
-**Trigger:** Called by `arlive-health-monthly-sync`
+**Trigger:** Called by `aireadylife-health-monthly-sync`
 **Produces:** Updated wearable data records in vault/health/00_wearable/ with new entries appended
 
 ## What it does

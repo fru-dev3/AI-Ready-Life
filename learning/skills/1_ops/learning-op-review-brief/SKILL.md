@@ -1,5 +1,5 @@
 ---
-name: arlive-learning-op-review-brief
+name: aireadylife-learning-op-review-brief
 type: op
 cadence: weekly
 description: >
@@ -8,7 +8,7 @@ description: >
   Triggers: "learning brief", "learning review", "how is my learning", "study update".
 ---
 
-# arlive-learning-review-brief
+# aireadylife-learning-review-brief
 
 **Cadence:** Weekly (Monday)
 **Produces:** Learning brief — active courses progress, current book, cert timeline
@@ -23,8 +23,8 @@ Configure your learning setup at `vault/learning/config.md` with your active pla
 
 ## Calls
 
-- **Flows:** `arlive-learning-build-review-brief`
-- **Tasks:** `arlive-learning-update-open-loops`
+- **Flows:** `aireadylife-learning-build-review-brief`
+- **Tasks:** `aireadylife-learning-update-open-loops`
 
 ## Apps
 

@@ -1,5 +1,5 @@
 ---
-name: arlive-benefits-op-coverage-review
+name: aireadylife-benefits-op-coverage-review
 type: op
 cadence: quarterly
 description: >
@@ -8,7 +8,7 @@ description: >
   "coverage review", "am I covered".
 ---
 
-# arlive-benefits-coverage-review
+# aireadylife-benefits-coverage-review
 
 **Cadence:** Quarterly (January, April, July, October)
 **Produces:** Coverage audit table, gap analysis, updated open-loops entries
@@ -31,8 +31,8 @@ coverage levels (life insurance multiple, disability replacement rate, etc.) to 
 
 ## Calls
 
-- **Flows:** `arlive-benefits-build-coverage-summary`
-- **Tasks:** `arlive-benefits-update-open-loops`
+- **Flows:** `aireadylife-benefits-build-coverage-summary`
+- **Tasks:** `aireadylife-benefits-update-open-loops`
 
 ## Apps
 

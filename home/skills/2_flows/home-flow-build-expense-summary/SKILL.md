@@ -1,5 +1,5 @@
 ---
-name: arlive-home-flow-build-expense-summary
+name: aireadylife-home-flow-build-expense-summary
 type: flow
 trigger: called-by-op
 description: >
@@ -7,9 +7,9 @@ description: >
   more than 20% over budget.
 ---
 
-# arlive-home-build-expense-summary
+# aireadylife-home-build-expense-summary
 
-**Trigger:** Called by `arlive-home-expense-review`
+**Trigger:** Called by `aireadylife-home-expense-review`
 **Produces:** Expense summary table with category totals, MoM variance, and YTD vs. budget
 
 ## What it does

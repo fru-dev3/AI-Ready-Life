@@ -1,5 +1,5 @@
 ---
-name: arlive-content-op-weekly-review
+name: aireadylife-content-op-weekly-review
 type: op
 cadence: weekly
 description: >
@@ -8,7 +8,7 @@ description: >
   Triggers: "weekly content review", "content this week", "publishing gap", "content check".
 ---
 
-# arlive-content-weekly-review
+# aireadylife-content-weekly-review
 
 **Cadence:** Weekly (Monday)
 **Produces:** Weekly content snapshot — 7-day performance, publishing gaps, week's top action items
@@ -23,7 +23,7 @@ Uses publishing cadence targets from `vault/content/config.md`. In demo mode, re
 
 ## Calls
 
-- **Flows:** `arlive-content-check-publishing-schedule`, `arlive-content-pull-weekly-analytics`
+- **Flows:** `aireadylife-content-check-publishing-schedule`, `aireadylife-content-pull-weekly-analytics`
 
 ## Vault Output
 

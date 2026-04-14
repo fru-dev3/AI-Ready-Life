@@ -1,5 +1,5 @@
 ---
-name: arlive-learning-op-progress-review
+name: aireadylife-learning-op-progress-review
 type: op
 cadence: monthly
 description: >
@@ -8,7 +8,7 @@ description: >
   "reading list review", "learning goals".
 ---
 
-# arlive-learning-progress-review
+# aireadylife-learning-progress-review
 
 **Cadence:** Monthly (1st of month)
 **Produces:** Learning progress report with completion pace analysis and flagged items falling behind
@@ -24,8 +24,8 @@ as an open loop with a calculated daily pace needed to recover.
 
 ## Calls
 
-- **Flows:** `arlive-learning-build-progress-summary`, `arlive-learning-build-reading-summary`
-- **Tasks:** `arlive-learning-flag-falling-behind`, `arlive-learning-update-open-loops`
+- **Flows:** `aireadylife-learning-build-progress-summary`, `aireadylife-learning-build-reading-summary`
+- **Tasks:** `aireadylife-learning-flag-falling-behind`, `aireadylife-learning-update-open-loops`
 
 ## Apps
 

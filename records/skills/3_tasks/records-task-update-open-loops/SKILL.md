@@ -1,12 +1,12 @@
 ---
-name: arlive-records-task-update-open-loops
+name: aireadylife-records-task-update-open-loops
 type: task
 description: >
   Writes all records flags (expiring IDs, outdated legal documents, unused subscriptions) to
   vault/records/open-loops.md and resolves completed items.
 ---
 
-# arlive-records-update-open-loops
+# aireadylife-records-update-open-loops
 
 **Trigger:** Called by records ops and flows
 **Produces:** Updated `vault/records/open-loops.md` with current action items
