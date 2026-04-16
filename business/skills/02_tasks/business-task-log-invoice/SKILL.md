@@ -3,13 +3,13 @@ name: aireadylife-business-task-log-invoice
 type: task
 cadence: as-received
 description: >
-  Records a new invoice to vault/business/01_revenue/ with client, amount, date issued, due date,
+  Records a new invoice to vault/business/00_current/ with client, amount, date issued, due date,
   service description, and payment status.
 ---
 
 ## What It Does
 
-Accepts invoice details — either provided by the user directly as structured fields, extracted from an invoice document or image, or entered conversationally — and writes a structured invoice record to `~/Documents/AIReadyLife/vault/business/01_revenue/`. The resulting file feeds directly into the `aireadylife-business-flow-build-pl-summary` flow for monthly P&L calculations and into the `aireadylife-business-task-flag-overdue-invoice` task for payment monitoring.
+Accepts invoice details — either provided by the user directly as structured fields, extracted from an invoice document or image, or entered conversationally — and writes a structured invoice record to `~/Documents/AIReadyLife/vault/business/00_current/`. The resulting file feeds directly into the `aireadylife-business-flow-build-pl-summary` flow for monthly P&L calculations and into the `aireadylife-business-task-flag-overdue-invoice` task for payment monitoring.
 
 Validates required fields before writing: client name, invoice number, amount, date issued, and payment due date are all required. Service description and entity name are strongly recommended. Payment status defaults to "pending" if not provided. Checks for a duplicate invoice record (same invoice number + client name) before writing to prevent double-counting in P&L calculations.
 
@@ -30,10 +30,10 @@ Filename format: `{YYYY-MM-DD}-{client-slug}-invoice-{number}.md`. Client slug i
 
 1. Collect required fields from the user or extract from provided document: client name, invoice number, amount (and currency), date issued, payment due date, service description, entity name (if multi-entity setup)
 2. Validate that all required fields are present; if any are missing, ask for the specific missing field before proceeding
-3. Check vault/business/01_revenue/ for an existing file with the same invoice number and client slug; if found, ask user whether to update the existing record or create a new one
+3. Check vault/business/00_current/ for an existing file with the same invoice number and client slug; if found, ask user whether to update the existing record or create a new one
 4. Determine payment status: paid (if user reports payment received), overdue (if due date is in the past and no payment), pending (default for new invoices with future due dates)
 5. If marking an existing invoice as paid: locate the existing record, update the status and payment-received date, do not create a new file
-6. If creating a new record: write structured invoice file to vault/business/01_revenue/{YYYY-MM-DD}-{client-slug}-invoice-{number}.md
+6. If creating a new record: write structured invoice file to vault/business/00_current/{YYYY-MM-DD}-{client-slug}-invoice-{number}.md
 7. If the invoice is overdue (due date past, status pending): call `aireadylife-business-task-flag-overdue-invoice` immediately
 8. Confirm the record was written and return the file path
 
@@ -52,7 +52,7 @@ User-provided fields (one or more of the following):
 
 ## Output Format
 
-Written file at `~/Documents/AIReadyLife/vault/business/01_revenue/{YYYY-MM-DD}-{client-slug}-invoice-{number}.md`:
+Written file at `~/Documents/AIReadyLife/vault/business/00_current/{YYYY-MM-DD}-{client-slug}-invoice-{number}.md`:
 ```
 # Invoice Record
 
@@ -81,9 +81,9 @@ Optional in `~/Documents/AIReadyLife/vault/business/config.md`:
 - If client name is missing: "Which client is this invoice for?" — do not write record until provided.
 - If amount is missing or non-numeric: "What is the invoice amount?" — validate it is a positive number.
 - If invoice number is already in vault for the same client: "Invoice #{number} for {client} already exists. Do you want to update the existing record (e.g., mark as paid) or create a separate record?"
-- If no vault/business/01_revenue/ directory exists: "Revenue folder not found. Has the vault been set up? Check ~/Documents/AIReadyLife/vault/business/."
+- If no vault/business/00_current/ directory exists: "Revenue folder not found. Has the vault been set up? Check ~/Documents/AIReadyLife/vault/business/."
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/business/01_revenue/` (duplicate check), `~/Documents/AIReadyLife/vault/business/config.md`
-- Writes to: `~/Documents/AIReadyLife/vault/business/01_revenue/{YYYY-MM-DD}-{client-slug}-invoice-{number}.md`
+- Reads from: `~/Documents/AIReadyLife/vault/business/00_current/` (duplicate check), `~/Documents/AIReadyLife/vault/business/config.md`
+- Writes to: `~/Documents/AIReadyLife/vault/business/00_current/{YYYY-MM-DD}-{client-slug}-invoice-{number}.md`

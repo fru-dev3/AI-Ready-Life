@@ -10,7 +10,7 @@ description: >
 
 Called by `aireadylife-insurance-op-review-brief` and `aireadylife-insurance-op-claims-review` to produce the core coverage inventory table. This flow is the data assembly layer — it reads all policy records and organizes them into a structured, comparable format. The calling ops use this table for brief writing, gap identification, and claims context.
 
-**Policy inventory:** Reads all policy files from `vault/insurance/00_current/` and `vault/insurance/01_policies/`. For each active policy, extracts: carrier name, policy type (auto, home/renters, life-term, life-group, LTD, STD, umbrella, landlord, dental, vision, health), policy number, coverage limits appropriate to the policy type (per-accident and property for auto, dwelling and personal property for home, face value for life, monthly benefit for disability, liability limit for umbrella), deductible (per-claim or per-occurrence as applicable), monthly and annual premium (employee-paid portion), and policy renewal date.
+**Policy inventory:** Reads all policy files from `vault/insurance/00_current/` and `vault/insurance/00_current/`. For each active policy, extracts: carrier name, policy type (auto, home/renters, life-term, life-group, LTD, STD, umbrella, landlord, dental, vision, health), policy number, coverage limits appropriate to the policy type (per-accident and property for auto, dwelling and personal property for home, face value for life, monthly benefit for disability, liability limit for umbrella), deductible (per-claim or per-occurrence as applicable), monthly and annual premium (employee-paid portion), and policy renewal date.
 
 **Coverage matrix assembly:** Formats all policies into a side-by-side matrix table. Each row is a policy line; columns are the key comparison fields. This gives the calling op a clean table to embed in briefs or gap analysis reports without re-reading each policy file.
 
@@ -20,7 +20,7 @@ Called by `aireadylife-insurance-op-review-brief` and `aireadylife-insurance-op-
 
 ## Steps
 
-1. Read all policy records from `vault/insurance/00_current/` (summary records) and `vault/insurance/01_policies/` (detail documents).
+1. Read all policy records from `vault/insurance/00_current/` (summary records) and `vault/insurance/00_current/` (detail documents).
 2. For each policy: extract carrier, type, limits, deductible, annual premium, and renewal date.
 3. Format into coverage matrix table with consistent column headers.
 4. Determine expected coverage baseline from `vault/insurance/config.md` (dependents, homeowner/renter, vehicle count, net worth, rental properties).
@@ -32,7 +32,7 @@ Called by `aireadylife-insurance-op-review-brief` and `aireadylife-insurance-op-
 ## Input
 
 - `~/Documents/AIReadyLife/vault/insurance/00_current/` — active policy summary records
-- `~/Documents/AIReadyLife/vault/insurance/01_policies/` — policy documents for limit details
+- `~/Documents/AIReadyLife/vault/insurance/00_current/` — policy documents for limit details
 - `~/Documents/AIReadyLife/vault/insurance/config.md` — user profile for baseline determination
 
 ## Output Format
@@ -73,7 +73,7 @@ deductible: X
 last_updated: "YYYY-MM-DD"
 ```
 
-Detailed policy documents (declarations pages, full policies) stored in `vault/insurance/01_policies/{type}/`.
+Detailed policy documents (declarations pages, full policies) stored in `vault/insurance/00_current/{type}/`.
 
 ## Error Handling
 
@@ -83,5 +83,5 @@ Detailed policy documents (declarations pages, full policies) stored in `vault/i
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/insurance/00_current/`, `~/Documents/AIReadyLife/vault/insurance/01_policies/`, `~/Documents/AIReadyLife/vault/insurance/config.md`
+- Reads from: `~/Documents/AIReadyLife/vault/insurance/00_current/`, `~/Documents/AIReadyLife/vault/insurance/00_current/`, `~/Documents/AIReadyLife/vault/insurance/config.md`
 - Writes to: None (returns data to calling op)

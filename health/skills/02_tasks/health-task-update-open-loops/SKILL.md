@@ -26,8 +26,8 @@ Serves as the single, authoritative write point for the health domain's open-loo
 
 **Auto-resolution logic.** The task scans all existing OPEN entries and applies resolution rules:
 - Refill reminder flags: auto-resolve if the refill date has passed (the window closed, indicating the user presumably filled or the reminder is now moot)
-- Lab flags: auto-resolve if the most recent lab panel shows the same biomarker within normal range (cross-referenced with the lab summary files in `vault/health/01_labs/`)
-- Preventive care gaps: auto-resolve if a completion record has been added to `vault/health/03_preventive/completion-log.md` with a date after the gap was flagged
+- Lab flags: auto-resolve if the most recent lab panel shows the same biomarker within normal range (cross-referenced with the lab summary files in `vault/health/00_current/`)
+- Preventive care gaps: auto-resolve if a completion record has been added to `vault/health/00_current/completion-log.md` with a date after the gap was flagged
 - Wearable anomaly flags: auto-resolve if the metric has returned within 1 SD of the 90-day baseline for 7 consecutive days
 
 **Resolution record.** Resolved items are marked RESOLVED with a resolution date and a one-line resolution note (e.g., "Biomarker returned to normal range per 2025-03 panel," "Refill date passed — assumed filled"). They are not deleted. This preserves a searchable audit trail of past health flags.

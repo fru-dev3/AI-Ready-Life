@@ -36,7 +36,7 @@ On every run, the task also resolves items that are no longer applicable: a list
 
 - Flag data passed from calling op (flag type, description, financial context, recommended action, urgency)
 - `~/Documents/AIReadyLife/vault/real-estate/open-loops.md` (existing items)
-- `~/Documents/AIReadyLife/vault/real-estate/01_listings/` (listing status for resolution check)
+- `~/Documents/AIReadyLife/vault/real-estate/00_current/` (listing status for resolution check)
 - `~/Documents/AIReadyLife/vault/real-estate/config.md` (pre-approval expiry if stored)
 
 ## Output Format
@@ -66,6 +66,6 @@ No additional configuration required beyond vault existing and config.md populat
 ## Vault Paths
 
 - Reads from: `~/Documents/AIReadyLife/vault/real-estate/open-loops.md`
-- Reads from: `~/Documents/AIReadyLife/vault/real-estate/01_listings/`
+- Reads from: `~/Documents/AIReadyLife/vault/real-estate/00_current/`
 - Writes to: `~/Documents/AIReadyLife/vault/real-estate/open-loops.md`
 - Writes to: `~/Documents/AIReadyLife/vault/real-estate/open-loops-archive.md`

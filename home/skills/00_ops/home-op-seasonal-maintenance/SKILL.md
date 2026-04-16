@@ -50,14 +50,14 @@ The op calculates total estimated seasonal maintenance cost across all planned t
 4. For each task: look up preferred vendor in config.md; note vendor contact info if present
 5. Flag any tasks deferred from a prior season as overdue with cost-of-deferral context
 6. Calculate total estimated seasonal maintenance cost (sum of all task cost estimates using midpoint of range)
-7. Write seasonal checklist to `~/Documents/AIReadyLife/vault/home/01_maintenance/YYYY-{season}-checklist.md`
+7. Write seasonal checklist to `~/Documents/AIReadyLife/vault/home/00_current/YYYY-{season}-checklist.md`
 8. Call `aireadylife-home-flag-maintenance-item` for any overdue or significantly-overdue items
 9. Call `aireadylife-home-update-open-loops` with all newly flagged items
 10. Present checklist sorted by urgency with total cost estimate and scheduling notes
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/home/01_maintenance/` — maintenance history
+- `~/Documents/AIReadyLife/vault/home/00_current/` — maintenance history
 - `~/Documents/AIReadyLife/vault/home/config.md` — vendor assignments, home type details, HVAC filter type, irrigation/chimney presence
 
 ## Output Format
@@ -89,6 +89,6 @@ Required in `~/Documents/AIReadyLife/vault/home/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/home/01_maintenance/`, `config.md`
-- Writes to: `~/Documents/AIReadyLife/vault/home/01_maintenance/YYYY-{season}-checklist.md`
+- Reads from: `~/Documents/AIReadyLife/vault/home/00_current/`, `config.md`
+- Writes to: `~/Documents/AIReadyLife/vault/home/00_current/YYYY-{season}-checklist.md`
 - Writes to: `~/Documents/AIReadyLife/vault/home/open-loops.md`

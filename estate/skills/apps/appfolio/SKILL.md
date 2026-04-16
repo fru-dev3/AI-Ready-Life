@@ -53,6 +53,6 @@ appfolio_chrome_profile: /Users/YOU/Library/Application Support/Google/Chrome/De
 
 ## Vault Output
 
-`~/Documents/AIReadyLife/vault/estate/03_cashflow/` (cash flow data)
-`~/Documents/AIReadyLife/vault/estate/02_maintenance/` (work order data)
-`~/Documents/AIReadyLife/vault/estate/01_tenants/` (payment history data)
+`~/Documents/AIReadyLife/vault/estate/00_current/` (cash flow data)
+`~/Documents/AIReadyLife/vault/estate/00_current/` (work order data)
+`~/Documents/AIReadyLife/vault/estate/00_current/` (payment history data)

@@ -90,7 +90,7 @@ When year is present: calculate age and include in birthday alert context ("turn
 
 ## Notes
 
-- The vault contact files at `~/Documents/AIReadyLife/vault/social/01_contacts/` are the primary source of truth for relationship tier, health status, and interaction history. Contacts app is the supplemental source for birthday dates and contact details.
+- The vault contact files at `~/Documents/AIReadyLife/vault/social/00_current/` are the primary source of truth for relationship tier, health status, and interaction history. Contacts app is the supplemental source for birthday dates and contact details.
 - If a contact has a birthday in the Contacts app but no vault file, flag it during monthly sync so the user can create a contact record for that person.
 - Google Contacts notes field is often empty; do not rely on it as the sole source of interaction history — always check the vault interaction log first.
 - Contact export should be refreshed monthly or before each `social-op-monthly-sync` run to ensure birthday data is current.
@@ -99,4 +99,4 @@ When year is present: calculate age and include in birthday alert context ("turn
 ## Vault Output
 
 `~/Documents/AIReadyLife/vault/social/00_current/contacts-export.vcf` — raw export file
-`~/Documents/AIReadyLife/vault/social/01_contacts/` — individual contact profile files (written by social-task-log-interaction and social-op-monthly-sync, not by this skill directly)
+`~/Documents/AIReadyLife/vault/social/00_current/` — individual contact profile files (written by social-task-log-interaction and social-op-monthly-sync, not by this skill directly)

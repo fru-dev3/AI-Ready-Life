@@ -13,11 +13,11 @@ description: >
 # aireadylife-health-build-wellness-summary
 
 **Trigger:** Called by `aireadylife-health-review-brief` and `aireadylife-health-anomaly-watch`
-**Produces:** Monthly wellness summary in `vault/health/04_briefs/YYYY-MM-wellness-summary.md`
+**Produces:** Monthly wellness summary in `vault/health/02_briefs/YYYY-MM-wellness-summary.md`
 
 ## What It Does
 
-Reads all wearable data export files in `vault/health/00_current/wearable/` and calculates 30-day rolling averages for seven core wellness signals: sleep score (0–100 Oura scale), total sleep duration (hours), HRV RMSSD (nightly average, in milliseconds), resting heart rate (BPM), readiness score (Oura, 0–100), daily step count, and active energy burned (kcal). For Apple Health sources, only the metrics available are computed — the system does not fail if HRV or readiness are missing from Apple data.
+Reads all wearable data export files in `vault/health/00_current/` and calculates 30-day rolling averages for seven core wellness signals: sleep score (0–100 Oura scale), total sleep duration (hours), HRV RMSSD (nightly average, in milliseconds), resting heart rate (BPM), readiness score (Oura, 0–100), daily step count, and active energy burned (kcal). For Apple Health sources, only the metrics available are computed — the system does not fail if HRV or readiness are missing from Apple data.
 
 Each metric's 30-day average is compared against two baselines: the prior 30-day period (month-over-month trend) and the 90-day rolling baseline (broader personal norm). A metric deviating more than 15% from the 90-day baseline is flagged with a deviation label. A metric improving vs. prior month but still deviating from the 90-day baseline is noted as "recovering" — this distinction matters for HRV and sleep score, where short-term disruptions (illness, travel) may resolve while the longer trend still warrants attention.
 
@@ -38,7 +38,7 @@ Sleep duration is evaluated against the 7–9 hour adult guideline. A 30-day ave
 
 ## Steps
 
-1. Read all wearable export files from `vault/health/00_current/wearable/` (Oura JSON exports or Apple Health CSV)
+1. Read all wearable export files from `vault/health/00_current/` (Oura JSON exports or Apple Health CSV)
 2. Filter records to the most recent 90 days; partition into three 30-day windows (current month, prior month, 90-day pool)
 3. Calculate 30-day averages for: sleep score, sleep duration, HRV RMSSD, resting HR, readiness score, steps, active energy
 4. Calculate prior 30-day averages for month-over-month delta on each metric
@@ -46,12 +46,12 @@ Sleep duration is evaluated against the 7–9 hour adult guideline. A 30-day ave
 6. For each metric, compute percent deviation from 90-day baseline
 7. Flag any metric with deviation >15% from baseline; label as "declining," "improving," or "stable vs. baseline"
 8. Apply special rules: HRV drop >20% over any 7-day window = anomaly; sustained resting HR +5 BPM = anomaly; sleep <7h average = concern
-9. Write formatted wellness summary to `vault/health/04_briefs/YYYY-MM-wellness-summary.md`
+9. Write formatted wellness summary to `vault/health/02_briefs/YYYY-MM-wellness-summary.md`
 10. Return flagged metrics list to the calling op for open-loop logging
 
 ## Input
 
-- `vault/health/00_current/wearable/` — Oura Ring JSON or Apple Health CSV exports
+- `vault/health/00_current/` — Oura Ring JSON or Apple Health CSV exports
 - `vault/health/config.md` — wearable type, any user-configured thresholds
 
 ## Output Format
@@ -78,6 +78,6 @@ Required fields in `vault/health/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/health/00_current/wearable/`
+- Reads from: `~/Documents/AIReadyLife/vault/health/00_current/`
 - Reads from: `~/Documents/AIReadyLife/vault/health/config.md`
-- Writes to: `~/Documents/AIReadyLife/vault/health/04_briefs/YYYY-MM-wellness-summary.md`
+- Writes to: `~/Documents/AIReadyLife/vault/health/02_briefs/YYYY-MM-wellness-summary.md`

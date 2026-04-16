@@ -15,7 +15,7 @@ Calls `aireadylife-brand-flow-build-analytics-summary` to compile cross-platform
 
 Scoring rubric (25 points each): Profile consistency (0-25): full 25 if all profiles match master and consistency score is 100%; proportional deduction — each 🔴 inconsistency costs 10 points, each 🟡 costs 3 points. Content cadence (0-25): full 25 if all primary platforms are within 10% of their set posting targets this month; 2 points deducted per cadence miss per platform; 0 for any platform with zero content in 30 days. Follower growth (0-25): full 25 if at least 2 primary platforms show positive MoM growth; 15 if 1 platform growing; 5 if all flat; 0 if any primary platform is declining. Mention sentiment (0-25): full 25 if >80% positive; 18 for 61-80%; 10 for 40-60%; 0 for <40% positive.
 
-Tracks the health score trend: current month vs. prior 3 months average. A score above 75 is healthy. 50-74 is watch territory. Below 50 is at risk and requires a specific intervention plan. Writes the complete synthesis to vault/brand/01_analytics/synthesis-{YYYY-MM}.md and updates open-loops.
+Tracks the health score trend: current month vs. prior 3 months average. A score above 75 is healthy. 50-74 is watch territory. Below 50 is at risk and requires a specific intervention plan. Writes the complete synthesis to vault/brand/00_current/synthesis-{YYYY-MM}.md and updates open-loops.
 
 ## Triggers
 
@@ -37,19 +37,19 @@ Tracks the health score trend: current month vs. prior 3 months average. A score
 6. Evaluate follower growth: count platforms with positive MoM growth; calculate growth score component (0-25)
 7. Evaluate mention sentiment: use distribution from analyze-mentions flow; calculate sentiment score component (0-25)
 8. Calculate combined brand health score (0-100) from the four components
-9. Load prior month score from vault/brand/01_analytics/synthesis-{prior YYYY-MM}.md for trend line
+9. Load prior month score from vault/brand/00_current/synthesis-{prior YYYY-MM}.md for trend line
 10. Identify the single most impactful action to improve the brand health score next month
-11. Write synthesis to vault/brand/01_analytics/synthesis-{YYYY-MM}.md
+11. Write synthesis to vault/brand/00_current/synthesis-{YYYY-MM}.md
 12. Call `aireadylife-brand-task-update-open-loops` with all flags from this synthesis
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/brand/01_analytics/` — current and prior month platform analytics
-- `~/Documents/AIReadyLife/vault/brand/03_mentions/` — mention log for the period
-- `~/Documents/AIReadyLife/vault/brand/02_profiles/` — profile snapshots and master profile
-- `~/Documents/AIReadyLife/vault/brand/04_content/` — content log for cadence evaluation
+- `~/Documents/AIReadyLife/vault/brand/00_current/` — current and prior month platform analytics
+- `~/Documents/AIReadyLife/vault/brand/00_current/` — mention log for the period
+- `~/Documents/AIReadyLife/vault/brand/00_current/` — profile snapshots and master profile
+- `~/Documents/AIReadyLife/vault/brand/00_current/` — content log for cadence evaluation
 - `~/Documents/AIReadyLife/vault/brand/config.md` — platforms, posting targets, scoring weights
-- `~/Documents/AIReadyLife/vault/brand/01_analytics/synthesis-{prior YYYY-MM}.md` — prior month score for trend
+- `~/Documents/AIReadyLife/vault/brand/00_current/synthesis-{prior YYYY-MM}.md` — prior month score for trend
 
 ## Output Format
 
@@ -96,5 +96,5 @@ Required in `~/Documents/AIReadyLife/vault/brand/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/brand/01_analytics/`, `~/Documents/AIReadyLife/vault/brand/03_mentions/`, `~/Documents/AIReadyLife/vault/brand/02_profiles/`, `~/Documents/AIReadyLife/vault/brand/04_content/`, `~/Documents/AIReadyLife/vault/brand/config.md`
-- Writes to: `~/Documents/AIReadyLife/vault/brand/01_analytics/synthesis-{YYYY-MM}.md`, `~/Documents/AIReadyLife/vault/brand/open-loops.md`
+- Reads from: `~/Documents/AIReadyLife/vault/brand/00_current/`, `~/Documents/AIReadyLife/vault/brand/00_current/`, `~/Documents/AIReadyLife/vault/brand/00_current/`, `~/Documents/AIReadyLife/vault/brand/00_current/`, `~/Documents/AIReadyLife/vault/brand/config.md`
+- Writes to: `~/Documents/AIReadyLife/vault/brand/00_current/synthesis-{YYYY-MM}.md`, `~/Documents/AIReadyLife/vault/brand/open-loops.md`

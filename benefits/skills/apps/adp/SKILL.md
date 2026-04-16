@@ -65,7 +65,7 @@ Login → Tax → W-2 Statements → Select year → Download PDF
 - **Always headless=False** — ADP uses bot detection; headless Chrome sessions are blocked
 - **Employer SSO:** Many employers configure ADP to require SSO via Okta, Microsoft Azure AD, or Google Workspace. The Chrome profile must have an active SSO session. If the session has expired, the user must log in manually in Chrome before the skill can access the portal.
 - **Session duration:** ADP sessions typically expire after 30-60 minutes of inactivity; the Chrome session cookies last longer but may require re-authentication after a few days
-- **Pay stub PDF naming:** Save to `vault/benefits/payroll/YYYY-MM-paystub.pdf` using the pay period end date as the month reference
+- **Pay stub PDF naming:** Save to `vault/benefits/00_current/YYYY-MM-paystub.pdf` using the pay period end date as the month reference
 
 ## Payroll Verification Checklist
 
@@ -84,5 +84,5 @@ After downloading each pay stub, verify:
 
 ## Vault Output
 
-- `~/Documents/AIReadyLife/vault/benefits/payroll/YYYY-MM-paystub.pdf` — monthly pay stubs
-- `~/Documents/AIReadyLife/vault/benefits/payroll/YYYY-W2.pdf` — annual W-2
+- `~/Documents/AIReadyLife/vault/benefits/00_current/YYYY-MM-paystub.pdf` — monthly pay stubs
+- `~/Documents/AIReadyLife/vault/benefits/00_current/YYYY-W2.pdf` — annual W-2

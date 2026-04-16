@@ -11,13 +11,13 @@ description: >
 # aireadylife-vision-draft-quarterly-plan
 
 **Trigger:** Called by `aireadylife-vision-op-quarterly-planning`, `aireadylife-vision-op-annual-review`
-**Produces:** Draft quarterly OKR plan at ~/Documents/AIReadyLife/vault/vision/01_okrs/YYYY-QN-draft-okrs.md
+**Produces:** Draft quarterly OKR plan at ~/Documents/AIReadyLife/vault/vision/00_current/YYYY-QN-draft-okrs.md
 
 ## What It Does
 
 This flow synthesizes life vision context, current domain health, and the backlog of open milestones to generate a starting-point set of OKRs for the upcoming quarter. It produces a draft — a structured starting point for the user's quarterly planning conversation — not a final plan.
 
-**Vision anchoring:** The flow begins by reading the life vision document from vault/vision/00_goals/ (the 3-5 year picture). Quarterly planning without vision anchoring tends to produce reactive OKRs that address whatever was loudest last quarter rather than what matters most for long-term trajectory. The vision document is the filter: proposed objectives must connect to a 3-year or 1-year life priority, not just to a current pain point.
+**Vision anchoring:** The flow begins by reading the life vision document from vault/vision/00_current/ (the 3-5 year picture). Quarterly planning without vision anchoring tends to produce reactive OKRs that address whatever was loudest last quarter rather than what matters most for long-term trajectory. The vision document is the filter: proposed objectives must connect to a 3-year or 1-year life priority, not just to a current pain point.
 
 **Domain selection logic:** The flow selects 3-5 priority domains for the quarter using a composite score. Inputs to the selection: (1) domain score from the most recent monthly scorecard — declining or low-scoring domains get selection priority for recovery objectives; (2) vision alignment — domains that appear prominently in the life vision document get selection priority for continued-investment objectives; (3) carry-forward milestone backlog — domains with important milestones that were planned for prior quarters but not completed get selection priority because the work is already known; (4) momentum signal — domains scoring 8+ for 2+ consecutive months may not need a specific OKR this quarter (they're working already). The selected 3-5 domains represent a mix of recovery (bottom domains) and continued investment (vision-aligned domains with current momentum).
 
@@ -27,9 +27,9 @@ This flow synthesizes life vision context, current domain health, and the backlo
 
 ## Steps
 
-1. Read life vision document from vault/vision/00_goals/ for 3-5 year context
-2. Read most recent monthly scorecard from vault/vision/02_scorecard/ for domain scores and trends
-3. Read open milestone backlog from vault/vision/00_goals/ for carry-forward items
+1. Read life vision document from vault/vision/00_current/ for 3-5 year context
+2. Read most recent monthly scorecard from vault/vision/00_current/ for domain scores and trends
+3. Read open milestone backlog from vault/vision/00_current/ for carry-forward items
 4. Score each of the 13 domains on the selection composite (domain score + vision alignment + milestone backlog)
 5. Select 3-5 priority domains; write rationale for each
 6. For each priority domain: draft one Objective (qualitative, inspiring, quarterly-scale)
@@ -37,19 +37,19 @@ This flow synthesizes life vision context, current domain health, and the backlo
 8. Verify each KR is achievable within the quarter given reasonable effort levels
 9. If any KR feels unrealistic: flag with "calibration note" suggesting a more achievable version
 10. Assemble draft OKR document with rationale section
-11. Write draft to vault/vision/01_okrs/YYYY-QN-draft-okrs.md
+11. Write draft to vault/vision/00_current/YYYY-QN-draft-okrs.md
 12. Return draft with selection rationale to calling op for user review
 
 ## Input
 
-- ~/Documents/AIReadyLife/vault/vision/00_goals/ (life vision document, BHAG)
-- ~/Documents/AIReadyLife/vault/vision/02_scorecard/ (most recent monthly scorecard)
-- ~/Documents/AIReadyLife/vault/vision/00_goals/milestones.md (carry-forward milestone backlog)
+- ~/Documents/AIReadyLife/vault/vision/00_current/ (life vision document, BHAG)
+- ~/Documents/AIReadyLife/vault/vision/00_current/ (most recent monthly scorecard)
+- ~/Documents/AIReadyLife/vault/vision/00_current/milestones.md (carry-forward milestone backlog)
 - Domain selection composite data from calling op
 
 ## Output Format
 
-Draft OKR file (vault/vision/01_okrs/YYYY-QN-draft-okrs.md):
+Draft OKR file (vault/vision/00_current/YYYY-QN-draft-okrs.md):
 ```markdown
 # Q[N] [YYYY] — Draft OKRs
 
@@ -76,15 +76,15 @@ Generated: [YYYY-MM-DD]
 
 ## Configuration
 
-No configuration required. Vision document must exist in vault/vision/00_goals/.
+No configuration required. Vision document must exist in vault/vision/00_current/.
 
 ## Error Handling
 
-- **Life vision document missing:** Draft OKRs based on domain health alone; note "Complete the life vision document in vault/vision/00_goals/ to enable vision-anchored OKR drafting."
+- **Life vision document missing:** Draft OKRs based on domain health alone; note "Complete the life vision document in vault/vision/00_current/ to enable vision-anchored OKR drafting."
 - **No monthly scorecard available:** Use domain open-loops data for selection; note limited scoring confidence.
 - **Fewer than 3 domains with clear priority signals:** Draft OKRs for whatever domains have available data; note selection was based on limited signals.
 
 ## Vault Paths
 
-- Reads from: ~/Documents/AIReadyLife/vault/vision/00_goals/, ~/Documents/AIReadyLife/vault/vision/02_scorecard/, ~/Documents/AIReadyLife/vault/vision/00_goals/milestones.md
-- Writes to: ~/Documents/AIReadyLife/vault/vision/01_okrs/YYYY-QN-draft-okrs.md
+- Reads from: ~/Documents/AIReadyLife/vault/vision/00_current/, ~/Documents/AIReadyLife/vault/vision/00_current/, ~/Documents/AIReadyLife/vault/vision/00_current/milestones.md
+- Writes to: ~/Documents/AIReadyLife/vault/vision/00_current/YYYY-QN-draft-okrs.md

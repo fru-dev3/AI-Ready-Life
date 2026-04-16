@@ -14,7 +14,7 @@ description: >
 # aireadylife-wealth-debt-review
 
 **Cadence:** Quarterly (1st of January, April, July, October)
-**Produces:** Debt summary table at `vault/wealth/02_debt/YYYY-MM-debt-summary.md`; milestone flags in `vault/wealth/open-loops.md`
+**Produces:** Debt summary table at `vault/wealth/00_current/YYYY-MM-debt-summary.md`; milestone flags in `vault/wealth/open-loops.md`
 
 ## What It Does
 
@@ -39,5 +39,5 @@ None
 
 ## Vault Output
 
-- `vault/wealth/02_debt/YYYY-MM-debt-summary.md` — debt table with payoff timelines and scenarios
+- `vault/wealth/00_current/YYYY-MM-debt-summary.md` — debt table with payoff timelines and scenarios
 - `vault/wealth/open-loops.md` — milestone flags and DTI alerts

@@ -35,14 +35,14 @@ turbotax_email: YOUR_INTUIT_EMAIL
 turbotax_chrome_profile: /Users/YOU/Library/Application Support/Google/Chrome/Default
 ```
 
-If the user files with a CPA instead of TurboTax, the prior year return PDF can be obtained directly from the CPA and placed in `vault/tax/06_archive/YYYY/` — the IRS skill's transcript download is an alternative source for key figures (prior year AGI, prior year tax liability).
+If the user files with a CPA instead of TurboTax, the prior year return PDF can be obtained directly from the CPA and placed in `vault/tax/01_prior/YYYY/` — the IRS skill's transcript download is an alternative source for key figures (prior year AGI, prior year tax liability).
 
 ## Prior Year Return Archive
 
 After filing (or receiving the filed return from CPA), download the complete return PDF:
 - TurboTax: Tax Home → [Year] → Download or print your return → Full federal return
-- Save as: `vault/tax/06_archive/YYYY/1040-YYYY-complete.pdf`
-- Save state return separately: `vault/tax/06_archive/YYYY/state-return-YYYY.pdf`
+- Save as: `vault/tax/01_prior/YYYY/1040-YYYY-complete.pdf`
+- Save state return separately: `vault/tax/01_prior/YYYY/state-return-YYYY.pdf`
 
 ## Key Figures for Safe Harbor Calculation
 
@@ -64,6 +64,6 @@ From the prior year return PDF (Form 1040):
 
 ## Vault Output
 
-- `vault/tax/06_archive/YYYY/1040-YYYY-complete.pdf` — complete federal return PDF
-- `vault/tax/06_archive/YYYY/state-return-YYYY.pdf` — state return PDF
+- `vault/tax/01_prior/YYYY/1040-YYYY-complete.pdf` — complete federal return PDF
+- `vault/tax/01_prior/YYYY/state-return-YYYY.pdf` — state return PDF
 - `vault/tax/config.md` — updated with prior year AGI and total tax after download (manual update prompt)

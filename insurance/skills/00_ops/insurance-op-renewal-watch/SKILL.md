@@ -36,7 +36,7 @@ Runs monthly to ensure no insurance policy auto-renews without your awareness an
 2. Calculate days_until_renewal for each policy as of today.
 3. Filter to policies with days_until_renewal ≤ 60.
 4. For each upcoming renewal: apply categorization rules (shop / auto-renew / coverage-review) based on policy type and signals.
-5. Check for premium increase signal: read prior year premium from `vault/insurance/04_archive/` if available; flag if current year premium is >10% higher.
+5. Check for premium increase signal: read prior year premium from `vault/insurance/01_prior/` if available; flag if current year premium is >10% higher.
 6. For "shop" categorized renewals: compile current coverage parameters (limits, deductible, endorsements) and generate competing quote action steps.
 7. For "coverage-review" categorized renewals: identify the specific coverage parameter needing reassessment and the triggering life event or change.
 8. Call `aireadylife-insurance-flow-check-renewal-dates` for the detailed renewal timeline analysis.
@@ -47,7 +47,7 @@ Runs monthly to ensure no insurance policy auto-renews without your awareness an
 ## Input
 
 - `~/Documents/AIReadyLife/vault/insurance/00_current/` — all active policy records with renewal dates
-- `~/Documents/AIReadyLife/vault/insurance/04_archive/` — prior year premiums for change detection
+- `~/Documents/AIReadyLife/vault/insurance/01_prior/` — prior year premiums for change detection
 - `~/Documents/AIReadyLife/vault/insurance/config.md` — life events and changes since last renewal
 
 ## Output Format
@@ -94,5 +94,5 @@ Required in `vault/insurance/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/insurance/00_current/`, `~/Documents/AIReadyLife/vault/insurance/04_archive/`, `~/Documents/AIReadyLife/vault/insurance/config.md`
+- Reads from: `~/Documents/AIReadyLife/vault/insurance/00_current/`, `~/Documents/AIReadyLife/vault/insurance/01_prior/`, `~/Documents/AIReadyLife/vault/insurance/config.md`
 - Writes to: `~/Documents/AIReadyLife/vault/insurance/00_current/renewal-alerts.md`, `~/Documents/AIReadyLife/vault/insurance/open-loops.md`

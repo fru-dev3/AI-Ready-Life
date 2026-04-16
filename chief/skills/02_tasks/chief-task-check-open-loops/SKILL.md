@@ -17,7 +17,7 @@ This task produces a lightweight backlog snapshot used by the weekly preview and
 
 The task scans ~/Documents/AIReadyLife/vault/ for all plugin subdirectories containing an open-loops.md file. For each discovered plugin, it reads the open-loops.md and counts every unresolved item (unchecked checkbox: `- [ ]`). Items are classified by their priority marker (🔴 / 🟡 / 🟢) and counted per tier per domain.
 
-The result is a structured table: domain name, total unresolved items, count per tier. A summary row shows totals across all domains. Any domain with 5+ unresolved items gets a "potential backlog buildup" annotation in the result — this threshold signals that items are accumulating faster than they're being resolved, which is worth investigating. Any domain where the unresolved count increased compared to the snapshot in the prior week's vault/chief/01_briefs/ archive gets a "growing" annotation.
+The result is a structured table: domain name, total unresolved items, count per tier. A summary row shows totals across all domains. Any domain with 5+ unresolved items gets a "potential backlog buildup" annotation in the result — this threshold signals that items are accumulating faster than they're being resolved, which is worth investigating. Any domain where the unresolved count increased compared to the snapshot in the prior week's vault/chief/02_briefs/ archive gets a "growing" annotation.
 
 This task intentionally does not return item text — that is the job of `chief-flow-collect-domain-alerts`. check-open-loops is a count-only operation designed to be fast and to give the calling flow a week-over-week trend signal without having to parse and re-sort the full alert list.
 
@@ -27,7 +27,7 @@ This task intentionally does not return item text — that is the job of `chief-
 2. For each discovered domain: read open-loops.md; count unresolved items (unchecked checkboxes)
 3. Classify each unresolved item by priority marker: 🔴, 🟡, or 🟢
 4. Record count per tier per domain
-5. Check vault/chief/01_briefs/ archive for prior week's count per domain (for trend calculation)
+5. Check vault/chief/02_briefs/ archive for prior week's count per domain (for trend calculation)
 6. Annotate domains with 5+ total unresolved items as "potential backlog buildup"
 7. Annotate domains where count increased vs. prior week as "growing"
 8. Assemble and return structured backlog summary table to calling flow
@@ -35,7 +35,7 @@ This task intentionally does not return item text — that is the job of `chief-
 ## Input
 
 - ~/Documents/AIReadyLife/vault/*/open-loops.md
-- ~/Documents/AIReadyLife/vault/chief/01_briefs/ (prior week's brief for trend comparison)
+- ~/Documents/AIReadyLife/vault/chief/02_briefs/ (prior week's brief for trend comparison)
 
 ## Output Format
 
@@ -61,5 +61,5 @@ No configuration required. Auto-discovers plugins from vault/ directory structur
 
 ## Vault Paths
 
-- Reads from: ~/Documents/AIReadyLife/vault/*/open-loops.md, ~/Documents/AIReadyLife/vault/chief/01_briefs/
-- Writes to: ~/Documents/AIReadyLife/vault/chief/02_agenda/ (via calling op, not directly)
+- Reads from: ~/Documents/AIReadyLife/vault/*/open-loops.md, ~/Documents/AIReadyLife/vault/chief/02_briefs/
+- Writes to: ~/Documents/AIReadyLife/vault/chief/00_current/ (via calling op, not directly)

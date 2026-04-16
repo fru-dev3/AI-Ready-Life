@@ -83,4 +83,4 @@ Optional in `~/Documents/AIReadyLife/vault/content/config.md`:
 ## Vault Paths
 
 - Reads from: `~/Documents/AIReadyLife/vault/content/config.md`, target subfolder for duplicate check
-- Writes to: `~/Documents/AIReadyLife/vault/content/00_youtube/` or `01_newsletter/` or `02_gumroad/` depending on platform
+- Writes to: `~/Documents/AIReadyLife/vault/content/00_current/` or `01_newsletter/` or `02_gumroad/` depending on platform

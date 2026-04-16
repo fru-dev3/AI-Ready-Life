@@ -13,7 +13,7 @@ Called by `aireadylife-insurance-op-renewal-watch` for each policy renewal ident
 
 **Auto-renewal warning:** For policies categorized as "shop" or "coverage-review," the flag prominently notes that the policy WILL auto-renew on the renewal date if no action is taken. Most personal lines policies auto-renew at the new premium set by the carrier. Missing the action window means either paying a higher premium for another year or making a mid-term change later (which may involve cancellation fees or coverage gaps). This makes the cost of inaction explicit.
 
-**Prior year premium comparison:** If prior year premium data is available in `vault/insurance/04_archive/`, includes the year-over-year premium change in the flag. A premium increase > 10% is highlighted because it is a market signal: the carrier may be exiting your area, re-pricing your risk class, or testing price sensitivity. In all of these cases, shopping is warranted regardless of the policy type.
+**Prior year premium comparison:** If prior year premium data is available in `vault/insurance/01_prior/`, includes the year-over-year premium change in the flag. A premium increase > 10% is highlighted because it is a market signal: the carrier may be exiting your area, re-pricing your risk class, or testing price sensitivity. In all of these cases, shopping is warranted regardless of the policy type.
 
 **Quote parameters for shop renewals:** For shop-categorized renewals, the flag includes the exact coverage parameters to bring to quote comparison — not just "get quotes" but "get quotes for auto insurance with $300K/$500K/$100K liability limits, $500 collision deductible, $250 comprehensive deductible, for [year make model]." This specificity ensures quotes are apples-to-apples.
 

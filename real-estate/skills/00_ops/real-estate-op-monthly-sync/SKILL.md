@@ -41,7 +41,7 @@ After these three updates, the monthly sync triggers the review brief, which for
 4. Call `aireadylife-real-estate-affordability-review` to recalculate max purchase price at updated rate
 5. Note delta from prior month affordability ceiling (e.g., "Rate increase of 0.25% reduced max purchase price by $18,000")
 6. Call `aireadylife-real-estate-run-buy-vs-rent` with updated market prices and current rent
-7. Check for any active listings saved in `~/Documents/AIReadyLife/vault/real-estate/01_listings/` and update their DOM count
+7. Check for any active listings saved in `~/Documents/AIReadyLife/vault/real-estate/00_current/` and update their DOM count
 8. Call `aireadylife-real-estate-update-open-loops` to add new flags and resolve any completed items
 9. Trigger `aireadylife-real-estate-review-brief` to compile results into the monthly brief
 10. Write sync completion record to `~/Documents/AIReadyLife/vault/real-estate/00_current/last-sync.md`
@@ -49,9 +49,9 @@ After these three updates, the monthly sync triggers the review brief, which for
 ## Input
 
 - `~/Documents/AIReadyLife/vault/real-estate/config.md`
-- `~/Documents/AIReadyLife/vault/real-estate/00_markets/` (prior snapshots)
-- `~/Documents/AIReadyLife/vault/real-estate/01_listings/` (saved listings to update)
-- `~/Documents/AIReadyLife/vault/real-estate/02_analysis/` (prior affordability worksheet)
+- `~/Documents/AIReadyLife/vault/real-estate/00_current/` (prior snapshots)
+- `~/Documents/AIReadyLife/vault/real-estate/00_current/` (saved listings to update)
+- `~/Documents/AIReadyLife/vault/real-estate/00_current/` (prior affordability worksheet)
 - Live data from Zillow or Redfin via web research
 
 ## Output Format
@@ -63,7 +63,7 @@ After these three updates, the monthly sync triggers the review brief, which for
 - Number of significant market shifts flagged
 - Buy vs. rent verdict (same as prior month / changed)
 - Number of open loop items added / resolved
-- Link to full review brief: `vault/real-estate/03_briefs/YYYY-MM-realestate-brief.md`
+- Link to full review brief: `vault/real-estate/02_briefs/YYYY-MM-realestate-brief.md`
 
 ## Configuration
 
@@ -83,9 +83,9 @@ Required fields in `~/Documents/AIReadyLife/vault/real-estate/config.md`:
 ## Vault Paths
 
 - Reads from: `~/Documents/AIReadyLife/vault/real-estate/config.md`
-- Reads from: `~/Documents/AIReadyLife/vault/real-estate/00_markets/`, `01_listings/`, `02_analysis/`
-- Writes to: `~/Documents/AIReadyLife/vault/real-estate/00_markets/YYYY-MM-market-report.md`
-- Writes to: `~/Documents/AIReadyLife/vault/real-estate/02_analysis/YYYY-MM-affordability.md`
-- Writes to: `~/Documents/AIReadyLife/vault/real-estate/03_briefs/YYYY-MM-realestate-brief.md`
+- Reads from: `~/Documents/AIReadyLife/vault/real-estate/00_current/`, `01_listings/`, `02_analysis/`
+- Writes to: `~/Documents/AIReadyLife/vault/real-estate/00_current/YYYY-MM-market-report.md`
+- Writes to: `~/Documents/AIReadyLife/vault/real-estate/00_current/YYYY-MM-affordability.md`
+- Writes to: `~/Documents/AIReadyLife/vault/real-estate/02_briefs/YYYY-MM-realestate-brief.md`
 - Writes to: `~/Documents/AIReadyLife/vault/real-estate/open-loops.md`
 - Writes to: `~/Documents/AIReadyLife/vault/real-estate/00_current/last-sync.md`

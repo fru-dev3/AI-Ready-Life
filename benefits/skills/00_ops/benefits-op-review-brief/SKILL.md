@@ -29,9 +29,9 @@ The brief also monitors the benefits calendar for upcoming events: enrollment wi
 
 ## Steps
 
-1. Check for most recent 401k review file in `vault/benefits/01_retirement/` — if more than 30 days old, note stale data.
-2. Check for most recent HSA review file in `vault/benefits/02_hsa/` — if more than 30 days old, note stale data.
-3. Check for most recent coverage audit in `vault/benefits/04_briefs/` — note quarter and any open gaps.
+1. Check for most recent 401k review file in `vault/benefits/00_current/` — if more than 30 days old, note stale data.
+2. Check for most recent HSA review file in `vault/benefits/00_current/` — if more than 30 days old, note stale data.
+3. Check for most recent coverage audit in `vault/benefits/02_briefs/` — note quarter and any open gaps.
 4. Read `vault/benefits/open-loops.md` — categorize all open items by severity (urgent / watch / info).
 5. Read `vault/benefits/config.md` — check benefits calendar for upcoming events within 60 days (enrollment, FSA deadline, ESPP purchase, RSU vest, beneficiary review).
 6. Extract 401k summary: current contribution rate, match capture status, YTD vs. limit, projected year-end.
@@ -39,20 +39,20 @@ The brief also monitors the benefits calendar for upcoming events: enrollment wi
 8. Extract coverage summary: all active coverage lines with status, any flagged gaps from coverage audit.
 9. Extract upcoming calendar events within 60 days with action-by dates.
 10. Synthesize all data into brief with sections ordered by priority.
-11. Write monthly brief to `vault/benefits/01_retirement/brief-YYYY-MM.md`.
+11. Write monthly brief to `vault/benefits/00_current/brief-YYYY-MM.md`.
 12. Call `aireadylife-benefits-task-update-open-loops` if any new items were identified during synthesis.
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/benefits/01_retirement/` — most recent 401k review
-- `~/Documents/AIReadyLife/vault/benefits/02_hsa/` — most recent HSA review
-- `~/Documents/AIReadyLife/vault/benefits/04_briefs/` — most recent coverage audit
+- `~/Documents/AIReadyLife/vault/benefits/00_current/` — most recent 401k review
+- `~/Documents/AIReadyLife/vault/benefits/00_current/` — most recent HSA review
+- `~/Documents/AIReadyLife/vault/benefits/02_briefs/` — most recent coverage audit
 - `~/Documents/AIReadyLife/vault/benefits/open-loops.md` — all outstanding flags
 - `~/Documents/AIReadyLife/vault/benefits/config.md` — benefits calendar events
 
 ## Output Format
 
-**Monthly Benefits Brief** — saved as `vault/benefits/01_retirement/brief-YYYY-MM.md`
+**Monthly Benefits Brief** — saved as `vault/benefits/00_current/brief-YYYY-MM.md`
 
 ```
 # Benefits Brief — [Month Year]
@@ -100,5 +100,5 @@ No additional configuration beyond standard `vault/benefits/config.md`. If sub-d
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/benefits/01_retirement/`, `~/Documents/AIReadyLife/vault/benefits/02_hsa/`, `~/Documents/AIReadyLife/vault/benefits/04_briefs/`, `~/Documents/AIReadyLife/vault/benefits/open-loops.md`, `~/Documents/AIReadyLife/vault/benefits/config.md`
-- Writes to: `~/Documents/AIReadyLife/vault/benefits/01_retirement/brief-YYYY-MM.md`, `~/Documents/AIReadyLife/vault/benefits/open-loops.md`
+- Reads from: `~/Documents/AIReadyLife/vault/benefits/00_current/`, `~/Documents/AIReadyLife/vault/benefits/00_current/`, `~/Documents/AIReadyLife/vault/benefits/02_briefs/`, `~/Documents/AIReadyLife/vault/benefits/open-loops.md`, `~/Documents/AIReadyLife/vault/benefits/config.md`
+- Writes to: `~/Documents/AIReadyLife/vault/benefits/00_current/brief-YYYY-MM.md`, `~/Documents/AIReadyLife/vault/benefits/open-loops.md`

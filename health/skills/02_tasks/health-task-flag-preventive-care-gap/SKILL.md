@@ -27,7 +27,7 @@ Covered care types and their recommended intervals:
 - **Colonoscopy** — every 10 years starting at age 45; or every 3 years for stool DNA test (Cologuard); or every 5 years for CT colonography
 - **Mammogram** — annually for women 40+ (ACS guidelines) or biennially 50–74 (USPSTF); user's provider recommendation takes precedence
 - **PSA discussion** — for men 50+ (or 40+ with family history) — flagged as "Schedule conversation with PCP about PSA screening"
-- **Provider-custom items** — any additional screenings listed in `vault/health/03_preventive/care-schedule.md`
+- **Provider-custom items** — any additional screenings listed in `vault/health/00_current/care-schedule.md`
 
 Urgency tiers:
 - **ROUTINE** — up to 30 days overdue; informational, schedule at next opportunity

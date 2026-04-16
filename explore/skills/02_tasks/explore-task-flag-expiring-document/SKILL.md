@@ -21,7 +21,7 @@ This task writes a structured expiration flag whenever a travel document is foun
 
 **Deduplication:** Before writing, the task checks vault/explore/open-loops.md for an existing unresolved flag for the same document + person combination. If found: it updates the existing entry with the current days-remaining count rather than creating a duplicate. Each update is timestamped in the entry's escalation log. This ensures the flag count in vault/explore/open-loops.md doesn't inflate with repeated monthly scan flags for the same underlying issue.
 
-**Resolution condition:** The flag is marked resolved when the task is called with a completion signal (the renewal was submitted and the new document is on file), or when `explore-task-update-open-loops` detects that the document record in vault/explore/01_documents/ has been updated with a new expiry date beyond the alert window.
+**Resolution condition:** The flag is marked resolved when the task is called with a completion signal (the renewal was submitted and the new document is on file), or when `explore-task-update-open-loops` detects that the document record in vault/explore/00_current/ has been updated with a new expiry date beyond the alert window.
 
 ## Steps
 

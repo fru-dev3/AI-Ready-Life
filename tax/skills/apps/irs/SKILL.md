@@ -47,7 +47,7 @@ eftps_enrolled: true
 6. Enter payment amount from the quarterly estimate calculation
 7. Enter bank account information (routing + account number)
 8. Select payment date (can schedule up to 365 days in advance)
-9. Confirm and save confirmation number in `vault/tax/01_estimates/payment-log.md`
+9. Confirm and save confirmation number in `vault/tax/00_current/payment-log.md`
 
 ## EFTPS for Scheduled Payments
 
@@ -72,4 +72,4 @@ EFTPS requires enrollment (5–7 business days to receive PIN by mail). Once enr
 
 - `vault/tax/irs/transcripts/` — downloaded account and return transcript PDFs
 - `vault/tax/irs/notices/` — downloaded IRS notices and letters
-- `vault/tax/01_estimates/payment-log.md` — confirmation numbers recorded after each Direct Pay submission
+- `vault/tax/00_current/payment-log.md` — confirmation numbers recorded after each Direct Pay submission

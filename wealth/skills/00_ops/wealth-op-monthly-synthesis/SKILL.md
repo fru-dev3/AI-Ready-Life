@@ -14,7 +14,7 @@ description: >
 # aireadylife-wealth-monthly-synthesis
 
 **Cadence:** Monthly (3rd of month, after statements are downloaded)
-**Produces:** Wealth synthesis at `vault/wealth/04_briefs/YYYY-MM-wealth-synthesis.md`; then triggers `aireadylife-wealth-review-brief`
+**Produces:** Wealth synthesis at `vault/wealth/02_briefs/YYYY-MM-wealth-synthesis.md`; then triggers `aireadylife-wealth-review-brief`
 
 ## What It Does
 
@@ -49,7 +49,7 @@ None directly (each sub-op uses its own configured data sources)
 
 ## Vault Output
 
-- `vault/wealth/04_briefs/YYYY-MM-wealth-synthesis.md` — cross-domain synthesis document
-- `vault/wealth/00_accounts/current-net-worth.md` — updated headline number
+- `vault/wealth/02_briefs/YYYY-MM-wealth-synthesis.md` — cross-domain synthesis document
+- `vault/wealth/00_current/current-net-worth.md` — updated headline number
 - `vault/wealth/open-loops.md` — all new flags from all sub-reviews
-- `vault/wealth/04_briefs/YYYY-MM-wealth-brief.md` — monthly brief (produced by triggered op)
+- `vault/wealth/02_briefs/YYYY-MM-wealth-brief.md` — monthly brief (produced by triggered op)

@@ -3,7 +3,7 @@ name: aireadylife-health-flow-check-refill-dates
 type: flow
 trigger: called-by-op
 description: >
-  Scans the active medication list in vault/health/05_medications/ and computes the
+  Scans the active medication list in vault/health/00_current/ and computes the
   projected refill date for each prescription based on fill date and days supply.
   Applies early-fill buffers (7 days for 90-day supplies, 3 days for 30-day supplies)
   and flags any medication whose refill window opens within 30 days. Returns the
@@ -17,7 +17,7 @@ description: >
 
 ## What It Does
 
-Reads the active medication list from `vault/health/05_medications/medications.md` — which stores each prescription's name, dosage, fill date, days supply, dispensing pharmacy (name and phone), estimated out-of-pocket cost per fill, and HSA eligibility flag. For each entry, the projected refill date is computed as: fill date + days supply − early-fill buffer. The early-fill buffer is 7 days for prescriptions with a 90-day supply (common with mail-order pharmacy and specialty drugs) and 3 days for 30-day supplies. This buffer ensures the refill reminder fires with enough lead time to call the pharmacy, request a mail-order refill, or transfer a prescription without a gap in the supply.
+Reads the active medication list from `vault/health/00_current/medications.md` — which stores each prescription's name, dosage, fill date, days supply, dispensing pharmacy (name and phone), estimated out-of-pocket cost per fill, and HSA eligibility flag. For each entry, the projected refill date is computed as: fill date + days supply − early-fill buffer. The early-fill buffer is 7 days for prescriptions with a 90-day supply (common with mail-order pharmacy and specialty drugs) and 3 days for 30-day supplies. This buffer ensures the refill reminder fires with enough lead time to call the pharmacy, request a mail-order refill, or transfer a prescription without a gap in the supply.
 
 Any medication whose refill window opens within 30 days of today is flagged. The output is a structured list — not written to the vault directly — returned to the calling op (`aireadylife-health-medication-review`) which then passes each flagged item to `aireadylife-health-flag-upcoming-refill` for logging. This two-step design keeps the flag-writing logic separate from the date-calculation logic, so each piece can be tested independently.
 
@@ -37,7 +37,7 @@ HSA eligibility is checked against the IRS Publication 502 category list: all pr
 
 ## Steps
 
-1. Read `vault/health/05_medications/medications.md` and parse the active medication list
+1. Read `vault/health/00_current/medications.md` and parse the active medication list
 2. For each active medication, read: name, dosage, fill date, days supply, pharmacy, estimated cost, HSA eligibility, auto-refill status, and controlled substance flag
 3. Calculate projected refill date: fill date + days supply − early-fill buffer (7 days if supply=90, 3 days if supply=30, 0 days if supply=other)
 4. Compute days until refill window opens: (projected refill date − today)
@@ -48,7 +48,7 @@ HSA eligibility is checked against the IRS Publication 502 category list: all pr
 
 ## Input
 
-- `vault/health/05_medications/medications.md` — active medication list with fill metadata
+- `vault/health/00_current/medications.md` — active medication list with fill metadata
 - `vault/health/config.md` — any pharmacy-specific buffer overrides
 
 ## Output Format
@@ -67,12 +67,12 @@ Required fields in `vault/health/config.md`:
 
 ## Error Handling
 
-- If medication file is missing: report "No active medication list found. Create vault/health/05_medications/medications.md from the vault template."
+- If medication file is missing: report "No active medication list found. Create vault/health/00_current/medications.md from the vault template."
 - If a medication entry is missing the fill date or days supply: flag that entry as "incomplete — cannot calculate refill date" and ask user to update it
 - If fill date is in the future (data entry error): flag as "invalid fill date" and skip refill calculation for that entry
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/health/05_medications/medications.md`
+- Reads from: `~/Documents/AIReadyLife/vault/health/00_current/medications.md`
 - Reads from: `~/Documents/AIReadyLife/vault/health/config.md`
 - Writes to: None (returns data to calling op)

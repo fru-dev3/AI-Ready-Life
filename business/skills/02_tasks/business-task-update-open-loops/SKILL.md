@@ -24,7 +24,7 @@ Called internally at the end of every business op: `aireadylife-business-op-pl-r
 
 1. Receive flag list from calling op (each flag: priority, category, description, action, source, date)
 2. Read current vault/business/open-loops.md (or create it if it does not exist)
-3. For each existing entry in open-loops.md, check resolution status: if the referenced invoice is now paid in vault/business/01_revenue/, if the referenced compliance item has a completion date in the checklist, or if the entry is explicitly marked resolved — move to archive
+3. For each existing entry in open-loops.md, check resolution status: if the referenced invoice is now paid in vault/business/00_current/, if the referenced compliance item has a completion date in the checklist, or if the entry is explicitly marked resolved — move to archive
 4. Write resolved items to vault/business/open-loops-archive.md with resolution date and resolution note
 5. For each new flag in the received list: check if an unresolved entry for the same item already exists; if yes, update the "last surfaced" date; if no, append as a new entry
 6. Apply priority overrides: any invoice overdue, compliance deadline <30 days, or estimated tax payment <14 days = 🔴 regardless of calling op's suggestion
@@ -36,8 +36,8 @@ Called internally at the end of every business op: `aireadylife-business-op-pl-r
 
 - Flag list from calling op (passed as structured data)
 - `~/Documents/AIReadyLife/vault/business/open-loops.md` — current file for dedup and resolution check
-- `~/Documents/AIReadyLife/vault/business/01_revenue/` — to verify invoice payment status
-- `~/Documents/AIReadyLife/vault/business/03_compliance/compliance-checklist.md` — to verify compliance completion status
+- `~/Documents/AIReadyLife/vault/business/00_current/` — to verify invoice payment status
+- `~/Documents/AIReadyLife/vault/business/00_current/compliance-checklist.md` — to verify compliance completion status
 
 ## Output Format
 
@@ -80,5 +80,5 @@ Optional in `~/Documents/AIReadyLife/vault/business/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/business/open-loops.md`, `~/Documents/AIReadyLife/vault/business/01_revenue/`, `~/Documents/AIReadyLife/vault/business/03_compliance/`
+- Reads from: `~/Documents/AIReadyLife/vault/business/open-loops.md`, `~/Documents/AIReadyLife/vault/business/00_current/`, `~/Documents/AIReadyLife/vault/business/00_current/`
 - Writes to: `~/Documents/AIReadyLife/vault/business/open-loops.md`, `~/Documents/AIReadyLife/vault/business/open-loops-archive.md`

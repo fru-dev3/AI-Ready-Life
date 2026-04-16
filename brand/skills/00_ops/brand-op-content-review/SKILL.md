@@ -11,11 +11,11 @@ description: >
 
 Runs on the first of each month to evaluate the prior month's content output across all platforms. This is the brand-lens view of content — focused on how the content is building brand equity (followers, engagement rate, impressions, profile visibility) rather than revenue. The Content plugin handles the revenue dimension; this op handles the brand-building dimension.
 
-Reads the content log from `~/Documents/AIReadyLife/vault/brand/04_content/` for the prior month to count posts published per platform. Compares to the user's configured cadence targets (e.g., 4 LinkedIn posts/month, 2 YouTube videos/month, 1 newsletter/week). Flags any cadence misses — a platform that published fewer posts than the minimum target for the month. A cadence miss on a primary platform is 🔴 if it is the second consecutive month of misses; 🟡 for a first miss.
+Reads the content log from `~/Documents/AIReadyLife/vault/brand/00_current/` for the prior month to count posts published per platform. Compares to the user's configured cadence targets (e.g., 4 LinkedIn posts/month, 2 YouTube videos/month, 1 newsletter/week). Flags any cadence misses — a platform that published fewer posts than the minimum target for the month. A cadence miss on a primary platform is 🔴 if it is the second consecutive month of misses; 🟡 for a first miss.
 
 Calls `aireadylife-brand-flow-build-analytics-summary` for cross-platform engagement metrics and top content identification. Surfaces the top 3 performing pieces by engagement and labels the topic area each belongs to — this reveals which content pillars are generating the most brand traction. Calculates MoM change in follower counts and engagement rate per platform.
 
-Surfaces content gaps: any platform that had zero output in the prior month, and any topic area from the user's configured content pillars that had no coverage in the month. Topic area with above-average engagement is flagged as a "double down" opportunity — create more content in this area. Writes a dated brief to vault/brand/04_briefs/ and pushes cadence misses and engagement anomalies to open-loops.
+Surfaces content gaps: any platform that had zero output in the prior month, and any topic area from the user's configured content pillars that had no coverage in the month. Topic area with above-average engagement is flagged as a "double down" opportunity — create more content in this area. Writes a dated brief to vault/brand/02_briefs/ and pushes cadence misses and engagement anomalies to open-loops.
 
 ## Triggers
 
@@ -29,7 +29,7 @@ Surfaces content gaps: any platform that had zero output in the prior month, and
 ## Steps
 
 1. Determine the review period: prior full calendar month
-2. Read content log from vault/brand/04_content/ for the period; count posts per platform
+2. Read content log from vault/brand/00_current/ for the period; count posts per platform
 3. Compare posts per platform to configured cadence targets in config.md; calculate cadence achievement % per platform
 4. Flag platforms below minimum cadence target: 🔴 if second consecutive miss, 🟡 for first miss, 🟢 if within 10% of target
 5. Flag any platform with zero output in the period as a "content gap" — 🔴 if primary platform, 🟡 if secondary
@@ -38,13 +38,13 @@ Surfaces content gaps: any platform that had zero output in the prior month, and
 8. Identify top 3 posts by engagement; map each to its content pillar from config.md
 9. Calculate average engagement rate per content pillar; flag which pillars are above and below average
 10. Identify any configured content pillar with zero posts this month (topic coverage gap)
-11. Write content review brief to vault/brand/04_briefs/content-review-{YYYY-MM}.md
+11. Write content review brief to vault/brand/02_briefs/content-review-{YYYY-MM}.md
 12. Call `aireadylife-brand-task-update-open-loops` with cadence misses, engagement anomalies, and topic gaps
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/brand/04_content/` — content log for the period; each entry: platform, date, format, title, topic-pillar, engagement-metrics
-- `~/Documents/AIReadyLife/vault/brand/01_analytics/` — monthly platform analytics
+- `~/Documents/AIReadyLife/vault/brand/00_current/` — content log for the period; each entry: platform, date, format, title, topic-pillar, engagement-metrics
+- `~/Documents/AIReadyLife/vault/brand/00_current/` — monthly platform analytics
 - `~/Documents/AIReadyLife/vault/brand/config.md` — cadence targets per platform, content pillars list
 
 ## Output Format
@@ -86,11 +86,11 @@ Required in `~/Documents/AIReadyLife/vault/brand/config.md`:
 
 ## Error Handling
 
-- If content log is empty for the period: "No content logged for {month}. Add entries to vault/brand/04_content/ to enable cadence tracking."
+- If content log is empty for the period: "No content logged for {month}. Add entries to vault/brand/00_current/ to enable cadence tracking."
 - If cadence targets are not configured: perform the review without cadence comparison and note "Set posting targets in config.md to enable cadence tracking."
 - If a post in the content log references an unknown content pillar: include it in analytics but flag "unclassified post — assign to a content pillar in the log."
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/brand/04_content/`, `~/Documents/AIReadyLife/vault/brand/01_analytics/`, `~/Documents/AIReadyLife/vault/brand/config.md`
-- Writes to: `~/Documents/AIReadyLife/vault/brand/04_briefs/content-review-{YYYY-MM}.md`, `~/Documents/AIReadyLife/vault/brand/open-loops.md`
+- Reads from: `~/Documents/AIReadyLife/vault/brand/00_current/`, `~/Documents/AIReadyLife/vault/brand/00_current/`, `~/Documents/AIReadyLife/vault/brand/config.md`
+- Writes to: `~/Documents/AIReadyLife/vault/brand/02_briefs/content-review-{YYYY-MM}.md`, `~/Documents/AIReadyLife/vault/brand/open-loops.md`

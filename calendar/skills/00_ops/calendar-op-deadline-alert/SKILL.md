@@ -10,7 +10,7 @@ description: >
 # aireadylife-calendar-deadline-alert
 
 **Cadence:** Weekly (Monday)
-**Produces:** 30-day deadline alert report written to ~/Documents/AIReadyLife/vault/calendar/00_deadlines/alert-YYYY-MM-DD.md
+**Produces:** 30-day deadline alert report written to ~/Documents/AIReadyLife/vault/calendar/00_current/alert-YYYY-MM-DD.md
 
 ## What It Does
 
@@ -46,15 +46,15 @@ The op calls `calendar-flow-collect-deadlines` to scan the open-loops.md from ev
 6. Flag urgent items with no preparation as "Action required today — no prep found"
 7. Annotate known hard deadlines (tax dates, legal filings, enrollment windows)
 8. For each soon/upcoming item: calculate recommended preparation start date
-9. Write deadline items missing from vault/calendar/00_deadlines/ via `calendar-task-add-deadline`
-10. Write full alert report to vault/calendar/00_deadlines/alert-YYYY-MM-DD.md
+9. Write deadline items missing from vault/calendar/00_current/ via `calendar-task-add-deadline`
+10. Write full alert report to vault/calendar/00_current/alert-YYYY-MM-DD.md
 11. Call `calendar-task-update-open-loops` to write any new 🔴 items to calendar open-loops.md
 12. Return formatted deadline alert to user as chat output
 
 ## Input
 
 - ~/Documents/AIReadyLife/vault/*/open-loops.md (all installed plugins)
-- ~/Documents/AIReadyLife/vault/calendar/00_deadlines/ (existing deadline records)
+- ~/Documents/AIReadyLife/vault/calendar/00_current/ (existing deadline records)
 - ~/Documents/AIReadyLife/vault/calendar/config.md
 
 ## Output Format
@@ -93,5 +93,5 @@ Required in vault/calendar/config.md:
 
 ## Vault Paths
 
-- Reads from: ~/Documents/AIReadyLife/vault/*/open-loops.md, ~/Documents/AIReadyLife/vault/calendar/00_deadlines/
-- Writes to: ~/Documents/AIReadyLife/vault/calendar/00_deadlines/alert-YYYY-MM-DD.md, ~/Documents/AIReadyLife/vault/calendar/open-loops.md
+- Reads from: ~/Documents/AIReadyLife/vault/*/open-loops.md, ~/Documents/AIReadyLife/vault/calendar/00_current/
+- Writes to: ~/Documents/AIReadyLife/vault/calendar/00_current/alert-YYYY-MM-DD.md, ~/Documents/AIReadyLife/vault/calendar/open-loops.md

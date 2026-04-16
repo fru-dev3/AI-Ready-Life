@@ -14,7 +14,7 @@ description: >
 # aireadylife-tax-review-brief
 
 **Cadence:** Monthly (1st of month)
-**Produces:** Tax review brief at `vault/tax/04_briefs/YYYY-MM-tax-brief.md`
+**Produces:** Tax review brief at `vault/tax/02_briefs/YYYY-MM-tax-brief.md`
 
 ## What It Does
 
@@ -45,5 +45,5 @@ Items sourced directly from `vault/tax/open-loops.md`, filtered to OPEN status, 
 
 ## Vault Output
 
-- `vault/tax/04_briefs/YYYY-MM-tax-brief.md` — monthly tax review brief
+- `vault/tax/02_briefs/YYYY-MM-tax-brief.md` — monthly tax review brief
 - `vault/tax/open-loops.md` — resolved items closed if applicable

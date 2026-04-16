@@ -45,7 +45,7 @@ coursera_chrome_profile: "/Users/YOU/Library/Application Support/Google/Chrome/D
 
 - **Always headless=False** — Coursera uses bot detection and may require CAPTCHA with headless Chrome
 - **Dashboard URL:** coursera.org/my-learning — shows all enrolled courses and progress
-- **Certificate download:** Available from the completed course page; download to `vault/learning/04_archive/certs/` for record-keeping
+- **Certificate download:** Available from the completed course page; download to `vault/learning/01_prior/certs/` for record-keeping
 - **Session freshness:** Coursera sessions typically persist for 30+ days; re-authenticate in Chrome if the skill receives a login redirect
 - **Free vs. paid courses:** Some courses are available to audit (free) but certificates require payment — note audit status in progress tracking
 
@@ -67,5 +67,5 @@ Coursera's most valuable credentials are Professional Certificates (Google Data 
 
 ## Vault Output
 
-- `~/Documents/AIReadyLife/vault/learning/01_courses/coursera/` — course progress records
-- `~/Documents/AIReadyLife/vault/learning/04_archive/certs/` — downloaded certificates for completed courses
+- `~/Documents/AIReadyLife/vault/learning/00_current/coursera/` — course progress records
+- `~/Documents/AIReadyLife/vault/learning/01_prior/certs/` — downloaded certificates for completed courses

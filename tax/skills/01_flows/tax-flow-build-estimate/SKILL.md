@@ -14,15 +14,15 @@ description: >
 # aireadylife-tax-build-estimate
 
 **Trigger:** Called by `aireadylife-tax-quarterly-estimate`
-**Produces:** Estimated tax calculation at `vault/tax/01_estimates/YYYY-QN-estimate.md`
+**Produces:** Estimated tax calculation at `vault/tax/00_current/YYYY-QN-estimate.md`
 
 ## What It Does
 
 Reads YTD income and withholding data from across the tax vault and produces a current-quarter estimated tax calculation using both IRS-recognized methods, returning whichever produces the lower required payment to avoid underpayment penalties.
 
-**Income aggregation.** The flow calls `aireadylife-tax-extract-income-ytd` to get a structured breakdown of all YTD income: W-2 wages (gross, year-to-date, from pay stubs in `vault/tax/00_documents/`), self-employment / 1099-NEC income (from freelance/consulting records), rental income net of deductible expenses (from estate or business records), short-term capital gains (from brokerage records — held ≤1 year, taxed as ordinary income), long-term capital gains (held >1 year, taxed at preferential rates of 0%/15%/20%), qualified dividends (taxed at long-term capital gains rates), ordinary dividends (taxed as ordinary income), and other income.
+**Income aggregation.** The flow calls `aireadylife-tax-extract-income-ytd` to get a structured breakdown of all YTD income: W-2 wages (gross, year-to-date, from pay stubs in `vault/tax/00_current/`), self-employment / 1099-NEC income (from freelance/consulting records), rental income net of deductible expenses (from estate or business records), short-term capital gains (from brokerage records — held ≤1 year, taxed as ordinary income), long-term capital gains (held >1 year, taxed at preferential rates of 0%/15%/20%), qualified dividends (taxed at long-term capital gains rates), ordinary dividends (taxed as ordinary income), and other income.
 
-**Withholding and prior payments.** YTD federal withholding from W-2 pay stubs. Any prior quarterly estimated payments already made this year (from `vault/tax/01_estimates/`). Both are subtracted from the required payment before arriving at the amount due.
+**Withholding and prior payments.** YTD federal withholding from W-2 pay stubs. Any prior quarterly estimated payments already made this year (from `vault/tax/00_current/`). Both are subtracted from the required payment before arriving at the amount due.
 
 **Method A: Safe Harbor.** Prior year total tax liability ÷ 4 = quarterly safe harbor payment. If prior year AGI exceeded $150,000, use 110% of prior year tax ÷ 4. Example: prior year tax = $22,000, AGI >$150k → quarterly safe harbor = $22,000 × 1.10 ÷ 4 = $6,050 per quarter. Subtract YTD withholding and prior quarterly payments already made to get the remaining balance due.
 
@@ -44,26 +44,26 @@ Reads YTD income and withholding data from across the tax vault and produces a c
 ## Steps
 
 1. Call `aireadylife-tax-extract-income-ytd` to get structured YTD income by source type
-2. Read YTD withholding total from pay stub records in `vault/tax/00_documents/`
-3. Read prior quarterly estimated payments already made this year from `vault/tax/01_estimates/`
+2. Read YTD withholding total from pay stub records in `vault/tax/00_current/`
+3. Read prior quarterly estimated payments already made this year from `vault/tax/00_current/`
 4. Calculate Method A (Safe Harbor): prior year liability from config × (1.0 or 1.1) ÷ 4, minus withholding and prior payments
 5. Annualize YTD income (total × 12 ÷ months elapsed)
 6. Apply estimated deductions (standard deduction or configured itemized estimate) to annualized income
 7. Calculate Method B (Actual): estimate full-year federal income tax + SE tax if applicable − QBI deduction if applicable; divide by 4, subtract withholding and prior payments
 8. Compare both methods; select the lower as the recommended payment
 9. Calculate underpayment penalty risk if no payment is made (IRS rate × underpayment amount × days/365)
-10. Write complete calculation to `vault/tax/01_estimates/YYYY-QN-estimate.md` with both methods shown
+10. Write complete calculation to `vault/tax/00_current/YYYY-QN-estimate.md` with both methods shown
 
 ## Input
 
-- `vault/tax/00_documents/` — W-2 pay stubs and 1099 documents for YTD income
-- `vault/tax/01_estimates/` — prior quarterly payments this year
+- `vault/tax/00_current/` — W-2 pay stubs and 1099 documents for YTD income
+- `vault/tax/00_current/` — prior quarterly payments this year
 - `vault/tax/config.md` — prior year tax liability, filing status, deduction method, SE income flag, QBI eligibility
 - Income records from `vault/wealth/` or `vault/business/` if cross-plugin sharing is configured
 
 ## Output Format
 
-Markdown document at `vault/tax/01_estimates/YYYY-QN-estimate.md`:
+Markdown document at `vault/tax/00_current/YYYY-QN-estimate.md`:
 - Header: quarter, due date, run date
 - YTD Income table: Source | YTD Amount | Notes
 - YTD Withholding: total federal withheld + prior quarterly payments
@@ -90,7 +90,7 @@ Required in `vault/tax/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/tax/00_documents/` (income records)
-- Reads from: `~/Documents/AIReadyLife/vault/tax/01_estimates/` (prior payments)
+- Reads from: `~/Documents/AIReadyLife/vault/tax/00_current/` (income records)
+- Reads from: `~/Documents/AIReadyLife/vault/tax/00_current/` (prior payments)
 - Reads from: `~/Documents/AIReadyLife/vault/tax/config.md`
-- Writes to: `~/Documents/AIReadyLife/vault/tax/01_estimates/YYYY-QN-estimate.md`
+- Writes to: `~/Documents/AIReadyLife/vault/tax/00_current/YYYY-QN-estimate.md`

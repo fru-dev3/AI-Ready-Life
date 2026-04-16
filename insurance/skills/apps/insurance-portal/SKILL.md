@@ -72,7 +72,7 @@ insurance_portals:
 
 - **Always headless=False** — most insurance carrier portals use bot detection; headless Chrome is blocked
 - **Session freshness:** Log into each carrier portal in Chrome before running the skill; cookies are typically valid for 30-90 days depending on carrier
-- **Download path:** PDF documents are downloaded to `vault/insurance/01_policies/{type}/` with carrier and date in filename
+- **Download path:** PDF documents are downloaded to `vault/insurance/00_current/{type}/` with carrier and date in filename
 - **Rate limiting:** Add 3-5 second delays between page loads; insurance portals are not high-throughput platforms
 
 ## Used By
@@ -83,5 +83,5 @@ insurance_portals:
 
 ## Vault Output
 
-- `~/Documents/AIReadyLife/vault/insurance/01_policies/{type}/` — downloaded policy documents
+- `~/Documents/AIReadyLife/vault/insurance/00_current/{type}/` — downloaded policy documents
 - `~/Documents/AIReadyLife/vault/insurance/00_current/` — renewal dates and premium updates

@@ -3,14 +3,14 @@ name: aireadylife-brand-task-log-mention
 type: task
 cadence: as-received
 description: >
-  Records a brand mention to vault/brand/03_mentions/ with platform, author, date, sentiment,
+  Records a brand mention to vault/brand/00_current/ with platform, author, date, sentiment,
   content summary, and link. Flags high-priority mentions (journalist, viral potential) for
   immediate action.
 ---
 
 ## What It Does
 
-Accepts a brand mention — surfaced by the user, detected via a Google Alert, or found during a manual social scan — and logs it as a structured record in `~/Documents/AIReadyLife/vault/brand/03_mentions/`. This log is the source of truth for the monthly mention analysis and brand health score sentiment component.
+Accepts a brand mention — surfaced by the user, detected via a Google Alert, or found during a manual social scan — and logs it as a structured record in `~/Documents/AIReadyLife/vault/brand/00_current/`. This log is the source of truth for the monthly mention analysis and brand health score sentiment component.
 
 Each record captures: platform where the mention appeared (LinkedIn, Twitter/X, YouTube comments, news article, podcast, blog, forum, other), the author's name and handle, their approximate follower count if known, the date and time of the mention, sentiment classification (positive / neutral / negative based on the tone and intent of the mention), a 2-3 sentence summary of the mention content (what was said, in what context, whether the user was praised, cited, critiqued, or questioned), a link or URL to the original post, and a "responded" status field (default: no).
 
@@ -33,8 +33,8 @@ For negative mentions specifically: always flags for review regardless of author
 2. Read or be told the content of the mention; classify sentiment: positive (praise, recommendation, citation in positive context), neutral (factual reference, question, mention without judgment), negative (criticism, complaint, correction, dispute)
 3. Write a 2-3 sentence content summary: what was said, why they mentioned the user, context of the mention
 4. Apply high-priority check: follower count > configured threshold OR author type = journalist/publication/institution OR engagement already > 100 (likes+shares+comments)
-5. Check for a duplicate record: look for an existing entry in vault/brand/03_mentions/ with the same author handle and date; if found, ask whether to update or log as a separate entry
-6. Write mention record to vault/brand/03_mentions/{YYYY-MM-DD}-{platform}-{author-slug}.md
+5. Check for a duplicate record: look for an existing entry in vault/brand/00_current/ with the same author handle and date; if found, ask whether to update or log as a separate entry
+6. Write mention record to vault/brand/00_current/{YYYY-MM-DD}-{platform}-{author-slug}.md
 7. If high-priority: write 🔴 urgent flag to vault/brand/open-loops.md with author, platform, mention summary, and recommended response action with 24-hour window note
 8. For any negative mention (any size): write 🟡 flag to open-loops regardless of author size, with content summary and suggested response approach
 9. Return confirmation of record written and any flags created
@@ -52,7 +52,7 @@ User-provided information:
 
 ## Output Format
 
-Written record at `~/Documents/AIReadyLife/vault/brand/03_mentions/{YYYY-MM-DD}-{platform}-{author-slug}.md`:
+Written record at `~/Documents/AIReadyLife/vault/brand/00_current/{YYYY-MM-DD}-{platform}-{author-slug}.md`:
 ```
 # Mention Record
 
@@ -84,5 +84,5 @@ Required in `~/Documents/AIReadyLife/vault/brand/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/brand/config.md`, `~/Documents/AIReadyLife/vault/brand/03_mentions/` (duplicate check)
-- Writes to: `~/Documents/AIReadyLife/vault/brand/03_mentions/{YYYY-MM-DD}-{platform}-{author-slug}.md`, `~/Documents/AIReadyLife/vault/brand/open-loops.md` (if high-priority or negative)
+- Reads from: `~/Documents/AIReadyLife/vault/brand/config.md`, `~/Documents/AIReadyLife/vault/brand/00_current/` (duplicate check)
+- Writes to: `~/Documents/AIReadyLife/vault/brand/00_current/{YYYY-MM-DD}-{platform}-{author-slug}.md`, `~/Documents/AIReadyLife/vault/brand/open-loops.md` (if high-priority or negative)

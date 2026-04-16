@@ -11,13 +11,13 @@ description: >
 # aireadylife-calendar-weekly-agenda
 
 **Cadence:** Weekly (Monday morning)
-**Produces:** Prioritized week-ahead brief in ~/Documents/AIReadyLife/vault/calendar/02_agenda/YYYY-MM-DD-week-agenda.md
+**Produces:** Prioritized week-ahead brief in ~/Documents/AIReadyLife/vault/calendar/00_current/YYYY-MM-DD-week-agenda.md
 
 ## What It Does
 
 The weekly agenda op runs every Monday before anything else competes for attention. It is the single most important calendar skill because it designs the week — not just documents it. By the time it completes, the user has a clear picture of what must be done this week, when to do the hard work, and what to expect in terms of time available vs. time committed.
 
-The op begins by calling `calendar-flow-collect-deadlines` to extract all items with due dates in the next 7 days from every installed plugin vault's open-loops.md. The deadline scan also picks up any hard-deadline records stored in vault/calendar/00_deadlines/ from prior deadline-planning sessions. Each item is tagged as urgent (≤7 days), upcoming (8-30 days), or horizon (31-60 days) — but for the weekly agenda, only the urgent and upcoming buckets appear in the deadline table.
+The op begins by calling `calendar-flow-collect-deadlines` to extract all items with due dates in the next 7 days from every installed plugin vault's open-loops.md. The deadline scan also picks up any hard-deadline records stored in vault/calendar/00_current/ from prior deadline-planning sessions. Each item is tagged as urgent (≤7 days), upcoming (8-30 days), or horizon (31-60 days) — but for the weekly agenda, only the urgent and upcoming buckets appear in the deadline table.
 
 Next, it reads the Google Calendar (via the gcalendar skill if configured) for the upcoming week's events. From this it calculates: total meeting hours per day, back-to-back meeting clusters (gaps <30 min), and the longest available uninterrupted block per day. Days with at least one 90+ minute free block are flagged as best for deep work. Days with back-to-back meeting clusters covering most of the morning or afternoon are flagged as focus-hostile.
 
@@ -46,13 +46,13 @@ Finally, it calls `calendar-task-update-open-loops` to ensure any newly surfaced
 7. Pass all inputs to `calendar-flow-build-agenda` for ranked document assembly
 8. Receive formatted agenda document from flow; review for completeness
 9. Call `calendar-task-update-open-loops` to add any newly discovered items to open-loops.md
-10. Write agenda to vault/calendar/02_agenda/YYYY-MM-DD-week-agenda.md
+10. Write agenda to vault/calendar/00_current/YYYY-MM-DD-week-agenda.md
 11. Return formatted agenda to user as chat output
 
 ## Input
 
 - ~/Documents/AIReadyLife/vault/*/open-loops.md (all installed plugins)
-- ~/Documents/AIReadyLife/vault/calendar/00_deadlines/ (prior deadline records)
+- ~/Documents/AIReadyLife/vault/calendar/00_current/ (prior deadline records)
 - Google Calendar events for the coming week (via gcalendar skill, if configured)
 - ~/Documents/AIReadyLife/vault/calendar/config.md
 
@@ -104,5 +104,5 @@ Required in vault/calendar/config.md:
 
 ## Vault Paths
 
-- Reads from: ~/Documents/AIReadyLife/vault/*/open-loops.md, ~/Documents/AIReadyLife/vault/calendar/00_deadlines/
-- Writes to: ~/Documents/AIReadyLife/vault/calendar/02_agenda/YYYY-MM-DD-week-agenda.md, ~/Documents/AIReadyLife/vault/calendar/open-loops.md
+- Reads from: ~/Documents/AIReadyLife/vault/*/open-loops.md, ~/Documents/AIReadyLife/vault/calendar/00_current/
+- Writes to: ~/Documents/AIReadyLife/vault/calendar/00_current/YYYY-MM-DD-week-agenda.md, ~/Documents/AIReadyLife/vault/calendar/open-loops.md

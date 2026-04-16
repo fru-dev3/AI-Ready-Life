@@ -45,9 +45,9 @@ The open-loops.md file is read by the calendar agent during cross-domain scans �
 
 - Flag data passed by calling op
 - `~/Documents/AIReadyLife/vault/estate/open-loops.md` — existing flags
-- `~/Documents/AIReadyLife/vault/estate/02_maintenance/` — for resolution check on maintenance flags
-- `~/Documents/AIReadyLife/vault/estate/01_tenants/` — for resolution check on tenant/lease flags
-- `~/Documents/AIReadyLife/vault/estate/03_cashflow/` — for resolution check on cash flow flags
+- `~/Documents/AIReadyLife/vault/estate/00_current/` — for resolution check on maintenance flags
+- `~/Documents/AIReadyLife/vault/estate/00_current/` — for resolution check on tenant/lease flags
+- `~/Documents/AIReadyLife/vault/estate/00_current/` — for resolution check on cash flow flags
 
 ## Output Format
 
@@ -82,6 +82,6 @@ No additional configuration required beyond vault existing.
 ## Vault Paths
 
 - Reads from: `~/Documents/AIReadyLife/vault/estate/open-loops.md`
-- Reads from: `~/Documents/AIReadyLife/vault/estate/02_maintenance/`, `01_tenants/`, `03_cashflow/`
+- Reads from: `~/Documents/AIReadyLife/vault/estate/00_current/`, `01_tenants/`, `03_cashflow/`
 - Writes to: `~/Documents/AIReadyLife/vault/estate/open-loops.md`
 - Writes to: `~/Documents/AIReadyLife/vault/estate/open-loops-archive.md`

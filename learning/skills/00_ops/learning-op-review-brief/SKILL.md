@@ -30,24 +30,24 @@ The brief is designed for a Monday morning read. It anchors the week's learning 
 2. Read all active learning items from `vault/learning/00_current/` — extract completion %, target date, start date, platform.
 3. Calculate pace status for each item: completion % vs. time elapsed %; classify ahead/on-track/behind.
 4. For behind items: calculate required daily pace to finish on time from today.
-5. Read current book progress from `vault/learning/02_books/current-reading.md` — extract title, % complete, estimated remaining pages.
+5. Read current book progress from `vault/learning/00_current/current-reading.md` — extract title, % complete, estimated remaining pages.
 6. Calculate reading pace from completion history — project current book completion date at current pace.
 7. Read certification data from `vault/learning/00_current/certs.md` — for any cert with exam date set, calculate days-to-exam and readiness %.
 8. Read weekly study hours logged from `vault/learning/00_current/study-log.md` for the current week — compare to configured weekly target.
 9. Read open loops from `vault/learning/open-loops.md` — extract highest-priority items.
 10. Synthesize 1-3 next actions for the coming week, prioritized by what most advances the top-priority learning goals.
-11. Write weekly brief to `vault/learning/03_briefs/YYYY-MM-DD-learning-brief.md`.
+11. Write weekly brief to `vault/learning/02_briefs/YYYY-MM-DD-learning-brief.md`.
 12. Call `aireadylife-learning-task-update-open-loops` with any new flags.
 
 ## Input
 
 - `~/Documents/AIReadyLife/vault/learning/00_current/` — active items, status, certs, study log
-- `~/Documents/AIReadyLife/vault/learning/02_books/current-reading.md` — current book data
+- `~/Documents/AIReadyLife/vault/learning/00_current/current-reading.md` — current book data
 - `~/Documents/AIReadyLife/vault/learning/open-loops.md` — outstanding flags
 
 ## Output Format
 
-**Weekly Learning Brief** — saved as `vault/learning/03_briefs/YYYY-MM-DD-learning-brief.md`
+**Weekly Learning Brief** — saved as `vault/learning/02_briefs/YYYY-MM-DD-learning-brief.md`
 
 ```
 # Learning Brief — [Date] (Week of [Mon–Sun])
@@ -100,5 +100,5 @@ Study log at `vault/learning/00_current/study-log.md` with daily entries: date, 
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/learning/00_current/`, `~/Documents/AIReadyLife/vault/learning/02_books/`, `~/Documents/AIReadyLife/vault/learning/open-loops.md`
-- Writes to: `~/Documents/AIReadyLife/vault/learning/03_briefs/YYYY-MM-DD-learning-brief.md`, `~/Documents/AIReadyLife/vault/learning/open-loops.md`
+- Reads from: `~/Documents/AIReadyLife/vault/learning/00_current/`, `~/Documents/AIReadyLife/vault/learning/00_current/`, `~/Documents/AIReadyLife/vault/learning/open-loops.md`
+- Writes to: `~/Documents/AIReadyLife/vault/learning/02_briefs/YYYY-MM-DD-learning-brief.md`, `~/Documents/AIReadyLife/vault/learning/open-loops.md`

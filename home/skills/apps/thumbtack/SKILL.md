@@ -55,4 +55,4 @@ thumbtack_chrome_profile: /Users/YOU/Library/Application Support/Google/Chrome/D
 
 ## Vault Output
 
-`~/Documents/AIReadyLife/vault/home/01_maintenance/` (vendor contact info logged to the relevant maintenance item)
+`~/Documents/AIReadyLife/vault/home/00_current/` (vendor contact info logged to the relevant maintenance item)

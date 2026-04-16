@@ -10,7 +10,7 @@ description: >
 
 Called by `aireadylife-career-op-monthly-sync` and `aireadylife-career-op-network-review` to audit the active pipeline and surface what needs attention. Most job searches fail not because of a lack of applications but because of poor pipeline management — following up too late, letting promising opportunities go cold, or losing track of what stage each opportunity is at.
 
-**Reading the pipeline:** Loads all active pipeline entries from `vault/career/01_pipeline/`. Each entry stores: company, role title, source (how you found the role — LinkedIn, referral, company site, recruiter), stage (watch / applied / phone-screen / technical / final / offer), date of last activity, contact name, and next planned action. The flow does not process archived (closed) pipeline items.
+**Reading the pipeline:** Loads all active pipeline entries from `vault/career/00_current/`. Each entry stores: company, role title, source (how you found the role — LinkedIn, referral, company site, recruiter), stage (watch / applied / phone-screen / technical / final / offer), date of last activity, contact name, and next planned action. The flow does not process archived (closed) pipeline items.
 
 **Staleness rules by stage:** Different stages have different follow-up windows. After submitting an application: no response in 7 business days = follow-up recommended with a brief check-in message. After a phone screen: no next step in 5 business days = nudge the recruiter on timeline. After a technical or final interview: no response in 5 business days = follow-up is warranted; at 10 business days, it is appropriate to reach out directly to the hiring manager. After receiving an offer: the follow-up window is whatever the stated deadline is. Watch-list items: no posting update in 30 days = check if the posting is still active.
 
@@ -20,7 +20,7 @@ Called by `aireadylife-career-op-monthly-sync` and `aireadylife-career-op-networ
 
 ## Steps
 
-1. Load all active pipeline entries from `vault/career/01_pipeline/` where stage is not "archived".
+1. Load all active pipeline entries from `vault/career/00_current/` where stage is not "archived".
 2. Calculate business days since last activity for each entry.
 3. Apply staleness thresholds by stage: applied (7 days), post-screen (5 days), post-interview (5 days), offer pending (per stated deadline).
 4. Flag each entry exceeding its threshold as "follow-up needed" with suggested message angle.
@@ -34,7 +34,7 @@ Called by `aireadylife-career-op-monthly-sync` and `aireadylife-career-op-networ
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/career/01_pipeline/` — all active pipeline entries
+- `~/Documents/AIReadyLife/vault/career/00_current/` — all active pipeline entries
 
 ## Output Format
 
@@ -63,7 +63,7 @@ Stage Funnel:
 
 ## Configuration
 
-No additional configuration required. Pipeline entry format at `vault/career/01_pipeline/`:
+No additional configuration required. Pipeline entry format at `vault/career/00_current/`:
 ```yaml
 company: "[name]"
 role: "[title]"
@@ -86,5 +86,5 @@ posting_url: "[url for watch-list staleness check]"
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/career/01_pipeline/`
-- Writes to: `~/Documents/AIReadyLife/vault/career/01_pipeline/` (archive updates)
+- Reads from: `~/Documents/AIReadyLife/vault/career/00_current/`
+- Writes to: `~/Documents/AIReadyLife/vault/career/00_current/` (archive updates)

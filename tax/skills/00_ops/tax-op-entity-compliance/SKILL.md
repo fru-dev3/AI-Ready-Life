@@ -15,7 +15,7 @@ description: >
 # aireadylife-tax-entity-compliance
 
 **Cadence:** Quarterly (1st of January, April, July, October)
-**Produces:** Compliance status in `vault/tax/05_entities/YYYY-QN-compliance.md`; entity flags in `vault/tax/open-loops.md`
+**Produces:** Compliance status in `vault/tax/00_current/YYYY-QN-compliance.md`; entity flags in `vault/tax/open-loops.md`
 
 ## What It Does
 
@@ -23,11 +23,11 @@ Runs quarterly to ensure all active business entities remain in good standing wi
 
 **Per-entity compliance checklist.** For each entity listed in config.md, the op checks the following categories:
 
-State Annual Report: most states require LLCs and corporations to file an annual or biennial report to maintain good standing. The deadline, fee, and filing method vary significantly by state. Common patterns: Minnesota — no annual report for LLCs (single-member LLCs are a pass-through with no separate state filing requirement); Delaware — Annual Report due June 1 for LLCs ($300 fee), March 1 for corporations; California — Statement of Information due every 2 years within 6 months of formation anniversary ($20 fee); Wyoming — Annual Report due on anniversary month. The op checks each entity's state and compares the expected filing date against the last confirmed filing in `vault/tax/05_entities/`.
+State Annual Report: most states require LLCs and corporations to file an annual or biennial report to maintain good standing. The deadline, fee, and filing method vary significantly by state. Common patterns: Minnesota — no annual report for LLCs (single-member LLCs are a pass-through with no separate state filing requirement); Delaware — Annual Report due June 1 for LLCs ($300 fee), March 1 for corporations; California — Statement of Information due every 2 years within 6 months of formation anniversary ($20 fee); Wyoming — Annual Report due on anniversary month. The op checks each entity's state and compares the expected filing date against the last confirmed filing in `vault/tax/00_current/`.
 
 Franchise Tax: some states impose a franchise tax or minimum business tax separate from income tax. California: all LLCs pay $800/year minimum franchise tax, due by the 15th day of the 4th month after the tax year (April 15 for calendar-year entities). Texas: margin tax return due May 15, amount based on revenue. Delaware: franchise tax due March 1 for corporations (calculated by authorized shares method or assumed par value method).
 
-Registered Agent: must maintain a registered agent at a physical address in each state of formation or registration at all times. Typical registered agent services (Northwest, ZenBusiness, Registered Agents Inc.) renew annually. The op checks the registered agent renewal date from `vault/tax/05_entities/[entity-name]/registered-agent.md` and flags renewals within 60 days.
+Registered Agent: must maintain a registered agent at a physical address in each state of formation or registration at all times. Typical registered agent services (Northwest, ZenBusiness, Registered Agents Inc.) renew annually. The op checks the registered agent renewal date from `vault/tax/00_current/[entity-name]/registered-agent.md` and flags renewals within 60 days.
 
 S-Corp Requirements: if any entity has an S-Corp election in effect, the op checks: (1) reasonable salary compliance — the owner-employee must be paid a reasonable W-2 salary before any distributions; (2) Form 941 quarterly payroll tax returns — due April 30, July 31, October 31, January 31; (3) EFTPS payroll tax deposits — due semi-weekly or monthly depending on lookback period; (4) W-2 issued to owner-employee by January 31; (5) 1120-S filed or extended by March 15.
 
@@ -44,5 +44,5 @@ None
 
 ## Vault Output
 
-- `vault/tax/05_entities/YYYY-QN-compliance.md` — per-entity compliance status table
+- `vault/tax/00_current/YYYY-QN-compliance.md` — per-entity compliance status table
 - `vault/tax/open-loops.md` — entity compliance gap flags and approaching deadline alerts

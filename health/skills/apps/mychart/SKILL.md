@@ -56,6 +56,6 @@ mychart_chrome_profile: /Users/YOU/Library/Application Support/Google/Chrome/Def
 
 ## Vault Output
 
-- `vault/health/01_labs/` — downloaded lab result PDFs
-- `vault/health/02_visits/` — downloaded visit notes and AVS documents
-- `vault/health/05_medications/` — portal medication list for comparison against vault active list
+- `vault/health/00_current/` — downloaded lab result PDFs
+- `vault/health/00_current/` — downloaded visit notes and AVS documents
+- `vault/health/00_current/` — portal medication list for comparison against vault active list

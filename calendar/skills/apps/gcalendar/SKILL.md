@@ -36,7 +36,7 @@ directly to the calendar as part of the weekly agenda flow.
 
 Add to `vault/calendar/config.md`:
 ```
-gcal_credentials: ~/Documents/AIReadyLife/vault/calendar/keys/gcal-oauth.json
+gcal_credentials: ~/Documents/AIReadyLife/vault/calendar/00_current/gcal-oauth.json
 gcal_primary_calendar_id: YOUR_EMAIL@gmail.com
 gcal_work_calendar_id: YOUR_WORK_EMAIL@company.com
 gcal_focus_calendar_id: YOUR_EMAIL@gmail.com   # calendar where focus blocks are written
@@ -45,7 +45,7 @@ gcal_color_deadline: 11    # Tomato — used for deadline reminder events
 ```
 
 **OAuth2 setup:** Create a project in Google Cloud Console → enable Google Calendar API → create
-OAuth2 credentials → download JSON to `vault/calendar/keys/gcal-oauth.json`.
+OAuth2 credentials → download JSON to `vault/calendar/00_current/gcal-oauth.json`.
 Scope needed: `https://www.googleapis.com/auth/calendar` (full read/write).
 
 ## Key API
@@ -104,5 +104,5 @@ When creating focus blocks as part of weekly agenda:
 
 ## Vault Output
 
-`~/Documents/AIReadyLife/vault/calendar/01_events/` — event summaries written after weekly reads
-`~/Documents/AIReadyLife/vault/calendar/03_focus-time/` — focus time audit records written by focus-time-review
+`~/Documents/AIReadyLife/vault/calendar/00_current/` — event summaries written after weekly reads
+`~/Documents/AIReadyLife/vault/calendar/00_current/` — focus time audit records written by focus-time-review

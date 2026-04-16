@@ -46,9 +46,9 @@ tripit_chrome_profile: /Users/YOU/Library/Application Support/Google/Chrome/Defa
 
 ## Used By
 
-- `aireadylife-explore-op-monthly-sync` — pull upcoming confirmed bookings into vault/explore/01_trips/ to update booking status fields (populating confirmation numbers the user doesn't need to type manually)
+- `aireadylife-explore-op-monthly-sync` — pull upcoming confirmed bookings into vault/explore/00_current/ to update booking status fields (populating confirmation numbers the user doesn't need to type manually)
 - `aireadylife-explore-flow-build-trip-summary` — cross-reference TripIt itinerary against trip record to verify all booked items are correctly reflected in the vault
 
 ## Vault Output
 
-`vault/explore/01_trips/` — TripIt data is synced to the relevant trip record file, updating confirmation numbers and booking status fields
+`vault/explore/00_current/` — TripIt data is synced to the relevant trip record file, updating confirmation numbers and booking status fields

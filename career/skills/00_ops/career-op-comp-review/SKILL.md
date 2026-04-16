@@ -16,7 +16,7 @@ When your TC falls below market P50, the comp gap flag is triggered with a tiere
 
 The review also checks whether your equity refresh cadence (typically annual refreshes for above-target performers) is keeping pace with market equity norms for your level. Under-market base is addressable at review; under-market equity often requires changing companies to reset.
 
-All output is saved to `vault/career/04_briefs/` and all flags are appended to `vault/career/open-loops.md` via the flag-comp-gap task.
+All output is saved to `vault/career/02_briefs/` and all flags are appended to `vault/career/open-loops.md` via the flag-comp-gap task.
 
 ## Triggers
 
@@ -32,7 +32,7 @@ All output is saved to `vault/career/04_briefs/` and all flags are appended to `
 ## Steps
 
 1. Read `vault/career/config.md` — confirm role title, level, company tier, and metro area are set.
-2. Read current comp breakdown from `vault/career/02_compensation/` — extract base salary, bonus target %, annual RSU grant value, vesting schedule, and benefits value.
+2. Read current comp breakdown from `vault/career/00_current/` — extract base salary, bonus target %, annual RSU grant value, vesting schedule, and benefits value.
 3. Calculate total annual compensation: base + (base × bonus target %) + (RSU grant ÷ vesting years × current price factor) + annual employer 401k match + annual health insurance employer contribution.
 4. Identify market benchmark parameters: role title normalized to market equivalents, seniority level, company tier (FAANG / Series B+ / Fortune 500 / mid-market), and metro area or remote flag.
 5. Pull Levels.fyi benchmark data for role, level, and company tier — extract P25, P50, P75 for TC and for each TC component (base, bonus, equity separately).
@@ -41,19 +41,19 @@ All output is saved to `vault/career/04_briefs/` and all flags are appended to `
 8. Calculate your market percentile position — where does your TC fall on the P25-P75 range?
 9. Calculate the dollar gap vs. market P50 (positive = premium, negative = gap).
 10. If gap exists (TC below P50): call `aireadylife-career-task-flag-comp-gap` with gap amount, severity tier, market data sources, and recommended action.
-11. Append historical benchmark entry to the comp review time series in `vault/career/02_compensation/bench-history.md`.
-12. Write dated comp review brief to `vault/career/04_briefs/YYYY-QN-comp-review.md`.
+11. Append historical benchmark entry to the comp review time series in `vault/career/00_current/bench-history.md`.
+12. Write dated comp review brief to `vault/career/02_briefs/YYYY-QN-comp-review.md`.
 13. Call `aireadylife-career-task-update-open-loops` with all flags from this run.
 
 ## Input
 
 - `~/Documents/AIReadyLife/vault/career/config.md` — role, level, company, metro, bonus structure
-- `~/Documents/AIReadyLife/vault/career/02_compensation/` — pay stubs, equity grant docs, offer letter
+- `~/Documents/AIReadyLife/vault/career/00_current/` — pay stubs, equity grant docs, offer letter
 - Market data from Levels.fyi, Glassdoor, LinkedIn Salary (pulled live or from cached vault files)
 
 ## Output Format
 
-**Comp Benchmarking Report** — saved as `vault/career/04_briefs/YYYY-QN-comp-review.md`
+**Comp Benchmarking Report** — saved as `vault/career/02_briefs/YYYY-QN-comp-review.md`
 
 | Component | Your Value | Market P25 | Market P50 | Market P75 |
 |-----------|-----------|-----------|-----------|-----------|
@@ -84,11 +84,11 @@ Required fields in `vault/career/config.md`:
 ## Error Handling
 
 - **Config incomplete:** Prompt user to fill required fields before proceeding. Name exactly which fields are missing.
-- **Market data unavailable:** Use most recent cached benchmark data in `vault/career/02_compensation/` and note the data age in the output. Flag if cached data is more than 90 days old.
+- **Market data unavailable:** Use most recent cached benchmark data in `vault/career/00_current/` and note the data age in the output. Flag if cached data is more than 90 days old.
 - **Compensation docs missing from vault:** Ask user to provide base salary and bonus directly to proceed; note that equity benchmarking requires grant doc.
 - **Role not found on Levels.fyi:** Fall back to Glassdoor + LinkedIn Salary; note that Levels.fyi data is most accurate for tech roles and unavailability may indicate role is outside their coverage.
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/career/config.md`, `~/Documents/AIReadyLife/vault/career/02_compensation/`
-- Writes to: `~/Documents/AIReadyLife/vault/career/04_briefs/`, `~/Documents/AIReadyLife/vault/career/open-loops.md`, `~/Documents/AIReadyLife/vault/career/02_compensation/bench-history.md`
+- Reads from: `~/Documents/AIReadyLife/vault/career/config.md`, `~/Documents/AIReadyLife/vault/career/00_current/`
+- Writes to: `~/Documents/AIReadyLife/vault/career/02_briefs/`, `~/Documents/AIReadyLife/vault/career/open-loops.md`, `~/Documents/AIReadyLife/vault/career/00_current/bench-history.md`

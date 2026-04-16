@@ -10,7 +10,7 @@ description: >
 
 Runs quarterly (January 1, April 1, July 1, October 1) to ensure your learning investments are systematically aligned with your career trajectory, not with whatever happens to look interesting this month. The quarterly cadence is intentional: frequent enough to incorporate career skill gap updates (which run on the same cycle) and life vision shifts, infrequent enough to allow meaningful progress on each goal before re-evaluating.
 
-**Portfolio assessment:** Reads all active and queued learning goals from `vault/learning/03_goals/`. For each goal, assesses three dimensions: (1) strategic relevance — does this goal directly support a top career priority or life vision objective? Cross-references with the most recent skills gap analysis from `vault/career/03_skills/` (if Career plugin is installed) and the user's stated vision priorities from `vault/learning/config.md`; (2) progress reality — given the completion pace to date, is the user likely to reach working proficiency on this goal within the quarter? A goal that is 5% complete with 85% of the quarter elapsed is either behind schedule or was overambitious at the start; (3) opportunity cost — is the time spent on this goal preventing progress on a higher-priority goal?
+**Portfolio assessment:** Reads all active and queued learning goals from `vault/learning/00_current/`. For each goal, assesses three dimensions: (1) strategic relevance — does this goal directly support a top career priority or life vision objective? Cross-references with the most recent skills gap analysis from `vault/career/00_current/` (if Career plugin is installed) and the user's stated vision priorities from `vault/learning/config.md`; (2) progress reality — given the completion pace to date, is the user likely to reach working proficiency on this goal within the quarter? A goal that is 5% complete with 85% of the quarter elapsed is either behind schedule or was overambitious at the start; (3) opportunity cost — is the time spent on this goal preventing progress on a higher-priority goal?
 
 **New goal additions:** Based on the most recent career skills gap priorities (typically provided by the Career plugin's quarterly op), proposes specific new learning goals for the next quarter. Each proposed goal comes with: a specific resource (exact course name, platform, estimated hours), a target completion date within the quarter, a weekly study commitment calculation (total hours ÷ weeks in quarter), and a connection to the career gap data that motivates it (skill name, demand percentage in target role postings).
 
@@ -32,8 +32,8 @@ Runs quarterly (January 1, April 1, July 1, October 1) to ensure your learning i
 
 ## Steps
 
-1. Read all active and queued learning goals from `vault/learning/03_goals/`.
-2. Read most recent career skills gap analysis from `vault/career/03_skills/` (if Career plugin installed) — extract top 3-5 priority gaps for this quarter.
+1. Read all active and queued learning goals from `vault/learning/00_current/`.
+2. Read most recent career skills gap analysis from `vault/career/00_current/` (if Career plugin installed) — extract top 3-5 priority gaps for this quarter.
 3. Read vision priorities from `vault/learning/config.md` — extract any learning goals tied to life vision objectives.
 4. For each active goal: assess strategic relevance, progress reality, and opportunity cost.
 5. Flag goals for removal or pause based on pruning criteria (no progress 21+ days, strategic relevance dropped, achievability doubtful).
@@ -42,19 +42,19 @@ Runs quarterly (January 1, April 1, July 1, October 1) to ensure your learning i
 8. Validate remaining active goals against SMART criteria; rewrite any that are vague.
 9. Prioritize all continuing and new goals into an ordered list (top priority = highest demand career gap + shortest time to close).
 10. Calculate weekly study time commitment for each goal — verify total commitment fits within configured daily study target × days/week.
-11. Write quarterly learning plan to `vault/learning/03_goals/YYYY-QN-learning-plan.md` with prioritized goals, weekly milestones, and career/vision connection for each.
-12. Archive removed or paused goals to `vault/learning/04_archive/goals-paused.md`.
+11. Write quarterly learning plan to `vault/learning/00_current/YYYY-QN-learning-plan.md` with prioritized goals, weekly milestones, and career/vision connection for each.
+12. Archive removed or paused goals to `vault/learning/01_prior/goals-paused.md`.
 13. Call `aireadylife-learning-task-update-open-loops` with any goals flagged as at-risk or behind.
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/learning/03_goals/` — current active goals
-- `~/Documents/AIReadyLife/vault/career/03_skills/` — career skills gap data (if Career plugin installed)
+- `~/Documents/AIReadyLife/vault/learning/00_current/` — current active goals
+- `~/Documents/AIReadyLife/vault/career/00_current/` — career skills gap data (if Career plugin installed)
 - `~/Documents/AIReadyLife/vault/learning/config.md` — daily study target, weekly availability, vision priorities
 
 ## Output Format
 
-**Quarterly Learning Plan** — saved as `vault/learning/03_goals/YYYY-QN-learning-plan.md`
+**Quarterly Learning Plan** — saved as `vault/learning/00_current/YYYY-QN-learning-plan.md`
 
 ```
 ## Learning Plan — [Quarter Year]
@@ -78,7 +78,7 @@ Weekly milestones:
 
 ## Goals Paused This Quarter
 - [Goal] — Reason: [low progress / strategic relevance dropped / overambitious]
-- Paused to: vault/learning/04_archive/goals-paused.md
+- Paused to: vault/learning/01_prior/goals-paused.md
 
 ## Goals Proposed for Next Quarter (not yet started)
 - [Goal] — [Career connection] — [Proposed start: Q+1]
@@ -106,5 +106,5 @@ Required in `vault/learning/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/learning/03_goals/`, `~/Documents/AIReadyLife/vault/career/03_skills/`, `~/Documents/AIReadyLife/vault/learning/config.md`
-- Writes to: `~/Documents/AIReadyLife/vault/learning/03_goals/YYYY-QN-learning-plan.md`, `~/Documents/AIReadyLife/vault/learning/04_archive/goals-paused.md`, `~/Documents/AIReadyLife/vault/learning/open-loops.md`
+- Reads from: `~/Documents/AIReadyLife/vault/learning/00_current/`, `~/Documents/AIReadyLife/vault/career/00_current/`, `~/Documents/AIReadyLife/vault/learning/config.md`
+- Writes to: `~/Documents/AIReadyLife/vault/learning/00_current/YYYY-QN-learning-plan.md`, `~/Documents/AIReadyLife/vault/learning/01_prior/goals-paused.md`, `~/Documents/AIReadyLife/vault/learning/open-loops.md`

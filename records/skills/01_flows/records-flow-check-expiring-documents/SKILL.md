@@ -36,7 +36,7 @@ The flow processes six document categories with distinct expiration and renewal 
 
 ## Steps
 
-1. Read document inventory from `~/Documents/AIReadyLife/vault/records/00_identity/` and `~/Documents/AIReadyLife/vault/records/01_legal/`
+1. Read document inventory from `~/Documents/AIReadyLife/vault/records/00_current/` and `~/Documents/AIReadyLife/vault/records/00_current/`
 2. For each document with an expiration date: calculate days until expiration
 3. Apply document-specific alert thresholds: passport (365 days), driver's license (90 days), Global Entry/TSA PreCheck/Nexus (180 days), professional license (180 days)
 4. For documents within threshold: calculate the "start renewal by" date using renewal lead times
@@ -49,8 +49,8 @@ The flow processes six document categories with distinct expiration and renewal 
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/records/00_identity/` — identity document records
-- `~/Documents/AIReadyLife/vault/records/01_legal/` — legal document records
+- `~/Documents/AIReadyLife/vault/records/00_current/` — identity document records
+- `~/Documents/AIReadyLife/vault/records/00_current/` — legal document records
 - `~/Documents/AIReadyLife/vault/records/config.md` — household members, recent life events
 
 ## Output Format
@@ -83,7 +83,7 @@ Required in `~/Documents/AIReadyLife/vault/records/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/records/00_identity/`
-- Reads from: `~/Documents/AIReadyLife/vault/records/01_legal/`
+- Reads from: `~/Documents/AIReadyLife/vault/records/00_current/`
+- Reads from: `~/Documents/AIReadyLife/vault/records/00_current/`
 - Reads from: `~/Documents/AIReadyLife/vault/records/config.md`
-- Writes to: `~/Documents/AIReadyLife/vault/records/00_identity/YYYY-MM-expiration-report.md`
+- Writes to: `~/Documents/AIReadyLife/vault/records/00_current/YYYY-MM-expiration-report.md`

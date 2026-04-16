@@ -13,9 +13,9 @@ description: >
 
 ## What It Does
 
-This task fires when any goal in vault/vision/00_goals/ has had no recorded activity — no milestone logged, no open loop resolved, no OKR progress update — for more than 42 days (6 weeks). It is the goal triage mechanism: a stalled goal is a decision point, and this task ensures that decision gets made consciously rather than through passive neglect.
+This task fires when any goal in vault/vision/00_current/ has had no recorded activity — no milestone logged, no open loop resolved, no OKR progress update — for more than 42 days (6 weeks). It is the goal triage mechanism: a stalled goal is a decision point, and this task ensures that decision gets made consciously rather than through passive neglect.
 
-**Activity detection:** Before writing a flag, the task looks for activity evidence across three sources: vault/vision/00_goals/milestones.md (any milestone logged since the check date that references this goal or its domain), vault/{domain}/open-loops.md (any item marked complete since the check date related to this goal's domain), and vault/vision/01_okrs/ (any OKR progress update logged since the check date for a KR tied to this goal). If activity is found in any of these sources, the goal is not flagged. The 42-day threshold is applied from the date of the most recent activity in any of these sources.
+**Activity detection:** Before writing a flag, the task looks for activity evidence across three sources: vault/vision/00_current/milestones.md (any milestone logged since the check date that references this goal or its domain), vault/{domain}/open-loops.md (any item marked complete since the check date related to this goal's domain), and vault/vision/00_current/ (any OKR progress update logged since the check date for a KR tied to this goal). If activity is found in any of these sources, the goal is not flagged. The 42-day threshold is applied from the date of the most recent activity in any of these sources.
 
 **Three-option framing:** The stall is presented as a decision, not a failure. The flag writes three explicit options: (1) Recommit — "I still want this goal. The specific blocker is [X]. My concrete next action is [Y] by [date]." This option requires identifying a named blocker and a specific next step with a date — recommitting without a blocker diagnosis typically produces another stall within 6 weeks. (2) Modify — "The original goal was too broad / no longer the right target / needs to be broken down differently. The modified version is [new goal statement]." This option rewrites the goal rather than abandoning it. (3) Drop — "This goal genuinely no longer serves my life vision. I'm closing it explicitly to free attention for what actually matters." Dropping a goal is not failure — it is strategic resource allocation.
 
@@ -27,7 +27,7 @@ This task fires when any goal in vault/vision/00_goals/ has had no recorded acti
 
 1. Receive goal details from calling op: goal name, domain, date set, last activity date
 2. Calculate days since last activity; confirm it exceeds 42-day threshold
-3. Search vault/vision/00_goals/milestones.md, vault/{domain}/open-loops.md, vault/vision/01_okrs/ for any activity since last activity date
+3. Search vault/vision/00_current/milestones.md, vault/{domain}/open-loops.md, vault/vision/00_current/ for any activity since last activity date
 4. If activity found: do not write flag; return "activity found, no stall" to calling op
 5. Check vault/vision/open-loops.md for existing stalled-goal flag for the same goal
 6. If existing flag: append escalation note with days-since-flag-written count; do not create duplicate
@@ -37,9 +37,9 @@ This task fires when any goal in vault/vision/00_goals/ has had no recorded acti
 ## Input
 
 - Goal data from calling op (goal name, domain, date set, last activity date)
-- ~/Documents/AIReadyLife/vault/vision/00_goals/milestones.md
+- ~/Documents/AIReadyLife/vault/vision/00_current/milestones.md
 - ~/Documents/AIReadyLife/vault/{domain}/open-loops.md
-- ~/Documents/AIReadyLife/vault/vision/01_okrs/
+- ~/Documents/AIReadyLife/vault/vision/00_current/
 - ~/Documents/AIReadyLife/vault/vision/open-loops.md (for deduplication)
 
 ## Output Format
@@ -73,11 +73,11 @@ Optional in vault/vision/config.md:
 
 ## Error Handling
 
-- **Goal missing from vault/vision/00_goals/:** Cannot verify; skip. Note in calling op result.
+- **Goal missing from vault/vision/00_current/:** Cannot verify; skip. Note in calling op result.
 - **open-loops.md missing:** Create the file before writing.
 - **Last activity date not determinable:** Use the goal creation date as the start date for stall calculation; flag with note "Last activity date uncertain — using goal creation date."
 
 ## Vault Paths
 
-- Reads from: ~/Documents/AIReadyLife/vault/vision/00_goals/milestones.md, ~/Documents/AIReadyLife/vault/{domain}/open-loops.md, ~/Documents/AIReadyLife/vault/vision/01_okrs/, ~/Documents/AIReadyLife/vault/vision/open-loops.md
+- Reads from: ~/Documents/AIReadyLife/vault/vision/00_current/milestones.md, ~/Documents/AIReadyLife/vault/{domain}/open-loops.md, ~/Documents/AIReadyLife/vault/vision/00_current/, ~/Documents/AIReadyLife/vault/vision/open-loops.md
 - Writes to: ~/Documents/AIReadyLife/vault/vision/open-loops.md

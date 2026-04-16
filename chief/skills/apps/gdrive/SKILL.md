@@ -34,7 +34,7 @@ layer only. The chief-agent never reads from Drive as its primary data source; D
 
 Add to `vault/chief/config.md`:
 ```
-gdrive_credentials: ~/Documents/AIReadyLife/vault/chief/keys/gdrive-oauth.json
+gdrive_credentials: ~/Documents/AIReadyLife/vault/chief/00_current/gdrive-oauth.json
 gdrive_briefs_folder_id: YOUR_BRIEFS_FOLDER_ID
 gdrive_system_folder_id: YOUR_SYSTEM_FOLDER_ID
 ```
@@ -42,7 +42,7 @@ gdrive_system_folder_id: YOUR_SYSTEM_FOLDER_ID
 To get folder IDs: open the folder in Google Drive → the ID is in the URL after `/folders/`.
 
 **OAuth2 setup:** Create a project in Google Cloud Console → enable Drive API → create OAuth2
-credentials → download JSON to `vault/chief/keys/gdrive-oauth.json`. Scope needed:
+credentials → download JSON to `vault/chief/00_current/gdrive-oauth.json`. Scope needed:
 `https://www.googleapis.com/auth/drive.file` (write-only to files created by this app — minimal
 permission scope).
 
@@ -76,7 +76,7 @@ patch (update) the existing file rather than creating a duplicate.
 ## Notes
 
 - Local vault write always happens first. If Drive write fails, log the error to
-  `vault/chief/03_system/drive-sync-errors.md` and continue — do not block brief delivery on
+  `vault/chief/00_current/drive-sync-errors.md` and continue — do not block brief delivery on
   a Drive failure.
 - Drive is optional. If `gdrive_briefs_folder_id` is not configured, skip Drive archiving silently.
 - Do not use Drive as the input source for any chief skill. All reads come from the local vault.
@@ -84,5 +84,5 @@ patch (update) the existing file rather than creating a duplicate.
 
 ## Vault Output
 
-- Local (primary): `~/Documents/AIReadyLife/vault/chief/01_briefs/` — always written first
+- Local (primary): `~/Documents/AIReadyLife/vault/chief/02_briefs/` — always written first
 - Drive (secondary): configured briefs folder — written after local write succeeds

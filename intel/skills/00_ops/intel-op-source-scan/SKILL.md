@@ -10,13 +10,13 @@ description: >
 
 ## What It Does
 
-Runs weekly (Sundays) to audit the full source list in `~/Documents/AIReadyLife/vault/intel/00_sources/source-list.md`. The quality of the daily digest is entirely determined by the quality of its inputs — a source that has gone quiet, become paywalled, or drifted off-topic will silently degrade the intel output without any obvious signal. This weekly audit catches those issues before they become chronic.
+Runs weekly (Sundays) to audit the full source list in `~/Documents/AIReadyLife/vault/intel/00_current/source-list.md`. The quality of the daily digest is entirely determined by the quality of its inputs — a source that has gone quiet, become paywalled, or drifted off-topic will silently degrade the intel output without any obvious signal. This weekly audit catches those issues before they become chronic.
 
 Checks each source across four dimensions: availability (can the source URL still be reached and does it return valid content?), recency (when was the last new article published — sources with no new content in more than 14 days are flagged as dormant), signal-to-noise ratio (of the last 10 articles from this source, what percentage matched configured interest topics — a source where fewer than 30% of recent articles are relevant is considered low signal), and credibility tier consistency (does the source's actual content quality match its configured tier?).
 
 Also performs a coverage gap analysis: for each configured interest topic, checks whether at least 2 active Tier 1 or Tier 2 sources are covering it. A topic with only Tier 3 coverage or no active coverage is a gap. Suggests specific replacement or addition sources by category: for AI/tech — Import AI newsletter, The Batch, Ars Technica, MIT Tech Review; for finance — Morning Brew, Axios Markets, The Economist, Bankrate; for geopolitics — Reuters World, FT, AP International.
 
-Produces a source health report with a status per source and a coverage gap assessment. Writes the report to vault/intel/00_sources/ and updates open-loops if any critical gaps are found (zero Tier 1 coverage on a configured priority topic).
+Produces a source health report with a status per source and a coverage gap assessment. Writes the report to vault/intel/00_current/ and updates open-loops if any critical gaps are found (zero Tier 1 coverage on a configured priority topic).
 
 ## Triggers
 
@@ -29,7 +29,7 @@ Produces a source health report with a status per source and a coverage gap asse
 
 ## Steps
 
-1. Read `~/Documents/AIReadyLife/vault/intel/00_sources/source-list.md`; load all source entries
+1. Read `~/Documents/AIReadyLife/vault/intel/00_current/source-list.md`; load all source entries
 2. For each source: read the last-activity date from the source record (updated when the daily briefing reads new articles from that source)
 3. Flag sources with last-activity date >14 days as dormant; >7 days as slow; <7 days as active
 4. For each active source: check the topic tag match rate against configured interest topics using recent article records; flag sources where fewer than 30% of recent articles matched any interest topic as "low signal"
@@ -37,12 +37,12 @@ Produces a source health report with a status per source and a coverage gap asse
 6. Perform coverage gap analysis: for each configured interest topic, count how many Tier 1 and Tier 2 sources are actively covering it; flag topics with fewer than 2 Tier 1+2 sources as coverage gaps
 7. Check for duplicate coverage: identify topic areas where more than 5 Tier 2-3 sources cover the same angle with no Tier 1 — this is over-sourced on opinion and under-sourced on facts
 8. Compile source health report: per-source status table, coverage gap table, and replacement suggestions
-9. Write report to vault/intel/00_sources/{YYYY-MM-DD}-source-health.md
+9. Write report to vault/intel/00_current/{YYYY-MM-DD}-source-health.md
 10. Call `aireadylife-intel-task-update-open-loops` if any priority topic has zero Tier 1 coverage
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/intel/00_sources/source-list.md` — source registry with last-activity dates
+- `~/Documents/AIReadyLife/vault/intel/00_current/source-list.md` — source registry with last-activity dates
 - `~/Documents/AIReadyLife/vault/intel/config.md` — interest topics, priority topics
 
 ## Output Format
@@ -88,5 +88,5 @@ Required in `~/Documents/AIReadyLife/vault/intel/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/intel/00_sources/source-list.md`, `~/Documents/AIReadyLife/vault/intel/config.md`
-- Writes to: `~/Documents/AIReadyLife/vault/intel/00_sources/{YYYY-MM-DD}-source-health.md`, `~/Documents/AIReadyLife/vault/intel/open-loops.md`
+- Reads from: `~/Documents/AIReadyLife/vault/intel/00_current/source-list.md`, `~/Documents/AIReadyLife/vault/intel/config.md`
+- Writes to: `~/Documents/AIReadyLife/vault/intel/00_current/{YYYY-MM-DD}-source-health.md`, `~/Documents/AIReadyLife/vault/intel/open-loops.md`

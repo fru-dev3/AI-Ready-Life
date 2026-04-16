@@ -3,7 +3,7 @@ name: aireadylife-calendar-task-add-deadline
 type: task
 cadence: as-received
 description: >
-  Records a new deadline to vault/calendar/00_deadlines/ with item description,
+  Records a new deadline to vault/calendar/00_current/ with item description,
   due date, domain, effort estimate, priority, and linked open loop. Called whenever
   a new deadline is identified during any op run or directly on-demand.
 ---
@@ -11,13 +11,13 @@ description: >
 # aireadylife-calendar-add-deadline
 
 **Cadence:** As-received (triggered whenever a new deadline is identified)
-**Produces:** New deadline record in ~/Documents/AIReadyLife/vault/calendar/00_deadlines/YYYY-MM-DD-{slug}.md
+**Produces:** New deadline record in ~/Documents/AIReadyLife/vault/calendar/00_current/YYYY-MM-DD-{slug}.md
 
 ## What It Does
 
-This task creates a canonical deadline record in vault/calendar/00_deadlines/ for any new time-bound obligation identified anywhere in the AI Ready Life system. Its purpose is to ensure that once a deadline is known, it is registered in the cross-domain deadline registry and will surface automatically in every subsequent weekly agenda scan and deadline alert — no matter where it originated.
+This task creates a canonical deadline record in vault/calendar/00_current/ for any new time-bound obligation identified anywhere in the AI Ready Life system. Its purpose is to ensure that once a deadline is known, it is registered in the cross-domain deadline registry and will surface automatically in every subsequent weekly agenda scan and deadline alert — no matter where it originated.
 
-The task checks first for a duplicate: if vault/calendar/00_deadlines/ already contains a file with the same due date and a matching domain + item slug, it updates the existing file rather than creating a second record. This prevents duplicate entries from accumulating when the same deadline is discovered through multiple scan paths.
+The task checks first for a duplicate: if vault/calendar/00_current/ already contains a file with the same due date and a matching domain + item slug, it updates the existing file rather than creating a second record. This prevents duplicate entries from accumulating when the same deadline is discovered through multiple scan paths.
 
 Each deadline record captures seven fields. Item name: a short human-readable title. Description: a full statement of what must be done, what the obligation is, and what constitutes completion. Due date: in ISO format YYYY-MM-DD. Source domain: the plugin or life area the deadline belongs to (tax, benefits, estate, insurance, career, business, etc.). Effort estimate: the approximate hours required to complete the task — estimated from the item description if not provided (Light: 1-3h, Moderate: 4-8h, Heavy: 8-20h). Priority: P1 (🔴 hard deadline or critical consequence), P2 (🟡 important soft deadline), P3 (🟢 on-radar monitoring item). Open loop reference: the specific open-loops.md file and item where this deadline originated, for traceability.
 
@@ -29,7 +29,7 @@ After creating or updating the deadline record, the task also appends a correspo
 
 1. Receive: item name, description, due date, source domain, effort estimate (or infer), priority
 2. Generate slug from item name (lowercase, hyphens, max 35 chars)
-3. Check vault/calendar/00_deadlines/ for existing file matching YYYY-MM-DD-{domain}-{slug}
+3. Check vault/calendar/00_current/ for existing file matching YYYY-MM-DD-{domain}-{slug}
 4. If exists: update the existing file with any new information; note update date
 5. If not exists: create new file YYYY-MM-DD-{domain}-{slug}.md with full structured record
 6. Verify vault/calendar/open-loops.md has a corresponding entry; add if missing
@@ -38,12 +38,12 @@ After creating or updating the deadline record, the task also appends a correspo
 ## Input
 
 - Item data passed by calling op (item name, description, due date, domain, effort estimate, priority)
-- ~/Documents/AIReadyLife/vault/calendar/00_deadlines/ (for deduplication check)
+- ~/Documents/AIReadyLife/vault/calendar/00_current/ (for deduplication check)
 - ~/Documents/AIReadyLife/vault/calendar/open-loops.md
 
 ## Output Format
 
-Deadline file: ~/Documents/AIReadyLife/vault/calendar/00_deadlines/YYYY-MM-DD-{domain}-{slug}.md
+Deadline file: ~/Documents/AIReadyLife/vault/calendar/00_current/YYYY-MM-DD-{domain}-{slug}.md
 
 ```markdown
 ---
@@ -81,5 +81,5 @@ No configuration required. Domain and due date are passed by calling op.
 
 ## Vault Paths
 
-- Reads from: ~/Documents/AIReadyLife/vault/calendar/00_deadlines/ (deduplication check), ~/Documents/AIReadyLife/vault/calendar/open-loops.md
-- Writes to: ~/Documents/AIReadyLife/vault/calendar/00_deadlines/YYYY-MM-DD-{domain}-{slug}.md, ~/Documents/AIReadyLife/vault/calendar/open-loops.md
+- Reads from: ~/Documents/AIReadyLife/vault/calendar/00_current/ (deduplication check), ~/Documents/AIReadyLife/vault/calendar/open-loops.md
+- Writes to: ~/Documents/AIReadyLife/vault/calendar/00_current/YYYY-MM-DD-{domain}-{slug}.md, ~/Documents/AIReadyLife/vault/calendar/open-loops.md

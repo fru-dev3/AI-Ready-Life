@@ -14,7 +14,7 @@ Runs monthly on the 1st (typically triggered by the monthly sync) to evaluate wh
 
 **Recovery calculation:** For each flagged item, computes the daily or weekly pace needed to finish on time from today: (remaining content ÷ remaining days) = required daily pace. Expresses this in the units most relevant to the item type — minutes/day for a time-estimated course, pages/day for a book, modules/week for a certification course. This is the only number that makes "falling behind" actionable.
 
-**Monthly goal assessment:** Reads monthly milestone targets from the active quarterly plan in `vault/learning/03_goals/`. Calculates: (milestones hit this month ÷ total milestones planned for this month) = monthly achievement rate. If achievement rate is below 70%, flags the month as under-plan and identifies which items are causing the shortfall.
+**Monthly goal assessment:** Reads monthly milestone targets from the active quarterly plan in `vault/learning/00_current/`. Calculates: (milestones hit this month ÷ total milestones planned for this month) = monthly achievement rate. If achievement rate is below 70%, flags the month as under-plan and identifies which items are causing the shortfall.
 
 **Reading list analysis:** Counts books completed in the current month and YTD. Calculates current reading pace (books completed ÷ months elapsed). Projects year-end total at current pace and compares to annual goal. If projected total is below goal, calculates additional books/month needed for recovery.
 
@@ -37,18 +37,18 @@ Runs monthly on the 1st (typically triggered by the monthly sync) to evaluate wh
 3. Classify each item: ahead (>15 pts ahead), on-pace (±15 pts), or behind (>15 pts behind).
 4. For each "behind" item: calculate required daily/weekly pace to complete on time from today.
 5. Call `aireadylife-learning-task-flag-falling-behind` for each behind item with full pace data.
-6. Read active quarterly plan from `vault/learning/03_goals/` — extract monthly milestone targets.
+6. Read active quarterly plan from `vault/learning/00_current/` — extract monthly milestone targets.
 7. Compare milestones hit this month vs. planned. Calculate monthly achievement rate.
 8. Call `aireadylife-learning-flow-build-reading-summary` — get reading pace and annual goal projection.
-9. Read certification study hours from `vault/learning/01_courses/certs/` — calculate exam readiness %.
+9. Read certification study hours from `vault/learning/00_current/certs/` — calculate exam readiness %.
 10. Write progress review to `vault/learning/00_current/progress-YYYY-MM.md`.
 11. Call `aireadylife-learning-task-update-open-loops` with all flagged items.
 
 ## Input
 
 - `~/Documents/AIReadyLife/vault/learning/00_current/` — active courses, certs, books with start date and target date
-- `~/Documents/AIReadyLife/vault/learning/03_goals/` — monthly milestone targets
-- `~/Documents/AIReadyLife/vault/learning/01_courses/` — study hours logs for certifications
+- `~/Documents/AIReadyLife/vault/learning/00_current/` — monthly milestone targets
+- `~/Documents/AIReadyLife/vault/learning/00_current/` — study hours logs for certifications
 
 ## Output Format
 
@@ -98,5 +98,5 @@ Each active learning item in `vault/learning/00_current/` needs: `start_date`, `
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/learning/00_current/`, `~/Documents/AIReadyLife/vault/learning/03_goals/`, `~/Documents/AIReadyLife/vault/learning/01_courses/`
+- Reads from: `~/Documents/AIReadyLife/vault/learning/00_current/`, `~/Documents/AIReadyLife/vault/learning/00_current/`, `~/Documents/AIReadyLife/vault/learning/00_current/`
 - Writes to: `~/Documents/AIReadyLife/vault/learning/00_current/progress-YYYY-MM.md`, `~/Documents/AIReadyLife/vault/learning/open-loops.md`

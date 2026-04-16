@@ -14,9 +14,9 @@ description: >
 
 ## What It Does
 
-This flow is the measurement engine for the social domain. It joins the contact roster (vault/social/00_current/contacts.md) with the interaction log (vault/social/01_interactions/) to produce a full health assessment of every tracked relationship.
+This flow is the measurement engine for the social domain. It joins the contact roster (vault/social/00_current/contacts.md) with the interaction log (vault/social/00_current/) to produce a full health assessment of every tracked relationship.
 
-**Last-contact calculation:** For each contact in the roster, the flow reads their interaction log file (or scans the combined interaction log for their name) and finds the most recent entry. The date of the most recent entry is the last-contact date. "Contact" is defined as a meaningful interaction — a logged interaction entry in vault/social/01_interactions/. The flow does not count implicit signals (like seeing someone's LinkedIn post) as contact — only explicitly logged interactions count.
+**Last-contact calculation:** For each contact in the roster, the flow reads their interaction log file (or scans the combined interaction log for their name) and finds the most recent entry. The date of the most recent entry is the last-contact date. "Contact" is defined as a meaningful interaction — a logged interaction entry in vault/social/00_current/. The flow does not count implicit signals (like seeing someone's LinkedIn post) as contact — only explicitly logged interactions count.
 
 **Health status assignment:** Health status is assigned based on days since last contact and the contact's tier. Thresholds are read from vault/social/config.md; defaults are:
 - Tier 1 (Inner Circle): Healthy = <30 days, Fading = 30-60 days, Overdue = 60+ days
@@ -34,7 +34,7 @@ This flow is the measurement engine for the social domain. It joins the contact 
 
 1. Read vault/social/00_current/contacts.md for complete contact roster
 2. Read tier definitions and health thresholds from vault/social/config.md
-3. For each contact: read vault/social/01_interactions/ for most recent interaction entry
+3. For each contact: read vault/social/00_current/ for most recent interaction entry
 4. Calculate days since last contact for each contact (or flag as "No log")
 5. Apply tier-specific health thresholds; assign status (Healthy / Fading / Overdue / No log)
 6. Calculate next-recommended-contact-date per contact
@@ -46,7 +46,7 @@ This flow is the measurement engine for the social domain. It joins the contact 
 ## Input
 
 - ~/Documents/AIReadyLife/vault/social/00_current/contacts.md
-- ~/Documents/AIReadyLife/vault/social/01_interactions/ (all interaction logs)
+- ~/Documents/AIReadyLife/vault/social/00_current/ (all interaction logs)
 - ~/Documents/AIReadyLife/vault/social/config.md (tier thresholds)
 
 ## Output Format
@@ -82,10 +82,10 @@ Required in vault/social/config.md:
 ## Error Handling
 
 - **contacts.md missing:** Cannot run. Return error to calling op: "Contact roster missing. Create vault/social/00_current/contacts.md to enable health tracking."
-- **No interaction log entries for any contact:** Return table with all contacts as "No log" status; note "No interactions logged — the social domain requires vault/social/01_interactions/ data."
+- **No interaction log entries for any contact:** Return table with all contacts as "No log" status; note "No interactions logged — the social domain requires vault/social/00_current/ data."
 - **config.md missing health thresholds:** Use defaults (T1: 30/60, T2: 60/90, T3: 90/180).
 
 ## Vault Paths
 
-- Reads from: ~/Documents/AIReadyLife/vault/social/00_current/contacts.md, ~/Documents/AIReadyLife/vault/social/01_interactions/, ~/Documents/AIReadyLife/vault/social/config.md
+- Reads from: ~/Documents/AIReadyLife/vault/social/00_current/contacts.md, ~/Documents/AIReadyLife/vault/social/00_current/, ~/Documents/AIReadyLife/vault/social/config.md
 - Writes to: none (returns data to calling op)

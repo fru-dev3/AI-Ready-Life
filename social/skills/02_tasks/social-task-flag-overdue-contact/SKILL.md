@@ -24,12 +24,12 @@ This task fires when the relationship health flow identifies a contact who has c
 
 **Deduplication:** Before writing, the task checks vault/social/open-loops.md for an existing unresolved flag for the same contact. If found: it adds an escalation timestamp with the updated days-since-contact count rather than creating a duplicate. The escalation shows the contact is getting further overdue, which may prompt the user to increase the urgency of the outreach.
 
-**Resolution:** The flag is marked resolved when a new interaction is logged in vault/social/01_interactions/ for that contact. The next time `social-task-update-open-loops` runs, it detects the new interaction and marks the corresponding open-loop flag as complete.
+**Resolution:** The flag is marked resolved when a new interaction is logged in vault/social/00_current/ for that contact. The next time `social-task-update-open-loops` runs, it detects the new interaction and marks the corresponding open-loop flag as complete.
 
 ## Steps
 
 1. Receive contact details from calling flow: name, tier, last contact date, days since contact
-2. Look up contact description and last interaction notes from vault/social/01_interactions/
+2. Look up contact description and last interaction notes from vault/social/00_current/
 3. Determine suggested outreach medium based on tier + days-since-contact
 4. Generate reconnect hook from last interaction context
 5. Check vault/social/open-loops.md for existing unresolved flag for this contact
@@ -40,7 +40,7 @@ This task fires when the relationship health flow identifies a contact who has c
 ## Input
 
 - Contact data from calling flow (name, tier, last contact date, days since contact)
-- ~/Documents/AIReadyLife/vault/social/01_interactions/{contact-slug}.md (for reconnect context)
+- ~/Documents/AIReadyLife/vault/social/00_current/{contact-slug}.md (for reconnect context)
 - ~/Documents/AIReadyLife/vault/social/open-loops.md (for deduplication check)
 
 ## Output Format
@@ -79,5 +79,5 @@ Optional in vault/social/config.md:
 
 ## Vault Paths
 
-- Reads from: ~/Documents/AIReadyLife/vault/social/01_interactions/, ~/Documents/AIReadyLife/vault/social/open-loops.md
+- Reads from: ~/Documents/AIReadyLife/vault/social/00_current/, ~/Documents/AIReadyLife/vault/social/open-loops.md
 - Writes to: ~/Documents/AIReadyLife/vault/social/open-loops.md

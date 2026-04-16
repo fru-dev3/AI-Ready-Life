@@ -70,4 +70,4 @@ Optional override via calling op:
 ## Vault Paths
 
 - Reads from: ~/Documents/AIReadyLife/vault/*/open-loops.md
-- Writes to: ~/Documents/AIReadyLife/vault/calendar/00_deadlines/ (via calling op, not directly)
+- Writes to: ~/Documents/AIReadyLife/vault/calendar/00_current/ (via calling op, not directly)

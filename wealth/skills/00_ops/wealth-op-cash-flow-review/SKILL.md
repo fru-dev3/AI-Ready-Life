@@ -14,7 +14,7 @@ description: >
 # aireadylife-wealth-cash-flow-review
 
 **Cadence:** Monthly (1st of month)
-**Produces:** Cash flow summary at `vault/wealth/03_cashflow/YYYY-MM-cashflow.md`; budget variance flags in `vault/wealth/open-loops.md`
+**Produces:** Cash flow summary at `vault/wealth/00_current/YYYY-MM-cashflow.md`; budget variance flags in `vault/wealth/open-loops.md`
 
 ## What It Does
 
@@ -37,5 +37,5 @@ None (reads from vault; Monarch Money CSV export or bank transaction files must 
 
 ## Vault Output
 
-- `vault/wealth/03_cashflow/YYYY-MM-cashflow.md` — full cash flow summary
+- `vault/wealth/00_current/YYYY-MM-cashflow.md` — full cash flow summary
 - `vault/wealth/open-loops.md` — budget variance flags and savings rate alerts

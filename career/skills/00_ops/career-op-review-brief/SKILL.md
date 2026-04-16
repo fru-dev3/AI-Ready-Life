@@ -27,30 +27,30 @@ The brief is formatted for a 2-minute read — executive summary at the top, det
 ## Steps
 
 1. Read `vault/career/00_current/status.md` for sync status — confirm data freshness (if sync is more than 5 days old, note stale data warning).
-2. Read most recent market scan brief from `vault/career/04_briefs/` — extract market health summary and qualifying posting count.
-3. Read `vault/career/01_pipeline/` — compile pipeline stage counts and identify items requiring action within 7 days.
-4. Read most recent comp review brief from `vault/career/04_briefs/` — extract percentile position, gap vs. P50, and action level.
-5. Read skills gap analysis from `vault/career/03_skills/` — extract top 3 gap priorities with demand scores.
+2. Read most recent market scan brief from `vault/career/02_briefs/` — extract market health summary and qualifying posting count.
+3. Read `vault/career/00_current/` — compile pipeline stage counts and identify items requiring action within 7 days.
+4. Read most recent comp review brief from `vault/career/02_briefs/` — extract percentile position, gap vs. P50, and action level.
+5. Read skills gap analysis from `vault/career/00_current/` — extract top 3 gap priorities with demand scores.
 6. Read `vault/career/open-loops.md` — extract all open items, filter to highest priority by severity and deadline.
 7. Synthesize market position section: posting volume, comp range, market health signal.
 8. Synthesize pipeline status section: active opportunities by stage, items needing action with specific deadlines.
 9. Synthesize comp summary section: current percentile, gap, recommended action.
 10. Synthesize skills section: top 3 gaps with specific learning resource recommendations.
 11. Synthesize next actions: select 3-5 highest-impact actions from open loops and current briefing data, assign target dates.
-12. Write complete monthly brief to `vault/career/04_briefs/YYYY-MM-career-brief.md`.
+12. Write complete monthly brief to `vault/career/02_briefs/YYYY-MM-career-brief.md`.
 13. Call `aireadylife-career-task-update-open-loops` with any new flags from this synthesis.
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/career/04_briefs/` — prior market scan and comp review briefs
-- `~/Documents/AIReadyLife/vault/career/01_pipeline/` — active application pipeline
-- `~/Documents/AIReadyLife/vault/career/03_skills/` — skills gap analysis
+- `~/Documents/AIReadyLife/vault/career/02_briefs/` — prior market scan and comp review briefs
+- `~/Documents/AIReadyLife/vault/career/00_current/` — active application pipeline
+- `~/Documents/AIReadyLife/vault/career/00_current/` — skills gap analysis
 - `~/Documents/AIReadyLife/vault/career/00_current/status.md` — sync status
 - `~/Documents/AIReadyLife/vault/career/open-loops.md` — all outstanding flags
 
 ## Output Format
 
-**Monthly Career Brief** — saved as `vault/career/04_briefs/YYYY-MM-career-brief.md`
+**Monthly Career Brief** — saved as `vault/career/02_briefs/YYYY-MM-career-brief.md`
 
 ```
 # Career Brief — [Month Year]
@@ -100,5 +100,5 @@ No additional configuration beyond standard `vault/career/config.md`. Brief cade
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/career/04_briefs/`, `~/Documents/AIReadyLife/vault/career/01_pipeline/`, `~/Documents/AIReadyLife/vault/career/03_skills/`, `~/Documents/AIReadyLife/vault/career/00_current/status.md`, `~/Documents/AIReadyLife/vault/career/open-loops.md`
-- Writes to: `~/Documents/AIReadyLife/vault/career/04_briefs/YYYY-MM-career-brief.md`, `~/Documents/AIReadyLife/vault/career/open-loops.md`
+- Reads from: `~/Documents/AIReadyLife/vault/career/02_briefs/`, `~/Documents/AIReadyLife/vault/career/00_current/`, `~/Documents/AIReadyLife/vault/career/00_current/`, `~/Documents/AIReadyLife/vault/career/00_current/status.md`, `~/Documents/AIReadyLife/vault/career/open-loops.md`
+- Writes to: `~/Documents/AIReadyLife/vault/career/02_briefs/YYYY-MM-career-brief.md`, `~/Documents/AIReadyLife/vault/career/open-loops.md`

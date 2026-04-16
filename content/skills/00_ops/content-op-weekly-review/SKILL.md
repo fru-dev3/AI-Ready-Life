@@ -32,9 +32,9 @@ Surfaces the top 3 action items for the current week based on: what is scheduled
 
 1. Determine the review period: the 7 calendar days ending yesterday (Sunday through Saturday)
 2. Read vault/content/00_current/ for the publishing log; identify all content published in the 7-day window by platform
-3. Read vault/content/00_youtube/ for the most recent video's 48-hour metrics (views, CTR, impressions) if a video was published in the window
-4. Read vault/content/01_newsletter/ for the most recent issue's 24-hour open rate if an issue was sent in the window
-5. Read vault/content/02_gumroad/ for any sales activity in the prior 7 days (units sold, revenue)
+3. Read vault/content/00_current/ for the most recent video's 48-hour metrics (views, CTR, impressions) if a video was published in the window
+4. Read vault/content/00_current/ for the most recent issue's 24-hour open rate if an issue was sent in the window
+5. Read vault/content/00_current/ for any sales activity in the prior 7 days (units sold, revenue)
 6. Count total pieces published per platform; compare to weekly publishing cadence target from config.md (monthly target / 4)
 7. Flag any primary platform with zero content in the 7-day window: 🟡 first week, 🔴 second consecutive week
 8. Read vault/content/open-loops.md for any unresolved content action items flagged in the most recent monthly reviews
@@ -44,9 +44,9 @@ Surfaces the top 3 action items for the current week based on: what is scheduled
 ## Input
 
 - `~/Documents/AIReadyLife/vault/content/00_current/` — publishing log; recent video/newsletter/post records
-- `~/Documents/AIReadyLife/vault/content/00_youtube/` — most recent video's early performance metrics (if recently published)
-- `~/Documents/AIReadyLife/vault/content/01_newsletter/` — most recent issue's open rate
-- `~/Documents/AIReadyLife/vault/content/02_gumroad/` — 7-day sales data
+- `~/Documents/AIReadyLife/vault/content/00_current/` — most recent video's early performance metrics (if recently published)
+- `~/Documents/AIReadyLife/vault/content/00_current/` — most recent issue's open rate
+- `~/Documents/AIReadyLife/vault/content/00_current/` — 7-day sales data
 - `~/Documents/AIReadyLife/vault/content/open-loops.md` — current action items from monthly reviews
 - `~/Documents/AIReadyLife/vault/content/config.md` — cadence targets, primary platforms
 
@@ -90,5 +90,5 @@ Required in `~/Documents/AIReadyLife/vault/content/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/content/00_current/`, `~/Documents/AIReadyLife/vault/content/00_youtube/`, `~/Documents/AIReadyLife/vault/content/01_newsletter/`, `~/Documents/AIReadyLife/vault/content/02_gumroad/`, `~/Documents/AIReadyLife/vault/content/open-loops.md`, `~/Documents/AIReadyLife/vault/content/config.md`
+- Reads from: `~/Documents/AIReadyLife/vault/content/00_current/`, `~/Documents/AIReadyLife/vault/content/00_current/`, `~/Documents/AIReadyLife/vault/content/00_current/`, `~/Documents/AIReadyLife/vault/content/00_current/`, `~/Documents/AIReadyLife/vault/content/open-loops.md`, `~/Documents/AIReadyLife/vault/content/config.md`
 - Writes to: `~/Documents/AIReadyLife/vault/content/00_current/weekly-snapshot.md`

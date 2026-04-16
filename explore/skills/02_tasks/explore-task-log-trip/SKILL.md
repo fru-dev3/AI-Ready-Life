@@ -3,14 +3,14 @@ name: aireadylife-explore-task-log-trip
 type: task
 cadence: as-planned
 description: >
-  Records a new trip to vault/explore/01_trips/ with destination, dates, purpose, total budget,
+  Records a new trip to vault/explore/00_current/ with destination, dates, purpose, total budget,
   booking status, and companions.
 ---
 
 # aireadylife-explore-log-trip
 
 **Cadence:** As-planned (when a new trip is being planned or booked)
-**Produces:** New trip record in ~/Documents/AIReadyLife/vault/explore/01_trips/YYYY-{destination}-trip.md
+**Produces:** New trip record in ~/Documents/AIReadyLife/vault/explore/00_current/YYYY-{destination}-trip.md
 
 ## What It Does
 
@@ -20,15 +20,15 @@ This task creates or updates the canonical trip record for a specific trip. The 
 
 **Budget breakdown:** Records the budget breakdown by category: flights estimate, accommodation estimate, car rental estimate, food/restaurants estimate, activities estimate, travel insurance estimate, and a miscellaneous buffer (typically 10-15% of total). The actual-vs-estimated tracking becomes useful over time as the user compares trip costs against initial estimates.
 
-**Existing trip update:** If a trip record already exists in vault/explore/01_trips/ for the same destination and approximate dates, the task updates the existing record rather than creating a duplicate. Update triggers: new booking confirmation received, budget estimate revised, additional travelers added, or booking status changed for any category.
+**Existing trip update:** If a trip record already exists in vault/explore/00_current/ for the same destination and approximate dates, the task updates the existing record rather than creating a duplicate. Update triggers: new booking confirmation received, budget estimate revised, additional travelers added, or booking status changed for any category.
 
-**Post-trip logging:** When called after a trip has returned (the return date has passed), the task can archive the trip to vault/explore/04_archive/YYYY/ and log a brief trip summary (total actual cost, highlights, recommendations for future visits). This builds a personal travel history archive.
+**Post-trip logging:** When called after a trip has returned (the return date has passed), the task can archive the trip to vault/explore/01_prior/YYYY/ and log a brief trip summary (total actual cost, highlights, recommendations for future visits). This builds a personal travel history archive.
 
 ## Steps
 
 1. Receive trip details from user: destination, dates, purpose, travelers, initial booking status
 2. Generate trip file name: YYYY-{destination-slug}-trip.md
-3. Check vault/explore/01_trips/ for existing file matching same destination + approximate dates
+3. Check vault/explore/00_current/ for existing file matching same destination + approximate dates
 4. If existing file: update with new information; note update date
 5. If no existing file: create new trip record with full schema
 6. For each booking category: record current status (booked/not booked), confirmation if booked, provider
@@ -39,12 +39,12 @@ This task creates or updates the canonical trip record for a specific trip. The 
 ## Input
 
 - Trip data from user (destination, dates, travelers, booking status, budget)
-- ~/Documents/AIReadyLife/vault/explore/01_trips/ (for duplicate check and update)
+- ~/Documents/AIReadyLife/vault/explore/00_current/ (for duplicate check and update)
 - ~/Documents/AIReadyLife/vault/explore/config.md (for traveler names and preferences)
 
 ## Output Format
 
-Trip file: ~/Documents/AIReadyLife/vault/explore/01_trips/YYYY-{destination}-trip.md
+Trip file: ~/Documents/AIReadyLife/vault/explore/00_current/YYYY-{destination}-trip.md
 
 ```markdown
 ---
@@ -103,5 +103,5 @@ No configuration required beyond vault/explore/config.md with traveler names.
 
 ## Vault Paths
 
-- Reads from: ~/Documents/AIReadyLife/vault/explore/01_trips/, ~/Documents/AIReadyLife/vault/explore/config.md
-- Writes to: ~/Documents/AIReadyLife/vault/explore/01_trips/YYYY-{destination}-trip.md, ~/Documents/AIReadyLife/vault/explore/open-loops.md
+- Reads from: ~/Documents/AIReadyLife/vault/explore/00_current/, ~/Documents/AIReadyLife/vault/explore/config.md
+- Writes to: ~/Documents/AIReadyLife/vault/explore/00_current/YYYY-{destination}-trip.md, ~/Documents/AIReadyLife/vault/explore/open-loops.md

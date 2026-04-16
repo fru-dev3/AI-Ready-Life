@@ -12,19 +12,19 @@ description: >
 # aireadylife-vision-monthly-scorecard
 
 **Cadence:** Monthly (last day of month or first of new month)
-**Produces:** Monthly scorecard at ~/Documents/AIReadyLife/vault/vision/02_scorecard/YYYY-MM-scorecard.md
+**Produces:** Monthly scorecard at ~/Documents/AIReadyLife/vault/vision/00_current/YYYY-MM-scorecard.md
 
 ## What It Does
 
 The monthly scorecard is the most important recurring output in the vision plugin — the single-page life dashboard that tells, at a glance, where momentum is building, where domains are drifting, and where intentional effort is needed next month. It is designed to be reviewed in under 10 minutes and to produce at most 2-3 action decisions.
 
-The op calls `vision-flow-build-scorecard` to assemble per-domain data from across all installed plugins. For each of the 13 life domains, the scorecard flow reads three data sources: (1) vault/{domain}/open-loops.md to count items added this month vs. resolved this month — the resolution ratio; (2) vault/vision/01_okrs/ for the current quarter's key result progress percentages; (3) vault/vision/00_goals/milestones.md for any milestones logged this month attributed to each domain. These three inputs feed the weighted scoring formula: resolution ratio 50%, OKR pace 30%, milestones 20%.
+The op calls `vision-flow-build-scorecard` to assemble per-domain data from across all installed plugins. For each of the 13 life domains, the scorecard flow reads three data sources: (1) vault/{domain}/open-loops.md to count items added this month vs. resolved this month — the resolution ratio; (2) vault/vision/00_current/ for the current quarter's key result progress percentages; (3) vault/vision/00_current/milestones.md for any milestones logged this month attributed to each domain. These three inputs feed the weighted scoring formula: resolution ratio 50%, OKR pace 30%, milestones 20%.
 
 The op then calls `vision-flow-score-domain-progress` to get a current-quarter OKR evaluation. Key results that are more than 20 percentage points behind expected completion pace are flagged as at-risk. KRs with less than 2 weeks remaining in the quarter and less than 50% complete are flagged as critical-at-risk and surface prominently in the scorecard's action section.
 
 **Score interpretation:** Scores 8-10 indicate strong momentum — the domain is resolving more than it's accumulating, OKRs are on pace, and positive milestones are accumulating. Scores 5-7 indicate stable but not growing — the domain is maintaining but not advancing. Scores below 5 indicate the domain needs attention — either significant items are accumulating without resolution, OKRs are behind pace, or the domain has been neglected. Scores below 5 for 2+ consecutive months trigger a 🔴 escalation flag in vault/vision/open-loops.md and an explicit recommendation in the scorecard's action section.
 
-After building the scorecard, the op calls `vision-task-flag-stalled-goal` for any goals in vault/vision/00_goals/ that have had no activity for more than 42 days. Stalled goals appear in the scorecard's "Needs Decision" section rather than being silently dropped or passively tracked.
+After building the scorecard, the op calls `vision-task-flag-stalled-goal` for any goals in vault/vision/00_current/ that have had no activity for more than 42 days. Stalled goals appear in the scorecard's "Needs Decision" section rather than being silently dropped or passively tracked.
 
 ## Triggers
 
@@ -43,20 +43,20 @@ After building the scorecard, the op calls `vision-task-flag-stalled-goal` for a
 3. Call `vision-flow-build-scorecard` to compute per-domain scores from open-loops, OKR pace, milestones
 4. Call `vision-flow-score-domain-progress` to evaluate current-quarter OKR key results
 5. Identify at-risk KRs (>20 points behind pace) and critical-at-risk KRs (<50% with <2 weeks remaining)
-6. Compare current-month scores to prior month (from vault/vision/02_scorecard/) to assign trend indicators (↑/→/↓)
+6. Compare current-month scores to prior month (from vault/vision/00_current/) to assign trend indicators (↑/→/↓)
 7. Flag domains below 5 as "needs attention"; flag domains 8+ as "momentum"
-8. Check vault/vision/00_goals/ for goals with no activity in 42+ days; call `vision-task-flag-stalled-goal` for each
-9. Write scorecard to vault/vision/02_scorecard/YYYY-MM-scorecard.md
+8. Check vault/vision/00_current/ for goals with no activity in 42+ days; call `vision-task-flag-stalled-goal` for each
+9. Write scorecard to vault/vision/00_current/YYYY-MM-scorecard.md
 10. Call `vision-task-update-open-loops` to write any 🔴 domain or KR flags to vault/vision/open-loops.md
 11. Return formatted scorecard to user
 
 ## Input
 
 - ~/Documents/AIReadyLife/vault/*/open-loops.md (all installed plugins, for resolution ratio)
-- ~/Documents/AIReadyLife/vault/vision/01_okrs/ (current OKRs, for KR pace)
-- ~/Documents/AIReadyLife/vault/vision/00_goals/milestones.md (milestone log, for positive signal)
-- ~/Documents/AIReadyLife/vault/vision/02_scorecard/ (prior month scorecard, for trend)
-- ~/Documents/AIReadyLife/vault/vision/00_goals/ (goal list, for stall check)
+- ~/Documents/AIReadyLife/vault/vision/00_current/ (current OKRs, for KR pace)
+- ~/Documents/AIReadyLife/vault/vision/00_current/milestones.md (milestone log, for positive signal)
+- ~/Documents/AIReadyLife/vault/vision/00_current/ (prior month scorecard, for trend)
+- ~/Documents/AIReadyLife/vault/vision/00_current/ (goal list, for stall check)
 - ~/Documents/AIReadyLife/vault/vision/config.md
 
 ## Output Format
@@ -107,10 +107,10 @@ Required in vault/vision/config.md:
 ## Error Handling
 
 - **No prior month scorecard (first run):** Cannot calculate trends — show scores without trend indicators; note "Trend available after second monthly scorecard run."
-- **Domain plugin not installed:** Score based on vault/vision/00_goals/ milestones and open loops data only; OKR pace calculation may be incomplete — note in scorecard.
+- **Domain plugin not installed:** Score based on vault/vision/00_current/ milestones and open loops data only; OKR pace calculation may be incomplete — note in scorecard.
 - **No OKRs for current quarter:** Score using resolution ratio and milestones only; note OKR pace weight is redistributed to resolution ratio.
 
 ## Vault Paths
 
-- Reads from: ~/Documents/AIReadyLife/vault/*/open-loops.md, ~/Documents/AIReadyLife/vault/vision/01_okrs/, ~/Documents/AIReadyLife/vault/vision/00_goals/, ~/Documents/AIReadyLife/vault/vision/02_scorecard/
-- Writes to: ~/Documents/AIReadyLife/vault/vision/02_scorecard/YYYY-MM-scorecard.md, ~/Documents/AIReadyLife/vault/vision/open-loops.md
+- Reads from: ~/Documents/AIReadyLife/vault/*/open-loops.md, ~/Documents/AIReadyLife/vault/vision/00_current/, ~/Documents/AIReadyLife/vault/vision/00_current/, ~/Documents/AIReadyLife/vault/vision/00_current/
+- Writes to: ~/Documents/AIReadyLife/vault/vision/00_current/YYYY-MM-scorecard.md, ~/Documents/AIReadyLife/vault/vision/open-loops.md

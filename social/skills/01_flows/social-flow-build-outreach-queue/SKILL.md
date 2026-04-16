@@ -16,13 +16,13 @@ description: >
 
 This flow builds the outreach queue — the list of specific people to reach out to, in priority order, with the context needed to make each outreach feel genuine and meaningful. It is the key output that makes the social domain actionable rather than just informational.
 
-**Input data:** The flow receives the relationship health summary data (contacts with their tier, last-contact date, days since contact, and health status) from the calling op. It also reads the birthday calendar for the next 14 days directly from vault/social/02_birthdays/.
+**Input data:** The flow receives the relationship health summary data (contacts with their tier, last-contact date, days since contact, and health status) from the calling op. It also reads the birthday calendar for the next 14 days directly from vault/social/00_current/.
 
 **Priority ranking:** The queue is built using a strict four-level priority hierarchy. Level 1 — Birthday contacts (due in next 7 days): these appear first regardless of relationship health. A birthday in 3 days beats a 200-day overdue Tier 3 contact every time. Within Level 1, contacts with birthdays in the next 2 days are 🔴, 3-7 days are 🟡. Level 2 — Overdue Tier 1 contacts (60+ days): inner circle relationships that have crossed the overdue threshold. Level 3 — Overdue Tier 2 contacts (90+ days): close relationships that have crossed the overdue threshold. Level 4 — Fading contacts (approaching overdue threshold): Tier 1 contacts at 30-60 days, Tier 2 contacts at 60-90 days — these are the most leverage-efficient outreach targets because a simple check-in now prevents a much harder reconnect later.
 
 **Queue size:** The weekly brief queue is limited to 5 contacts (achievable in a week without feeling overwhelming). The monthly outreach plan queue is limited to 15-20 contacts (achievable over a month). The calling op specifies which size is needed.
 
-**Context generation:** For each contact in the queue, the flow reads the most recent entry in vault/social/01_interactions/ for that contact and extracts: the date and type of the last interaction, any topics discussed, any follow-up items promised, and any notes about the contact's life situation (job, family, recent events). This context is synthesized into a 1-2 sentence context note that gives the user the background to make the outreach feel personal rather than generic. "Last talked October — mentioned their daughter was starting kindergarten. Would be a natural thing to ask about."
+**Context generation:** For each contact in the queue, the flow reads the most recent entry in vault/social/00_current/ for that contact and extracts: the date and type of the last interaction, any topics discussed, any follow-up items promised, and any notes about the contact's life situation (job, family, recent events). This context is synthesized into a 1-2 sentence context note that gives the user the background to make the outreach feel personal rather than generic. "Last talked October — mentioned their daughter was starting kindergarten. Would be a natural thing to ask about."
 
 **Outreach medium suggestion:** The suggested outreach medium is calibrated to three factors: the relationship tier (closer tiers get more direct/personal media), the days since last contact (longer gaps get warmer media — a call is more appropriate than a text for a 6-month lapse), and the contact's known communication preferences if noted in the interaction log.
 
@@ -31,11 +31,11 @@ This flow builds the outreach queue — the list of specific people to reach out
 ## Steps
 
 1. Receive relationship health data from calling op (all contacts with tier, days since contact, health status)
-2. Read vault/social/02_birthdays/ for contacts with birthdays in next 14 days
+2. Read vault/social/00_current/ for contacts with birthdays in next 14 days
 3. Apply four-level priority ranking: birthdays (Level 1) → T1 overdue (Level 2) → T2 overdue (Level 3) → fading T1/T2 (Level 4)
 4. Within each level: sort by urgency (most urgent first)
 5. Truncate to queue size specified by calling op (5 for weekly brief, 15-20 for monthly plan)
-6. For each contact in queue: read vault/social/01_interactions/ for last interaction details
+6. For each contact in queue: read vault/social/00_current/ for last interaction details
 7. Extract context: last interaction date, topics discussed, follow-up promises, life situation notes
 8. Generate 1-2 sentence context note per contact
 9. Assign outreach medium (text, phone call, email, LinkedIn, coffee) based on tier + gap + preferences
@@ -45,8 +45,8 @@ This flow builds the outreach queue — the list of specific people to reach out
 ## Input
 
 - Relationship health data from calling op (contacts, tiers, days since contact, health status)
-- ~/Documents/AIReadyLife/vault/social/02_birthdays/ (for birthday check)
-- ~/Documents/AIReadyLife/vault/social/01_interactions/ (for context generation)
+- ~/Documents/AIReadyLife/vault/social/00_current/ (for birthday check)
+- ~/Documents/AIReadyLife/vault/social/00_current/ (for context generation)
 
 ## Output Format
 
@@ -69,11 +69,11 @@ Optional in vault/social/config.md:
 
 ## Error Handling
 
-- **No interaction history for a contact:** Include in queue if health status qualifies; note "No interaction log found — check vault/social/01_interactions/." Context note will be blank.
+- **No interaction history for a contact:** Include in queue if health status qualifies; note "No interaction log found — check vault/social/00_current/." Context note will be blank.
 - **Queue size request cannot be filled (not enough qualifying contacts):** Return however many qualify; do not pad with low-priority contacts.
 - **Birthday calendar missing:** Skip Level 1 priority; build queue from Levels 2-4 only.
 
 ## Vault Paths
 
-- Reads from: ~/Documents/AIReadyLife/vault/social/02_birthdays/, ~/Documents/AIReadyLife/vault/social/01_interactions/
+- Reads from: ~/Documents/AIReadyLife/vault/social/00_current/, ~/Documents/AIReadyLife/vault/social/00_current/
 - Writes to: none (returns data to calling op)

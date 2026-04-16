@@ -10,7 +10,7 @@ description: >
 # aireadylife-calendar-build-agenda
 
 **Trigger:** Called by `aireadylife-calendar-op-weekly-agenda`
-**Produces:** Structured week-ahead agenda document written to ~/Documents/AIReadyLife/vault/calendar/02_agenda/YYYY-MM-DD-week-agenda.md
+**Produces:** Structured week-ahead agenda document written to ~/Documents/AIReadyLife/vault/calendar/00_current/YYYY-MM-DD-week-agenda.md
 
 ## What It Does
 
@@ -88,4 +88,4 @@ This flow receives pre-collected inputs from the calling op — deadline items, 
 ## Vault Paths
 
 - Reads from: inputs passed by calling op (no direct vault reads)
-- Writes to: ~/Documents/AIReadyLife/vault/calendar/02_agenda/YYYY-MM-DD-week-agenda.md (via calling op)
+- Writes to: ~/Documents/AIReadyLife/vault/calendar/00_current/YYYY-MM-DD-week-agenda.md (via calling op)

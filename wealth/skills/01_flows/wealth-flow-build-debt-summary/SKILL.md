@@ -14,11 +14,11 @@ description: >
 # aireadylife-wealth-build-debt-summary
 
 **Trigger:** Called by `aireadylife-wealth-debt-review`
-**Produces:** Debt summary table at `vault/wealth/02_debt/YYYY-MM-debt-summary.md`
+**Produces:** Debt summary table at `vault/wealth/00_current/YYYY-MM-debt-summary.md`
 
 ## What It Does
 
-Reads all outstanding loan records from `vault/wealth/02_debt/` — each stored as a structured file with the debt name, type, original balance, current balance, interest rate (APR), minimum monthly payment, origination date, and lender — and produces a complete debt picture with payoff analysis.
+Reads all outstanding loan records from `vault/wealth/00_current/` — each stored as a structured file with the debt name, type, original balance, current balance, interest rate (APR), minimum monthly payment, origination date, and lender — and produces a complete debt picture with payoff analysis.
 
 **Per-debt payoff calculation.** For each loan, the flow calculates the remaining payoff timeline at the current minimum payment pace using the standard amortization formula. It also computes total remaining interest: the sum of all future interest payments from today through payoff at current pace. This figure — not the remaining balance — is the true cost of the debt, and it's typically the number that motivates action.
 
@@ -46,7 +46,7 @@ For both scenarios, the "freed cash flow" is shown: when the highest-rate debt i
 
 ## Steps
 
-1. Read all debt files from `vault/wealth/02_debt/` — parse: name, type, current balance, rate, minimum payment
+1. Read all debt files from `vault/wealth/00_current/` — parse: name, type, current balance, rate, minimum payment
 2. For each debt, calculate remaining payoff months and date at current minimum payment pace
 3. Calculate total remaining interest: sum of all future interest payments at current pace
 4. Rank debts by interest rate descending (avalanche order); flag credit card debt >15% APR
@@ -55,16 +55,16 @@ For both scenarios, the "freed cash flow" is shown: when the highest-rate debt i
 7. Model Scenario B ($500/month extra to highest-rate debt): recalculate payoff date and interest saved
 8. For both scenarios, calculate rollover effect for second-highest-rate debt after first is paid off
 9. Check each debt balance against configured milestones; call `aireadylife-wealth-flag-savings-milestone` for any crossed
-10. Write formatted debt summary to `vault/wealth/02_debt/YYYY-MM-debt-summary.md`
+10. Write formatted debt summary to `vault/wealth/00_current/YYYY-MM-debt-summary.md`
 
 ## Input
 
-- `vault/wealth/02_debt/` — all debt record files
+- `vault/wealth/00_current/` — all debt record files
 - `vault/wealth/config.md` — gross monthly income (for DTI), debt milestone thresholds
 
 ## Output Format
 
-Markdown document at `vault/wealth/02_debt/YYYY-MM-debt-summary.md`:
+Markdown document at `vault/wealth/00_current/YYYY-MM-debt-summary.md`:
 - DTI ratio summary: Monthly debt payments | Gross income | DTI % | Status
 - Debt table (sorted by rate): Debt | Type | Balance | Rate | Min Payment | Payoff Date | Total Remaining Interest | Priority
 - Extra-payment models: table showing both scenarios with interest saved and payoff acceleration
@@ -79,12 +79,12 @@ Required in `vault/wealth/config.md`:
 
 ## Error Handling
 
-- If a debt record is missing the interest rate: calculate payoff timeline without interest modeling and note "Rate unknown — update in vault/wealth/02_debt/[filename]"
-- If no debt records exist: report "No debt records found. If you have outstanding loans, add them to vault/wealth/02_debt/ using the vault template."
+- If a debt record is missing the interest rate: calculate payoff timeline without interest modeling and note "Rate unknown — update in vault/wealth/00_current/[filename]"
+- If no debt records exist: report "No debt records found. If you have outstanding loans, add them to vault/wealth/00_current/ using the vault template."
 - If minimum payment is less than the monthly interest accrual: flag as "Interest-only or negative amortization — this debt is not being paid down at the minimum payment"
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/wealth/02_debt/` (all debt files)
+- Reads from: `~/Documents/AIReadyLife/vault/wealth/00_current/` (all debt files)
 - Reads from: `~/Documents/AIReadyLife/vault/wealth/config.md`
-- Writes to: `~/Documents/AIReadyLife/vault/wealth/02_debt/YYYY-MM-debt-summary.md`
+- Writes to: `~/Documents/AIReadyLife/vault/wealth/00_current/YYYY-MM-debt-summary.md`

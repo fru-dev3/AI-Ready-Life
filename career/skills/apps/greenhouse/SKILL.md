@@ -13,7 +13,7 @@ description: >
 
 ## What It Provides
 
-Greenhouse is the most widely used ATS at mid-to-large tech companies. As a candidate, you have access to the candidate portal which shows your application status, interview stage, upcoming interviews, and offer details when extended. This skill reads that portal to keep your pipeline entry in `vault/career/01_pipeline/` accurate without manual updates.
+Greenhouse is the most widely used ATS at mid-to-large tech companies. As a candidate, you have access to the candidate portal which shows your application status, interview stage, upcoming interviews, and offer details when extended. This skill reads that portal to keep your pipeline entry in `vault/career/00_current/` accurate without manual updates.
 
 ## Data Available
 
@@ -59,4 +59,4 @@ Note: Greenhouse candidate portals use passwordless email links for login. You m
 
 ## Vault Output
 
-`~/Documents/AIReadyLife/vault/career/01_pipeline/` — updates pipeline entries with current stage data
+`~/Documents/AIReadyLife/vault/career/00_current/` — updates pipeline entries with current stage data

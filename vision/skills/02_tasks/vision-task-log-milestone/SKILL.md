@@ -3,7 +3,7 @@ name: aireadylife-vision-task-log-milestone
 type: task
 cadence: as-achieved
 description: >
-  Records a life milestone to vault/vision/00_goals/ with domain, description,
+  Records a life milestone to vault/vision/00_current/ with domain, description,
   date achieved, and notes. Feeds the annual review retrospective and monthly
   scorecard positive signals.
 ---
@@ -11,7 +11,7 @@ description: >
 # aireadylife-vision-log-milestone
 
 **Cadence:** As-achieved (logged whenever a meaningful milestone is reached)
-**Produces:** New milestone entry in ~/Documents/AIReadyLife/vault/vision/00_goals/milestones.md
+**Produces:** New milestone entry in ~/Documents/AIReadyLife/vault/vision/00_current/milestones.md
 
 ## What It Does
 
@@ -30,18 +30,18 @@ This task is the achievement recording mechanism for the entire AI Ready Life sy
 1. Receive milestone details from user or calling op: domain, title, description, date achieved
 2. Classify domain from the 13 vision domains; if ambiguous, ask the user
 3. Generate milestone entry with all required fields
-4. Append entry to vault/vision/00_goals/milestones.md in reverse chronological order (newest first)
+4. Append entry to vault/vision/00_current/milestones.md in reverse chronological order (newest first)
 5. If the milestone resolves an active open loop in the relevant domain: note the open loop reference
 6. Return confirmation to user with the entry added
 
 ## Input
 
 - Milestone data from user or calling op (domain, title, description, date achieved, optional fields)
-- ~/Documents/AIReadyLife/vault/vision/00_goals/milestones.md (for appending)
+- ~/Documents/AIReadyLife/vault/vision/00_current/milestones.md (for appending)
 
 ## Output Format
 
-Entry appended to vault/vision/00_goals/milestones.md:
+Entry appended to vault/vision/00_current/milestones.md:
 ```markdown
 ---
 
@@ -88,5 +88,5 @@ No configuration required.
 
 ## Vault Paths
 
-- Reads from: ~/Documents/AIReadyLife/vault/vision/00_goals/milestones.md
-- Writes to: ~/Documents/AIReadyLife/vault/vision/00_goals/milestones.md
+- Reads from: ~/Documents/AIReadyLife/vault/vision/00_current/milestones.md
+- Writes to: ~/Documents/AIReadyLife/vault/vision/00_current/milestones.md

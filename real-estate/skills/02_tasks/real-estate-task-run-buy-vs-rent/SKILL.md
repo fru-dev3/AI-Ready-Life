@@ -10,7 +10,7 @@ description: >
 # aireadylife-real-estate-run-buy-vs-rent
 
 **Trigger:** Called by affordability-review and review-brief ops, or directly on-demand
-**Produces:** Buy vs. rent analysis saved to `~/Documents/AIReadyLife/vault/real-estate/02_analysis/`
+**Produces:** Buy vs. rent analysis saved to `~/Documents/AIReadyLife/vault/real-estate/00_current/`
 
 ## What It Does
 
@@ -40,7 +40,7 @@ The price-to-rent ratio verdict applies the simple heuristic: purchase price ÷ 
 10. Calculate net cumulative cost to rent (rent paid minus investment growth) at years 5, 7, 10, 15
 11. Find break-even year (first year where net own cost < net rent cost)
 12. Calculate price-to-rent ratio; apply heuristic verdict
-13. Write full analysis to `~/Documents/AIReadyLife/vault/real-estate/02_analysis/YYYY-MM-buy-vs-rent.md`
+13. Write full analysis to `~/Documents/AIReadyLife/vault/real-estate/00_current/YYYY-MM-buy-vs-rent.md`
 
 ## Input
 
@@ -81,4 +81,4 @@ Required fields in `~/Documents/AIReadyLife/vault/real-estate/config.md`:
 ## Vault Paths
 
 - Reads from: `~/Documents/AIReadyLife/vault/real-estate/config.md`
-- Writes to: `~/Documents/AIReadyLife/vault/real-estate/02_analysis/YYYY-MM-buy-vs-rent.md`
+- Writes to: `~/Documents/AIReadyLife/vault/real-estate/00_current/YYYY-MM-buy-vs-rent.md`

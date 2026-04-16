@@ -38,8 +38,8 @@ Called by `aireadylife-intel-op-daily-briefing`, `aireadylife-intel-op-review-br
 
 - Flag list from calling op
 - `~/Documents/AIReadyLife/vault/intel/open-loops.md` — current file for dedup and resolution check
-- `~/Documents/AIReadyLife/vault/intel/00_sources/source-list.md` — to verify if a source gap has been addressed
-- `~/Documents/AIReadyLife/vault/intel/02_threads/` — to verify if a thread management item has been completed
+- `~/Documents/AIReadyLife/vault/intel/00_current/source-list.md` — to verify if a source gap has been addressed
+- `~/Documents/AIReadyLife/vault/intel/00_current/` — to verify if a thread management item has been completed
 
 ## Output Format
 
@@ -82,5 +82,5 @@ Optional in `~/Documents/AIReadyLife/vault/intel/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/intel/open-loops.md`, `~/Documents/AIReadyLife/vault/intel/00_sources/`, `~/Documents/AIReadyLife/vault/intel/02_threads/`
+- Reads from: `~/Documents/AIReadyLife/vault/intel/open-loops.md`, `~/Documents/AIReadyLife/vault/intel/00_current/`, `~/Documents/AIReadyLife/vault/intel/00_current/`
 - Writes to: `~/Documents/AIReadyLife/vault/intel/open-loops.md`, `~/Documents/AIReadyLife/vault/intel/open-loops-archive.md`

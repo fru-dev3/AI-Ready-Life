@@ -33,12 +33,12 @@ Each flag entry contains:
   - Registered agent: registered agent company renewal portal
   - Form 941: "File via your payroll provider's tax filing module or directly at irs.gov"
 - **Urgency tier** — CRITICAL (≤7 days), HIGH (8–14 days), MEDIUM (15–30 days)
-- **Source reference** — link to the calculation file in vault that produced the amount (e.g., `vault/tax/01_estimates/2025-Q3-estimate.md`)
+- **Source reference** — link to the calculation file in vault that produced the amount (e.g., `vault/tax/00_current/2025-Q3-estimate.md`)
 - **Extension note** — if the user has already filed an extension for this deadline, the flag is annotated "Extension filed — payment deadline unchanged" to clarify that filing extensions don't extend the payment due date
 
 **EFTPS enrollment warning.** If the payment amount exceeds $1,000 and the user hasn't previously used EFTPS (flagged in config.md), the alert adds: "Note: EFTPS enrollment takes 5–7 business days. For immediate payment, use IRS Direct Pay instead. Consider enrolling in EFTPS for future quarters."
 
-**Auto-resolution.** Deadline alerts are auto-resolved by `aireadylife-tax-update-open-loops` once the due date has passed, with a status update of RESOLVED and a resolution note of "Deadline passed — confirm payment was made and record in vault/tax/01_estimates/payment-log.md."
+**Auto-resolution.** Deadline alerts are auto-resolved by `aireadylife-tax-update-open-loops` once the due date has passed, with a status update of RESOLVED and a resolution note of "Deadline passed — confirm payment was made and record in vault/tax/00_current/payment-log.md."
 
 ## Apps
 

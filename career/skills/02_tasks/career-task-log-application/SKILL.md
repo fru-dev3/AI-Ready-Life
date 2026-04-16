@@ -3,7 +3,7 @@ name: aireadylife-career-task-log-application
 type: task
 cadence: as-received
 description: >
-  Records a new job application (or pre-application watch item) to vault/career/01_pipeline/ with full context: company, role, date, source, contact, comp range, tech stack, work arrangement, fit notes, and default follow-up window. Sets a 7-business-day follow-up reminder. Triggers: "log application", "add to pipeline", "track this application", "I applied to", "add this job to my tracker".
+  Records a new job application (or pre-application watch item) to vault/career/00_current/ with full context: company, role, date, source, contact, comp range, tech stack, work arrangement, fit notes, and default follow-up window. Sets a 7-business-day follow-up reminder. Triggers: "log application", "add to pipeline", "track this application", "I applied to", "add this job to my tracker".
 ---
 
 ## What It Does
@@ -36,19 +36,19 @@ Records every job application to the pipeline immediately upon submission — no
 4. For "applied" stage: calculate follow-up date as date_applied + 7 business days.
 5. For "watch" stage: set decision_by date if provided; default to 30 days from today.
 6. For "offer" stage: capture full offer details and calculate offer expiry date.
-7. Assess tech stack match if job description is provided: count required skills from JD that appear in `vault/career/03_skills/skills.md`. Report as X/Y required skills matched.
-8. Write complete pipeline entry to `vault/career/01_pipeline/COMPANY-ROLE-YYYYMMDD.md`.
+7. Assess tech stack match if job description is provided: count required skills from JD that appear in `vault/career/00_current/skills.md`. Report as X/Y required skills matched.
+8. Write complete pipeline entry to `vault/career/00_current/COMPANY-ROLE-YYYYMMDD.md`.
 9. Return confirmation with follow-up date and any missing fields the user should fill in later.
 
 ## Input
 
 - User-provided application details (company, role, source, etc.)
 - Job description text (optional, for tech stack match assessment)
-- `~/Documents/AIReadyLife/vault/career/03_skills/skills.md` — for stack match calculation
+- `~/Documents/AIReadyLife/vault/career/00_current/skills.md` — for stack match calculation
 
 ## Output Format
 
-Pipeline entry written to `vault/career/01_pipeline/COMPANY-ROLE-YYYYMMDD.md`:
+Pipeline entry written to `vault/career/00_current/COMPANY-ROLE-YYYYMMDD.md`:
 
 ```yaml
 company: "[name]"
@@ -80,7 +80,7 @@ Tech stack match: X/Y required skills matched
 
 ## Configuration
 
-No configuration required beyond standard vault setup. Pipeline entries stored in `vault/career/01_pipeline/`.
+No configuration required beyond standard vault setup. Pipeline entries stored in `vault/career/00_current/`.
 
 ## Error Handling
 
@@ -90,5 +90,5 @@ No configuration required beyond standard vault setup. Pipeline entries stored i
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/career/03_skills/skills.md` (optional, for stack match)
-- Writes to: `~/Documents/AIReadyLife/vault/career/01_pipeline/`
+- Reads from: `~/Documents/AIReadyLife/vault/career/00_current/skills.md` (optional, for stack match)
+- Writes to: `~/Documents/AIReadyLife/vault/career/00_current/`

@@ -13,7 +13,7 @@ Produces the morning intelligence brief filtered to the user's configured intere
 
 Calls `aireadylife-intel-flow-build-news-digest` to ingest, filter, deduplicate, and rank stories from all configured sources. The digest flow handles the heavy lifting of source quality scoring and relevance filtering; this op handles the additional intelligence layers: story thread updates, priority story flagging, and Ben routing.
 
-Updates active story threads in `vault/intel/02_threads/`: for each story in the digest that matches an existing tracked thread, appends a dated update entry to that thread file. This is what maintains context continuity across multi-day stories — the AI regulation story that has been developing for 2 weeks has all its daily updates in one thread file, so the user can review the full arc at any point.
+Updates active story threads in `vault/intel/00_current/`: for each story in the digest that matches an existing tracked thread, appends a dated update entry to that thread file. This is what maintains context continuity across multi-day stories — the AI regulation story that has been developing for 2 weeks has all its daily updates in one thread file, so the user can review the full arc at any point.
 
 Calls `aireadylife-intel-task-flag-priority-story` for any digest story that: originates from a Tier 1 source on a configured top-priority topic, represents a significant development (first reporting, official government action, major market move), or has explicit action implications for the user (a personal finance rate change, a tech platform policy affecting the user's work).
 
@@ -33,20 +33,20 @@ Routes market-moving stories (Federal Reserve actions, significant earnings rele
 
 1. Confirm vault/intel/ is set up and config.md has at least 3 configured sources and at least 1 configured topic
 2. Call `aireadylife-intel-flow-build-news-digest` for the filtered, ranked, deduplicated daily digest
-3. Read `~/Documents/AIReadyLife/vault/intel/02_threads/` to get list of all active tracked threads
+3. Read `~/Documents/AIReadyLife/vault/intel/00_current/` to get list of all active tracked threads
 4. For each story in the digest: check if it matches an active thread (same topic, same key entities); if yes, append a dated update to that thread file
 5. For each story that meets priority flagging criteria (Tier 1 source + top-priority topic, OR explicit action implication): call `aireadylife-intel-task-flag-priority-story`
 6. Identify any market-moving stories (interest rates, market indices, major policy action); route summary to Wealth Agent via vault/intel/routing/ note
 7. Identify any AI/tech platform stories relevant to content opportunities; route to Content Agent
 8. Call `aireadylife-intel-task-update-open-loops` with any new priority story flags
-9. Write the complete morning brief to `vault/intel/01_briefs/{YYYY-MM-DD}-morning.md`
+9. Write the complete morning brief to `vault/intel/02_briefs/{YYYY-MM-DD}-morning.md`
 10. Present the formatted brief to the user
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/intel/00_sources/source-list.md` — source registry
+- `~/Documents/AIReadyLife/vault/intel/00_current/source-list.md` — source registry
 - `~/Documents/AIReadyLife/vault/intel/config.md` — topics, keywords, source priorities
-- `~/Documents/AIReadyLife/vault/intel/02_threads/` — active story threads for update
+- `~/Documents/AIReadyLife/vault/intel/00_current/` — active story threads for update
 - Recent article data from configured sources
 
 ## Output Format
@@ -89,11 +89,11 @@ Required in `~/Documents/AIReadyLife/vault/intel/config.md`:
 
 ## Error Handling
 
-- If source registry is empty: "No sources configured. Add at least one source to vault/intel/00_sources/source-list.md and run the source scan to validate it."
+- If source registry is empty: "No sources configured. Add at least one source to vault/intel/00_current/source-list.md and run the source scan to validate it."
 - If fewer than 5 stories pass filtering: include all that pass; suggest broadening topic filters if the problem persists.
 - If config.md is missing or incomplete: "Intel vault not fully configured. Open vault/intel/config.md and complete the topics, keywords, and source settings."
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/intel/00_sources/`, `~/Documents/AIReadyLife/vault/intel/config.md`, `~/Documents/AIReadyLife/vault/intel/02_threads/`
-- Writes to: `~/Documents/AIReadyLife/vault/intel/01_briefs/{YYYY-MM-DD}-morning.md`, `~/Documents/AIReadyLife/vault/intel/02_threads/` (thread updates), `~/Documents/AIReadyLife/vault/intel/open-loops.md`
+- Reads from: `~/Documents/AIReadyLife/vault/intel/00_current/`, `~/Documents/AIReadyLife/vault/intel/config.md`, `~/Documents/AIReadyLife/vault/intel/00_current/`
+- Writes to: `~/Documents/AIReadyLife/vault/intel/02_briefs/{YYYY-MM-DD}-morning.md`, `~/Documents/AIReadyLife/vault/intel/00_current/` (thread updates), `~/Documents/AIReadyLife/vault/intel/open-loops.md`

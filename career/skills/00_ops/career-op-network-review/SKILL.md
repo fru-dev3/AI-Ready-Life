@@ -34,21 +34,21 @@ The op also scans for new first-degree connections added in the last 30 days and
 4. Score warm and cooling contacts by strategic priority: target company hiring managers (highest), former colleagues in relevant roles, connectors in your industry, mentors/sponsors.
 5. Select top 3-5 contacts for outreach this month from warm and cooling groups, weighted by strategic priority.
 6. For each selected contact, call `aireadylife-career-task-draft-outreach-message` with contact record and context type.
-7. Review open pipeline items from `vault/career/01_pipeline/` — identify any with a named contact who needs follow-up separate from the network maintenance pass.
+7. Review open pipeline items from `vault/career/00_current/` — identify any with a named contact who needs follow-up separate from the network maintenance pass.
 8. Scan LinkedIn new connections from last 30 days — flag any from target companies for light engagement.
-9. Write network review summary to `vault/career/04_briefs/YYYY-MM-network-review.md` with selected contacts, draft messages, and rationale.
+9. Write network review summary to `vault/career/02_briefs/YYYY-MM-network-review.md` with selected contacts, draft messages, and rationale.
 10. Update contact log with planned outreach date for each selected contact.
 11. Call `aireadylife-career-task-update-open-loops` with follow-up reminders for each drafted message (2-week follow-up window if no response).
 
 ## Input
 
 - `~/Documents/AIReadyLife/vault/career/` — contact log with relationship recency data
-- `~/Documents/AIReadyLife/vault/career/01_pipeline/` — active pipeline for contact overlap check
+- `~/Documents/AIReadyLife/vault/career/00_current/` — active pipeline for contact overlap check
 - `~/Documents/AIReadyLife/vault/career/config.md` — target companies and industries for contact prioritization
 
 ## Output Format
 
-**Network Review Summary** — saved as `vault/career/04_briefs/YYYY-MM-network-review.md`
+**Network Review Summary** — saved as `vault/career/02_briefs/YYYY-MM-network-review.md`
 
 ```
 ## Network Health — [Month Year]
@@ -91,5 +91,5 @@ Contact records should be stored in `vault/career/` with fields: name, current c
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/career/` (contact log), `~/Documents/AIReadyLife/vault/career/01_pipeline/`, `~/Documents/AIReadyLife/vault/career/config.md`
-- Writes to: `~/Documents/AIReadyLife/vault/career/04_briefs/`, `~/Documents/AIReadyLife/vault/career/open-loops.md`, `~/Documents/AIReadyLife/vault/career/` (contact log updates)
+- Reads from: `~/Documents/AIReadyLife/vault/career/` (contact log), `~/Documents/AIReadyLife/vault/career/00_current/`, `~/Documents/AIReadyLife/vault/career/config.md`
+- Writes to: `~/Documents/AIReadyLife/vault/career/02_briefs/`, `~/Documents/AIReadyLife/vault/career/open-loops.md`, `~/Documents/AIReadyLife/vault/career/` (contact log updates)

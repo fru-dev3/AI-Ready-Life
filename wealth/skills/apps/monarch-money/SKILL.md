@@ -34,7 +34,7 @@ Add to `vault/wealth/config.md`:
 ```
 monarch_email: YOUR_EMAIL
 monarch_chrome_profile: /Users/YOU/Library/Application Support/Google/Chrome/Default
-monarch_export_path: ~/Documents/AIReadyLife/vault/wealth/03_cashflow/imports/
+monarch_export_path: ~/Documents/AIReadyLife/vault/wealth/00_current/imports/
 ```
 
 ## CSV Export (Recommended for Transaction History)
@@ -43,7 +43,7 @@ Settings → Export → Transactions → set date range → Download CSV
 
 The CSV contains: Date, Merchant, Category, Account, Amount, Notes, Tags.
 
-Save to `vault/wealth/03_cashflow/imports/YYYY-MM-transactions.csv` before running the cash flow review.
+Save to `vault/wealth/00_current/imports/YYYY-MM-transactions.csv` before running the cash flow review.
 
 ## Monarch-Specific Notes
 
@@ -60,5 +60,5 @@ Save to `vault/wealth/03_cashflow/imports/YYYY-MM-transactions.csv` before runni
 
 ## Vault Output
 
-- `vault/wealth/03_cashflow/imports/YYYY-MM-transactions.csv` — imported transaction file
-- `vault/wealth/03_cashflow/YYYY-MM-cashflow.md` — written by the cash flow review skill after processing the import
+- `vault/wealth/00_current/imports/YYYY-MM-transactions.csv` — imported transaction file
+- `vault/wealth/00_current/YYYY-MM-cashflow.md` — written by the cash flow review skill after processing the import

@@ -21,9 +21,9 @@ The monthly sync is the comprehensive maintenance operation for the social domai
 
 **Health recalculation:** The sync recalculates relationship health scores for all contacts from scratch, rather than relying on incremental updates. This ensures any interaction log entries added since the last sync are reflected. The full recalculation produces the most accurate picture of the social portfolio's health.
 
-**Birthday calendar forward scan:** The sync reads vault/social/02_birthdays/ and checks the next 30 days' birthdays — beyond the weekly 14-day window — to give the user a full month's awareness of upcoming social obligations. Any contact with a birthday in the next 30 days but no recent interaction is noted as a priority reconnect opportunity to plan for.
+**Birthday calendar forward scan:** The sync reads vault/social/00_current/ and checks the next 30 days' birthdays — beyond the weekly 14-day window — to give the user a full month's awareness of upcoming social obligations. Any contact with a birthday in the next 30 days but no recent interaction is noted as a priority reconnect opportunity to plan for.
 
-**Outreach log review:** The sync reads vault/social/01_interactions/ for any interactions logged since the last sync. It identifies: follow-up promises made that haven't been logged as completed ("said I'd send the article"), reciprocity gaps (relationships where the user has been receiving but not giving recently), and positive momentum contacts (people the relationship is deepening with, worth recognizing and continuing to invest in).
+**Outreach log review:** The sync reads vault/social/00_current/ for any interactions logged since the last sync. It identifies: follow-up promises made that haven't been logged as completed ("said I'd send the article"), reciprocity gaps (relationships where the user has been receiving but not giving recently), and positive momentum contacts (people the relationship is deepening with, worth recognizing and continuing to invest in).
 
 **Monthly outreach plan:** After the full refresh, the sync generates the month's complete outreach plan — not just the immediate urgent queue but a month-level intention: which 15-20 contacts the user plans to meaningfully connect with over the month, allocated across the four weeks.
 
@@ -40,9 +40,9 @@ The monthly sync is the comprehensive maintenance operation for the social domai
 
 1. Verify vault/social/ exists and config.md is filled in
 2. Read vault/social/00_current/contacts.md; identify data gaps (no interactions, no birthday, no tier)
-3. Read all interaction log entries in vault/social/01_interactions/ since the last sync date
+3. Read all interaction log entries in vault/social/00_current/ since the last sync date
 4. Recalculate health status for all contacts from full interaction history
-5. Read vault/social/02_birthdays/ for next 30 days; note contacts with upcoming birthdays
+5. Read vault/social/00_current/ for next 30 days; note contacts with upcoming birthdays
 6. Review follow-up promises in interaction log for outstanding deliverables
 7. Check reciprocity balance for Tier 1 and Tier 2 contacts (give vs. ask ratio)
 8. Generate monthly outreach plan (15-20 contacts across the month)
@@ -54,8 +54,8 @@ The monthly sync is the comprehensive maintenance operation for the social domai
 ## Input
 
 - ~/Documents/AIReadyLife/vault/social/00_current/contacts.md
-- ~/Documents/AIReadyLife/vault/social/01_interactions/ (complete interaction log)
-- ~/Documents/AIReadyLife/vault/social/02_birthdays/
+- ~/Documents/AIReadyLife/vault/social/00_current/ (complete interaction log)
+- ~/Documents/AIReadyLife/vault/social/00_current/
 - ~/Documents/AIReadyLife/vault/social/config.md
 
 ## Output Format
@@ -104,5 +104,5 @@ Required in vault/social/config.md:
 
 ## Vault Paths
 
-- Reads from: ~/Documents/AIReadyLife/vault/social/00_current/contacts.md, ~/Documents/AIReadyLife/vault/social/01_interactions/, ~/Documents/AIReadyLife/vault/social/02_birthdays/, ~/Documents/AIReadyLife/vault/social/config.md
+- Reads from: ~/Documents/AIReadyLife/vault/social/00_current/contacts.md, ~/Documents/AIReadyLife/vault/social/00_current/, ~/Documents/AIReadyLife/vault/social/00_current/, ~/Documents/AIReadyLife/vault/social/config.md
 - Writes to: ~/Documents/AIReadyLife/vault/social/00_current/contacts.md (refreshed health), ~/Documents/AIReadyLife/vault/social/00_current/sync-YYYY-MM.md, ~/Documents/AIReadyLife/vault/social/open-loops.md

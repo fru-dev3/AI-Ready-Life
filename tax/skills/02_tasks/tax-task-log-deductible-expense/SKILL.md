@@ -3,7 +3,7 @@ name: aireadylife-tax-task-log-deductible-expense
 type: task
 cadence: as-received
 description: >
-  Records a deductible expense to vault/tax/03_deductions/ with all metadata required
+  Records a deductible expense to vault/tax/00_current/ with all metadata required
   to support the deduction at filing: date, vendor/payee, amount, deduction category
   (home office, vehicle/mileage, business expense, charitable, medical), IRS basis for
   deductibility, supporting document reference, business purpose note (for meals/travel),
@@ -15,7 +15,7 @@ description: >
 # aireadylife-tax-log-deductible-expense
 
 **Cadence:** As-received (called by deduction review op or triggered directly by user)
-**Produces:** New deduction entry in `vault/tax/03_deductions/YYYY/deduction-log.md`
+**Produces:** New deduction entry in `vault/tax/00_current/YYYY/deduction-log.md`
 
 ## What It Does
 
@@ -28,7 +28,7 @@ Records a single deductible expense to the vault's deductions log with all the f
 - **Deduction category** — one of: home-office, vehicle-mileage, business-expense, charitable, medical, other
 - **Sub-category** — for business expenses: software | equipment | professional-services | meals | professional-development | internet; for charitable: cash | non-cash | qcd; for vehicle: business | charity | medical
 - **IRS basis** — brief citation: e.g., "IRC §162 ordinary and necessary business expense," "IRC §170 charitable contribution," "IRS Pub 502 medical expense," "Rev. Proc. 2024-28 standard mileage rate"
-- **Document reference** — filename of the receipt, invoice, or acknowledgment letter stored in `vault/tax/03_deductions/YYYY/receipts/`; if not yet available, marked "pending"
+- **Document reference** — filename of the receipt, invoice, or acknowledgment letter stored in `vault/tax/00_current/YYYY/receipts/`; if not yet available, marked "pending"
 - **Business purpose** — required for meals (who attended, what business was discussed) and vehicle use (business destination and purpose); N/A for other categories
 - **Documentation status** — DOCUMENTED (reference present) or PENDING (reference missing)
 - **Tax year** — the year the deduction applies to (usually current year; sometimes prior year for IRA contributions)
@@ -39,7 +39,7 @@ Records a single deductible expense to the vault's deductions log with all the f
 
 **Business meal specifics.** For business meals, the task enforces the documentation the IRS requires: who attended (names and business relationships), what business was discussed (one sentence), the business connection. Without these, the meal deduction is unsupportable in an audit. The task prompts for these if they're not provided when the entry is created.
 
-**Mileage shortcut.** For mileage entries, the task captures: date, business destination, business purpose, miles driven, and the 2025 standard mileage rate (70 cents/mile). If the user runs this task multiple times for vehicle trips, the task appends to the mileage log at `vault/tax/03_deductions/mileage-log.md` with one entry per trip — this is the contemporaneous mileage log required by the IRS.
+**Mileage shortcut.** For mileage entries, the task captures: date, business destination, business purpose, miles driven, and the 2025 standard mileage rate (70 cents/mile). If the user runs this task multiple times for vehicle trips, the task appends to the mileage log at `vault/tax/00_current/mileage-log.md` with one entry per trip — this is the contemporaneous mileage log required by the IRS.
 
 ## Apps
 
@@ -47,5 +47,5 @@ None
 
 ## Vault Output
 
-- `vault/tax/03_deductions/YYYY/deduction-log.md` — new entry appended to the YTD deduction log
-- `vault/tax/03_deductions/mileage-log.md` — updated with new trip entry (for mileage entries)
+- `vault/tax/00_current/YYYY/deduction-log.md` — new entry appended to the YTD deduction log
+- `vault/tax/00_current/mileage-log.md` — updated with new trip entry (for mileage entries)

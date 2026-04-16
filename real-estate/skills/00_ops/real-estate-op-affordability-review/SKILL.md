@@ -45,15 +45,15 @@ The op also applies the 3–5x income rule as a secondary sanity check: most fin
 4. Apply 3–5x income rule to max purchase price; flag if purchase price exceeds 5x annual gross
 5. Calculate PMI if down payment < 20%; show savings needed to reach 20% down at the max price
 6. Call `aireadylife-real-estate-run-buy-vs-rent` for break-even analysis at 5, 7, and 10 years
-7. Read target market median price from `~/Documents/AIReadyLife/vault/real-estate/00_markets/` and compare to user's max purchase price
-8. Write affordability report to `~/Documents/AIReadyLife/vault/real-estate/02_analysis/YYYY-MM-affordability.md`
+7. Read target market median price from `~/Documents/AIReadyLife/vault/real-estate/00_current/` and compare to user's max purchase price
+8. Write affordability report to `~/Documents/AIReadyLife/vault/real-estate/00_current/YYYY-MM-affordability.md`
 9. Call `aireadylife-real-estate-update-open-loops` to log any flags (DTI tight, PMI exposure, market above affordability ceiling)
 10. Present results as a narrative summary with the table, then state a plain-language verdict
 
 ## Input
 
 - `~/Documents/AIReadyLife/vault/real-estate/config.md`
-- `~/Documents/AIReadyLife/vault/real-estate/00_markets/` (target market median prices)
+- `~/Documents/AIReadyLife/vault/real-estate/00_current/` (target market median prices)
 
 ## Output Format
 
@@ -93,6 +93,6 @@ Required fields in `~/Documents/AIReadyLife/vault/real-estate/config.md`:
 ## Vault Paths
 
 - Reads from: `~/Documents/AIReadyLife/vault/real-estate/config.md`
-- Reads from: `~/Documents/AIReadyLife/vault/real-estate/00_markets/`
-- Writes to: `~/Documents/AIReadyLife/vault/real-estate/02_analysis/YYYY-MM-affordability.md`
+- Reads from: `~/Documents/AIReadyLife/vault/real-estate/00_current/`
+- Writes to: `~/Documents/AIReadyLife/vault/real-estate/00_current/YYYY-MM-affordability.md`
 - Writes to: `~/Documents/AIReadyLife/vault/real-estate/open-loops.md`

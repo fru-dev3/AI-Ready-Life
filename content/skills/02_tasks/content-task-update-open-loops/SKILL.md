@@ -37,7 +37,7 @@ Called at the end of every content op: `aireadylife-content-op-channel-review`, 
 - Flag list from calling op
 - `~/Documents/AIReadyLife/vault/content/open-loops.md` — current file
 - `~/Documents/AIReadyLife/vault/content/00_current/` — for publishing resolution check
-- `~/Documents/AIReadyLife/vault/content/02_gumroad/` — for revenue recovery resolution check
+- `~/Documents/AIReadyLife/vault/content/00_current/` — for revenue recovery resolution check
 
 ## Output Format
 
@@ -77,5 +77,5 @@ Optional in `~/Documents/AIReadyLife/vault/content/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/content/open-loops.md`, `~/Documents/AIReadyLife/vault/content/00_current/`, `~/Documents/AIReadyLife/vault/content/02_gumroad/`
+- Reads from: `~/Documents/AIReadyLife/vault/content/open-loops.md`, `~/Documents/AIReadyLife/vault/content/00_current/`, `~/Documents/AIReadyLife/vault/content/00_current/`
 - Writes to: `~/Documents/AIReadyLife/vault/content/open-loops.md`, `~/Documents/AIReadyLife/vault/content/open-loops-archive.md`

@@ -14,7 +14,7 @@ The open-loops file is the career domain's single source of truth for what needs
 
 **Flag structure:** Every flag entry has: a type label (COMP GAP / FOLLOW-UP / STALLED / SKILLS PRIORITY / OUTREACH / MARKET ALERT / OFFER DEADLINE), a severity or urgency level (urgent / watch / info), the specific action needed (not a vague description), a due date or action-by date, and a source op that generated the flag. This structure lets the daily brief system sort flags by urgency and lets the user make decisions without digging through multiple files.
 
-**Resolution logic:** Before appending new flags, scans existing entries for items that should be resolved. Resolution conditions: a follow-up flag is resolved when a response from the company is logged in the pipeline entry; a comp gap flag is resolved when the vault shows a compensation change that closes the gap; a skills priority flag is resolved when the skill reaches working proficiency in the inventory; an outreach flag is resolved when the contact record shows the message was sent and either a response was received or the 14-day follow-up window has passed without response (the relationship re-engagement attempt is complete regardless of response). Resolved items are moved to a `[Resolved]` section at the bottom of the file or optionally archived to `vault/career/05_archive/open-loops-archive.md`.
+**Resolution logic:** Before appending new flags, scans existing entries for items that should be resolved. Resolution conditions: a follow-up flag is resolved when a response from the company is logged in the pipeline entry; a comp gap flag is resolved when the vault shows a compensation change that closes the gap; a skills priority flag is resolved when the skill reaches working proficiency in the inventory; an outreach flag is resolved when the contact record shows the message was sent and either a response was received or the 14-day follow-up window has passed without response (the relationship re-engagement attempt is complete regardless of response). Resolved items are moved to a `[Resolved]` section at the bottom of the file or optionally archived to `vault/career/01_prior/open-loops-archive.md`.
 
 **Priority ordering:** The file is organized by urgency: urgent items (offer deadlines, follow-ups due today) at the top, watch items (comp gaps, stalled opportunities) in the middle, info items (skills priorities, market alerts) at the bottom within each section.
 
@@ -34,7 +34,7 @@ The open-loops file is the career domain's single source of truth for what needs
 
 - Flags passed by calling op (new items to add)
 - `~/Documents/AIReadyLife/vault/career/open-loops.md` — current state
-- `~/Documents/AIReadyLife/vault/career/01_pipeline/` — for follow-up resolution checks
+- `~/Documents/AIReadyLife/vault/career/00_current/` — for follow-up resolution checks
 
 ## Output Format
 
@@ -71,5 +71,5 @@ No configuration required. File auto-created on first run if it does not exist.
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/career/open-loops.md`, `~/Documents/AIReadyLife/vault/career/01_pipeline/`
+- Reads from: `~/Documents/AIReadyLife/vault/career/open-loops.md`, `~/Documents/AIReadyLife/vault/career/00_current/`
 - Writes to: `~/Documents/AIReadyLife/vault/career/open-loops.md`

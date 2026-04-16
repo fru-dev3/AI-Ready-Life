@@ -12,7 +12,7 @@ description: >
 # aireadylife-calendar-focus-time-review
 
 **Cadence:** Weekly (Friday or Sunday)
-**Produces:** Focus-time audit report in ~/Documents/AIReadyLife/vault/calendar/01_focus/YYYY-MM-DD-focus-audit.md
+**Produces:** Focus-time audit report in ~/Documents/AIReadyLife/vault/calendar/00_current/YYYY-MM-DD-focus-audit.md
 
 ## What It Does
 
@@ -51,13 +51,13 @@ Updates vault/calendar/open-loops.md if a recurring deficit pattern is detected 
 7. Calculate upcoming week's projected focus time based on already-scheduled events
 8. Generate specific recommendations: meetings to reschedule, mornings to protect, blocks to add to calendar
 9. If 2+ consecutive weeks below 6 hours: write recurring deficit flag to vault/calendar/open-loops.md via `calendar-task-update-open-loops`
-10. Write full focus audit report to vault/calendar/01_focus/YYYY-MM-DD-focus-audit.md
+10. Write full focus audit report to vault/calendar/00_current/YYYY-MM-DD-focus-audit.md
 11. Return audit summary to user as chat output
 
 ## Input
 
 - Google Calendar events for past 7 days and upcoming 7 days (via gcalendar skill)
-- ~/Documents/AIReadyLife/vault/calendar/01_focus/ (prior focus audit files for trend comparison)
+- ~/Documents/AIReadyLife/vault/calendar/00_current/ (prior focus audit files for trend comparison)
 - ~/Documents/AIReadyLife/vault/calendar/config.md
 
 ## Output Format
@@ -109,5 +109,5 @@ Required in vault/calendar/config.md:
 
 ## Vault Paths
 
-- Reads from: Google Calendar (via gcalendar), ~/Documents/AIReadyLife/vault/calendar/01_focus/
-- Writes to: ~/Documents/AIReadyLife/vault/calendar/01_focus/YYYY-MM-DD-focus-audit.md, ~/Documents/AIReadyLife/vault/calendar/open-loops.md
+- Reads from: Google Calendar (via gcalendar), ~/Documents/AIReadyLife/vault/calendar/00_current/
+- Writes to: ~/Documents/AIReadyLife/vault/calendar/00_current/YYYY-MM-DD-focus-audit.md, ~/Documents/AIReadyLife/vault/calendar/open-loops.md

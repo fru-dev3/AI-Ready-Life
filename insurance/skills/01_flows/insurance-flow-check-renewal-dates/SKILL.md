@@ -20,14 +20,14 @@ Called by `aireadylife-insurance-op-renewal-watch` to perform the renewal date s
 
 *Coverage review:* The coverage parameters need to be assessed before renewal because something in the user's life has changed that affects what limits are appropriate. Applied to: home insurance when a major renovation has occurred since the last renewal (replacement cost has increased), life insurance after a salary change or new dependent (coverage need has changed), rental property insurance after property purchase or major renovation, auto insurance after adding a driver (teen driver, spouse) or new vehicle. When coverage review is assigned: the flow identifies the specific change that triggered the review and the specific coverage parameter that needs updating.
 
-**Prior year premium comparison:** Reads the prior year premium from `vault/insurance/04_archive/` if available. If current year renewal premium is > 10% higher: adds shop categorization regardless of policy type (the insurer may be exiting your area or re-pricing your risk class — this is a signal to shop).
+**Prior year premium comparison:** Reads the prior year premium from `vault/insurance/01_prior/` if available. If current year renewal premium is > 10% higher: adds shop categorization regardless of policy type (the insurer may be exiting your area or re-pricing your risk class — this is a signal to shop).
 
 ## Steps
 
 1. Read all active policy records from `vault/insurance/00_current/`.
 2. Calculate days_until_renewal for each policy.
 3. Filter to policies with days_until_renewal ≤ 60.
-4. For each upcoming renewal: check prior year premium from `vault/insurance/04_archive/`.
+4. For each upcoming renewal: check prior year premium from `vault/insurance/01_prior/`.
 5. Apply primary categorization rule based on policy type.
 6. Apply override to "shop" if current premium is > 10% higher than prior year.
 7. Apply override to "coverage-review" based on life events in `vault/insurance/config.md` that have occurred since the last renewal.
@@ -39,7 +39,7 @@ Called by `aireadylife-insurance-op-renewal-watch` to perform the renewal date s
 ## Input
 
 - `~/Documents/AIReadyLife/vault/insurance/00_current/` — active policy records with renewal dates and current premiums
-- `~/Documents/AIReadyLife/vault/insurance/04_archive/` — prior year premium data
+- `~/Documents/AIReadyLife/vault/insurance/01_prior/` — prior year premium data
 - `~/Documents/AIReadyLife/vault/insurance/config.md` — recent life events for coverage-review trigger
 
 ## Output Format
@@ -77,7 +77,7 @@ No renewals in days 61+: Next upcoming after this window is [Policy] on [date]
 
 ## Configuration
 
-Policy records in `vault/insurance/00_current/` require `renewal_date` and `annual_premium` fields for renewal watch. Prior year premiums stored in `vault/insurance/04_archive/prior-year-premiums.md` with format: `{policy_type}: {prior_year_premium}`.
+Policy records in `vault/insurance/00_current/` require `renewal_date` and `annual_premium` fields for renewal watch. Prior year premiums stored in `vault/insurance/01_prior/prior-year-premiums.md` with format: `{policy_type}: {prior_year_premium}`.
 
 Life events stored in `vault/insurance/config.md` under `recent_life_events` list with event type and date for coverage-review trigger logic.
 
@@ -89,5 +89,5 @@ Life events stored in `vault/insurance/config.md` under `recent_life_events` lis
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/insurance/00_current/`, `~/Documents/AIReadyLife/vault/insurance/04_archive/`, `~/Documents/AIReadyLife/vault/insurance/config.md`
+- Reads from: `~/Documents/AIReadyLife/vault/insurance/00_current/`, `~/Documents/AIReadyLife/vault/insurance/01_prior/`, `~/Documents/AIReadyLife/vault/insurance/config.md`
 - Writes to: None (returns data to calling op)
