@@ -10,7 +10,7 @@ description: >
 
 ## What It Does
 
-Runs quarterly (January, April, July, October) to produce a complete compliance snapshot for all configured business entities. Reads the compliance checklist from `~/Documents/AIReadyLife/vault/business/00_current/compliance-checklist.md` which tracks every recurring obligation with last-completed date and next-due date. Calls `aireadylife-business-flow-check-compliance-status` to calculate days until due and assign traffic-light status for each item.
+Runs quarterly (January, April, July, October) to produce a complete compliance snapshot for all configured business entities. Reads the compliance checklist from `~/Documents/aireadylife/vault/business/00_current/compliance-checklist.md` which tracks every recurring obligation with last-completed date and next-due date. Calls `aireadylife-business-flow-check-compliance-status` to calculate days until due and assign traffic-light status for each item.
 
 Covers the full range of entity obligations: state annual report filing (deadline and fee vary by state — Delaware charges $300 minimum franchise tax due March 1; California charges $800 minimum franchise tax due April 15; Wyoming and Nevada charge annual fees of ~$60 with no report), registered agent status and address currency, S-Corp election confirmation (Form 2553 on file), operating agreement version and last review date, quarterly federal and state estimated tax payment dates, 1099-NEC preparation for contractors paid $600+ in the year, and any state-specific licenses or permits.
 
@@ -42,11 +42,11 @@ Checks for backing documentation — a filed annual report should have a confirm
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/business/00_current/compliance-checklist.md` — obligation registry
-- `~/Documents/AIReadyLife/vault/business/00_current/` — backing documentation
-- `~/Documents/AIReadyLife/vault/business/config.md` — entity list, states, registered agent details
-- `~/Documents/AIReadyLife/vault/business/00_current/` — contractor payment records for 1099 threshold check
-- `~/Documents/AIReadyLife/vault/business/01_prior/` — prior period records for trend comparison
+- `~/Documents/aireadylife/vault/business/00_current/compliance-checklist.md` — obligation registry
+- `~/Documents/aireadylife/vault/business/00_current/` — backing documentation
+- `~/Documents/aireadylife/vault/business/config.md` — entity list, states, registered agent details
+- `~/Documents/aireadylife/vault/business/00_current/` — contractor payment records for 1099 threshold check
+- `~/Documents/aireadylife/vault/business/01_prior/` — prior period records for trend comparison
 
 ## Output Format
 
@@ -74,7 +74,7 @@ Checks for backing documentation — a filed annual report should have a confirm
 
 ## Configuration
 
-Required in `~/Documents/AIReadyLife/vault/business/config.md`:
+Required in `~/Documents/aireadylife/vault/business/config.md`:
 - `entities` — list of entities with: name, state of formation, entity type, registered agent name and address, formation date
 - `s_corp_election` — yes/no per entity
 - `contractors` — list of contractors with annual payment total for 1099 tracking
@@ -87,6 +87,6 @@ Required in `~/Documents/AIReadyLife/vault/business/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/business/01_prior/` — prior period records
-- Reads from: `~/Documents/AIReadyLife/vault/business/00_current/`, `~/Documents/AIReadyLife/vault/business/config.md`, `~/Documents/AIReadyLife/vault/business/00_current/`
-- Writes to: `~/Documents/AIReadyLife/vault/business/02_briefs/compliance-{Q}-{YYYY}.md`, `~/Documents/AIReadyLife/vault/business/open-loops.md`
+- Reads from: `~/Documents/aireadylife/vault/business/01_prior/` — prior period records
+- Reads from: `~/Documents/aireadylife/vault/business/00_current/`, `~/Documents/aireadylife/vault/business/config.md`, `~/Documents/aireadylife/vault/business/00_current/`
+- Writes to: `~/Documents/aireadylife/vault/business/02_briefs/compliance-{Q}-{YYYY}.md`, `~/Documents/aireadylife/vault/business/open-loops.md`

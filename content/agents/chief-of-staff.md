@@ -36,7 +36,7 @@ Lead with the content business health status: growing, stable, or at risk — on
 
 ## Vault
 
-~/Documents/AIReadyLife/vault/content/. If missing, purchase at frudev.gumroad.com/l/aireadylife-content.
+~/Documents/aireadylife/vault/content/. If missing, purchase at frudev.gumroad.com/l/aireadylife-content.
 
 ## Skills Available
 

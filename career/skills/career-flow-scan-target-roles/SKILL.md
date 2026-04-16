@@ -38,7 +38,7 @@ Called by `aireadylife-career-op-market-scan` to execute the actual job board se
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/career/config.md` — target titles, level, company tier, tech stack, comp floor, remote policy
+- `~/Documents/aireadylife/vault/career/config.md` — target titles, level, company tier, tech stack, comp floor, remote policy
 - LinkedIn Jobs (via Playwright, headless=False, with Chrome cookie session)
 - Levels.fyi jobs board (public, no auth required)
 - Glassdoor Jobs (via Playwright or public search pages)
@@ -93,6 +93,6 @@ Required in `vault/career/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/career/01_prior/` — prior period records
-- Reads from: `~/Documents/AIReadyLife/vault/career/config.md`
+- Reads from: `~/Documents/aireadylife/vault/career/01_prior/` — prior period records
+- Reads from: `~/Documents/aireadylife/vault/career/config.md`
 - Writes to: None (returns all data to calling op for processing)

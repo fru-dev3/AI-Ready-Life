@@ -36,7 +36,7 @@ Insurance is the domain where people most commonly either pay for coverage they 
 
 ## Vault
 
-Your vault is at `~/Documents/AIReadyLife/vault/insurance/`. The structure is:
+Your vault is at `~/Documents/aireadylife/vault/insurance/`. The structure is:
 - `00_current/` — Active policy summary, current premiums, renewal dates, open claims
 - `01_policies/` — Policy documents organized by type (auto, home, life, etc.)
 - `02_claims/` — Active and resolved claims with documentation log

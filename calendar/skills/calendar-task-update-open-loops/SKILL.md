@@ -8,7 +8,7 @@ description: >
 
 # aireadylife-calendar-update-open-loops
 
-**Produces:** Updated ~/Documents/AIReadyLife/vault/calendar/open-loops.md with new flags added and resolved items marked complete
+**Produces:** Updated ~/Documents/aireadylife/vault/calendar/open-loops.md with new flags added and resolved items marked complete
 
 ## What It Does
 
@@ -35,7 +35,7 @@ This task is the maintenance operator for vault/calendar/open-loops.md — the c
 ## Input
 
 - New flag data from calling op
-- ~/Documents/AIReadyLife/vault/calendar/open-loops.md (current state)
+- ~/Documents/aireadylife/vault/calendar/open-loops.md (current state)
 - Source domain vaults (for resolution verification)
 
 ## Output Format
@@ -67,5 +67,5 @@ No configuration required.
 
 ## Vault Paths
 
-- Reads from: ~/Documents/AIReadyLife/vault/calendar/open-loops.md, source domain vaults (for resolution verification)
-- Writes to: ~/Documents/AIReadyLife/vault/calendar/open-loops.md, ~/Documents/AIReadyLife/vault/calendar/open-loops-archive.md
+- Reads from: ~/Documents/aireadylife/vault/calendar/open-loops.md, source domain vaults (for resolution verification)
+- Writes to: ~/Documents/aireadylife/vault/calendar/open-loops.md, ~/Documents/aireadylife/vault/calendar/open-loops-archive.md

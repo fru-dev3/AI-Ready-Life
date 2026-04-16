@@ -10,7 +10,7 @@ description: >
 # aireadylife-chief-build-daily-brief
 
 **Trigger:** Called by `aireadylife-chief-op-daily-brief`
-**Produces:** Fully formatted daily brief document written to ~/Documents/AIReadyLife/vault/chief/02_briefs/daily-YYYY-MM-DD.md
+**Produces:** Fully formatted daily brief document written to ~/Documents/aireadylife/vault/chief/02_briefs/daily-YYYY-MM-DD.md
 
 ## What It Does
 
@@ -91,6 +91,6 @@ This flow receives the pre-collected domain alerts and calendar items from the c
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/chief/01_prior/` — prior period records
+- Reads from: `~/Documents/aireadylife/vault/chief/01_prior/` — prior period records
 - Reads from: inputs passed by calling op (no direct vault reads)
-- Writes to: ~/Documents/AIReadyLife/vault/chief/02_briefs/daily-YYYY-MM-DD.md (via calling op)
+- Writes to: ~/Documents/aireadylife/vault/chief/02_briefs/daily-YYYY-MM-DD.md (via calling op)

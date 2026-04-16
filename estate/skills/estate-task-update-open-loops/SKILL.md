@@ -9,7 +9,7 @@ description: >
 
 # aireadylife-estate-update-open-loops
 
-**Produces:** Updated `~/Documents/AIReadyLife/vault/estate/open-loops.md` with new flags appended and resolved items archived
+**Produces:** Updated `~/Documents/aireadylife/vault/estate/open-loops.md` with new flags appended and resolved items archived
 
 ## What It Does
 
@@ -27,27 +27,27 @@ Flags written to open-loops.md fall into the following categories, each with a d
 
 Each flag entry in open-loops.md contains: the property address, flag category, specific issue description, financial impact or risk (dollar amount or legal risk), recommended action, action-by date, and the date flagged. Urgency is labeled in the header for easy scanning.
 
-On every run, the task also evaluates existing open loop items against current vault data. An item is resolved when the underlying condition is no longer present: maintenance item marked completed in the maintenance folder, lease renewal signed and logged, payment received and recorded, tax payment logged. Resolved items are moved to `~/Documents/AIReadyLife/vault/estate/open-loops-archive.md` with the resolution date and outcome noted. This archive is the historical record of every property issue that was flagged and resolved.
+On every run, the task also evaluates existing open loop items against current vault data. An item is resolved when the underlying condition is no longer present: maintenance item marked completed in the maintenance folder, lease renewal signed and logged, payment received and recorded, tax payment logged. Resolved items are moved to `~/Documents/aireadylife/vault/estate/open-loops-archive.md` with the resolution date and outcome noted. This archive is the historical record of every property issue that was flagged and resolved.
 
 The open-loops.md file is read by the calendar agent during cross-domain scans — estate items with explicit action-by dates automatically surface in weekly calendar agendas when that integration is active.
 
 ## Steps
 
 1. Receive flag data from calling op (property, flag category, issue description, financial impact, recommended action, urgency, action-by date)
-2. Read existing `~/Documents/AIReadyLife/vault/estate/open-loops.md` to check for duplicate flags of the same issue at the same property
+2. Read existing `~/Documents/aireadylife/vault/estate/open-loops.md` to check for duplicate flags of the same issue at the same property
 3. If duplicate: update timestamp and context rather than creating a second entry
 4. If new: append structured flag entry with all required fields
 5. Scan all existing open items against current vault data (maintenance folder, tenant records, payment logs) to identify resolved conditions
-6. Move resolved items to `~/Documents/AIReadyLife/vault/estate/open-loops-archive.md` with resolution date and outcome
+6. Move resolved items to `~/Documents/aireadylife/vault/estate/open-loops-archive.md` with resolution date and outcome
 7. Return summary to calling op: total open items by urgency (X critical, Y high, Z medium, W monitor)
 
 ## Input
 
 - Flag data passed by calling op
-- `~/Documents/AIReadyLife/vault/estate/open-loops.md` — existing flags
-- `~/Documents/AIReadyLife/vault/estate/00_current/` — for resolution check on maintenance flags
-- `~/Documents/AIReadyLife/vault/estate/00_current/` — for resolution check on tenant/lease flags
-- `~/Documents/AIReadyLife/vault/estate/00_current/` — for resolution check on cash flow flags
+- `~/Documents/aireadylife/vault/estate/open-loops.md` — existing flags
+- `~/Documents/aireadylife/vault/estate/00_current/` — for resolution check on maintenance flags
+- `~/Documents/aireadylife/vault/estate/00_current/` — for resolution check on tenant/lease flags
+- `~/Documents/aireadylife/vault/estate/00_current/` — for resolution check on cash flow flags
 
 ## Output Format
 
@@ -81,7 +81,7 @@ No additional configuration required beyond vault existing.
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/estate/open-loops.md`
-- Reads from: `~/Documents/AIReadyLife/vault/estate/00_current/`, `01_tenants/`, `03_cashflow/`
-- Writes to: `~/Documents/AIReadyLife/vault/estate/open-loops.md`
-- Writes to: `~/Documents/AIReadyLife/vault/estate/open-loops-archive.md`
+- Reads from: `~/Documents/aireadylife/vault/estate/open-loops.md`
+- Reads from: `~/Documents/aireadylife/vault/estate/00_current/`, `01_tenants/`, `03_cashflow/`
+- Writes to: `~/Documents/aireadylife/vault/estate/open-loops.md`
+- Writes to: `~/Documents/aireadylife/vault/estate/open-loops-archive.md`

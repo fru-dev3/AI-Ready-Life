@@ -40,10 +40,10 @@ This flow reads all active OKRs from vault/vision/00_current/ and evaluates how 
 
 ## Input
 
-- ~/Documents/AIReadyLife/vault/vision/00_current/ (current quarter OKR files)
-- ~/Documents/AIReadyLife/vault/vision/00_current/milestones.md (qualitative KR evidence)
-- `~/Documents/AIReadyLife/vault/vision/01_prior/` — prior period records for trend comparison
-- ~/Documents/AIReadyLife/vault/*/open-loops.md (completion evidence and blocking items)
+- ~/Documents/aireadylife/vault/vision/00_current/ (current quarter OKR files)
+- ~/Documents/aireadylife/vault/vision/00_current/milestones.md (qualitative KR evidence)
+- `~/Documents/aireadylife/vault/vision/01_prior/` — prior period records for trend comparison
+- ~/Documents/aireadylife/vault/*/open-loops.md (completion evidence and blocking items)
 - Domain-specific vault files (wealth, content, benefits, etc.) for quantitative KR metrics
 
 ## Output Format
@@ -78,6 +78,6 @@ Optional in vault/vision/config.md:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/vision/01_prior/` — prior period records
-- Reads from: ~/Documents/AIReadyLife/vault/vision/00_current/, ~/Documents/AIReadyLife/vault/vision/00_current/milestones.md, ~/Documents/AIReadyLife/vault/*/open-loops.md, domain-specific vault files
+- Reads from: `~/Documents/aireadylife/vault/vision/01_prior/` — prior period records
+- Reads from: ~/Documents/aireadylife/vault/vision/00_current/, ~/Documents/aireadylife/vault/vision/00_current/milestones.md, ~/Documents/aireadylife/vault/*/open-loops.md, domain-specific vault files
 - Writes to: none (returns data to calling op)

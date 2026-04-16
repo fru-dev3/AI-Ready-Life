@@ -56,6 +56,6 @@ None directly (each sub-op uses its own configured data sources)
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/wealth/00_current/` — active records and current state
-- Reads from: `~/Documents/AIReadyLife/vault/wealth/01_prior/` — prior period records for trend comparison
-- Reads from: `~/Documents/AIReadyLife/vault/wealth/02_briefs/` — prior briefs for period-over-period context
+- Reads from: `~/Documents/aireadylife/vault/wealth/00_current/` — active records and current state
+- Reads from: `~/Documents/aireadylife/vault/wealth/01_prior/` — prior period records for trend comparison
+- Reads from: `~/Documents/aireadylife/vault/wealth/02_briefs/` — prior briefs for period-over-period context

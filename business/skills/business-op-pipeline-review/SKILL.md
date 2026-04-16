@@ -10,7 +10,7 @@ description: >
 
 ## What It Does
 
-Runs monthly alongside the P&L review to give a complete forward-looking picture of the business. While the P&L review is backward-looking (what happened last month), the pipeline review is forward-looking (what revenue is coming and from where). Reads all proposal and contract records from `~/Documents/AIReadyLife/vault/business/00_current/` to produce a snapshot of all active commercial opportunities.
+Runs monthly alongside the P&L review to give a complete forward-looking picture of the business. While the P&L review is backward-looking (what happened last month), the pipeline review is forward-looking (what revenue is coming and from where). Reads all proposal and contract records from `~/Documents/aireadylife/vault/business/00_current/` to produce a snapshot of all active commercial opportunities.
 
 Calls `aireadylife-business-flow-build-pipeline-summary` to compute the stage breakdown, weighted pipeline value, stale proposal list, and 90-day conversion rate. Reviews the stale list — any proposal with no response in more than 7 days — and generates a specific recommended follow-up action for each based on its stage and days stale: 7-14 days stale = send a brief follow-up email; 15-21 days stale = phone call or alternate contact; 22+ days stale = assume no response, mark as low probability or closed-lost unless there is a clear reason to continue pursuing.
 
@@ -40,10 +40,10 @@ Calculates MoM pipeline change: is the total opportunity book growing or shrinki
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/business/00_current/` — proposal and contract records
-- `~/Documents/AIReadyLife/vault/business/01_prior/` — prior period records for trend comparison
-- `~/Documents/AIReadyLife/vault/business/02_briefs/pipeline-{prior month}.md` — prior month brief for MoM comparison
-- `~/Documents/AIReadyLife/vault/business/config.md` — follow-up threshold, minimum pipeline value target
+- `~/Documents/aireadylife/vault/business/00_current/` — proposal and contract records
+- `~/Documents/aireadylife/vault/business/01_prior/` — prior period records for trend comparison
+- `~/Documents/aireadylife/vault/business/02_briefs/pipeline-{prior month}.md` — prior month brief for MoM comparison
+- `~/Documents/aireadylife/vault/business/config.md` — follow-up threshold, minimum pipeline value target
 
 ## Output Format
 
@@ -71,7 +71,7 @@ Calculates MoM pipeline change: is the total opportunity book growing or shrinki
 
 ## Configuration
 
-Required in `~/Documents/AIReadyLife/vault/business/config.md`:
+Required in `~/Documents/aireadylife/vault/business/config.md`:
 - `pipeline_followup_threshold_days` — days before stale flag (default: 7)
 - `pipeline_minimum_value` — minimum total pipeline to be considered healthy (optional; e.g., 3x monthly revenue target)
 - `monthly_revenue_target` — used to assess pipeline health relative to target
@@ -84,6 +84,6 @@ Required in `~/Documents/AIReadyLife/vault/business/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/business/01_prior/` — prior period records
-- Reads from: `~/Documents/AIReadyLife/vault/business/00_current/`, `~/Documents/AIReadyLife/vault/business/config.md`
-- Writes to: `~/Documents/AIReadyLife/vault/business/02_briefs/pipeline-{YYYY-MM}.md`, `~/Documents/AIReadyLife/vault/business/open-loops.md`
+- Reads from: `~/Documents/aireadylife/vault/business/01_prior/` — prior period records
+- Reads from: `~/Documents/aireadylife/vault/business/00_current/`, `~/Documents/aireadylife/vault/business/config.md`
+- Writes to: `~/Documents/aireadylife/vault/business/02_briefs/pipeline-{YYYY-MM}.md`, `~/Documents/aireadylife/vault/business/open-loops.md`

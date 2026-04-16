@@ -50,7 +50,7 @@ User-provided or calling-op-provided:
 
 ## Output Format
 
-Monthly batch file at `~/Documents/AIReadyLife/vault/content/{subfolder}/{YYYY-MM}-{platform}-revenue.md`:
+Monthly batch file at `~/Documents/aireadylife/vault/content/{subfolder}/{YYYY-MM}-{platform}-revenue.md`:
 ```
 # Revenue Record — {Platform} | {Month} {Year}
 
@@ -65,12 +65,12 @@ campaign_name: {name or "N/A"}
 notes: {optional}
 ```
 
-Individual transaction file at `~/Documents/AIReadyLife/vault/content/{subfolder}/{YYYY-MM-DD}-{platform}-{type}.md`:
+Individual transaction file at `~/Documents/aireadylife/vault/content/{subfolder}/{YYYY-MM-DD}-{platform}-{type}.md`:
 Same fields with single-transaction data.
 
 ## Configuration
 
-Optional in `~/Documents/AIReadyLife/vault/content/config.md`:
+Optional in `~/Documents/aireadylife/vault/content/config.md`:
 - `revenue_platforms` — recognized platform names (prevents typos in log files)
 - `gumroad_products` — list of product names for consistent product-level tracking
 
@@ -82,5 +82,5 @@ Optional in `~/Documents/AIReadyLife/vault/content/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/content/config.md`, target subfolder for duplicate check
-- Writes to: `~/Documents/AIReadyLife/vault/content/00_current/` or `01_newsletter/` or `02_gumroad/` depending on platform
+- Reads from: `~/Documents/aireadylife/vault/content/config.md`, target subfolder for duplicate check
+- Writes to: `~/Documents/aireadylife/vault/content/00_current/` or `01_newsletter/` or `02_gumroad/` depending on platform

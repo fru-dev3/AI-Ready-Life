@@ -10,7 +10,7 @@ description: >
 # aireadylife-records-update-open-loops
 
 **Trigger:** Called by records ops and flows at the end of every run
-**Produces:** Updated `~/Documents/AIReadyLife/vault/records/open-loops.md` with new flags and resolved items archived
+**Produces:** Updated `~/Documents/aireadylife/vault/records/open-loops.md` with new flags and resolved items archived
 
 ## What It Does
 
@@ -30,12 +30,12 @@ Flags in the records domain fall into the following categories:
 
 **Subscription-Unused:** Subscription with no logged usage in 60+ days. Medium urgency. Flag includes monthly and annual cost so the financial impact of keeping it is visible.
 
-Each flag entry includes: category, document or service name, holder if applicable, issue description, financial context (dollar amount or risk), recommended action, and action-by date. On every run, existing items are checked for resolution: a document renewed (new expiration date logged), a subscription cancelled (removed from registry), a missing document added to vault. Resolved items move to `~/Documents/AIReadyLife/vault/records/open-loops-archive.md` with resolution date and outcome.
+Each flag entry includes: category, document or service name, holder if applicable, issue description, financial context (dollar amount or risk), recommended action, and action-by date. On every run, existing items are checked for resolution: a document renewed (new expiration date logged), a subscription cancelled (removed from registry), a missing document added to vault. Resolved items move to `~/Documents/aireadylife/vault/records/open-loops-archive.md` with resolution date and outcome.
 
 ## Steps
 
 1. Receive flag data from calling op (category, name/type, holder, description, financial context, action, urgency, action-by date)
-2. Read existing `~/Documents/AIReadyLife/vault/records/open-loops.md` to check for duplicates
+2. Read existing `~/Documents/aireadylife/vault/records/open-loops.md` to check for duplicates
 3. If duplicate flag exists: update timestamp and financial context; do not create duplicate
 4. If new flag: append structured entry with all required fields
 5. Scan existing open items for resolution: check 00_identity/ for renewed documents, 02_subscriptions/ for cancelled services, 01_legal/ for reviewed documents
@@ -45,9 +45,9 @@ Each flag entry includes: category, document or service name, holder if applicab
 ## Input
 
 - Flag data from calling op
-- `~/Documents/AIReadyLife/vault/records/open-loops.md`
-- `~/Documents/AIReadyLife/vault/records/00_current/` — for renewal resolution checks
-- `~/Documents/AIReadyLife/vault/records/00_current/subscriptions.md` — for cancellation resolution checks
+- `~/Documents/aireadylife/vault/records/open-loops.md`
+- `~/Documents/aireadylife/vault/records/00_current/` — for renewal resolution checks
+- `~/Documents/aireadylife/vault/records/00_current/subscriptions.md` — for cancellation resolution checks
 
 ## Output Format
 
@@ -81,7 +81,7 @@ No additional configuration required.
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/records/open-loops.md`
-- Reads from: `~/Documents/AIReadyLife/vault/records/00_current/`, `02_subscriptions/`
-- Writes to: `~/Documents/AIReadyLife/vault/records/open-loops.md`
-- Writes to: `~/Documents/AIReadyLife/vault/records/open-loops-archive.md`
+- Reads from: `~/Documents/aireadylife/vault/records/open-loops.md`
+- Reads from: `~/Documents/aireadylife/vault/records/00_current/`, `02_subscriptions/`
+- Writes to: `~/Documents/aireadylife/vault/records/open-loops.md`
+- Writes to: `~/Documents/aireadylife/vault/records/open-loops-archive.md`

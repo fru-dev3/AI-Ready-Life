@@ -25,21 +25,21 @@ The filtered listing table shows individual active listings that match the searc
 
 ## Steps
 
-1. Read search criteria from `~/Documents/AIReadyLife/vault/real-estate/config.md` (target markets, price ceiling, min beds/baths/sqft)
+1. Read search criteria from `~/Documents/aireadylife/vault/real-estate/config.md` (target markets, price ceiling, min beds/baths/sqft)
 2. For each target market, pull active listing data from Zillow or Redfin via web research
 3. Filter listings to only those matching all configured criteria
 4. Calculate aggregate market stats per market: median price, active count, median DOM, median price/sqft, months of supply, price-to-rent ratio, list-to-sale ratio
-5. Read prior month snapshot from `~/Documents/AIReadyLife/vault/real-estate/00_current/` and calculate MoM change for each metric
+5. Read prior month snapshot from `~/Documents/aireadylife/vault/real-estate/00_current/` and calculate MoM change for each metric
 6. Flag any metric that changed more than 5% MoM as a significant market shift
 7. Flag individual listings: >60 days on market as negotiation opportunity, <7 days as fresh inventory
-8. Write timestamped market snapshot and filtered listing table to `~/Documents/AIReadyLife/vault/real-estate/00_current/`
+8. Write timestamped market snapshot and filtered listing table to `~/Documents/aireadylife/vault/real-estate/00_current/`
 9. Return full market snapshot and listing table to the calling op
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/real-estate/config.md` — target markets, search filters, Zillow/Redfin preference
-- `~/Documents/AIReadyLife/vault/real-estate/00_current/` — prior month snapshots for MoM comparison
-- `~/Documents/AIReadyLife/vault/real-estate/01_prior/` — prior period records for trend comparison
+- `~/Documents/aireadylife/vault/real-estate/config.md` — target markets, search filters, Zillow/Redfin preference
+- `~/Documents/aireadylife/vault/real-estate/00_current/` — prior month snapshots for MoM comparison
+- `~/Documents/aireadylife/vault/real-estate/01_prior/` — prior period records for trend comparison
 - Live data: Zillow or Redfin active listings for each target market (via web research)
 
 ## Output Format
@@ -54,7 +54,7 @@ The filtered listing table shows individual active listings that match the searc
 
 ## Configuration
 
-Required fields in `~/Documents/AIReadyLife/vault/real-estate/config.md`:
+Required fields in `~/Documents/aireadylife/vault/real-estate/config.md`:
 - `target_markets` — list of city/state pairs to scan (e.g., ["Minneapolis MN", "Eden Prairie MN"])
 - `max_price` — upper price ceiling for listing filter
 - `min_beds` — minimum bedroom count
@@ -71,7 +71,7 @@ Required fields in `~/Documents/AIReadyLife/vault/real-estate/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/real-estate/01_prior/` — prior period records
-- Reads from: `~/Documents/AIReadyLife/vault/real-estate/config.md`
-- Reads from: `~/Documents/AIReadyLife/vault/real-estate/00_current/` (prior snapshots)
-- Writes to: `~/Documents/AIReadyLife/vault/real-estate/00_current/YYYY-MM-{market-slug}-snapshot.md`
+- Reads from: `~/Documents/aireadylife/vault/real-estate/01_prior/` — prior period records
+- Reads from: `~/Documents/aireadylife/vault/real-estate/config.md`
+- Reads from: `~/Documents/aireadylife/vault/real-estate/00_current/` (prior snapshots)
+- Writes to: `~/Documents/aireadylife/vault/real-estate/00_current/YYYY-MM-{market-slug}-snapshot.md`

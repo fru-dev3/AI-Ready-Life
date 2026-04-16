@@ -12,7 +12,7 @@ description: >
 # aireadylife-vision-annual-review
 
 **Cadence:** Annual (December, first two weeks)
-**Produces:** Annual retrospective and refreshed vision doc in ~/Documents/AIReadyLife/vault/vision/01_prior/ plus Q1 draft OKRs in vault/vision/00_current/
+**Produces:** Annual retrospective and refreshed vision doc in ~/Documents/aireadylife/vault/vision/01_prior/ plus Q1 draft OKRs in vault/vision/00_current/
 
 ## What It Does
 
@@ -58,10 +58,10 @@ The annual review is the most comprehensive and highest-stakes op in the entire 
 
 ## Input
 
-- ~/Documents/AIReadyLife/vault/vision/00_current/YYYY-01-scorecard.md through YYYY-12-scorecard.md
-- ~/Documents/AIReadyLife/vault/vision/00_current/milestones.md
-- ~/Documents/AIReadyLife/vault/vision/00_current/ (life vision document, BHAG)
-- ~/Documents/AIReadyLife/vault/vision/00_current/ (all four quarterly OKR files for the year)
+- ~/Documents/aireadylife/vault/vision/00_current/YYYY-01-scorecard.md through YYYY-12-scorecard.md
+- ~/Documents/aireadylife/vault/vision/00_current/milestones.md
+- ~/Documents/aireadylife/vault/vision/00_current/ (life vision document, BHAG)
+- ~/Documents/aireadylife/vault/vision/00_current/ (all four quarterly OKR files for the year)
 
 ## Output Format
 
@@ -115,5 +115,5 @@ Required in vault/vision/config.md:
 
 ## Vault Paths
 
-- Reads from: ~/Documents/AIReadyLife/vault/vision/00_current/, ~/Documents/AIReadyLife/vault/vision/00_current/, ~/Documents/AIReadyLife/vault/vision/00_current/
-- Writes to: ~/Documents/AIReadyLife/vault/vision/01_prior/YYYY-annual-review.md, ~/Documents/AIReadyLife/vault/vision/00_current/YYYY-Q1-draft-okrs.md, ~/Documents/AIReadyLife/vault/vision/00_current/ (if vision doc updated)
+- Reads from: ~/Documents/aireadylife/vault/vision/00_current/, ~/Documents/aireadylife/vault/vision/00_current/, ~/Documents/aireadylife/vault/vision/00_current/
+- Writes to: ~/Documents/aireadylife/vault/vision/01_prior/YYYY-annual-review.md, ~/Documents/aireadylife/vault/vision/00_current/YYYY-Q1-draft-okrs.md, ~/Documents/aireadylife/vault/vision/00_current/ (if vision doc updated)

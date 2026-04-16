@@ -48,8 +48,8 @@ Creates a permanent completion record when a learning item is finished. The comp
 ## Input
 
 - User-provided completion details (title, type, takeaways, rating, credential)
-- `~/Documents/AIReadyLife/vault/learning/00_current/` — existing item record if present
-- `~/Documents/AIReadyLife/vault/learning/00_current/study-log.md` — for hours calculation
+- `~/Documents/aireadylife/vault/learning/00_current/` — existing item record if present
+- `~/Documents/aireadylife/vault/learning/00_current/study-log.md` — for hours calculation
 
 ## Output Format
 
@@ -103,5 +103,5 @@ No configuration required beyond standard vault setup. Archive directory auto-cr
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/learning/00_current/`
-- Writes to: `~/Documents/AIReadyLife/vault/learning/01_prior/`, `~/Documents/AIReadyLife/vault/career/00_current/skills.md` (if Career plugin installed)
+- Reads from: `~/Documents/aireadylife/vault/learning/00_current/`
+- Writes to: `~/Documents/aireadylife/vault/learning/01_prior/`, `~/Documents/aireadylife/vault/career/00_current/skills.md` (if Career plugin installed)

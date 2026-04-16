@@ -11,7 +11,7 @@ description: >
 # aireadylife-calendar-weekly-agenda
 
 **Cadence:** Weekly (Monday morning)
-**Produces:** Prioritized week-ahead brief in ~/Documents/AIReadyLife/vault/calendar/00_current/YYYY-MM-DD-week-agenda.md
+**Produces:** Prioritized week-ahead brief in ~/Documents/aireadylife/vault/calendar/00_current/YYYY-MM-DD-week-agenda.md
 
 ## What It Does
 
@@ -51,11 +51,11 @@ Finally, it calls `calendar-task-update-open-loops` to ensure any newly surfaced
 
 ## Input
 
-- ~/Documents/AIReadyLife/vault/*/open-loops.md (all installed plugins)
-- ~/Documents/AIReadyLife/vault/calendar/00_current/ (prior deadline records)
-- `~/Documents/AIReadyLife/vault/calendar/01_prior/` — prior period records for trend comparison
+- ~/Documents/aireadylife/vault/*/open-loops.md (all installed plugins)
+- ~/Documents/aireadylife/vault/calendar/00_current/ (prior deadline records)
+- `~/Documents/aireadylife/vault/calendar/01_prior/` — prior period records for trend comparison
 - Google Calendar events for the coming week (via gcalendar skill, if configured)
-- ~/Documents/AIReadyLife/vault/calendar/config.md
+- ~/Documents/aireadylife/vault/calendar/config.md
 
 ## Output Format
 
@@ -105,6 +105,6 @@ Required in vault/calendar/config.md:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/calendar/01_prior/` — prior period records
-- Reads from: ~/Documents/AIReadyLife/vault/*/open-loops.md, ~/Documents/AIReadyLife/vault/calendar/00_current/
-- Writes to: ~/Documents/AIReadyLife/vault/calendar/00_current/YYYY-MM-DD-week-agenda.md, ~/Documents/AIReadyLife/vault/calendar/open-loops.md
+- Reads from: `~/Documents/aireadylife/vault/calendar/01_prior/` — prior period records
+- Reads from: ~/Documents/aireadylife/vault/*/open-loops.md, ~/Documents/aireadylife/vault/calendar/00_current/
+- Writes to: ~/Documents/aireadylife/vault/calendar/00_current/YYYY-MM-DD-week-agenda.md, ~/Documents/aireadylife/vault/calendar/open-loops.md

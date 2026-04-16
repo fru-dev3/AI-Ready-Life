@@ -46,8 +46,8 @@ The benefits open-loops file is the single source of truth for what needs your a
 ## Input
 
 - Flags from calling op
-- `~/Documents/AIReadyLife/vault/benefits/open-loops.md` — current state
-- `~/Documents/AIReadyLife/vault/benefits/config.md` — for resolution condition checks
+- `~/Documents/aireadylife/vault/benefits/open-loops.md` — current state
+- `~/Documents/aireadylife/vault/benefits/config.md` — for resolution condition checks
 
 ## Output Format
 
@@ -90,5 +90,5 @@ No configuration required. File auto-created on first run if it does not exist a
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/benefits/open-loops.md`, `~/Documents/AIReadyLife/vault/benefits/config.md`
-- Writes to: `~/Documents/AIReadyLife/vault/benefits/open-loops.md`
+- Reads from: `~/Documents/aireadylife/vault/benefits/open-loops.md`, `~/Documents/aireadylife/vault/benefits/config.md`
+- Writes to: `~/Documents/aireadylife/vault/benefits/open-loops.md`

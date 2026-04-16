@@ -36,7 +36,7 @@ The flow processes six document categories with distinct expiration and renewal 
 
 ## Steps
 
-1. Read document inventory from `~/Documents/AIReadyLife/vault/records/00_current/` and `~/Documents/AIReadyLife/vault/records/00_current/`
+1. Read document inventory from `~/Documents/aireadylife/vault/records/00_current/` and `~/Documents/aireadylife/vault/records/00_current/`
 2. For each document with an expiration date: calculate days until expiration
 3. Apply document-specific alert thresholds: passport (365 days), driver's license (90 days), Global Entry/TSA PreCheck/Nexus (180 days), professional license (180 days)
 4. For documents within threshold: calculate the "start renewal by" date using renewal lead times
@@ -49,10 +49,10 @@ The flow processes six document categories with distinct expiration and renewal 
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/records/00_current/` — identity document records
-- `~/Documents/AIReadyLife/vault/records/00_current/` — legal document records
-- `~/Documents/AIReadyLife/vault/records/01_prior/` — prior period records for trend comparison
-- `~/Documents/AIReadyLife/vault/records/config.md` — household members, recent life events
+- `~/Documents/aireadylife/vault/records/00_current/` — identity document records
+- `~/Documents/aireadylife/vault/records/00_current/` — legal document records
+- `~/Documents/aireadylife/vault/records/01_prior/` — prior period records for trend comparison
+- `~/Documents/aireadylife/vault/records/config.md` — household members, recent life events
 
 ## Output Format
 
@@ -72,7 +72,7 @@ Per flagged document: title, holder, action steps, official renewal portal link,
 
 ## Configuration
 
-Required in `~/Documents/AIReadyLife/vault/records/config.md`:
+Required in `~/Documents/aireadylife/vault/records/config.md`:
 - `household_members` — list of all people whose documents are tracked
 - `recent_life_events` — marriage, divorce, birth, relocation in the past 5 years (for legal document review trigger)
 
@@ -84,8 +84,8 @@ Required in `~/Documents/AIReadyLife/vault/records/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/records/01_prior/` — prior period records
-- Reads from: `~/Documents/AIReadyLife/vault/records/00_current/`
-- Reads from: `~/Documents/AIReadyLife/vault/records/00_current/`
-- Reads from: `~/Documents/AIReadyLife/vault/records/config.md`
-- Writes to: `~/Documents/AIReadyLife/vault/records/00_current/YYYY-MM-expiration-report.md`
+- Reads from: `~/Documents/aireadylife/vault/records/01_prior/` — prior period records
+- Reads from: `~/Documents/aireadylife/vault/records/00_current/`
+- Reads from: `~/Documents/aireadylife/vault/records/00_current/`
+- Reads from: `~/Documents/aireadylife/vault/records/config.md`
+- Writes to: `~/Documents/aireadylife/vault/records/00_current/YYYY-MM-expiration-report.md`

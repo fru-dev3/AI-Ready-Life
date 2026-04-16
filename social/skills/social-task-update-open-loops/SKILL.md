@@ -9,7 +9,7 @@ description: >
 # aireadylife-social-update-open-loops
 
 **Trigger:** Called by social ops and flows
-**Produces:** Updated ~/Documents/AIReadyLife/vault/social/open-loops.md with current relationship action items
+**Produces:** Updated ~/Documents/aireadylife/vault/social/open-loops.md with current relationship action items
 
 ## What It Does
 
@@ -40,8 +40,8 @@ This task maintains vault/social/open-loops.md — the canonical list of relatio
 ## Input
 
 - New flags from calling op
-- ~/Documents/AIReadyLife/vault/social/open-loops.md (current state)
-- ~/Documents/AIReadyLife/vault/social/00_current/ (for overdue and follow-up resolution checks)
+- ~/Documents/aireadylife/vault/social/open-loops.md (current state)
+- ~/Documents/aireadylife/vault/social/00_current/ (for overdue and follow-up resolution checks)
 
 ## Output Format
 
@@ -85,5 +85,5 @@ No configuration required.
 
 ## Vault Paths
 
-- Reads from: ~/Documents/AIReadyLife/vault/social/open-loops.md, ~/Documents/AIReadyLife/vault/social/00_current/
-- Writes to: ~/Documents/AIReadyLife/vault/social/open-loops.md, ~/Documents/AIReadyLife/vault/social/open-loops-archive.md
+- Reads from: ~/Documents/aireadylife/vault/social/open-loops.md, ~/Documents/aireadylife/vault/social/00_current/
+- Writes to: ~/Documents/aireadylife/vault/social/open-loops.md, ~/Documents/aireadylife/vault/social/open-loops-archive.md

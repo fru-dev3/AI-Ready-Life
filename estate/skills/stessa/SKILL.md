@@ -11,7 +11,7 @@ description: >
 
 **Auth:** Playwright + Chrome cookies (headless=False required)
 **URL:** https://app.stessa.com
-**Configuration:** Set Stessa email and Chrome profile path in `~/Documents/AIReadyLife/vault/estate/config.md`
+**Configuration:** Set Stessa email and Chrome profile path in `~/Documents/aireadylife/vault/estate/config.md`
 
 ## Data Available
 
@@ -26,7 +26,7 @@ description: >
 
 ## Configuration
 
-Add to `~/Documents/AIReadyLife/vault/estate/config.md`:
+Add to `~/Documents/aireadylife/vault/estate/config.md`:
 ```
 stessa_email: YOUR_STESSA_EMAIL
 stessa_chrome_profile: /Users/YOU/Library/Application Support/Google/Chrome/Default
@@ -56,4 +56,4 @@ stessa_chrome_profile: /Users/YOU/Library/Application Support/Google/Chrome/Defa
 
 ## Vault Output
 
-`~/Documents/AIReadyLife/vault/estate/00_current/`
+`~/Documents/aireadylife/vault/estate/00_current/`

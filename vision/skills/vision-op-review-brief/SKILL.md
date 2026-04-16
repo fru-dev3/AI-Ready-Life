@@ -11,7 +11,7 @@ description: >
 # aireadylife-vision-review-brief
 
 **Cadence:** Monthly (1st of month)
-**Produces:** Vision brief at ~/Documents/AIReadyLife/vault/vision/02_briefs/YYYY-MM-vision-brief.md
+**Produces:** Vision brief at ~/Documents/aireadylife/vault/vision/02_briefs/YYYY-MM-vision-brief.md
 
 ## What It Does
 
@@ -54,12 +54,12 @@ The brief is designed to be read in under 5 minutes and to produce no more than 
 
 ## Input
 
-- ~/Documents/AIReadyLife/vault/vision/00_current/ (most recent monthly scorecard)
-- ~/Documents/AIReadyLife/vault/vision/00_current/ (current quarter OKRs)
-- ~/Documents/AIReadyLife/vault/calendar/00_current/ (if calendar plugin installed, for alignment check)
-- `~/Documents/AIReadyLife/vault/vision/01_prior/` — prior period records for trend comparison
-- ~/Documents/AIReadyLife/vault/*/open-loops.md (for on-demand scorecard if needed)
-- ~/Documents/AIReadyLife/vault/vision/config.md
+- ~/Documents/aireadylife/vault/vision/00_current/ (most recent monthly scorecard)
+- ~/Documents/aireadylife/vault/vision/00_current/ (current quarter OKRs)
+- ~/Documents/aireadylife/vault/calendar/00_current/ (if calendar plugin installed, for alignment check)
+- `~/Documents/aireadylife/vault/vision/01_prior/` — prior period records for trend comparison
+- ~/Documents/aireadylife/vault/*/open-loops.md (for on-demand scorecard if needed)
+- ~/Documents/aireadylife/vault/vision/config.md
 
 ## Output Format
 
@@ -104,6 +104,6 @@ Required in vault/vision/config.md:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/vision/01_prior/` — prior period records
-- Reads from: ~/Documents/AIReadyLife/vault/vision/00_current/, ~/Documents/AIReadyLife/vault/vision/00_current/, ~/Documents/AIReadyLife/vault/calendar/00_current/, ~/Documents/AIReadyLife/vault/*/open-loops.md
-- Writes to: ~/Documents/AIReadyLife/vault/vision/02_briefs/YYYY-MM-vision-brief.md
+- Reads from: `~/Documents/aireadylife/vault/vision/01_prior/` — prior period records
+- Reads from: ~/Documents/aireadylife/vault/vision/00_current/, ~/Documents/aireadylife/vault/vision/00_current/, ~/Documents/aireadylife/vault/calendar/00_current/, ~/Documents/aireadylife/vault/*/open-loops.md
+- Writes to: ~/Documents/aireadylife/vault/vision/02_briefs/YYYY-MM-vision-brief.md

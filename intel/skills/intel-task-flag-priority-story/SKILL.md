@@ -33,12 +33,12 @@ Called internally by `aireadylife-intel-op-daily-briefing` and `aireadylife-inte
 ## Input
 
 - Story data from calling op (headline, source, tier, date, summary)
-- `~/Documents/AIReadyLife/vault/intel/config.md` — user context, priority topics, routing rules
-- `~/Documents/AIReadyLife/vault/intel/open-loops.md` — for duplicate check
+- `~/Documents/aireadylife/vault/intel/config.md` — user context, priority topics, routing rules
+- `~/Documents/aireadylife/vault/intel/open-loops.md` — for duplicate check
 
 ## Output Format
 
-Flag written to `~/Documents/AIReadyLife/vault/intel/open-loops.md`:
+Flag written to `~/Documents/aireadylife/vault/intel/open-loops.md`:
 ```
 🔴 PRIORITY STORY — {Source} | Tier {1/2} | {YYYY-MM-DD HH:MM}
 Headline: "{Exact headline}"
@@ -52,7 +52,7 @@ Source: intel-op-daily-briefing | Raised: {YYYY-MM-DD}
 
 ## Configuration
 
-Required in `~/Documents/AIReadyLife/vault/intel/config.md`:
+Required in `~/Documents/aireadylife/vault/intel/config.md`:
 - `topics_priority` — top-priority topics that trigger Criterion A flags
 - `user_context` — brief description of the user's situation for Criterion C relevance assessment (e.g., "has variable rate mortgage, owns LLC, content creator")
 - `routing_rules` — which story types route to which agents (wealth, tax, career, content)
@@ -66,5 +66,5 @@ Required in `~/Documents/AIReadyLife/vault/intel/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/intel/config.md`, `~/Documents/AIReadyLife/vault/intel/open-loops.md`
-- Writes to: `~/Documents/AIReadyLife/vault/intel/open-loops.md`
+- Reads from: `~/Documents/aireadylife/vault/intel/config.md`, `~/Documents/aireadylife/vault/intel/open-loops.md`
+- Writes to: `~/Documents/aireadylife/vault/intel/open-loops.md`

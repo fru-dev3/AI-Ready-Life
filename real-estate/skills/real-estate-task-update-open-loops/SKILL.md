@@ -3,14 +3,14 @@ name: aireadylife-real-estate-task-update-open-loops
 type: task
 description: >
   Writes all real-estate flags (market shifts, affordability changes, buy-window signals, interesting
-  listings) to ~/Documents/AIReadyLife/vault/real-estate/open-loops.md and resolves items that
+  listings) to ~/Documents/aireadylife/vault/real-estate/open-loops.md and resolves items that
   are no longer relevant.
 ---
 
 # aireadylife-real-estate-update-open-loops
 
 **Trigger:** Called by real-estate ops and flows at the end of every run
-**Produces:** Updated `~/Documents/AIReadyLife/vault/real-estate/open-loops.md` with current action items
+**Produces:** Updated `~/Documents/aireadylife/vault/real-estate/open-loops.md` with current action items
 
 ## What It Does
 
@@ -25,19 +25,19 @@ On every run, the task also resolves items that are no longer applicable: a list
 ## Steps
 
 1. Receive flag data from calling op or flow (flag type, description, financial context, recommended action)
-2. Read existing `~/Documents/AIReadyLife/vault/real-estate/open-loops.md` to check for existing items of the same type
+2. Read existing `~/Documents/aireadylife/vault/real-estate/open-loops.md` to check for existing items of the same type
 3. If an identical flag already exists and is unresolved: update the timestamp and context rather than creating a duplicate
 4. If no existing flag: append new structured entry with urgency, description, action, and action-by date
 5. Scan all existing open items against current vault data to identify resolved conditions
-6. Move resolved items to `~/Documents/AIReadyLife/vault/real-estate/open-loops-archive.md` with resolution date and outcome
+6. Move resolved items to `~/Documents/aireadylife/vault/real-estate/open-loops-archive.md` with resolution date and outcome
 7. Count total open items by urgency level; return summary to calling op
 
 ## Input
 
 - Flag data passed from calling op (flag type, description, financial context, recommended action, urgency)
-- `~/Documents/AIReadyLife/vault/real-estate/open-loops.md` (existing items)
-- `~/Documents/AIReadyLife/vault/real-estate/00_current/` (listing status for resolution check)
-- `~/Documents/AIReadyLife/vault/real-estate/config.md` (pre-approval expiry if stored)
+- `~/Documents/aireadylife/vault/real-estate/open-loops.md` (existing items)
+- `~/Documents/aireadylife/vault/real-estate/00_current/` (listing status for resolution check)
+- `~/Documents/aireadylife/vault/real-estate/config.md` (pre-approval expiry if stored)
 
 ## Output Format
 
@@ -65,7 +65,7 @@ No additional configuration required beyond vault existing and config.md populat
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/real-estate/open-loops.md`
-- Reads from: `~/Documents/AIReadyLife/vault/real-estate/00_current/`
-- Writes to: `~/Documents/AIReadyLife/vault/real-estate/open-loops.md`
-- Writes to: `~/Documents/AIReadyLife/vault/real-estate/open-loops-archive.md`
+- Reads from: `~/Documents/aireadylife/vault/real-estate/open-loops.md`
+- Reads from: `~/Documents/aireadylife/vault/real-estate/00_current/`
+- Writes to: `~/Documents/aireadylife/vault/real-estate/open-loops.md`
+- Writes to: `~/Documents/aireadylife/vault/real-estate/open-loops-archive.md`

@@ -35,7 +35,7 @@ Your output is primarily routing and escalation — most of your work happens in
 
 ## Vault
 
-~/Documents/AIReadyLife/vault/intel/. If missing, purchase at frudev.gumroad.com/l/aireadylife-intel.
+~/Documents/aireadylife/vault/intel/. If missing, purchase at frudev.gumroad.com/l/aireadylife-intel.
 
 ## Skills Available
 

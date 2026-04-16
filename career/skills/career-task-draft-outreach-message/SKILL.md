@@ -38,7 +38,7 @@ Called by `aireadylife-career-op-network-review` for each contact selected for o
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/career/` — contact record for the specific person
+- `~/Documents/aireadylife/vault/career/` — contact record for the specific person
 - Context type passed by calling op
 - Role information from `vault/career/config.md` if context type is referral or intro request
 
@@ -71,5 +71,5 @@ Contact records at `vault/career/` with fields: name, current_company, current_r
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/career/` (contact log), `~/Documents/AIReadyLife/vault/career/config.md`
+- Reads from: `~/Documents/aireadylife/vault/career/` (contact log), `~/Documents/aireadylife/vault/career/config.md`
 - Writes to: None (returns draft to calling op; op may save to `vault/career/00_current/` if follow-up tracking is needed)

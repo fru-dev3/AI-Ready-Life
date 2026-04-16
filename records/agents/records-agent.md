@@ -8,7 +8,7 @@ description: >
   and healthcare directives. Monitors all active subscriptions for usage, renewals within 30 days,
   and duplicates. Flags expiring documents with document-specific lead times and step-by-step
   renewal instructions. Produces monthly records briefs and quarterly document audits. All data
-  stays local in ~/Documents/AIReadyLife/vault/records/.
+  stays local in ~/Documents/aireadylife/vault/records/.
 ---
 
 # Records Director — Records Plugin
@@ -45,7 +45,7 @@ For legal documents, be careful: you can flag gaps and recommend review, but def
 
 ## Vault
 
-`~/Documents/AIReadyLife/vault/records/`
+`~/Documents/aireadylife/vault/records/`
 
 If vault is missing: direct user to frudev.gumroad.com/l/aireadylife-records.
 

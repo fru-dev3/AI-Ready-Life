@@ -43,7 +43,7 @@ A precision data retrieval task for the benefits domain. Benefits flows and ops 
 ## Input
 
 - Limit type parameter (from list of supported types above)
-- `~/Documents/AIReadyLife/vault/benefits/00_current/` — plan documents and optional config index
+- `~/Documents/aireadylife/vault/benefits/00_current/` — plan documents and optional config index
 
 ## Output Format
 
@@ -82,5 +82,5 @@ hsa_investment_threshold: 1000
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/benefits/00_current/`
+- Reads from: `~/Documents/aireadylife/vault/benefits/00_current/`
 - Writes to: None (returns value to caller)

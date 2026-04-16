@@ -44,11 +44,11 @@ Writes a structured revenue log entry via `aireadylife-content-task-log-revenue`
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/content/00_current/{YYYY-MM}.md` — AdSense earnings, views, RPM
-- `~/Documents/AIReadyLife/vault/content/00_current/{YYYY-MM}.md` — sponsorship fees, MRR, paid subscribers
-- `~/Documents/AIReadyLife/vault/content/00_current/{YYYY-MM}.md` — product sales by product
-- `~/Documents/AIReadyLife/vault/content/01_prior/` — prior period records for trend comparison
-- `~/Documents/AIReadyLife/vault/content/config.md` — channel list, seasonal expectations
+- `~/Documents/aireadylife/vault/content/00_current/{YYYY-MM}.md` — AdSense earnings, views, RPM
+- `~/Documents/aireadylife/vault/content/00_current/{YYYY-MM}.md` — sponsorship fees, MRR, paid subscribers
+- `~/Documents/aireadylife/vault/content/00_current/{YYYY-MM}.md` — product sales by product
+- `~/Documents/aireadylife/vault/content/01_prior/` — prior period records for trend comparison
+- `~/Documents/aireadylife/vault/content/config.md` — channel list, seasonal expectations
 
 ## Output Format
 
@@ -77,7 +77,7 @@ Writes a structured revenue log entry via `aireadylife-content-task-log-revenue`
 
 ## Configuration
 
-Required in `~/Documents/AIReadyLife/vault/content/config.md`:
+Required in `~/Documents/aireadylife/vault/content/config.md`:
 - `revenue_channels` — list of monetization channels
 - `revenue_target_monthly` — monthly revenue target (enables target vs actual display)
 - `seasonal_expectations` — notes on expected seasonal RPM fluctuations (optional)
@@ -90,6 +90,6 @@ Required in `~/Documents/AIReadyLife/vault/content/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/content/01_prior/` — prior period records
-- Reads from: `~/Documents/AIReadyLife/vault/content/00_current/`, `~/Documents/AIReadyLife/vault/content/00_current/`, `~/Documents/AIReadyLife/vault/content/00_current/`, `~/Documents/AIReadyLife/vault/content/config.md`
-- Writes to: `~/Documents/AIReadyLife/vault/content/00_current/revenue-{YYYY-MM}.md`, `~/Documents/AIReadyLife/vault/content/open-loops.md`
+- Reads from: `~/Documents/aireadylife/vault/content/01_prior/` — prior period records
+- Reads from: `~/Documents/aireadylife/vault/content/00_current/`, `~/Documents/aireadylife/vault/content/00_current/`, `~/Documents/aireadylife/vault/content/00_current/`, `~/Documents/aireadylife/vault/content/config.md`
+- Writes to: `~/Documents/aireadylife/vault/content/00_current/revenue-{YYYY-MM}.md`, `~/Documents/aireadylife/vault/content/open-loops.md`

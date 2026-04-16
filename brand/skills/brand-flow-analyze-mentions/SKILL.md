@@ -9,7 +9,7 @@ description: >
 
 ## What It Does
 
-Reads the mention log from `~/Documents/AIReadyLife/vault/brand/00_current/` where all logged brand mentions are stored as structured records with platform, author, date, content summary, and sentiment pre-classification from when they were logged. Aggregates mentions by sentiment (positive, neutral, negative) and calculates the sentiment distribution for the period (e.g., "73% positive, 21% neutral, 6% negative"). Tracks change in sentiment distribution vs. prior month — a shift toward neutral or negative is an early reputation signal worth investigating before it becomes a pattern.
+Reads the mention log from `~/Documents/aireadylife/vault/brand/00_current/` where all logged brand mentions are stored as structured records with platform, author, date, content summary, and sentiment pre-classification from when they were logged. Aggregates mentions by sentiment (positive, neutral, negative) and calculates the sentiment distribution for the period (e.g., "73% positive, 21% neutral, 6% negative"). Tracks change in sentiment distribution vs. prior month — a shift toward neutral or negative is an early reputation signal worth investigating before it becomes a pattern.
 
 Identifies notable sources: accounts whose mentions warrant immediate or priority attention. Notable source criteria: verified journalist or media publication, follower count above the threshold configured in config.md (default: 10,000 followers), academic or institutional affiliation, or previous interaction history marked as high-priority. Notable sources are surfaced separately from the bulk mention list.
 
@@ -23,7 +23,7 @@ Called internally by `aireadylife-brand-op-monthly-synthesis`. Not invoked direc
 
 ## Steps
 
-1. Read all mention records from `~/Documents/AIReadyLife/vault/brand/00_current/` for the current period (default: prior 30 days)
+1. Read all mention records from `~/Documents/aireadylife/vault/brand/00_current/` for the current period (default: prior 30 days)
 2. Count mentions by sentiment (positive / neutral / negative) and calculate percentage distribution
 3. Load prior month mention counts for sentiment trend comparison
 4. Identify notable sources: check each author against the notable-threshold config (follower count > threshold OR source type = journalist/publication)
@@ -35,9 +35,9 @@ Called internally by `aireadylife-brand-op-monthly-synthesis`. Not invoked direc
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/brand/00_current/` — mention records; each should include: platform, author, author-handle, author-follower-count, date, sentiment, content-summary, link, responded-status
-- `~/Documents/AIReadyLife/vault/brand/01_prior/` — prior period records for trend comparison
-- `~/Documents/AIReadyLife/vault/brand/config.md` — notable follower threshold, response window days
+- `~/Documents/aireadylife/vault/brand/00_current/` — mention records; each should include: platform, author, author-handle, author-follower-count, date, sentiment, content-summary, link, responded-status
+- `~/Documents/aireadylife/vault/brand/01_prior/` — prior period records for trend comparison
+- `~/Documents/aireadylife/vault/brand/config.md` — notable follower threshold, response window days
 
 ## Output Format
 
@@ -64,7 +64,7 @@ Called internally by `aireadylife-brand-op-monthly-synthesis`. Not invoked direc
 
 ## Configuration
 
-Required in `~/Documents/AIReadyLife/vault/brand/config.md`:
+Required in `~/Documents/aireadylife/vault/brand/config.md`:
 - `mention_notable_follower_threshold` — follower count above which an author is flagged as notable (default: 10000)
 - `mention_response_window_days` — days within which a negative/neutral mention should receive a response (default: 7)
 
@@ -76,6 +76,6 @@ Required in `~/Documents/AIReadyLife/vault/brand/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/brand/01_prior/` — prior period records
-- Reads from: `~/Documents/AIReadyLife/vault/brand/00_current/`, `~/Documents/AIReadyLife/vault/brand/config.md`
+- Reads from: `~/Documents/aireadylife/vault/brand/01_prior/` — prior period records
+- Reads from: `~/Documents/aireadylife/vault/brand/00_current/`, `~/Documents/aireadylife/vault/brand/config.md`
 - Writes to: returns data to calling op; no direct file writes

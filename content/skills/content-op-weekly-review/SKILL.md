@@ -43,13 +43,13 @@ Surfaces the top 3 action items for the current week based on: what is scheduled
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/content/00_current/` — publishing log; recent video/newsletter/post records
-- `~/Documents/AIReadyLife/vault/content/00_current/` — most recent video's early performance metrics (if recently published)
-- `~/Documents/AIReadyLife/vault/content/00_current/` — most recent issue's open rate
-- `~/Documents/AIReadyLife/vault/content/00_current/` — 7-day sales data
-- `~/Documents/AIReadyLife/vault/content/01_prior/` — prior period records for trend comparison
-- `~/Documents/AIReadyLife/vault/content/open-loops.md` — current action items from monthly reviews
-- `~/Documents/AIReadyLife/vault/content/config.md` — cadence targets, primary platforms
+- `~/Documents/aireadylife/vault/content/00_current/` — publishing log; recent video/newsletter/post records
+- `~/Documents/aireadylife/vault/content/00_current/` — most recent video's early performance metrics (if recently published)
+- `~/Documents/aireadylife/vault/content/00_current/` — most recent issue's open rate
+- `~/Documents/aireadylife/vault/content/00_current/` — 7-day sales data
+- `~/Documents/aireadylife/vault/content/01_prior/` — prior period records for trend comparison
+- `~/Documents/aireadylife/vault/content/open-loops.md` — current action items from monthly reviews
+- `~/Documents/aireadylife/vault/content/config.md` — cadence targets, primary platforms
 
 ## Output Format
 
@@ -79,7 +79,7 @@ Surfaces the top 3 action items for the current week based on: what is scheduled
 
 ## Configuration
 
-Required in `~/Documents/AIReadyLife/vault/content/config.md`:
+Required in `~/Documents/aireadylife/vault/content/config.md`:
 - `platforms_primary` — platforms that trigger publishing gap alerts
 - `youtube_cadence_monthly`, `newsletter_cadence_monthly` — targets (divided by 4 for weekly check)
 - `publishing_log_location` — path to publishing log within vault/content/00_current/
@@ -91,6 +91,6 @@ Required in `~/Documents/AIReadyLife/vault/content/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/content/01_prior/` — prior period records
-- Reads from: `~/Documents/AIReadyLife/vault/content/00_current/`, `~/Documents/AIReadyLife/vault/content/00_current/`, `~/Documents/AIReadyLife/vault/content/00_current/`, `~/Documents/AIReadyLife/vault/content/00_current/`, `~/Documents/AIReadyLife/vault/content/open-loops.md`, `~/Documents/AIReadyLife/vault/content/config.md`
-- Writes to: `~/Documents/AIReadyLife/vault/content/00_current/weekly-snapshot.md`
+- Reads from: `~/Documents/aireadylife/vault/content/01_prior/` — prior period records
+- Reads from: `~/Documents/aireadylife/vault/content/00_current/`, `~/Documents/aireadylife/vault/content/00_current/`, `~/Documents/aireadylife/vault/content/00_current/`, `~/Documents/aireadylife/vault/content/00_current/`, `~/Documents/aireadylife/vault/content/open-loops.md`, `~/Documents/aireadylife/vault/content/config.md`
+- Writes to: `~/Documents/aireadylife/vault/content/00_current/weekly-snapshot.md`

@@ -53,11 +53,11 @@ The monthly sync is the comprehensive maintenance operation for the social domai
 
 ## Input
 
-- ~/Documents/AIReadyLife/vault/social/00_current/contacts.md
-- ~/Documents/AIReadyLife/vault/social/00_current/ (complete interaction log)
-- ~/Documents/AIReadyLife/vault/social/00_current/
-- `~/Documents/AIReadyLife/vault/social/01_prior/` — prior period records for trend comparison
-- ~/Documents/AIReadyLife/vault/social/config.md
+- ~/Documents/aireadylife/vault/social/00_current/contacts.md
+- ~/Documents/aireadylife/vault/social/00_current/ (complete interaction log)
+- ~/Documents/aireadylife/vault/social/00_current/
+- `~/Documents/aireadylife/vault/social/01_prior/` — prior period records for trend comparison
+- ~/Documents/aireadylife/vault/social/config.md
 
 ## Output Format
 
@@ -105,6 +105,6 @@ Required in vault/social/config.md:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/social/01_prior/` — prior period records
-- Reads from: ~/Documents/AIReadyLife/vault/social/00_current/contacts.md, ~/Documents/AIReadyLife/vault/social/00_current/, ~/Documents/AIReadyLife/vault/social/00_current/, ~/Documents/AIReadyLife/vault/social/config.md
-- Writes to: ~/Documents/AIReadyLife/vault/social/00_current/contacts.md (refreshed health), ~/Documents/AIReadyLife/vault/social/00_current/sync-YYYY-MM.md, ~/Documents/AIReadyLife/vault/social/open-loops.md
+- Reads from: `~/Documents/aireadylife/vault/social/01_prior/` — prior period records
+- Reads from: ~/Documents/aireadylife/vault/social/00_current/contacts.md, ~/Documents/aireadylife/vault/social/00_current/, ~/Documents/aireadylife/vault/social/00_current/, ~/Documents/aireadylife/vault/social/config.md
+- Writes to: ~/Documents/aireadylife/vault/social/00_current/contacts.md (refreshed health), ~/Documents/aireadylife/vault/social/00_current/sync-YYYY-MM.md, ~/Documents/aireadylife/vault/social/open-loops.md

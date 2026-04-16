@@ -11,7 +11,7 @@ description: >
 # aireadylife-records-log-document
 
 **Cadence:** As-received (when a new document is issued, renewed, or discovered during a records cleanout)
-**Produces:** Document record in the appropriate `~/Documents/AIReadyLife/vault/records/` subfolder
+**Produces:** Document record in the appropriate `~/Documents/aireadylife/vault/records/` subfolder
 
 ## What It Does
 
@@ -104,7 +104,7 @@ Optional: scan file path, attorney name (legal docs), notes
 
 ## Configuration
 
-Required in `~/Documents/AIReadyLife/vault/records/config.md`:
+Required in `~/Documents/aireadylife/vault/records/config.md`:
 - `household_members` — used to validate holder name against known household
 
 ## Error Handling
@@ -116,5 +116,5 @@ Required in `~/Documents/AIReadyLife/vault/records/config.md`:
 
 ## Vault Paths
 
-- Writes to: `~/Documents/AIReadyLife/vault/records/00_current/{holder-slug}-{document-type-slug}.md` (for identity documents)
-- Writes to: `~/Documents/AIReadyLife/vault/records/00_current/{holder-slug}-{document-type-slug}.md` (for legal documents)
+- Writes to: `~/Documents/aireadylife/vault/records/00_current/{holder-slug}-{document-type-slug}.md` (for identity documents)
+- Writes to: `~/Documents/aireadylife/vault/records/00_current/{holder-slug}-{document-type-slug}.md` (for legal documents)

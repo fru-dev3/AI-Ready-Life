@@ -47,10 +47,10 @@ The op calls `social-flow-build-outreach-queue` to incorporate the birthday cont
 
 ## Input
 
-- ~/Documents/AIReadyLife/vault/social/00_current/ (birthday and milestone calendar)
-- ~/Documents/AIReadyLife/vault/social/00_current/contacts.md (tier assignments)
-- ~/Documents/AIReadyLife/vault/social/00_current/ (last-contact dates)
-- `~/Documents/AIReadyLife/vault/social/01_prior/` — prior period records for trend comparison
+- ~/Documents/aireadylife/vault/social/00_current/ (birthday and milestone calendar)
+- ~/Documents/aireadylife/vault/social/00_current/contacts.md (tier assignments)
+- ~/Documents/aireadylife/vault/social/00_current/ (last-contact dates)
+- `~/Documents/aireadylife/vault/social/01_prior/` — prior period records for trend comparison
 
 ## Output Format
 
@@ -86,6 +86,6 @@ Required in vault/social/00_current/:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/social/01_prior/` — prior period records
-- Reads from: ~/Documents/AIReadyLife/vault/social/00_current/, ~/Documents/AIReadyLife/vault/social/00_current/contacts.md, ~/Documents/AIReadyLife/vault/social/00_current/
-- Writes to: ~/Documents/AIReadyLife/vault/social/open-loops.md (via social-task-update-open-loops)
+- Reads from: `~/Documents/aireadylife/vault/social/01_prior/` — prior period records
+- Reads from: ~/Documents/aireadylife/vault/social/00_current/, ~/Documents/aireadylife/vault/social/00_current/contacts.md, ~/Documents/aireadylife/vault/social/00_current/
+- Writes to: ~/Documents/aireadylife/vault/social/open-loops.md (via social-task-update-open-loops)

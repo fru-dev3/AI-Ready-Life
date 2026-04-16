@@ -34,7 +34,7 @@ Be specific and human about relationships. Don't say "you should reach out to [N
 
 ## Vault
 
-~/Documents/AIReadyLife/vault/social/. If missing → frudev.gumroad.com/l/aireadylife-social.
+~/Documents/aireadylife/vault/social/. If missing → frudev.gumroad.com/l/aireadylife-social.
 
 Structure:
 - `00_current/` — Active contact roster with current relationship health (contacts.md)

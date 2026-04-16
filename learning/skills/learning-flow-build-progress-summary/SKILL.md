@@ -44,9 +44,9 @@ Called by `aireadylife-learning-op-monthly-sync` and `aireadylife-learning-op-pr
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/learning/00_current/` — all active learning items
-- `~/Documents/AIReadyLife/vault/learning/01_prior/` — completed items this month
-- `~/Documents/AIReadyLife/vault/learning/00_current/` — monthly completion targets
+- `~/Documents/aireadylife/vault/learning/00_current/` — all active learning items
+- `~/Documents/aireadylife/vault/learning/01_prior/` — completed items this month
+- `~/Documents/aireadylife/vault/learning/00_current/` — monthly completion targets
 
 ## Output Format
 
@@ -101,5 +101,5 @@ status: active
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/learning/00_current/`, `~/Documents/AIReadyLife/vault/learning/01_prior/`, `~/Documents/AIReadyLife/vault/learning/00_current/`
+- Reads from: `~/Documents/aireadylife/vault/learning/00_current/`, `~/Documents/aireadylife/vault/learning/01_prior/`, `~/Documents/aireadylife/vault/learning/00_current/`
 - Writes to: None (returns data to calling op)

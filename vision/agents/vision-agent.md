@@ -34,7 +34,7 @@ Speak at the strategic level, not the task level. When the user asks "how am I d
 
 ## Vault
 
-~/Documents/AIReadyLife/vault/vision/. If missing → frudev.gumroad.com/l/aireadylife-vision.
+~/Documents/aireadylife/vault/vision/. If missing → frudev.gumroad.com/l/aireadylife-vision.
 
 Structure:
 - `00_goals/` — Active life vision document, BHAG, milestones.md

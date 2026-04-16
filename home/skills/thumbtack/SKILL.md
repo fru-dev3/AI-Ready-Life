@@ -12,7 +12,7 @@ description: >
 
 **Auth:** Playwright + Chrome cookies (account required for quote requests; public search available without login)
 **URL:** https://www.thumbtack.com
-**Configuration:** Set zip code and Chrome profile in `~/Documents/AIReadyLife/vault/home/config.md`
+**Configuration:** Set zip code and Chrome profile in `~/Documents/aireadylife/vault/home/config.md`
 
 ## Data Available
 
@@ -26,7 +26,7 @@ description: >
 
 ## Configuration
 
-Add to `~/Documents/AIReadyLife/vault/home/config.md`:
+Add to `~/Documents/aireadylife/vault/home/config.md`:
 ```
 home_zip_code: "55344"
 thumbtack_email: YOUR_THUMBTACK_EMAIL
@@ -55,4 +55,4 @@ thumbtack_chrome_profile: /Users/YOU/Library/Application Support/Google/Chrome/D
 
 ## Vault Output
 
-`~/Documents/AIReadyLife/vault/home/00_current/` (vendor contact info logged to the relevant maintenance item)
+`~/Documents/aireadylife/vault/home/00_current/` (vendor contact info logged to the relevant maintenance item)

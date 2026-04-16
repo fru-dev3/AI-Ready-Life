@@ -34,9 +34,9 @@ Called by `aireadylife-career-op-skills-gap-review` to produce the core skills g
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/career/00_current/skills.md` — skills inventory
-- `~/Documents/AIReadyLife/vault/career/00_current/` — last 3 months of market scan data
-- `~/Documents/AIReadyLife/vault/career/01_prior/` — prior period records for trend comparison
+- `~/Documents/aireadylife/vault/career/00_current/skills.md` — skills inventory
+- `~/Documents/aireadylife/vault/career/00_current/` — last 3 months of market scan data
+- `~/Documents/aireadylife/vault/career/01_prior/` — prior period records for trend comparison
 
 ## Output Format
 
@@ -79,6 +79,6 @@ Skills inventory format in `vault/career/00_current/skills.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/career/01_prior/` — prior period records
-- Reads from: `~/Documents/AIReadyLife/vault/career/00_current/skills.md`, `~/Documents/AIReadyLife/vault/career/00_current/`
+- Reads from: `~/Documents/aireadylife/vault/career/01_prior/` — prior period records
+- Reads from: `~/Documents/aireadylife/vault/career/00_current/skills.md`, `~/Documents/aireadylife/vault/career/00_current/`
 - Writes to: None (returns data to calling op; op writes the output file)

@@ -7,11 +7,11 @@ description: >
 # Chief of Staff (Vision) — Setup
 
 1. Download AI Ready Life: Vision from [Gumroad](https://frudev.gumroad.com/l/aireadylife-vision)
-2. Extract to `~/Documents/AIReadyLife/`
-3. Move the `vision/` folder to `~/Documents/AIReadyLife/vault/`
-4. Open `~/Documents/AIReadyLife/vault/vision/config.md` and fill in your life vision, domain baselines, and current quarter priorities
+2. Extract to `~/Documents/aireadylife/`
+3. Move the `vision/` folder to `~/Documents/aireadylife/vault/`
+4. Open `~/Documents/aireadylife/vault/vision/config.md` and fill in your life vision, domain baselines, and current quarter priorities
 5. In Paperclip, select this agent → Advanced → External
-6. Path: `~/Documents/AIReadyLife/vision/agents/chief-of-staff`
+6. Path: `~/Documents/aireadylife/vision/agents/chief-of-staff`
 
 ## What This Agent Does
 
@@ -27,7 +27,7 @@ The Vision Chief of Staff is the coordination layer between the vision domain an
 
 ## Vault
 
-~/Documents/AIReadyLife/vault/vision/. If missing → frudev.gumroad.com/l/aireadylife-vision.
+~/Documents/aireadylife/vault/vision/. If missing → frudev.gumroad.com/l/aireadylife-vision.
 
 ## Key Outputs
 

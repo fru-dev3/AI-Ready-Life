@@ -80,7 +80,7 @@ Required fields in `vault/health/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/health/01_prior/` — prior period records
-- Reads from: `~/Documents/AIReadyLife/vault/health/00_current/` (all files)
-- Reads from: `~/Documents/AIReadyLife/vault/health/config.md`
-- Writes to: `~/Documents/AIReadyLife/vault/health/00_current/YYYY-MM-lab-summary.md`
+- Reads from: `~/Documents/aireadylife/vault/health/01_prior/` — prior period records
+- Reads from: `~/Documents/aireadylife/vault/health/00_current/` (all files)
+- Reads from: `~/Documents/aireadylife/vault/health/config.md`
+- Writes to: `~/Documents/aireadylife/vault/health/00_current/YYYY-MM-lab-summary.md`

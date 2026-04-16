@@ -34,7 +34,7 @@ Called by `aireadylife-career-flow-build-comp-summary` when the benchmarking ana
 ## Input
 
 - Data passed by calling flow: current_TC, market_P50, gap_amount, gap_pct, benchmark_sources
-- `~/Documents/AIReadyLife/vault/career/open-loops.md` — existing entries for deduplication
+- `~/Documents/aireadylife/vault/career/open-loops.md` — existing entries for deduplication
 
 ## Output Format
 
@@ -71,5 +71,5 @@ No configuration required. Reads from open-loops.md at `vault/career/open-loops.
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/career/open-loops.md`
-- Writes to: `~/Documents/AIReadyLife/vault/career/open-loops.md`
+- Reads from: `~/Documents/aireadylife/vault/career/open-loops.md`
+- Writes to: `~/Documents/aireadylife/vault/career/open-loops.md`

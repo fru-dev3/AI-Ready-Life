@@ -11,7 +11,7 @@ description: >
 
 Runs on the first of each month to evaluate the prior month's content output across all platforms. This is the brand-lens view of content — focused on how the content is building brand equity (followers, engagement rate, impressions, profile visibility) rather than revenue. The Content plugin handles the revenue dimension; this op handles the brand-building dimension.
 
-Reads the content log from `~/Documents/AIReadyLife/vault/brand/00_current/` for the prior month to count posts published per platform. Compares to the user's configured cadence targets (e.g., 4 LinkedIn posts/month, 2 YouTube videos/month, 1 newsletter/week). Flags any cadence misses — a platform that published fewer posts than the minimum target for the month. A cadence miss on a primary platform is 🔴 if it is the second consecutive month of misses; 🟡 for a first miss.
+Reads the content log from `~/Documents/aireadylife/vault/brand/00_current/` for the prior month to count posts published per platform. Compares to the user's configured cadence targets (e.g., 4 LinkedIn posts/month, 2 YouTube videos/month, 1 newsletter/week). Flags any cadence misses — a platform that published fewer posts than the minimum target for the month. A cadence miss on a primary platform is 🔴 if it is the second consecutive month of misses; 🟡 for a first miss.
 
 Calls `aireadylife-brand-flow-build-analytics-summary` for cross-platform engagement metrics and top content identification. Surfaces the top 3 performing pieces by engagement and labels the topic area each belongs to — this reveals which content pillars are generating the most brand traction. Calculates MoM change in follower counts and engagement rate per platform.
 
@@ -43,10 +43,10 @@ Surfaces content gaps: any platform that had zero output in the prior month, and
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/brand/00_current/` — content log for the period; each entry: platform, date, format, title, topic-pillar, engagement-metrics
-- `~/Documents/AIReadyLife/vault/brand/00_current/` — monthly platform analytics
-- `~/Documents/AIReadyLife/vault/brand/01_prior/` — prior period records for trend comparison
-- `~/Documents/AIReadyLife/vault/brand/config.md` — cadence targets per platform, content pillars list
+- `~/Documents/aireadylife/vault/brand/00_current/` — content log for the period; each entry: platform, date, format, title, topic-pillar, engagement-metrics
+- `~/Documents/aireadylife/vault/brand/00_current/` — monthly platform analytics
+- `~/Documents/aireadylife/vault/brand/01_prior/` — prior period records for trend comparison
+- `~/Documents/aireadylife/vault/brand/config.md` — cadence targets per platform, content pillars list
 
 ## Output Format
 
@@ -80,7 +80,7 @@ Surfaces content gaps: any platform that had zero output in the prior month, and
 
 ## Configuration
 
-Required in `~/Documents/AIReadyLife/vault/brand/config.md`:
+Required in `~/Documents/aireadylife/vault/brand/config.md`:
 - `posting_target_{platform}` — monthly post target per platform (e.g., posting_target_linkedin: 4)
 - `content_pillars` — list of 3-5 topic areas (e.g., ["AI Tools", "Personal Finance", "Career"])
 - `platforms_primary` — which platforms get 🔴 escalation for cadence misses vs 🟡
@@ -93,6 +93,6 @@ Required in `~/Documents/AIReadyLife/vault/brand/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/brand/01_prior/` — prior period records
-- Reads from: `~/Documents/AIReadyLife/vault/brand/00_current/`, `~/Documents/AIReadyLife/vault/brand/00_current/`, `~/Documents/AIReadyLife/vault/brand/config.md`
-- Writes to: `~/Documents/AIReadyLife/vault/brand/02_briefs/content-review-{YYYY-MM}.md`, `~/Documents/AIReadyLife/vault/brand/open-loops.md`
+- Reads from: `~/Documents/aireadylife/vault/brand/01_prior/` — prior period records
+- Reads from: `~/Documents/aireadylife/vault/brand/00_current/`, `~/Documents/aireadylife/vault/brand/00_current/`, `~/Documents/aireadylife/vault/brand/config.md`
+- Writes to: `~/Documents/aireadylife/vault/brand/02_briefs/content-review-{YYYY-MM}.md`, `~/Documents/aireadylife/vault/brand/open-loops.md`

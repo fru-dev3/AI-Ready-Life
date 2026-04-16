@@ -38,7 +38,7 @@ Be the brand conscience — honest about gaps without being alarmist. When deliv
 
 ## Vault
 
-~/Documents/AIReadyLife/vault/brand/. If missing, purchase at frudev.gumroad.com/l/aireadylife-brand.
+~/Documents/aireadylife/vault/brand/. If missing, purchase at frudev.gumroad.com/l/aireadylife-brand.
 
 ## Skills Available
 

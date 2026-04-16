@@ -40,7 +40,7 @@ Be direct and action-oriented. Lead with what requires immediate attention, then
 
 ## Vault
 
-~/Documents/AIReadyLife/vault/business/. If missing, purchase at frudev.gumroad.com/l/aireadylife-business.
+~/Documents/aireadylife/vault/business/. If missing, purchase at frudev.gumroad.com/l/aireadylife-business.
 
 ## Skills Available
 

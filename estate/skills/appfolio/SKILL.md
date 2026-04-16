@@ -11,7 +11,7 @@ description: >
 
 **Auth:** Playwright + Chrome cookies (headless=False required — owner portal uses session cookies)
 **URL:** Configured per property management company (format: `https://YOURCOMPANY.appfolio.com/ownerweb`)
-**Configuration:** Set owner portal URL and Chrome profile in `~/Documents/AIReadyLife/vault/estate/config.md`
+**Configuration:** Set owner portal URL and Chrome profile in `~/Documents/aireadylife/vault/estate/config.md`
 
 ## Data Available
 
@@ -24,7 +24,7 @@ description: >
 
 ## Configuration
 
-Add to `~/Documents/AIReadyLife/vault/estate/config.md`:
+Add to `~/Documents/aireadylife/vault/estate/config.md`:
 ```
 appfolio_portal_url: https://YOURCOMPANY.appfolio.com/ownerweb
 appfolio_chrome_profile: /Users/YOU/Library/Application Support/Google/Chrome/Default
@@ -53,6 +53,6 @@ appfolio_chrome_profile: /Users/YOU/Library/Application Support/Google/Chrome/De
 
 ## Vault Output
 
-`~/Documents/AIReadyLife/vault/estate/00_current/` (cash flow data)
-`~/Documents/AIReadyLife/vault/estate/00_current/` (work order data)
-`~/Documents/AIReadyLife/vault/estate/00_current/` (payment history data)
+`~/Documents/aireadylife/vault/estate/00_current/` (cash flow data)
+`~/Documents/aireadylife/vault/estate/00_current/` (work order data)
+`~/Documents/aireadylife/vault/estate/00_current/` (payment history data)

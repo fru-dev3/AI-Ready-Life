@@ -10,7 +10,7 @@ description: >
 
 ## What It Does
 
-Runs on the first of each month to produce a complete P&L statement for the prior month. Reads all revenue records from `~/Documents/AIReadyLife/vault/business/00_current/` and all expense records from `~/Documents/AIReadyLife/vault/business/00_current/` for the review period. Computes gross revenue (paid invoices only, not pending), total expenses by category, net income, and profit margin percentage. Applies the 50% meals and entertainment cap automatically when calculating deductible expense totals.
+Runs on the first of each month to produce a complete P&L statement for the prior month. Reads all revenue records from `~/Documents/aireadylife/vault/business/00_current/` and all expense records from `~/Documents/aireadylife/vault/business/00_current/` for the review period. Computes gross revenue (paid invoices only, not pending), total expenses by category, net income, and profit margin percentage. Applies the 50% meals and entertainment cap automatically when calculating deductible expense totals.
 
 Compares each figure to the prior month to surface MoM variances — dollar and percentage change for gross revenue, each expense category, net income, and margin. If a monthly budget is configured in `config.md`, flags any expense category running more than 10% over budget as a 🟡 watch item; more than 25% over budget as 🔴 urgent. Flags any revenue stream down more than 20% MoM for investigation.
 
@@ -44,11 +44,11 @@ Calls `aireadylife-business-task-flag-overdue-invoice` to scan the invoice file 
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/business/00_current/` — monthly revenue records
-- `~/Documents/AIReadyLife/vault/business/00_current/` — monthly expense records
-- `~/Documents/AIReadyLife/vault/business/01_prior/` — prior period records for trend comparison
-- `~/Documents/AIReadyLife/vault/business/config.md` — entity settings, budget targets, accounting method
-- `~/Documents/AIReadyLife/vault/business/02_briefs/pl-{prior month}.md` — prior month brief for MoM comparison (optional)
+- `~/Documents/aireadylife/vault/business/00_current/` — monthly revenue records
+- `~/Documents/aireadylife/vault/business/00_current/` — monthly expense records
+- `~/Documents/aireadylife/vault/business/01_prior/` — prior period records for trend comparison
+- `~/Documents/aireadylife/vault/business/config.md` — entity settings, budget targets, accounting method
+- `~/Documents/aireadylife/vault/business/02_briefs/pl-{prior month}.md` — prior month brief for MoM comparison (optional)
 
 ## Output Format
 
@@ -76,7 +76,7 @@ Net income × 15.3% SE tax + estimated income tax rate = $X,XXX suggested set-as
 
 ## Configuration
 
-Required in `~/Documents/AIReadyLife/vault/business/config.md`:
+Required in `~/Documents/aireadylife/vault/business/config.md`:
 - `entity_name` — business name
 - `accounting_method` — cash or accrual
 - `fiscal_year_start` — month (e.g., January)
@@ -84,12 +84,12 @@ Required in `~/Documents/AIReadyLife/vault/business/config.md`:
 
 ## Error Handling
 
-- If vault/business/ does not exist: "Vault not found. Purchase at frudev.gumroad.com/l/aireadylife-business and set up at ~/Documents/AIReadyLife/vault/business/."
+- If vault/business/ does not exist: "Vault not found. Purchase at frudev.gumroad.com/l/aireadylife-business and set up at ~/Documents/aireadylife/vault/business/."
 - If revenue and expense folders are empty: produce a $0/$0 P&L and note "No records found for {month}. Add data to run a real review."
 - If config.md is missing required fields: list which fields are missing and what each needs to contain.
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/business/01_prior/` — prior period records
-- Reads from: `~/Documents/AIReadyLife/vault/business/00_current/`, `~/Documents/AIReadyLife/vault/business/00_current/`, `~/Documents/AIReadyLife/vault/business/config.md`
-- Writes to: `~/Documents/AIReadyLife/vault/business/02_briefs/pl-{YYYY-MM}.md`, `~/Documents/AIReadyLife/vault/business/open-loops.md`
+- Reads from: `~/Documents/aireadylife/vault/business/01_prior/` — prior period records
+- Reads from: `~/Documents/aireadylife/vault/business/00_current/`, `~/Documents/aireadylife/vault/business/00_current/`, `~/Documents/aireadylife/vault/business/config.md`
+- Writes to: `~/Documents/aireadylife/vault/business/02_briefs/pl-{YYYY-MM}.md`, `~/Documents/aireadylife/vault/business/open-loops.md`

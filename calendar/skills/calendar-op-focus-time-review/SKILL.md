@@ -12,7 +12,7 @@ description: >
 # aireadylife-calendar-focus-time-review
 
 **Cadence:** Weekly (Friday or Sunday)
-**Produces:** Focus-time audit report in ~/Documents/AIReadyLife/vault/calendar/00_current/YYYY-MM-DD-focus-audit.md
+**Produces:** Focus-time audit report in ~/Documents/aireadylife/vault/calendar/00_current/YYYY-MM-DD-focus-audit.md
 
 ## What It Does
 
@@ -57,9 +57,9 @@ Updates vault/calendar/open-loops.md if a recurring deficit pattern is detected 
 ## Input
 
 - Google Calendar events for past 7 days and upcoming 7 days (via gcalendar skill)
-- ~/Documents/AIReadyLife/vault/calendar/00_current/ (prior focus audit files for trend comparison)
-- `~/Documents/AIReadyLife/vault/calendar/01_prior/` — prior period records for trend comparison
-- ~/Documents/AIReadyLife/vault/calendar/config.md
+- ~/Documents/aireadylife/vault/calendar/00_current/ (prior focus audit files for trend comparison)
+- `~/Documents/aireadylife/vault/calendar/01_prior/` — prior period records for trend comparison
+- ~/Documents/aireadylife/vault/calendar/config.md
 
 ## Output Format
 
@@ -110,6 +110,6 @@ Required in vault/calendar/config.md:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/calendar/01_prior/` — prior period records
-- Reads from: Google Calendar (via gcalendar), ~/Documents/AIReadyLife/vault/calendar/00_current/
-- Writes to: ~/Documents/AIReadyLife/vault/calendar/00_current/YYYY-MM-DD-focus-audit.md, ~/Documents/AIReadyLife/vault/calendar/open-loops.md
+- Reads from: `~/Documents/aireadylife/vault/calendar/01_prior/` — prior period records
+- Reads from: Google Calendar (via gcalendar), ~/Documents/aireadylife/vault/calendar/00_current/
+- Writes to: ~/Documents/aireadylife/vault/calendar/00_current/YYYY-MM-DD-focus-audit.md, ~/Documents/aireadylife/vault/calendar/open-loops.md

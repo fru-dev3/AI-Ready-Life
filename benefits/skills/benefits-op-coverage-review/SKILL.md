@@ -52,10 +52,10 @@ The quarterly cadence catches administrative issues early (not 11 months after t
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/benefits/00_current/` — enrollment confirmation, SBCs, coverage documents
-- `~/Documents/AIReadyLife/vault/benefits/01_prior/` — prior period records for trend comparison
-- `~/Documents/AIReadyLife/vault/benefits/` — pay stubs for deduction verification
-- `~/Documents/AIReadyLife/vault/benefits/config.md` — income, dependents, mortgage balance
+- `~/Documents/aireadylife/vault/benefits/00_current/` — enrollment confirmation, SBCs, coverage documents
+- `~/Documents/aireadylife/vault/benefits/01_prior/` — prior period records for trend comparison
+- `~/Documents/aireadylife/vault/benefits/` — pay stubs for deduction verification
+- `~/Documents/aireadylife/vault/benefits/config.md` — income, dependents, mortgage balance
 
 ## Output Format
 
@@ -109,6 +109,6 @@ Optional: `vault/benefits/00_current/coverage-targets.md` with custom multiplier
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/benefits/01_prior/` — prior period records
-- Reads from: `~/Documents/AIReadyLife/vault/benefits/00_current/`, `~/Documents/AIReadyLife/vault/benefits/`, `~/Documents/AIReadyLife/vault/benefits/config.md`
-- Writes to: `~/Documents/AIReadyLife/vault/benefits/02_briefs/coverage-audit-QN-YYYY.md`, `~/Documents/AIReadyLife/vault/benefits/open-loops.md`
+- Reads from: `~/Documents/aireadylife/vault/benefits/01_prior/` — prior period records
+- Reads from: `~/Documents/aireadylife/vault/benefits/00_current/`, `~/Documents/aireadylife/vault/benefits/`, `~/Documents/aireadylife/vault/benefits/config.md`
+- Writes to: `~/Documents/aireadylife/vault/benefits/02_briefs/coverage-audit-QN-YYYY.md`, `~/Documents/aireadylife/vault/benefits/open-loops.md`

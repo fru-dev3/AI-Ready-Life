@@ -11,7 +11,7 @@ description: >
 # aireadylife-chief-weekly-preview
 
 **Cadence:** Weekly (Monday morning)
-**Produces:** Weekly agenda written to ~/Documents/AIReadyLife/vault/chief/00_current/week-YYYY-MM-DD.md
+**Produces:** Weekly agenda written to ~/Documents/aireadylife/vault/chief/00_current/week-YYYY-MM-DD.md
 
 ## What It Does
 
@@ -54,11 +54,11 @@ The completed weekly agenda is written to vault/chief/00_current/week-YYYY-MM-DD
 
 ## Input
 
-- ~/Documents/AIReadyLife/vault/*/open-loops.md (all installed plugin vaults)
-- ~/Documents/AIReadyLife/vault/calendar/ (if calendar plugin installed, for meeting load data)
-- ~/Documents/AIReadyLife/vault/vision/00_current/ (if vision plugin installed, for OKR alignment)
+- ~/Documents/aireadylife/vault/*/open-loops.md (all installed plugin vaults)
+- ~/Documents/aireadylife/vault/calendar/ (if calendar plugin installed, for meeting load data)
+- ~/Documents/aireadylife/vault/vision/00_current/ (if vision plugin installed, for OKR alignment)
 - `vault/chief/01_prior/` — prior period records for trend comparison
-- ~/Documents/AIReadyLife/vault/chief/config.md
+- ~/Documents/aireadylife/vault/chief/config.md
 
 ## Output Format
 
@@ -107,6 +107,6 @@ Required fields in vault/chief/config.md:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/chief/01_prior/` — prior period records
-- Reads from: ~/Documents/AIReadyLife/vault/*/open-loops.md, ~/Documents/AIReadyLife/vault/calendar/, ~/Documents/AIReadyLife/vault/vision/00_current/
-- Writes to: ~/Documents/AIReadyLife/vault/chief/00_current/week-YYYY-MM-DD.md
+- Reads from: `~/Documents/aireadylife/vault/chief/01_prior/` — prior period records
+- Reads from: ~/Documents/aireadylife/vault/*/open-loops.md, ~/Documents/aireadylife/vault/calendar/, ~/Documents/aireadylife/vault/vision/00_current/
+- Writes to: ~/Documents/aireadylife/vault/chief/00_current/week-YYYY-MM-DD.md

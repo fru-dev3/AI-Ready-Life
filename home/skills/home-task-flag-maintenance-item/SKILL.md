@@ -11,7 +11,7 @@ description: >
 # aireadylife-home-flag-maintenance-item
 
 **Trigger:** Called by home seasonal and review flows, or directly when the user reports a home issue
-**Produces:** Maintenance item in `~/Documents/AIReadyLife/vault/home/00_current/` and flag in `~/Documents/AIReadyLife/vault/home/open-loops.md`
+**Produces:** Maintenance item in `~/Documents/aireadylife/vault/home/00_current/` and flag in `~/Documents/aireadylife/vault/home/open-loops.md`
 
 ## What It Does
 
@@ -36,8 +36,8 @@ Vendor info is pulled from config.md if a preferred vendor is assigned for the r
 3. Set target completion date: routine = today + 30 days; urgent = today + 14 days; emergency = today + 3 days
 4. Record last-serviced date if known (from maintenance history or user input)
 5. Set estimated cost range from knowledge base or user-provided vendor quote
-6. Write detailed item file to `~/Documents/AIReadyLife/vault/home/00_current/YYYY-MM-DD-{issue-slug}.md`
-7. Write condensed flag to `~/Documents/AIReadyLife/vault/home/open-loops.md`
+6. Write detailed item file to `~/Documents/aireadylife/vault/home/00_current/YYYY-MM-DD-{issue-slug}.md`
+7. Write condensed flag to `~/Documents/aireadylife/vault/home/open-loops.md`
 8. If urgency is emergency: surface immediately in response with strong recommendation to call a contractor today
 
 ## Input
@@ -75,7 +75,7 @@ Date: YYYY-MM-DD | Due: YYYY-MM-DD | Est: $X | Status: open
 
 ## Configuration
 
-Required in `~/Documents/AIReadyLife/vault/home/config.md`:
+Required in `~/Documents/aireadylife/vault/home/config.md`:
 - Vendor assignments for auto-population: `hvac_vendor`, `plumber_vendor`, `electrician_vendor`, `gutter_vendor`, `pest_vendor`, `general_handyman`
 
 ## Error Handling
@@ -86,6 +86,6 @@ Required in `~/Documents/AIReadyLife/vault/home/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/home/config.md` (vendor assignments)
-- Writes to: `~/Documents/AIReadyLife/vault/home/00_current/YYYY-MM-DD-{issue-slug}.md`
-- Writes to: `~/Documents/AIReadyLife/vault/home/open-loops.md`
+- Reads from: `~/Documents/aireadylife/vault/home/config.md` (vendor assignments)
+- Writes to: `~/Documents/aireadylife/vault/home/00_current/YYYY-MM-DD-{issue-slug}.md`
+- Writes to: `~/Documents/aireadylife/vault/home/open-loops.md`

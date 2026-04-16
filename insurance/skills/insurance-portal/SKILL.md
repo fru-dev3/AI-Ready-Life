@@ -83,5 +83,5 @@ insurance_portals:
 
 ## Vault Output
 
-- `~/Documents/AIReadyLife/vault/insurance/00_current/{type}/` — downloaded policy documents
-- `~/Documents/AIReadyLife/vault/insurance/00_current/` — renewal dates and premium updates
+- `~/Documents/aireadylife/vault/insurance/00_current/{type}/` — downloaded policy documents
+- `~/Documents/aireadylife/vault/insurance/00_current/` — renewal dates and premium updates

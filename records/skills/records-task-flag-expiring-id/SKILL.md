@@ -10,7 +10,7 @@ description: >
 # aireadylife-records-flag-expiring-id
 
 **Trigger:** Called by document audit and monthly sync when a document enters its alert window
-**Produces:** ID expiration flag in `~/Documents/AIReadyLife/vault/records/open-loops.md`
+**Produces:** ID expiration flag in `~/Documents/aireadylife/vault/records/open-loops.md`
 
 ## What It Does
 
@@ -62,13 +62,13 @@ Document-specific flag content:
 3. Calculate urgency: days between today and start-renewal-by date
 4. Select document-specific renewal steps, cost, and official portal link
 5. Classify urgency: start-renewal-by date > 90 days away = medium; 30–90 days = high; <30 days = critical; past start-renewal-by = critical/overdue
-6. Write flag entry to `~/Documents/AIReadyLife/vault/records/open-loops.md`
+6. Write flag entry to `~/Documents/aireadylife/vault/records/open-loops.md`
 7. Return flag summary to calling op
 
 ## Input
 
 - Document type, holder name, expiration date (from calling flow)
-- `~/Documents/AIReadyLife/vault/records/config.md` — holder's state (for driver's license link), recent travel plans (for passport urgency context)
+- `~/Documents/aireadylife/vault/records/config.md` — holder's state (for driver's license link), recent travel plans (for passport urgency context)
 
 ## Output Format
 
@@ -90,7 +90,7 @@ Each flag entry in open-loops.md:
 
 ## Configuration
 
-Required in `~/Documents/AIReadyLife/vault/records/config.md`:
+Required in `~/Documents/aireadylife/vault/records/config.md`:
 - `household_members` with their state (for DL renewal link)
 - Upcoming international travel dates (to calculate passport travel deadline)
 
@@ -102,5 +102,5 @@ Required in `~/Documents/AIReadyLife/vault/records/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/records/config.md`
-- Writes to: `~/Documents/AIReadyLife/vault/records/open-loops.md`
+- Reads from: `~/Documents/aireadylife/vault/records/config.md`
+- Writes to: `~/Documents/aireadylife/vault/records/open-loops.md`

@@ -39,8 +39,8 @@ The insurance open-loops file is the domain's single source of truth for what ne
 ## Input
 
 - Flags from calling op
-- `~/Documents/AIReadyLife/vault/insurance/open-loops.md` — current state
-- `~/Documents/AIReadyLife/vault/insurance/` — vault data for resolution checks
+- `~/Documents/aireadylife/vault/insurance/open-loops.md` — current state
+- `~/Documents/aireadylife/vault/insurance/` — vault data for resolution checks
 
 ## Output Format
 
@@ -81,5 +81,5 @@ No configuration required. File auto-created on first run. Archive file at `vaul
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/insurance/open-loops.md`, `~/Documents/AIReadyLife/vault/insurance/` (for resolution checks)
-- Writes to: `~/Documents/AIReadyLife/vault/insurance/open-loops.md`, `~/Documents/AIReadyLife/vault/insurance/open-loops-archive.md`
+- Reads from: `~/Documents/aireadylife/vault/insurance/open-loops.md`, `~/Documents/aireadylife/vault/insurance/` (for resolution checks)
+- Writes to: `~/Documents/aireadylife/vault/insurance/open-loops.md`, `~/Documents/aireadylife/vault/insurance/open-loops-archive.md`

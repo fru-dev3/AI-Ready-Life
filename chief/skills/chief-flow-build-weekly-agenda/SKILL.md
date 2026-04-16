@@ -10,7 +10,7 @@ description: >
 # aireadylife-chief-build-weekly-agenda
 
 **Trigger:** Called by `aireadylife-chief-op-weekly-preview`
-**Produces:** Structured weekly agenda document written to ~/Documents/AIReadyLife/vault/chief/00_current/week-YYYY-MM-DD.md
+**Produces:** Structured weekly agenda document written to ~/Documents/aireadylife/vault/chief/00_current/week-YYYY-MM-DD.md
 
 ## What It Does
 
@@ -97,6 +97,6 @@ Focus-hostile days:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/chief/01_prior/` — prior period records
+- Reads from: `~/Documents/aireadylife/vault/chief/01_prior/` — prior period records
 - Reads from: inputs passed by calling op (no direct vault reads)
-- Writes to: ~/Documents/AIReadyLife/vault/chief/00_current/week-YYYY-MM-DD.md (via calling op)
+- Writes to: ~/Documents/aireadylife/vault/chief/00_current/week-YYYY-MM-DD.md (via calling op)

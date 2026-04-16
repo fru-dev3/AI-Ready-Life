@@ -9,7 +9,7 @@ description: >
 
 # aireadylife-calendar-flag-approaching-deadline
 
-**Produces:** New urgent flag entry in ~/Documents/AIReadyLife/vault/calendar/open-loops.md
+**Produces:** New urgent flag entry in ~/Documents/aireadylife/vault/calendar/open-loops.md
 
 ## What It Does
 
@@ -38,7 +38,7 @@ The flag is written with `urgency: critical` so it surfaces at the top of any ag
 
 - Item data from calling flow (item name, domain, due date, effort estimate)
 - Source domain vault (for preparation evidence check)
-- ~/Documents/AIReadyLife/vault/calendar/open-loops.md (for deduplication)
+- ~/Documents/aireadylife/vault/calendar/open-loops.md (for deduplication)
 
 ## Output Format
 
@@ -68,5 +68,5 @@ No configuration required.
 
 ## Vault Paths
 
-- Reads from: ~/Documents/AIReadyLife/vault/{domain}/ (preparation evidence check), ~/Documents/AIReadyLife/vault/calendar/open-loops.md
-- Writes to: ~/Documents/AIReadyLife/vault/calendar/open-loops.md
+- Reads from: ~/Documents/aireadylife/vault/{domain}/ (preparation evidence check), ~/Documents/aireadylife/vault/calendar/open-loops.md
+- Writes to: ~/Documents/aireadylife/vault/calendar/open-loops.md

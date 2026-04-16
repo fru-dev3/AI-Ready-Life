@@ -27,9 +27,9 @@ Key health metrics calculated: expense ratio (total operating expenses ÷ gross 
 
 ## Steps
 
-1. Read all property records from `~/Documents/AIReadyLife/vault/estate/00_current/` (address, purchase price, current value, mortgage P&I, insurance, taxes)
-2. Read tenant records from `~/Documents/AIReadyLife/vault/estate/00_current/` (scheduled rent per unit, payment history)
-3. Read expense records for the period from `~/Documents/AIReadyLife/vault/estate/00_current/{property-slug}-expenses.md`
+1. Read all property records from `~/Documents/aireadylife/vault/estate/00_current/` (address, purchase price, current value, mortgage P&I, insurance, taxes)
+2. Read tenant records from `~/Documents/aireadylife/vault/estate/00_current/` (scheduled rent per unit, payment history)
+3. Read expense records for the period from `~/Documents/aireadylife/vault/estate/00_current/{property-slug}-expenses.md`
 4. For each property: calculate gross rent, shortfalls, EGI, and vacancy rate
 5. Sum fixed and variable operating expenses per property; calculate expense ratio
 6. Calculate NOI, DSCR, and net cash flow per property
@@ -41,10 +41,10 @@ Key health metrics calculated: expense ratio (total operating expenses ÷ gross 
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/estate/00_current/` — property records (purchase price, current value, mortgage P&I, insurance premium, annual taxes, total cash invested)
-- `~/Documents/AIReadyLife/vault/estate/00_current/` — scheduled rent and payment history per unit
-- `~/Documents/AIReadyLife/vault/estate/00_current/{property-slug}-expenses.md` — logged variable expenses for the period
-- `~/Documents/AIReadyLife/vault/estate/01_prior/` — prior period records for trend comparison
+- `~/Documents/aireadylife/vault/estate/00_current/` — property records (purchase price, current value, mortgage P&I, insurance premium, annual taxes, total cash invested)
+- `~/Documents/aireadylife/vault/estate/00_current/` — scheduled rent and payment history per unit
+- `~/Documents/aireadylife/vault/estate/00_current/{property-slug}-expenses.md` — logged variable expenses for the period
+- `~/Documents/aireadylife/vault/estate/01_prior/` — prior period records for trend comparison
 
 ## Output Format
 
@@ -63,7 +63,7 @@ Key health metrics calculated: expense ratio (total operating expenses ÷ gross 
 
 ## Configuration
 
-Required in `~/Documents/AIReadyLife/vault/estate/config.md`:
+Required in `~/Documents/aireadylife/vault/estate/config.md`:
 - `properties` list with address, purchase price, current value, mortgage P&I, insurance premium, annual taxes, total cash invested
 - `management_fee_pct` (default 10% if external PM; 0% if self-managed)
 
@@ -75,8 +75,8 @@ Required in `~/Documents/AIReadyLife/vault/estate/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/estate/01_prior/` — prior period records
-- Reads from: `~/Documents/AIReadyLife/vault/estate/00_current/`
-- Reads from: `~/Documents/AIReadyLife/vault/estate/00_current/`
-- Reads from: `~/Documents/AIReadyLife/vault/estate/00_current/`
-- Writes to: `~/Documents/AIReadyLife/vault/estate/00_current/YYYY-MM-cashflow.md`
+- Reads from: `~/Documents/aireadylife/vault/estate/01_prior/` — prior period records
+- Reads from: `~/Documents/aireadylife/vault/estate/00_current/`
+- Reads from: `~/Documents/aireadylife/vault/estate/00_current/`
+- Reads from: `~/Documents/aireadylife/vault/estate/00_current/`
+- Writes to: `~/Documents/aireadylife/vault/estate/00_current/YYYY-MM-cashflow.md`

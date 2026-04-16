@@ -10,7 +10,7 @@ description: >
 # aireadylife-explore-log-trip
 
 **Cadence:** As-planned (when a new trip is being planned or booked)
-**Produces:** New trip record in ~/Documents/AIReadyLife/vault/explore/00_current/YYYY-{destination}-trip.md
+**Produces:** New trip record in ~/Documents/aireadylife/vault/explore/00_current/YYYY-{destination}-trip.md
 
 ## What It Does
 
@@ -39,12 +39,12 @@ This task creates or updates the canonical trip record for a specific trip. The 
 ## Input
 
 - Trip data from user (destination, dates, travelers, booking status, budget)
-- ~/Documents/AIReadyLife/vault/explore/00_current/ (for duplicate check and update)
-- ~/Documents/AIReadyLife/vault/explore/config.md (for traveler names and preferences)
+- ~/Documents/aireadylife/vault/explore/00_current/ (for duplicate check and update)
+- ~/Documents/aireadylife/vault/explore/config.md (for traveler names and preferences)
 
 ## Output Format
 
-Trip file: ~/Documents/AIReadyLife/vault/explore/00_current/YYYY-{destination}-trip.md
+Trip file: ~/Documents/aireadylife/vault/explore/00_current/YYYY-{destination}-trip.md
 
 ```markdown
 ---
@@ -103,5 +103,5 @@ No configuration required beyond vault/explore/config.md with traveler names.
 
 ## Vault Paths
 
-- Reads from: ~/Documents/AIReadyLife/vault/explore/00_current/, ~/Documents/AIReadyLife/vault/explore/config.md
-- Writes to: ~/Documents/AIReadyLife/vault/explore/00_current/YYYY-{destination}-trip.md, ~/Documents/AIReadyLife/vault/explore/open-loops.md
+- Reads from: ~/Documents/aireadylife/vault/explore/00_current/, ~/Documents/aireadylife/vault/explore/config.md
+- Writes to: ~/Documents/aireadylife/vault/explore/00_current/YYYY-{destination}-trip.md, ~/Documents/aireadylife/vault/explore/open-loops.md

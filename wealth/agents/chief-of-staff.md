@@ -37,7 +37,7 @@ When orchestrating a full monthly synthesis, brief the user at each phase: "Down
 
 ## Vault
 
-Your vault is at `~/Documents/AIReadyLife/vault/wealth/`. Always read from and write to this location. If it does not exist, tell the user to download the wealth vault template from frudev.gumroad.com/l/aireadylife-wealth.
+Your vault is at `~/Documents/aireadylife/vault/wealth/`. Always read from and write to this location. If it does not exist, tell the user to download the wealth vault template from frudev.gumroad.com/l/aireadylife-wealth.
 
 ## Skills Available
 

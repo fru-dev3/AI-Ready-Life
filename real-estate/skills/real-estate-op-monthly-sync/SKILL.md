@@ -35,24 +35,24 @@ After these three updates, the monthly sync triggers the review brief, which for
 
 ## Steps
 
-1. Confirm `~/Documents/AIReadyLife/vault/real-estate/config.md` is populated; halt and prompt if required fields are blank
+1. Confirm `~/Documents/aireadylife/vault/real-estate/config.md` is populated; halt and prompt if required fields are blank
 2. Check if `current_30yr_rate` is older than 30 days; prompt user to confirm or update rate before proceeding
 3. Call `aireadylife-real-estate-market-scan` to pull fresh market data for all target markets
 4. Call `aireadylife-real-estate-affordability-review` to recalculate max purchase price at updated rate
 5. Note delta from prior month affordability ceiling (e.g., "Rate increase of 0.25% reduced max purchase price by $18,000")
 6. Call `aireadylife-real-estate-run-buy-vs-rent` with updated market prices and current rent
-7. Check for any active listings saved in `~/Documents/AIReadyLife/vault/real-estate/00_current/` and update their DOM count
+7. Check for any active listings saved in `~/Documents/aireadylife/vault/real-estate/00_current/` and update their DOM count
 8. Call `aireadylife-real-estate-update-open-loops` to add new flags and resolve any completed items
 9. Trigger `aireadylife-real-estate-review-brief` to compile results into the monthly brief
-10. Write sync completion record to `~/Documents/AIReadyLife/vault/real-estate/00_current/last-sync.md`
+10. Write sync completion record to `~/Documents/aireadylife/vault/real-estate/00_current/last-sync.md`
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/real-estate/config.md`
-- `~/Documents/AIReadyLife/vault/real-estate/00_current/` (prior snapshots)
-- `~/Documents/AIReadyLife/vault/real-estate/00_current/` (saved listings to update)
-- `~/Documents/AIReadyLife/vault/real-estate/00_current/` (prior affordability worksheet)
-- `~/Documents/AIReadyLife/vault/real-estate/01_prior/` — prior period records for trend comparison
+- `~/Documents/aireadylife/vault/real-estate/config.md`
+- `~/Documents/aireadylife/vault/real-estate/00_current/` (prior snapshots)
+- `~/Documents/aireadylife/vault/real-estate/00_current/` (saved listings to update)
+- `~/Documents/aireadylife/vault/real-estate/00_current/` (prior affordability worksheet)
+- `~/Documents/aireadylife/vault/real-estate/01_prior/` — prior period records for trend comparison
 - Live data from Zillow or Redfin via web research
 
 ## Output Format
@@ -68,7 +68,7 @@ After these three updates, the monthly sync triggers the review brief, which for
 
 ## Configuration
 
-Required fields in `~/Documents/AIReadyLife/vault/real-estate/config.md`:
+Required fields in `~/Documents/aireadylife/vault/real-estate/config.md`:
 - `gross_monthly_income`, `monthly_debts`, `available_down_payment`
 - `current_30yr_rate` (confirm monthly)
 - `target_markets`, `max_price`, `min_beds`, `min_baths`, `min_sqft`
@@ -83,11 +83,11 @@ Required fields in `~/Documents/AIReadyLife/vault/real-estate/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/real-estate/01_prior/` — prior period records
-- Reads from: `~/Documents/AIReadyLife/vault/real-estate/config.md`
-- Reads from: `~/Documents/AIReadyLife/vault/real-estate/00_current/`, `01_listings/`, `02_analysis/`
-- Writes to: `~/Documents/AIReadyLife/vault/real-estate/00_current/YYYY-MM-market-report.md`
-- Writes to: `~/Documents/AIReadyLife/vault/real-estate/00_current/YYYY-MM-affordability.md`
-- Writes to: `~/Documents/AIReadyLife/vault/real-estate/02_briefs/YYYY-MM-realestate-brief.md`
-- Writes to: `~/Documents/AIReadyLife/vault/real-estate/open-loops.md`
-- Writes to: `~/Documents/AIReadyLife/vault/real-estate/00_current/last-sync.md`
+- Reads from: `~/Documents/aireadylife/vault/real-estate/01_prior/` — prior period records
+- Reads from: `~/Documents/aireadylife/vault/real-estate/config.md`
+- Reads from: `~/Documents/aireadylife/vault/real-estate/00_current/`, `01_listings/`, `02_analysis/`
+- Writes to: `~/Documents/aireadylife/vault/real-estate/00_current/YYYY-MM-market-report.md`
+- Writes to: `~/Documents/aireadylife/vault/real-estate/00_current/YYYY-MM-affordability.md`
+- Writes to: `~/Documents/aireadylife/vault/real-estate/02_briefs/YYYY-MM-realestate-brief.md`
+- Writes to: `~/Documents/aireadylife/vault/real-estate/open-loops.md`
+- Writes to: `~/Documents/aireadylife/vault/real-estate/00_current/last-sync.md`

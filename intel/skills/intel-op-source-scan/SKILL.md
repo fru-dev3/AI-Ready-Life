@@ -10,7 +10,7 @@ description: >
 
 ## What It Does
 
-Runs weekly (Sundays) to audit the full source list in `~/Documents/AIReadyLife/vault/intel/00_current/source-list.md`. The quality of the daily digest is entirely determined by the quality of its inputs — a source that has gone quiet, become paywalled, or drifted off-topic will silently degrade the intel output without any obvious signal. This weekly audit catches those issues before they become chronic.
+Runs weekly (Sundays) to audit the full source list in `~/Documents/aireadylife/vault/intel/00_current/source-list.md`. The quality of the daily digest is entirely determined by the quality of its inputs — a source that has gone quiet, become paywalled, or drifted off-topic will silently degrade the intel output without any obvious signal. This weekly audit catches those issues before they become chronic.
 
 Checks each source across four dimensions: availability (can the source URL still be reached and does it return valid content?), recency (when was the last new article published — sources with no new content in more than 14 days are flagged as dormant), signal-to-noise ratio (of the last 10 articles from this source, what percentage matched configured interest topics — a source where fewer than 30% of recent articles are relevant is considered low signal), and credibility tier consistency (does the source's actual content quality match its configured tier?).
 
@@ -29,7 +29,7 @@ Produces a source health report with a status per source and a coverage gap asse
 
 ## Steps
 
-1. Read `~/Documents/AIReadyLife/vault/intel/00_current/source-list.md`; load all source entries
+1. Read `~/Documents/aireadylife/vault/intel/00_current/source-list.md`; load all source entries
 2. For each source: read the last-activity date from the source record (updated when the daily briefing reads new articles from that source)
 3. Flag sources with last-activity date >14 days as dormant; >7 days as slow; <7 days as active
 4. For each active source: check the topic tag match rate against configured interest topics using recent article records; flag sources where fewer than 30% of recent articles matched any interest topic as "low signal"
@@ -42,9 +42,9 @@ Produces a source health report with a status per source and a coverage gap asse
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/intel/00_current/source-list.md` — source registry with last-activity dates
-- `~/Documents/AIReadyLife/vault/intel/01_prior/` — prior period records for trend comparison
-- `~/Documents/AIReadyLife/vault/intel/config.md` — interest topics, priority topics
+- `~/Documents/aireadylife/vault/intel/00_current/source-list.md` — source registry with last-activity dates
+- `~/Documents/aireadylife/vault/intel/01_prior/` — prior period records for trend comparison
+- `~/Documents/aireadylife/vault/intel/config.md` — interest topics, priority topics
 
 ## Output Format
 
@@ -76,7 +76,7 @@ Active sources: {X} | Dormant: {Y} | Low signal: {Z} | Coverage gaps: {N}
 
 ## Configuration
 
-Required in `~/Documents/AIReadyLife/vault/intel/config.md`:
+Required in `~/Documents/aireadylife/vault/intel/config.md`:
 - `topics_include` and `topics_priority` — for coverage gap analysis
 - `source_scan_dormant_threshold_days` — days without activity before "dormant" flag (default: 14)
 - `source_scan_signal_threshold_pct` — minimum relevance rate before "low signal" flag (default: 30%)
@@ -89,6 +89,6 @@ Required in `~/Documents/AIReadyLife/vault/intel/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/intel/01_prior/` — prior period records
-- Reads from: `~/Documents/AIReadyLife/vault/intel/00_current/source-list.md`, `~/Documents/AIReadyLife/vault/intel/config.md`
-- Writes to: `~/Documents/AIReadyLife/vault/intel/00_current/{YYYY-MM-DD}-source-health.md`, `~/Documents/AIReadyLife/vault/intel/open-loops.md`
+- Reads from: `~/Documents/aireadylife/vault/intel/01_prior/` — prior period records
+- Reads from: `~/Documents/aireadylife/vault/intel/00_current/source-list.md`, `~/Documents/aireadylife/vault/intel/config.md`
+- Writes to: `~/Documents/aireadylife/vault/intel/00_current/{YYYY-MM-DD}-source-health.md`, `~/Documents/aireadylife/vault/intel/open-loops.md`

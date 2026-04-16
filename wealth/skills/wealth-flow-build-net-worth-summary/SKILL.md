@@ -85,9 +85,9 @@ Required fields in `vault/wealth/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/wealth/01_prior/` — prior period records
-- Reads from: `~/Documents/AIReadyLife/vault/wealth/00_current/` (all account files)
-- Reads from: `~/Documents/AIReadyLife/vault/wealth/00_current/` (all liability files)
-- Reads from: `~/Documents/AIReadyLife/vault/wealth/02_briefs/` (prior month file)
-- Reads from: `~/Documents/AIReadyLife/vault/wealth/config.md`
-- Writes to: `~/Documents/AIReadyLife/vault/wealth/02_briefs/YYYY-MM-net-worth.md`
+- Reads from: `~/Documents/aireadylife/vault/wealth/01_prior/` — prior period records
+- Reads from: `~/Documents/aireadylife/vault/wealth/00_current/` (all account files)
+- Reads from: `~/Documents/aireadylife/vault/wealth/00_current/` (all liability files)
+- Reads from: `~/Documents/aireadylife/vault/wealth/02_briefs/` (prior month file)
+- Reads from: `~/Documents/aireadylife/vault/wealth/config.md`
+- Writes to: `~/Documents/aireadylife/vault/wealth/02_briefs/YYYY-MM-net-worth.md`

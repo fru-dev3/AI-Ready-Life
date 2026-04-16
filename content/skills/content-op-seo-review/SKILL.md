@@ -43,12 +43,12 @@ Calls `aireadylife-content-task-flag-seo-gap` for each keyword or content piece 
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/content/00_current/{YYYY-MM}-rankings.md` — keyword rankings
-- `~/Documents/AIReadyLife/vault/content/00_current/{prior YYYY-MM}-rankings.md` — prior month for comparison
-- `~/Documents/AIReadyLife/vault/content/00_current/keyword-gaps.md` — known keyword gaps
-- `~/Documents/AIReadyLife/vault/content/00_current/` — content publication dates for freshness check
-- `~/Documents/AIReadyLife/vault/content/01_prior/` — prior period records for trend comparison
-- `~/Documents/AIReadyLife/vault/content/config.md` — topic areas, volume thresholds
+- `~/Documents/aireadylife/vault/content/00_current/{YYYY-MM}-rankings.md` — keyword rankings
+- `~/Documents/aireadylife/vault/content/00_current/{prior YYYY-MM}-rankings.md` — prior month for comparison
+- `~/Documents/aireadylife/vault/content/00_current/keyword-gaps.md` — known keyword gaps
+- `~/Documents/aireadylife/vault/content/00_current/` — content publication dates for freshness check
+- `~/Documents/aireadylife/vault/content/01_prior/` — prior period records for trend comparison
+- `~/Documents/aireadylife/vault/content/config.md` — topic areas, volume thresholds
 
 ## Output Format
 
@@ -80,7 +80,7 @@ Calls `aireadylife-content-task-flag-seo-gap` for each keyword or content piece 
 
 ## Configuration
 
-Required in `~/Documents/AIReadyLife/vault/content/config.md`:
+Required in `~/Documents/aireadylife/vault/content/config.md`:
 - `seo_topic_areas` — topic domains for gap analysis focus
 - `seo_volume_threshold` — minimum monthly volume for gap analysis (default: 500)
 - `seo_freshness_threshold_months` — months before a top-10 page is flagged for refresh (default: 6)
@@ -93,6 +93,6 @@ Required in `~/Documents/AIReadyLife/vault/content/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/content/01_prior/` — prior period records
-- Reads from: `~/Documents/AIReadyLife/vault/content/00_current/`, `~/Documents/AIReadyLife/vault/content/00_current/`, `~/Documents/AIReadyLife/vault/content/config.md`
-- Writes to: `~/Documents/AIReadyLife/vault/content/00_current/seo-review-{YYYY-MM}.md`, `~/Documents/AIReadyLife/vault/content/open-loops.md`
+- Reads from: `~/Documents/aireadylife/vault/content/01_prior/` — prior period records
+- Reads from: `~/Documents/aireadylife/vault/content/00_current/`, `~/Documents/aireadylife/vault/content/00_current/`, `~/Documents/aireadylife/vault/content/config.md`
+- Writes to: `~/Documents/aireadylife/vault/content/00_current/seo-review-{YYYY-MM}.md`, `~/Documents/aireadylife/vault/content/open-loops.md`

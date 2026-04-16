@@ -24,7 +24,7 @@ Called internally by `aireadylife-intel-op-topic-deep-dive`. Not invoked directl
 ## Steps
 
 1. Receive the topic name and any specific focus angle from the calling op
-2. Search `~/Documents/AIReadyLife/vault/intel/` for all existing content covering this topic: existing thread files in 02_threads/, prior briefs mentioning this topic in 01_briefs/, and any saved articles in the source data
+2. Search `~/Documents/aireadylife/vault/intel/` for all existing content covering this topic: existing thread files in 02_threads/, prior briefs mentioning this topic in 01_briefs/, and any saved articles in the source data
 3. Read all relevant files; sort by date to establish chronological order
 4. Identify key players mentioned across sources: name each individual or organization, their role, and their stated position or interest in the topic
 5. Extract the 3-5 most significant recent developments (past 30 days); sort chronologically
@@ -37,11 +37,11 @@ Called internally by `aireadylife-intel-op-topic-deep-dive`. Not invoked directl
 ## Input
 
 - Topic name and optional focus angle (from calling op)
-- `~/Documents/AIReadyLife/vault/intel/00_current/` — existing thread files on related topics
-- `~/Documents/AIReadyLife/vault/intel/02_briefs/` — prior briefs for context and history
-- `~/Documents/AIReadyLife/vault/intel/00_current/source-list.md` — source registry for credibility reference
-- `~/Documents/AIReadyLife/vault/intel/01_prior/` — prior period records for trend comparison
-- `~/Documents/AIReadyLife/vault/intel/config.md` — topic priorities for relevance weighting
+- `~/Documents/aireadylife/vault/intel/00_current/` — existing thread files on related topics
+- `~/Documents/aireadylife/vault/intel/02_briefs/` — prior briefs for context and history
+- `~/Documents/aireadylife/vault/intel/00_current/source-list.md` — source registry for credibility reference
+- `~/Documents/aireadylife/vault/intel/01_prior/` — prior period records for trend comparison
+- `~/Documents/aireadylife/vault/intel/config.md` — topic priorities for relevance weighting
 
 ## Output Format
 
@@ -81,7 +81,7 @@ Compiled: {YYYY-MM-DD} | Coverage: {date range of sources used}
 
 ## Configuration
 
-Required in `~/Documents/AIReadyLife/vault/intel/config.md`:
+Required in `~/Documents/aireadylife/vault/intel/config.md`:
 - `topics_include` — for relevance weighting when determining which sources to prioritize
 - `source_list` — credibility tiers used for fact vs opinion labeling
 
@@ -93,6 +93,6 @@ Required in `~/Documents/AIReadyLife/vault/intel/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/intel/01_prior/` — prior period records
-- Reads from: `~/Documents/AIReadyLife/vault/intel/00_current/`, `~/Documents/AIReadyLife/vault/intel/02_briefs/`, `~/Documents/AIReadyLife/vault/intel/00_current/`, `~/Documents/AIReadyLife/vault/intel/config.md`
-- Writes to: called by ops that write to `~/Documents/AIReadyLife/vault/intel/00_current/` or `01_briefs/`
+- Reads from: `~/Documents/aireadylife/vault/intel/01_prior/` — prior period records
+- Reads from: `~/Documents/aireadylife/vault/intel/00_current/`, `~/Documents/aireadylife/vault/intel/02_briefs/`, `~/Documents/aireadylife/vault/intel/00_current/`, `~/Documents/aireadylife/vault/intel/config.md`
+- Writes to: called by ops that write to `~/Documents/aireadylife/vault/intel/00_current/` or `01_briefs/`

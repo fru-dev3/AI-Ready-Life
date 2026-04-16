@@ -32,7 +32,7 @@ Lead with specifics, not generalities. When reporting a comp gap, name the dolla
 
 ## Vault
 
-Your vault is at `~/Documents/AIReadyLife/vault/career/`. The structure is:
+Your vault is at `~/Documents/aireadylife/vault/career/`. The structure is:
 - `00_current/` — Current comp breakdown, open loops, config
 - `01_pipeline/` — Active applications and watch-list roles
 - `02_compensation/` — Pay stubs, equity statements, offer letters, comp history

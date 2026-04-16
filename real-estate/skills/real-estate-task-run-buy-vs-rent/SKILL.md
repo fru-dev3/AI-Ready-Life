@@ -10,7 +10,7 @@ description: >
 # aireadylife-real-estate-run-buy-vs-rent
 
 **Trigger:** Called by affordability-review and review-brief ops, or directly on-demand
-**Produces:** Buy vs. rent analysis saved to `~/Documents/AIReadyLife/vault/real-estate/00_current/`
+**Produces:** Buy vs. rent analysis saved to `~/Documents/aireadylife/vault/real-estate/00_current/`
 
 ## What It Does
 
@@ -28,7 +28,7 @@ The price-to-rent ratio verdict applies the simple heuristic: purchase price ÷ 
 
 ## Steps
 
-1. Read purchase price, down payment, current 30-year rate from input or `~/Documents/AIReadyLife/vault/real-estate/config.md`
+1. Read purchase price, down payment, current 30-year rate from input or `~/Documents/aireadylife/vault/real-estate/config.md`
 2. Read current monthly rent, assumed annual rent increase, assumed home appreciation, and marginal tax bracket from config.md
 3. Build amortization schedule for the loan (purchase price minus down payment) at configured rate
 4. Calculate annual ownership costs for years 1–15: P&I, property tax (escalating), insurance, maintenance, PMI (until eliminated)
@@ -40,12 +40,12 @@ The price-to-rent ratio verdict applies the simple heuristic: purchase price ÷ 
 10. Calculate net cumulative cost to rent (rent paid minus investment growth) at years 5, 7, 10, 15
 11. Find break-even year (first year where net own cost < net rent cost)
 12. Calculate price-to-rent ratio; apply heuristic verdict
-13. Write full analysis to `~/Documents/AIReadyLife/vault/real-estate/00_current/YYYY-MM-buy-vs-rent.md`
+13. Write full analysis to `~/Documents/aireadylife/vault/real-estate/00_current/YYYY-MM-buy-vs-rent.md`
 
 ## Input
 
 - Purchase price (from calling op or user input)
-- `~/Documents/AIReadyLife/vault/real-estate/config.md`: down payment, rate, current rent, annual rent increase %, home appreciation %, marginal tax rate, market return rate
+- `~/Documents/aireadylife/vault/real-estate/config.md`: down payment, rate, current rent, annual rent increase %, home appreciation %, marginal tax rate, market return rate
 
 ## Output Format
 
@@ -65,7 +65,7 @@ The price-to-rent ratio verdict applies the simple heuristic: purchase price ÷ 
 
 ## Configuration
 
-Required fields in `~/Documents/AIReadyLife/vault/real-estate/config.md`:
+Required fields in `~/Documents/aireadylife/vault/real-estate/config.md`:
 - `current_monthly_rent`, `assumed_annual_rent_increase` (default 3%)
 - `assumed_home_appreciation` (default 3%)
 - `market_return_rate` (default 7%)
@@ -80,5 +80,5 @@ Required fields in `~/Documents/AIReadyLife/vault/real-estate/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/real-estate/config.md`
-- Writes to: `~/Documents/AIReadyLife/vault/real-estate/00_current/YYYY-MM-buy-vs-rent.md`
+- Reads from: `~/Documents/aireadylife/vault/real-estate/config.md`
+- Writes to: `~/Documents/aireadylife/vault/real-estate/00_current/YYYY-MM-buy-vs-rent.md`

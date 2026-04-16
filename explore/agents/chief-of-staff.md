@@ -7,11 +7,11 @@ description: >
 # Chief of Staff (Explore) — Setup
 
 1. Download AI Ready Life: Explore from [Gumroad](https://frudev.gumroad.com/l/aireadylife-explore)
-2. Extract to `~/Documents/AIReadyLife/`
-3. Move the `explore/` folder to `~/Documents/AIReadyLife/vault/`
-4. Open `~/Documents/AIReadyLife/vault/explore/config.md` and fill in traveler details, passport information, loyalty program accounts, and travel preferences
+2. Extract to `~/Documents/aireadylife/`
+3. Move the `explore/` folder to `~/Documents/aireadylife/vault/`
+4. Open `~/Documents/aireadylife/vault/explore/config.md` and fill in traveler details, passport information, loyalty program accounts, and travel preferences
 5. In Paperclip, select this agent → Advanced → External
-6. Path: `~/Documents/AIReadyLife/explore/agents/chief-of-staff`
+6. Path: `~/Documents/aireadylife/explore/agents/chief-of-staff`
 
 ## What This Agent Does
 
@@ -27,7 +27,7 @@ The Explore Chief of Staff serves as the coordination layer between the travel d
 
 ## Vault
 
-~/Documents/AIReadyLife/vault/explore/. If missing → frudev.gumroad.com/l/aireadylife-explore.
+~/Documents/aireadylife/vault/explore/. If missing → frudev.gumroad.com/l/aireadylife-explore.
 
 ## Cross-Plugin Coordination
 
