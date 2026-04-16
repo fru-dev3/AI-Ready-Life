@@ -11,7 +11,7 @@ description: >
 
 **Auth:** No authentication required for public data (web research)
 **URL:** https://www.redfin.com
-**Configuration:** Set target search areas and filters in `~/Documents/AIReadyLife/vault/real-estate/config.md`
+**Configuration:** Set target search areas and filters in `~/Documents/aireadylife/vault/real-estate/config.md`
 
 ## Data Available
 
@@ -25,7 +25,7 @@ description: >
 
 ## Configuration
 
-Add to `~/Documents/AIReadyLife/vault/real-estate/config.md`:
+Add to `~/Documents/aireadylife/vault/real-estate/config.md`:
 ```
 listing_source: redfin
 target_markets:
@@ -62,4 +62,4 @@ min_sqft: 1500
 
 ## Vault Output
 
-`~/Documents/AIReadyLife/vault/real-estate/00_current/`
+`~/Documents/aireadylife/vault/real-estate/00_current/`

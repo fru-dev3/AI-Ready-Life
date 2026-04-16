@@ -8,7 +8,7 @@ description: >
 
 ## What It Does
 
-Maintains `~/Documents/AIReadyLife/vault/brand/open-loops.md` as the live, always-current action list for the brand domain. This file is what the Chief of Staff reads to surface brand alerts in Ben's morning brief, and what the user reads when they want to know exactly what brand actions are outstanding.
+Maintains `~/Documents/aireadylife/vault/brand/open-loops.md` as the live, always-current action list for the brand domain. This file is what the Chief of Staff reads to surface brand alerts in Ben's morning brief, and what the user reads when they want to know exactly what brand actions are outstanding.
 
 Receives flags from the calling op — which may include profile fields out of sync with master profile, platforms that missed their publishing cadence target, brand mentions that need a response, analytics anomalies worth investigating (engagement rate drop, follower decline), or any other brand-domain action items surfaced during reviews. Appends new flags with a priority marker (🔴 urgent / 🟡 watch / 🟢 info), the source op or flow that generated the flag, a clear action description, and the date the flag was raised.
 
@@ -35,13 +35,13 @@ Called at the end of every brand op: `aireadylife-brand-op-profile-audit`, `aire
 ## Input
 
 - Flag list from calling op
-- `~/Documents/AIReadyLife/vault/brand/open-loops.md` — current file for dedup and resolution check
-- `~/Documents/AIReadyLife/vault/brand/00_current/` — to verify mention response status
-- `~/Documents/AIReadyLife/vault/brand/00_current/` — to verify profile snapshot update dates
+- `~/Documents/aireadylife/vault/brand/open-loops.md` — current file for dedup and resolution check
+- `~/Documents/aireadylife/vault/brand/00_current/` — to verify mention response status
+- `~/Documents/aireadylife/vault/brand/00_current/` — to verify profile snapshot update dates
 
 ## Output Format
 
-`~/Documents/AIReadyLife/vault/brand/open-loops.md`:
+`~/Documents/aireadylife/vault/brand/open-loops.md`:
 ```
 # Brand Open Loops
 Last updated: {YYYY-MM-DD}
@@ -66,7 +66,7 @@ Source: brand-op-content-review | Raised: 2026-03-01
 
 ## Configuration
 
-Optional in `~/Documents/AIReadyLife/vault/brand/config.md`:
+Optional in `~/Documents/aireadylife/vault/brand/config.md`:
 - `open_loops_archive_after_days` — days before a 🟢 item auto-archives (default: 60)
 
 ## Error Handling
@@ -77,5 +77,5 @@ Optional in `~/Documents/AIReadyLife/vault/brand/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/brand/open-loops.md`, `~/Documents/AIReadyLife/vault/brand/00_current/`, `~/Documents/AIReadyLife/vault/brand/00_current/`
-- Writes to: `~/Documents/AIReadyLife/vault/brand/open-loops.md`, `~/Documents/AIReadyLife/vault/brand/open-loops-archive.md`
+- Reads from: `~/Documents/aireadylife/vault/brand/open-loops.md`, `~/Documents/aireadylife/vault/brand/00_current/`, `~/Documents/aireadylife/vault/brand/00_current/`
+- Writes to: `~/Documents/aireadylife/vault/brand/open-loops.md`, `~/Documents/aireadylife/vault/brand/open-loops-archive.md`

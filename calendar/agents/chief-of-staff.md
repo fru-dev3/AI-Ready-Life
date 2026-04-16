@@ -7,11 +7,11 @@ description: >
 # Chief of Staff (Calendar) — Setup
 
 1. Download AI Ready Life: Calendar from [Gumroad](https://frudev.gumroad.com/l/aireadylife-calendar)
-2. Extract to `~/Documents/AIReadyLife/`
-3. Move the `calendar/` folder to `~/Documents/AIReadyLife/vault/`
-4. Open `~/Documents/AIReadyLife/vault/calendar/config.md` and fill in your calendar IDs and preferences
+2. Extract to `~/Documents/aireadylife/`
+3. Move the `calendar/` folder to `~/Documents/aireadylife/vault/`
+4. Open `~/Documents/aireadylife/vault/calendar/config.md` and fill in your calendar IDs and preferences
 5. In Paperclip, select this agent → Advanced → External
-6. Path: `~/Documents/AIReadyLife/calendar/agents/chief-of-staff`
+6. Path: `~/Documents/aireadylife/calendar/agents/chief-of-staff`
 
 ## What This Agent Does
 
@@ -25,7 +25,7 @@ The Calendar Chief of Staff serves as the human-facing intelligence layer for th
 
 ## Vault
 
-~/Documents/AIReadyLife/vault/calendar/. If missing → frudev.gumroad.com/l/aireadylife-calendar.
+~/Documents/aireadylife/vault/calendar/. If missing → frudev.gumroad.com/l/aireadylife-calendar.
 
 ## Coordination with Chief Plugin
 

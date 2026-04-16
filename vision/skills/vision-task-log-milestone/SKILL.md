@@ -11,7 +11,7 @@ description: >
 # aireadylife-vision-log-milestone
 
 **Cadence:** As-achieved (logged whenever a meaningful milestone is reached)
-**Produces:** New milestone entry in ~/Documents/AIReadyLife/vault/vision/00_current/milestones.md
+**Produces:** New milestone entry in ~/Documents/aireadylife/vault/vision/00_current/milestones.md
 
 ## What It Does
 
@@ -37,7 +37,7 @@ This task is the achievement recording mechanism for the entire AI Ready Life sy
 ## Input
 
 - Milestone data from user or calling op (domain, title, description, date achieved, optional fields)
-- ~/Documents/AIReadyLife/vault/vision/00_current/milestones.md (for appending)
+- ~/Documents/aireadylife/vault/vision/00_current/milestones.md (for appending)
 
 ## Output Format
 
@@ -88,5 +88,5 @@ No configuration required.
 
 ## Vault Paths
 
-- Reads from: ~/Documents/AIReadyLife/vault/vision/00_current/milestones.md
-- Writes to: ~/Documents/AIReadyLife/vault/vision/00_current/milestones.md
+- Reads from: ~/Documents/aireadylife/vault/vision/00_current/milestones.md
+- Writes to: ~/Documents/aireadylife/vault/vision/00_current/milestones.md

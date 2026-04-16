@@ -37,22 +37,22 @@ Buy-window signals are flagged when three or more of the following conditions ex
 
 ## Steps
 
-1. Read target markets and search criteria from `~/Documents/AIReadyLife/vault/real-estate/config.md`
+1. Read target markets and search criteria from `~/Documents/aireadylife/vault/real-estate/config.md`
 2. Call `aireadylife-real-estate-scan-market-listings` to pull current listings and market stats for each target market
-3. Read prior month and prior year snapshots from `~/Documents/AIReadyLife/vault/real-estate/00_current/` for comparison
+3. Read prior month and prior year snapshots from `~/Documents/aireadylife/vault/real-estate/00_current/` for comparison
 4. Calculate MoM and YoY change for: median price, active inventory, median DOM, price/sqft, months of supply
 5. Flag any metric with >5% MoM change as a significant shift
 6. Evaluate buy-window signal criteria; flag if 3+ conditions are met
 7. Log any buy-window signals or significant shifts to open-loops.md
-8. Write market trend report to `~/Documents/AIReadyLife/vault/real-estate/00_current/YYYY-MM-market-report.md`
+8. Write market trend report to `~/Documents/aireadylife/vault/real-estate/00_current/YYYY-MM-market-report.md`
 9. Call `aireadylife-real-estate-update-open-loops` with any flagged signals
 10. Present full report with narrative summary and tables
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/real-estate/config.md` — target markets, search filters
-- `~/Documents/AIReadyLife/vault/real-estate/00_current/` — prior snapshots for comparison
-- `~/Documents/AIReadyLife/vault/real-estate/01_prior/` — prior period records for trend comparison
+- `~/Documents/aireadylife/vault/real-estate/config.md` — target markets, search filters
+- `~/Documents/aireadylife/vault/real-estate/00_current/` — prior snapshots for comparison
+- `~/Documents/aireadylife/vault/real-estate/01_prior/` — prior period records for trend comparison
 - Live market data from Zillow or Redfin (via web research)
 
 ## Output Format
@@ -70,7 +70,7 @@ Buy-window signals are flagged when three or more of the following conditions ex
 
 ## Configuration
 
-Required fields in `~/Documents/AIReadyLife/vault/real-estate/config.md`:
+Required fields in `~/Documents/aireadylife/vault/real-estate/config.md`:
 - `target_markets` — list of city/state pairs
 - `max_price`, `min_beds`, `min_baths`, `min_sqft`
 - `listing_source` — "zillow" or "redfin"
@@ -84,8 +84,8 @@ Required fields in `~/Documents/AIReadyLife/vault/real-estate/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/real-estate/01_prior/` — prior period records
-- Reads from: `~/Documents/AIReadyLife/vault/real-estate/config.md`
-- Reads from: `~/Documents/AIReadyLife/vault/real-estate/00_current/` (prior snapshots)
-- Writes to: `~/Documents/AIReadyLife/vault/real-estate/00_current/YYYY-MM-market-report.md`
-- Writes to: `~/Documents/AIReadyLife/vault/real-estate/open-loops.md`
+- Reads from: `~/Documents/aireadylife/vault/real-estate/01_prior/` — prior period records
+- Reads from: `~/Documents/aireadylife/vault/real-estate/config.md`
+- Reads from: `~/Documents/aireadylife/vault/real-estate/00_current/` (prior snapshots)
+- Writes to: `~/Documents/aireadylife/vault/real-estate/00_current/YYYY-MM-market-report.md`
+- Writes to: `~/Documents/aireadylife/vault/real-estate/open-loops.md`

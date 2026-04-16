@@ -17,10 +17,10 @@ The `state.md` file in this demo vault shows what a fully populated calendar sta
 Move this `calendar/` folder to:
 
 ```
-~/Documents/AIReadyLife/vault/calendar/
+~/Documents/aireadylife/vault/calendar/
 ```
 
-Your full vault path will be: `~/Documents/AIReadyLife/vault/calendar/`
+Your full vault path will be: `~/Documents/aireadylife/vault/calendar/`
 
 ## Step 2 — Fill in config.md
 
@@ -31,7 +31,7 @@ Open `config.md` and fill in your details. You don't need everything on day one 
 In Claude Desktop, open your AI Ready Life project folder:
 
 ```
-~/Documents/AIReadyLife/
+~/Documents/aireadylife/
 ```
 
 If you've installed the Calendar domain from GitHub, it will be available under `domains/calendar/`. The agent reads your vault automatically from the path in Step 1.

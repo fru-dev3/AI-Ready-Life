@@ -32,9 +32,9 @@ Called by `aireadylife-benefits-op-enrollment-review` when the annual open enrol
 ## Input
 
 - Enrollment window dates from calling op
-- `~/Documents/AIReadyLife/vault/benefits/open-loops.md` — for deduplication check
-- `~/Documents/AIReadyLife/vault/benefits/02_briefs/` — check if enrollment analysis exists
-- `~/Documents/AIReadyLife/vault/benefits/config.md` — plan types available (for checklist customization)
+- `~/Documents/aireadylife/vault/benefits/open-loops.md` — for deduplication check
+- `~/Documents/aireadylife/vault/benefits/02_briefs/` — check if enrollment analysis exists
+- `~/Documents/aireadylife/vault/benefits/config.md` — plan types available (for checklist customization)
 
 ## Output Format
 
@@ -77,5 +77,5 @@ No configuration required. Called by the enrollment review op with specific date
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/benefits/open-loops.md`, `~/Documents/AIReadyLife/vault/benefits/02_briefs/`
-- Writes to: `~/Documents/AIReadyLife/vault/benefits/open-loops.md`
+- Reads from: `~/Documents/aireadylife/vault/benefits/open-loops.md`, `~/Documents/aireadylife/vault/benefits/02_briefs/`
+- Writes to: `~/Documents/aireadylife/vault/benefits/open-loops.md`

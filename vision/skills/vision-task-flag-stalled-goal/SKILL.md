@@ -9,7 +9,7 @@ description: >
 
 # aireadylife-vision-flag-stalled-goal
 
-**Produces:** New stalled goal flag entry in ~/Documents/AIReadyLife/vault/vision/open-loops.md
+**Produces:** New stalled goal flag entry in ~/Documents/aireadylife/vault/vision/open-loops.md
 
 ## What It Does
 
@@ -37,10 +37,10 @@ This task fires when any goal in vault/vision/00_current/ has had no recorded ac
 ## Input
 
 - Goal data from calling op (goal name, domain, date set, last activity date)
-- ~/Documents/AIReadyLife/vault/vision/00_current/milestones.md
-- ~/Documents/AIReadyLife/vault/{domain}/open-loops.md
-- ~/Documents/AIReadyLife/vault/vision/00_current/
-- ~/Documents/AIReadyLife/vault/vision/open-loops.md (for deduplication)
+- ~/Documents/aireadylife/vault/vision/00_current/milestones.md
+- ~/Documents/aireadylife/vault/{domain}/open-loops.md
+- ~/Documents/aireadylife/vault/vision/00_current/
+- ~/Documents/aireadylife/vault/vision/open-loops.md (for deduplication)
 
 ## Output Format
 
@@ -79,5 +79,5 @@ Optional in vault/vision/config.md:
 
 ## Vault Paths
 
-- Reads from: ~/Documents/AIReadyLife/vault/vision/00_current/milestones.md, ~/Documents/AIReadyLife/vault/{domain}/open-loops.md, ~/Documents/AIReadyLife/vault/vision/00_current/, ~/Documents/AIReadyLife/vault/vision/open-loops.md
-- Writes to: ~/Documents/AIReadyLife/vault/vision/open-loops.md
+- Reads from: ~/Documents/aireadylife/vault/vision/00_current/milestones.md, ~/Documents/aireadylife/vault/{domain}/open-loops.md, ~/Documents/aireadylife/vault/vision/00_current/, ~/Documents/aireadylife/vault/vision/open-loops.md
+- Writes to: ~/Documents/aireadylife/vault/vision/open-loops.md

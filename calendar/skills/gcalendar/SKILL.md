@@ -36,7 +36,7 @@ directly to the calendar as part of the weekly agenda flow.
 
 Add to `vault/calendar/config.md`:
 ```
-gcal_credentials: ~/Documents/AIReadyLife/vault/calendar/00_current/gcal-oauth.json
+gcal_credentials: ~/Documents/aireadylife/vault/calendar/00_current/gcal-oauth.json
 gcal_primary_calendar_id: YOUR_EMAIL@gmail.com
 gcal_work_calendar_id: YOUR_WORK_EMAIL@company.com
 gcal_focus_calendar_id: YOUR_EMAIL@gmail.com   # calendar where focus blocks are written
@@ -104,5 +104,5 @@ When creating focus blocks as part of weekly agenda:
 
 ## Vault Output
 
-`~/Documents/AIReadyLife/vault/calendar/00_current/` — event summaries written after weekly reads
-`~/Documents/AIReadyLife/vault/calendar/00_current/` — focus time audit records written by focus-time-review
+`~/Documents/aireadylife/vault/calendar/00_current/` — event summaries written after weekly reads
+`~/Documents/aireadylife/vault/calendar/00_current/` — focus time audit records written by focus-time-review

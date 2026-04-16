@@ -49,10 +49,10 @@ Open enrollment is the single most financially consequential benefits decision m
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/benefits/00_current/` — plan documents, SBCs for all options
-- `~/Documents/AIReadyLife/vault/benefits/01_prior/` — prior period records for trend comparison
-- `~/Documents/AIReadyLife/vault/benefits/config.md` — income, tax bracket, dependents, planned expenses
-- `~/Documents/AIReadyLife/vault/benefits/` — prior year EOBs and claims data for OOP estimation
+- `~/Documents/aireadylife/vault/benefits/00_current/` — plan documents, SBCs for all options
+- `~/Documents/aireadylife/vault/benefits/01_prior/` — prior period records for trend comparison
+- `~/Documents/aireadylife/vault/benefits/config.md` — income, tax bracket, dependents, planned expenses
+- `~/Documents/aireadylife/vault/benefits/` — prior year EOBs and claims data for OOP estimation
 
 ## Output Format
 
@@ -103,6 +103,6 @@ Required in `vault/benefits/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/benefits/01_prior/` — prior period records
-- Reads from: `~/Documents/AIReadyLife/vault/benefits/00_current/`, `~/Documents/AIReadyLife/vault/benefits/config.md`, `~/Documents/AIReadyLife/vault/benefits/` (claims history)
-- Writes to: `~/Documents/AIReadyLife/vault/benefits/02_briefs/enrollment-YYYY.md`, `~/Documents/AIReadyLife/vault/benefits/00_current/`, `~/Documents/AIReadyLife/vault/benefits/open-loops.md`
+- Reads from: `~/Documents/aireadylife/vault/benefits/01_prior/` — prior period records
+- Reads from: `~/Documents/aireadylife/vault/benefits/00_current/`, `~/Documents/aireadylife/vault/benefits/config.md`, `~/Documents/aireadylife/vault/benefits/` (claims history)
+- Writes to: `~/Documents/aireadylife/vault/benefits/02_briefs/enrollment-YYYY.md`, `~/Documents/aireadylife/vault/benefits/00_current/`, `~/Documents/aireadylife/vault/benefits/open-loops.md`

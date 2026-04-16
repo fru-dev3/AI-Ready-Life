@@ -39,11 +39,11 @@ Called by `aireadylife-learning-op-progress-review` to produce the reading progr
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/learning/00_current/completed.md` — YTD completion log
-- `~/Documents/AIReadyLife/vault/learning/00_current/current-reading.md` — current book progress
-- `~/Documents/AIReadyLife/vault/learning/00_current/reading-list.md` — reading queue
-- `~/Documents/AIReadyLife/vault/learning/01_prior/` — prior period records for trend comparison
-- `~/Documents/AIReadyLife/vault/learning/config.md` — annual_book_goal, goodreads_rss_url
+- `~/Documents/aireadylife/vault/learning/00_current/completed.md` — YTD completion log
+- `~/Documents/aireadylife/vault/learning/00_current/current-reading.md` — current book progress
+- `~/Documents/aireadylife/vault/learning/00_current/reading-list.md` — reading queue
+- `~/Documents/aireadylife/vault/learning/01_prior/` — prior period records for trend comparison
+- `~/Documents/aireadylife/vault/learning/config.md` — annual_book_goal, goodreads_rss_url
 
 ## Output Format
 
@@ -104,6 +104,6 @@ start_date: "YYYY-MM-DD"
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/learning/01_prior/` — prior period records
-- Reads from: `~/Documents/AIReadyLife/vault/learning/00_current/`, `~/Documents/AIReadyLife/vault/learning/config.md`
+- Reads from: `~/Documents/aireadylife/vault/learning/01_prior/` — prior period records
+- Reads from: `~/Documents/aireadylife/vault/learning/00_current/`, `~/Documents/aireadylife/vault/learning/config.md`
 - Writes to: None (returns data to calling op)

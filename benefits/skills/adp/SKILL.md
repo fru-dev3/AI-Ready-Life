@@ -84,5 +84,5 @@ After downloading each pay stub, verify:
 
 ## Vault Output
 
-- `~/Documents/AIReadyLife/vault/benefits/00_current/YYYY-MM-paystub.pdf` — monthly pay stubs
-- `~/Documents/AIReadyLife/vault/benefits/00_current/YYYY-W2.pdf` — annual W-2
+- `~/Documents/aireadylife/vault/benefits/00_current/YYYY-MM-paystub.pdf` — monthly pay stubs
+- `~/Documents/aireadylife/vault/benefits/00_current/YYYY-W2.pdf` — annual W-2

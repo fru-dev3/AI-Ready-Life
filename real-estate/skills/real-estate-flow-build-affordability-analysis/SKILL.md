@@ -25,23 +25,23 @@ The flow also calculates the 20% down payment amount required to avoid PMI, so t
 
 ## Steps
 
-1. Read gross monthly income (all sources) from `~/Documents/AIReadyLife/vault/real-estate/config.md`
-2. Read all monthly debt obligations from `~/Documents/AIReadyLife/vault/real-estate/config.md`
+1. Read gross monthly income (all sources) from `~/Documents/aireadylife/vault/real-estate/config.md`
+2. Read all monthly debt obligations from `~/Documents/aireadylife/vault/real-estate/config.md`
 3. Apply 28% front-end DTI: max PITI = gross monthly income × 0.28
 4. Apply 36% back-end DTI: max PITI = (gross monthly income × 0.36) − total monthly debts
 5. Take the lower of the two max PITI figures as the binding constraint
-6. Read local property tax rate and estimated insurance from `~/Documents/AIReadyLife/vault/real-estate/config.md`
+6. Read local property tax rate and estimated insurance from `~/Documents/aireadylife/vault/real-estate/config.md`
 7. Calculate max P&I = max PITI − monthly property tax accrual − monthly insurance estimate
 8. Solve for max loan amount at current 30-year fixed rate using standard amortization formula
 9. Calculate max purchase price at user's configured down payment percentage
 10. If down payment < 20%, calculate PMI cost and add to monthly payment; show 20%-down scenario as alternative
-11. Write completed affordability worksheet to `~/Documents/AIReadyLife/vault/real-estate/00_current/YYYY-MM-affordability.md`
+11. Write completed affordability worksheet to `~/Documents/aireadylife/vault/real-estate/00_current/YYYY-MM-affordability.md`
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/real-estate/config.md` — gross monthly income, monthly debts, available down payment, target down payment %, current 30-year fixed rate, local property tax rate
-- `~/Documents/AIReadyLife/vault/real-estate/00_current/` — prior month worksheet (for MoM comparison)
-- `~/Documents/AIReadyLife/vault/real-estate/01_prior/` — prior period records for trend comparison
+- `~/Documents/aireadylife/vault/real-estate/config.md` — gross monthly income, monthly debts, available down payment, target down payment %, current 30-year fixed rate, local property tax rate
+- `~/Documents/aireadylife/vault/real-estate/00_current/` — prior month worksheet (for MoM comparison)
+- `~/Documents/aireadylife/vault/real-estate/01_prior/` — prior period records for trend comparison
 
 ## Output Format
 
@@ -72,7 +72,7 @@ Markdown table with the following sections:
 
 ## Configuration
 
-Required fields in `~/Documents/AIReadyLife/vault/real-estate/config.md`:
+Required fields in `~/Documents/aireadylife/vault/real-estate/config.md`:
 - `gross_monthly_income` — total monthly gross from all sources
 - `monthly_debts` — itemized list of recurring debt payments with amounts
 - `available_down_payment` — cash available for down payment today
@@ -90,7 +90,7 @@ Required fields in `~/Documents/AIReadyLife/vault/real-estate/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/real-estate/01_prior/` — prior period records
-- Reads from: `~/Documents/AIReadyLife/vault/real-estate/config.md`
-- Reads from: `~/Documents/AIReadyLife/vault/real-estate/00_current/`
-- Writes to: `~/Documents/AIReadyLife/vault/real-estate/00_current/YYYY-MM-affordability.md`
+- Reads from: `~/Documents/aireadylife/vault/real-estate/01_prior/` — prior period records
+- Reads from: `~/Documents/aireadylife/vault/real-estate/config.md`
+- Reads from: `~/Documents/aireadylife/vault/real-estate/00_current/`
+- Writes to: `~/Documents/aireadylife/vault/real-estate/00_current/YYYY-MM-affordability.md`

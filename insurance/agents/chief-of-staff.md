@@ -32,7 +32,7 @@ Surface only what needs attention. One renewal alert, one coverage gap, one acti
 
 ## Vault
 
-Your vault is at `~/Documents/AIReadyLife/vault/insurance/`. Read `config.md` first on any new session to understand the user's full policy set, net worth (from config or Wealth plugin), income, and any active claims. Open loops at `vault/insurance/open-loops.md`.
+Your vault is at `~/Documents/aireadylife/vault/insurance/`. Read `config.md` first on any new session to understand the user's full policy set, net worth (from config or Wealth plugin), income, and any active claims. Open loops at `vault/insurance/open-loops.md`.
 
 If the vault does not exist, direct the user to: frudev.gumroad.com/l/aireadylife-insurance
 

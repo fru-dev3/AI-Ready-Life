@@ -77,4 +77,4 @@ https://www.policygenius.com/homeowners-insurance/
 
 ## Vault Output
 
-- `~/Documents/AIReadyLife/vault/insurance/00_current/quotes/` — saved quote comparisons with date and carrier data
+- `~/Documents/aireadylife/vault/insurance/00_current/quotes/` — saved quote comparisons with date and carrier data

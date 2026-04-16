@@ -29,23 +29,23 @@ The single-number headline — total monthly home spend — is always the first 
 
 ## Steps
 
-1. Read all expense records from `~/Documents/AIReadyLife/vault/home/00_current/YYYY-MM-expenses.md`
+1. Read all expense records from `~/Documents/aireadylife/vault/home/00_current/YYYY-MM-expenses.md`
 2. Group expenses by category: utilities, repairs, supplies, services
 3. Sum monthly total per category
 4. Read prior month expense file for MoM comparison; calculate MoM change per category
-5. Read annual budget from `~/Documents/AIReadyLife/vault/home/config.md`; calculate YTD vs. budget per category
+5. Read annual budget from `~/Documents/aireadylife/vault/home/config.md`; calculate YTD vs. budget per category
 6. Flag any category where monthly spend exceeds monthly budget by more than 20%
-7. Pull same-month prior year utility amounts from `~/Documents/AIReadyLife/vault/home/01_prior/`; calculate YoY delta per utility
+7. Pull same-month prior year utility amounts from `~/Documents/aireadylife/vault/home/01_prior/`; calculate YoY delta per utility
 8. For repair category: calculate YTD repair total by system (HVAC, plumbing, appliances); flag if system repair YTD > 50% of replacement cost estimate
 9. Calculate total monthly home spend as headline number
 10. Return formatted summary to calling op
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/home/00_current/YYYY-MM-expenses.md` — current month expenses
-- `~/Documents/AIReadyLife/vault/home/00_current/YYYY-{prior-MM}-expenses.md` — prior month
-- `~/Documents/AIReadyLife/vault/home/01_prior/` — same-month prior year (for utility YoY)
-- `~/Documents/AIReadyLife/vault/home/config.md` — annual budget by category
+- `~/Documents/aireadylife/vault/home/00_current/YYYY-MM-expenses.md` — current month expenses
+- `~/Documents/aireadylife/vault/home/00_current/YYYY-{prior-MM}-expenses.md` — prior month
+- `~/Documents/aireadylife/vault/home/01_prior/` — same-month prior year (for utility YoY)
+- `~/Documents/aireadylife/vault/home/config.md` — annual budget by category
 
 ## Output Format
 
@@ -67,7 +67,7 @@ The single-number headline — total monthly home spend — is always the first 
 
 ## Configuration
 
-Required in `~/Documents/AIReadyLife/vault/home/config.md`:
+Required in `~/Documents/aireadylife/vault/home/config.md`:
 - `annual_utilities_budget`, `annual_repairs_budget`, `annual_supplies_budget`, `annual_services_budget`
 - Per-system replacement cost estimates (optional, for repair trend analysis): `hvac_replacement_cost`, `water_heater_replacement_cost`
 
@@ -80,7 +80,7 @@ Required in `~/Documents/AIReadyLife/vault/home/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/home/00_current/`
-- Reads from: `~/Documents/AIReadyLife/vault/home/01_prior/`
-- Reads from: `~/Documents/AIReadyLife/vault/home/config.md`
-- Writes to: `~/Documents/AIReadyLife/vault/home/00_current/YYYY-MM-summary.md`
+- Reads from: `~/Documents/aireadylife/vault/home/00_current/`
+- Reads from: `~/Documents/aireadylife/vault/home/01_prior/`
+- Reads from: `~/Documents/aireadylife/vault/home/config.md`
+- Writes to: `~/Documents/aireadylife/vault/home/00_current/YYYY-MM-summary.md`

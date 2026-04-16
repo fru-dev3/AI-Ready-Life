@@ -105,12 +105,12 @@ a duplicate entry.
 ## Notes
 
 - Local vault write always happens first. If Notion write fails, log the error to
-  `~/Documents/AIReadyLife/vault/calendar/02_briefs/notion-sync-errors.md` and continue.
+  `~/Documents/aireadylife/vault/calendar/02_briefs/notion-sync-errors.md` and continue.
 - Notion is optional. If `notion_calendar_page_id` is not configured, skip Notion sync silently.
 - Notion rate limits: 3 requests/second per integration. Batch block creation for agendas with
   many events — max 100 blocks per append request.
 
 ## Vault Output
 
-- Local (primary): `~/Documents/AIReadyLife/vault/calendar/02_briefs/` — agendas written first
+- Local (primary): `~/Documents/aireadylife/vault/calendar/02_briefs/` — agendas written first
 - Notion (secondary): agenda page and deadlines database — written after local write succeeds

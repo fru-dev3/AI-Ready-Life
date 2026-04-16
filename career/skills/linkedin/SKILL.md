@@ -65,6 +65,6 @@ Standard filter parameters for target role search:
 
 ## Vault Output
 
-- `~/Documents/AIReadyLife/vault/career/00_current/` — job search results and market scan data
-- `~/Documents/AIReadyLife/vault/career/00_current/linkedin-activity.md` — monthly profile analytics log
-- `~/Documents/AIReadyLife/vault/career/00_current/` — recruiter outreach logged as pipeline items
+- `~/Documents/aireadylife/vault/career/00_current/` — job search results and market scan data
+- `~/Documents/aireadylife/vault/career/00_current/linkedin-activity.md` — monthly profile analytics log
+- `~/Documents/aireadylife/vault/career/00_current/` — recruiter outreach logged as pipeline items

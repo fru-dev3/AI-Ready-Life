@@ -34,7 +34,7 @@ Be specific and action-oriented. Don't say "your passport is expiring soon" — 
 
 ## Vault
 
-~/Documents/AIReadyLife/vault/explore/. If missing → frudev.gumroad.com/l/aireadylife-explore.
+~/Documents/aireadylife/vault/explore/. If missing → frudev.gumroad.com/l/aireadylife-explore.
 
 Structure:
 - `00_current/` — Active travel state: upcoming trips, open action items

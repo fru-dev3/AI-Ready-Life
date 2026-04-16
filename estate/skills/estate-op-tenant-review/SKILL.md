@@ -11,7 +11,7 @@ description: >
 # aireadylife-estate-tenant-review
 
 **Cadence:** Monthly (1st of month)
-**Produces:** Tenant status report in `~/Documents/AIReadyLife/vault/estate/00_current/` with lease timelines, payment history, security deposit summary, and renewal/vacancy flags
+**Produces:** Tenant status report in `~/Documents/aireadylife/vault/estate/00_current/` with lease timelines, payment history, security deposit summary, and renewal/vacancy flags
 
 ## What It Does
 
@@ -37,7 +37,7 @@ This op reviews every active tenancy across the portfolio and evaluates it acros
 
 ## Steps
 
-1. Read all tenant records from `~/Documents/AIReadyLife/vault/estate/00_current/`
+1. Read all tenant records from `~/Documents/aireadylife/vault/estate/00_current/`
 2. Calculate days to lease expiration for each active lease; apply 3-tier alert (91–180/31–90/0–30 days)
 3. Read payment records for past 3 months per unit; identify on-time, late, chronic-late, or missed
 4. Verify security deposit amount matches lease agreement; flag discrepancies
@@ -45,14 +45,14 @@ This op reviews every active tenancy across the portfolio and evaluates it acros
 6. For leases expiring within 90 days: calculate recommended renewal rent and rent increase %
 7. For vacant units: calculate days vacant; flag if >30 days without signed lease
 8. Flag any units requiring move-out inspection scheduling (lease ending within 30 days)
-9. Write tenant status report to `~/Documents/AIReadyLife/vault/estate/00_current/YYYY-MM-tenant-report.md`
+9. Write tenant status report to `~/Documents/aireadylife/vault/estate/00_current/YYYY-MM-tenant-report.md`
 10. Call `aireadylife-estate-update-open-loops` with all tenant flags
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/estate/00_current/` — all tenant records, lease dates, payment history, security deposit amounts
-- `~/Documents/AIReadyLife/vault/estate/00_current/` — property state/jurisdiction for rent control check
-- `~/Documents/AIReadyLife/vault/estate/01_prior/` — prior period records for trend comparison
+- `~/Documents/aireadylife/vault/estate/00_current/` — all tenant records, lease dates, payment history, security deposit amounts
+- `~/Documents/aireadylife/vault/estate/00_current/` — property state/jurisdiction for rent control check
+- `~/Documents/aireadylife/vault/estate/01_prior/` — prior period records for trend comparison
 
 ## Output Format
 
@@ -76,7 +76,7 @@ Per unit: current rent, recommended renewal rent, market median, % increase sugg
 
 ## Configuration
 
-Required in `~/Documents/AIReadyLife/vault/estate/config.md`:
+Required in `~/Documents/aireadylife/vault/estate/config.md`:
 - Per property/unit: lease start date, lease end date, monthly rent, security deposit amount, tenant name, payment records
 - `state` for each property (used for late notice and deposit law reference)
 
@@ -88,8 +88,8 @@ Required in `~/Documents/AIReadyLife/vault/estate/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/estate/01_prior/` — prior period records
-- Reads from: `~/Documents/AIReadyLife/vault/estate/00_current/`
-- Reads from: `~/Documents/AIReadyLife/vault/estate/00_current/`
-- Writes to: `~/Documents/AIReadyLife/vault/estate/00_current/YYYY-MM-tenant-report.md`
-- Writes to: `~/Documents/AIReadyLife/vault/estate/open-loops.md`
+- Reads from: `~/Documents/aireadylife/vault/estate/01_prior/` — prior period records
+- Reads from: `~/Documents/aireadylife/vault/estate/00_current/`
+- Reads from: `~/Documents/aireadylife/vault/estate/00_current/`
+- Writes to: `~/Documents/aireadylife/vault/estate/00_current/YYYY-MM-tenant-report.md`
+- Writes to: `~/Documents/aireadylife/vault/estate/open-loops.md`

@@ -11,7 +11,7 @@ description: >
 # aireadylife-estate-log-expense
 
 **Cadence:** As-received (logged at the time the expense is incurred or the bill is paid)
-**Produces:** Expense record appended to `~/Documents/AIReadyLife/vault/estate/00_current/{property-slug}-expenses.md`
+**Produces:** Expense record appended to `~/Documents/aireadylife/vault/estate/00_current/{property-slug}-expenses.md`
 
 ## What It Does
 
@@ -42,9 +42,9 @@ Expenses are appended to a property-specific file (`{property-slug}-expenses.md`
 1. Collect: property address (or slug), expense date, vendor/payee name, amount, any notes
 2. Assign IRS-standard expense category based on nature of expense
 3. If amount ≥ $2,500: flag as "CapEx classification review recommended"; add note to record
-4. Check if expense relates to an open maintenance item in `~/Documents/AIReadyLife/vault/estate/00_current/`; if so, cross-reference the maintenance item ID in the expense record
+4. Check if expense relates to an open maintenance item in `~/Documents/aireadylife/vault/estate/00_current/`; if so, cross-reference the maintenance item ID in the expense record
 5. Record receipt reference (invoice number, vendor confirmation #, or file path to scanned receipt)
-6. Append structured expense record to `~/Documents/AIReadyLife/vault/estate/00_current/{property-slug}-expenses.md`
+6. Append structured expense record to `~/Documents/aireadylife/vault/estate/00_current/{property-slug}-expenses.md`
 7. Confirm record saved; note it will be picked up by the next cash flow review run
 
 ## Input
@@ -69,7 +69,7 @@ Optional: receipt reference or file path, related maintenance item ID
 
 ## Configuration
 
-Required in `~/Documents/AIReadyLife/vault/estate/config.md`:
+Required in `~/Documents/aireadylife/vault/estate/config.md`:
 - Property slugs that map to each full address (used for file routing)
 
 ## Error Handling
@@ -80,5 +80,5 @@ Required in `~/Documents/AIReadyLife/vault/estate/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/estate/00_current/` (to cross-reference open maintenance items)
-- Writes to: `~/Documents/AIReadyLife/vault/estate/00_current/{property-slug}-expenses.md`
+- Reads from: `~/Documents/aireadylife/vault/estate/00_current/` (to cross-reference open maintenance items)
+- Writes to: `~/Documents/aireadylife/vault/estate/00_current/{property-slug}-expenses.md`

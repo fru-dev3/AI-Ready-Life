@@ -1,6 +1,6 @@
 # AI Ready Life: Complete Bundle
 
-This bundle covers all 20 life domains. All vaults live at `~/Documents/AIReadyLife/vault/`. Each domain has its own subfolder.
+This bundle covers all 20 life domains. All vaults live at `~/Documents/aireadylife/vault/`. Each domain has its own subfolder.
 
 Before running any skill, confirm `vault/{domain}/config.md` exists and is filled in. If missing, direct user to purchase at `frudev.gumroad.com/l/aireadylife-{domain}`.
 
@@ -8,7 +8,7 @@ Before running any skill, confirm `vault/{domain}/config.md` exists and is fille
 
 ## Health
 
-**Vault:** `~/Documents/AIReadyLife/vault/health/` — config.md, open-loops.md, 00_current/, 01_prior/, 02_briefs/
+**Vault:** `~/Documents/aireadylife/vault/health/` — config.md, open-loops.md, 00_current/, 01_prior/, 02_briefs/
 
 **Skills:** Health Brief · Lab Review · Medication Refill Audit · Preventive Care Review · Wellness Summary · Flag Out-of-Range · Monthly Sync
 
@@ -23,7 +23,7 @@ Before running any skill, confirm `vault/{domain}/config.md` exists and is fille
 
 ## Wealth
 
-**Vault:** `~/Documents/AIReadyLife/vault/wealth/` — config.md, open-loops.md, 00_current/, 01_prior/, 02_briefs/
+**Vault:** `~/Documents/aireadylife/vault/wealth/` — config.md, open-loops.md, 00_current/, 01_prior/, 02_briefs/
 
 **Skills:** Net Worth Snapshot · Cash Flow Review · Investment Review · Debt Review · Monthly Synthesis
 
@@ -37,7 +37,7 @@ Before running any skill, confirm `vault/{domain}/config.md` exists and is fille
 
 ## Tax
 
-**Vault:** `~/Documents/AIReadyLife/vault/tax/` — config.md, open-loops.md, 00_current/, 01_prior/, 02_briefs/
+**Vault:** `~/Documents/aireadylife/vault/tax/` — config.md, open-loops.md, 00_current/, 01_prior/, 02_briefs/
 
 **Skills:** Document Check · Quarterly Estimate · Deduction Review · Deadline Watch · Entity Compliance · Log Expense
 
@@ -52,7 +52,7 @@ Before running any skill, confirm `vault/{domain}/config.md` exists and is fille
 
 ## Career
 
-**Vault:** `~/Documents/AIReadyLife/vault/career/` — config.md, open-loops.md, 00_current/, 01_prior/, 02_briefs/
+**Vault:** `~/Documents/aireadylife/vault/career/` — config.md, open-loops.md, 00_current/, 01_prior/, 02_briefs/
 
 **Skills:** Career Brief · Pipeline Review · Comp Review · Skills Gap Analysis · Log Application · Monthly Sync
 
@@ -67,7 +67,7 @@ Before running any skill, confirm `vault/{domain}/config.md` exists and is fille
 
 ## Benefits
 
-**Vault:** `~/Documents/AIReadyLife/vault/benefits/` — config.md, open-loops.md, 00_current/, 01_prior/, 02_briefs/
+**Vault:** `~/Documents/aireadylife/vault/benefits/` — config.md, open-loops.md, 00_current/, 01_prior/, 02_briefs/
 
 **Skills:** Benefits Brief · 401k Review · HSA Balance Check · Coverage Review · Flag Enrollment Window
 
@@ -81,7 +81,7 @@ Before running any skill, confirm `vault/{domain}/config.md` exists and is fille
 
 ## Brand
 
-**Vault:** `~/Documents/AIReadyLife/vault/brand/` — config.md, open-loops.md, 00_current/, 01_prior/, 02_briefs/
+**Vault:** `~/Documents/aireadylife/vault/brand/` — config.md, open-loops.md, 00_current/, 01_prior/, 02_briefs/
 
 **Skills:** Brand Brief · Analytics Summary · Profile Audit · Content Review · Log Mention
 
@@ -95,7 +95,7 @@ Before running any skill, confirm `vault/{domain}/config.md` exists and is fille
 
 ## Business
 
-**Vault:** `~/Documents/AIReadyLife/vault/business/` — config.md, open-loops.md, 00_current/, 01_prior/, 02_briefs/
+**Vault:** `~/Documents/aireadylife/vault/business/` — config.md, open-loops.md, 00_current/, 01_prior/, 02_briefs/
 
 **Skills:** P&L Review · Pipeline Review · Compliance Check · Log Invoice · Monthly Synthesis
 
@@ -109,7 +109,7 @@ Before running any skill, confirm `vault/{domain}/config.md` exists and is fille
 
 ## Calendar
 
-**Vault:** `~/Documents/AIReadyLife/vault/calendar/` — config.md, open-loops.md, 00_current/, 01_prior/, 02_briefs/
+**Vault:** `~/Documents/aireadylife/vault/calendar/` — config.md, open-loops.md, 00_current/, 01_prior/, 02_briefs/
 
 **Skills:** Weekly Agenda · Deadline Alert · Focus Time Review · Add Deadline
 
@@ -122,7 +122,7 @@ Before running any skill, confirm `vault/{domain}/config.md` exists and is fille
 
 ## Chief
 
-**Vault:** `~/Documents/AIReadyLife/vault/chief/` — config.md, open-loops.md, 00_current/, 01_prior/, 02_briefs/
+**Vault:** `~/Documents/aireadylife/vault/chief/` — config.md, open-loops.md, 00_current/, 01_prior/, 02_briefs/
 
 **Skills:** Daily Brief · Weekly Preview · System Health · Check Open Loops · Flag Urgent
 
@@ -136,7 +136,7 @@ Before running any skill, confirm `vault/{domain}/config.md` exists and is fille
 
 ## Content
 
-**Vault:** `~/Documents/AIReadyLife/vault/content/` — config.md, open-loops.md, 00_current/, 01_prior/, 02_briefs/
+**Vault:** `~/Documents/aireadylife/vault/content/` — config.md, open-loops.md, 00_current/, 01_prior/, 02_briefs/
 
 **Skills:** Content Brief · Pipeline Review · Revenue Summary · SEO Review · Log Revenue
 
@@ -150,7 +150,7 @@ Before running any skill, confirm `vault/{domain}/config.md` exists and is fille
 
 ## Estate
 
-**Vault:** `~/Documents/AIReadyLife/vault/estate/` — config.md, open-loops.md, 00_current/, 01_prior/, 02_briefs/
+**Vault:** `~/Documents/aireadylife/vault/estate/` — config.md, open-loops.md, 00_current/, 01_prior/, 02_briefs/
 
 **Skills:** Portfolio Review · Cash Flow Analysis · Maintenance Review · Log Expense
 
@@ -163,7 +163,7 @@ Before running any skill, confirm `vault/{domain}/config.md` exists and is fille
 
 ## Explore
 
-**Vault:** `~/Documents/AIReadyLife/vault/explore/` — config.md, open-loops.md, 00_current/, 01_prior/, 02_briefs/
+**Vault:** `~/Documents/aireadylife/vault/explore/` — config.md, open-loops.md, 00_current/, 01_prior/, 02_briefs/
 
 **Skills:** Travel Brief · Document Check · Log Trip · Flag Expiring Document
 
@@ -176,7 +176,7 @@ Before running any skill, confirm `vault/{domain}/config.md` exists and is fille
 
 ## Home
 
-**Vault:** `~/Documents/AIReadyLife/vault/home/` — config.md, open-loops.md, 00_current/, 01_prior/, 02_briefs/
+**Vault:** `~/Documents/aireadylife/vault/home/` — config.md, open-loops.md, 00_current/, 01_prior/, 02_briefs/
 
 **Skills:** Monthly Home Review · Maintenance Schedule · Expense Summary · Log Expense · Flag Maintenance Item
 
@@ -190,7 +190,7 @@ Before running any skill, confirm `vault/{domain}/config.md` exists and is fille
 
 ## Insurance
 
-**Vault:** `~/Documents/AIReadyLife/vault/insurance/` — config.md, open-loops.md, 00_current/, 01_prior/, 02_briefs/
+**Vault:** `~/Documents/aireadylife/vault/insurance/` — config.md, open-loops.md, 00_current/, 01_prior/, 02_briefs/
 
 **Skills:** Coverage Audit · Claims Review · Renewal Watch · Analyze Coverage Gaps
 
@@ -203,7 +203,7 @@ Before running any skill, confirm `vault/{domain}/config.md` exists and is fille
 
 ## Intel
 
-**Vault:** `~/Documents/AIReadyLife/vault/intel/` — config.md, open-loops.md, 00_current/, 01_prior/, 02_briefs/
+**Vault:** `~/Documents/aireadylife/vault/intel/` — config.md, open-loops.md, 00_current/, 01_prior/, 02_briefs/
 
 **Skills:** Daily Briefing · Source Scan · Topic Deep Dive · Log Source
 
@@ -216,7 +216,7 @@ Before running any skill, confirm `vault/{domain}/config.md` exists and is fille
 
 ## Learning
 
-**Vault:** `~/Documents/AIReadyLife/vault/learning/` — config.md, open-loops.md, 00_current/, 01_prior/, 02_briefs/
+**Vault:** `~/Documents/aireadylife/vault/learning/` — config.md, open-loops.md, 00_current/, 01_prior/, 02_briefs/
 
 **Skills:** Learning Progress Review · Reading Summary · Goal Review · Log Completion
 
@@ -229,7 +229,7 @@ Before running any skill, confirm `vault/{domain}/config.md` exists and is fille
 
 ## Real Estate
 
-**Vault:** `~/Documents/AIReadyLife/vault/real-estate/` — config.md, open-loops.md, 00_current/, 01_prior/, 02_briefs/
+**Vault:** `~/Documents/aireadylife/vault/real-estate/` — config.md, open-loops.md, 00_current/, 01_prior/, 02_briefs/
 
 **Skills:** Market Scan · Affordability Review · Buy vs. Rent · Log Listing
 
@@ -242,7 +242,7 @@ Before running any skill, confirm `vault/{domain}/config.md` exists and is fille
 
 ## Records
 
-**Vault:** `~/Documents/AIReadyLife/vault/records/` — config.md, open-loops.md, 00_current/, 01_prior/, 02_briefs/
+**Vault:** `~/Documents/aireadylife/vault/records/` — config.md, open-loops.md, 00_current/, 01_prior/, 02_briefs/
 
 **Skills:** Document Audit · Subscription Review · Check Expiring Documents · Log Document
 
@@ -255,7 +255,7 @@ Before running any skill, confirm `vault/{domain}/config.md` exists and is fille
 
 ## Social
 
-**Vault:** `~/Documents/AIReadyLife/vault/social/` — config.md, open-loops.md, 00_current/, 01_prior/, 02_briefs/
+**Vault:** `~/Documents/aireadylife/vault/social/` — config.md, open-loops.md, 00_current/, 01_prior/, 02_briefs/
 
 **Skills:** Relationship Health Check · Outreach Queue · Birthday Watch · Log Interaction
 
@@ -268,7 +268,7 @@ Before running any skill, confirm `vault/{domain}/config.md` exists and is fille
 
 ## Vision
 
-**Vault:** `~/Documents/AIReadyLife/vault/vision/` — config.md, open-loops.md, 00_current/, 01_prior/, 02_briefs/
+**Vault:** `~/Documents/aireadylife/vault/vision/` — config.md, open-loops.md, 00_current/, 01_prior/, 02_briefs/
 
 **Skills:** Quarterly Planning · Monthly Scorecard · Annual Review · Flag Stalled Goal · Log Milestone
 

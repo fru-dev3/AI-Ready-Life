@@ -33,8 +33,8 @@ The open-loops file is the career domain's single source of truth for what needs
 ## Input
 
 - Flags passed by calling op (new items to add)
-- `~/Documents/AIReadyLife/vault/career/open-loops.md` — current state
-- `~/Documents/AIReadyLife/vault/career/00_current/` — for follow-up resolution checks
+- `~/Documents/aireadylife/vault/career/open-loops.md` — current state
+- `~/Documents/aireadylife/vault/career/00_current/` — for follow-up resolution checks
 
 ## Output Format
 
@@ -71,5 +71,5 @@ No configuration required. File auto-created on first run if it does not exist.
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/career/open-loops.md`, `~/Documents/AIReadyLife/vault/career/00_current/`
-- Writes to: `~/Documents/AIReadyLife/vault/career/open-loops.md`
+- Reads from: `~/Documents/aireadylife/vault/career/open-loops.md`, `~/Documents/aireadylife/vault/career/00_current/`
+- Writes to: `~/Documents/aireadylife/vault/career/open-loops.md`

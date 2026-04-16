@@ -12,7 +12,7 @@ description: >
 # aireadylife-estate-maintenance-review
 
 **Cadence:** Monthly (1st of month)
-**Produces:** Maintenance status report in `~/Documents/AIReadyLife/vault/estate/00_current/` with all open items, seasonal tasks, vendor follow-ups, and open loop flags
+**Produces:** Maintenance status report in `~/Documents/aireadylife/vault/estate/00_current/` with all open items, seasonal tasks, vendor follow-ups, and open loop flags
 
 ## What It Does
 
@@ -39,22 +39,22 @@ Fourth, warranty tracking: the op checks all appliances and HVAC systems recorde
 
 ## Steps
 
-1. Read all open maintenance items from `~/Documents/AIReadyLife/vault/estate/00_current/` for each property
+1. Read all open maintenance items from `~/Documents/aireadylife/vault/estate/00_current/` for each property
 2. Call `aireadylife-estate-check-maintenance-schedule` to evaluate open items and seasonal tasks
 3. Check each item's target date and vendor status; apply urgency escalation rules (14-day routine → urgent; 3-day urgent → emergency)
 4. Check seasonal maintenance calendar for current month; identify tasks due with no current-season completion record
 5. Scan all vendor follow-up notes; flag any open more than 14 days without update
 6. Check appliance and HVAC warranty records for items expiring within 90 days
 7. Call `aireadylife-estate-flag-maintenance-item` for any newly identified issue or urgency escalation
-8. Write per-property maintenance summary to `~/Documents/AIReadyLife/vault/estate/00_current/YYYY-MM-maintenance-report.md`
+8. Write per-property maintenance summary to `~/Documents/aireadylife/vault/estate/00_current/YYYY-MM-maintenance-report.md`
 9. Call `aireadylife-estate-update-open-loops` with all flagged items
 10. Present full report organized by property, sorted by urgency
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/estate/00_current/` — all open maintenance items and vendor notes
-- `~/Documents/AIReadyLife/vault/estate/00_current/` — appliance/HVAC warranty records and capital item installation dates
-- `~/Documents/AIReadyLife/vault/estate/01_prior/` — prior period records for trend comparison
+- `~/Documents/aireadylife/vault/estate/00_current/` — all open maintenance items and vendor notes
+- `~/Documents/aireadylife/vault/estate/00_current/` — appliance/HVAC warranty records and capital item installation dates
+- `~/Documents/aireadylife/vault/estate/01_prior/` — prior period records for trend comparison
 
 ## Output Format
 
@@ -80,7 +80,7 @@ Per property section:
 
 ## Configuration
 
-Required in `~/Documents/AIReadyLife/vault/estate/config.md`:
+Required in `~/Documents/aireadylife/vault/estate/config.md`:
 - Property list with addresses
 - Per property: appliance warranty dates in property record, capital item installation dates
 
@@ -92,8 +92,8 @@ Required in `~/Documents/AIReadyLife/vault/estate/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/estate/01_prior/` — prior period records
-- Reads from: `~/Documents/AIReadyLife/vault/estate/00_current/`
-- Reads from: `~/Documents/AIReadyLife/vault/estate/00_current/`
-- Writes to: `~/Documents/AIReadyLife/vault/estate/00_current/YYYY-MM-maintenance-report.md`
-- Writes to: `~/Documents/AIReadyLife/vault/estate/open-loops.md`
+- Reads from: `~/Documents/aireadylife/vault/estate/01_prior/` — prior period records
+- Reads from: `~/Documents/aireadylife/vault/estate/00_current/`
+- Reads from: `~/Documents/aireadylife/vault/estate/00_current/`
+- Writes to: `~/Documents/aireadylife/vault/estate/00_current/YYYY-MM-maintenance-report.md`
+- Writes to: `~/Documents/aireadylife/vault/estate/open-loops.md`

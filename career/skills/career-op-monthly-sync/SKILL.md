@@ -46,11 +46,11 @@ Ends by triggering `aireadylife-career-op-review-brief` to produce the monthly b
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/career/config.md` — portal URLs, Chrome profile, LinkedIn handle
+- `~/Documents/aireadylife/vault/career/config.md` — portal URLs, Chrome profile, LinkedIn handle
 - ADP / Workday payroll portal (via Playwright)
 - LinkedIn (via Playwright for activity and inbox)
-- `~/Documents/AIReadyLife/vault/career/00_current/` — current pipeline state
-- `~/Documents/AIReadyLife/vault/career/01_prior/` — prior period records for trend comparison
+- `~/Documents/aireadylife/vault/career/00_current/` — current pipeline state
+- `~/Documents/aireadylife/vault/career/01_prior/` — prior period records for trend comparison
 
 ## Output Format
 
@@ -88,6 +88,6 @@ Required fields in `vault/career/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/career/01_prior/` — prior period records
-- Reads from: `~/Documents/AIReadyLife/vault/career/config.md`, `~/Documents/AIReadyLife/vault/career/00_current/`
-- Writes to: `~/Documents/AIReadyLife/vault/career/00_current/pay-stubs/`, `~/Documents/AIReadyLife/vault/career/00_current/status.md`, `~/Documents/AIReadyLife/vault/career/00_current/linkedin-activity.md`, `~/Documents/AIReadyLife/vault/career/open-loops.md`
+- Reads from: `~/Documents/aireadylife/vault/career/01_prior/` — prior period records
+- Reads from: `~/Documents/aireadylife/vault/career/config.md`, `~/Documents/aireadylife/vault/career/00_current/`
+- Writes to: `~/Documents/aireadylife/vault/career/00_current/pay-stubs/`, `~/Documents/aireadylife/vault/career/00_current/status.md`, `~/Documents/aireadylife/vault/career/00_current/linkedin-activity.md`, `~/Documents/aireadylife/vault/career/open-loops.md`

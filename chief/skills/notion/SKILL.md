@@ -95,5 +95,5 @@ If a match is found, PATCH the existing page rather than creating a duplicate.
 
 ## Vault Output
 
-- Local (primary): `~/Documents/AIReadyLife/vault/chief/02_briefs/` — always written first
+- Local (primary): `~/Documents/aireadylife/vault/chief/02_briefs/` — always written first
 - Notion (secondary): briefs page — written after local write succeeds

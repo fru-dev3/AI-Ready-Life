@@ -11,7 +11,7 @@ description: >
 # aireadylife-calendar-add-deadline
 
 **Cadence:** As-received (triggered whenever a new deadline is identified)
-**Produces:** New deadline record in ~/Documents/AIReadyLife/vault/calendar/00_current/YYYY-MM-DD-{slug}.md
+**Produces:** New deadline record in ~/Documents/aireadylife/vault/calendar/00_current/YYYY-MM-DD-{slug}.md
 
 ## What It Does
 
@@ -38,12 +38,12 @@ After creating or updating the deadline record, the task also appends a correspo
 ## Input
 
 - Item data passed by calling op (item name, description, due date, domain, effort estimate, priority)
-- ~/Documents/AIReadyLife/vault/calendar/00_current/ (for deduplication check)
-- ~/Documents/AIReadyLife/vault/calendar/open-loops.md
+- ~/Documents/aireadylife/vault/calendar/00_current/ (for deduplication check)
+- ~/Documents/aireadylife/vault/calendar/open-loops.md
 
 ## Output Format
 
-Deadline file: ~/Documents/AIReadyLife/vault/calendar/00_current/YYYY-MM-DD-{domain}-{slug}.md
+Deadline file: ~/Documents/aireadylife/vault/calendar/00_current/YYYY-MM-DD-{domain}-{slug}.md
 
 ```markdown
 ---
@@ -53,7 +53,7 @@ due_date: 2026-04-15
 priority: P1
 effort_estimate: 1h
 hard_deadline: true
-source_open_loop: ~/Documents/AIReadyLife/vault/tax/open-loops.md
+source_open_loop: ~/Documents/aireadylife/vault/tax/open-loops.md
 date_registered: 2026-04-10
 date_last_updated: 2026-04-10
 resolution_status: open
@@ -81,5 +81,5 @@ No configuration required. Domain and due date are passed by calling op.
 
 ## Vault Paths
 
-- Reads from: ~/Documents/AIReadyLife/vault/calendar/00_current/ (deduplication check), ~/Documents/AIReadyLife/vault/calendar/open-loops.md
-- Writes to: ~/Documents/AIReadyLife/vault/calendar/00_current/YYYY-MM-DD-{domain}-{slug}.md, ~/Documents/AIReadyLife/vault/calendar/open-loops.md
+- Reads from: ~/Documents/aireadylife/vault/calendar/00_current/ (deduplication check), ~/Documents/aireadylife/vault/calendar/open-loops.md
+- Writes to: ~/Documents/aireadylife/vault/calendar/00_current/YYYY-MM-DD-{domain}-{slug}.md, ~/Documents/aireadylife/vault/calendar/open-loops.md

@@ -11,7 +11,7 @@ description: >
 # aireadylife-vision-draft-quarterly-plan
 
 **Trigger:** Called by `aireadylife-vision-op-quarterly-planning`, `aireadylife-vision-op-annual-review`
-**Produces:** Draft quarterly OKR plan at ~/Documents/AIReadyLife/vault/vision/00_current/YYYY-QN-draft-okrs.md
+**Produces:** Draft quarterly OKR plan at ~/Documents/aireadylife/vault/vision/00_current/YYYY-QN-draft-okrs.md
 
 ## What It Does
 
@@ -42,10 +42,10 @@ This flow synthesizes life vision context, current domain health, and the backlo
 
 ## Input
 
-- ~/Documents/AIReadyLife/vault/vision/00_current/ (life vision document, BHAG)
-- ~/Documents/AIReadyLife/vault/vision/00_current/ (most recent monthly scorecard)
-- ~/Documents/AIReadyLife/vault/vision/00_current/milestones.md (carry-forward milestone backlog)
-- `~/Documents/AIReadyLife/vault/vision/01_prior/` — prior period records for trend comparison
+- ~/Documents/aireadylife/vault/vision/00_current/ (life vision document, BHAG)
+- ~/Documents/aireadylife/vault/vision/00_current/ (most recent monthly scorecard)
+- ~/Documents/aireadylife/vault/vision/00_current/milestones.md (carry-forward milestone backlog)
+- `~/Documents/aireadylife/vault/vision/01_prior/` — prior period records for trend comparison
 - Domain selection composite data from calling op
 
 ## Output Format
@@ -87,6 +87,6 @@ No configuration required. Vision document must exist in vault/vision/00_current
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/vision/01_prior/` — prior period records
-- Reads from: ~/Documents/AIReadyLife/vault/vision/00_current/, ~/Documents/AIReadyLife/vault/vision/00_current/, ~/Documents/AIReadyLife/vault/vision/00_current/milestones.md
-- Writes to: ~/Documents/AIReadyLife/vault/vision/00_current/YYYY-QN-draft-okrs.md
+- Reads from: `~/Documents/aireadylife/vault/vision/01_prior/` — prior period records
+- Reads from: ~/Documents/aireadylife/vault/vision/00_current/, ~/Documents/aireadylife/vault/vision/00_current/, ~/Documents/aireadylife/vault/vision/00_current/milestones.md
+- Writes to: ~/Documents/aireadylife/vault/vision/00_current/YYYY-QN-draft-okrs.md

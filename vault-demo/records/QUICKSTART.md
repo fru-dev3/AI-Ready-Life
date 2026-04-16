@@ -17,10 +17,10 @@ The `state.md` file in this demo vault shows what a fully populated records stat
 Move this `records/` folder to:
 
 ```
-~/Documents/AIReadyLife/vault/records/
+~/Documents/aireadylife/vault/records/
 ```
 
-Your full vault path will be: `~/Documents/AIReadyLife/vault/records/`
+Your full vault path will be: `~/Documents/aireadylife/vault/records/`
 
 ## Step 2 — Fill in config.md
 
@@ -31,7 +31,7 @@ Open `config.md` and fill in your details. You don't need everything on day one 
 In Claude Desktop, open your AI Ready Life project folder:
 
 ```
-~/Documents/AIReadyLife/
+~/Documents/aireadylife/
 ```
 
 If you've installed the Records domain from GitHub, it will be available under `domains/records/`. The agent reads your vault automatically from the path in Step 1.

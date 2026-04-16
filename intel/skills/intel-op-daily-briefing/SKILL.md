@@ -33,7 +33,7 @@ Routes market-moving stories (Federal Reserve actions, significant earnings rele
 
 1. Confirm vault/intel/ is set up and config.md has at least 3 configured sources and at least 1 configured topic
 2. Call `aireadylife-intel-flow-build-news-digest` for the filtered, ranked, deduplicated daily digest
-3. Read `~/Documents/AIReadyLife/vault/intel/00_current/` to get list of all active tracked threads
+3. Read `~/Documents/aireadylife/vault/intel/00_current/` to get list of all active tracked threads
 4. For each story in the digest: check if it matches an active thread (same topic, same key entities); if yes, append a dated update to that thread file
 5. For each story that meets priority flagging criteria (Tier 1 source + top-priority topic, OR explicit action implication): call `aireadylife-intel-task-flag-priority-story`
 6. Identify any market-moving stories (interest rates, market indices, major policy action); route summary to Wealth Agent via vault/intel/routing/ note
@@ -44,10 +44,10 @@ Routes market-moving stories (Federal Reserve actions, significant earnings rele
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/intel/00_current/source-list.md` — source registry
-- `~/Documents/AIReadyLife/vault/intel/config.md` — topics, keywords, source priorities
-- `~/Documents/AIReadyLife/vault/intel/00_current/` — active story threads for update
-- `~/Documents/AIReadyLife/vault/intel/01_prior/` — prior period records for trend comparison
+- `~/Documents/aireadylife/vault/intel/00_current/source-list.md` — source registry
+- `~/Documents/aireadylife/vault/intel/config.md` — topics, keywords, source priorities
+- `~/Documents/aireadylife/vault/intel/00_current/` — active story threads for update
+- `~/Documents/aireadylife/vault/intel/01_prior/` — prior period records for trend comparison
 - Recent article data from configured sources
 
 ## Output Format
@@ -81,7 +81,7 @@ Sources scanned: {X} | Stories filtered: {Y} | Duplicates removed: {Z} | Stories
 
 ## Configuration
 
-Required in `~/Documents/AIReadyLife/vault/intel/config.md`:
+Required in `~/Documents/aireadylife/vault/intel/config.md`:
 - `topics_include` — interest topics (minimum 1)
 - `topics_priority` — top-priority topics for flag triggering
 - `keywords_exclude` — noise exclusion list
@@ -96,6 +96,6 @@ Required in `~/Documents/AIReadyLife/vault/intel/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/intel/01_prior/` — prior period records
-- Reads from: `~/Documents/AIReadyLife/vault/intel/00_current/`, `~/Documents/AIReadyLife/vault/intel/config.md`, `~/Documents/AIReadyLife/vault/intel/00_current/`
-- Writes to: `~/Documents/AIReadyLife/vault/intel/02_briefs/{YYYY-MM-DD}-morning.md`, `~/Documents/AIReadyLife/vault/intel/00_current/` (thread updates), `~/Documents/AIReadyLife/vault/intel/open-loops.md`
+- Reads from: `~/Documents/aireadylife/vault/intel/01_prior/` — prior period records
+- Reads from: `~/Documents/aireadylife/vault/intel/00_current/`, `~/Documents/aireadylife/vault/intel/config.md`, `~/Documents/aireadylife/vault/intel/00_current/`
+- Writes to: `~/Documents/aireadylife/vault/intel/02_briefs/{YYYY-MM-DD}-morning.md`, `~/Documents/aireadylife/vault/intel/00_current/` (thread updates), `~/Documents/aireadylife/vault/intel/open-loops.md`

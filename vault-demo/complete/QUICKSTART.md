@@ -39,7 +39,7 @@ Each domain folder contains:
 Move the `vault/` folder from this zip to:
 
 ```
-~/Documents/AIReadyLife/vault/
+~/Documents/aireadylife/vault/
 ```
 
 ## Step 2 — Fill in config.md for each domain
@@ -53,7 +53,7 @@ Recommended start order: **health → wealth → tax → career → chief**
 In Claude Desktop, set your AI Ready Life project folder to:
 
 ```
-~/Documents/AIReadyLife/
+~/Documents/aireadylife/
 ```
 
 Install domain plugins from GitHub. Domains work independently — install the ones you want to use and skip the rest.

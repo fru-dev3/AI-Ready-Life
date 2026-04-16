@@ -9,7 +9,7 @@ description: >
 # aireadylife-explore-flag-expiring-document
 
 **Trigger:** Called by explore document-checking flows and ops
-**Produces:** Expiration flag entry in ~/Documents/AIReadyLife/vault/explore/open-loops.md
+**Produces:** Expiration flag entry in ~/Documents/aireadylife/vault/explore/open-loops.md
 
 ## What It Does
 
@@ -35,7 +35,7 @@ This task writes a structured expiration flag whenever a travel document is foun
 ## Input
 
 - Document data from calling flow (type, person, expiry date, days remaining, urgency tier)
-- ~/Documents/AIReadyLife/vault/explore/open-loops.md (for deduplication check)
+- ~/Documents/aireadylife/vault/explore/open-loops.md (for deduplication check)
 
 ## Output Format
 
@@ -80,5 +80,5 @@ No configuration required. Document type determines lead time and action copy.
 
 ## Vault Paths
 
-- Reads from: ~/Documents/AIReadyLife/vault/explore/open-loops.md
-- Writes to: ~/Documents/AIReadyLife/vault/explore/open-loops.md
+- Reads from: ~/Documents/aireadylife/vault/explore/open-loops.md
+- Writes to: ~/Documents/aireadylife/vault/explore/open-loops.md

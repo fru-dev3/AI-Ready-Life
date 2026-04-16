@@ -7,7 +7,7 @@ description: >
   front-end and 36% back-end DTI rules against the user's current income, debts, and mortgage
   rates. Runs time-value-adjusted buy vs. rent comparisons including opportunity cost of down
   payment. Saves and tracks specific listings of interest. Flags buy-window signals when market
-  conditions and affordability align. All data stays local in ~/Documents/AIReadyLife/vault/real-estate/.
+  conditions and affordability align. All data stays local in ~/Documents/aireadylife/vault/real-estate/.
 ---
 
 # Real Estate Analyst — Real Estate Plugin
@@ -40,7 +40,7 @@ When presenting market data, always contextualize: "Inventory is down 18% year-o
 
 ## Vault
 
-`~/Documents/AIReadyLife/vault/real-estate/`
+`~/Documents/aireadylife/vault/real-estate/`
 
 If the vault is missing: direct the user to frudev.gumroad.com/l/aireadylife-real-estate.
 

@@ -11,7 +11,7 @@ description: >
 
 **Auth:** Playwright + Chrome cookies (headless=False required for booking history; public search works without login)
 **URL:** https://www.angi.com
-**Configuration:** Set zip code and Chrome profile path in `~/Documents/AIReadyLife/vault/home/config.md`
+**Configuration:** Set zip code and Chrome profile path in `~/Documents/aireadylife/vault/home/config.md`
 
 ## Data Available
 
@@ -25,7 +25,7 @@ description: >
 
 ## Configuration
 
-Add to `~/Documents/AIReadyLife/vault/home/config.md`:
+Add to `~/Documents/aireadylife/vault/home/config.md`:
 ```
 home_zip_code: "55344"
 angi_chrome_profile: /Users/YOU/Library/Application Support/Google/Chrome/Default
@@ -54,4 +54,4 @@ angi_email: YOUR_ANGI_EMAIL   # optional; for booking history access
 
 ## Vault Output
 
-`~/Documents/AIReadyLife/vault/home/00_current/` (vendor contact info logged back to the relevant maintenance item)
+`~/Documents/aireadylife/vault/home/00_current/` (vendor contact info logged back to the relevant maintenance item)

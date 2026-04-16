@@ -9,7 +9,7 @@ description: >
 
 ## What It Does
 
-Reads all revenue records for the current month from `~/Documents/AIReadyLife/vault/business/00_current/` and groups them by client name and revenue stream type (consulting, product sales, licensing, retainer, other). Calculates gross revenue as the sum of all recognized revenue items for the period. Reads all expense records from `~/Documents/AIReadyLife/vault/business/00_current/` and groups them by category: software subscriptions, equipment and hardware, contractor labor, professional services (legal, accounting), marketing and advertising, travel (100% deductible), meals and entertainment (50% deductible limit applied automatically), home office, and other. Sums all expense categories to produce total operating expenses.
+Reads all revenue records for the current month from `~/Documents/aireadylife/vault/business/00_current/` and groups them by client name and revenue stream type (consulting, product sales, licensing, retainer, other). Calculates gross revenue as the sum of all recognized revenue items for the period. Reads all expense records from `~/Documents/aireadylife/vault/business/00_current/` and groups them by category: software subscriptions, equipment and hardware, contractor labor, professional services (legal, accounting), marketing and advertising, travel (100% deductible), meals and entertainment (50% deductible limit applied automatically), home office, and other. Sums all expense categories to produce total operating expenses.
 
 Computes net income as gross revenue minus total expenses, and profit margin as net income divided by gross revenue expressed as a percentage. Loads the prior month's P&L figures from the most recently dated brief or raw records file in the vault to generate MoM (month-over-month) comparison figures: dollar change and percentage change for revenue, expenses, and net income. A revenue variance of +/-10% vs prior month is noted; +/-20% is flagged as significant.
 
@@ -21,14 +21,14 @@ Called internally by `aireadylife-business-op-pl-review` and `aireadylife-busine
 
 ## Steps
 
-1. Read all revenue records from `~/Documents/AIReadyLife/vault/business/00_current/` for the current month; identify date, client, amount, stream type, and payment status for each
+1. Read all revenue records from `~/Documents/aireadylife/vault/business/00_current/` for the current month; identify date, client, amount, stream type, and payment status for each
 2. Filter to recognized revenue only (status: paid); exclude pending invoices from gross revenue total
 3. Group revenue by client and stream type; sum to produce gross revenue
-4. Read all expense records from `~/Documents/AIReadyLife/vault/business/00_current/` for the current month; identify date, vendor, amount, and category for each
+4. Read all expense records from `~/Documents/aireadylife/vault/business/00_current/` for the current month; identify date, vendor, amount, and category for each
 5. Apply the 50% meals and entertainment cap: multiply all M&E line items by 0.5 for the deductible figure used in net income calculation
 6. Group expenses by category; sum each category; sum all categories to produce total expenses
 7. Calculate net income = gross revenue - total expenses; calculate profit margin = net income / gross revenue
-8. Locate prior month P&L data from `~/Documents/AIReadyLife/vault/business/00_current/` — look for a file named `pl-{YYYY-MM}.md` or `brief-{YYYY-MM}.md` from the previous month
+8. Locate prior month P&L data from `~/Documents/aireadylife/vault/business/00_current/` — look for a file named `pl-{YYYY-MM}.md` or `brief-{YYYY-MM}.md` from the previous month
 9. Extract prior month gross revenue, total expenses, and net income figures for MoM comparison
 10. Calculate MoM dollar delta and percentage change for revenue, expenses, and net income
 11. Flag any revenue variance above 20% or expense category over budget threshold
@@ -37,11 +37,11 @@ Called internally by `aireadylife-business-op-pl-review` and `aireadylife-busine
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/business/00_current/` — invoice and revenue records for current month; each file should include: date, client, amount, stream type, payment status
-- `~/Documents/AIReadyLife/vault/business/00_current/` — expense records for current month; each file should include: date, vendor, amount, category
-- `~/Documents/AIReadyLife/vault/business/00_current/pl-{YYYY-MM}.md` — prior month P&L for MoM comparison (optional; if missing, MoM columns show "N/A")
-- `~/Documents/AIReadyLife/vault/business/01_prior/` — prior period records for trend comparison
-- `~/Documents/AIReadyLife/vault/business/config.md` — monthly budget targets per expense category (optional; used for variance flags)
+- `~/Documents/aireadylife/vault/business/00_current/` — invoice and revenue records for current month; each file should include: date, client, amount, stream type, payment status
+- `~/Documents/aireadylife/vault/business/00_current/` — expense records for current month; each file should include: date, vendor, amount, category
+- `~/Documents/aireadylife/vault/business/00_current/pl-{YYYY-MM}.md` — prior month P&L for MoM comparison (optional; if missing, MoM columns show "N/A")
+- `~/Documents/aireadylife/vault/business/01_prior/` — prior period records for trend comparison
+- `~/Documents/aireadylife/vault/business/config.md` — monthly budget targets per expense category (optional; used for variance flags)
 
 ## Output Format
 
@@ -74,7 +74,7 @@ Called internally by `aireadylife-business-op-pl-review` and `aireadylife-busine
 
 ## Configuration
 
-Required fields in `~/Documents/AIReadyLife/vault/business/config.md`:
+Required fields in `~/Documents/aireadylife/vault/business/config.md`:
 - `entities` — list of business entities (name, state, type: LLC/S-corp/sole prop)
 - `fiscal_year_start` — month when your fiscal year starts (default: January)
 - `budget_{category}` — monthly budget target per expense category (optional; enables variance flagging)
@@ -89,6 +89,6 @@ Required fields in `~/Documents/AIReadyLife/vault/business/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/business/01_prior/` — prior period records
-- Reads from: `~/Documents/AIReadyLife/vault/business/00_current/`, `~/Documents/AIReadyLife/vault/business/00_current/`, `~/Documents/AIReadyLife/vault/business/config.md`
-- Writes to: called by ops that write to `~/Documents/AIReadyLife/vault/business/02_briefs/`
+- Reads from: `~/Documents/aireadylife/vault/business/01_prior/` — prior period records
+- Reads from: `~/Documents/aireadylife/vault/business/00_current/`, `~/Documents/aireadylife/vault/business/00_current/`, `~/Documents/aireadylife/vault/business/config.md`
+- Writes to: called by ops that write to `~/Documents/aireadylife/vault/business/02_briefs/`

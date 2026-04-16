@@ -17,10 +17,10 @@ The `state.md` file in this demo vault shows what a fully populated content stat
 Move this `content/` folder to:
 
 ```
-~/Documents/AIReadyLife/vault/content/
+~/Documents/aireadylife/vault/content/
 ```
 
-Your full vault path will be: `~/Documents/AIReadyLife/vault/content/`
+Your full vault path will be: `~/Documents/aireadylife/vault/content/`
 
 ## Step 2 — Fill in config.md
 
@@ -31,7 +31,7 @@ Open `config.md` and fill in your details. You don't need everything on day one 
 In Claude Desktop, open your AI Ready Life project folder:
 
 ```
-~/Documents/AIReadyLife/
+~/Documents/aireadylife/
 ```
 
 If you've installed the Content domain from GitHub, it will be available under `domains/content/`. The agent reads your vault automatically from the path in Step 1.

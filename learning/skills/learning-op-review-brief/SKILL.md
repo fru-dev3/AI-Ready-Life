@@ -41,10 +41,10 @@ The brief is designed for a Monday morning read. It anchors the week's learning 
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/learning/00_current/` — active items, status, certs, study log
-- `~/Documents/AIReadyLife/vault/learning/00_current/current-reading.md` — current book data
-- `~/Documents/AIReadyLife/vault/learning/01_prior/` — prior period records for trend comparison
-- `~/Documents/AIReadyLife/vault/learning/open-loops.md` — outstanding flags
+- `~/Documents/aireadylife/vault/learning/00_current/` — active items, status, certs, study log
+- `~/Documents/aireadylife/vault/learning/00_current/current-reading.md` — current book data
+- `~/Documents/aireadylife/vault/learning/01_prior/` — prior period records for trend comparison
+- `~/Documents/aireadylife/vault/learning/open-loops.md` — outstanding flags
 
 ## Output Format
 
@@ -101,6 +101,6 @@ Study log at `vault/learning/00_current/study-log.md` with daily entries: date, 
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/learning/01_prior/` — prior period records
-- Reads from: `~/Documents/AIReadyLife/vault/learning/00_current/`, `~/Documents/AIReadyLife/vault/learning/00_current/`, `~/Documents/AIReadyLife/vault/learning/open-loops.md`
-- Writes to: `~/Documents/AIReadyLife/vault/learning/02_briefs/YYYY-MM-DD-learning-brief.md`, `~/Documents/AIReadyLife/vault/learning/open-loops.md`
+- Reads from: `~/Documents/aireadylife/vault/learning/01_prior/` — prior period records
+- Reads from: `~/Documents/aireadylife/vault/learning/00_current/`, `~/Documents/aireadylife/vault/learning/00_current/`, `~/Documents/aireadylife/vault/learning/open-loops.md`
+- Writes to: `~/Documents/aireadylife/vault/learning/02_briefs/YYYY-MM-DD-learning-brief.md`, `~/Documents/aireadylife/vault/learning/open-loops.md`

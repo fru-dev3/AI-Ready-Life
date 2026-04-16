@@ -11,7 +11,7 @@ description: >
 # aireadylife-explore-trip-planning-review
 
 **Cadence:** On-demand (before each upcoming trip, or when planning a new trip)
-**Produces:** Trip readiness report at ~/Documents/AIReadyLife/vault/explore/00_current/YYYY-{destination}-trip.md
+**Produces:** Trip readiness report at ~/Documents/aireadylife/vault/explore/00_current/YYYY-{destination}-trip.md
 
 ## What It Does
 
@@ -51,10 +51,10 @@ The trip planning review is the comprehensive pre-trip readiness check — a ful
 
 ## Input
 
-- ~/Documents/AIReadyLife/vault/explore/00_current/ (trip record)
-- ~/Documents/AIReadyLife/vault/explore/00_current/ (traveler documents)
-- `~/Documents/AIReadyLife/vault/explore/01_prior/` — prior period records for trend comparison
-- ~/Documents/AIReadyLife/vault/explore/config.md (travelers, citizenship, travel budget)
+- ~/Documents/aireadylife/vault/explore/00_current/ (trip record)
+- ~/Documents/aireadylife/vault/explore/00_current/ (traveler documents)
+- `~/Documents/aireadylife/vault/explore/01_prior/` — prior period records for trend comparison
+- ~/Documents/aireadylife/vault/explore/config.md (travelers, citizenship, travel budget)
 
 ## Output Format
 
@@ -113,6 +113,6 @@ Required in vault/explore/config.md:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/explore/01_prior/` — prior period records
-- Reads from: ~/Documents/AIReadyLife/vault/explore/00_current/, ~/Documents/AIReadyLife/vault/explore/00_current/, ~/Documents/AIReadyLife/vault/explore/config.md
-- Writes to: ~/Documents/AIReadyLife/vault/explore/00_current/YYYY-{destination}-trip.md, ~/Documents/AIReadyLife/vault/explore/open-loops.md
+- Reads from: `~/Documents/aireadylife/vault/explore/01_prior/` — prior period records
+- Reads from: ~/Documents/aireadylife/vault/explore/00_current/, ~/Documents/aireadylife/vault/explore/00_current/, ~/Documents/aireadylife/vault/explore/config.md
+- Writes to: ~/Documents/aireadylife/vault/explore/00_current/YYYY-{destination}-trip.md, ~/Documents/aireadylife/vault/explore/open-loops.md

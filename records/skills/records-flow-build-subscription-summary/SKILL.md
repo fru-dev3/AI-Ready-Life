@@ -29,7 +29,7 @@ The output table is sorted by monthly cost descending — this prioritization en
 
 ## Steps
 
-1. Read all active subscriptions from `~/Documents/AIReadyLife/vault/records/00_current/subscriptions.md`
+1. Read all active subscriptions from `~/Documents/aireadylife/vault/records/00_current/subscriptions.md`
 2. For each subscription: calculate monthly equivalent and annual equivalent cost
 3. Check last-used date; flag subscriptions with no use in >60 days as "low usage"
 4. Check renewal date; flag any subscription renewing within 30 days
@@ -42,8 +42,8 @@ The output table is sorted by monthly cost descending — this prioritization en
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/records/00_current/subscriptions.md` — active subscription registry
-- `~/Documents/AIReadyLife/vault/records/01_prior/` — prior period records for trend comparison
+- `~/Documents/aireadylife/vault/records/00_current/subscriptions.md` — active subscription registry
+- `~/Documents/aireadylife/vault/records/01_prior/` — prior period records for trend comparison
 
 ## Output Format
 
@@ -64,7 +64,7 @@ The output table is sorted by monthly cost descending — this prioritization en
 
 ## Configuration
 
-Required in `~/Documents/AIReadyLife/vault/records/00_current/subscriptions.md`:
+Required in `~/Documents/aireadylife/vault/records/00_current/subscriptions.md`:
 - For each subscription: `service_name`, `category`, `billing_amount`, `billing_cycle`, `renewal_date`, `last_used_date`, `essential` (true/false)
 
 ## Error Handling
@@ -75,6 +75,6 @@ Required in `~/Documents/AIReadyLife/vault/records/00_current/subscriptions.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/records/01_prior/` — prior period records
-- Reads from: `~/Documents/AIReadyLife/vault/records/00_current/subscriptions.md`
-- Writes to: `~/Documents/AIReadyLife/vault/records/00_current/YYYY-MM-subscription-summary.md`
+- Reads from: `~/Documents/aireadylife/vault/records/01_prior/` — prior period records
+- Reads from: `~/Documents/aireadylife/vault/records/00_current/subscriptions.md`
+- Writes to: `~/Documents/aireadylife/vault/records/00_current/YYYY-MM-subscription-summary.md`

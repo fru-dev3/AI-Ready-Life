@@ -34,8 +34,8 @@ Called by `aireadylife-learning-flow-build-progress-summary` and `aireadylife-le
 ## Input
 
 - Item data from calling flow (all fields required)
-- `~/Documents/AIReadyLife/vault/learning/config.md` — daily_study_minutes for recovery feasibility
-- `~/Documents/AIReadyLife/vault/learning/open-loops.md` — for deduplication
+- `~/Documents/aireadylife/vault/learning/config.md` — daily_study_minutes for recovery feasibility
+- `~/Documents/aireadylife/vault/learning/open-loops.md` — for deduplication
 
 ## Output Format
 
@@ -75,5 +75,5 @@ Active item records in `vault/learning/00_current/` provide the career connectio
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/learning/open-loops.md`, `~/Documents/AIReadyLife/vault/learning/config.md`
-- Writes to: `~/Documents/AIReadyLife/vault/learning/open-loops.md`
+- Reads from: `~/Documents/aireadylife/vault/learning/open-loops.md`, `~/Documents/aireadylife/vault/learning/config.md`
+- Writes to: `~/Documents/aireadylife/vault/learning/open-loops.md`

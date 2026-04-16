@@ -14,7 +14,7 @@ description: >
 
 ## What It Does
 
-This flow is the data-collection backbone of every chief op. It discovers all installed plugins automatically by scanning ~/Documents/AIReadyLife/vault/ for subdirectories that contain an open-loops.md file — no manual plugin list required. If a plugin has an open-loops.md file in its vault directory, it is included. This means the flow works correctly regardless of which combination of plugins the user has installed.
+This flow is the data-collection backbone of every chief op. It discovers all installed plugins automatically by scanning ~/Documents/aireadylife/vault/ for subdirectories that contain an open-loops.md file — no manual plugin list required. If a plugin has an open-loops.md file in its vault directory, it is included. This means the flow works correctly regardless of which combination of plugins the user has installed.
 
 For each discovered plugin vault, the flow reads open-loops.md and parses every item that is not marked as complete (not a checked checkbox: `- [x]`). For each unresolved item, it extracts: the priority marker (🔴 / 🟡 / 🟢), the full item description, the recommended action, the due date if one is present (parsed from both ISO format YYYY-MM-DD and natural language like "by end of April" or "this week"), and the date the flag was raised (from the item's timestamp or date field).
 
@@ -24,7 +24,7 @@ Each item in the result carries a domain label (the plugin name inferred from th
 
 ## Steps
 
-1. Scan ~/Documents/AIReadyLife/vault/ for subdirectories containing an open-loops.md file
+1. Scan ~/Documents/aireadylife/vault/ for subdirectories containing an open-loops.md file
 2. For each discovered directory: read open-loops.md; extract all unresolved items (unchecked checkboxes)
 3. Per item: extract priority marker, description, action, due date (ISO and natural language), date raised
 4. Tag each item with its source domain name
@@ -34,7 +34,7 @@ Each item in the result carries a domain label (the plugin name inferred from th
 
 ## Input
 
-- ~/Documents/AIReadyLife/vault/*/open-loops.md
+- ~/Documents/aireadylife/vault/*/open-loops.md
 - `vault/chief/01_prior/` — prior period records for trend comparison
 
 ## Output Format
@@ -55,12 +55,12 @@ No configuration required. Auto-discovers plugins from vault/ directory structur
 
 ## Error Handling
 
-- **vault/ directory missing:** Return empty result with error: "No vault directory found at ~/Documents/AIReadyLife/vault/."
+- **vault/ directory missing:** Return empty result with error: "No vault directory found at ~/Documents/aireadylife/vault/."
 - **open-loops.md unreadable:** Skip that domain and note in result: "{domain}: open-loops.md unreadable — check file permissions."
 - **open-loops.md malformed (no checkbox format):** Parse as best-effort; flag items without a priority marker as 🟢 by default.
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/chief/01_prior/` — prior period records
-- Reads from: ~/Documents/AIReadyLife/vault/*/open-loops.md
-- Writes to: ~/Documents/AIReadyLife/vault/chief/02_briefs/ (via calling op, not directly)
+- Reads from: `~/Documents/aireadylife/vault/chief/01_prior/` — prior period records
+- Reads from: ~/Documents/aireadylife/vault/*/open-loops.md
+- Writes to: ~/Documents/aireadylife/vault/chief/02_briefs/ (via calling op, not directly)

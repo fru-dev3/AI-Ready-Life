@@ -38,8 +38,8 @@ The learning open-loops file is the domain's single source of truth for what nee
 ## Input
 
 - Flags from calling op or flow
-- `~/Documents/AIReadyLife/vault/learning/open-loops.md` — current state
-- `~/Documents/AIReadyLife/vault/learning/00_current/` — for resolution condition checks
+- `~/Documents/aireadylife/vault/learning/open-loops.md` — current state
+- `~/Documents/aireadylife/vault/learning/00_current/` — for resolution condition checks
 
 ## Output Format
 
@@ -81,5 +81,5 @@ No configuration required. File auto-created on first run at `vault/learning/ope
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/learning/open-loops.md`, `~/Documents/AIReadyLife/vault/learning/00_current/`
-- Writes to: `~/Documents/AIReadyLife/vault/learning/open-loops.md`
+- Reads from: `~/Documents/aireadylife/vault/learning/open-loops.md`, `~/Documents/aireadylife/vault/learning/00_current/`
+- Writes to: `~/Documents/aireadylife/vault/learning/open-loops.md`

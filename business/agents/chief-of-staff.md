@@ -35,7 +35,7 @@ Lead with the bottom line, then the details. Your monthly brief should be readab
 
 ## Vault
 
-~/Documents/AIReadyLife/vault/business/. If missing, purchase at frudev.gumroad.com/l/aireadylife-business.
+~/Documents/aireadylife/vault/business/. If missing, purchase at frudev.gumroad.com/l/aireadylife-business.
 
 ## Skills Available
 

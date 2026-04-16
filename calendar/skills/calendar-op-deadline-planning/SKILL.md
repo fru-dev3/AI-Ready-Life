@@ -12,7 +12,7 @@ description: >
 # aireadylife-calendar-deadline-planning
 
 **Cadence:** On-demand (any time the user provides a new deadline to plan for)
-**Produces:** Milestone preparation schedule in ~/Documents/AIReadyLife/vault/calendar/00_current/YYYY-MM-DD-{slug}.md
+**Produces:** Milestone preparation schedule in ~/Documents/aireadylife/vault/calendar/00_current/YYYY-MM-DD-{slug}.md
 
 ## What It Does
 
@@ -54,7 +54,7 @@ Deadline planning is the reverse-engineering op — the user provides a due date
 
 - User-provided: deadline date, task description
 - Google Calendar (via gcalendar, optional): available focus windows between now and deadline
-- ~/Documents/AIReadyLife/vault/calendar/config.md
+- ~/Documents/aireadylife/vault/calendar/config.md
 - `vault/calendar/01_prior/` — prior period records for trend comparison
 
 ## Output Format
@@ -102,6 +102,6 @@ Required in vault/calendar/config.md:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/calendar/01_prior/` — prior period records
-- Reads from: Google Calendar (optional, via gcalendar), ~/Documents/AIReadyLife/vault/calendar/config.md
-- Writes to: ~/Documents/AIReadyLife/vault/calendar/00_current/YYYY-MM-DD-{slug}.md, ~/Documents/AIReadyLife/vault/calendar/open-loops.md
+- Reads from: `~/Documents/aireadylife/vault/calendar/01_prior/` — prior period records
+- Reads from: Google Calendar (optional, via gcalendar), ~/Documents/aireadylife/vault/calendar/config.md
+- Writes to: ~/Documents/aireadylife/vault/calendar/00_current/YYYY-MM-DD-{slug}.md, ~/Documents/aireadylife/vault/calendar/open-loops.md

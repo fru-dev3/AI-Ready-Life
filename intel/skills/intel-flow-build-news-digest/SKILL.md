@@ -9,7 +9,7 @@ description: >
 
 ## What It Does
 
-Ingests recent content from every source registered in `~/Documents/AIReadyLife/vault/intel/00_current/source-list.md`, applies topic and keyword filters to remove irrelevant items, deduplicates stories being covered by multiple outlets, and formats a ranked daily digest. The output is not a list of links — it is a curated, one-sentence-per-story briefing that is fully informative on its own.
+Ingests recent content from every source registered in `~/Documents/aireadylife/vault/intel/00_current/source-list.md`, applies topic and keyword filters to remove irrelevant items, deduplicates stories being covered by multiple outlets, and formats a ranked daily digest. The output is not a list of links — it is a curated, one-sentence-per-story briefing that is fully informative on its own.
 
 Source registry: each source entry in source-list.md has a name, URL or RSS feed address, source type (RSS, newsletter, X/Twitter account, podcast, website), topic tags, and a credibility tier (1, 2, or 3). Tier 1 sources (Reuters, AP, FT, WSJ, Bloomberg, MIT Tech Review, The Economist) are treated as authoritative for facts and breaking news. Tier 2 sources (niche trade publications, established newsletters, think tank reports) provide depth. Tier 3 sources (blogs, aggregator accounts, YouTube commentary) are useful for trend signal only.
 
@@ -27,8 +27,8 @@ Called internally by `aireadylife-intel-op-daily-briefing` and `aireadylife-inte
 
 ## Steps
 
-1. Read source registry from `~/Documents/AIReadyLife/vault/intel/00_current/source-list.md`; load all active sources with their credibility tier and topic tags
-2. Read topic include list and keyword exclude list from `~/Documents/AIReadyLife/vault/intel/config.md`
+1. Read source registry from `~/Documents/aireadylife/vault/intel/00_current/source-list.md`; load all active sources with their credibility tier and topic tags
+2. Read topic include list and keyword exclude list from `~/Documents/aireadylife/vault/intel/config.md`
 3. For each source: fetch or read the most recent articles/entries (within the past 24 hours); collect headline, summary, URL, publication time, source name
 4. Apply topic filter: keep articles that match at least one configured include topic; remove articles containing exclude keywords
 5. Cluster duplicate coverage: group articles reporting on the same event; retain the highest-tier source from each cluster
@@ -40,9 +40,9 @@ Called internally by `aireadylife-intel-op-daily-briefing` and `aireadylife-inte
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/intel/00_current/source-list.md` — source registry with credibility tiers and topic tags
-- `~/Documents/AIReadyLife/vault/intel/01_prior/` — prior period records for trend comparison
-- `~/Documents/AIReadyLife/vault/intel/config.md` — include topics, exclude keywords, topic priorities, minimum score threshold
+- `~/Documents/aireadylife/vault/intel/00_current/source-list.md` — source registry with credibility tiers and topic tags
+- `~/Documents/aireadylife/vault/intel/01_prior/` — prior period records for trend comparison
+- `~/Documents/aireadylife/vault/intel/config.md` — include topics, exclude keywords, topic priorities, minimum score threshold
 - Article data from configured sources (passed by the calling op or read from vault if pre-fetched)
 
 ## Output Format
@@ -68,7 +68,7 @@ Called internally by `aireadylife-intel-op-daily-briefing` and `aireadylife-inte
 
 ## Configuration
 
-Required in `~/Documents/AIReadyLife/vault/intel/config.md`:
+Required in `~/Documents/aireadylife/vault/intel/config.md`:
 - `topics_include` — list of interest topics (e.g., ["AI", "personal finance", "career", "tech policy"])
 - `topics_priority` — subset of include topics that receive higher relevance score (top-priority topics)
 - `keywords_exclude` — list of keywords that exclude any article containing them
@@ -84,6 +84,6 @@ Required in `~/Documents/AIReadyLife/vault/intel/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/intel/01_prior/` — prior period records
-- Reads from: `~/Documents/AIReadyLife/vault/intel/00_current/source-list.md`, `~/Documents/AIReadyLife/vault/intel/config.md`
-- Writes to: called by ops that write to `~/Documents/AIReadyLife/vault/intel/02_briefs/`
+- Reads from: `~/Documents/aireadylife/vault/intel/01_prior/` — prior period records
+- Reads from: `~/Documents/aireadylife/vault/intel/00_current/source-list.md`, `~/Documents/aireadylife/vault/intel/config.md`
+- Writes to: called by ops that write to `~/Documents/aireadylife/vault/intel/02_briefs/`

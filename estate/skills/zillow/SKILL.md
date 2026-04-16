@@ -11,7 +11,7 @@ description: >
 
 **Auth:** No authentication required for public data (web research); Zillow Bridge API via RapidAPI for programmatic lookups
 **URL:** https://www.zillow.com
-**Configuration:** Set property addresses and optional API key in `~/Documents/AIReadyLife/vault/estate/config.md`
+**Configuration:** Set property addresses and optional API key in `~/Documents/aireadylife/vault/estate/config.md`
 
 ## Data Available
 
@@ -24,7 +24,7 @@ description: >
 
 ## Configuration
 
-Add to `~/Documents/AIReadyLife/vault/estate/config.md`:
+Add to `~/Documents/aireadylife/vault/estate/config.md`:
 ```
 zillow_rapidapi_key: YOUR_KEY   # optional
 estate_properties:
@@ -58,4 +58,4 @@ estate_properties:
 
 ## Vault Output
 
-`~/Documents/AIReadyLife/vault/estate/00_current/`
+`~/Documents/aireadylife/vault/estate/00_current/`

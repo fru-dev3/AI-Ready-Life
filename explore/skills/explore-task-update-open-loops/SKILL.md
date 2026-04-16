@@ -9,7 +9,7 @@ description: >
 # aireadylife-explore-update-open-loops
 
 **Trigger:** Called by explore ops and flows
-**Produces:** Updated ~/Documents/AIReadyLife/vault/explore/open-loops.md with current action items
+**Produces:** Updated ~/Documents/aireadylife/vault/explore/open-loops.md with current action items
 
 ## What It Does
 
@@ -40,9 +40,9 @@ This task maintains vault/explore/open-loops.md as the canonical explore domain 
 ## Input
 
 - New flags from calling op
-- ~/Documents/AIReadyLife/vault/explore/open-loops.md (current state)
-- ~/Documents/AIReadyLife/vault/explore/00_current/ (for document renewal verification)
-- ~/Documents/AIReadyLife/vault/explore/00_current/ (for booking completion verification)
+- ~/Documents/aireadylife/vault/explore/open-loops.md (current state)
+- ~/Documents/aireadylife/vault/explore/00_current/ (for document renewal verification)
+- ~/Documents/aireadylife/vault/explore/00_current/ (for booking completion verification)
 
 ## Output Format
 
@@ -74,5 +74,5 @@ No configuration required.
 
 ## Vault Paths
 
-- Reads from: ~/Documents/AIReadyLife/vault/explore/open-loops.md, ~/Documents/AIReadyLife/vault/explore/00_current/, ~/Documents/AIReadyLife/vault/explore/00_current/
-- Writes to: ~/Documents/AIReadyLife/vault/explore/open-loops.md, ~/Documents/AIReadyLife/vault/explore/open-loops-archive.md
+- Reads from: ~/Documents/aireadylife/vault/explore/open-loops.md, ~/Documents/aireadylife/vault/explore/00_current/, ~/Documents/aireadylife/vault/explore/00_current/
+- Writes to: ~/Documents/aireadylife/vault/explore/open-loops.md, ~/Documents/aireadylife/vault/explore/open-loops-archive.md

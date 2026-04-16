@@ -36,11 +36,11 @@ Synthesizes into a brief with: brand health score with direction (up/down), plat
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/brand/00_current/synthesis-{YYYY-MM}.md` — current month synthesis
-- `~/Documents/AIReadyLife/vault/brand/00_current/` — mention records for notable mention
-- `~/Documents/AIReadyLife/vault/brand/01_prior/` — prior period records for trend comparison
-- `~/Documents/AIReadyLife/vault/brand/open-loops.md` — current brand action items
-- `~/Documents/AIReadyLife/vault/brand/config.md` — platform list, thresholds
+- `~/Documents/aireadylife/vault/brand/00_current/synthesis-{YYYY-MM}.md` — current month synthesis
+- `~/Documents/aireadylife/vault/brand/00_current/` — mention records for notable mention
+- `~/Documents/aireadylife/vault/brand/01_prior/` — prior period records for trend comparison
+- `~/Documents/aireadylife/vault/brand/open-loops.md` — current brand action items
+- `~/Documents/aireadylife/vault/brand/config.md` — platform list, thresholds
 
 ## Output Format
 
@@ -78,6 +78,6 @@ Same as brand-op-monthly-synthesis. No additional configuration required.
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/brand/01_prior/` — prior period records
-- Reads from: `~/Documents/AIReadyLife/vault/brand/00_current/`, `~/Documents/AIReadyLife/vault/brand/00_current/`, `~/Documents/AIReadyLife/vault/brand/open-loops.md`, `~/Documents/AIReadyLife/vault/brand/config.md`
-- Writes to: `~/Documents/AIReadyLife/vault/brand/02_briefs/brief-{YYYY-MM}.md` (if saving)
+- Reads from: `~/Documents/aireadylife/vault/brand/01_prior/` — prior period records
+- Reads from: `~/Documents/aireadylife/vault/brand/00_current/`, `~/Documents/aireadylife/vault/brand/00_current/`, `~/Documents/aireadylife/vault/brand/open-loops.md`, `~/Documents/aireadylife/vault/brand/config.md`
+- Writes to: `~/Documents/aireadylife/vault/brand/02_briefs/brief-{YYYY-MM}.md` (if saving)

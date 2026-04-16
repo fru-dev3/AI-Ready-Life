@@ -12,7 +12,7 @@ description: >
 # aireadylife-vision-monthly-scorecard
 
 **Cadence:** Monthly (last day of month or first of new month)
-**Produces:** Monthly scorecard at ~/Documents/AIReadyLife/vault/vision/00_current/YYYY-MM-scorecard.md
+**Produces:** Monthly scorecard at ~/Documents/aireadylife/vault/vision/00_current/YYYY-MM-scorecard.md
 
 ## What It Does
 
@@ -52,13 +52,13 @@ After building the scorecard, the op calls `vision-task-flag-stalled-goal` for a
 
 ## Input
 
-- ~/Documents/AIReadyLife/vault/*/open-loops.md (all installed plugins, for resolution ratio)
-- ~/Documents/AIReadyLife/vault/vision/00_current/ (current OKRs, for KR pace)
-- ~/Documents/AIReadyLife/vault/vision/00_current/milestones.md (milestone log, for positive signal)
-- ~/Documents/AIReadyLife/vault/vision/00_current/ (prior month scorecard, for trend)
-- ~/Documents/AIReadyLife/vault/vision/00_current/ (goal list, for stall check)
-- `~/Documents/AIReadyLife/vault/vision/01_prior/` — prior period records for trend comparison
-- ~/Documents/AIReadyLife/vault/vision/config.md
+- ~/Documents/aireadylife/vault/*/open-loops.md (all installed plugins, for resolution ratio)
+- ~/Documents/aireadylife/vault/vision/00_current/ (current OKRs, for KR pace)
+- ~/Documents/aireadylife/vault/vision/00_current/milestones.md (milestone log, for positive signal)
+- ~/Documents/aireadylife/vault/vision/00_current/ (prior month scorecard, for trend)
+- ~/Documents/aireadylife/vault/vision/00_current/ (goal list, for stall check)
+- `~/Documents/aireadylife/vault/vision/01_prior/` — prior period records for trend comparison
+- ~/Documents/aireadylife/vault/vision/config.md
 
 ## Output Format
 
@@ -113,6 +113,6 @@ Required in vault/vision/config.md:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/vision/01_prior/` — prior period records
-- Reads from: ~/Documents/AIReadyLife/vault/*/open-loops.md, ~/Documents/AIReadyLife/vault/vision/00_current/, ~/Documents/AIReadyLife/vault/vision/00_current/, ~/Documents/AIReadyLife/vault/vision/00_current/
-- Writes to: ~/Documents/AIReadyLife/vault/vision/00_current/YYYY-MM-scorecard.md, ~/Documents/AIReadyLife/vault/vision/open-loops.md
+- Reads from: `~/Documents/aireadylife/vault/vision/01_prior/` — prior period records
+- Reads from: ~/Documents/aireadylife/vault/*/open-loops.md, ~/Documents/aireadylife/vault/vision/00_current/, ~/Documents/aireadylife/vault/vision/00_current/, ~/Documents/aireadylife/vault/vision/00_current/
+- Writes to: ~/Documents/aireadylife/vault/vision/00_current/YYYY-MM-scorecard.md, ~/Documents/aireadylife/vault/vision/open-loops.md

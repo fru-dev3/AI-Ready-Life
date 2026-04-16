@@ -79,6 +79,6 @@ The learning brief prompts the user to update this file if the last_updated date
 
 ## Vault Output
 
-- `~/Documents/AIReadyLife/vault/learning/00_current/current-reading.md` — current book progress
-- `~/Documents/AIReadyLife/vault/learning/00_current/completed.md` — YTD reading completions (from Goodreads read shelf)
-- `~/Documents/AIReadyLife/vault/learning/00_current/highlights/` — exported Kindle highlights by book
+- `~/Documents/aireadylife/vault/learning/00_current/current-reading.md` — current book progress
+- `~/Documents/aireadylife/vault/learning/00_current/completed.md` — YTD reading completions (from Goodreads read shelf)
+- `~/Documents/aireadylife/vault/learning/00_current/highlights/` — exported Kindle highlights by book

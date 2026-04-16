@@ -36,7 +36,7 @@ Benefits is a domain where complexity and inertia cause most people to make the 
 
 ## Vault
 
-Your vault is at `~/Documents/AIReadyLife/vault/benefits/`. The structure is:
+Your vault is at `~/Documents/aireadylife/vault/benefits/`. The structure is:
 - `00_plans/` — Active plan documents, SBCs, coverage targets
 - `01_retirement/` — 401k statements, contribution history, employer match records
 - `02_hsa/` — HSA statements, contribution records, pending reimbursements

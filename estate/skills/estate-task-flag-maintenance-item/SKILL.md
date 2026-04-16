@@ -9,7 +9,7 @@ description: >
 
 # aireadylife-estate-flag-maintenance-item
 
-**Produces:** New maintenance item in `~/Documents/AIReadyLife/vault/estate/00_current/` and a flag in `~/Documents/AIReadyLife/vault/estate/open-loops.md`
+**Produces:** New maintenance item in `~/Documents/aireadylife/vault/estate/00_current/` and a flag in `~/Documents/aireadylife/vault/estate/open-loops.md`
 
 ## What It Does
 
@@ -31,8 +31,8 @@ The estimated cost field is used by the cash flow analysis to reserve funds befo
 4. Set estimated cost (use vendor quote if available; otherwise estimate from maintenance knowledge base)
 5. Set target completion date based on urgency: routine = 30 days, urgent = 14 days, emergency = 72 hours
 6. If cost > $2,500: add note recommending CapEx vs. maintenance classification review with tax professional
-7. Write detailed maintenance item file to `~/Documents/AIReadyLife/vault/estate/00_current/{property-slug}-{YYYY-MM-DD}-{issue-slug}.md`
-8. Write condensed flag entry to `~/Documents/AIReadyLife/vault/estate/open-loops.md`
+7. Write detailed maintenance item file to `~/Documents/aireadylife/vault/estate/00_current/{property-slug}-{YYYY-MM-DD}-{issue-slug}.md`
+8. Write condensed flag entry to `~/Documents/aireadylife/vault/estate/open-loops.md`
 
 ## Input
 
@@ -90,5 +90,5 @@ No additional configuration required beyond vault existing.
 
 ## Vault Paths
 
-- Writes to: `~/Documents/AIReadyLife/vault/estate/00_current/{property-slug}-{YYYY-MM-DD}-{issue-slug}.md`
-- Writes to: `~/Documents/AIReadyLife/vault/estate/open-loops.md`
+- Writes to: `~/Documents/aireadylife/vault/estate/00_current/{property-slug}-{YYYY-MM-DD}-{issue-slug}.md`
+- Writes to: `~/Documents/aireadylife/vault/estate/open-loops.md`

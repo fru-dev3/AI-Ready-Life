@@ -36,26 +36,26 @@ After these three updates, the sync triggers the records review brief.
 ## Steps
 
 1. Confirm vault and config.md are present; halt if missing
-2. Read all documents with expiration dates from `~/Documents/AIReadyLife/vault/records/00_current/` and `01_legal/`
+2. Read all documents with expiration dates from `~/Documents/aireadylife/vault/records/00_current/` and `01_legal/`
 3. Recalculate days-until-expiration for each document; apply alert thresholds
 4. Flag any document newly entering its alert window since last sync
-5. Read subscription registry from `~/Documents/AIReadyLife/vault/records/00_current/subscriptions.md`
+5. Read subscription registry from `~/Documents/aireadylife/vault/records/00_current/subscriptions.md`
 6. Check for annual renewals within next 30 days; flag with renewal date and cost
 7. Check for subscriptions unused for 60+ days; flag for cancellation consideration
 8. Check subscription prices against logged amounts; flag any discrepancy
 9. Read legal document review dates from `01_legal/`; check against life events in config.md
 10. Call `aireadylife-records-update-open-loops` with all new flags; resolve any items from prior sync that are no longer relevant
-11. Write sync completion record to `~/Documents/AIReadyLife/vault/records/00_current/last-sync.md`
+11. Write sync completion record to `~/Documents/aireadylife/vault/records/00_current/last-sync.md`
 12. Trigger `aireadylife-records-review-brief` to compile all results
 13. Present sync summary with counts of documents updated, documents flagged, subscriptions reviewed
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/records/config.md`
-- `~/Documents/AIReadyLife/vault/records/00_current/`
-- `~/Documents/AIReadyLife/vault/records/00_current/`
-- `~/Documents/AIReadyLife/vault/records/00_current/subscriptions.md`
-- `~/Documents/AIReadyLife/vault/records/01_prior/` — prior period records for trend comparison
+- `~/Documents/aireadylife/vault/records/config.md`
+- `~/Documents/aireadylife/vault/records/00_current/`
+- `~/Documents/aireadylife/vault/records/00_current/`
+- `~/Documents/aireadylife/vault/records/00_current/subscriptions.md`
+- `~/Documents/aireadylife/vault/records/01_prior/` — prior period records for trend comparison
 
 ## Output Format
 
@@ -68,7 +68,7 @@ After these three updates, the sync triggers the records review brief.
 
 ## Configuration
 
-Required in `~/Documents/AIReadyLife/vault/records/config.md`:
+Required in `~/Documents/aireadylife/vault/records/config.md`:
 - `household_members`
 - `recent_life_events`
 - `expiration_alert_threshold` (default: 365 days for passport; 180 days for Global Entry; 90 days for DL)
@@ -81,8 +81,8 @@ Required in `~/Documents/AIReadyLife/vault/records/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/records/01_prior/` — prior period records
-- Reads from: `~/Documents/AIReadyLife/vault/records/config.md`, `00_identity/`, `01_legal/`, `02_subscriptions/`
-- Writes to: `~/Documents/AIReadyLife/vault/records/00_current/last-sync.md`
-- Writes to: `~/Documents/AIReadyLife/vault/records/02_briefs/YYYY-MM-records-brief.md`
-- Writes to: `~/Documents/AIReadyLife/vault/records/open-loops.md`
+- Reads from: `~/Documents/aireadylife/vault/records/01_prior/` — prior period records
+- Reads from: `~/Documents/aireadylife/vault/records/config.md`, `00_identity/`, `01_legal/`, `02_subscriptions/`
+- Writes to: `~/Documents/aireadylife/vault/records/00_current/last-sync.md`
+- Writes to: `~/Documents/aireadylife/vault/records/02_briefs/YYYY-MM-records-brief.md`
+- Writes to: `~/Documents/aireadylife/vault/records/open-loops.md`

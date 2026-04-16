@@ -10,7 +10,7 @@ description: >
 # aireadylife-calendar-review-brief
 
 **Cadence:** Weekly (Monday morning)
-**Produces:** Weekly calendar brief written to ~/Documents/AIReadyLife/vault/calendar/02_briefs/week-YYYY-WNN.md
+**Produces:** Weekly calendar brief written to ~/Documents/aireadylife/vault/calendar/02_briefs/week-YYYY-WNN.md
 
 ## What It Does
 
@@ -46,10 +46,10 @@ The output is written to vault/calendar/02_briefs/ with the ISO week number in t
 
 ## Input
 
-- ~/Documents/AIReadyLife/vault/calendar/00_current/ (most recent focus audit)
-- ~/Documents/AIReadyLife/vault/calendar/00_current/ (deadline registry)
-- `~/Documents/AIReadyLife/vault/calendar/01_prior/` — prior period records for trend comparison
-- ~/Documents/AIReadyLife/vault/calendar/open-loops.md
+- ~/Documents/aireadylife/vault/calendar/00_current/ (most recent focus audit)
+- ~/Documents/aireadylife/vault/calendar/00_current/ (deadline registry)
+- `~/Documents/aireadylife/vault/calendar/01_prior/` — prior period records for trend comparison
+- ~/Documents/aireadylife/vault/calendar/open-loops.md
 - Google Calendar upcoming week (via gcalendar, optional)
 
 ## Output Format
@@ -93,6 +93,6 @@ At-risk days: [days with <2h focus]
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/calendar/01_prior/` — prior period records
-- Reads from: ~/Documents/AIReadyLife/vault/calendar/00_current/, ~/Documents/AIReadyLife/vault/calendar/00_current/, ~/Documents/AIReadyLife/vault/calendar/open-loops.md
-- Writes to: ~/Documents/AIReadyLife/vault/calendar/02_briefs/week-YYYY-WNN.md
+- Reads from: `~/Documents/aireadylife/vault/calendar/01_prior/` — prior period records
+- Reads from: ~/Documents/aireadylife/vault/calendar/00_current/, ~/Documents/aireadylife/vault/calendar/00_current/, ~/Documents/aireadylife/vault/calendar/open-loops.md
+- Writes to: ~/Documents/aireadylife/vault/calendar/02_briefs/week-YYYY-WNN.md

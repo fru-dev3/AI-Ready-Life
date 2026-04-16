@@ -8,7 +8,7 @@ description: >
 
 ## What It Does
 
-Maintains `~/Documents/AIReadyLife/vault/business/open-loops.md` as the live, always-current action list for the business domain. This file is the single place where all business flags from all review ops accumulate, and it is what the Chief of Staff reads to produce the daily business status for Ben's morning brief.
+Maintains `~/Documents/aireadylife/vault/business/open-loops.md` as the live, always-current action list for the business domain. This file is the single place where all business flags from all review ops accumulate, and it is what the Chief of Staff reads to produce the daily business status for Ben's morning brief.
 
 Receives a list of flags and action items from the calling op. Each flag has: a priority level (🔴 urgent / 🟡 watch / 🟢 info), a category (invoice / compliance / pipeline / expense / general), a description, a recommended action, a source op name, and the date raised. For time-sensitive items — overdue invoices, compliance deadlines within 30 days, estimated tax payments within 14 days — always writes as 🔴 regardless of what the calling op suggests, because these categories have real financial or legal consequences.
 
@@ -35,13 +35,13 @@ Called internally at the end of every business op: `aireadylife-business-op-pl-r
 ## Input
 
 - Flag list from calling op (passed as structured data)
-- `~/Documents/AIReadyLife/vault/business/open-loops.md` — current file for dedup and resolution check
-- `~/Documents/AIReadyLife/vault/business/00_current/` — to verify invoice payment status
-- `~/Documents/AIReadyLife/vault/business/00_current/compliance-checklist.md` — to verify compliance completion status
+- `~/Documents/aireadylife/vault/business/open-loops.md` — current file for dedup and resolution check
+- `~/Documents/aireadylife/vault/business/00_current/` — to verify invoice payment status
+- `~/Documents/aireadylife/vault/business/00_current/compliance-checklist.md` — to verify compliance completion status
 
 ## Output Format
 
-`~/Documents/AIReadyLife/vault/business/open-loops.md` format:
+`~/Documents/aireadylife/vault/business/open-loops.md` format:
 ```
 # Business Open Loops
 Last updated: {YYYY-MM-DD}
@@ -68,7 +68,7 @@ Source: business-op-monthly-synthesis | Raised: 2026-03-31
 
 No special configuration required. Reads config.md only for priority override thresholds.
 
-Optional in `~/Documents/AIReadyLife/vault/business/config.md`:
+Optional in `~/Documents/aireadylife/vault/business/config.md`:
 - `open_loops_max_age_days` — number of days before an unresolved 🟢 item auto-archives (default: 90)
 
 ## Error Handling
@@ -80,5 +80,5 @@ Optional in `~/Documents/AIReadyLife/vault/business/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/business/open-loops.md`, `~/Documents/AIReadyLife/vault/business/00_current/`, `~/Documents/AIReadyLife/vault/business/00_current/`
-- Writes to: `~/Documents/AIReadyLife/vault/business/open-loops.md`, `~/Documents/AIReadyLife/vault/business/open-loops-archive.md`
+- Reads from: `~/Documents/aireadylife/vault/business/open-loops.md`, `~/Documents/aireadylife/vault/business/00_current/`, `~/Documents/aireadylife/vault/business/00_current/`
+- Writes to: `~/Documents/aireadylife/vault/business/open-loops.md`, `~/Documents/aireadylife/vault/business/open-loops-archive.md`

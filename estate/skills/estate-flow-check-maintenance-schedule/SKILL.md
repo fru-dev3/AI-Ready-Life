@@ -29,7 +29,7 @@ This flow reads all open maintenance records across every rental property and ev
 
 ## Steps
 
-1. Read all open maintenance items from `~/Documents/AIReadyLife/vault/estate/00_current/` for each property
+1. Read all open maintenance items from `~/Documents/aireadylife/vault/estate/00_current/` for each property
 2. Check each item's target completion date against today; classify as on-track, due-soon (≤30 days), or overdue
 3. Apply urgency escalation: routine overdue 14+ days → urgent; urgent overdue 3+ days → emergency
 4. Load built-in seasonal maintenance calendar; evaluate which seasonal tasks are due this month for each property
@@ -41,9 +41,9 @@ This flow reads all open maintenance records across every rental property and ev
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/estate/00_current/` — open maintenance items per property
-- `~/Documents/AIReadyLife/vault/estate/00_current/` — property records with major capital item installation dates
-- `~/Documents/AIReadyLife/vault/estate/01_prior/` — prior period records for trend comparison
+- `~/Documents/aireadylife/vault/estate/00_current/` — open maintenance items per property
+- `~/Documents/aireadylife/vault/estate/00_current/` — property records with major capital item installation dates
+- `~/Documents/aireadylife/vault/estate/01_prior/` — prior period records for trend comparison
 - Built-in seasonal maintenance calendar (hardcoded schedule, no vault source required)
 
 ## Output Format
@@ -67,7 +67,7 @@ For each property:
 
 ## Configuration
 
-Required in `~/Documents/AIReadyLife/vault/estate/config.md`:
+Required in `~/Documents/aireadylife/vault/estate/config.md`:
 - Property list with addresses
 - Per property in `00_properties/`: `roof_installed`, `hvac_installed`, `water_heater_installed` dates
 
@@ -79,7 +79,7 @@ Required in `~/Documents/AIReadyLife/vault/estate/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/estate/01_prior/` — prior period records
-- Reads from: `~/Documents/AIReadyLife/vault/estate/00_current/`
-- Reads from: `~/Documents/AIReadyLife/vault/estate/00_current/`
-- Writes to: `~/Documents/AIReadyLife/vault/estate/00_current/YYYY-MM-maintenance-status.md`
+- Reads from: `~/Documents/aireadylife/vault/estate/01_prior/` — prior period records
+- Reads from: `~/Documents/aireadylife/vault/estate/00_current/`
+- Reads from: `~/Documents/aireadylife/vault/estate/00_current/`
+- Writes to: `~/Documents/aireadylife/vault/estate/00_current/YYYY-MM-maintenance-status.md`

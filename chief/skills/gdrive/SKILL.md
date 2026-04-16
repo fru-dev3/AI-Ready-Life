@@ -34,7 +34,7 @@ layer only. The chief-agent never reads from Drive as its primary data source; D
 
 Add to `vault/chief/config.md`:
 ```
-gdrive_credentials: ~/Documents/AIReadyLife/vault/chief/00_current/gdrive-oauth.json
+gdrive_credentials: ~/Documents/aireadylife/vault/chief/00_current/gdrive-oauth.json
 gdrive_briefs_folder_id: YOUR_BRIEFS_FOLDER_ID
 gdrive_system_folder_id: YOUR_SYSTEM_FOLDER_ID
 ```
@@ -84,5 +84,5 @@ patch (update) the existing file rather than creating a duplicate.
 
 ## Vault Output
 
-- Local (primary): `~/Documents/AIReadyLife/vault/chief/02_briefs/` — always written first
+- Local (primary): `~/Documents/aireadylife/vault/chief/02_briefs/` — always written first
 - Drive (secondary): configured briefs folder — written after local write succeeds

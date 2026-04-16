@@ -11,19 +11,19 @@ description: >
 # aireadylife-chief-daily-brief
 
 **Cadence:** Daily (morning)
-**Produces:** Prioritized daily brief written to ~/Documents/AIReadyLife/vault/chief/02_briefs/daily-YYYY-MM-DD.md
+**Produces:** Prioritized daily brief written to ~/Documents/aireadylife/vault/chief/02_briefs/daily-YYYY-MM-DD.md
 
 ## What It Does
 
 The daily brief is your life operating system's most important output — a single document that tells you exactly what matters today across every domain you're managing. It runs every morning before anything else competes for attention.
 
-The skill calls `chief-flow-collect-domain-alerts` first, which auto-discovers every installed plugin by scanning ~/Documents/AIReadyLife/vault/ for subdirectories containing an open-loops.md file. No manual configuration is needed — if a domain vault exists with an open-loops.md, it's included. Each domain's open loops are parsed: every unresolved item (unchecked checkbox) is extracted with its priority marker (🔴/🟡/🟢), description, action required, due date (if present), and date raised.
+The skill calls `chief-flow-collect-domain-alerts` first, which auto-discovers every installed plugin by scanning ~/Documents/aireadylife/vault/ for subdirectories containing an open-loops.md file. No manual configuration is needed — if a domain vault exists with an open-loops.md, it's included. Each domain's open loops are parsed: every unresolved item (unchecked checkbox) is extracted with its priority marker (🔴/🟡/🟢), description, action required, due date (if present), and date raised.
 
 Next, it calls `chief-task-pull-domain-status` for each discovered domain to read that plugin's state.md. This provides: the date the domain was last reviewed, any domain-level score or health indicator (net worth trend in wealth, wellness score in health, filing status in tax), and a confirmation that the plugin is active and current. Domains not updated in 30+ days are marked stale (🟡 in the alert table regardless of their open-loop count).
 
 All collected signals are passed to `chief-flow-build-daily-brief`, which applies the urgency ranking algorithm and assembles the final document. The ranking logic: items with today's due date or overdue date → items marked 🔴 → items marked 🟡 with due dates in the next 7 days → items marked 🟡 without due dates → items marked 🟢. The Top 3 ACTION TODAY items are selected from the top of this ranked list. If fewer than 3 items are 🔴, the remaining Top 3 slots are filled with the highest-priority 🟡 items.
 
-The calendar section reads from ~/Documents/AIReadyLife/vault/calendar/00_current/ and ~/Documents/AIReadyLife/vault/calendar/00_current/ if the calendar plugin is installed, pulling any events or deadlines due today or within the next 24 hours. If the calendar plugin is not installed, this section displays "Calendar plugin not installed."
+The calendar section reads from ~/Documents/aireadylife/vault/calendar/00_current/ and ~/Documents/aireadylife/vault/calendar/00_current/ if the calendar plugin is installed, pulling any events or deadlines due today or within the next 24 hours. If the calendar plugin is not installed, this section displays "Calendar plugin not installed."
 
 Every 🔴 item found during the brief run triggers `chief-task-flag-urgent-item`, which writes a persistent alert record to vault/chief/00_current/ for cross-run tracking. This ensures that if a 🔴 item is not resolved, it will keep surfacing in every subsequent brief without relying on the source domain's open-loops.md alone.
 
@@ -57,12 +57,12 @@ The completed brief is written as a dated markdown file to vault/chief/02_briefs
 
 ## Input
 
-- ~/Documents/AIReadyLife/vault/*/open-loops.md (all installed plugin vaults)
-- ~/Documents/AIReadyLife/vault/*/state.md (per-domain status)
-- ~/Documents/AIReadyLife/vault/calendar/00_current/ (if calendar plugin installed)
-- ~/Documents/AIReadyLife/vault/calendar/00_current/ (if calendar plugin installed)
+- ~/Documents/aireadylife/vault/*/open-loops.md (all installed plugin vaults)
+- ~/Documents/aireadylife/vault/*/state.md (per-domain status)
+- ~/Documents/aireadylife/vault/calendar/00_current/ (if calendar plugin installed)
+- ~/Documents/aireadylife/vault/calendar/00_current/ (if calendar plugin installed)
 - `vault/chief/01_prior/` — prior period records for trend comparison
-- ~/Documents/AIReadyLife/vault/chief/config.md (plugin list, Notion/GDrive credentials)
+- ~/Documents/aireadylife/vault/chief/config.md (plugin list, Notion/GDrive credentials)
 
 ## Output Format
 
@@ -109,6 +109,6 @@ Required fields in vault/chief/config.md:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/chief/01_prior/` — prior period records
-- Reads from: ~/Documents/AIReadyLife/vault/*/open-loops.md, ~/Documents/AIReadyLife/vault/*/state.md, ~/Documents/AIReadyLife/vault/calendar/00_current/, ~/Documents/AIReadyLife/vault/calendar/00_current/
-- Writes to: ~/Documents/AIReadyLife/vault/chief/02_briefs/daily-YYYY-MM-DD.md, ~/Documents/AIReadyLife/vault/chief/00_current/YYYY-MM-DD-{domain}-{slug}.md
+- Reads from: `~/Documents/aireadylife/vault/chief/01_prior/` — prior period records
+- Reads from: ~/Documents/aireadylife/vault/*/open-loops.md, ~/Documents/aireadylife/vault/*/state.md, ~/Documents/aireadylife/vault/calendar/00_current/, ~/Documents/aireadylife/vault/calendar/00_current/
+- Writes to: ~/Documents/aireadylife/vault/chief/02_briefs/daily-YYYY-MM-DD.md, ~/Documents/aireadylife/vault/chief/00_current/YYYY-MM-DD-{domain}-{slug}.md

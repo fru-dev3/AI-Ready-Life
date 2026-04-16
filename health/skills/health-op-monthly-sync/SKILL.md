@@ -61,6 +61,6 @@ Set in `vault/health/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/health/00_current/` — active records and current state
-- Reads from: `~/Documents/AIReadyLife/vault/health/01_prior/` — prior period records for trend comparison
-- Reads from: `~/Documents/AIReadyLife/vault/health/02_briefs/` — prior briefs for period-over-period context
+- Reads from: `~/Documents/aireadylife/vault/health/00_current/` — active records and current state
+- Reads from: `~/Documents/aireadylife/vault/health/01_prior/` — prior period records for trend comparison
+- Reads from: `~/Documents/aireadylife/vault/health/02_briefs/` — prior briefs for period-over-period context

@@ -12,7 +12,7 @@ description: >
 # aireadylife-home-weekly-review
 
 **Cadence:** Weekly (Monday) — only outputs when items need attention
-**Produces:** Weekly home snapshot in `~/Documents/AIReadyLife/vault/home/00_current/weekly-snapshot.md` when items are flagged
+**Produces:** Weekly home snapshot in `~/Documents/aireadylife/vault/home/00_current/weekly-snapshot.md` when items are flagged
 
 ## What It Does
 
@@ -35,21 +35,21 @@ When the op does identify items, it writes a brief weekly snapshot with only the
 
 ## Steps
 
-1. Read all open maintenance items from `~/Documents/AIReadyLife/vault/home/00_current/`
+1. Read all open maintenance items from `~/Documents/aireadylife/vault/home/00_current/`
 2. Check each item's target completion date against today; identify any now overdue
 3. Check urgency escalation: routine items overdue 14+ days → flag as urgent
 4. Check emergency items for completion or vendor appointment within 72 hours of opening; flag if unresolved
-5. Read seasonal checklist from `~/Documents/AIReadyLife/vault/home/00_current/YYYY-{season}-checklist.md`; identify tasks due within next 7 days
+5. Read seasonal checklist from `~/Documents/aireadylife/vault/home/00_current/YYYY-{season}-checklist.md`; identify tasks due within next 7 days
 6. Scan open maintenance items for vendor follow-up notes with no update in 7+ days; flag as stale
 7. If all checks are clean: confirm "Home is on track — nothing requires attention this week" and exit without writing a snapshot
-8. If any items flagged: write brief snapshot to `~/Documents/AIReadyLife/vault/home/00_current/weekly-snapshot.md`
+8. If any items flagged: write brief snapshot to `~/Documents/aireadylife/vault/home/00_current/weekly-snapshot.md`
 9. Present flagged items only, with vendor contact info and recommended action
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/home/00_current/`
-- `~/Documents/AIReadyLife/vault/home/00_current/` (prior week's snapshot for comparison)
-- `~/Documents/AIReadyLife/vault/home/01_prior/` — prior period records for trend comparison
+- `~/Documents/aireadylife/vault/home/00_current/`
+- `~/Documents/aireadylife/vault/home/00_current/` (prior week's snapshot for comparison)
+- `~/Documents/aireadylife/vault/home/01_prior/` — prior period records for trend comparison
 
 ## Output Format
 
@@ -77,6 +77,6 @@ No additional configuration required beyond vault existing and seasonal checklis
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/home/01_prior/` — prior period records
-- Reads from: `~/Documents/AIReadyLife/vault/home/00_current/`
-- Writes to: `~/Documents/AIReadyLife/vault/home/00_current/weekly-snapshot.md` (only when items flagged)
+- Reads from: `~/Documents/aireadylife/vault/home/01_prior/` — prior period records
+- Reads from: `~/Documents/aireadylife/vault/home/00_current/`
+- Writes to: `~/Documents/aireadylife/vault/home/00_current/weekly-snapshot.md` (only when items flagged)

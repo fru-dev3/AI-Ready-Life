@@ -67,5 +67,5 @@ Coursera's most valuable credentials are Professional Certificates (Google Data 
 
 ## Vault Output
 
-- `~/Documents/AIReadyLife/vault/learning/00_current/coursera/` — course progress records
-- `~/Documents/AIReadyLife/vault/learning/01_prior/certs/` — downloaded certificates for completed courses
+- `~/Documents/aireadylife/vault/learning/00_current/coursera/` — course progress records
+- `~/Documents/aireadylife/vault/learning/01_prior/certs/` — downloaded certificates for completed courses

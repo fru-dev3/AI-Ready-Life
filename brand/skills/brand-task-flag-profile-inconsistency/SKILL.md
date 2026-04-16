@@ -8,7 +8,7 @@ description: >
 
 ## What It Does
 
-Receives a discrepancy record from the profile-audit op or the check-profile-consistency flow and writes a structured, actionable flag to `~/Documents/AIReadyLife/vault/brand/open-loops.md` for each inconsistency. Each flag contains everything the user needs to fix the problem: where the inconsistency is, what the wrong value is, what the correct value should be, and the precise action to take.
+Receives a discrepancy record from the profile-audit op or the check-profile-consistency flow and writes a structured, actionable flag to `~/Documents/aireadylife/vault/brand/open-loops.md` for each inconsistency. Each flag contains everything the user needs to fix the problem: where the inconsistency is, what the wrong value is, what the correct value should be, and the precise action to take.
 
 Assigns priority based on the field type and the platform's strategic importance. Fields that affect brand discoverability and SEO are the highest priority because they directly impact how people find the user: missing or wrong website URL on any platform is 🔴 (every platform link to the website is a backlink signal and a traffic source), LinkedIn headline or bio drift is 🔴 (LinkedIn is the primary professional discovery platform, and the algorithm surfaces you based on headline keywords), wrong headshot on LinkedIn or YouTube is 🟡 (visual brand consistency affects perception, not discoverability directly). On secondary platforms (GitHub profile, forum bios), the same fields are typically one tier lower priority. Minor bio wording variations that do not change meaning are 🟢.
 
@@ -31,8 +31,8 @@ Called internally by `aireadylife-brand-op-profile-audit` and `aireadylife-brand
 ## Input
 
 - Discrepancy record from calling op: platform, field, current-value, expected-value
-- `~/Documents/AIReadyLife/vault/brand/open-loops.md` — for duplicate check
-- `~/Documents/AIReadyLife/vault/brand/config.md` — platform priority classifications
+- `~/Documents/aireadylife/vault/brand/open-loops.md` — for duplicate check
+- `~/Documents/aireadylife/vault/brand/config.md` — platform priority classifications
 
 ## Output Format
 
@@ -47,7 +47,7 @@ Source: brand-op-profile-audit | Raised: {today's date} | Last surfaced: {date}
 
 ## Configuration
 
-Required in `~/Documents/AIReadyLife/vault/brand/config.md`:
+Required in `~/Documents/aireadylife/vault/brand/config.md`:
 - `platforms_primary` — primary platforms receive higher priority escalation for the same field type
 - `platforms_secondary` — secondary platforms receive one tier lower priority
 
@@ -59,5 +59,5 @@ Required in `~/Documents/AIReadyLife/vault/brand/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/brand/open-loops.md`, `~/Documents/AIReadyLife/vault/brand/config.md`
-- Writes to: `~/Documents/AIReadyLife/vault/brand/open-loops.md`
+- Reads from: `~/Documents/aireadylife/vault/brand/open-loops.md`, `~/Documents/aireadylife/vault/brand/config.md`
+- Writes to: `~/Documents/aireadylife/vault/brand/open-loops.md`

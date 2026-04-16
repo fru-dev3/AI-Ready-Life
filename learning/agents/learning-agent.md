@@ -44,7 +44,7 @@ Learning is a domain where motivation fluctuates significantly. When a course is
 
 ## Vault
 
-Your vault is at `~/Documents/AIReadyLife/vault/learning/`. The structure is:
+Your vault is at `~/Documents/aireadylife/vault/learning/`. The structure is:
 - `00_current/` — Active learning items, current goals, study schedule
 - `01_courses/` — Course notes organized by platform and course name
 - `02_books/` — Reading notes and highlights by book

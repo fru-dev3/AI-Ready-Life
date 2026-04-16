@@ -11,7 +11,7 @@ description: >
 # aireadylife-chief-review-brief
 
 **Cadence:** Daily (morning)
-**Produces:** Executive AM brief written to ~/Documents/AIReadyLife/vault/chief/02_briefs/daily-YYYY-MM-DD.md
+**Produces:** Executive AM brief written to ~/Documents/aireadylife/vault/chief/02_briefs/daily-YYYY-MM-DD.md
 
 ## What It Does
 
@@ -40,10 +40,10 @@ For full documentation on logic, steps, and output format, see `aireadylife-chie
 
 ## Input
 
-- ~/Documents/AIReadyLife/vault/*/open-loops.md
-- ~/Documents/AIReadyLife/vault/*/state.md
-- ~/Documents/AIReadyLife/vault/calendar/ (if installed)
-- ~/Documents/AIReadyLife/vault/chief/config.md
+- ~/Documents/aireadylife/vault/*/open-loops.md
+- ~/Documents/aireadylife/vault/*/state.md
+- ~/Documents/aireadylife/vault/calendar/ (if installed)
+- ~/Documents/aireadylife/vault/chief/config.md
 - `vault/chief/01_prior/` — prior period records for trend comparison
 
 ## Output Format
@@ -77,6 +77,6 @@ Same as `aireadylife-chief-op-daily-brief`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/chief/01_prior/` — prior period records
-- Reads from: ~/Documents/AIReadyLife/vault/*/open-loops.md, ~/Documents/AIReadyLife/vault/*/state.md, ~/Documents/AIReadyLife/vault/calendar/
-- Writes to: ~/Documents/AIReadyLife/vault/chief/02_briefs/daily-YYYY-MM-DD.md
+- Reads from: `~/Documents/aireadylife/vault/chief/01_prior/` — prior period records
+- Reads from: ~/Documents/aireadylife/vault/*/open-loops.md, ~/Documents/aireadylife/vault/*/state.md, ~/Documents/aireadylife/vault/calendar/
+- Writes to: ~/Documents/aireadylife/vault/chief/02_briefs/daily-YYYY-MM-DD.md

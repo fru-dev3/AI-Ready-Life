@@ -44,13 +44,13 @@ Tracks the health score trend: current month vs. prior 3 months average. A score
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/brand/00_current/` — current and prior month platform analytics
-- `~/Documents/AIReadyLife/vault/brand/00_current/` — mention log for the period
-- `~/Documents/AIReadyLife/vault/brand/00_current/` — profile snapshots and master profile
-- `~/Documents/AIReadyLife/vault/brand/00_current/` — content log for cadence evaluation
-- `~/Documents/AIReadyLife/vault/brand/config.md` — platforms, posting targets, scoring weights
-- `~/Documents/AIReadyLife/vault/brand/00_current/synthesis-{prior YYYY-MM}.md` — prior month score for trend
-- `~/Documents/AIReadyLife/vault/brand/01_prior/` — prior period records for trend comparison
+- `~/Documents/aireadylife/vault/brand/00_current/` — current and prior month platform analytics
+- `~/Documents/aireadylife/vault/brand/00_current/` — mention log for the period
+- `~/Documents/aireadylife/vault/brand/00_current/` — profile snapshots and master profile
+- `~/Documents/aireadylife/vault/brand/00_current/` — content log for cadence evaluation
+- `~/Documents/aireadylife/vault/brand/config.md` — platforms, posting targets, scoring weights
+- `~/Documents/aireadylife/vault/brand/00_current/synthesis-{prior YYYY-MM}.md` — prior month score for trend
+- `~/Documents/aireadylife/vault/brand/01_prior/` — prior period records for trend comparison
 
 ## Output Format
 
@@ -84,7 +84,7 @@ Tracks the health score trend: current month vs. prior 3 months average. A score
 
 ## Configuration
 
-Required in `~/Documents/AIReadyLife/vault/brand/config.md`:
+Required in `~/Documents/aireadylife/vault/brand/config.md`:
 - `platforms_primary` — list of primary platforms (used for growth and cadence weighting)
 - `posting_target_{platform}` — posts per month target per platform
 - `scoring_weights` — optional override of the 25/25/25/25 distribution
@@ -97,6 +97,6 @@ Required in `~/Documents/AIReadyLife/vault/brand/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/brand/01_prior/` — prior period records
-- Reads from: `~/Documents/AIReadyLife/vault/brand/00_current/`, `~/Documents/AIReadyLife/vault/brand/00_current/`, `~/Documents/AIReadyLife/vault/brand/00_current/`, `~/Documents/AIReadyLife/vault/brand/00_current/`, `~/Documents/AIReadyLife/vault/brand/config.md`
-- Writes to: `~/Documents/AIReadyLife/vault/brand/00_current/synthesis-{YYYY-MM}.md`, `~/Documents/AIReadyLife/vault/brand/open-loops.md`
+- Reads from: `~/Documents/aireadylife/vault/brand/01_prior/` — prior period records
+- Reads from: `~/Documents/aireadylife/vault/brand/00_current/`, `~/Documents/aireadylife/vault/brand/00_current/`, `~/Documents/aireadylife/vault/brand/00_current/`, `~/Documents/aireadylife/vault/brand/00_current/`, `~/Documents/aireadylife/vault/brand/config.md`
+- Writes to: `~/Documents/aireadylife/vault/brand/00_current/synthesis-{YYYY-MM}.md`, `~/Documents/aireadylife/vault/brand/open-loops.md`

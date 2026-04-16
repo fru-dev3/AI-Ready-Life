@@ -12,7 +12,7 @@ description: >
 
 **Auth:** Local CLI (`op`) with service account token stored in `~/.ai/env/.env`
 **URL:** https://1password.com
-**Configuration:** Set service account token and vault name in `~/Documents/AIReadyLife/vault/records/config.md`
+**Configuration:** Set service account token and vault name in `~/Documents/aireadylife/vault/records/config.md`
 
 ## Data Available
 
@@ -25,7 +25,7 @@ description: >
 
 ## Configuration
 
-Add to `~/Documents/AIReadyLife/vault/records/config.md`:
+Add to `~/Documents/aireadylife/vault/records/config.md`:
 ```
 op_service_account_token: ops_YOUR_SERVICE_ACCOUNT_TOKEN   # stored in ~/.ai/env/.env
 op_vault_name: Personal
@@ -76,4 +76,4 @@ op item get "Document: US Passport" --fields label=expiry_date --format json
 
 ## Vault Output
 
-`~/Documents/AIReadyLife/vault/records/00_current/` (audit results cross-referenced back to vault records)
+`~/Documents/aireadylife/vault/records/00_current/` (audit results cross-referenced back to vault records)

@@ -46,6 +46,6 @@ None
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/tax/00_current/` — active records and current state
-- Reads from: `~/Documents/AIReadyLife/vault/tax/01_prior/` — prior period records for trend comparison
-- Reads from: `~/Documents/AIReadyLife/vault/tax/02_briefs/` — prior briefs for period-over-period context
+- Reads from: `~/Documents/aireadylife/vault/tax/00_current/` — active records and current state
+- Reads from: `~/Documents/aireadylife/vault/tax/01_prior/` — prior period records for trend comparison
+- Reads from: `~/Documents/aireadylife/vault/tax/02_briefs/` — prior briefs for period-over-period context

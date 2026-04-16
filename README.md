@@ -45,7 +45,7 @@ Each plugin has two parts:
 **1. The vault** — your personal data, stored locally on your machine.
 
 ```
-~/Documents/AIReadyLife/vault/
+~/Documents/aireadylife/vault/
 ├── health/
 │   ├── config.md       ← your profile and settings
 │   ├── 00_current/     ← active documents
@@ -59,7 +59,7 @@ Each plugin has two parts:
 **2. The plugin** — installed in Claude Desktop, reads your vault and runs skills against it.
 
 ```
-~/Documents/AIReadyLife/domains/
+~/Documents/aireadylife/domains/
 ├── health/             ← installed from this repo
 ├── wealth/
 └── ...
@@ -74,7 +74,7 @@ Purchase the vault template for your domain on Gumroad. Each domain has its own 
 Unzip the download and place the vault folder at:
 
 ```
-~/Documents/AIReadyLife/vault/{domain}/
+~/Documents/aireadylife/vault/{domain}/
 ```
 
 Open `config.md` and fill in your details.
@@ -83,7 +83,7 @@ Open `config.md` and fill in your details.
 
 1. Open Claude Desktop → Settings → Integrations
 2. Add this GitHub repo as a project source: `fru-dev3/AI-Ready-Life`
-3. Set your project folder to `~/Documents/AIReadyLife/`
+3. Set your project folder to `~/Documents/aireadylife/`
 
 The plugin reads your vault automatically via the path in `config.md`.
 

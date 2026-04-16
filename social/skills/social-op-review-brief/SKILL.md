@@ -11,7 +11,7 @@ description: >
 # aireadylife-social-review-brief
 
 **Cadence:** Weekly (Monday)
-**Produces:** Weekly social brief at ~/Documents/AIReadyLife/vault/social/02_briefs/YYYY-MM-DD-social-brief.md
+**Produces:** Weekly social brief at ~/Documents/aireadylife/vault/social/02_briefs/YYYY-MM-DD-social-brief.md
 
 ## What It Does
 
@@ -53,12 +53,12 @@ The brief is designed to be specific and executable — not a list of "you shoul
 
 ## Input
 
-- ~/Documents/AIReadyLife/vault/social/00_current/contacts.md
-- ~/Documents/AIReadyLife/vault/social/00_current/ (interaction log for last-contact dates)
-- ~/Documents/AIReadyLife/vault/social/00_current/ (birthday and milestone calendar)
-- `~/Documents/AIReadyLife/vault/social/01_prior/` — prior period records for trend comparison
-- ~/Documents/AIReadyLife/vault/social/open-loops.md
-- ~/Documents/AIReadyLife/vault/social/config.md
+- ~/Documents/aireadylife/vault/social/00_current/contacts.md
+- ~/Documents/aireadylife/vault/social/00_current/ (interaction log for last-contact dates)
+- ~/Documents/aireadylife/vault/social/00_current/ (birthday and milestone calendar)
+- `~/Documents/aireadylife/vault/social/01_prior/` — prior period records for trend comparison
+- ~/Documents/aireadylife/vault/social/open-loops.md
+- ~/Documents/aireadylife/vault/social/config.md
 
 ## Output Format
 
@@ -115,6 +115,6 @@ Required in vault/social/config.md:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/social/01_prior/` — prior period records
-- Reads from: ~/Documents/AIReadyLife/vault/social/00_current/contacts.md, ~/Documents/AIReadyLife/vault/social/00_current/, ~/Documents/AIReadyLife/vault/social/00_current/, ~/Documents/AIReadyLife/vault/social/open-loops.md
-- Writes to: ~/Documents/AIReadyLife/vault/social/02_briefs/YYYY-MM-DD-social-brief.md, ~/Documents/AIReadyLife/vault/social/open-loops.md
+- Reads from: `~/Documents/aireadylife/vault/social/01_prior/` — prior period records
+- Reads from: ~/Documents/aireadylife/vault/social/00_current/contacts.md, ~/Documents/aireadylife/vault/social/00_current/, ~/Documents/aireadylife/vault/social/00_current/, ~/Documents/aireadylife/vault/social/open-loops.md
+- Writes to: ~/Documents/aireadylife/vault/social/02_briefs/YYYY-MM-DD-social-brief.md, ~/Documents/aireadylife/vault/social/open-loops.md

@@ -23,14 +23,14 @@ Each domain folder contains:
 Move the `vault/` folder from this zip to:
 
 ```
-~/Documents/AIReadyLife/vault/
+~/Documents/aireadylife/vault/
 ```
 
 Your vault paths will be:
-- `~/Documents/AIReadyLife/vault/health/`
-- `~/Documents/AIReadyLife/vault/wealth/`
-- `~/Documents/AIReadyLife/vault/tax/`
-- `~/Documents/AIReadyLife/vault/career/`
+- `~/Documents/aireadylife/vault/health/`
+- `~/Documents/aireadylife/vault/wealth/`
+- `~/Documents/aireadylife/vault/tax/`
+- `~/Documents/aireadylife/vault/career/`
 
 ## Step 2 — Fill in config.md for each domain
 
@@ -43,7 +43,7 @@ Priority order: **health → wealth → tax → career**
 In Claude Desktop, set your AI Ready Life project folder to:
 
 ```
-~/Documents/AIReadyLife/
+~/Documents/aireadylife/
 ```
 
 Install each domain plugin from GitHub. Once installed, the agent reads your vault automatically.

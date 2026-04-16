@@ -37,12 +37,12 @@ If the monthly channel review, revenue review, or SEO review have not yet been r
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/content/00_current/channel-review-{YYYY-MM}.md`
-- `~/Documents/AIReadyLife/vault/content/00_current/revenue-{YYYY-MM}.md`
-- `~/Documents/AIReadyLife/vault/content/00_current/seo-review-{YYYY-MM}.md`
-- `~/Documents/AIReadyLife/vault/content/01_prior/` — prior period records for trend comparison
-- `~/Documents/AIReadyLife/vault/content/open-loops.md`
-- `~/Documents/AIReadyLife/vault/content/config.md`
+- `~/Documents/aireadylife/vault/content/00_current/channel-review-{YYYY-MM}.md`
+- `~/Documents/aireadylife/vault/content/00_current/revenue-{YYYY-MM}.md`
+- `~/Documents/aireadylife/vault/content/00_current/seo-review-{YYYY-MM}.md`
+- `~/Documents/aireadylife/vault/content/01_prior/` — prior period records for trend comparison
+- `~/Documents/aireadylife/vault/content/open-loops.md`
+- `~/Documents/aireadylife/vault/content/config.md`
 
 ## Output Format
 
@@ -85,6 +85,6 @@ Same as constituent ops (channel review, revenue review, SEO review). No additio
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/content/01_prior/` — prior period records
-- Reads from: `~/Documents/AIReadyLife/vault/content/00_current/`, `~/Documents/AIReadyLife/vault/content/00_current/`, `~/Documents/AIReadyLife/vault/content/00_current/`, `~/Documents/AIReadyLife/vault/content/open-loops.md`, `~/Documents/AIReadyLife/vault/content/config.md`
-- Writes to: `~/Documents/AIReadyLife/vault/content/02_briefs/{YYYY-MM}-content-brief.md`
+- Reads from: `~/Documents/aireadylife/vault/content/01_prior/` — prior period records
+- Reads from: `~/Documents/aireadylife/vault/content/00_current/`, `~/Documents/aireadylife/vault/content/00_current/`, `~/Documents/aireadylife/vault/content/00_current/`, `~/Documents/aireadylife/vault/content/open-loops.md`, `~/Documents/aireadylife/vault/content/config.md`
+- Writes to: `~/Documents/aireadylife/vault/content/02_briefs/{YYYY-MM}-content-brief.md`

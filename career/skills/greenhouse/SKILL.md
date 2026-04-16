@@ -59,4 +59,4 @@ Note: Greenhouse candidate portals use passwordless email links for login. You m
 
 ## Vault Output
 
-`~/Documents/AIReadyLife/vault/career/00_current/` — updates pipeline entries with current stage data
+`~/Documents/aireadylife/vault/career/00_current/` — updates pipeline entries with current stage data
