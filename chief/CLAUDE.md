@@ -2,13 +2,12 @@
 
 ## Vault Location
 
-All skills in this plugin read from and write to:
+| OS | Vault path |
+|----|------------|
+| **Mac** | `~/Documents/aireadylife/vault/chief/` |
+| **Windows** | `%USERPROFILE%\Documents\aireadylife\vault\chief\` |
 
-```
-~/Documents/aireadylife/vault/chief/
-```
-
-When running any skill, always use this absolute path as the vault root. Never use relative paths.
+Determine the user's OS from context (file paths they share, or ask if unclear). Use the correct path for their OS. Never use relative paths.
 
 ## First Time Setup
 
@@ -35,13 +34,14 @@ If `~/Documents/aireadylife/vault/chief/` does not exist or is empty:
 
 Skills are located under `chief/skills/` — each skill has its own folder containing a `SKILL.md` file.
 
-## Vault Access (Sandbox)
+## Vault Access
 
-If any file read fails with a permission error or "cannot access" message, Claude Desktop needs filesystem access. Tell the user:
+**Mac:** If a file read fails with a permission error, Claude Desktop needs filesystem access. Tell the user:
+> *Go to **System Settings → Privacy & Security → Full Disk Access**, add **Claude**, then restart Claude Desktop.*
 
-> **Action needed:** Go to **System Settings → Privacy & Security → Full Disk Access** and add **Claude**. Then restart Claude Desktop and try again.
+**Windows:** Claude Desktop runs unrestricted — no permission grant needed.
 
-Do not proceed with the skill until access is confirmed.
+Do not proceed with the skill until access is confirmed (Mac) or reassure the user that no action is needed (Windows).
 
 ## First Run
 
@@ -59,7 +59,9 @@ Before running **any skill or flow** in this domain — including flows called b
 
 > **Welcome to AI Ready Life: Chief!**
 >
-> Your vault is installed at `~/Documents/aireadylife/vault/chief/`. Before skills can run, your config and documents need to be in place.
+> Your vault is installed at:
+> - **Mac:** `~/Documents/aireadylife/vault/chief/`
+> - **Windows:** `%USERPROFILE%\Documents\aireadylife\vault\chief\` Before skills can run, your config and documents need to be in place.
 >
 > **Step 1 — Complete your config**
 > Open `~/Documents/aireadylife/vault/chief/config.md` and fill in every field. Leave a field blank rather than guessing — the skills will flag anything that's missing.

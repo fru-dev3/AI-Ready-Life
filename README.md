@@ -71,11 +71,12 @@ Each plugin has two parts:
 
 Purchase the vault template for your domain on Gumroad. Each domain has its own listing at `frudev.gumroad.com/l/aireadylife-{domain}`.
 
-Unzip the download and place the vault folder at:
+Unzip the download and place the vault folder at the correct path for your OS:
 
-```
-~/Documents/aireadylife/vault/{domain}/
-```
+| OS | Path |
+|----|------|
+| **Mac** | `~/Documents/aireadylife/vault/{domain}/` |
+| **Windows** | `%USERPROFILE%\Documents\aireadylife\vault\{domain}\` |
 
 Open `config.md` and fill in your details.
 
@@ -83,9 +84,14 @@ Open `config.md` and fill in your details.
 
 1. Open Claude Desktop → Settings → Integrations
 2. Add this GitHub repo as a project source: `fru-dev3/AI-Ready-Life`
-3. Set your project folder to `~/Documents/aireadylife/`
+3. Set your project folder:
+   - **Mac:** `~/Documents/aireadylife/`
+   - **Windows:** `%USERPROFILE%\Documents\aireadylife\`
 
 The plugin reads your vault automatically via the path in `config.md`.
+
+> **Mac only:** If Claude can't access your vault, go to System Settings → Privacy & Security → Full Disk Access and add Claude, then restart.  
+> **Windows:** No additional access configuration needed.
 
 ### Step 3 — Run your first skill
 
