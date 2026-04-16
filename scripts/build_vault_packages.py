@@ -183,15 +183,15 @@ def build_package(
         if pdf_path and pdf_path.exists():
             zf.write(pdf_path, f"{zip_root}/get-started/aireadylife-{domain}-guide.pdf")
 
-        # --- vault/ ---
-        # config.md at vault root
+        # --- vault/{domain}/ ---
+        # config.md nested under domain subfolder so structure matches bundles
         cfg_path = sources["config.md"]
         if cfg_path.exists():
-            zf.write(cfg_path, f"{zip_root}/vault/config.md")
+            zf.write(cfg_path, f"{zip_root}/vault/{domain}/config.md")
 
         # Explicit folder stubs — no rglob scanning
         for stub in VAULT_STUBS:
-            arcname = f"{zip_root}/vault/{stub}"
+            arcname = f"{zip_root}/vault/{domain}/{stub}"
             zf.writestr(arcname, "")
 
     size_kb = zip_path.stat().st_size / 1024
