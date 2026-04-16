@@ -82,7 +82,7 @@ Open `config.md` and fill in your details.
 ### Step 2 — Install the plugin in Claude Desktop
 
 1. Open Claude Desktop → Settings → Integrations
-2. Add this GitHub repo as a project source: `fru-dev3/aireadyu-life`
+2. Add this GitHub repo as a project source: `fru-dev3/AI-Ready-Life`
 3. Set your project folder to `~/Documents/AIReadyLife/`
 
 The plugin reads your vault automatically via the path in `config.md`.

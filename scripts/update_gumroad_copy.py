@@ -332,7 +332,7 @@ def build_plugin_description(slug, copy, price):
 
 <p>The AI Ready Life: {d['domain_label']} vault template gives Claude a complete, structured picture of your {d['domain_label'].lower()} life so every question you ask gets a real answer — not a generic one.</p>
 
-<p>The <a href="https://github.com/fru-dev3/aireadyu-life">plugin is free on GitHub</a>. This is the vault template that makes it actually work with <em>your</em> data.</p>
+<p>The <a href="https://github.com/fru-dev3/AI-Ready-Life">plugin is free on GitHub</a>. This is the vault template that makes it actually work with <em>your</em> data.</p>
 
 <h3>WHAT'S INCLUDED</h3>
 <ul>
@@ -384,7 +384,7 @@ def build_bundle_description(slug, copy):
 
 <p>This bundle gives Claude a complete, structured picture of {b['domains']} — every domain ready to read, analyze, and act on from day one.</p>
 
-<p>The <a href="https://github.com/fru-dev3/aireadyu-life">plugins are free on GitHub</a>. This bundle is the vault templates that make them work with <em>your</em> data.</p>
+<p>The <a href="https://github.com/fru-dev3/AI-Ready-Life">plugins are free on GitHub</a>. This bundle is the vault templates that make them work with <em>your</em> data.</p>
 
 <h3>WHAT'S INCLUDED</h3>
 <ul>
