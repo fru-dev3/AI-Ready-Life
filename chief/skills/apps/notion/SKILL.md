@@ -88,12 +88,12 @@ If a match is found, PATCH the existing page rather than creating a duplicate.
 ## Notes
 
 - Local vault write always happens first. If Notion write fails, log the error to
-  `vault/chief/03_system/notion-sync-errors.md` and continue — do not block brief delivery.
+  `vault/chief/00_current/notion-sync-errors.md` and continue — do not block brief delivery.
 - Notion is optional. If `notion_briefs_page_id` is not configured, skip Notion sync silently.
 - Notion rate limits: 3 requests/second per integration. For briefs with many blocks, batch
   block creation into groups of 100 (API limit per request).
 
 ## Vault Output
 
-- Local (primary): `~/Documents/AIReadyLife/vault/chief/01_briefs/` — always written first
+- Local (primary): `~/Documents/AIReadyLife/vault/chief/02_briefs/` — always written first
 - Notion (secondary): briefs page — written after local write succeeds

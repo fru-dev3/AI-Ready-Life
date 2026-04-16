@@ -17,7 +17,7 @@ Calls `aireadylife-content-flow-build-seo-summary` to identify the quick-win key
 
 Also checks content freshness specifically: any content currently ranking in the top 10 for a significant keyword that was published or last updated more than 6 months ago is at risk. Google's freshness signal can cause gradual ranking decay for time-sensitive topics (AI tools, finance, software tutorials). Flags these for a content refresh before ranking drops occur rather than after. A 30-minute content refresh (updated examples, new data point, refreshed publish date) can maintain a top-10 ranking for another 6-12 months.
 
-Calls `aireadylife-content-task-flag-seo-gap` for each keyword or content piece requiring immediate action. Writes a dated SEO brief to vault/content/03_seo/ and updates open-loops.
+Calls `aireadylife-content-task-flag-seo-gap` for each keyword or content piece requiring immediate action. Writes a dated SEO brief to vault/content/00_current/ and updates open-loops.
 
 ## Triggers
 
@@ -31,21 +31,21 @@ Calls `aireadylife-content-task-flag-seo-gap` for each keyword or content piece 
 
 ## Steps
 
-1. Confirm vault/content/03_seo/ exists with at least one ranking snapshot file; if missing, prompt for Google Search Console data export
+1. Confirm vault/content/00_current/ exists with at least one ranking snapshot file; if missing, prompt for Google Search Console data export
 2. Call `aireadylife-content-flow-build-seo-summary` for quick-win list, ranking drops, gap analysis, and top 3 opportunities
 3. Separately check top-10 content pieces for freshness: read last-updated date from content records; flag any top-10 page last updated more than 6 months ago
 4. For the freshness-risk pages: note the keyword(s) they rank for, current position, and estimated traffic risk if ranking slips
 5. For each opportunity in the top 3 list: call `aireadylife-content-task-flag-seo-gap` to write a prioritized action item to open-loops
 6. Calculate total estimated monthly search traffic from top-10 rankings (sum: keyword search volume × expected CTR at current position — use 30% CTR for pos 1, 12% for pos 2-3, 5% for pos 4-7, 2% for pos 8-15)
 7. Compare this estimated traffic to prior month to gauge whether SEO traffic is growing, stable, or declining
-8. Write SEO brief to vault/content/03_seo/seo-review-{YYYY-MM}.md
+8. Write SEO brief to vault/content/00_current/seo-review-{YYYY-MM}.md
 9. Call `aireadylife-content-task-update-open-loops` for any ranking drops or gaps not already flagged by the flag-seo-gap task
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/content/03_seo/{YYYY-MM}-rankings.md` — keyword rankings
-- `~/Documents/AIReadyLife/vault/content/03_seo/{prior YYYY-MM}-rankings.md` — prior month for comparison
-- `~/Documents/AIReadyLife/vault/content/03_seo/keyword-gaps.md` — known keyword gaps
+- `~/Documents/AIReadyLife/vault/content/00_current/{YYYY-MM}-rankings.md` — keyword rankings
+- `~/Documents/AIReadyLife/vault/content/00_current/{prior YYYY-MM}-rankings.md` — prior month for comparison
+- `~/Documents/AIReadyLife/vault/content/00_current/keyword-gaps.md` — known keyword gaps
 - `~/Documents/AIReadyLife/vault/content/00_current/` — content publication dates for freshness check
 - `~/Documents/AIReadyLife/vault/content/config.md` — topic areas, volume thresholds
 
@@ -86,11 +86,11 @@ Required in `~/Documents/AIReadyLife/vault/content/config.md`:
 
 ## Error Handling
 
-- If no ranking data exists: "No SEO data found. Export from Google Search Console: Performance → Download → CSV. Save monthly snapshots to vault/content/03_seo/."
+- If no ranking data exists: "No SEO data found. Export from Google Search Console: Performance → Download → CSV. Save monthly snapshots to vault/content/00_current/."
 - If prior month ranking file is missing: skip drop analysis; note "First month of tracking — ranking trends will appear next month."
 - If content publication dates are unavailable for freshness check: skip freshness section with a note.
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/content/03_seo/`, `~/Documents/AIReadyLife/vault/content/00_current/`, `~/Documents/AIReadyLife/vault/content/config.md`
-- Writes to: `~/Documents/AIReadyLife/vault/content/03_seo/seo-review-{YYYY-MM}.md`, `~/Documents/AIReadyLife/vault/content/open-loops.md`
+- Reads from: `~/Documents/AIReadyLife/vault/content/00_current/`, `~/Documents/AIReadyLife/vault/content/00_current/`, `~/Documents/AIReadyLife/vault/content/config.md`
+- Writes to: `~/Documents/AIReadyLife/vault/content/00_current/seo-review-{YYYY-MM}.md`, `~/Documents/AIReadyLife/vault/content/open-loops.md`

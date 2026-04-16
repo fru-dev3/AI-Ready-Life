@@ -46,8 +46,8 @@ The open-loops file format uses consistent section headers so the calendar agent
 
 - Flag data from calling op
 - `~/Documents/AIReadyLife/vault/home/open-loops.md` — existing flags
-- `~/Documents/AIReadyLife/vault/home/01_maintenance/` — for maintenance flag resolution check
-- `~/Documents/AIReadyLife/vault/home/02_expenses/` — for budget flag resolution check
+- `~/Documents/AIReadyLife/vault/home/00_current/` — for maintenance flag resolution check
+- `~/Documents/AIReadyLife/vault/home/00_current/` — for budget flag resolution check
 
 ## Output Format
 
@@ -75,6 +75,6 @@ No additional configuration required.
 ## Vault Paths
 
 - Reads from: `~/Documents/AIReadyLife/vault/home/open-loops.md`
-- Reads from: `~/Documents/AIReadyLife/vault/home/01_maintenance/`, `02_expenses/`
+- Reads from: `~/Documents/AIReadyLife/vault/home/00_current/`, `02_expenses/`
 - Writes to: `~/Documents/AIReadyLife/vault/home/open-loops.md`
 - Writes to: `~/Documents/AIReadyLife/vault/home/open-loops-archive.md`

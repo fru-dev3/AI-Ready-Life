@@ -58,4 +58,4 @@ estate_properties:
 
 ## Vault Output
 
-`~/Documents/AIReadyLife/vault/estate/00_properties/`
+`~/Documents/AIReadyLife/vault/estate/00_current/`

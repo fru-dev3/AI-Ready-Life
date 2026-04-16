@@ -16,7 +16,7 @@ Calls `aireadylife-brand-flow-check-profile-consistency` to perform the field-by
 
 Checks LinkedIn specifically for profile completeness signals that affect algorithmic discoverability: headline is present and keyword-rich, summary is filled (2,000 characters is the limit — use it), featured section has at least one item, skills section has 10+ endorsed skills, and all experience entries have descriptions. A complete LinkedIn profile generates 40x more opportunities than an incomplete one.
 
-Also checks for the user's author presence across any blogs, guest publications, or media mentions — consistent author name and bio on external sites contributes to Google Knowledge Panel development and personal brand SEO authority. Writes a dated audit report to vault/brand/04_briefs/ and updates open-loops.
+Also checks for the user's author presence across any blogs, guest publications, or media mentions — consistent author name and bio on external sites contributes to Google Knowledge Panel development and personal brand SEO authority. Writes a dated audit report to vault/brand/02_briefs/ and updates open-loops.
 
 ## Triggers
 
@@ -38,13 +38,13 @@ Also checks for the user's author presence across any blogs, guest publications,
 6. Check LinkedIn specifically for completeness signals: headline, summary character count, featured section items, skills count; flag any that are below target
 7. Check for consistent author name/bio on any external publications or media mentions configured in config.md
 8. Compile full audit report with: consistency score, per-platform status table (green / needs update), update checklist ordered by priority
-9. Write audit report to vault/brand/04_briefs/profile-audit-{Q}-{YYYY}.md
+9. Write audit report to vault/brand/02_briefs/profile-audit-{Q}-{YYYY}.md
 10. Call `aireadylife-brand-task-update-open-loops` with all flags from the audit
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/brand/02_profiles/master-profile.md` — canonical brand identity
-- `~/Documents/AIReadyLife/vault/brand/02_profiles/{platform}.md` — per-platform snapshots
+- `~/Documents/AIReadyLife/vault/brand/00_current/master-profile.md` — canonical brand identity
+- `~/Documents/AIReadyLife/vault/brand/00_current/{platform}.md` — per-platform snapshots
 - `~/Documents/AIReadyLife/vault/brand/config.md` — platforms, LinkedIn completeness targets, external publication list
 
 ## Output Format
@@ -75,7 +75,7 @@ Also checks for the user's author presence across any blogs, guest publications,
 
 ## After Updating
 For each platform you update, refresh the snapshot file at:
-vault/brand/02_profiles/{platform}.md
+vault/brand/00_current/{platform}.md
 ```
 
 ## Configuration
@@ -88,11 +88,11 @@ Required in `~/Documents/AIReadyLife/vault/brand/config.md`:
 
 ## Error Handling
 
-- If master-profile.md is missing: "Cannot run profile audit without a master brand profile. Create vault/brand/02_profiles/master-profile.md first."
+- If master-profile.md is missing: "Cannot run profile audit without a master brand profile. Create vault/brand/00_current/master-profile.md first."
 - If all platform snapshots are outdated (more than 6 months old): flag "All snapshots may be stale — update each platform's snapshot file after checking current profile state."
 - If consistency score is below 60%: lead the audit report with "Brand consistency is low. Multiple platforms are out of sync. Complete the update checklist this week."
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/brand/02_profiles/`, `~/Documents/AIReadyLife/vault/brand/config.md`
-- Writes to: `~/Documents/AIReadyLife/vault/brand/04_briefs/profile-audit-{Q}-{YYYY}.md`, `~/Documents/AIReadyLife/vault/brand/open-loops.md`
+- Reads from: `~/Documents/AIReadyLife/vault/brand/00_current/`, `~/Documents/AIReadyLife/vault/brand/config.md`
+- Writes to: `~/Documents/AIReadyLife/vault/brand/02_briefs/profile-audit-{Q}-{YYYY}.md`, `~/Documents/AIReadyLife/vault/brand/open-loops.md`

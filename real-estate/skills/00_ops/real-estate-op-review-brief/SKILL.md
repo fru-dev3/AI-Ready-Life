@@ -38,23 +38,23 @@ Action items are sorted by urgency and categorized: things to do this week (rene
 
 ## Steps
 
-1. Read affordability analysis from `~/Documents/AIReadyLife/vault/real-estate/02_analysis/YYYY-MM-affordability.md`
+1. Read affordability analysis from `~/Documents/AIReadyLife/vault/real-estate/00_current/YYYY-MM-affordability.md`
 2. Read prior month affordability to calculate delta; note dollar change in max purchase price
-3. Read market snapshots from `~/Documents/AIReadyLife/vault/real-estate/00_markets/YYYY-MM-market-report.md`
+3. Read market snapshots from `~/Documents/AIReadyLife/vault/real-estate/00_current/YYYY-MM-market-report.md`
 4. Identify markets in buyer's territory (>6 months supply) vs. seller's territory (<3 months)
-5. Read buy vs. rent analysis from `~/Documents/AIReadyLife/vault/real-estate/02_analysis/` and state break-even year
-6. Read active listings from `~/Documents/AIReadyLife/vault/real-estate/01_listings/` and update DOM counts
+5. Read buy vs. rent analysis from `~/Documents/AIReadyLife/vault/real-estate/00_current/` and state break-even year
+6. Read active listings from `~/Documents/AIReadyLife/vault/real-estate/00_current/` and update DOM counts
 7. Flag any saved listings with >60 days DOM and no price change as potential issues
 8. Read open-loops.md for existing flags; include unresolved items in action items section
 9. Compile all sections into structured brief
-10. Write brief to `~/Documents/AIReadyLife/vault/real-estate/03_briefs/YYYY-MM-realestate-brief.md`
+10. Write brief to `~/Documents/AIReadyLife/vault/real-estate/02_briefs/YYYY-MM-realestate-brief.md`
 11. Call `aireadylife-real-estate-update-open-loops` to record any new flags from the brief
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/real-estate/02_analysis/YYYY-MM-affordability.md`
-- `~/Documents/AIReadyLife/vault/real-estate/00_markets/YYYY-MM-market-report.md`
-- `~/Documents/AIReadyLife/vault/real-estate/01_listings/`
+- `~/Documents/AIReadyLife/vault/real-estate/00_current/YYYY-MM-affordability.md`
+- `~/Documents/AIReadyLife/vault/real-estate/00_current/YYYY-MM-market-report.md`
+- `~/Documents/AIReadyLife/vault/real-estate/00_current/`
 - `~/Documents/AIReadyLife/vault/real-estate/open-loops.md`
 
 ## Output Format
@@ -100,6 +100,6 @@ Required: `~/Documents/AIReadyLife/vault/real-estate/config.md` populated and va
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/real-estate/02_analysis/`, `00_markets/`, `01_listings/`, `open-loops.md`
-- Writes to: `~/Documents/AIReadyLife/vault/real-estate/03_briefs/YYYY-MM-realestate-brief.md`
+- Reads from: `~/Documents/AIReadyLife/vault/real-estate/00_current/`, `00_markets/`, `01_listings/`, `open-loops.md`
+- Writes to: `~/Documents/AIReadyLife/vault/real-estate/02_briefs/YYYY-MM-realestate-brief.md`
 - Writes to: `~/Documents/AIReadyLife/vault/real-estate/open-loops.md`

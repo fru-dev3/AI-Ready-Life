@@ -3,7 +3,7 @@ name: aireadylife-learning-task-log-completion
 type: task
 cadence: as-completed
 description: >
-  Records a completed course, certification, or book to vault/learning/04_archive/ with full context: title, type, platform, completion date, estimated hours invested, 1-3 key takeaways in plain language (Feynman-style), personal rating (1-5), and any credential earned with ID or URL. Moves the item from active vault to archive. Triggers: "log completion", "I finished", "mark as complete", "I passed my exam", "I finished reading", "course complete".
+  Records a completed course, certification, or book to vault/learning/01_prior/ with full context: title, type, platform, completion date, estimated hours invested, 1-3 key takeaways in plain language (Feynman-style), personal rating (1-5), and any credential earned with ID or URL. Moves the item from active vault to archive. Triggers: "log completion", "I finished", "mark as complete", "I passed my exam", "I finished reading", "course complete".
 ---
 
 ## What It Does
@@ -20,7 +20,7 @@ Creates a permanent completion record when a learning item is finished. The comp
 
 *Rating:* 1-5 personal rating with optional short rationale. Useful for evaluating whether to recommend a resource to others or whether to revisit it for a deeper dive.
 
-*Skills updated:* The task updates the skills inventory in `vault/career/03_skills/skills.md` (if Career plugin is installed) to reflect any skills that should now be at a higher proficiency level following completion. This closes the loop between the learning portfolio and the career skills gap analysis.
+*Skills updated:* The task updates the skills inventory in `vault/career/00_current/skills.md` (if Career plugin is installed) to reflect any skills that should now be at a higher proficiency level following completion. This closes the loop between the learning portfolio and the career skills gap analysis.
 
 ## Triggers
 
@@ -40,9 +40,9 @@ Creates a permanent completion record when a learning item is finished. The comp
 4. Collect rating (1-5) and any credential details (cert ID, certificate URL).
 5. Estimate hours invested: from study log in `vault/learning/00_current/study-log.md` if tracked, or from user input or platform stated duration.
 6. Compose completion record with all fields.
-7. Write completion record to `vault/learning/04_archive/` with filename format: `YYYY-MM-DD-[type]-[title-slug].md`.
+7. Write completion record to `vault/learning/01_prior/` with filename format: `YYYY-MM-DD-[type]-[title-slug].md`.
 8. Remove item from `vault/learning/00_current/` active items (or mark status as "completed" in the active item record).
-9. If type is course or certification: check if any skills in `vault/career/03_skills/skills.md` should be updated. Prompt user to confirm skill level update.
+9. If type is course or certification: check if any skills in `vault/career/00_current/skills.md` should be updated. Prompt user to confirm skill level update.
 10. Return confirmation with archive file location and updated skill inventory changes.
 
 ## Input
@@ -53,7 +53,7 @@ Creates a permanent completion record when a learning item is finished. The comp
 
 ## Output Format
 
-Completion record written to `vault/learning/04_archive/YYYY-MM-DD-[type]-[slug].md`:
+Completion record written to `vault/learning/01_prior/YYYY-MM-DD-[type]-[slug].md`:
 
 ```yaml
 title: "[name]"
@@ -84,7 +84,7 @@ notes: "[optional additional context]"
 Confirmation returned to user:
 ```
 Logged: [Title] — [Type] — Completed [date]
-Archive: vault/learning/04_archive/[filename]
+Archive: vault/learning/01_prior/[filename]
 Hours invested: X
 Takeaways recorded: X
 Skills updated: [list if any]
@@ -104,4 +104,4 @@ No configuration required beyond standard vault setup. Archive directory auto-cr
 ## Vault Paths
 
 - Reads from: `~/Documents/AIReadyLife/vault/learning/00_current/`
-- Writes to: `~/Documents/AIReadyLife/vault/learning/04_archive/`, `~/Documents/AIReadyLife/vault/career/03_skills/skills.md` (if Career plugin installed)
+- Writes to: `~/Documents/AIReadyLife/vault/learning/01_prior/`, `~/Documents/AIReadyLife/vault/career/00_current/skills.md` (if Career plugin installed)

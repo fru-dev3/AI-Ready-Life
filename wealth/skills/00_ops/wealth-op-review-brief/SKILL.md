@@ -13,11 +13,11 @@ description: >
 # aireadylife-wealth-review-brief
 
 **Cadence:** Monthly (after `aireadylife-wealth-monthly-synthesis` completes)
-**Produces:** Wealth review brief at `vault/wealth/04_briefs/YYYY-MM-wealth-brief.md`
+**Produces:** Wealth review brief at `vault/wealth/02_briefs/YYYY-MM-wealth-brief.md`
 
 ## What It Does
 
-Generates the monthly wealth review brief — a single document that synthesizes the entire wealth picture into an executive summary with prioritized actions. This is the document the user reads first; the detailed sub-reports in `vault/wealth/04_briefs/` are available for drilling down.
+Generates the monthly wealth review brief — a single document that synthesizes the entire wealth picture into an executive summary with prioritized actions. This is the document the user reads first; the detailed sub-reports in `vault/wealth/02_briefs/` are available for drilling down.
 
 **Brief structure:**
 
@@ -47,4 +47,4 @@ None
 
 ## Vault Output
 
-- `vault/wealth/04_briefs/YYYY-MM-wealth-brief.md` — monthly wealth review brief
+- `vault/wealth/02_briefs/YYYY-MM-wealth-brief.md` — monthly wealth review brief

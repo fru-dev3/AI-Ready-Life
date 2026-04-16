@@ -15,7 +15,7 @@ The brief follows a fixed structure that covers all the dimensions needed to und
 
 Distinguishes between factual reporting (Reuters wire, regulatory filings, official statements) and opinion or analysis (editorials, think tank papers, commentary). The brief clearly labels which sections are fact-based and which are analytical. When sources directly contradict each other on factual claims, notes the contradiction rather than silently choosing one version — letting the user assess credibility themselves.
 
-Returns the formatted multi-paragraph topic brief to the calling op. The calling op writes it to vault/intel/02_threads/ if it is tracking an ongoing story, or vault/intel/01_briefs/ if it is a one-time deep dive.
+Returns the formatted multi-paragraph topic brief to the calling op. The calling op writes it to vault/intel/00_current/ if it is tracking an ongoing story, or vault/intel/02_briefs/ if it is a one-time deep dive.
 
 ## Triggers
 
@@ -37,9 +37,9 @@ Called internally by `aireadylife-intel-op-topic-deep-dive`. Not invoked directl
 ## Input
 
 - Topic name and optional focus angle (from calling op)
-- `~/Documents/AIReadyLife/vault/intel/02_threads/` — existing thread files on related topics
-- `~/Documents/AIReadyLife/vault/intel/01_briefs/` — prior briefs for context and history
-- `~/Documents/AIReadyLife/vault/intel/00_sources/source-list.md` — source registry for credibility reference
+- `~/Documents/AIReadyLife/vault/intel/00_current/` — existing thread files on related topics
+- `~/Documents/AIReadyLife/vault/intel/02_briefs/` — prior briefs for context and history
+- `~/Documents/AIReadyLife/vault/intel/00_current/source-list.md` — source registry for credibility reference
 - `~/Documents/AIReadyLife/vault/intel/config.md` — topic priorities for relevance weighting
 
 ## Output Format
@@ -92,5 +92,5 @@ Required in `~/Documents/AIReadyLife/vault/intel/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/intel/02_threads/`, `~/Documents/AIReadyLife/vault/intel/01_briefs/`, `~/Documents/AIReadyLife/vault/intel/00_sources/`, `~/Documents/AIReadyLife/vault/intel/config.md`
-- Writes to: called by ops that write to `~/Documents/AIReadyLife/vault/intel/02_threads/` or `01_briefs/`
+- Reads from: `~/Documents/AIReadyLife/vault/intel/00_current/`, `~/Documents/AIReadyLife/vault/intel/02_briefs/`, `~/Documents/AIReadyLife/vault/intel/00_current/`, `~/Documents/AIReadyLife/vault/intel/config.md`
+- Writes to: called by ops that write to `~/Documents/AIReadyLife/vault/intel/00_current/` or `01_briefs/`

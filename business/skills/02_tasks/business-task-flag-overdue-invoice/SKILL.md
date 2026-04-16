@@ -8,7 +8,7 @@ description: >
 
 ## What It Does
 
-Reads invoice records from `~/Documents/AIReadyLife/vault/business/01_revenue/` and identifies any invoice where the payment due date has passed by more than 30 days and the status is still pending or overdue. For each overdue invoice found, calculates the exact number of days overdue (due date to today) and determines the recommended escalation action based on three severity tiers:
+Reads invoice records from `~/Documents/AIReadyLife/vault/business/00_current/` and identifies any invoice where the payment due date has passed by more than 30 days and the status is still pending or overdue. For each overdue invoice found, calculates the exact number of days overdue (due date to today) and determines the recommended escalation action based on three severity tiers:
 
 - **31-45 days overdue:** Send a polite but clear written payment reminder. Reference the original invoice number, amount, and due date. Include the late fee language if it was on the original invoice (1.5%/month is standard). Tone: professional, assuming oversight rather than bad faith.
 - **46-60 days overdue:** Escalate to a direct phone call in addition to a written demand. The written demand should explicitly state the late fee that has accrued and the total amount now owed. If the original contract included a collections clause, reference it.
@@ -22,7 +22,7 @@ Called internally by `aireadylife-business-op-pl-review` and `aireadylife-busine
 
 ## Steps
 
-1. Read all invoice records from `~/Documents/AIReadyLife/vault/business/01_revenue/`
+1. Read all invoice records from `~/Documents/AIReadyLife/vault/business/00_current/`
 2. Filter to invoices where: status = pending or overdue, AND payment due date is more than 30 days before today
 3. For each overdue invoice, calculate exact days overdue = today minus payment due date
 4. Assign severity tier: 31-45 days = Tier 1 (email reminder), 46-60 days = Tier 2 (phone + written demand), 61+ days = Tier 3 (collections decision)
@@ -33,7 +33,7 @@ Called internally by `aireadylife-business-op-pl-review` and `aireadylife-busine
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/business/01_revenue/` — invoice records; each must include: client name, invoice number, amount, due date, payment status
+- `~/Documents/AIReadyLife/vault/business/00_current/` — invoice records; each must include: client name, invoice number, amount, due date, payment status
 
 ## Output Format
 
@@ -61,5 +61,5 @@ Optional in `~/Documents/AIReadyLife/vault/business/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/business/01_revenue/`, `~/Documents/AIReadyLife/vault/business/open-loops.md`
+- Reads from: `~/Documents/AIReadyLife/vault/business/00_current/`, `~/Documents/AIReadyLife/vault/business/open-loops.md`
 - Writes to: `~/Documents/AIReadyLife/vault/business/open-loops.md`

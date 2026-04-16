@@ -4,7 +4,7 @@ type: flow
 trigger: called-by-op
 description: >
   Ingests new wearable device exports from Oura Ring (JSON) or Apple Health (XML/CSV)
-  and appends new daily records to vault/health/00_current/wearable/ without overwriting
+  and appends new daily records to vault/health/00_current/ without overwriting
   existing data. Extracts sleep score, sleep duration, HRV RMSSD, resting heart rate,
   readiness score, steps, and active energy. Reports date range coverage and flags gaps
   greater than 3 consecutive days.
@@ -13,7 +13,7 @@ description: >
 # aireadylife-health-sync-wearable-data
 
 **Trigger:** Called by `aireadylife-health-monthly-sync` and `aireadylife-health-anomaly-watch`
-**Produces:** Updated wearable records in `vault/health/00_current/wearable/`
+**Produces:** Updated wearable records in `vault/health/00_current/`
 
 ## What It Does
 
@@ -21,7 +21,7 @@ Checks the configured sync folder (set in config.md) for new wearable export fil
 
 For Oura Ring exports, the following fields are extracted per day: date, sleep score (0–100), total sleep duration (minutes), deep sleep (minutes), REM sleep (minutes), sleep efficiency (%), latency (minutes to fall asleep), HRV RMSSD (nightly average, ms), resting heart rate (BPM), readiness score (0–100), activity steps, active energy (kcal). For Apple Health exports, the fields extracted are: date, steps, active energy (kcal), resting heart rate (if recorded), body weight (if recorded), workout sessions (type, duration, energy).
 
-New records are appended to the unified wearable log at `vault/health/00_current/wearable/wearable-log.csv` (or one file per source if both are configured). The append operation checks each incoming record's date against existing dates in the file — no duplicate entries are written. After appending, the flow confirms the full date range now covered and reports any gap greater than 3 consecutive days where no data exists. Gaps are common after device battery death, travel without syncing, or manual export failures and are reported as warnings rather than errors.
+New records are appended to the unified wearable log at `vault/health/00_current/wearable-log.csv` (or one file per source if both are configured). The append operation checks each incoming record's date against existing dates in the file — no duplicate entries are written. After appending, the flow confirms the full date range now covered and reports any gap greater than 3 consecutive days where no data exists. Gaps are common after device battery death, travel without syncing, or manual export failures and are reported as warnings rather than errors.
 
 ## Triggers
 
@@ -39,7 +39,7 @@ New records are appended to the unified wearable log at `vault/health/00_current
 2. Check configured sync folder for new export files newer than the last sync timestamp recorded in vault
 3. For Oura JSON exports: parse daily records and extract the target fields per day
 4. For Apple Health XML/CSV: parse records and extract available daily aggregates per day
-5. For each incoming date record, check against existing records in `vault/health/00_current/wearable/wearable-log.csv`
+5. For each incoming date record, check against existing records in `vault/health/00_current/wearable-log.csv`
 6. Append only records with dates not already present in the log (no overwrite)
 7. Update the last-sync timestamp in vault to the latest record date processed
 8. Compute the full date range now covered (earliest date to latest date in the log)
@@ -59,8 +59,8 @@ Console summary to the user:
 - Gaps: [list any gaps >3 days] or "No gaps found"
 
 Written to vault:
-- Appended rows in `vault/health/00_current/wearable/wearable-log.csv`
-- Updated last-sync timestamp in `vault/health/00_current/wearable/sync-status.md`
+- Appended rows in `vault/health/00_current/wearable-log.csv`
+- Updated last-sync timestamp in `vault/health/00_current/sync-status.md`
 
 ## Configuration
 
@@ -81,5 +81,5 @@ Required fields in `vault/health/config.md`:
 
 - Reads from: `~/Documents/AIReadyLife/vault/health/config.md`
 - Reads from: configured export folder (typically Downloads or iCloud Drive path)
-- Writes to: `~/Documents/AIReadyLife/vault/health/00_current/wearable/wearable-log.csv`
-- Writes to: `~/Documents/AIReadyLife/vault/health/00_current/wearable/sync-status.md`
+- Writes to: `~/Documents/AIReadyLife/vault/health/00_current/wearable-log.csv`
+- Writes to: `~/Documents/AIReadyLife/vault/health/00_current/sync-status.md`

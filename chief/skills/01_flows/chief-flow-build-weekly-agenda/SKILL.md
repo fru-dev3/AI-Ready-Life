@@ -10,15 +10,15 @@ description: >
 # aireadylife-chief-build-weekly-agenda
 
 **Trigger:** Called by `aireadylife-chief-op-weekly-preview`
-**Produces:** Structured weekly agenda document written to ~/Documents/AIReadyLife/vault/chief/02_agenda/week-YYYY-MM-DD.md
+**Produces:** Structured weekly agenda document written to ~/Documents/AIReadyLife/vault/chief/00_current/week-YYYY-MM-DD.md
 
 ## What It Does
 
 This flow receives the collected domain alerts, calendar data, and backlog summary from the calling op and assembles the structured weekly agenda. It is a pure formatting and synthesis engine — all data collection happens upstream in the calling op.
 
-**Deadline calendar construction:** The flow builds a table of all deadline items falling within the next 7 days, one row per item. Items are sourced from: (a) open loop items with explicit due dates in the next 7 days, extracted from the domain alerts list, and (b) deadline records from vault/calendar/00_deadlines/ if the calendar plugin is installed. The table columns are: Day of Week, Domain, Item Description, Priority. Each day of the week appears in the table regardless of whether it has items — days with no deadlines show "No deadlines." This prevents the false impression that all deadlines were accounted for.
+**Deadline calendar construction:** The flow builds a table of all deadline items falling within the next 7 days, one row per item. Items are sourced from: (a) open loop items with explicit due dates in the next 7 days, extracted from the domain alerts list, and (b) deadline records from vault/calendar/00_current/ if the calendar plugin is installed. The table columns are: Day of Week, Domain, Item Description, Priority. Each day of the week appears in the table regardless of whether it has items — days with no deadlines show "No deadlines." This prevents the false impression that all deadlines were accounted for.
 
-**Top priorities selection:** The flow selects 3-5 priority items for the week that require active work regardless of whether they have a strict deadline. Priority selection criteria: (1) any 🔴 item without a hard deadline this week that still requires meaningful effort, (2) high-priority 🟡 items that have been on the list for 2+ weeks without movement, (3) OKR-aligned objectives from vault/vision/01_okrs/ if provided by the calling op. Each priority item includes a brief explanation of why it's a priority this week rather than next week.
+**Top priorities selection:** The flow selects 3-5 priority items for the week that require active work regardless of whether they have a strict deadline. Priority selection criteria: (1) any 🔴 item without a hard deadline this week that still requires meaningful effort, (2) high-priority 🟡 items that have been on the list for 2+ weeks without movement, (3) OKR-aligned objectives from vault/vision/00_current/ if provided by the calling op. Each priority item includes a brief explanation of why it's a priority this week rather than next week.
 
 **Focus time recommendations:** Using the per-day meeting load data provided by the calling op (from vault/calendar/), the flow calculates: total meeting hours per day, the longest single uninterrupted block per day, and which days have at least one 90+ minute block available for deep work. Days with 90+ minute blocks are recommended for complex tasks. Days with back-to-back meetings (under 30-minute gaps between events) are flagged as focus-hostile. If no calendar data is available, this section notes "Calendar plugin not installed" without skipping the section entirely.
 
@@ -42,7 +42,7 @@ This flow receives the collected domain alerts, calendar data, and backlog summa
 
 - Sorted domain alerts list with due dates (from chief-flow-collect-domain-alerts, via calling op)
 - Per-day calendar meeting load data (from vault/calendar/, via calling op)
-- OKR data (from vault/vision/01_okrs/, optional, via calling op)
+- OKR data (from vault/vision/00_current/, optional, via calling op)
 - Backlog counts by domain and tier (from chief-task-check-open-loops, via calling op)
 
 ## Output Format
@@ -86,7 +86,7 @@ Focus-hostile days:
 ## Configuration
 
 - `focus_block_minimum_hours` — from vault/chief/config.md; default 1.5 (90 minutes)
-- `weekly_priorities_override` — manual priorities in vault/chief/02_agenda/ that take precedence over auto-generated priorities
+- `weekly_priorities_override` — manual priorities in vault/chief/00_current/ that take precedence over auto-generated priorities
 
 ## Error Handling
 
@@ -97,4 +97,4 @@ Focus-hostile days:
 ## Vault Paths
 
 - Reads from: inputs passed by calling op (no direct vault reads)
-- Writes to: ~/Documents/AIReadyLife/vault/chief/02_agenda/week-YYYY-MM-DD.md (via calling op)
+- Writes to: ~/Documents/AIReadyLife/vault/chief/00_current/week-YYYY-MM-DD.md (via calling op)

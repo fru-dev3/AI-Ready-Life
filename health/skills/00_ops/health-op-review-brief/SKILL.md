@@ -13,7 +13,7 @@ description: >
 # aireadylife-health-review-brief
 
 **Cadence:** Monthly (1st of month, after monthly sync completes)
-**Produces:** Health review brief at `vault/health/04_briefs/YYYY-MM-health-brief.md`
+**Produces:** Health review brief at `vault/health/02_briefs/YYYY-MM-health-brief.md`
 
 ## What It Does
 
@@ -21,11 +21,11 @@ Generates the monthly health brief — a single document that gives the user a c
 
 **Composite Wellness Score.** Derived from the wearable wellness summary: a weighted average of sleep score (35% weight), HRV trend (25%), resting HR trend (20%), and readiness score (20%). The composite score is 0–100. Any score below 65 is flagged as below baseline; 65–79 is nominal; 80+ is strong. The score is shown with MoM direction (improving/declining/stable).
 
-**Lab Status.** Reads the most recent lab summary from `vault/health/01_labs/` and extracts the count and severity of flagged biomarkers. Lists each flagged biomarker by name and severity tier (borderline, elevated, critical) — no raw values in the brief. If no lab results exist in the past 12 months, flags "No recent labs — consider scheduling a comprehensive metabolic and lipid panel."
+**Lab Status.** Reads the most recent lab summary from `vault/health/00_current/` and extracts the count and severity of flagged biomarkers. Lists each flagged biomarker by name and severity tier (borderline, elevated, critical) — no raw values in the brief. If no lab results exist in the past 12 months, flags "No recent labs — consider scheduling a comprehensive metabolic and lipid panel."
 
-**Medication Status.** Reads from `vault/health/05_medications/` and lists any refills due within 30 days, any medications missing documentation, and any HSA reimbursements pending. If all medications are current, reports "All medications current — no action needed."
+**Medication Status.** Reads from `vault/health/00_current/` and lists any refills due within 30 days, any medications missing documentation, and any HSA reimbursements pending. If all medications are current, reports "All medications current — no action needed."
 
-**Cost and Coverage.** Reads deductible progress from `vault/health/06_insurance/deductible-tracker.md` and HSA balance from `vault/health/06_insurance/hsa-balance.md`. Reports: deductible paid YTD vs. plan deductible limit; estimated date to hit deductible (based on YTD pace); HSA balance and YTD contribution vs. 2025 limit ($4,300 individual / $8,550 family); out-of-pocket max progress.
+**Cost and Coverage.** Reads deductible progress from `vault/health/00_current/deductible-tracker.md` and HSA balance from `vault/health/00_current/hsa-balance.md`. Reports: deductible paid YTD vs. plan deductible limit; estimated date to hit deductible (based on YTD pace); HSA balance and YTD contribution vs. 2025 limit ($4,300 individual / $8,550 family); out-of-pocket max progress.
 
 **Preventive Care.** Reads open care gap flags from `vault/health/open-loops.md` and lists any overdue or due-soon screenings with their urgency tier.
 
@@ -50,5 +50,5 @@ None (reads from vault)
 
 ## Vault Output
 
-- `vault/health/04_briefs/YYYY-MM-health-brief.md` — monthly health review brief
+- `vault/health/02_briefs/YYYY-MM-health-brief.md` — monthly health review brief
 - `vault/health/open-loops.md` — resolved items closed if applicable

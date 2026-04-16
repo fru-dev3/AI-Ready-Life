@@ -11,7 +11,7 @@ description: >
 # aireadylife-vision-review-brief
 
 **Cadence:** Monthly (1st of month)
-**Produces:** Vision brief at ~/Documents/AIReadyLife/vault/vision/03_briefs/YYYY-MM-vision-brief.md
+**Produces:** Vision brief at ~/Documents/AIReadyLife/vault/vision/02_briefs/YYYY-MM-vision-brief.md
 
 ## What It Does
 
@@ -19,11 +19,11 @@ The vision review brief is the monthly strategic summary — a single document t
 
 The brief is designed to be read in under 5 minutes and to produce no more than 3 concrete action decisions. It is not a comprehensive review — it is an executive summary that surfaces only the most important signals and the specific actions they imply.
 
-**Scorecard summary:** The brief includes the most recent monthly scorecard from vault/vision/02_scorecard/ or runs `vision-flow-build-scorecard` if no current-month scorecard exists yet. The scorecard is presented as the full 13-domain table with scores, trend indicators, and status notes. Below the table, the brief highlights the 2 highest-momentum domains (positive reinforcement signal) and the 2 lowest-scoring domains (highest intervention priority).
+**Scorecard summary:** The brief includes the most recent monthly scorecard from vault/vision/00_current/ or runs `vision-flow-build-scorecard` if no current-month scorecard exists yet. The scorecard is presented as the full 13-domain table with scores, trend indicators, and status notes. Below the table, the brief highlights the 2 highest-momentum domains (positive reinforcement signal) and the 2 lowest-scoring domains (highest intervention priority).
 
 **At-risk OKR summary:** The brief calls `vision-flow-score-domain-progress` to identify any key results that are critically at-risk (less than 50% with less than 2 weeks remaining) or significantly behind pace (more than 20 points behind expected completion based on days elapsed in the quarter). The top 3 at-risk KRs are surfaced with: the KR description, the current completion percentage, the expected completion percentage, the gap, and a brief diagnosis of the primary reason for the gap.
 
-**Calendar alignment check:** If the calendar plugin is installed, the brief checks whether the user's top quarterly OKR domains have corresponding focus blocks in vault/calendar/02_agenda/ from the past 4 weeks. A domain that is in the top-3 OKR priority but has had zero focus blocks allocated in the past 4 weeks receives an alignment flag: "Career OKR is Q2 Priority 1 — but 0 of the last 4 weekly agendas included a career-focused deep work block. Intention vs. attention gap detected."
+**Calendar alignment check:** If the calendar plugin is installed, the brief checks whether the user's top quarterly OKR domains have corresponding focus blocks in vault/calendar/00_current/ from the past 4 weeks. A domain that is in the top-3 OKR priority but has had zero focus blocks allocated in the past 4 weeks receives an alignment flag: "Career OKR is Q2 Priority 1 — but 0 of the last 4 weekly agendas included a career-focused deep work block. Intention vs. attention gap detected."
 
 **Action items:** The brief closes with a list of at most 3 action items derived from the signals above — not generic advice, but specific actions with owners and target dates.
 
@@ -40,23 +40,23 @@ The brief is designed to be read in under 5 minutes and to produce no more than 
 ## Steps
 
 1. Verify vault/vision/ exists and config.md is filled in
-2. Read most recent monthly scorecard from vault/vision/02_scorecard/ (within past 35 days)
+2. Read most recent monthly scorecard from vault/vision/00_current/ (within past 35 days)
 3. If no recent scorecard: call `vision-flow-build-scorecard` to generate one now
 4. Identify 2 highest-momentum domains (8+ score or largest positive trend) and 2 lowest (below 5 or largest negative trend)
 5. Call `vision-flow-score-domain-progress` to evaluate current-quarter OKR key results
 6. Identify top 3 at-risk or critical-at-risk KRs with diagnosis
-7. If calendar plugin installed: read vault/calendar/02_agenda/ for past 4 weeks; check focus block allocation per OKR domain
+7. If calendar plugin installed: read vault/calendar/00_current/ for past 4 weeks; check focus block allocation per OKR domain
 8. Flag any OKR priority domain with 0 focus blocks in past 4 weeks as "intention vs. attention gap"
 9. Generate 3 specific action items from above signals
 10. Assemble brief in standard format
-11. Write to vault/vision/03_briefs/YYYY-MM-vision-brief.md
+11. Write to vault/vision/02_briefs/YYYY-MM-vision-brief.md
 12. Return formatted brief to user
 
 ## Input
 
-- ~/Documents/AIReadyLife/vault/vision/02_scorecard/ (most recent monthly scorecard)
-- ~/Documents/AIReadyLife/vault/vision/01_okrs/ (current quarter OKRs)
-- ~/Documents/AIReadyLife/vault/calendar/02_agenda/ (if calendar plugin installed, for alignment check)
+- ~/Documents/AIReadyLife/vault/vision/00_current/ (most recent monthly scorecard)
+- ~/Documents/AIReadyLife/vault/vision/00_current/ (current quarter OKRs)
+- ~/Documents/AIReadyLife/vault/calendar/00_current/ (if calendar plugin installed, for alignment check)
 - ~/Documents/AIReadyLife/vault/*/open-loops.md (for on-demand scorecard if needed)
 - ~/Documents/AIReadyLife/vault/vision/config.md
 
@@ -103,5 +103,5 @@ Required in vault/vision/config.md:
 
 ## Vault Paths
 
-- Reads from: ~/Documents/AIReadyLife/vault/vision/02_scorecard/, ~/Documents/AIReadyLife/vault/vision/01_okrs/, ~/Documents/AIReadyLife/vault/calendar/02_agenda/, ~/Documents/AIReadyLife/vault/*/open-loops.md
-- Writes to: ~/Documents/AIReadyLife/vault/vision/03_briefs/YYYY-MM-vision-brief.md
+- Reads from: ~/Documents/AIReadyLife/vault/vision/00_current/, ~/Documents/AIReadyLife/vault/vision/00_current/, ~/Documents/AIReadyLife/vault/calendar/00_current/, ~/Documents/AIReadyLife/vault/*/open-loops.md
+- Writes to: ~/Documents/AIReadyLife/vault/vision/02_briefs/YYYY-MM-vision-brief.md

@@ -11,15 +11,15 @@ description: >
 # aireadylife-explore-document-check
 
 **Cadence:** Quarterly (1st of January, April, July, October)
-**Produces:** Travel document status report at ~/Documents/AIReadyLife/vault/explore/01_documents/
+**Produces:** Travel document status report at ~/Documents/AIReadyLife/vault/explore/00_current/
 
 ## What It Does
 
-The quarterly document check is a dedicated deep audit of every travel document in the vault — more thorough than the monthly sync's document pass. Where the monthly sync applies thresholds and flags items meeting the standard criteria, the quarterly check also compares document validity against all wishlist destinations in vault/explore/02_wishlist/ (not just booked trips), ensuring the user's passport will be valid for destinations they're planning to visit in the next 12-18 months even if those trips aren't booked yet.
+The quarterly document check is a dedicated deep audit of every travel document in the vault — more thorough than the monthly sync's document pass. Where the monthly sync applies thresholds and flags items meeting the standard criteria, the quarterly check also compares document validity against all wishlist destinations in vault/explore/00_current/ (not just booked trips), ensuring the user's passport will be valid for destinations they're planning to visit in the next 12-18 months even if those trips aren't booked yet.
 
-**Document inventory audit:** The op calls `explore-flow-check-travel-docs` with a 12-month horizon. For each document in vault/explore/01_documents/, it checks: current expiration date, days until expiration, applicable renewal lead time, and the recommended action threshold. Documents evaluated: primary passport (all travelers in vault/explore/config.md), secondary passports if any, Global Entry membership, TSA PreCheck, Nexus/Sentri cards, active visas (checking both the validity window and the maximum stay), vaccination records (Yellow Fever valid 10 years after vaccination; some others; applicable to wishlist countries with vaccination requirements), and any travel-specific permits or special authorizations.
+**Document inventory audit:** The op calls `explore-flow-check-travel-docs` with a 12-month horizon. For each document in vault/explore/00_current/, it checks: current expiration date, days until expiration, applicable renewal lead time, and the recommended action threshold. Documents evaluated: primary passport (all travelers in vault/explore/config.md), secondary passports if any, Global Entry membership, TSA PreCheck, Nexus/Sentri cards, active visas (checking both the validity window and the maximum stay), vaccination records (Yellow Fever valid 10 years after vaccination; some others; applicable to wishlist countries with vaccination requirements), and any travel-specific permits or special authorizations.
 
-**Wishlist validation:** For each destination in vault/explore/02_wishlist/, the op checks: (1) will the user's passport be valid for at least 6 months beyond a hypothetical 2-week trip to that destination in the next 18 months? (2) does the destination require a visa for the user's citizenship, and if so, what is the lead time and process? (3) are there vaccination requirements? This forward-looking check prevents the situation where the user decides to book a bucket-list trip and discovers their passport expires 4 months after return and can't be renewed in time.
+**Wishlist validation:** For each destination in vault/explore/00_current/, the op checks: (1) will the user's passport be valid for at least 6 months beyond a hypothetical 2-week trip to that destination in the next 18 months? (2) does the destination require a visa for the user's citizenship, and if so, what is the lead time and process? (3) are there vaccination requirements? This forward-looking check prevents the situation where the user decides to book a bucket-list trip and discovers their passport expires 4 months after return and can't be renewed in time.
 
 **Renewal action plan:** For any document flagged within the renewal window, the op generates a specific action plan with: the exact renewal process (U.S. State Department for passports, CBP TTP program for Global Entry, TSA for PreCheck), the current processing time estimate, the recommended submission date (today's date plus buffer for the processing time), the cost, and the direct URL or phone number for starting the process.
 
@@ -34,22 +34,22 @@ The quarterly document check is a dedicated deep audit of every travel document 
 
 ## Steps
 
-1. Verify vault/explore/config.md and vault/explore/01_documents/ exist
+1. Verify vault/explore/config.md and vault/explore/00_current/ exist
 2. Call `explore-flow-check-travel-docs` with 12-month horizon and all travelers
 3. For each document: check expiry date; calculate days remaining; assign urgency tier
 4. Apply renewal lead times to determine recommended renewal start dates
-5. Read vault/explore/02_wishlist/ for planned destinations; check passport validity against each
+5. Read vault/explore/00_current/ for planned destinations; check passport validity against each
 6. For wishlist destinations: check visa requirements for user's citizenship; check vaccination requirements
 7. For each document meeting flag criteria: call `explore-task-flag-expiring-document`
 8. Generate renewal action plan for each flagged document
-9. Write document status report to vault/explore/01_documents/document-audit-YYYY-MM-DD.md
+9. Write document status report to vault/explore/00_current/document-audit-YYYY-MM-DD.md
 10. Call `explore-task-update-open-loops` to write all new flags
 11. Return formatted document status report to user
 
 ## Input
 
-- ~/Documents/AIReadyLife/vault/explore/01_documents/ (all travel documents)
-- ~/Documents/AIReadyLife/vault/explore/02_wishlist/ (planned destinations for forward validation)
+- ~/Documents/AIReadyLife/vault/explore/00_current/ (all travel documents)
+- ~/Documents/AIReadyLife/vault/explore/00_current/ (planned destinations for forward validation)
 - ~/Documents/AIReadyLife/vault/explore/config.md (travelers, citizenship)
 
 ## Output Format
@@ -89,11 +89,11 @@ Required in vault/explore/config.md:
 
 ## Error Handling
 
-- **vault/explore/01_documents/ empty:** Note "No documents on file. Create passport.md in vault/explore/01_documents/ with your passport expiry date to enable document tracking."
+- **vault/explore/00_current/ empty:** Note "No documents on file. Create passport.md in vault/explore/00_current/ with your passport expiry date to enable document tracking."
 - **Citizenship not configured in config.md:** Cannot check visa requirements for wishlist destinations — note "Add citizenship to vault/explore/config.md for visa requirement checking."
 - **Wishlist destination visa rules unknown:** Note "Verify current visa requirements at travel.state.gov for [destination]" rather than guessing.
 
 ## Vault Paths
 
-- Reads from: ~/Documents/AIReadyLife/vault/explore/01_documents/, ~/Documents/AIReadyLife/vault/explore/02_wishlist/, ~/Documents/AIReadyLife/vault/explore/config.md
-- Writes to: ~/Documents/AIReadyLife/vault/explore/01_documents/document-audit-YYYY-MM-DD.md, ~/Documents/AIReadyLife/vault/explore/open-loops.md
+- Reads from: ~/Documents/AIReadyLife/vault/explore/00_current/, ~/Documents/AIReadyLife/vault/explore/00_current/, ~/Documents/AIReadyLife/vault/explore/config.md
+- Writes to: ~/Documents/AIReadyLife/vault/explore/00_current/document-audit-YYYY-MM-DD.md, ~/Documents/AIReadyLife/vault/explore/open-loops.md

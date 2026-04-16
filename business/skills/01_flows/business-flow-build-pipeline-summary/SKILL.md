@@ -9,7 +9,7 @@ description: >
 
 ## What It Does
 
-Reads the client pipeline from `~/Documents/AIReadyLife/vault/business/05_contracts/` and extracts all records with a status other than closed-won or closed-lost (i.e., all active opportunities). Groups active opportunities by stage: sent (proposal delivered, no response yet), in-review (client acknowledged, evaluating), verbal-yes (informal commitment received, contract pending), and closing (contract sent, awaiting signature or payment). Calculates total pipeline value at each stage and as a grand total.
+Reads the client pipeline from `~/Documents/AIReadyLife/vault/business/00_current/` and extracts all records with a status other than closed-won or closed-lost (i.e., all active opportunities). Groups active opportunities by stage: sent (proposal delivered, no response yet), in-review (client acknowledged, evaluating), verbal-yes (informal commitment received, contract pending), and closing (contract sent, awaiting signature or payment). Calculates total pipeline value at each stage and as a grand total.
 
 Applies standard stage probability weights to produce a weighted pipeline value — a more realistic revenue forecast than raw pipeline total: sent = 10%, in-review = 40%, verbal-yes = 80%, closing = 95%. For example, $10,000 in the sent stage contributes $1,000 to the weighted forecast, while $10,000 in verbal-yes contributes $8,000. Weighted pipeline value is the number to use for cash flow planning.
 
@@ -21,20 +21,20 @@ Called internally by `aireadylife-business-op-pipeline-review`. Not invoked dire
 
 ## Steps
 
-1. Read all proposal and contract records from `~/Documents/AIReadyLife/vault/business/05_contracts/`; filter to status: sent, in-review, verbal-yes, closing (exclude closed-won and closed-lost)
+1. Read all proposal and contract records from `~/Documents/AIReadyLife/vault/business/00_current/`; filter to status: sent, in-review, verbal-yes, closing (exclude closed-won and closed-lost)
 2. Group active opportunities by stage; sum value per stage and total active pipeline value
 3. Apply stage probability weights (sent: 10%, in-review: 40%, verbal-yes: 80%, closing: 95%) to calculate weighted pipeline value per stage and overall
 4. For each active opportunity, check last-contact date; flag as "stale" if last-contact date is more than 7 calendar days ago with no response recorded
 5. Sort stale opportunities by days since last contact (most overdue first)
 6. For the top 3 opportunities by value in the verbal-yes and closing stages, add a "priority" flag — these are closest to revenue
 7. Read closed-won and closed-lost records from the prior 90 days; calculate conversion rate = closed-won / total sent in period
-8. Load prior month pipeline total (from vault/business/04_briefs/pipeline-{prior month}.md if available) for MoM comparison
+8. Load prior month pipeline total (from vault/business/02_briefs/pipeline-{prior month}.md if available) for MoM comparison
 9. Return all results (stage breakdown, weighted forecast, stale list, top opportunities, conversion rate, MoM delta) to calling op
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/business/05_contracts/` — proposal and contract records; each should include: client name, proposal name, value, stage, last-contact date, response status, expected close date
-- `~/Documents/AIReadyLife/vault/business/04_briefs/pipeline-{YYYY-MM}.md` — prior month pipeline brief for MoM comparison (optional)
+- `~/Documents/AIReadyLife/vault/business/00_current/` — proposal and contract records; each should include: client name, proposal name, value, stage, last-contact date, response status, expected close date
+- `~/Documents/AIReadyLife/vault/business/02_briefs/pipeline-{YYYY-MM}.md` — prior month pipeline brief for MoM comparison (optional)
 - `~/Documents/AIReadyLife/vault/business/config.md` — follow-up threshold in days (default: 7)
 
 ## Output Format
@@ -67,7 +67,7 @@ Called internally by `aireadylife-business-op-pipeline-review`. Not invoked dire
 
 ## Configuration
 
-Required in each proposal record in `~/Documents/AIReadyLife/vault/business/05_contracts/`:
+Required in each proposal record in `~/Documents/AIReadyLife/vault/business/00_current/`:
 - client name, proposal/project name, dollar value, current stage, last-contact date, response status (awaiting/received/none), expected close date
 
 Optional in `~/Documents/AIReadyLife/vault/business/config.md`:
@@ -76,12 +76,12 @@ Optional in `~/Documents/AIReadyLife/vault/business/config.md`:
 
 ## Error Handling
 
-- If `05_contracts/` is empty or no active proposals: return "No active pipeline. Add proposal records to vault/business/05_contracts/ to enable pipeline tracking."
+- If `05_contracts/` is empty or no active proposals: return "No active pipeline. Add proposal records to vault/business/00_current/ to enable pipeline tracking."
 - If a proposal record is missing a value field: include in stage count but flag as "value unknown" and exclude from financial totals.
 - If prior month brief is missing: populate MoM column with "N/A."
 - If last-contact date field is missing from a record: flag that proposal as "contact date unknown — update record."
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/business/05_contracts/`, `~/Documents/AIReadyLife/vault/business/04_briefs/`, `~/Documents/AIReadyLife/vault/business/config.md`
-- Writes to: called by ops that write to `~/Documents/AIReadyLife/vault/business/04_briefs/`
+- Reads from: `~/Documents/AIReadyLife/vault/business/00_current/`, `~/Documents/AIReadyLife/vault/business/02_briefs/`, `~/Documents/AIReadyLife/vault/business/config.md`
+- Writes to: called by ops that write to `~/Documents/AIReadyLife/vault/business/02_briefs/`

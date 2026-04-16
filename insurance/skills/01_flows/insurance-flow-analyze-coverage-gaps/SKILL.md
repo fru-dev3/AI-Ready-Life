@@ -8,7 +8,7 @@ description: >
 
 ## What It Does
 
-Called by `aireadylife-insurance-op-coverage-audit` to perform the quantitative gap analysis. Reads coverage limits from `vault/insurance/02_coverage/` and applies domain-specific adequacy rules to produce a scored, ranked gap list with financial exposure quantification and estimated cost to resolve.
+Called by `aireadylife-insurance-op-coverage-audit` to perform the quantitative gap analysis. Reads coverage limits from `vault/insurance/00_current/` and applies domain-specific adequacy rules to produce a scored, ranked gap list with financial exposure quantification and estimated cost to resolve.
 
 **Life insurance gap calculation:** Life insurance need = (annual_gross_income × multiplier) + outstanding_mortgage + significant_debts − spouse_income_offset. Multiplier: 10 for no dependents or single-income household, 12 for multiple dependents or if coverage must support stay-at-home partner. Sum all active life policies (group life, supplemental life, individual term). Gap = need − total_coverage. If gap > 0: severity is minor for gaps under 25% of need, moderate for 25-50% of need, significant for > 50% of need. Premium estimate to close: term life premiums roughly $500-$800/year per $500K of coverage for a healthy 35-year-old (varies significantly with age and health class).
 
@@ -22,7 +22,7 @@ Called by `aireadylife-insurance-op-coverage-audit` to perform the quantitative 
 
 ## Steps
 
-1. Read all coverage limits from `vault/insurance/02_coverage/` or from policy records in `vault/insurance/01_policies/`.
+1. Read all coverage limits from `vault/insurance/00_current/` or from policy records in `vault/insurance/00_current/`.
 2. Read financial benchmarks from `vault/insurance/config.md`: income, net worth, mortgage, dependents, emergency fund months.
 3. Calculate life insurance need and gap. Rate severity.
 4. Calculate LTD replacement rate and STD liquidity check. Rate severity for each.
@@ -37,8 +37,8 @@ Called by `aireadylife-insurance-op-coverage-audit` to perform the quantitative 
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/insurance/02_coverage/` — current coverage limits
-- `~/Documents/AIReadyLife/vault/insurance/01_policies/` — policy documents for limit verification
+- `~/Documents/AIReadyLife/vault/insurance/00_current/` — current coverage limits
+- `~/Documents/AIReadyLife/vault/insurance/00_current/` — policy documents for limit verification
 - `~/Documents/AIReadyLife/vault/insurance/config.md` — income, net worth, mortgage, dependents, properties
 
 ## Output Format
@@ -72,7 +72,7 @@ No Gap:
 
 ## Configuration
 
-All required data comes from `vault/insurance/config.md` and `vault/insurance/01_policies/` or `vault/insurance/02_coverage/`. No additional configuration required.
+All required data comes from `vault/insurance/config.md` and `vault/insurance/00_current/` or `vault/insurance/00_current/`. No additional configuration required.
 
 ## Error Handling
 
@@ -82,5 +82,5 @@ All required data comes from `vault/insurance/config.md` and `vault/insurance/01
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/insurance/02_coverage/`, `~/Documents/AIReadyLife/vault/insurance/01_policies/`, `~/Documents/AIReadyLife/vault/insurance/config.md`
+- Reads from: `~/Documents/AIReadyLife/vault/insurance/00_current/`, `~/Documents/AIReadyLife/vault/insurance/00_current/`, `~/Documents/AIReadyLife/vault/insurance/config.md`
 - Writes to: None (returns data to calling op)

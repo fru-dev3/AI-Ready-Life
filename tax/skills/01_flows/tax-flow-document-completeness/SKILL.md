@@ -4,7 +4,7 @@ type: flow
 trigger: called-by-op
 description: >
   Checks the expected tax document checklist for the current tax year against files
-  actually received in vault/tax/00_documents/ and flags anything expected but not
+  actually received in vault/tax/00_current/ and flags anything expected but not
   yet received. Expected documents are determined from active income sources, entities,
   and investments configured in config.md. Document types: W-2, 1099-NEC, 1099-MISC,
   1099-B, 1099-DIV, 1099-INT, 1099-R, K-1, 1098, and entity returns. Enforces
@@ -14,11 +14,11 @@ description: >
 # aireadylife-tax-document-completeness
 
 **Trigger:** Called by `aireadylife-tax-document-sync` and `aireadylife-tax-entity-compliance`
-**Produces:** Completeness report at `vault/tax/00_documents/YYYY-completeness.md`
+**Produces:** Completeness report at `vault/tax/00_current/YYYY-completeness.md`
 
 ## What It Does
 
-Reads the expected document checklist from `vault/tax/00_documents/expected-docs.md` — a configuration file that lists every document expected for the current tax year based on active income sources, investments, entities, and properties configured in config.md — and compares it against all files present in `vault/tax/00_documents/`.
+Reads the expected document checklist from `vault/tax/00_current/expected-docs.md` — a configuration file that lists every document expected for the current tax year based on active income sources, investments, entities, and properties configured in config.md — and compares it against all files present in `vault/tax/00_current/`.
 
 **Expected document generation.** The expected list is generated from config.md at the start of each tax year and updated when new income sources are added. Categories and their triggers:
 - W-2: one per employer active during the tax year (issued by January 31)
@@ -55,25 +55,25 @@ Reads the expected document checklist from `vault/tax/00_documents/expected-docs
 ## Steps
 
 1. Read `vault/tax/config.md` to identify all expected document sources: employers, clients/payers, financial institutions, entities, properties with mortgages
-2. Read `vault/tax/00_documents/expected-docs.md`; if it doesn't exist, generate it from config.md sources
-3. Scan all files in `vault/tax/00_documents/YYYY/` directory (current tax year)
+2. Read `vault/tax/00_current/expected-docs.md`; if it doesn't exist, generate it from config.md sources
+3. Scan all files in `vault/tax/00_current/YYYY/` directory (current tax year)
 4. Match each found file against the expected list using naming convention matching
 5. For each unmatched expected document, check today's date against the issuer's typical deadline
 6. Classify each expected document: RECEIVED, PENDING, NOT YET DUE, or DELINQUENT
 7. Check all received files for naming convention compliance; flag violations with correct name
 8. If called by entity compliance: filter scope to entity-level documents only
-9. Write completeness report to `vault/tax/00_documents/YYYY-completeness.md`
+9. Write completeness report to `vault/tax/00_current/YYYY-completeness.md`
 10. Return list of PENDING and DELINQUENT items to calling op for open-loop flag generation
 
 ## Input
 
-- `vault/tax/00_documents/` — all received document files
-- `vault/tax/00_documents/expected-docs.md` — expected document checklist
+- `vault/tax/00_current/` — all received document files
+- `vault/tax/00_current/expected-docs.md` — expected document checklist
 - `vault/tax/config.md` — income sources, entities, institutions
 
 ## Output Format
 
-Markdown document at `vault/tax/00_documents/YYYY-completeness.md`:
+Markdown document at `vault/tax/00_current/YYYY-completeness.md`:
 - Summary: N expected | N received | N pending | N not yet due | N delinquent
 - Status table: Document Type | Payer/Issuer | Expected By | Status | File Name (if received)
 - Naming violations section: incorrect file name | correct file name
@@ -92,12 +92,12 @@ Required in `vault/tax/config.md`:
 ## Error Handling
 
 - If expected-docs.md doesn't exist: generate it from config.md and note "Generated from config — verify the list covers all expected income sources"
-- If the vault documents directory is empty: report "No documents received yet. Place tax documents in vault/tax/00_documents/YYYY/ and re-run."
+- If the vault documents directory is empty: report "No documents received yet. Place tax documents in vault/tax/00_current/YYYY/ and re-run."
 - If a file's format cannot be read: list it by filename with "Contents unreadable — verify file is not corrupt"
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/tax/00_documents/YYYY/` (received documents)
-- Reads from: `~/Documents/AIReadyLife/vault/tax/00_documents/expected-docs.md`
+- Reads from: `~/Documents/AIReadyLife/vault/tax/00_current/YYYY/` (received documents)
+- Reads from: `~/Documents/AIReadyLife/vault/tax/00_current/expected-docs.md`
 - Reads from: `~/Documents/AIReadyLife/vault/tax/config.md`
-- Writes to: `~/Documents/AIReadyLife/vault/tax/00_documents/YYYY-completeness.md`
+- Writes to: `~/Documents/AIReadyLife/vault/tax/00_current/YYYY-completeness.md`

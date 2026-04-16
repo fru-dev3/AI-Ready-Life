@@ -11,7 +11,7 @@ description: >
 # aireadylife-chief-review-brief
 
 **Cadence:** Daily (morning)
-**Produces:** Executive AM brief written to ~/Documents/AIReadyLife/vault/chief/01_briefs/daily-YYYY-MM-DD.md
+**Produces:** Executive AM brief written to ~/Documents/AIReadyLife/vault/chief/02_briefs/daily-YYYY-MM-DD.md
 
 ## What It Does
 
@@ -35,7 +35,7 @@ For full documentation on logic, steps, and output format, see `aireadylife-chie
 
 1. Verify vault/chief/config.md exists; if missing, stop and prompt setup
 2. Delegate to `aireadylife-chief-op-daily-brief` full execution flow
-3. Write brief to vault/chief/01_briefs/daily-YYYY-MM-DD.md
+3. Write brief to vault/chief/02_briefs/daily-YYYY-MM-DD.md
 4. Return formatted brief to user
 
 ## Input
@@ -77,4 +77,4 @@ Same as `aireadylife-chief-op-daily-brief`:
 ## Vault Paths
 
 - Reads from: ~/Documents/AIReadyLife/vault/*/open-loops.md, ~/Documents/AIReadyLife/vault/*/state.md, ~/Documents/AIReadyLife/vault/calendar/
-- Writes to: ~/Documents/AIReadyLife/vault/chief/01_briefs/daily-YYYY-MM-DD.md
+- Writes to: ~/Documents/AIReadyLife/vault/chief/02_briefs/daily-YYYY-MM-DD.md

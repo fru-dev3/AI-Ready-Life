@@ -45,19 +45,19 @@ The headline figure — total monthly subscription spend — is always shown pro
 
 ## Steps
 
-1. Read subscription registry from `~/Documents/AIReadyLife/vault/records/02_subscriptions/subscriptions.md`
+1. Read subscription registry from `~/Documents/AIReadyLife/vault/records/00_current/subscriptions.md`
 2. Call `aireadylife-records-build-subscription-summary` to produce the full table
 3. Apply keep/review/cancel tier to each subscription based on usage recency and price
 4. Surface annual renewals within 30 days at the top of the output
 5. Calculate total monthly spend, total annual spend, and potential savings from canceling all "cancel" tier subscriptions
 6. Identify category duplicates; flag pairs
-7. Write subscription review to `~/Documents/AIReadyLife/vault/records/02_subscriptions/YYYY-MM-subscription-review.md`
+7. Write subscription review to `~/Documents/AIReadyLife/vault/records/00_current/YYYY-MM-subscription-review.md`
 8. Call `aireadylife-records-update-open-loops` with any subscription flags (renewals approaching, unused services, large unused annual subscription)
 9. Present full table sorted by monthly cost with headline totals and action items
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/records/02_subscriptions/subscriptions.md`
+- `~/Documents/AIReadyLife/vault/records/00_current/subscriptions.md`
 
 ## Output Format
 
@@ -79,7 +79,7 @@ The headline figure — total monthly subscription spend — is always shown pro
 
 ## Configuration
 
-Required in `~/Documents/AIReadyLife/vault/records/02_subscriptions/subscriptions.md`:
+Required in `~/Documents/AIReadyLife/vault/records/00_current/subscriptions.md`:
 - Per subscription: `service_name`, `category`, `billing_amount`, `billing_cycle`, `renewal_date`, `last_used_date`, `essential`
 
 ## Error Handling
@@ -90,6 +90,6 @@ Required in `~/Documents/AIReadyLife/vault/records/02_subscriptions/subscription
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/records/02_subscriptions/subscriptions.md`
-- Writes to: `~/Documents/AIReadyLife/vault/records/02_subscriptions/YYYY-MM-subscription-review.md`
+- Reads from: `~/Documents/AIReadyLife/vault/records/00_current/subscriptions.md`
+- Writes to: `~/Documents/AIReadyLife/vault/records/00_current/YYYY-MM-subscription-review.md`
 - Writes to: `~/Documents/AIReadyLife/vault/records/open-loops.md`

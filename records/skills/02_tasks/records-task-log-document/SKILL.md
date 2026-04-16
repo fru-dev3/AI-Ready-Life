@@ -116,5 +116,5 @@ Required in `~/Documents/AIReadyLife/vault/records/config.md`:
 
 ## Vault Paths
 
-- Writes to: `~/Documents/AIReadyLife/vault/records/00_identity/{holder-slug}-{document-type-slug}.md` (for identity documents)
-- Writes to: `~/Documents/AIReadyLife/vault/records/01_legal/{holder-slug}-{document-type-slug}.md` (for legal documents)
+- Writes to: `~/Documents/AIReadyLife/vault/records/00_current/{holder-slug}-{document-type-slug}.md` (for identity documents)
+- Writes to: `~/Documents/AIReadyLife/vault/records/00_current/{holder-slug}-{document-type-slug}.md` (for legal documents)

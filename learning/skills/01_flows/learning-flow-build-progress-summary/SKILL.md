@@ -26,7 +26,7 @@ Called by `aireadylife-learning-op-monthly-sync` and `aireadylife-learning-op-pr
 3. required_daily_pace = remaining_units ÷ days_remaining
 4. Format as "X [minutes/modules/pages] per day for X more days"
 
-**Monthly completion count:** Reads `vault/learning/04_archive/` for items where completion_date falls within the current month. Counts total completions by type (course/certification/book). Reads the monthly learning goal from `vault/learning/03_goals/` — specifically the monthly completion target. Calculates achievement rate = completions ÷ target.
+**Monthly completion count:** Reads `vault/learning/01_prior/` for items where completion_date falls within the current month. Counts total completions by type (course/certification/book). Reads the monthly learning goal from `vault/learning/00_current/` — specifically the monthly completion target. Calculates achievement rate = completions ÷ target.
 
 **Urgency sorting:** Returns the progress table sorted by urgency: behind items first (sorted by pace_delta ascending — most behind at top), then on-pace items (sorted by days_remaining ascending — nearest deadline at top), then ahead items.
 
@@ -37,16 +37,16 @@ Called by `aireadylife-learning-op-monthly-sync` and `aireadylife-learning-op-pr
 3. Classify each item as ahead/on-pace/behind based on pace_delta thresholds.
 4. For behind items: calculate required daily pace to finish on time.
 5. Sort all items by urgency (behind first, sorted by pace_delta ascending).
-6. Read completion records from `vault/learning/04_archive/` for current month — count by type.
-7. Read monthly goal target from `vault/learning/03_goals/`.
+6. Read completion records from `vault/learning/01_prior/` for current month — count by type.
+7. Read monthly goal target from `vault/learning/00_current/`.
 8. Calculate monthly achievement rate.
 9. Return structured progress table and monthly achievement data to calling op.
 
 ## Input
 
 - `~/Documents/AIReadyLife/vault/learning/00_current/` — all active learning items
-- `~/Documents/AIReadyLife/vault/learning/04_archive/` — completed items this month
-- `~/Documents/AIReadyLife/vault/learning/03_goals/` — monthly completion targets
+- `~/Documents/AIReadyLife/vault/learning/01_prior/` — completed items this month
+- `~/Documents/AIReadyLife/vault/learning/00_current/` — monthly completion targets
 
 ## Output Format
 
@@ -97,9 +97,9 @@ status: active
 - **Active item missing start_date or target_completion_date:** Cannot calculate pace. Return item with "dates missing — cannot calculate pace" note.
 - **completed_units > total_units:** Data error. Flag and skip pace calculation for that item.
 - **No active items:** Return empty table with monthly summary showing zero active items.
-- **Monthly goal not configured:** Report completion count without achievement rate; note that monthly goal must be set in `vault/learning/03_goals/` for achievement tracking.
+- **Monthly goal not configured:** Report completion count without achievement rate; note that monthly goal must be set in `vault/learning/00_current/` for achievement tracking.
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/learning/00_current/`, `~/Documents/AIReadyLife/vault/learning/04_archive/`, `~/Documents/AIReadyLife/vault/learning/03_goals/`
+- Reads from: `~/Documents/AIReadyLife/vault/learning/00_current/`, `~/Documents/AIReadyLife/vault/learning/01_prior/`, `~/Documents/AIReadyLife/vault/learning/00_current/`
 - Writes to: None (returns data to calling op)

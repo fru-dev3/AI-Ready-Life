@@ -15,20 +15,20 @@ description: >
 
 ## What It Provides
 
-Kindle is the most common e-reader for professional and nonfiction reading. This skill provides two pathways for reading progress data — an automated Goodreads RSS sync for users who sync their Kindle reading to Goodreads, and a manual/semi-manual Amazon library export for users who prefer to track directly. Reading highlights from kindle.amazon.com provide the most granular per-book insight, including the specific passages the user marked during reading — these are stored in `vault/learning/02_books/highlights/` for future reference.
+Kindle is the most common e-reader for professional and nonfiction reading. This skill provides two pathways for reading progress data — an automated Goodreads RSS sync for users who sync their Kindle reading to Goodreads, and a manual/semi-manual Amazon library export for users who prefer to track directly. Reading highlights from kindle.amazon.com provide the most granular per-book insight, including the specific passages the user marked during reading — these are stored in `vault/learning/00_current/highlights/` for future reference.
 
 ## Sync Methods
 
 **Method 1 — Goodreads RSS (recommended if Goodreads is active):**
 Reads two RSS feeds from the user's Goodreads account:
-- Currently reading shelf: `https://www.goodreads.com/review/list_rss/{USER_ID}?shelf=currently-reading` — provides title, author, and date added to currently-reading shelf. Note: Goodreads RSS does not provide page-level progress — the user must manually update current page in `vault/learning/02_books/current-reading.md`.
+- Currently reading shelf: `https://www.goodreads.com/review/list_rss/{USER_ID}?shelf=currently-reading` — provides title, author, and date added to currently-reading shelf. Note: Goodreads RSS does not provide page-level progress — the user must manually update current page in `vault/learning/00_current/current-reading.md`.
 - Read shelf: `https://www.goodreads.com/review/list_rss/{USER_ID}?shelf=read&sort=date_read` — provides completed books with date_read for YTD completion count.
 
 **Method 2 — Amazon Content page (fallback):**
 Navigates to Amazon's Kindle library page via Playwright to list all Kindle books. Does not provide reading progress (Amazon only shows completion in the app, not on the web). Use this method only for library inventory, not progress tracking.
 
 **Method 3 — Highlights export (supplemental):**
-Amazon's Kindle Notebook at read.amazon.com/kp/notebook provides exported highlights and notes from all Kindle books. Export to `vault/learning/02_books/highlights/` for future reference. The export is a text file with each highlight attributed to the book title. This is not used for progress calculation but is valuable for review and key takeaway extraction when logging a book completion.
+Amazon's Kindle Notebook at read.amazon.com/kp/notebook provides exported highlights and notes from all Kindle books. Export to `vault/learning/00_current/highlights/` for future reference. The export is a text file with each highlight attributed to the book title. This is not used for progress calculation but is valuable for review and key takeaway extraction when logging a book completion.
 
 ## Data Available
 
@@ -46,13 +46,13 @@ kindle_sync_method: goodreads  # goodreads or manual
 goodreads_user_id: "YOUR_USER_ID"  # found in your Goodreads profile URL
 goodreads_rss_currently_reading: "https://www.goodreads.com/review/list_rss/YOURID?shelf=currently-reading"
 goodreads_rss_read: "https://www.goodreads.com/review/list_rss/YOURID?shelf=read&sort=date_read"
-kindle_highlights_export_path: "vault/learning/02_books/highlights/"
+kindle_highlights_export_path: "vault/learning/00_current/highlights/"
 ```
 
 ## Technical Notes
 
 - Goodreads RSS feeds are public if the user's shelves are set to public — no authentication needed
-- Kindle app reading progress (percentage complete shown in the app) is NOT accessible via web — must be manually logged in `vault/learning/02_books/current-reading.md`
+- Kindle app reading progress (percentage complete shown in the app) is NOT accessible via web — must be manually logged in `vault/learning/00_current/current-reading.md`
 - Highlights export from read.amazon.com/kp/notebook requires Playwright with Chrome login (headless=False)
 - Goodreads has intermittently throttled RSS — add a 2-second delay and retry once if feed returns empty
 
@@ -60,7 +60,7 @@ kindle_highlights_export_path: "vault/learning/02_books/highlights/"
 
 Since app-level reading progress is not accessible programmatically, the vault uses a manual update system:
 ```yaml
-# vault/learning/02_books/current-reading.md
+# vault/learning/00_current/current-reading.md
 title: "[book title]"
 author: "[author name]"
 total_pages: X
@@ -79,6 +79,6 @@ The learning brief prompts the user to update this file if the last_updated date
 
 ## Vault Output
 
-- `~/Documents/AIReadyLife/vault/learning/02_books/current-reading.md` — current book progress
-- `~/Documents/AIReadyLife/vault/learning/02_books/completed.md` — YTD reading completions (from Goodreads read shelf)
-- `~/Documents/AIReadyLife/vault/learning/02_books/highlights/` — exported Kindle highlights by book
+- `~/Documents/AIReadyLife/vault/learning/00_current/current-reading.md` — current book progress
+- `~/Documents/AIReadyLife/vault/learning/00_current/completed.md` — YTD reading completions (from Goodreads read shelf)
+- `~/Documents/AIReadyLife/vault/learning/00_current/highlights/` — exported Kindle highlights by book

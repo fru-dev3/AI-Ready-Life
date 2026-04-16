@@ -11,11 +11,11 @@ description: >
 
 Runs at the end of each month to close the books and produce a complete monthly business synthesis. This is the deepest, most comprehensive monthly review — it goes beyond the P&L brief to produce a full business health assessment covering financials, compliance, pipeline, and forward outlook.
 
-Aggregates all revenue by stream and all expenses by category for the closing month from `~/Documents/AIReadyLife/vault/business/01_revenue/` and `~/Documents/AIReadyLife/vault/business/02_expenses/`. Computes gross revenue, total expenses by category, net income, and profit margin. Compares all figures to prior month and to YTD averages — a single bad month is noise, a three-month trend is signal.
+Aggregates all revenue by stream and all expenses by category for the closing month from `~/Documents/AIReadyLife/vault/business/00_current/` and `~/Documents/AIReadyLife/vault/business/00_current/`. Computes gross revenue, total expenses by category, net income, and profit margin. Compares all figures to prior month and to YTD averages — a single bad month is noise, a three-month trend is signal.
 
 Checks the compliance calendar for any deadlines in the next 60 days. Calculates YTD net income and the implied SE tax liability (15.3% on net self-employment income) to assess whether quarterly estimated tax set-asides are on track relative to the safe harbor amount (100% of prior year tax, or 110% if prior year AGI exceeded $150,000). Flags if estimated tax payments are behind the pace needed to avoid underpayment penalties.
 
-Reviews open-loops.md for any business items that have been unresolved for more than 30 days and escalates them. Writes the complete monthly synthesis report to vault/business/04_briefs/ and produces a YTD P&L file that rolls up the calendar year to date.
+Reviews open-loops.md for any business items that have been unresolved for more than 30 days and escalates them. Writes the complete monthly synthesis report to vault/business/02_briefs/ and produces a YTD P&L file that rolls up the calendar year to date.
 
 ## Triggers
 
@@ -38,16 +38,16 @@ Reviews open-loops.md for any business items that have been unresolved for more 
 7. Call `aireadylife-business-flow-check-compliance-status` for all entities; surface any items due within 60 days
 8. Review vault/business/open-loops.md for unresolved items older than 30 days; escalate with 🔴
 9. Identify the single most important business priority for the coming month based on the full picture
-10. Write synthesis report to vault/business/04_briefs/synthesis-{YYYY-MM}.md
-11. Update or create vault/business/01_revenue/pl-{YYYY}.md with YTD cumulative figures
+10. Write synthesis report to vault/business/02_briefs/synthesis-{YYYY-MM}.md
+11. Update or create vault/business/00_current/pl-{YYYY}.md with YTD cumulative figures
 12. Call `aireadylife-business-task-update-open-loops` with any new flags
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/business/01_revenue/` — current and prior month revenue records
-- `~/Documents/AIReadyLife/vault/business/02_expenses/` — current and prior month expense records
-- `~/Documents/AIReadyLife/vault/business/04_briefs/pl-*.md` — all prior monthly P&L briefs for YTD rollup
-- `~/Documents/AIReadyLife/vault/business/03_compliance/compliance-checklist.md` — compliance calendar
+- `~/Documents/AIReadyLife/vault/business/00_current/` — current and prior month revenue records
+- `~/Documents/AIReadyLife/vault/business/00_current/` — current and prior month expense records
+- `~/Documents/AIReadyLife/vault/business/02_briefs/pl-*.md` — all prior monthly P&L briefs for YTD rollup
+- `~/Documents/AIReadyLife/vault/business/00_current/compliance-checklist.md` — compliance calendar
 - `~/Documents/AIReadyLife/vault/business/config.md` — entity settings, prior year tax liability
 - `~/Documents/AIReadyLife/vault/business/open-loops.md` — current open items
 
@@ -93,5 +93,5 @@ Required in `~/Documents/AIReadyLife/vault/business/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/business/01_revenue/`, `~/Documents/AIReadyLife/vault/business/02_expenses/`, `~/Documents/AIReadyLife/vault/business/04_briefs/`, `~/Documents/AIReadyLife/vault/business/03_compliance/`, `~/Documents/AIReadyLife/vault/business/config.md`, `~/Documents/AIReadyLife/vault/business/open-loops.md`
-- Writes to: `~/Documents/AIReadyLife/vault/business/04_briefs/synthesis-{YYYY-MM}.md`, `~/Documents/AIReadyLife/vault/business/01_revenue/pl-{YYYY}.md`, `~/Documents/AIReadyLife/vault/business/open-loops.md`
+- Reads from: `~/Documents/AIReadyLife/vault/business/00_current/`, `~/Documents/AIReadyLife/vault/business/00_current/`, `~/Documents/AIReadyLife/vault/business/02_briefs/`, `~/Documents/AIReadyLife/vault/business/00_current/`, `~/Documents/AIReadyLife/vault/business/config.md`, `~/Documents/AIReadyLife/vault/business/open-loops.md`
+- Writes to: `~/Documents/AIReadyLife/vault/business/02_briefs/synthesis-{YYYY-MM}.md`, `~/Documents/AIReadyLife/vault/business/00_current/pl-{YYYY}.md`, `~/Documents/AIReadyLife/vault/business/open-loops.md`

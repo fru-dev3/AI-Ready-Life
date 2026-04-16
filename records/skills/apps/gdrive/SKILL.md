@@ -26,7 +26,7 @@ description: >
 
 Add to `~/Documents/AIReadyLife/vault/records/config.md`:
 ```
-gdrive_credentials: ~/Documents/AIReadyLife/vault/records/keys/gdrive-oauth.json
+gdrive_credentials: ~/Documents/AIReadyLife/vault/records/00_current/gdrive-oauth.json
 gdrive_records_folder_id: YOUR_RECORDS_FOLDER_ID
 gdrive_ids_subfolder_id: YOUR_IDS_SUBFOLDER_ID
 gdrive_legal_subfolder_id: YOUR_LEGAL_SUBFOLDER_ID
@@ -35,7 +35,7 @@ gdrive_scans_folder_id: YOUR_SCANS_FOLDER_ID
 
 Add to `~/.ai/env/.env`:
 ```
-GDRIVE_CREDENTIALS_PATH=~/Documents/AIReadyLife/vault/records/keys/gdrive-oauth.json
+GDRIVE_CREDENTIALS_PATH=~/Documents/AIReadyLife/vault/records/00_current/gdrive-oauth.json
 ```
 
 ## Recommended Google Drive Folder Structure
@@ -91,4 +91,4 @@ GET https://www.googleapis.com/drive/v3/files
 
 ## Vault Output
 
-`~/Documents/AIReadyLife/vault/records/00_identity/` (audit results noting scan file IDs and Drive links)
+`~/Documents/AIReadyLife/vault/records/00_current/` (audit results noting scan file IDs and Drive links)

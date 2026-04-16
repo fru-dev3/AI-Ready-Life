@@ -10,41 +10,41 @@ description: >
 
 Called by `aireadylife-benefits-op-enrollment-review`, `aireadylife-benefits-op-coverage-review`, and `aireadylife-benefits-op-review-brief` to produce the core benefits coverage table. This is the inventory and status layer — it compiles what coverage exists and where you stand on utilization of each limit. The calling ops use this table for enrollment comparisons, gap analysis, and monthly briefing.
 
-**Medical coverage:** Reads the active medical plan from `vault/benefits/00_plans/` — extracts plan name, plan type (HMO / PPO / HDHP / EPO), calendar year deductible (individual and family amounts), out-of-pocket maximum (individual and family), coinsurance rate after deductible, and monthly employee premium. Pulls YTD deductible spend and YTD OOP spend from claim records in `vault/benefits/03_coverage/` (EOBs filed during the plan year). Calculates remaining deductible and remaining OOP max for the plan year.
+**Medical coverage:** Reads the active medical plan from `vault/benefits/00_current/` — extracts plan name, plan type (HMO / PPO / HDHP / EPO), calendar year deductible (individual and family amounts), out-of-pocket maximum (individual and family), coinsurance rate after deductible, and monthly employee premium. Pulls YTD deductible spend and YTD OOP spend from claim records in `vault/benefits/00_current/` (EOBs filed during the plan year). Calculates remaining deductible and remaining OOP max for the plan year.
 
 **Dental and vision:** Reads plan names and key limits — dental annual maximum, orthodontia lifetime maximum if applicable, vision exam allowance and frame/lens allowance. Pulls any YTD dental benefit usage from EOBs.
 
-**401k:** Reads employer match rate, YTD employee contribution, YTD employer match contribution from most recent 401k data in `vault/benefits/01_retirement/`. Calculates YTD employer match as a percentage of the available match (match capture rate).
+**401k:** Reads employer match rate, YTD employee contribution, YTD employer match contribution from most recent 401k data in `vault/benefits/00_current/`. Calculates YTD employer match as a percentage of the available match (match capture rate).
 
-**HSA:** Reads current HSA balance (cash + invested), YTD contributions, and IRS limit for the coverage tier from `vault/benefits/02_hsa/`. Calculates remaining contribution room for the year.
+**HSA:** Reads current HSA balance (cash + invested), YTD contributions, and IRS limit for the coverage tier from `vault/benefits/00_current/`. Calculates remaining contribution room for the year.
 
 **Life insurance:** Reads the face value of employer-provided group life, supplemental life (if elected), and combined total. Reads annual salary from config to calculate current income multiple (coverage ÷ income).
 
-**Disability:** Reads short-term disability (waiting period, benefit percentage, maximum benefit period) and long-term disability (waiting period, benefit percentage, own-occupation vs. any-occupation definition, benefit period, monthly benefit cap) from plan documents in `vault/benefits/00_plans/`. Calculates effective income replacement rate: (monthly LTD benefit ÷ monthly gross salary) × 100.
+**Disability:** Reads short-term disability (waiting period, benefit percentage, maximum benefit period) and long-term disability (waiting period, benefit percentage, own-occupation vs. any-occupation definition, benefit period, monthly benefit cap) from plan documents in `vault/benefits/00_current/`. Calculates effective income replacement rate: (monthly LTD benefit ÷ monthly gross salary) × 100.
 
 ## Steps
 
-1. Read active medical plan from `vault/benefits/00_plans/` — extract plan type, deductible, OOP max, premium.
-2. Sum YTD deductible and OOP spend from EOBs in `vault/benefits/03_coverage/` for current plan year.
+1. Read active medical plan from `vault/benefits/00_current/` — extract plan type, deductible, OOP max, premium.
+2. Sum YTD deductible and OOP spend from EOBs in `vault/benefits/00_current/` for current plan year.
 3. Calculate remaining deductible room: deductible − YTD_deductible_spend (floor at 0).
 4. Calculate remaining OOP room: OOP_max − YTD_OOP_spend (floor at 0).
-5. Read dental plan name and limits from `vault/benefits/00_plans/`.
-6. Read vision plan name and limits from `vault/benefits/00_plans/`.
-7. Read 401k match rate and YTD contribution data from `vault/benefits/01_retirement/`.
-8. Read HSA balance, YTD contributions, and coverage tier from `vault/benefits/02_hsa/`.
+5. Read dental plan name and limits from `vault/benefits/00_current/`.
+6. Read vision plan name and limits from `vault/benefits/00_current/`.
+7. Read 401k match rate and YTD contribution data from `vault/benefits/00_current/`.
+8. Read HSA balance, YTD contributions, and coverage tier from `vault/benefits/00_current/`.
 9. Calculate HSA remaining contribution room: limit − (YTD_employee_contributions + YTD_employer_contributions).
-10. Read life insurance face values from `vault/benefits/00_plans/` — sum all active policies.
-11. Read disability plan details from `vault/benefits/00_plans/` — extract benefit percentages and caps.
+10. Read life insurance face values from `vault/benefits/00_current/` — sum all active policies.
+11. Read disability plan details from `vault/benefits/00_current/` — extract benefit percentages and caps.
 12. Calculate disability income replacement rate.
 13. Format all values into a coverage table.
 14. Return complete coverage table to calling op.
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/benefits/00_plans/` — all active plan documents
-- `~/Documents/AIReadyLife/vault/benefits/03_coverage/` — EOBs and claim records for YTD spend
-- `~/Documents/AIReadyLife/vault/benefits/01_retirement/` — 401k data
-- `~/Documents/AIReadyLife/vault/benefits/02_hsa/` — HSA data
+- `~/Documents/AIReadyLife/vault/benefits/00_current/` — all active plan documents
+- `~/Documents/AIReadyLife/vault/benefits/00_current/` — EOBs and claim records for YTD spend
+- `~/Documents/AIReadyLife/vault/benefits/00_current/` — 401k data
+- `~/Documents/AIReadyLife/vault/benefits/00_current/` — HSA data
 - `~/Documents/AIReadyLife/vault/benefits/config.md` — annual salary, coverage tier
 
 ## Output Format
@@ -80,15 +80,15 @@ Disability:
 
 ## Configuration
 
-Plan documents must be saved to `vault/benefits/00_plans/` in legible text or PDF format with clearly labeled limit fields. YTD claim data requires EOBs to be filed in `vault/benefits/03_coverage/` with the plan year in the filename.
+Plan documents must be saved to `vault/benefits/00_current/` in legible text or PDF format with clearly labeled limit fields. YTD claim data requires EOBs to be filed in `vault/benefits/00_current/` with the plan year in the filename.
 
 ## Error Handling
 
 - **EOBs not filed:** YTD spend for deductible and OOP will show as $0 (unknown). Note that YTD spend data is unavailable and direct user to file EOBs.
-- **Disability plan document missing:** Report disability section as "Plan document not available — add to vault/benefits/00_plans/ to enable disability coverage analysis."
+- **Disability plan document missing:** Report disability section as "Plan document not available — add to vault/benefits/00_current/ to enable disability coverage analysis."
 - **Multiple medical plans (e.g., mid-year change):** Use the plan in effect as of the current date; note the change date.
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/benefits/00_plans/`, `~/Documents/AIReadyLife/vault/benefits/03_coverage/`, `~/Documents/AIReadyLife/vault/benefits/01_retirement/`, `~/Documents/AIReadyLife/vault/benefits/02_hsa/`, `~/Documents/AIReadyLife/vault/benefits/config.md`
+- Reads from: `~/Documents/AIReadyLife/vault/benefits/00_current/`, `~/Documents/AIReadyLife/vault/benefits/00_current/`, `~/Documents/AIReadyLife/vault/benefits/00_current/`, `~/Documents/AIReadyLife/vault/benefits/00_current/`, `~/Documents/AIReadyLife/vault/benefits/config.md`
 - Writes to: None (returns data to calling op)

@@ -35,11 +35,11 @@ When the op does identify items, it writes a brief weekly snapshot with only the
 
 ## Steps
 
-1. Read all open maintenance items from `~/Documents/AIReadyLife/vault/home/01_maintenance/`
+1. Read all open maintenance items from `~/Documents/AIReadyLife/vault/home/00_current/`
 2. Check each item's target completion date against today; identify any now overdue
 3. Check urgency escalation: routine items overdue 14+ days → flag as urgent
 4. Check emergency items for completion or vendor appointment within 72 hours of opening; flag if unresolved
-5. Read seasonal checklist from `~/Documents/AIReadyLife/vault/home/01_maintenance/YYYY-{season}-checklist.md`; identify tasks due within next 7 days
+5. Read seasonal checklist from `~/Documents/AIReadyLife/vault/home/00_current/YYYY-{season}-checklist.md`; identify tasks due within next 7 days
 6. Scan open maintenance items for vendor follow-up notes with no update in 7+ days; flag as stale
 7. If all checks are clean: confirm "Home is on track — nothing requires attention this week" and exit without writing a snapshot
 8. If any items flagged: write brief snapshot to `~/Documents/AIReadyLife/vault/home/00_current/weekly-snapshot.md`
@@ -47,7 +47,7 @@ When the op does identify items, it writes a brief weekly snapshot with only the
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/home/01_maintenance/`
+- `~/Documents/AIReadyLife/vault/home/00_current/`
 - `~/Documents/AIReadyLife/vault/home/00_current/` (prior week's snapshot for comparison)
 
 ## Output Format
@@ -76,5 +76,5 @@ No additional configuration required beyond vault existing and seasonal checklis
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/home/01_maintenance/`
+- Reads from: `~/Documents/AIReadyLife/vault/home/00_current/`
 - Writes to: `~/Documents/AIReadyLife/vault/home/00_current/weekly-snapshot.md` (only when items flagged)

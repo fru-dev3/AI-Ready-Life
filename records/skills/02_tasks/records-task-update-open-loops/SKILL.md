@@ -46,8 +46,8 @@ Each flag entry includes: category, document or service name, holder if applicab
 
 - Flag data from calling op
 - `~/Documents/AIReadyLife/vault/records/open-loops.md`
-- `~/Documents/AIReadyLife/vault/records/00_identity/` — for renewal resolution checks
-- `~/Documents/AIReadyLife/vault/records/02_subscriptions/subscriptions.md` — for cancellation resolution checks
+- `~/Documents/AIReadyLife/vault/records/00_current/` — for renewal resolution checks
+- `~/Documents/AIReadyLife/vault/records/00_current/subscriptions.md` — for cancellation resolution checks
 
 ## Output Format
 
@@ -82,6 +82,6 @@ No additional configuration required.
 ## Vault Paths
 
 - Reads from: `~/Documents/AIReadyLife/vault/records/open-loops.md`
-- Reads from: `~/Documents/AIReadyLife/vault/records/00_identity/`, `02_subscriptions/`
+- Reads from: `~/Documents/AIReadyLife/vault/records/00_current/`, `02_subscriptions/`
 - Writes to: `~/Documents/AIReadyLife/vault/records/open-loops.md`
 - Writes to: `~/Documents/AIReadyLife/vault/records/open-loops-archive.md`

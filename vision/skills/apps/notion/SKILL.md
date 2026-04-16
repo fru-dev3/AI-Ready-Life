@@ -60,5 +60,5 @@ Notion-Version: 2022-06-28
 
 ## Vault Output
 
-- Local: `vault/vision/01_okrs/`, `vault/vision/02_scorecard/` — always written first
+- Local: `vault/vision/00_current/`, `vault/vision/00_current/` — always written first
 - Notion: sync after local write; Notion is not the source of truth, vault is

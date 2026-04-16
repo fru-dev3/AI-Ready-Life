@@ -16,7 +16,7 @@ description: >
 # aireadylife-tax-deduction-review
 
 **Cadence:** Monthly (1st of month)
-**Produces:** Updated deductions log in `vault/tax/03_deductions/`; deduction gap flags in `vault/tax/open-loops.md`
+**Produces:** Updated deductions log in `vault/tax/00_current/`; deduction gap flags in `vault/tax/open-loops.md`
 
 ## What It Does
 
@@ -41,5 +41,5 @@ None
 
 ## Vault Output
 
-- `vault/tax/03_deductions/YYYY-deductions.md` — updated YTD deduction totals by category
+- `vault/tax/00_current/YYYY-deductions.md` — updated YTD deduction totals by category
 - `vault/tax/open-loops.md` — documentation gap flags and pace flags

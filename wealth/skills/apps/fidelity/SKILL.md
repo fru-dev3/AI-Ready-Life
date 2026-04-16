@@ -57,6 +57,6 @@ fidelity_accounts:
 
 ## Vault Output
 
-- `vault/wealth/01_investments/fidelity/` — holdings snapshots and performance records
-- `vault/wealth/01_investments/fidelity/statements/` — monthly statement PDFs
-- `vault/wealth/01_investments/fidelity/tax-docs/` — 1099-R, 1099-B, 1099-DIV
+- `vault/wealth/00_current/fidelity/` — holdings snapshots and performance records
+- `vault/wealth/00_current/fidelity/statements/` — monthly statement PDFs
+- `vault/wealth/00_current/fidelity/tax-docs/` — 1099-R, 1099-B, 1099-DIV

@@ -9,7 +9,7 @@ description: >
 
 ## What It Does
 
-Ingests recent content from every source registered in `~/Documents/AIReadyLife/vault/intel/00_sources/source-list.md`, applies topic and keyword filters to remove irrelevant items, deduplicates stories being covered by multiple outlets, and formats a ranked daily digest. The output is not a list of links — it is a curated, one-sentence-per-story briefing that is fully informative on its own.
+Ingests recent content from every source registered in `~/Documents/AIReadyLife/vault/intel/00_current/source-list.md`, applies topic and keyword filters to remove irrelevant items, deduplicates stories being covered by multiple outlets, and formats a ranked daily digest. The output is not a list of links — it is a curated, one-sentence-per-story briefing that is fully informative on its own.
 
 Source registry: each source entry in source-list.md has a name, URL or RSS feed address, source type (RSS, newsletter, X/Twitter account, podcast, website), topic tags, and a credibility tier (1, 2, or 3). Tier 1 sources (Reuters, AP, FT, WSJ, Bloomberg, MIT Tech Review, The Economist) are treated as authoritative for facts and breaking news. Tier 2 sources (niche trade publications, established newsletters, think tank reports) provide depth. Tier 3 sources (blogs, aggregator accounts, YouTube commentary) are useful for trend signal only.
 
@@ -27,7 +27,7 @@ Called internally by `aireadylife-intel-op-daily-briefing` and `aireadylife-inte
 
 ## Steps
 
-1. Read source registry from `~/Documents/AIReadyLife/vault/intel/00_sources/source-list.md`; load all active sources with their credibility tier and topic tags
+1. Read source registry from `~/Documents/AIReadyLife/vault/intel/00_current/source-list.md`; load all active sources with their credibility tier and topic tags
 2. Read topic include list and keyword exclude list from `~/Documents/AIReadyLife/vault/intel/config.md`
 3. For each source: fetch or read the most recent articles/entries (within the past 24 hours); collect headline, summary, URL, publication time, source name
 4. Apply topic filter: keep articles that match at least one configured include topic; remove articles containing exclude keywords
@@ -40,7 +40,7 @@ Called internally by `aireadylife-intel-op-daily-briefing` and `aireadylife-inte
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/intel/00_sources/source-list.md` — source registry with credibility tiers and topic tags
+- `~/Documents/AIReadyLife/vault/intel/00_current/source-list.md` — source registry with credibility tiers and topic tags
 - `~/Documents/AIReadyLife/vault/intel/config.md` — include topics, exclude keywords, topic priorities, minimum score threshold
 - Article data from configured sources (passed by the calling op or read from vault if pre-fetched)
 
@@ -76,12 +76,12 @@ Required in `~/Documents/AIReadyLife/vault/intel/config.md`:
 
 ## Error Handling
 
-- If source-list.md is empty or missing: "No sources configured. Add sources to vault/intel/00_sources/source-list.md to enable digest generation."
+- If source-list.md is empty or missing: "No sources configured. Add sources to vault/intel/00_current/source-list.md to enable digest generation."
 - If fewer than 5 stories pass all filters: include all that pass and note "Only {X} stories met filter criteria today — consider broadening topic filters or adding more sources."
 - If all fetched articles are older than 24 hours: include them with a note "No articles from the past 24 hours on configured topics — showing most recent available."
-- If a source is unreachable: skip it and note in the digest footer "Source {name} unavailable today — check vault/intel/00_sources/ for URL accuracy."
+- If a source is unreachable: skip it and note in the digest footer "Source {name} unavailable today — check vault/intel/00_current/ for URL accuracy."
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/intel/00_sources/source-list.md`, `~/Documents/AIReadyLife/vault/intel/config.md`
-- Writes to: called by ops that write to `~/Documents/AIReadyLife/vault/intel/01_briefs/`
+- Reads from: `~/Documents/AIReadyLife/vault/intel/00_current/source-list.md`, `~/Documents/AIReadyLife/vault/intel/config.md`
+- Writes to: called by ops that write to `~/Documents/AIReadyLife/vault/intel/02_briefs/`

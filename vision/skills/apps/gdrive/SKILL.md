@@ -54,5 +54,5 @@ Scopes: https://www.googleapis.com/auth/drive.file
 
 ## Vault Output
 
-- `vault/vision/02_scorecard/` — local copy always written first; Drive is secondary archive
-- `vault/vision/05_archive/` — local annual review; mirrored to Drive annual reviews folder
+- `vault/vision/00_current/` — local copy always written first; Drive is secondary archive
+- `vault/vision/01_prior/` — local annual review; mirrored to Drive annual reviews folder

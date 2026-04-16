@@ -14,7 +14,7 @@ description: >
 # aireadylife-wealth-net-worth-review
 
 **Cadence:** Monthly (1st of month)
-**Produces:** Net worth snapshot at `vault/wealth/04_briefs/YYYY-MM-net-worth.md`; updated account totals in `vault/wealth/00_accounts/`
+**Produces:** Net worth snapshot at `vault/wealth/02_briefs/YYYY-MM-net-worth.md`; updated account totals in `vault/wealth/00_current/`
 
 ## What It Does
 
@@ -24,7 +24,7 @@ The op calls `aireadylife-wealth-build-net-worth-summary` to aggregate all asset
 
 The op also checks whether the emergency fund (liquid assets: checking + savings + HYSA) covers at least 3 months of essential monthly expenses. If coverage has dropped below 3 months, an open-loop flag is generated. If coverage dropped below 3 months for the second consecutive month, the flag is elevated to HIGH severity.
 
-All flags are consolidated via `aireadylife-wealth-update-open-loops`. The summary is written to `vault/wealth/04_briefs/YYYY-MM-net-worth.md` and also updates the current state file `vault/wealth/00_accounts/current-net-worth.md` with just the headline number (current net worth and date) for quick reference by other ops.
+All flags are consolidated via `aireadylife-wealth-update-open-loops`. The summary is written to `vault/wealth/02_briefs/YYYY-MM-net-worth.md` and also updates the current state file `vault/wealth/00_current/current-net-worth.md` with just the headline number (current net worth and date) for quick reference by other ops.
 
 ## Calls
 
@@ -37,6 +37,6 @@ None (reads from vault; account balances must be updated manually or via configu
 
 ## Vault Output
 
-- `vault/wealth/04_briefs/YYYY-MM-net-worth.md` — full net worth table
-- `vault/wealth/00_accounts/current-net-worth.md` — headline number for quick reference
+- `vault/wealth/02_briefs/YYYY-MM-net-worth.md` — full net worth table
+- `vault/wealth/00_current/current-net-worth.md` — headline number for quick reference
 - `vault/wealth/open-loops.md` — unexplained movement flags and emergency fund alerts

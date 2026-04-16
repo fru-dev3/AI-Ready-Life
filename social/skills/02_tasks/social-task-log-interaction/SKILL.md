@@ -3,14 +3,14 @@ name: aireadylife-social-task-log-interaction
 type: task
 cadence: as-happened
 description: >
-  Records a contact interaction to vault/social/01_interactions/ with contact name, date, type,
+  Records a contact interaction to vault/social/00_current/ with contact name, date, type,
   notes, and any follow-up promised.
 ---
 
 # aireadylife-social-log-interaction
 
 **Cadence:** As-happened (after any meaningful contact with a tracked person)
-**Produces:** Interaction record in ~/Documents/AIReadyLife/vault/social/01_interactions/
+**Produces:** Interaction record in ~/Documents/AIReadyLife/vault/social/00_current/
 
 ## What It Does
 
@@ -28,7 +28,7 @@ This task is the most frequently used skill in the entire social domain — and 
 
 1. Receive interaction details from user: contact name, date, type, notes, follow-up promised (if any)
 2. Verify contact name exists in vault/social/00_current/contacts.md; if not found, ask to confirm spelling or add as new contact
-3. Determine interaction log file path: vault/social/01_interactions/{contact-slug}.md or combined log
+3. Determine interaction log file path: vault/social/00_current/{contact-slug}.md or combined log
 4. Append interaction entry to the log file
 5. If follow-up promised: also write a follow-up item to vault/social/open-loops.md
 6. Return confirmation with the entry logged and any follow-up item noted
@@ -37,11 +37,11 @@ This task is the most frequently used skill in the entire social domain — and 
 
 - Interaction details from user (contact name, date, type, notes, follow-up)
 - ~/Documents/AIReadyLife/vault/social/00_current/contacts.md (for contact verification)
-- ~/Documents/AIReadyLife/vault/social/01_interactions/ (for appending)
+- ~/Documents/AIReadyLife/vault/social/00_current/ (for appending)
 
 ## Output Format
 
-Entry in vault/social/01_interactions/{contact-slug}.md (or combined log):
+Entry in vault/social/00_current/{contact-slug}.md (or combined log):
 ```markdown
 ---
 
@@ -85,4 +85,4 @@ No configuration required. Contact name must match vault/social/00_current/conta
 ## Vault Paths
 
 - Reads from: ~/Documents/AIReadyLife/vault/social/00_current/contacts.md
-- Writes to: ~/Documents/AIReadyLife/vault/social/01_interactions/{contact-slug}.md, ~/Documents/AIReadyLife/vault/social/open-loops.md (if follow-up promised)
+- Writes to: ~/Documents/AIReadyLife/vault/social/00_current/{contact-slug}.md, ~/Documents/AIReadyLife/vault/social/open-loops.md (if follow-up promised)

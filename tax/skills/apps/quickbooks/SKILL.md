@@ -63,5 +63,5 @@ Find company ID in QBO: Settings → Account and Settings → Billing & Subscrip
 
 ## Vault Output
 
-- `vault/tax/03_deductions/YYYY/qbo-transactions-YYYY-MM.csv` — monthly transaction export
-- `vault/tax/03_deductions/YYYY/qbo-pl-ytd.csv` — YTD P&L export for estimated tax
+- `vault/tax/00_current/YYYY/qbo-transactions-YYYY-MM.csv` — monthly transaction export
+- `vault/tax/00_current/YYYY/qbo-pl-ytd.csv` — YTD P&L export for estimated tax

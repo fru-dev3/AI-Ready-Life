@@ -13,7 +13,7 @@ description: >
 # aireadylife-health-anomaly-watch
 
 **Cadence:** Weekly (every Monday)
-**Produces:** Anomaly flags in `vault/health/open-loops.md`; updated wearable data in `vault/health/00_current/wearable/`
+**Produces:** Anomaly flags in `vault/health/open-loops.md`; updated wearable data in `vault/health/00_current/`
 
 ## What It Does
 
@@ -37,5 +37,5 @@ All anomalies detected are passed to `aireadylife-health-update-open-loops` with
 
 ## Vault Output
 
-- `vault/health/00_current/wearable/wearable-log.csv` — updated with latest data
+- `vault/health/00_current/wearable-log.csv` — updated with latest data
 - `vault/health/open-loops.md` — new anomaly flags appended

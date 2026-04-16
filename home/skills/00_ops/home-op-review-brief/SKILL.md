@@ -42,20 +42,20 @@ For homeowners, the brief optionally includes a home value section: the most rec
 
 ## Steps
 
-1. Read all open maintenance items from `~/Documents/AIReadyLife/vault/home/01_maintenance/`; sort by urgency and days open
+1. Read all open maintenance items from `~/Documents/AIReadyLife/vault/home/00_current/`; sort by urgency and days open
 2. Read seasonal maintenance schedule from most recent schedule file; filter to tasks due within 14 days with no completion record
-3. Read current month expense file from `~/Documents/AIReadyLife/vault/home/02_expenses/YYYY-MM-expenses.md`; calculate total to date
+3. Read current month expense file from `~/Documents/AIReadyLife/vault/home/00_current/YYYY-MM-expenses.md`; calculate total to date
 4. Read open-loops.md for any existing unresolved flags
 5. Check renewal dates from config.md (insurance, lease, home warranty); flag any within threshold
 6. If homeowner: pull Zestimate or most recent appraisal value from `~/Documents/AIReadyLife/vault/home/config.md`; calculate equity snapshot
 7. Compile all sections into brief structure
-8. Write brief to `~/Documents/AIReadyLife/vault/home/03_briefs/YYYY-MM-DD-home-brief.md`
+8. Write brief to `~/Documents/AIReadyLife/vault/home/02_briefs/YYYY-MM-DD-home-brief.md`
 9. Call `aireadylife-home-update-open-loops` with any new flags from the brief
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/home/01_maintenance/`
-- `~/Documents/AIReadyLife/vault/home/02_expenses/YYYY-MM-expenses.md`
+- `~/Documents/AIReadyLife/vault/home/00_current/`
+- `~/Documents/AIReadyLife/vault/home/00_current/YYYY-MM-expenses.md`
 - `~/Documents/AIReadyLife/vault/home/open-loops.md`
 - `~/Documents/AIReadyLife/vault/home/config.md`
 
@@ -102,6 +102,6 @@ Required in `~/Documents/AIReadyLife/vault/home/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/home/01_maintenance/`, `02_expenses/`, `open-loops.md`, `config.md`
-- Writes to: `~/Documents/AIReadyLife/vault/home/03_briefs/YYYY-MM-DD-home-brief.md`
+- Reads from: `~/Documents/AIReadyLife/vault/home/00_current/`, `02_expenses/`, `open-loops.md`, `config.md`
+- Writes to: `~/Documents/AIReadyLife/vault/home/02_briefs/YYYY-MM-DD-home-brief.md`
 - Writes to: `~/Documents/AIReadyLife/vault/home/open-loops.md`

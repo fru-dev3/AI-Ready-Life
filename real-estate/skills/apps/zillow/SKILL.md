@@ -60,4 +60,4 @@ min_sqft: 1500
 
 ## Vault Output
 
-`~/Documents/AIReadyLife/vault/real-estate/00_markets/`
+`~/Documents/AIReadyLife/vault/real-estate/00_current/`

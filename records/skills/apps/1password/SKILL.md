@@ -76,4 +76,4 @@ op item get "Document: US Passport" --fields label=expiry_date --format json
 
 ## Vault Output
 
-`~/Documents/AIReadyLife/vault/records/00_identity/` (audit results cross-referenced back to vault records)
+`~/Documents/AIReadyLife/vault/records/00_current/` (audit results cross-referenced back to vault records)

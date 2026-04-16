@@ -10,21 +10,21 @@ description: >
 
 Called by `aireadylife-learning-op-progress-review` to produce the reading progress layer of the monthly review. Reading is the most frequently tracked learning activity for most people, and the annual book goal is the most commonly set personal learning metric. This flow ensures the vault's reading data translates into a clear status report rather than requiring the user to manually calculate where they stand against their annual goal.
 
-**Reading list data sources:** Primary source is `vault/learning/02_books/` — the reading log and completion records maintained in the vault. If Goodreads is configured and an RSS feed URL is set in `vault/learning/config.md`, the flow reads the "currently-reading" shelf RSS for current book progress and "read" shelf for completion dates. If Kindle highlights are exported to `vault/learning/02_books/highlights/`, these are noted as supplementary data for completeness tracking but are not required for the summary.
+**Reading list data sources:** Primary source is `vault/learning/00_current/` — the reading log and completion records maintained in the vault. If Goodreads is configured and an RSS feed URL is set in `vault/learning/config.md`, the flow reads the "currently-reading" shelf RSS for current book progress and "read" shelf for completion dates. If Kindle highlights are exported to `vault/learning/00_current/highlights/`, these are noted as supplementary data for completeness tracking but are not required for the summary.
 
-**YTD completion count:** Reads all entries in `vault/learning/02_books/completed.md` where `date_completed` falls within the current calendar year. Counts total books. Lists titles for reference. This is the factual baseline for the rest of the calculations.
+**YTD completion count:** Reads all entries in `vault/learning/00_current/completed.md` where `date_completed` falls within the current calendar year. Counts total books. Lists titles for reference. This is the factual baseline for the rest of the calculations.
 
 **Reading pace calculation:** Divides YTD completed books by months elapsed in the year so far. Months elapsed = (today − January 1) ÷ 30.44. Books per month = YTD_completed ÷ months_elapsed. This is the current actual pace, not a goal.
 
 **Annual goal projection:** Annual goal is stored in `vault/learning/config.md` as `annual_book_goal`. Compares current pace to the pace required to hit the goal (goal ÷ 12 books/month). Projected year-end total = current_pace × 12. If projected total < goal: calculates additional books/month needed = (goal − projected_total) ÷ remaining_months_in_year. If on track or ahead: notes the favorable pace.
 
-**Current book progress:** Reads `vault/learning/02_books/current-reading.md` for the book currently in progress. Extracts title, author, current page, total pages, and start date. Calculates completion percentage = current_page ÷ total_pages. Estimates daily reading pace from recent page logs (if tracked) or from the current_page and days_since_start. Projects completion date = today + (remaining_pages ÷ daily_pace_pages).
+**Current book progress:** Reads `vault/learning/00_current/current-reading.md` for the book currently in progress. Extracts title, author, current page, total pages, and start date. Calculates completion percentage = current_page ÷ total_pages. Estimates daily reading pace from recent page logs (if tracked) or from the current_page and days_since_start. Projects completion date = today + (remaining_pages ÷ daily_pace_pages).
 
-**Reading queue:** Reads the next 2-3 books from the reading list in `vault/learning/02_books/reading-list.md` — books with status "queued" or "next" — for visibility into what is coming after the current book.
+**Reading queue:** Reads the next 2-3 books from the reading list in `vault/learning/00_current/reading-list.md` — books with status "queued" or "next" — for visibility into what is coming after the current book.
 
 ## Steps
 
-1. Read completion log from `vault/learning/02_books/completed.md` — filter to current calendar year. Count and list.
+1. Read completion log from `vault/learning/00_current/completed.md` — filter to current calendar year. Count and list.
 2. Calculate months elapsed since January 1 (to one decimal place).
 3. Calculate books per month pace = YTD_completed ÷ months_elapsed.
 4. Read annual_book_goal from `vault/learning/config.md`.
@@ -32,16 +32,16 @@ Called by `aireadylife-learning-op-progress-review` to produce the reading progr
 6. Determine pace status: on-track if current pace ≥ required pace; behind if current pace < required pace.
 7. Project year-end total = current_pace × 12.
 8. If behind: calculate additional books/month needed for the rest of the year.
-9. Read current book from `vault/learning/02_books/current-reading.md` or Goodreads RSS.
+9. Read current book from `vault/learning/00_current/current-reading.md` or Goodreads RSS.
 10. Calculate current book % complete and project completion date at current reading pace.
-11. Read next 2-3 queued books from `vault/learning/02_books/reading-list.md`.
+11. Read next 2-3 queued books from `vault/learning/00_current/reading-list.md`.
 12. Return structured reading summary to calling op.
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/learning/02_books/completed.md` — YTD completion log
-- `~/Documents/AIReadyLife/vault/learning/02_books/current-reading.md` — current book progress
-- `~/Documents/AIReadyLife/vault/learning/02_books/reading-list.md` — reading queue
+- `~/Documents/AIReadyLife/vault/learning/00_current/completed.md` — YTD completion log
+- `~/Documents/AIReadyLife/vault/learning/00_current/current-reading.md` — current book progress
+- `~/Documents/AIReadyLife/vault/learning/00_current/reading-list.md` — reading queue
 - `~/Documents/AIReadyLife/vault/learning/config.md` — annual_book_goal, goodreads_rss_url
 
 ## Output Format
@@ -75,7 +75,7 @@ Next in queue:
 
 ## Configuration
 
-`vault/learning/02_books/completed.md` format:
+`vault/learning/00_current/completed.md` format:
 ```yaml
 - title: "[name]"
   author: "[name]"
@@ -85,7 +85,7 @@ Next in queue:
   key_takeaway: "[optional]"
 ```
 
-`vault/learning/02_books/current-reading.md` format:
+`vault/learning/00_current/current-reading.md` format:
 ```yaml
 title: "[name]"
 author: "[name]"
@@ -103,5 +103,5 @@ start_date: "YYYY-MM-DD"
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/learning/02_books/`, `~/Documents/AIReadyLife/vault/learning/config.md`
+- Reads from: `~/Documents/AIReadyLife/vault/learning/00_current/`, `~/Documents/AIReadyLife/vault/learning/config.md`
 - Writes to: None (returns data to calling op)

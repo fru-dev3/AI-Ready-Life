@@ -11,7 +11,7 @@ description: >
 
 Reads revenue data from all three monetization vault locations and produces a unified monthly revenue report for the content business. Revenue from a content business comes from multiple streams with very different characteristics: YouTube AdSense is passive and platform-controlled (RPM fluctuates 20-50% seasonally, peaks in Q4), newsletter revenue includes both predictable MRR from paid subscriptions and variable sponsorship fees, and digital product revenue from Gumroad is driven by promotional activity and traffic quality.
 
-From `~/Documents/AIReadyLife/vault/content/00_youtube/`, extracts AdSense earnings for the current month and prior month. RPM (revenue per thousand views) is tracked separately from total earnings to distinguish whether revenue changes are driven by views volume or advertiser rate changes. From `~/Documents/AIReadyLife/vault/content/01_newsletter/`, extracts sponsorship revenue and paid subscription MRR separately — combining them would obscure whether the subscription base is growing or whether sponsorship activity is driving the revenue. From `~/Documents/AIReadyLife/vault/content/02_gumroad/`, extracts digital product sales by individual product so that top-performing and underperforming products are visible, not just totals.
+From `~/Documents/AIReadyLife/vault/content/00_current/`, extracts AdSense earnings for the current month and prior month. RPM (revenue per thousand views) is tracked separately from total earnings to distinguish whether revenue changes are driven by views volume or advertiser rate changes. From `~/Documents/AIReadyLife/vault/content/00_current/`, extracts sponsorship revenue and paid subscription MRR separately — combining them would obscure whether the subscription base is growing or whether sponsorship activity is driving the revenue. From `~/Documents/AIReadyLife/vault/content/00_current/`, extracts digital product sales by individual product so that top-performing and underperforming products are visible, not just totals.
 
 Sums all streams to produce total content revenue for the month. Calculates MoM delta in both dollar amount and percentage for each channel and for the total. Identifies the single top-contributing channel (the one responsible for the largest share of total revenue). Flags any channel that declined more than 20% MoM with the channel name, decline percentage, and a note about whether this is likely seasonal (e.g., YouTube RPM decline in January is expected) or anomalous (decline during normally strong periods). Returns the full summary to the calling op.
 
@@ -21,9 +21,9 @@ Called internally by `aireadylife-content-op-revenue-review`. Not invoked direct
 
 ## Steps
 
-1. Read YouTube AdSense data from `~/Documents/AIReadyLife/vault/content/00_youtube/` for current and prior month; extract total earnings, views, and RPM
-2. Read newsletter revenue from `~/Documents/AIReadyLife/vault/content/01_newsletter/` for current and prior month; extract sponsorship revenue and subscription MRR separately
-3. Read Gumroad product sales from `~/Documents/AIReadyLife/vault/content/02_gumroad/` for current and prior month; extract sales by product (name, units, revenue, refunds)
+1. Read YouTube AdSense data from `~/Documents/AIReadyLife/vault/content/00_current/` for current and prior month; extract total earnings, views, and RPM
+2. Read newsletter revenue from `~/Documents/AIReadyLife/vault/content/00_current/` for current and prior month; extract sponsorship revenue and subscription MRR separately
+3. Read Gumroad product sales from `~/Documents/AIReadyLife/vault/content/00_current/` for current and prior month; extract sales by product (name, units, revenue, refunds)
 4. Calculate total revenue per channel: YouTube total, newsletter total (sponsorship + MRR), Gumroad total
 5. Sum all channels to produce total content revenue for the month
 6. Calculate MoM dollar delta and percentage change per channel and for the total
@@ -35,12 +35,12 @@ Called internally by `aireadylife-content-op-revenue-review`. Not invoked direct
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/content/00_youtube/{YYYY-MM}.md` — AdSense earnings, views, RPM
-- `~/Documents/AIReadyLife/vault/content/00_youtube/{prior YYYY-MM}.md` — prior month YouTube data
-- `~/Documents/AIReadyLife/vault/content/01_newsletter/{YYYY-MM}.md` — sponsorship fees, MRR
-- `~/Documents/AIReadyLife/vault/content/01_newsletter/{prior YYYY-MM}.md` — prior month newsletter data
-- `~/Documents/AIReadyLife/vault/content/02_gumroad/{YYYY-MM}.md` — product sales by product
-- `~/Documents/AIReadyLife/vault/content/02_gumroad/{prior YYYY-MM}.md` — prior month Gumroad data
+- `~/Documents/AIReadyLife/vault/content/00_current/{YYYY-MM}.md` — AdSense earnings, views, RPM
+- `~/Documents/AIReadyLife/vault/content/00_current/{prior YYYY-MM}.md` — prior month YouTube data
+- `~/Documents/AIReadyLife/vault/content/00_current/{YYYY-MM}.md` — sponsorship fees, MRR
+- `~/Documents/AIReadyLife/vault/content/00_current/{prior YYYY-MM}.md` — prior month newsletter data
+- `~/Documents/AIReadyLife/vault/content/00_current/{YYYY-MM}.md` — product sales by product
+- `~/Documents/AIReadyLife/vault/content/00_current/{prior YYYY-MM}.md` — prior month Gumroad data
 
 ## Output Format
 
@@ -78,5 +78,5 @@ Required file fields in each monthly analytics file:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/content/00_youtube/`, `~/Documents/AIReadyLife/vault/content/01_newsletter/`, `~/Documents/AIReadyLife/vault/content/02_gumroad/`
+- Reads from: `~/Documents/AIReadyLife/vault/content/00_current/`, `~/Documents/AIReadyLife/vault/content/00_current/`, `~/Documents/AIReadyLife/vault/content/00_current/`
 - Writes to: returns data to calling op; no direct file writes

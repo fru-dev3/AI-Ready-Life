@@ -44,14 +44,14 @@ This op runs quarterly to audit the complete document inventory against five dim
 4. Check each household member for REAL ID-compliant driver's license status
 5. Check legal document review dates and life event triggers in config.md
 6. Call `aireadylife-records-flag-expiring-id` for any document entering its alert window for the first time
-7. Write document audit report to `~/Documents/AIReadyLife/vault/records/00_identity/YYYY-MM-document-audit.md`
+7. Write document audit report to `~/Documents/AIReadyLife/vault/records/00_current/YYYY-MM-document-audit.md`
 8. Call `aireadylife-records-update-open-loops` with all flags (expiring, missing, storage gaps, legal review)
 9. Present full report organized by urgency
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/records/00_identity/` — identity document records
-- `~/Documents/AIReadyLife/vault/records/01_legal/` — legal document records
+- `~/Documents/AIReadyLife/vault/records/00_current/` — identity document records
+- `~/Documents/AIReadyLife/vault/records/00_current/` — legal document records
 - `~/Documents/AIReadyLife/vault/records/config.md` — household members, recent life events
 
 ## Output Format
@@ -90,6 +90,6 @@ Required in `~/Documents/AIReadyLife/vault/records/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/records/00_identity/`, `01_legal/`, `config.md`
-- Writes to: `~/Documents/AIReadyLife/vault/records/00_identity/YYYY-MM-document-audit.md`
+- Reads from: `~/Documents/AIReadyLife/vault/records/00_current/`, `01_legal/`, `config.md`
+- Writes to: `~/Documents/AIReadyLife/vault/records/00_current/YYYY-MM-document-audit.md`
 - Writes to: `~/Documents/AIReadyLife/vault/records/open-loops.md`

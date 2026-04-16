@@ -14,7 +14,7 @@ description: >
 # aireadylife-tax-deadline-watch
 
 **Cadence:** Monthly (1st of month)
-**Produces:** Deadline alert list in `vault/tax/open-loops.md`; deadline document in `vault/tax/02_deadlines/`
+**Produces:** Deadline alert list in `vault/tax/open-loops.md`; deadline document in `vault/tax/00_current/`
 
 ## What It Does
 
@@ -24,7 +24,7 @@ The op calls `aireadylife-tax-build-deadline-list` to generate the 90-day forwar
 
 **Q1 (April 15 cluster).** The April 15 deadline drives three separate obligations that frequently collide: Q1 estimated tax payment, the annual return or extension decision, and for entities — any final business return deadlines (S-Corp March 15; C-Corp April 15). In the March deadline watch run, all three are flagged together with clear separation of what is due on what date and the independence of the payment deadline from the return filing deadline.
 
-**Quarterly payment amounts.** For each estimated payment deadline, the watch op checks whether a quarterly estimate has been calculated in `vault/tax/01_estimates/`. If yes, the flagged amount uses the calculated figure. If no estimate has been run, the flag includes "[Amount TBD — run quarterly estimate]" and triggers `aireadylife-tax-quarterly-estimate` as a recommended follow-on action.
+**Quarterly payment amounts.** For each estimated payment deadline, the watch op checks whether a quarterly estimate has been calculated in `vault/tax/00_current/`. If yes, the flagged amount uses the calculated figure. If no estimate has been run, the flag includes "[Amount TBD — run quarterly estimate]" and triggers `aireadylife-tax-quarterly-estimate` as a recommended follow-on action.
 
 **Entity deadline specificity.** Entity deadlines are flagged with entity name, deadline type, specific state, amount (franchise tax or annual report fee where known), and the specific portal or method. Minnesota LLC annual reports: filed online at SOS.state.mn.us, $0 fee. California LLC: $800 minimum franchise tax due April 15. Texas LLC: margin tax return due May 15. These specific amounts and portals are populated from config or the embedded entity compliance reference.
 
@@ -41,5 +41,5 @@ The op calls `aireadylife-tax-build-deadline-list` to generate the 90-day forwar
 
 ## Vault Output
 
-- `vault/tax/02_deadlines/YYYY-MM-deadlines.md` — full 90-day deadline list (from flow)
+- `vault/tax/00_current/YYYY-MM-deadlines.md` — full 90-day deadline list (from flow)
 - `vault/tax/open-loops.md` — deadline alert flags for items within 30 days

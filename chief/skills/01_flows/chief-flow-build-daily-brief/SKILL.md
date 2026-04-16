@@ -10,7 +10,7 @@ description: >
 # aireadylife-chief-build-daily-brief
 
 **Trigger:** Called by `aireadylife-chief-op-daily-brief`
-**Produces:** Fully formatted daily brief document written to ~/Documents/AIReadyLife/vault/chief/01_briefs/daily-YYYY-MM-DD.md
+**Produces:** Fully formatted daily brief document written to ~/Documents/AIReadyLife/vault/chief/02_briefs/daily-YYYY-MM-DD.md
 
 ## What It Does
 
@@ -22,7 +22,7 @@ This flow receives the pre-collected domain alerts and calendar items from the c
 
 **Domain alert table:** One row per installed plugin, regardless of whether it has active flags. Columns: Domain, Last Run (from state.md), 🔴 count, 🟡 count, 🟢 count, Top Flag (description of the highest-priority active flag, or "No active flags"). Domains not updated in 30+ days get a "(stale)" note in the Last Run column.
 
-**Calendar section:** Lists events from vault/calendar/00_deadlines/ and vault/calendar/02_agenda/ that fall today or within the next 24 hours. Events are displayed as: HH:MM — title — location. If no calendar items exist for today, displays "No calendar items today." If the calendar plugin is not installed, displays "Calendar plugin not installed."
+**Calendar section:** Lists events from vault/calendar/00_current/ and vault/calendar/00_current/ that fall today or within the next 24 hours. Events are displayed as: HH:MM — title — location. If no calendar items exist for today, displays "No calendar items today." If the calendar plugin is not installed, displays "Calendar plugin not installed."
 
 **Open loops section:** Grouped by domain, sorted by priority within each group. 🔴 items first, then 🟡, then 🟢. Resolved items (checked checkboxes) are not included. Each item shows: priority emoji + description + recommended action. Items in the Top 3 are not duplicated in the open loops list — they appear only in the Top 3 callout.
 
@@ -91,4 +91,4 @@ This flow receives the pre-collected domain alerts and calendar items from the c
 ## Vault Paths
 
 - Reads from: inputs passed by calling op (no direct vault reads)
-- Writes to: ~/Documents/AIReadyLife/vault/chief/01_briefs/daily-YYYY-MM-DD.md (via calling op)
+- Writes to: ~/Documents/AIReadyLife/vault/chief/02_briefs/daily-YYYY-MM-DD.md (via calling op)

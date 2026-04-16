@@ -36,10 +36,10 @@ After these three updates, the sync triggers the records review brief.
 ## Steps
 
 1. Confirm vault and config.md are present; halt if missing
-2. Read all documents with expiration dates from `~/Documents/AIReadyLife/vault/records/00_identity/` and `01_legal/`
+2. Read all documents with expiration dates from `~/Documents/AIReadyLife/vault/records/00_current/` and `01_legal/`
 3. Recalculate days-until-expiration for each document; apply alert thresholds
 4. Flag any document newly entering its alert window since last sync
-5. Read subscription registry from `~/Documents/AIReadyLife/vault/records/02_subscriptions/subscriptions.md`
+5. Read subscription registry from `~/Documents/AIReadyLife/vault/records/00_current/subscriptions.md`
 6. Check for annual renewals within next 30 days; flag with renewal date and cost
 7. Check for subscriptions unused for 60+ days; flag for cancellation consideration
 8. Check subscription prices against logged amounts; flag any discrepancy
@@ -52,9 +52,9 @@ After these three updates, the sync triggers the records review brief.
 ## Input
 
 - `~/Documents/AIReadyLife/vault/records/config.md`
-- `~/Documents/AIReadyLife/vault/records/00_identity/`
-- `~/Documents/AIReadyLife/vault/records/01_legal/`
-- `~/Documents/AIReadyLife/vault/records/02_subscriptions/subscriptions.md`
+- `~/Documents/AIReadyLife/vault/records/00_current/`
+- `~/Documents/AIReadyLife/vault/records/00_current/`
+- `~/Documents/AIReadyLife/vault/records/00_current/subscriptions.md`
 
 ## Output Format
 
@@ -63,7 +63,7 @@ After these three updates, the sync triggers the records review brief.
 - Subscriptions reviewed: X active (Y renewals within 30 days, Z low-usage flagged, total $X/mo)
 - Legal documents: X reviewed (Y flagged for review)
 - Open loops: X added, Y resolved
-- Brief ready: link to `vault/records/03_briefs/YYYY-MM-records-brief.md`
+- Brief ready: link to `vault/records/02_briefs/YYYY-MM-records-brief.md`
 
 ## Configuration
 
@@ -82,5 +82,5 @@ Required in `~/Documents/AIReadyLife/vault/records/config.md`:
 
 - Reads from: `~/Documents/AIReadyLife/vault/records/config.md`, `00_identity/`, `01_legal/`, `02_subscriptions/`
 - Writes to: `~/Documents/AIReadyLife/vault/records/00_current/last-sync.md`
-- Writes to: `~/Documents/AIReadyLife/vault/records/03_briefs/YYYY-MM-records-brief.md`
+- Writes to: `~/Documents/AIReadyLife/vault/records/02_briefs/YYYY-MM-records-brief.md`
 - Writes to: `~/Documents/AIReadyLife/vault/records/open-loops.md`

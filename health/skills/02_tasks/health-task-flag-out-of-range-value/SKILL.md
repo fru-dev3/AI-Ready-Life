@@ -19,7 +19,7 @@ description: >
 
 Called by `aireadylife-health-lab-review` once for each biomarker identified as outside its reference range. The task's sole purpose is to write a structured, actionable flag to `open-loops.md` that tells the user exactly what needs attention and what to do — without embedding the raw numerical lab value.
 
-The deliberate omission of raw values is a privacy design choice: `open-loops.md` is a file the user may reference casually, share with an AI assistant in a general context, or view on a shared screen. The actual lab numbers — which are PHI — remain only in the structured lab summary document in `vault/health/01_labs/`. The flag provides enough information to act without being a PHI exposure point.
+The deliberate omission of raw values is a privacy design choice: `open-loops.md` is a file the user may reference casually, share with an AI assistant in a general context, or view on a shared screen. The actual lab numbers — which are PHI — remain only in the structured lab summary document in `vault/health/00_current/`. The flag provides enough information to act without being a PHI exposure point.
 
 Each flag entry contains:
 - **Biomarker name** — e.g., "LDL Cholesterol," "Fasting Glucose," "TSH"

@@ -14,11 +14,11 @@ description: >
 # aireadylife-wealth-investment-review
 
 **Cadence:** Monthly (1st of month)
-**Produces:** Investment performance summary at `vault/wealth/01_investments/YYYY-MM-performance.md`; rebalancing flags in `vault/wealth/open-loops.md`
+**Produces:** Investment performance summary at `vault/wealth/00_current/YYYY-MM-performance.md`; rebalancing flags in `vault/wealth/open-loops.md`
 
 ## What It Does
 
-Pulls investment account data from `vault/wealth/01_investments/` and runs `aireadylife-wealth-analyze-investment-performance` to produce a complete investment health check across all accounts.
+Pulls investment account data from `vault/wealth/00_current/` and runs `aireadylife-wealth-analyze-investment-performance` to produce a complete investment health check across all accounts.
 
 **Returns.** For each account, the review reports 30-day and YTD returns in both dollar and percentage terms. Returns are time-weighted where possible (to eliminate the distortion of large contributions mid-period). If a Fidelity or M1 Finance download has been completed, the return data from the institution is used directly; otherwise, the return is approximated from balance changes net of contributions.
 
@@ -39,5 +39,5 @@ None (reads from vault; Fidelity, M1, or brokerage downloads must be in vault be
 
 ## Vault Output
 
-- `vault/wealth/01_investments/YYYY-MM-performance.md` — performance and allocation summary
+- `vault/wealth/00_current/YYYY-MM-performance.md` — performance and allocation summary
 - `vault/wealth/open-loops.md` — rebalancing flags and 401k pace alerts

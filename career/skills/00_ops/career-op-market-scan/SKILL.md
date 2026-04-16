@@ -14,7 +14,7 @@ The scan reads your target criteria from `vault/career/config.md` — role title
 
 The output summarizes four key market health signals: volume (how many relevant postings exist this month vs. prior month), compensation range (what P25/P50 of stated or estimated compensation looks like for your target roles right now), skills demand (which technical and domain skills appear most frequently in target role postings — this feeds directly into the skills gap review), and company activity (which companies are hiring aggressively vs. slowing down based on headcount data and posting volume trends). These signals together paint a picture of whether it is a buyer's market or seller's market for your profile right now.
 
-Roles that match at least 70% of your target criteria and meet the compensation minimum are logged to `vault/career/01_pipeline/` as "watch" stage items with a fit score. The pipeline review op will pick these up monthly and prompt decisions on whether to advance any to application. Roles that match 100% of criteria and come from a target company tier are flagged specifically as high-priority watches.
+Roles that match at least 70% of your target criteria and meet the compensation minimum are logged to `vault/career/00_current/` as "watch" stage items with a fit score. The pipeline review op will pick these up monthly and prompt decisions on whether to advance any to application. Roles that match 100% of criteria and come from a target company tier are flagged specifically as high-priority watches.
 
 The scan also monitors company-specific signals: if a company on your target list posts a surge of roles, or if a company previously on your list announces a hiring freeze or layoffs, these signals are noted in the brief with recommended action adjustments.
 
@@ -39,21 +39,21 @@ The scan also monitors company-specific signals: if a company on your target lis
 6. Search Levels.fyi job board for the same role titles to capture compensation-reported postings.
 7. Aggregate compensation data across all qualifying postings to compute market P25 and P50 for this month's scan.
 8. Aggregate required skills across all qualifying postings to compute skills frequency ranking (top 10 skills by mention count).
-9. Compare posting volume and comp data to prior month's scan in `vault/career/02_market/` — flag significant changes (>20% volume shift, >10% comp shift).
-10. Log all roles with fit score ≥ 70 to `vault/career/01_pipeline/` as "watch" stage items with extracted data and fit score.
+9. Compare posting volume and comp data to prior month's scan in `vault/career/00_current/` — flag significant changes (>20% volume shift, >10% comp shift).
+10. Log all roles with fit score ≥ 70 to `vault/career/00_current/` as "watch" stage items with extracted data and fit score.
 11. Flag roles with fit score ≥ 90 or from named target companies as high-priority watch items.
-12. Write market scan brief to `vault/career/04_briefs/YYYY-MM-market-scan.md` with summary statistics, notable openings, and market health signals.
+12. Write market scan brief to `vault/career/02_briefs/YYYY-MM-market-scan.md` with summary statistics, notable openings, and market health signals.
 13. Call `aireadylife-career-task-update-open-loops` with any high-priority watch items and market alerts.
 
 ## Input
 
 - `~/Documents/AIReadyLife/vault/career/config.md` — target criteria, company preferences, comp floor
-- `~/Documents/AIReadyLife/vault/career/02_market/` — prior month scan data for trend comparison
+- `~/Documents/AIReadyLife/vault/career/00_current/` — prior month scan data for trend comparison
 - Live data from LinkedIn Jobs, Glassdoor Jobs, Levels.fyi (via configured app integrations)
 
 ## Output Format
 
-**Market Scan Brief** — saved as `vault/career/04_briefs/YYYY-MM-market-scan.md`
+**Market Scan Brief** — saved as `vault/career/02_briefs/YYYY-MM-market-scan.md`
 
 ```
 ## Market Health — [Month Year]
@@ -95,5 +95,5 @@ Required fields in `vault/career/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/career/config.md`, `~/Documents/AIReadyLife/vault/career/02_market/`
-- Writes to: `~/Documents/AIReadyLife/vault/career/04_briefs/`, `~/Documents/AIReadyLife/vault/career/01_pipeline/`, `~/Documents/AIReadyLife/vault/career/02_market/YYYY-MM-scan.md`, `~/Documents/AIReadyLife/vault/career/open-loops.md`
+- Reads from: `~/Documents/AIReadyLife/vault/career/config.md`, `~/Documents/AIReadyLife/vault/career/00_current/`
+- Writes to: `~/Documents/AIReadyLife/vault/career/02_briefs/`, `~/Documents/AIReadyLife/vault/career/00_current/`, `~/Documents/AIReadyLife/vault/career/00_current/YYYY-MM-scan.md`, `~/Documents/AIReadyLife/vault/career/open-loops.md`

@@ -14,11 +14,11 @@ description: >
 # aireadylife-wealth-analyze-investment-performance
 
 **Trigger:** Called by `aireadylife-wealth-investment-review`
-**Produces:** Investment performance summary at `vault/wealth/01_investments/YYYY-MM-performance.md`
+**Produces:** Investment performance summary at `vault/wealth/00_current/YYYY-MM-performance.md`
 
 ## What It Does
 
-Reads all investment account records from `vault/wealth/01_investments/` — one directory per account containing holdings snapshots, historical value records, and contribution logs — and produces a comprehensive performance and allocation analysis.
+Reads all investment account records from `vault/wealth/00_current/` — one directory per account containing holdings snapshots, historical value records, and contribution logs — and produces a comprehensive performance and allocation analysis.
 
 **Per-account returns.** For each investment account (identified by type and institution in config), the flow calculates: 30-day simple return ((current value − value 30 days ago) / value 30 days ago), YTD simple return ((current value − value on January 1) / January 1 value), and total return since inception where data allows. Dollar P&L is shown alongside percentage return. Contributions made during the period are noted separately so return is not inflated by new money.
 
@@ -43,7 +43,7 @@ Reads all investment account records from `vault/wealth/01_investments/` — one
 
 ## Steps
 
-1. Read all investment account holdings files from `vault/wealth/01_investments/` — current holdings snapshot and historical value records
+1. Read all investment account holdings files from `vault/wealth/00_current/` — current holdings snapshot and historical value records
 2. Calculate 30-day return per account using current value and value 30 days prior
 3. Calculate YTD return per account using current value and January 1 value
 4. Map each holding to an asset class using embedded fund taxonomy
@@ -52,18 +52,18 @@ Reads all investment account records from `vault/wealth/01_investments/` — one
 7. Flag any asset class with |drift| > 5% and calculate the rebalancing dollar amount
 8. Read YTD 401k contributions from contribution log and compare to IRS limit; compute pace
 9. Read IRA contribution log and compare to limit; flag if April 15 deadline is approaching
-10. Write formatted performance summary and allocation analysis to `vault/wealth/01_investments/YYYY-MM-performance.md`
+10. Write formatted performance summary and allocation analysis to `vault/wealth/00_current/YYYY-MM-performance.md`
 
 ## Input
 
-- `vault/wealth/01_investments/[account-name]/holdings.md` — current holdings for each account
-- `vault/wealth/01_investments/[account-name]/values.csv` — historical account values by date
-- `vault/wealth/01_investments/[account-name]/contributions.md` — YTD contribution log
+- `vault/wealth/00_current/[account-name]/holdings.md` — current holdings for each account
+- `vault/wealth/00_current/[account-name]/values.csv` — historical account values by date
+- `vault/wealth/00_current/[account-name]/contributions.md` — YTD contribution log
 - `vault/wealth/config.md` — target allocation, account types, IRS limit overrides for catch-up contributions
 
 ## Output Format
 
-Markdown document at `vault/wealth/01_investments/YYYY-MM-performance.md`:
+Markdown document at `vault/wealth/00_current/YYYY-MM-performance.md`:
 - Performance table: Account | Institution | Type | 30-Day Return | YTD Return | Current Value | YTD Contributions
 - Allocation table: Asset Class | Target % | Actual % | Drift | Dollar Amount | Status (OK / REBALANCE)
 - 401k section: YTD Contributions | Annual Pace | IRS Limit | Gap | Suggested Increase
@@ -86,6 +86,6 @@ Required in `vault/wealth/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/wealth/01_investments/` (all account subdirectories)
+- Reads from: `~/Documents/AIReadyLife/vault/wealth/00_current/` (all account subdirectories)
 - Reads from: `~/Documents/AIReadyLife/vault/wealth/config.md`
-- Writes to: `~/Documents/AIReadyLife/vault/wealth/01_investments/YYYY-MM-performance.md`
+- Writes to: `~/Documents/AIReadyLife/vault/wealth/00_current/YYYY-MM-performance.md`

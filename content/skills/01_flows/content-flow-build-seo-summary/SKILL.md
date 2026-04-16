@@ -10,7 +10,7 @@ description: >
 
 ## What It Does
 
-Reads SEO data from `~/Documents/AIReadyLife/vault/content/03_seo/` and produces a monthly SEO intelligence summary with three specific outputs: quick-win opportunities, ranking loss alerts, and content gap flags.
+Reads SEO data from `~/Documents/AIReadyLife/vault/content/00_current/` and produces a monthly SEO intelligence summary with three specific outputs: quick-win opportunities, ranking loss alerts, and content gap flags.
 
 Quick-win zone (positions 4-15): these keywords already have proven search demand and the user's content has demonstrated enough authority to rank in the top 2 pages. The gap between position 11 and position 3 is often bridgeable with targeted on-page optimization — updating the title tag to include the keyword more naturally, adding the keyword to subheadings, improving internal linking to the page, refreshing the publication date, or adding a table or summary section that could capture a featured snippet. Quick wins are sorted by search volume (highest potential traffic impact first).
 
@@ -24,21 +24,21 @@ Called internally by `aireadylife-content-op-seo-review`. Not invoked directly b
 
 ## Steps
 
-1. Read keyword ranking data from `~/Documents/AIReadyLife/vault/content/03_seo/` — current month and prior month keyword snapshots, each with keyword, ranking position, search volume, page URL, CTR
+1. Read keyword ranking data from `~/Documents/AIReadyLife/vault/content/00_current/` — current month and prior month keyword snapshots, each with keyword, ranking position, search volume, page URL, CTR
 2. Identify all keywords ranking in positions 4-15 (quick-win zone): list with current position, search volume, page URL, and a specific optimization recommendation
 3. Sort quick-win keywords by search volume descending (highest potential click impact first)
 4. Identify all keywords that have dropped more than 3 positions vs prior month; record: keyword, prior position, current position, page URL, estimated traffic impact (click loss)
 5. For each ranking drop: attempt diagnosis based on available signals (freshness of last update, competitor activity if noted, content format vs SERP intent)
-6. Read keyword gap list from vault/content/03_seo/keyword-gaps.md (if exists); filter to keywords with volume above configured threshold and no existing content
+6. Read keyword gap list from vault/content/00_current/keyword-gaps.md (if exists); filter to keywords with volume above configured threshold and no existing content
 7. Score each opportunity: score = (search volume / 1000) × (position improvement potential) ÷ effort estimate (1=high effort, 3=low effort)
 8. Select top 3 opportunities by score, one from each category where possible (quick-win, ranking recovery, content gap)
 9. Return: quick-win list, ranking drop list, gap list, top 3 prioritized opportunities
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/content/03_seo/{YYYY-MM}-rankings.md` — keyword rankings current month
-- `~/Documents/AIReadyLife/vault/content/03_seo/{prior YYYY-MM}-rankings.md` — prior month rankings for comparison
-- `~/Documents/AIReadyLife/vault/content/03_seo/keyword-gaps.md` — keyword gap list (optional)
+- `~/Documents/AIReadyLife/vault/content/00_current/{YYYY-MM}-rankings.md` — keyword rankings current month
+- `~/Documents/AIReadyLife/vault/content/00_current/{prior YYYY-MM}-rankings.md` — prior month rankings for comparison
+- `~/Documents/AIReadyLife/vault/content/00_current/keyword-gaps.md` — keyword gap list (optional)
 - `~/Documents/AIReadyLife/vault/content/config.md` — keyword volume threshold, topic areas
 
 ## Output Format
@@ -80,11 +80,11 @@ Required file format in `03_seo/{YYYY-MM}-rankings.md`:
 
 ## Error Handling
 
-- If no ranking files exist: "No SEO data found. Export keyword rankings from Google Search Console and save to vault/content/03_seo/ to enable SEO tracking."
+- If no ranking files exist: "No SEO data found. Export keyword rankings from Google Search Console and save to vault/content/00_current/ to enable SEO tracking."
 - If prior month rankings file is missing: skip drop analysis and note "No prior month data — ranking drop detection unavailable."
-- If keyword-gaps.md is missing: skip gap analysis and note "No keyword gap list found — add keywords to track to vault/content/03_seo/keyword-gaps.md."
+- If keyword-gaps.md is missing: skip gap analysis and note "No keyword gap list found — add keywords to track to vault/content/00_current/keyword-gaps.md."
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/content/03_seo/`, `~/Documents/AIReadyLife/vault/content/config.md`
+- Reads from: `~/Documents/AIReadyLife/vault/content/00_current/`, `~/Documents/AIReadyLife/vault/content/config.md`
 - Writes to: returns data to calling op; no direct file writes

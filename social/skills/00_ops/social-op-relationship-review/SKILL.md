@@ -48,7 +48,7 @@ After producing the health table, the op calls `social-flow-build-outreach-queue
 ## Input
 
 - ~/Documents/AIReadyLife/vault/social/00_current/contacts.md
-- ~/Documents/AIReadyLife/vault/social/01_interactions/ (last-contact dates)
+- ~/Documents/AIReadyLife/vault/social/00_current/ (last-contact dates)
 - ~/Documents/AIReadyLife/vault/social/config.md (tier thresholds)
 
 ## Output Format
@@ -104,5 +104,5 @@ Required in vault/social/config.md:
 
 ## Vault Paths
 
-- Reads from: ~/Documents/AIReadyLife/vault/social/00_current/contacts.md, ~/Documents/AIReadyLife/vault/social/01_interactions/, ~/Documents/AIReadyLife/vault/social/config.md
+- Reads from: ~/Documents/AIReadyLife/vault/social/00_current/contacts.md, ~/Documents/AIReadyLife/vault/social/00_current/, ~/Documents/AIReadyLife/vault/social/config.md
 - Writes to: ~/Documents/AIReadyLife/vault/social/00_current/health-YYYY-MM.md, ~/Documents/AIReadyLife/vault/social/open-loops.md

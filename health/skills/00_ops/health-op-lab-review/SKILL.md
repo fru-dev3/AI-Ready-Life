@@ -14,13 +14,13 @@ description: >
 # aireadylife-health-lab-review
 
 **Cadence:** As-received (triggered when new lab results are available)
-**Produces:** Structured lab summary in `vault/health/01_labs/`; flagged open-loop items in `vault/health/open-loops.md`
+**Produces:** Structured lab summary in `vault/health/00_current/`; flagged open-loop items in `vault/health/open-loops.md`
 
 ## What It Does
 
-Runs whenever new lab results arrive — downloaded from the configured patient portal (MyChart or equivalent) or manually placed in the vault by the user. This is the primary op for processing all clinical lab data and is the only op that writes to `vault/health/01_labs/`.
+Runs whenever new lab results arrive — downloaded from the configured patient portal (MyChart or equivalent) or manually placed in the vault by the user. This is the primary op for processing all clinical lab data and is the only op that writes to `vault/health/00_current/`.
 
-The op reads the incoming lab result file from `vault/health/01_labs/` (PDF, structured text, or the standardized vault template). It calls `aireadylife-health-build-lab-summary` to parse every biomarker, compare against clinical reference ranges, compute trend direction vs. the prior panel, group results by panel type (metabolic, lipid, CBC, thyroid, hormones, vitamins), and write the formatted summary document.
+The op reads the incoming lab result file from `vault/health/00_current/` (PDF, structured text, or the standardized vault template). It calls `aireadylife-health-build-lab-summary` to parse every biomarker, compare against clinical reference ranges, compute trend direction vs. the prior panel, group results by panel type (metabolic, lipid, CBC, thyroid, hormones, vitamins), and write the formatted summary document.
 
 For each biomarker outside its reference range, the op calls `aireadylife-health-flag-out-of-range-value` to write a structured flag to `open-loops.md`. The flag records only metadata — biomarker name, severity tier (borderline, elevated, critical), collection date, panel type, and recommended action — never the raw numerical value. This design keeps PHI confined to the lab summary document and allows open-loops.md to be referenced freely.
 
@@ -39,5 +39,5 @@ The op concludes by calling `aireadylife-health-update-open-loops` to consolidat
 
 ## Vault Output
 
-- `vault/health/01_labs/YYYY-MM-lab-summary.md` — formatted lab summary
+- `vault/health/00_current/YYYY-MM-lab-summary.md` — formatted lab summary
 - `vault/health/open-loops.md` — out-of-range biomarker flags

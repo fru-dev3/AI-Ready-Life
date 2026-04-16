@@ -35,12 +35,12 @@ The flow also calculates the 20% down payment amount required to avoid PMI, so t
 8. Solve for max loan amount at current 30-year fixed rate using standard amortization formula
 9. Calculate max purchase price at user's configured down payment percentage
 10. If down payment < 20%, calculate PMI cost and add to monthly payment; show 20%-down scenario as alternative
-11. Write completed affordability worksheet to `~/Documents/AIReadyLife/vault/real-estate/02_analysis/YYYY-MM-affordability.md`
+11. Write completed affordability worksheet to `~/Documents/AIReadyLife/vault/real-estate/00_current/YYYY-MM-affordability.md`
 
 ## Input
 
 - `~/Documents/AIReadyLife/vault/real-estate/config.md` — gross monthly income, monthly debts, available down payment, target down payment %, current 30-year fixed rate, local property tax rate
-- `~/Documents/AIReadyLife/vault/real-estate/02_analysis/` — prior month worksheet (for MoM comparison)
+- `~/Documents/AIReadyLife/vault/real-estate/00_current/` — prior month worksheet (for MoM comparison)
 
 ## Output Format
 
@@ -90,5 +90,5 @@ Required fields in `~/Documents/AIReadyLife/vault/real-estate/config.md`:
 ## Vault Paths
 
 - Reads from: `~/Documents/AIReadyLife/vault/real-estate/config.md`
-- Reads from: `~/Documents/AIReadyLife/vault/real-estate/02_analysis/`
-- Writes to: `~/Documents/AIReadyLife/vault/real-estate/02_analysis/YYYY-MM-affordability.md`
+- Reads from: `~/Documents/AIReadyLife/vault/real-estate/00_current/`
+- Writes to: `~/Documents/AIReadyLife/vault/real-estate/00_current/YYYY-MM-affordability.md`

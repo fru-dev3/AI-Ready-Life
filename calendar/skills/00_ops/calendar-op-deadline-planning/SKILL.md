@@ -12,7 +12,7 @@ description: >
 # aireadylife-calendar-deadline-planning
 
 **Cadence:** On-demand (any time the user provides a new deadline to plan for)
-**Produces:** Milestone preparation schedule in ~/Documents/AIReadyLife/vault/calendar/00_deadlines/YYYY-MM-DD-{slug}.md
+**Produces:** Milestone preparation schedule in ~/Documents/AIReadyLife/vault/calendar/00_current/YYYY-MM-DD-{slug}.md
 
 ## What It Does
 
@@ -24,7 +24,7 @@ Deadline planning is the reverse-engineering op — the user provides a due date
 
 **Runway assessment:** The op compares the total effort estimate against the number of available non-meeting hours between now and the deadline (pulling from Google Calendar if configured). If the effort required exceeds the realistically available focused hours, it flags this clearly: "This task requires approximately 6 hours of focused work. Based on your calendar, you have 5.5 hours of available focus windows before the deadline. This is tight — here are the specific slots to block immediately."
 
-**Integration with weekly agenda:** After generating the milestone schedule, the op calls `calendar-task-add-deadline` to register the main deadline in vault/calendar/00_deadlines/ so it surfaces automatically in every subsequent weekly agenda scan and deadline alert. The milestone dates are also written as sub-items so future agenda builds can show milestone preparation dates, not just the final due date.
+**Integration with weekly agenda:** After generating the milestone schedule, the op calls `calendar-task-add-deadline` to register the main deadline in vault/calendar/00_current/ so it surfaces automatically in every subsequent weekly agenda scan and deadline alert. The milestone dates are also written as sub-items so future agenda builds can show milestone preparation dates, not just the final due date.
 
 ## Triggers
 
@@ -45,8 +45,8 @@ Deadline planning is the reverse-engineering op — the user provides a due date
 6. Compare effort estimate to available focused hours; flag if runway is insufficient
 7. Generate milestone schedule with named phases, dates, effort estimates, and dependencies
 8. Assign each milestone to a specific recommended calendar date and time slot (if calendar data available)
-9. Call `calendar-task-add-deadline` to register the deadline in vault/calendar/00_deadlines/
-10. Write milestone schedule to vault/calendar/00_deadlines/YYYY-MM-DD-{slug}.md
+9. Call `calendar-task-add-deadline` to register the deadline in vault/calendar/00_current/
+10. Write milestone schedule to vault/calendar/00_current/YYYY-MM-DD-{slug}.md
 11. Write deadline item to vault/calendar/open-loops.md via `calendar-task-update-open-loops`
 12. Return formatted preparation schedule to user
 
@@ -81,7 +81,7 @@ Available focused hours before deadline: [N]h ([sufficient/tight/insufficient])
 - [Date, time slot]: [Phase — N hours]
 
 ## Vault Record
-Deadline registered at: vault/calendar/00_deadlines/[YYYY-MM-DD-slug].md
+Deadline registered at: vault/calendar/00_current/[YYYY-MM-DD-slug].md
 Will surface in: weekly agenda, 30-day deadline alert
 ```
 
@@ -102,4 +102,4 @@ Required in vault/calendar/config.md:
 ## Vault Paths
 
 - Reads from: Google Calendar (optional, via gcalendar), ~/Documents/AIReadyLife/vault/calendar/config.md
-- Writes to: ~/Documents/AIReadyLife/vault/calendar/00_deadlines/YYYY-MM-DD-{slug}.md, ~/Documents/AIReadyLife/vault/calendar/open-loops.md
+- Writes to: ~/Documents/AIReadyLife/vault/calendar/00_current/YYYY-MM-DD-{slug}.md, ~/Documents/AIReadyLife/vault/calendar/open-loops.md

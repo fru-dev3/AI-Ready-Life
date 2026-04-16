@@ -31,9 +31,9 @@ Calls `aireadylife-content-flow-analyze-channel-performance` to run the 90-day b
 
 1. Confirm vault/content/ is set up with analytics subfolders; list which platforms have current month data
 2. Call `aireadylife-content-flow-analyze-channel-performance` for cross-channel performance table, 90-day baseline comparison, and underperformance flags
-3. Extract YouTube key metrics from vault/content/00_youtube/: views, watch hours, sub change, CTR, AVD, top video
-4. Extract newsletter key metrics from vault/content/01_newsletter/: subscribers, net new, open rate, CTR, top issue
-5. Extract Gumroad metrics from vault/content/02_gumroad/: units, revenue, conversion rate, top product
+3. Extract YouTube key metrics from vault/content/00_current/: views, watch hours, sub change, CTR, AVD, top video
+4. Extract newsletter key metrics from vault/content/00_current/: subscribers, net new, open rate, CTR, top issue
+5. Extract Gumroad metrics from vault/content/00_current/: units, revenue, conversion rate, top product
 6. Benchmark each metric against platform standards; note which are above, at, or below benchmark
 7. For each underperforming channel (>15% below 90-day baseline): compose diagnosis and specific recommended action
 8. Identify the single best-performing piece of content across all platforms this month
@@ -43,9 +43,9 @@ Calls `aireadylife-content-flow-analyze-channel-performance` to run the 90-day b
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/content/00_youtube/{YYYY-MM}.md` — YouTube analytics
-- `~/Documents/AIReadyLife/vault/content/01_newsletter/{YYYY-MM}.md` — newsletter metrics
-- `~/Documents/AIReadyLife/vault/content/02_gumroad/{YYYY-MM}.md` — Gumroad sales
+- `~/Documents/AIReadyLife/vault/content/00_current/{YYYY-MM}.md` — YouTube analytics
+- `~/Documents/AIReadyLife/vault/content/00_current/{YYYY-MM}.md` — newsletter metrics
+- `~/Documents/AIReadyLife/vault/content/00_current/{YYYY-MM}.md` — Gumroad sales
 - `~/Documents/AIReadyLife/vault/content/config.md` — channel list, cadence targets, benchmarks
 
 ## Output Format
@@ -98,5 +98,5 @@ Required in `~/Documents/AIReadyLife/vault/content/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/content/00_youtube/`, `~/Documents/AIReadyLife/vault/content/01_newsletter/`, `~/Documents/AIReadyLife/vault/content/02_gumroad/`, `~/Documents/AIReadyLife/vault/content/config.md`
+- Reads from: `~/Documents/AIReadyLife/vault/content/00_current/`, `~/Documents/AIReadyLife/vault/content/00_current/`, `~/Documents/AIReadyLife/vault/content/00_current/`, `~/Documents/AIReadyLife/vault/content/config.md`
 - Writes to: `~/Documents/AIReadyLife/vault/content/00_current/channel-review-{YYYY-MM}.md`, `~/Documents/AIReadyLife/vault/content/open-loops.md`

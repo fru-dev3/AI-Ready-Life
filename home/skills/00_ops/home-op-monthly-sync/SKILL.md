@@ -36,7 +36,7 @@ The sync also checks for any time-sensitive renewals: if the home is a rental, l
 ## Steps
 
 1. Check `~/Documents/AIReadyLife/vault/home/config.md` — confirm required fields are present; prompt for missing data
-2. Read all open maintenance items from `~/Documents/AIReadyLife/vault/home/01_maintenance/`; check for completed or escalated items
+2. Read all open maintenance items from `~/Documents/AIReadyLife/vault/home/00_current/`; check for completed or escalated items
 3. Call `aireadylife-home-expense-review` to produce the monthly expense summary
 4. Evaluate seasonal maintenance calendar for current month; identify tasks due with no completion record
 5. Check renewal dates: insurance (60-day flag), lease if renting (90-day flag), home warranty (30-day flag)
@@ -49,8 +49,8 @@ The sync also checks for any time-sensitive renewals: if the home is a rental, l
 ## Input
 
 - `~/Documents/AIReadyLife/vault/home/config.md`
-- `~/Documents/AIReadyLife/vault/home/01_maintenance/`
-- `~/Documents/AIReadyLife/vault/home/02_expenses/YYYY-MM-expenses.md`
+- `~/Documents/AIReadyLife/vault/home/00_current/`
+- `~/Documents/AIReadyLife/vault/home/00_current/YYYY-MM-expenses.md`
 - `~/Documents/AIReadyLife/vault/home/open-loops.md`
 
 ## Output Format
@@ -60,7 +60,7 @@ The sync also checks for any time-sensitive renewals: if the home is a rental, l
 - Expenses: Total $X (vs. budget: +/-$X)
 - Seasonal tasks: X due this month, Y already completed, Z flagged
 - Renewal alerts: [list any within threshold]
-- Brief ready: link to `vault/home/03_briefs/YYYY-MM-home-brief.md`
+- Brief ready: link to `vault/home/02_briefs/YYYY-MM-home-brief.md`
 
 ## Configuration
 
@@ -80,5 +80,5 @@ Required in `~/Documents/AIReadyLife/vault/home/config.md`:
 
 - Reads from: `~/Documents/AIReadyLife/vault/home/config.md`, `01_maintenance/`, `02_expenses/`, `open-loops.md`
 - Writes to: `~/Documents/AIReadyLife/vault/home/00_current/last-sync.md`
-- Writes to: `~/Documents/AIReadyLife/vault/home/03_briefs/YYYY-MM-home-brief.md`
+- Writes to: `~/Documents/AIReadyLife/vault/home/02_briefs/YYYY-MM-home-brief.md`
 - Writes to: `~/Documents/AIReadyLife/vault/home/open-loops.md`

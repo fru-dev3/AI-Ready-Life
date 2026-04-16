@@ -10,7 +10,7 @@ description: >
 
 Runs quarterly to catch two distinct types of coverage problems: administrative errors (elections that were supposed to be in place but got dropped or misconfigured) and strategic gaps (coverage amounts that are technically in place but insufficient given current income, assets, or dependent situation).
 
-**Administrative verification:** Reads current benefit elections from `vault/benefits/00_plans/` — the coverage confirmation or benefits summary document from the most recent enrollment — and cross-checks against payroll deduction data from `vault/benefits/` pay stub records. If a benefit is elected, the corresponding deduction should appear on every paycheck. A missing deduction for medical, dental, vision, life, disability, or FSA is a signal that the election may not have been processed correctly by HR. Catches this type of administrative error — which happens more often than it should, particularly after a job transition, open enrollment system migration, or life event change.
+**Administrative verification:** Reads current benefit elections from `vault/benefits/00_current/` — the coverage confirmation or benefits summary document from the most recent enrollment — and cross-checks against payroll deduction data from `vault/benefits/` pay stub records. If a benefit is elected, the corresponding deduction should appear on every paycheck. A missing deduction for medical, dental, vision, life, disability, or FSA is a signal that the election may not have been processed correctly by HR. Catches this type of administrative error — which happens more often than it should, particularly after a job transition, open enrollment system migration, or life event change.
 
 **Coverage adequacy analysis:** For each active coverage line, checks whether the coverage amount is sufficient given the user's current situation:
 
@@ -36,10 +36,10 @@ The quarterly cadence catches administrative issues early (not 11 months after t
 
 ## Steps
 
-1. Read current elections from `vault/benefits/00_plans/` — extract all active benefit elections with coverage amounts and tiers.
+1. Read current elections from `vault/benefits/00_current/` — extract all active benefit elections with coverage amounts and tiers.
 2. Read most recent pay stub from `vault/benefits/` — extract all benefit deductions to cross-check against elections.
 3. For each elected benefit line: verify corresponding deduction appears in pay stub. Flag any discrepancy.
-4. Read coverage targets from `vault/benefits/00_plans/coverage-targets.md` (if exists) or use standard thresholds (life 10x income, disability 60% income).
+4. Read coverage targets from `vault/benefits/00_current/coverage-targets.md` (if exists) or use standard thresholds (life 10x income, disability 60% income).
 5. Calculate life insurance coverage need: (annual gross income × 10) + outstanding mortgage + other significant debts.
 6. Sum all life insurance from vault (group life, supplemental life). Compare to need. Calculate shortfall.
 7. Calculate disability income replacement rate: (monthly LTD benefit ÷ monthly gross salary) × 100. Flag if below 60%.
@@ -47,18 +47,18 @@ The quarterly cadence catches administrative issues early (not 11 months after t
 9. Verify health, dental, and vision elections are all active.
 10. Check dependent coverage tier matches actual dependent status.
 11. Call `aireadylife-benefits-flow-build-coverage-summary` for structured coverage table.
-12. Write coverage audit to `vault/benefits/04_briefs/coverage-audit-QN-YYYY.md` with per-line status and gap analysis.
+12. Write coverage audit to `vault/benefits/02_briefs/coverage-audit-QN-YYYY.md` with per-line status and gap analysis.
 13. Call `aireadylife-benefits-task-update-open-loops` with all identified gaps and any administrative discrepancies.
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/benefits/00_plans/` — enrollment confirmation, SBCs, coverage documents
+- `~/Documents/AIReadyLife/vault/benefits/00_current/` — enrollment confirmation, SBCs, coverage documents
 - `~/Documents/AIReadyLife/vault/benefits/` — pay stubs for deduction verification
 - `~/Documents/AIReadyLife/vault/benefits/config.md` — income, dependents, mortgage balance
 
 ## Output Format
 
-**Coverage Audit** — saved as `vault/benefits/04_briefs/coverage-audit-QN-YYYY.md`
+**Coverage Audit** — saved as `vault/benefits/02_briefs/coverage-audit-QN-YYYY.md`
 
 ```
 ## Benefits Coverage Audit — [Quarter] [Year]
@@ -98,15 +98,15 @@ Required in `vault/benefits/config.md`:
 - `dependents` — number and ages (affects life insurance multiplier)
 - `emergency_fund_months` — for STD waiting period comparison
 
-Optional: `vault/benefits/00_plans/coverage-targets.md` with custom multipliers if different from standard thresholds.
+Optional: `vault/benefits/00_current/coverage-targets.md` with custom multipliers if different from standard thresholds.
 
 ## Error Handling
 
-- **No enrollment confirmation in vault:** Cannot verify elections. Prompt user to download the benefits confirmation from their HR portal (Workday, ADP, etc.) and save to `vault/benefits/00_plans/`.
+- **No enrollment confirmation in vault:** Cannot verify elections. Prompt user to download the benefits confirmation from their HR portal (Workday, ADP, etc.) and save to `vault/benefits/00_current/`.
 - **Income not configured:** Cannot calculate coverage needs. Request annual gross salary before proceeding.
 - **Deduction discrepancy found:** Flag immediately with specific benefit and discrepancy. Recommend user contact HR benefits team within 5 business days.
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/benefits/00_plans/`, `~/Documents/AIReadyLife/vault/benefits/`, `~/Documents/AIReadyLife/vault/benefits/config.md`
-- Writes to: `~/Documents/AIReadyLife/vault/benefits/04_briefs/coverage-audit-QN-YYYY.md`, `~/Documents/AIReadyLife/vault/benefits/open-loops.md`
+- Reads from: `~/Documents/AIReadyLife/vault/benefits/00_current/`, `~/Documents/AIReadyLife/vault/benefits/`, `~/Documents/AIReadyLife/vault/benefits/config.md`
+- Writes to: `~/Documents/AIReadyLife/vault/benefits/02_briefs/coverage-audit-QN-YYYY.md`, `~/Documents/AIReadyLife/vault/benefits/open-loops.md`

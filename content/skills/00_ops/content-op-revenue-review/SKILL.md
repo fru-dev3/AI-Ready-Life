@@ -35,18 +35,18 @@ Writes a structured revenue log entry via `aireadylife-content-task-log-revenue`
 2. Call `aireadylife-content-flow-build-revenue-summary` for per-channel and total revenue figures with MoM deltas
 3. Calculate quality metrics: YouTube RPM this month vs prior (RPM = AdSense earnings / views × 1000); newsletter subscriber LTV (MRR / paid subscribers); Gumroad conversion rate (units sold / page visits if traffic data available)
 4. Calculate content revenue as a % of total income if total income context is available in config.md
-5. Calculate YTD total content revenue by summing all monthly log files in vault/content/02_gumroad/, 00_youtube/, 01_newsletter/
+5. Calculate YTD total content revenue by summing all monthly log files in vault/content/00_current/, 00_youtube/, 01_newsletter/
 6. Flag any channel with >20% MoM decline; assess whether it is seasonal (YouTube RPM always drops in January) or anomalous
 7. Flag any channel with >50% MoM spike; note which activity drove it (promotional email, viral video, etc.) for repeatability assessment
 8. Call `aireadylife-content-task-log-revenue` to write a structured monthly revenue record to the vault
-9. Write complete revenue review brief to vault/content/02_gumroad/revenue-{YYYY-MM}.md
+9. Write complete revenue review brief to vault/content/00_current/revenue-{YYYY-MM}.md
 10. Call `aireadylife-content-task-update-open-loops` with revenue decline flags and anomalies
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/content/00_youtube/{YYYY-MM}.md` — AdSense earnings, views, RPM
-- `~/Documents/AIReadyLife/vault/content/01_newsletter/{YYYY-MM}.md` — sponsorship fees, MRR, paid subscribers
-- `~/Documents/AIReadyLife/vault/content/02_gumroad/{YYYY-MM}.md` — product sales by product
+- `~/Documents/AIReadyLife/vault/content/00_current/{YYYY-MM}.md` — AdSense earnings, views, RPM
+- `~/Documents/AIReadyLife/vault/content/00_current/{YYYY-MM}.md` — sponsorship fees, MRR, paid subscribers
+- `~/Documents/AIReadyLife/vault/content/00_current/{YYYY-MM}.md` — product sales by product
 - `~/Documents/AIReadyLife/vault/content/config.md` — channel list, seasonal expectations
 
 ## Output Format
@@ -89,5 +89,5 @@ Required in `~/Documents/AIReadyLife/vault/content/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/content/00_youtube/`, `~/Documents/AIReadyLife/vault/content/01_newsletter/`, `~/Documents/AIReadyLife/vault/content/02_gumroad/`, `~/Documents/AIReadyLife/vault/content/config.md`
-- Writes to: `~/Documents/AIReadyLife/vault/content/02_gumroad/revenue-{YYYY-MM}.md`, `~/Documents/AIReadyLife/vault/content/open-loops.md`
+- Reads from: `~/Documents/AIReadyLife/vault/content/00_current/`, `~/Documents/AIReadyLife/vault/content/00_current/`, `~/Documents/AIReadyLife/vault/content/00_current/`, `~/Documents/AIReadyLife/vault/content/config.md`
+- Writes to: `~/Documents/AIReadyLife/vault/content/00_current/revenue-{YYYY-MM}.md`, `~/Documents/AIReadyLife/vault/content/open-loops.md`

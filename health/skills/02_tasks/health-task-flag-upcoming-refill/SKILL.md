@@ -30,7 +30,7 @@ Each flag entry contains:
 - **Urgency tier** — HIGH (≤7 days), MEDIUM (8–21 days), LOW (22–30 days)
 - **Suggested action** — "Call [pharmacy] at [number] to request refill" or "Open [pharmacy app] and request refill for [medication]" or "Confirm auto-refill is scheduled"
 
-When a prescription is marked HSA-eligible and the HSA balance in `vault/health/06_insurance/hsa-balance.md` is sufficient to cover the estimated cost, the flag adds a note: "Pay with HSA card to use tax-advantaged funds." When the HSA balance is low, the flag notes: "Consider paying out-of-pocket and filing for HSA reimbursement later if balance is replenished."
+When a prescription is marked HSA-eligible and the HSA balance in `vault/health/00_current/hsa-balance.md` is sufficient to cover the estimated cost, the flag adds a note: "Pay with HSA card to use tax-advantaged funds." When the HSA balance is low, the flag notes: "Consider paying out-of-pocket and filing for HSA reimbursement later if balance is replenished."
 
 Items are auto-resolved by `aireadylife-health-update-open-loops` when the refill date has passed, keeping open-loops.md clean between monthly runs.
 

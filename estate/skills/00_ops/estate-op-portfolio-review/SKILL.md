@@ -12,7 +12,7 @@ description: >
 # aireadylife-estate-portfolio-review
 
 **Cadence:** Quarterly (first week of January, April, July, October)
-**Produces:** Comprehensive quarterly portfolio report in `~/Documents/AIReadyLife/vault/estate/00_properties/` with per-property financials, equity positions, hold/sell analysis, and open loop flags
+**Produces:** Comprehensive quarterly portfolio report in `~/Documents/AIReadyLife/vault/estate/00_current/` with per-property financials, equity positions, hold/sell analysis, and open loop flags
 
 ## What It Does
 
@@ -46,15 +46,15 @@ Capital improvement ROI modeling: for each property where significant deferred m
 7. Check if a 1031 exchange is viable for any sell scenario (flag if equity ≥ $50,000 and comparable properties are available in target markets)
 8. For each property with deferred maintenance or value-add opportunities: model capital improvement ROI
 9. Call `aireadylife-estate-update-open-loops` with hold/sell flags and strategic recommendations
-10. Write quarterly portfolio report to `~/Documents/AIReadyLife/vault/estate/00_properties/YYYY-Q{N}-portfolio-review.md`
+10. Write quarterly portfolio report to `~/Documents/AIReadyLife/vault/estate/00_current/YYYY-Q{N}-portfolio-review.md`
 11. Present full report with per-property analysis and portfolio-level strategic summary
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/estate/00_properties/` — all property records
-- `~/Documents/AIReadyLife/vault/estate/01_tenants/` — current tenant and rent data
-- `~/Documents/AIReadyLife/vault/estate/03_cashflow/` — quarterly cash flow data
-- `~/Documents/AIReadyLife/vault/estate/02_maintenance/` — deferred maintenance records
+- `~/Documents/AIReadyLife/vault/estate/00_current/` — all property records
+- `~/Documents/AIReadyLife/vault/estate/00_current/` — current tenant and rent data
+- `~/Documents/AIReadyLife/vault/estate/00_current/` — quarterly cash flow data
+- `~/Documents/AIReadyLife/vault/estate/00_current/` — deferred maintenance records
 
 ## Output Format
 
@@ -89,6 +89,6 @@ Required in `~/Documents/AIReadyLife/vault/estate/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/estate/00_properties/`, `01_tenants/`, `03_cashflow/`, `02_maintenance/`
-- Writes to: `~/Documents/AIReadyLife/vault/estate/00_properties/YYYY-Q{N}-portfolio-review.md`
+- Reads from: `~/Documents/AIReadyLife/vault/estate/00_current/`, `01_tenants/`, `03_cashflow/`, `02_maintenance/`
+- Writes to: `~/Documents/AIReadyLife/vault/estate/00_current/YYYY-Q{N}-portfolio-review.md`
 - Writes to: `~/Documents/AIReadyLife/vault/estate/open-loops.md`

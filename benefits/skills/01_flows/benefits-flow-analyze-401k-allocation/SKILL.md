@@ -12,7 +12,7 @@ Called by `aireadylife-benefits-op-401k-review` to produce the investment alloca
 
 **Match capture verification:** Reads the employer match formula from `vault/benefits/config.md` (e.g., "50% match on first 6% of salary"). Reads the employee's current contribution rate from the 401k statement. Calculates the minimum contribution rate required to capture the full match. If the employee contribution rate is below this threshold, calculates: (a) the unvested match forfeited per paycheck, (b) the unvested match forfeited per year, and (c) the match capture percentage (what fraction of available match is being captured).
 
-**Allocation drift analysis:** Reads the current fund allocation from the 401k statement in `vault/benefits/01_retirement/` — each fund with its name, current balance, and current allocation percentage. Reads target allocation from `vault/benefits/01_retirement/target-allocation.md`. For each fund, calculates drift as (current_pct − target_pct). Flags any fund with drift greater than 5 percentage points in either direction. For flagged funds, calculates the dollar amount that would need to move between funds to restore target allocation. This is not a recommendation to trade — it is a flag for the user to review and execute manually in their 401k portal if they agree with the rebalancing.
+**Allocation drift analysis:** Reads the current fund allocation from the 401k statement in `vault/benefits/00_current/` — each fund with its name, current balance, and current allocation percentage. Reads target allocation from `vault/benefits/00_current/target-allocation.md`. For each fund, calculates drift as (current_pct − target_pct). Flags any fund with drift greater than 5 percentage points in either direction. For flagged funds, calculates the dollar amount that would need to move between funds to restore target allocation. This is not a recommendation to trade — it is a flag for the user to review and execute manually in their 401k portal if they agree with the rebalancing.
 
 **Retirement projection:** Runs a simple compound growth projection: (current_balance + ongoing_annual_contributions) growing at 7% per year until target retirement age. This is intentionally a single-point estimate, not a Monte Carlo simulation. The purpose is directional context — is the current pace likely to produce a retirement balance in the right neighborhood, or is there a significant shortfall that warrants increasing contributions now?
 
@@ -21,10 +21,10 @@ Called by `aireadylife-benefits-op-401k-review` to produce the investment alloca
 ## Steps
 
 1. Read employer match formula and vesting schedule from `vault/benefits/config.md`.
-2. Read employee contribution rate and YTD contributions from 401k statement in `vault/benefits/01_retirement/`.
+2. Read employee contribution rate and YTD contributions from 401k statement in `vault/benefits/00_current/`.
 3. Calculate match capture: compare contribution rate to match threshold; compute forfeited match per paycheck and per year if below threshold.
 4. Read current fund holdings from 401k statement: fund name, balance, current allocation percentage.
-5. Read target allocation from `vault/benefits/01_retirement/target-allocation.md`.
+5. Read target allocation from `vault/benefits/00_current/target-allocation.md`.
 6. For each fund: calculate drift = current_pct − target_pct. Flag drift > 5 percentage points.
 7. For each flagged fund: calculate rebalancing dollar amount = |drift_pct| × total_401k_balance.
 8. Determine rebalancing direction: funds above target (sell/exchange to reduce) and funds below target (buy/exchange to increase). Ensure rebalancing amounts net to zero.
@@ -36,8 +36,8 @@ Called by `aireadylife-benefits-op-401k-review` to produce the investment alloca
 ## Input
 
 - `~/Documents/AIReadyLife/vault/benefits/config.md` — match formula, vesting schedule, tenure, target retirement age
-- `~/Documents/AIReadyLife/vault/benefits/01_retirement/` — most recent 401k statement
-- `~/Documents/AIReadyLife/vault/benefits/01_retirement/target-allocation.md` — desired fund allocation
+- `~/Documents/AIReadyLife/vault/benefits/00_current/` — most recent 401k statement
+- `~/Documents/AIReadyLife/vault/benefits/00_current/target-allocation.md` — desired fund allocation
 
 ## Output Format
 
@@ -78,7 +78,7 @@ Required in `vault/benefits/config.md`:
 - `employment_start_date` — for vesting calculation
 - `target_retirement_age` — for projection
 
-`vault/benefits/01_retirement/target-allocation.md` format:
+`vault/benefits/00_current/target-allocation.md` format:
 ```yaml
 - fund: "[Fund Name]"
   target_pct: X
@@ -92,5 +92,5 @@ Required in `vault/benefits/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/benefits/config.md`, `~/Documents/AIReadyLife/vault/benefits/01_retirement/`
+- Reads from: `~/Documents/AIReadyLife/vault/benefits/config.md`, `~/Documents/AIReadyLife/vault/benefits/00_current/`
 - Writes to: None (returns data to calling op)

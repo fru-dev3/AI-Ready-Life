@@ -3,7 +3,7 @@ name: aireadylife-real-estate-task-log-listing
 type: task
 cadence: as-found
 description: >
-  Saves a listing of interest to vault/real-estate/01_listings/ with address, price, beds/baths,
+  Saves a listing of interest to vault/real-estate/00_current/ with address, price, beds/baths,
   sqft, price/sqft, days on market, Zestimate, list-to-Zestimate ratio, user notes, Zillow/Redfin
   link, and status. Used to track listings over time and flag price reductions.
 ---
@@ -11,7 +11,7 @@ description: >
 # aireadylife-real-estate-log-listing
 
 **Cadence:** As-found (when a listing worth tracking is identified)
-**Produces:** Listing record in `~/Documents/AIReadyLife/vault/real-estate/01_listings/`
+**Produces:** Listing record in `~/Documents/AIReadyLife/vault/real-estate/00_current/`
 
 ## What It Does
 
@@ -31,7 +31,7 @@ On subsequent monthly syncs, the market scan flow checks all listings in this fo
 4. Collect user notes: pros, concerns, neighborhood observations
 5. Set initial status = "watching"; record date saved and days on market at save date
 6. Store Zillow or Redfin URL
-7. Write record to `~/Documents/AIReadyLife/vault/real-estate/01_listings/{address-slug}.md`
+7. Write record to `~/Documents/AIReadyLife/vault/real-estate/00_current/{address-slug}.md`
 8. Confirm record saved; tell user to update status manually as listing progresses
 
 ## Input
@@ -79,4 +79,4 @@ No additional config required beyond the vault existing. Uses `listing_source` f
 ## Vault Paths
 
 - Reads from: `~/Documents/AIReadyLife/vault/real-estate/config.md` (listing_source preference)
-- Writes to: `~/Documents/AIReadyLife/vault/real-estate/01_listings/{address-slug}.md`
+- Writes to: `~/Documents/AIReadyLife/vault/real-estate/00_current/{address-slug}.md`

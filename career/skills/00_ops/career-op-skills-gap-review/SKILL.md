@@ -10,9 +10,9 @@ description: >
 
 Runs quarterly to keep your skills development intentionally aligned with the roles you are targeting. Without this alignment, professional learning tends to follow what is interesting rather than what is strategically valuable — this op fixes that by connecting your learning plan directly to what the market is actually asking for in your target roles right now.
 
-The op reads your current skills inventory from `vault/career/03_skills/` — each skill is logged with a self-assessed proficiency level (beginner / working / proficient / expert), years of hands-on experience, and recency (when was this skill last used in a real work context). Recency matters because a proficiency level assessed 3 years ago on a skill with a 2.5-year half-life (most technical skills decay this fast) should be treated as lower than logged.
+The op reads your current skills inventory from `vault/career/00_current/` — each skill is logged with a self-assessed proficiency level (beginner / working / proficient / expert), years of hands-on experience, and recency (when was this skill last used in a real work context). Recency matters because a proficiency level assessed 3 years ago on a skill with a 2.5-year half-life (most technical skills decay this fast) should be treated as lower than logged.
 
-It then reads the target role requirements data compiled from the last 3 months of market scan results in `vault/career/02_market/`. This gives a realistic, current picture of what skills appear in job postings for your target roles — not a generic list from a career advice article, but actual frequency data from the specific postings you are targeting. For each skill that appears in target role postings, the op checks whether it exists in your inventory and at what proficiency. Skills that are absent or at beginner level are classified as gaps. Skills at working proficiency but present in more than 60% of postings are flagged for depth improvement, not gap closure.
+It then reads the target role requirements data compiled from the last 3 months of market scan results in `vault/career/00_current/`. This gives a realistic, current picture of what skills appear in job postings for your target roles — not a generic list from a career advice article, but actual frequency data from the specific postings you are targeting. For each skill that appears in target role postings, the op checks whether it exists in your inventory and at what proficiency. Skills that are absent or at beginner level are classified as gaps. Skills at working proficiency but present in more than 60% of postings are flagged for depth improvement, not gap closure.
 
 Each gap is scored on two dimensions: demand (how frequently the skill appears across target role postings, expressed as a percentage) and closability (estimated weeks to reach working proficiency based on the nature of the skill — an AWS certification takes 8-12 weeks of study; a new programming language takes 6-12 months for working proficiency; a soft skill like executive communication is harder to bound). The product of demand and inverse-closability produces a priority score. The top 3-5 gaps are the quarter's learning priorities, each with a specific recommended learning resource (exact course name, platform, and estimated hours) and a realistic timeline to reach working proficiency.
 
@@ -31,9 +31,9 @@ The quarterly cadence prevents the list from shifting so frequently it loses foc
 
 ## Steps
 
-1. Read skills inventory from `vault/career/03_skills/skills.md` — load all skills with proficiency level, years of experience, and last-used date.
+1. Read skills inventory from `vault/career/00_current/skills.md` — load all skills with proficiency level, years of experience, and last-used date.
 2. Apply skill recency decay: skills last used more than 2 years ago are downgraded one proficiency level for the purpose of gap analysis.
-3. Read market scan results from `vault/career/02_market/` for the past 3 months — aggregate required skills across all qualifying postings.
+3. Read market scan results from `vault/career/00_current/` for the past 3 months — aggregate required skills across all qualifying postings.
 4. Calculate demand frequency for each required skill: (number of postings listing this skill) / (total qualifying postings) = demand %.
 5. For each skill with demand ≥ 20%: check vault inventory for presence and proficiency.
 6. Classify gaps: absent from inventory → gap; present at beginner → gap; present at working with demand ≥ 60% → depth flag.
@@ -41,19 +41,19 @@ The quarterly cadence prevents the list from shifting so frequently it loses foc
 8. Calculate priority score for each gap: demand % × (1 / estimated weeks to close).
 9. Rank gaps by priority score — output top 3-5 as this quarter's learning priorities.
 10. For each priority gap: identify a specific recommended resource (platform, course name, estimated hours, and estimated cost if any).
-11. Write skills gap analysis to `vault/career/03_skills/YYYY-QN-skills-gap.md` with ranked gaps and recommendations.
+11. Write skills gap analysis to `vault/career/00_current/YYYY-QN-skills-gap.md` with ranked gaps and recommendations.
 12. Compare to prior quarter's gap analysis — note which gaps were closed (skill reached working proficiency) and which persist.
 13. Call `aireadylife-career-task-update-open-loops` with top 3 gaps as learning priority flags, routed to Learning plugin if installed.
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/career/03_skills/skills.md` — current skills inventory with proficiency levels
-- `~/Documents/AIReadyLife/vault/career/02_market/` — last 3 months of market scan required skills data
+- `~/Documents/AIReadyLife/vault/career/00_current/skills.md` — current skills inventory with proficiency levels
+- `~/Documents/AIReadyLife/vault/career/00_current/` — last 3 months of market scan required skills data
 - `~/Documents/AIReadyLife/vault/career/config.md` — target roles context
 
 ## Output Format
 
-**Skills Gap Analysis** — saved as `vault/career/03_skills/YYYY-QN-skills-gap.md`
+**Skills Gap Analysis** — saved as `vault/career/00_current/YYYY-QN-skills-gap.md`
 
 ```
 ## Skills Gap Analysis — [Quarter Year]
@@ -89,7 +89,7 @@ Required in `vault/career/config.md`:
 - `target_titles` — list of target role titles (determines which market scan data to pull)
 - `quarterly_review_date` — preferred day of quarter for this op (defaults to 1st of Jan/Apr/Jul/Oct)
 
-Skills inventory maintained at `vault/career/03_skills/skills.md`. Format per entry:
+Skills inventory maintained at `vault/career/00_current/skills.md`. Format per entry:
 ```
 skill: [name]
 proficiency: beginner / working / proficient / expert
@@ -107,5 +107,5 @@ notes: [optional context]
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/career/03_skills/skills.md`, `~/Documents/AIReadyLife/vault/career/02_market/`, `~/Documents/AIReadyLife/vault/career/config.md`
-- Writes to: `~/Documents/AIReadyLife/vault/career/03_skills/YYYY-QN-skills-gap.md`, `~/Documents/AIReadyLife/vault/career/open-loops.md`
+- Reads from: `~/Documents/AIReadyLife/vault/career/00_current/skills.md`, `~/Documents/AIReadyLife/vault/career/00_current/`, `~/Documents/AIReadyLife/vault/career/config.md`
+- Writes to: `~/Documents/AIReadyLife/vault/career/00_current/YYYY-QN-skills-gap.md`, `~/Documents/AIReadyLife/vault/career/open-loops.md`

@@ -14,9 +14,9 @@ description: >
 
 ## What It Does
 
-This flow reads a specific trip record from vault/explore/01_trips/ and assembles a complete, structured trip summary. It is called by any op that needs a current picture of a specific trip's readiness — not a general overview, but a full accounting of every booking component for a named trip.
+This flow reads a specific trip record from vault/explore/00_current/ and assembles a complete, structured trip summary. It is called by any op that needs a current picture of a specific trip's readiness — not a general overview, but a full accounting of every booking component for a named trip.
 
-**Trip record reading:** The flow reads the trip record file from vault/explore/01_trips/{YYYY-destination-trip.md}. Trip records have a consistent schema: destination, departure date, return date, travelers, purpose (leisure, business, family), total estimated budget with category breakdown (flights, accommodation, transportation, food, activities, insurance, other), current booking status per category (booked/not booked/partial), and confirmation numbers for booked items.
+**Trip record reading:** The flow reads the trip record file from vault/explore/00_current/{YYYY-destination-trip.md}. Trip records have a consistent schema: destination, departure date, return date, travelers, purpose (leisure, business, family), total estimated budget with category breakdown (flights, accommodation, transportation, food, activities, insurance, other), current booking status per category (booked/not booked/partial), and confirmation numbers for booked items.
 
 **Booking status table:** For each category in the trip record, the flow produces a status row: category name, status (✅ Booked / ⚠️ Partially Booked / ⬜ Not Booked / ➖ Not Applicable), confirmation number or provider name if booked, and any relevant notes (cancellation policy, deposit deadline, last day for free cancellation). Categories assessed: outbound flights, return flights, accommodation (broken by date range if multiple stays), car rental or ground transportation, travel insurance, activities or experience reservations, and any trip-specific items (e.g., ferry reservations, train passes).
 
@@ -27,7 +27,7 @@ This flow reads a specific trip record from vault/explore/01_trips/ and assemble
 ## Steps
 
 1. Receive trip identifier (destination name or file path) from calling op
-2. Read trip record from vault/explore/01_trips/{trip-file.md}
+2. Read trip record from vault/explore/00_current/{trip-file.md}
 3. Parse all booking categories and their current status
 4. For each booked item: extract confirmation number, provider, payment status
 5. For each unbooked item: note status and any booking deadline
@@ -38,7 +38,7 @@ This flow reads a specific trip record from vault/explore/01_trips/ and assemble
 
 ## Input
 
-- ~/Documents/AIReadyLife/vault/explore/01_trips/{trip-file.md}
+- ~/Documents/AIReadyLife/vault/explore/00_current/{trip-file.md}
 
 ## Output Format
 
@@ -68,11 +68,11 @@ No configuration required. Trip record file format determines parsing.
 
 ## Error Handling
 
-- **Trip record missing:** Cannot run. Return error to calling op: "Trip record not found in vault/explore/01_trips/. Run explore-task-log-trip to create one."
+- **Trip record missing:** Cannot run. Return error to calling op: "Trip record not found in vault/explore/00_current/. Run explore-task-log-trip to create one."
 - **Budget section missing from trip record:** Return booking status without budget summary; note "Add budget breakdown to trip record for budget tracking."
 - **Booking status field missing for a category:** Default to "Not Booked" status; do not skip the category in the table.
 
 ## Vault Paths
 
-- Reads from: ~/Documents/AIReadyLife/vault/explore/01_trips/{trip-file.md}
+- Reads from: ~/Documents/AIReadyLife/vault/explore/00_current/{trip-file.md}
 - Writes to: none (returns data to calling op)

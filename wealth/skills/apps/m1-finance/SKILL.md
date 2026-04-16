@@ -55,6 +55,6 @@ m1_accounts:
 
 ## Vault Output
 
-- `vault/wealth/01_investments/m1/` — holdings snapshots, pie allocation records
-- `vault/wealth/01_investments/m1/statements/` — monthly statement PDFs
-- `vault/wealth/01_investments/m1/tax-docs/` — 1099-B, 1099-DIV
+- `vault/wealth/00_current/m1/` — holdings snapshots, pie allocation records
+- `vault/wealth/00_current/m1/statements/` — monthly statement PDFs
+- `vault/wealth/00_current/m1/tax-docs/` — 1099-B, 1099-DIV

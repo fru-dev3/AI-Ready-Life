@@ -15,7 +15,7 @@ description: >
 # aireadylife-tax-quarterly-estimate
 
 **Cadence:** Quarterly (due dates: April 15, June 15, September 15, January 15)
-**Produces:** Estimated tax calculation at `vault/tax/01_estimates/YYYY-QN-estimate.md`; deadline flag in `vault/tax/open-loops.md`
+**Produces:** Estimated tax calculation at `vault/tax/00_current/YYYY-QN-estimate.md`; deadline flag in `vault/tax/open-loops.md`
 
 ## What It Does
 
@@ -46,5 +46,5 @@ The op flags the payment with the due date and specific payment method: IRS Dire
 
 ## Vault Output
 
-- `vault/tax/01_estimates/YYYY-QN-estimate.md` — full estimated tax calculation with both methods
+- `vault/tax/00_current/YYYY-QN-estimate.md` — full estimated tax calculation with both methods
 - `vault/tax/open-loops.md` — payment due flag with amount, deadline, and method

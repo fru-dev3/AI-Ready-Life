@@ -54,4 +54,4 @@ angi_email: YOUR_ANGI_EMAIL   # optional; for booking history access
 
 ## Vault Output
 
-`~/Documents/AIReadyLife/vault/home/01_maintenance/` (vendor contact info logged back to the relevant maintenance item)
+`~/Documents/AIReadyLife/vault/home/00_current/` (vendor contact info logged back to the relevant maintenance item)

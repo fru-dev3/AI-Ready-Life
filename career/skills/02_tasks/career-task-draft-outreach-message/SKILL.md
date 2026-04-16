@@ -72,4 +72,4 @@ Contact records at `vault/career/` with fields: name, current_company, current_r
 ## Vault Paths
 
 - Reads from: `~/Documents/AIReadyLife/vault/career/` (contact log), `~/Documents/AIReadyLife/vault/career/config.md`
-- Writes to: None (returns draft to calling op; op may save to `vault/career/01_pipeline/` if follow-up tracking is needed)
+- Writes to: None (returns draft to calling op; op may save to `vault/career/00_current/` if follow-up tracking is needed)

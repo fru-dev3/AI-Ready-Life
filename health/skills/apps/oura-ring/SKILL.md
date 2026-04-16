@@ -70,4 +70,4 @@ Oura API v2: 5,000 requests/day per token. The health agent's monthly sync reque
 
 ## Vault Output
 
-- `vault/health/00_current/wearable/wearable-log.csv` — daily records appended from API response
+- `vault/health/00_current/wearable-log.csv` — daily records appended from API response

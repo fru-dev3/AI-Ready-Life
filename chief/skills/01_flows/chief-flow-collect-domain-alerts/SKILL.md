@@ -61,4 +61,4 @@ No configuration required. Auto-discovers plugins from vault/ directory structur
 ## Vault Paths
 
 - Reads from: ~/Documents/AIReadyLife/vault/*/open-loops.md
-- Writes to: ~/Documents/AIReadyLife/vault/chief/01_briefs/ (via calling op, not directly)
+- Writes to: ~/Documents/AIReadyLife/vault/chief/02_briefs/ (via calling op, not directly)

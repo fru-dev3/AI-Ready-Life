@@ -17,7 +17,7 @@ This task maintains vault/social/open-loops.md — the canonical list of relatio
 
 **New flags written:** Three types of flags are managed by this task. (1) Overdue contact flags: written (or updated) when the relationship health flow identifies a contact who has crossed the overdue threshold for their tier — these are the most important flags in the social domain and get 🔴 (Tier 1 overdue) or 🟡 (Tier 2 and Tier 3 overdue) priority. (2) Birthday and milestone flags: written 7 days before the event (🟡) and 2 days before (🔴). These flags ensure the birthday alert surfaces in Chief morning briefs during the critical window. (3) Follow-up promise flags: written when social-task-log-interaction records a follow-up commitment. These appear as 🟡 items until the follow-up is logged as completed in the interaction log.
 
-**Resolution logic:** On every call, the task scans all active open-loop items for resolution conditions. Overdue contact flag resolution: a new interaction has been logged in vault/social/01_interactions/ for that contact since the flag was written — the relationship is no longer overdue. Birthday flag resolution: the birthday date has passed (the window has closed — either the outreach happened or it didn't; either way, the flag is no longer actionable). Follow-up flag resolution: the interaction log for that contact has been updated with a "Follow-up status: Completed" entry for the specific promise. Each resolved item is marked `- [x]` with the resolution date and method.
+**Resolution logic:** On every call, the task scans all active open-loop items for resolution conditions. Overdue contact flag resolution: a new interaction has been logged in vault/social/00_current/ for that contact since the flag was written — the relationship is no longer overdue. Birthday flag resolution: the birthday date has passed (the window has closed — either the outreach happened or it didn't; either way, the flag is no longer actionable). Follow-up flag resolution: the interaction log for that contact has been updated with a "Follow-up status: Completed" entry for the specific promise. Each resolved item is marked `- [x]` with the resolution date and method.
 
 **Priority ordering:** The file maintains the standard priority order: 🔴 items first (Tier 1 overdue contacts, birthdays within 2 days, overdue follow-up promises), then 🟡 items (Tier 2 overdue, birthdays in 3-7 days, active follow-up promises), then 🟢 items (Tier 3 overdue, birthday watch items 8-14 days out). Within each tier, items are sorted by urgency date.
 
@@ -30,7 +30,7 @@ This task maintains vault/social/open-loops.md — the canonical list of relatio
 3. If match: update escalation timestamp and days-since count; do not duplicate
 4. If no match: append new flag in appropriate priority position
 5. Scan all existing active flags for resolution conditions
-6. For overdue contact flags: check vault/social/01_interactions/ for new interaction since flag date
+6. For overdue contact flags: check vault/social/00_current/ for new interaction since flag date
 7. For birthday flags: check whether the birthday date has passed
 8. For follow-up flags: check interaction log for "Follow-up status: Completed" entry
 9. Mark confirmed resolved items as `- [x]`; add resolution note and date
@@ -41,7 +41,7 @@ This task maintains vault/social/open-loops.md — the canonical list of relatio
 
 - New flags from calling op
 - ~/Documents/AIReadyLife/vault/social/open-loops.md (current state)
-- ~/Documents/AIReadyLife/vault/social/01_interactions/ (for overdue and follow-up resolution checks)
+- ~/Documents/AIReadyLife/vault/social/00_current/ (for overdue and follow-up resolution checks)
 
 ## Output Format
 
@@ -85,5 +85,5 @@ No configuration required.
 
 ## Vault Paths
 
-- Reads from: ~/Documents/AIReadyLife/vault/social/open-loops.md, ~/Documents/AIReadyLife/vault/social/01_interactions/
+- Reads from: ~/Documents/AIReadyLife/vault/social/open-loops.md, ~/Documents/AIReadyLife/vault/social/00_current/
 - Writes to: ~/Documents/AIReadyLife/vault/social/open-loops.md, ~/Documents/AIReadyLife/vault/social/open-loops-archive.md

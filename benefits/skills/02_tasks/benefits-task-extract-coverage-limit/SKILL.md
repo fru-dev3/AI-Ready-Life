@@ -2,7 +2,7 @@
 name: aireadylife-benefits-task-extract-coverage-limit
 type: task
 description: >
-  Reads a specific coverage limit value — deductible, OOP max, HSA IRS limit, life insurance face value, disability benefit amount, dental annual max — from vault/benefits/00_plans/ plan documents. Returns the exact value, plan year, coverage tier, and source document to the calling flow or op.
+  Reads a specific coverage limit value — deductible, OOP max, HSA IRS limit, life insurance face value, disability benefit amount, dental annual max — from vault/benefits/00_current/ plan documents. Returns the exact value, plan year, coverage tier, and source document to the calling flow or op.
 ---
 
 ## What It Does
@@ -26,7 +26,7 @@ A precision data retrieval task for the benefits domain. Benefits flows and ops 
 - `fsa-limit` — Health FSA annual contribution limit (IRS: $3,200 for 2025)
 - `hsa-investment-threshold` — configured investment threshold from vault
 
-**Priority lookup order:** First checks `vault/benefits/00_plans/config.md` for a structured key-value index of limit values — this is the fastest lookup path. If not found in the index, reads the relevant plan document or SBC from `vault/benefits/00_plans/` to extract the value. Returns the value along with the source (config index or specific document filename) and plan year so the caller can assess data freshness.
+**Priority lookup order:** First checks `vault/benefits/00_current/config.md` for a structured key-value index of limit values — this is the fastest lookup path. If not found in the index, reads the relevant plan document or SBC from `vault/benefits/00_current/` to extract the value. Returns the value along with the source (config index or specific document filename) and plan year so the caller can assess data freshness.
 
 **IRS limits:** For HSA limit types, returns the current year's IRS limit from an internal lookup table (updated annually) rather than from plan documents, since these are set by IRS regulation, not the employer plan.
 
@@ -34,16 +34,16 @@ A precision data retrieval task for the benefits domain. Benefits flows and ops 
 
 1. Receive limit_type parameter from calling flow or op.
 2. Check if limit_type is an IRS-regulated limit (hsa-limit-self, hsa-limit-family, hsa-catchup, fsa-limit) — if so, return from internal IRS limit table for current plan year.
-3. Check `vault/benefits/00_plans/config.md` for a key matching the requested limit_type. If found, return value with source = "config index".
+3. Check `vault/benefits/00_current/config.md` for a key matching the requested limit_type. If found, return value with source = "config index".
 4. If not in config index: identify which plan document contains the requested limit (e.g., SBC for medical limits, plan certificate for life/disability limits).
-5. Read the identified document from `vault/benefits/00_plans/` and locate the requested field.
+5. Read the identified document from `vault/benefits/00_current/` and locate the requested field.
 6. Extract the value with plan year and coverage tier context.
 7. Return structured response to caller.
 
 ## Input
 
 - Limit type parameter (from list of supported types above)
-- `~/Documents/AIReadyLife/vault/benefits/00_plans/` — plan documents and optional config index
+- `~/Documents/AIReadyLife/vault/benefits/00_current/` — plan documents and optional config index
 
 ## Output Format
 
@@ -58,7 +58,7 @@ Notes: [any relevant context — e.g., "this is the in-network deductible; out-o
 
 ## Configuration
 
-Recommend maintaining a `vault/benefits/00_plans/config.md` key-value index for frequently requested limits:
+Recommend maintaining a `vault/benefits/00_current/config.md` key-value index for frequently requested limits:
 ```yaml
 deductible_individual: 1500
 deductible_family: 3000
@@ -82,5 +82,5 @@ hsa_investment_threshold: 1000
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/benefits/00_plans/`
+- Reads from: `~/Documents/AIReadyLife/vault/benefits/00_current/`
 - Writes to: None (returns value to caller)

@@ -10,9 +10,9 @@ description: >
 
 Called by `aireadylife-career-op-skills-gap-review` to produce the core skills gap analysis. The flow operates at the intersection of what you know and what target roles require — it is the bridge between your skills inventory and your learning plan.
 
-**Reading the inventory:** Loads all skills from `vault/career/03_skills/skills.md` with their proficiency level (beginner / working / proficient / expert), years of experience, and last-used date. Before gap analysis, applies recency decay: technical skills not used in the last 24 months are downgraded one proficiency level (e.g., proficient → working, working → beginner). This reflects the real dynamic that technical skills decay — a Python skill from 3 years ago without recent use is not the same as one used daily.
+**Reading the inventory:** Loads all skills from `vault/career/00_current/skills.md` with their proficiency level (beginner / working / proficient / expert), years of experience, and last-used date. Before gap analysis, applies recency decay: technical skills not used in the last 24 months are downgraded one proficiency level (e.g., proficient → working, working → beginner). This reflects the real dynamic that technical skills decay — a Python skill from 3 years ago without recent use is not the same as one used daily.
 
-**Aggregating demand from market data:** Reads all market scan result files from `vault/career/02_market/` for the past 3 months. For each posting in the scan data, extracts the listed required and preferred skills. Aggregates across all postings to produce demand frequency for each skill: what percentage of qualifying postings list this skill as required or preferred. Skills appearing in 20%+ of postings are in scope for gap analysis.
+**Aggregating demand from market data:** Reads all market scan result files from `vault/career/00_current/` for the past 3 months. For each posting in the scan data, extracts the listed required and preferred skills. Aggregates across all postings to produce demand frequency for each skill: what percentage of qualifying postings list this skill as required or preferred. Skills appearing in 20%+ of postings are in scope for gap analysis.
 
 **Scoring gaps:** For each in-scope skill, checks the inventory. If absent or at beginner proficiency: classified as a gap. If at working proficiency but demand ≥ 60%: classified as a depth flag (not a gap but worth investing in). For each gap, estimates time to working proficiency based on skill category: cloud certifications (AWS/GCP/Azure) = 8-12 weeks of focused study; new programming language = 12-24 weeks; data platform tool = 4-8 weeks; ML/AI framework = 8-16 weeks; soft skills (executive communication, cross-functional leadership) = 6-24 months (harder to bound). Priority score = demand_pct × (1 / weeks_to_close). Higher score = higher priority.
 
@@ -20,9 +20,9 @@ Called by `aireadylife-career-op-skills-gap-review` to produce the core skills g
 
 ## Steps
 
-1. Load skills inventory from `vault/career/03_skills/skills.md`.
+1. Load skills inventory from `vault/career/00_current/skills.md`.
 2. Apply recency decay: downgrade skills with last_used date older than 24 months by one proficiency level.
-3. Load market scan data from `vault/career/02_market/` — collect all required_skills fields from past 3 months.
+3. Load market scan data from `vault/career/00_current/` — collect all required_skills fields from past 3 months.
 4. Aggregate demand frequency: count postings listing each skill ÷ total postings = demand %.
 5. Filter to skills with demand ≥ 20% for gap analysis scope.
 6. For each in-scope skill: look up in inventory. Classify as gap, depth flag, or covered.
@@ -34,8 +34,8 @@ Called by `aireadylife-career-op-skills-gap-review` to produce the core skills g
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/career/03_skills/skills.md` — skills inventory
-- `~/Documents/AIReadyLife/vault/career/02_market/` — last 3 months of market scan data
+- `~/Documents/AIReadyLife/vault/career/00_current/skills.md` — skills inventory
+- `~/Documents/AIReadyLife/vault/career/00_current/` — last 3 months of market scan data
 
 ## Output Format
 
@@ -61,7 +61,7 @@ Covered (proficient+ and in scope):
 
 ## Configuration
 
-Skills inventory format in `vault/career/03_skills/skills.md`:
+Skills inventory format in `vault/career/00_current/skills.md`:
 ```yaml
 - skill: "[name]"
   proficiency: working
@@ -78,5 +78,5 @@ Skills inventory format in `vault/career/03_skills/skills.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/career/03_skills/skills.md`, `~/Documents/AIReadyLife/vault/career/02_market/`
+- Reads from: `~/Documents/AIReadyLife/vault/career/00_current/skills.md`, `~/Documents/AIReadyLife/vault/career/00_current/`
 - Writes to: None (returns data to calling op; op writes the output file)

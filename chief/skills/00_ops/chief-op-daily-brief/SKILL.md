@@ -11,7 +11,7 @@ description: >
 # aireadylife-chief-daily-brief
 
 **Cadence:** Daily (morning)
-**Produces:** Prioritized daily brief written to ~/Documents/AIReadyLife/vault/chief/01_briefs/daily-YYYY-MM-DD.md
+**Produces:** Prioritized daily brief written to ~/Documents/AIReadyLife/vault/chief/02_briefs/daily-YYYY-MM-DD.md
 
 ## What It Does
 
@@ -23,11 +23,11 @@ Next, it calls `chief-task-pull-domain-status` for each discovered domain to rea
 
 All collected signals are passed to `chief-flow-build-daily-brief`, which applies the urgency ranking algorithm and assembles the final document. The ranking logic: items with today's due date or overdue date → items marked 🔴 → items marked 🟡 with due dates in the next 7 days → items marked 🟡 without due dates → items marked 🟢. The Top 3 ACTION TODAY items are selected from the top of this ranked list. If fewer than 3 items are 🔴, the remaining Top 3 slots are filled with the highest-priority 🟡 items.
 
-The calendar section reads from ~/Documents/AIReadyLife/vault/calendar/00_deadlines/ and ~/Documents/AIReadyLife/vault/calendar/02_agenda/ if the calendar plugin is installed, pulling any events or deadlines due today or within the next 24 hours. If the calendar plugin is not installed, this section displays "Calendar plugin not installed."
+The calendar section reads from ~/Documents/AIReadyLife/vault/calendar/00_current/ and ~/Documents/AIReadyLife/vault/calendar/00_current/ if the calendar plugin is installed, pulling any events or deadlines due today or within the next 24 hours. If the calendar plugin is not installed, this section displays "Calendar plugin not installed."
 
-Every 🔴 item found during the brief run triggers `chief-task-flag-urgent-item`, which writes a persistent alert record to vault/chief/01_alerts/ for cross-run tracking. This ensures that if a 🔴 item is not resolved, it will keep surfacing in every subsequent brief without relying on the source domain's open-loops.md alone.
+Every 🔴 item found during the brief run triggers `chief-task-flag-urgent-item`, which writes a persistent alert record to vault/chief/00_current/ for cross-run tracking. This ensures that if a 🔴 item is not resolved, it will keep surfacing in every subsequent brief without relying on the source domain's open-loops.md alone.
 
-The completed brief is written as a dated markdown file to vault/chief/01_briefs/daily-YYYY-MM-DD.md. If Notion credentials are configured in vault/chief/config.md, the brief is also pushed to the configured Notion page via the notion skill.
+The completed brief is written as a dated markdown file to vault/chief/02_briefs/daily-YYYY-MM-DD.md. If Notion credentials are configured in vault/chief/config.md, the brief is also pushed to the configured Notion page via the notion skill.
 
 ## Triggers
 
@@ -46,12 +46,12 @@ The completed brief is written as a dated markdown file to vault/chief/01_briefs
 3. Parse all unresolved items; extract priority, description, action, due date, date raised per item
 4. Call `chief-task-pull-domain-status` for each discovered domain; collect last-updated, score, open-loop count
 5. Mark any domain not updated in 30+ days as stale (🟡 regardless of open-loop state)
-6. Read calendar items from vault/calendar/00_deadlines/ and vault/calendar/02_agenda/ (if installed)
+6. Read calendar items from vault/calendar/00_current/ and vault/calendar/00_current/ (if installed)
 7. Apply urgency ranking: overdue → today's deadline → 🔴 → 🟡 with date → 🟡 no date → 🟢
 8. Select Top 3 ACTION TODAY items from ranked list (fill from 🟡 if fewer than 3 are 🔴)
 9. Pass all inputs to `chief-flow-build-daily-brief` for document assembly
 10. Call `chief-task-flag-urgent-item` for every 🔴 item to write persistent alert record
-11. Write completed brief to vault/chief/01_briefs/daily-YYYY-MM-DD.md
+11. Write completed brief to vault/chief/02_briefs/daily-YYYY-MM-DD.md
 12. If Notion configured: push brief to Notion page via `notion` skill
 13. Return formatted brief to user as chat output
 
@@ -59,8 +59,8 @@ The completed brief is written as a dated markdown file to vault/chief/01_briefs
 
 - ~/Documents/AIReadyLife/vault/*/open-loops.md (all installed plugin vaults)
 - ~/Documents/AIReadyLife/vault/*/state.md (per-domain status)
-- ~/Documents/AIReadyLife/vault/calendar/00_deadlines/ (if calendar plugin installed)
-- ~/Documents/AIReadyLife/vault/calendar/02_agenda/ (if calendar plugin installed)
+- ~/Documents/AIReadyLife/vault/calendar/00_current/ (if calendar plugin installed)
+- ~/Documents/AIReadyLife/vault/calendar/00_current/ (if calendar plugin installed)
 - ~/Documents/AIReadyLife/vault/chief/config.md (plugin list, Notion/GDrive credentials)
 
 ## Output Format
@@ -108,5 +108,5 @@ Required fields in vault/chief/config.md:
 
 ## Vault Paths
 
-- Reads from: ~/Documents/AIReadyLife/vault/*/open-loops.md, ~/Documents/AIReadyLife/vault/*/state.md, ~/Documents/AIReadyLife/vault/calendar/00_deadlines/, ~/Documents/AIReadyLife/vault/calendar/02_agenda/
-- Writes to: ~/Documents/AIReadyLife/vault/chief/01_briefs/daily-YYYY-MM-DD.md, ~/Documents/AIReadyLife/vault/chief/01_alerts/YYYY-MM-DD-{domain}-{slug}.md
+- Reads from: ~/Documents/AIReadyLife/vault/*/open-loops.md, ~/Documents/AIReadyLife/vault/*/state.md, ~/Documents/AIReadyLife/vault/calendar/00_current/, ~/Documents/AIReadyLife/vault/calendar/00_current/
+- Writes to: ~/Documents/AIReadyLife/vault/chief/02_briefs/daily-YYYY-MM-DD.md, ~/Documents/AIReadyLife/vault/chief/00_current/YYYY-MM-DD-{domain}-{slug}.md

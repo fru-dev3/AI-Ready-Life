@@ -14,7 +14,7 @@ Called by `aireadylife-benefits-op-enrollment-review` when the annual open enrol
 
 **Election checklist:** The flag includes a plain-language checklist of every decision that needs to be made during enrollment. This prevents the common scenario where someone changes their medical plan election but forgets to update their FSA election, or switches to an HDHP without adding an HSA contribution. Standard checklist items: (1) Medical plan selection (compare options, select plan and tier); (2) HSA contribution election if HDHP is selected (choose annual amount, divide by pay periods); (3) Health FSA election if non-HDHP selected (estimate qualified expenses for next year, elect that amount); (4) Dental plan selection; (5) Vision plan selection; (6) Life insurance supplemental election review (opportunity to add coverage without medical underwriting during open enrollment); (7) Disability supplemental election review; (8) Beneficiary confirmation (verify 401k and life insurance beneficiaries are current); (9) Dependent coverage confirmation (add/remove dependents if situation changed).
 
-**Plan comparison reference:** The flag links to the enrollment analysis brief in `vault/benefits/04_briefs/enrollment-YYYY.md` if it has been run — providing easy access to the plan comparison and recommendation without re-running the analysis.
+**Plan comparison reference:** The flag links to the enrollment analysis brief in `vault/benefits/02_briefs/enrollment-YYYY.md` if it has been run — providing easy access to the plan comparison and recommendation without re-running the analysis.
 
 **Calendar reminder note:** Appends a note for the ben/calendar agent to create a calendar reminder for the enrollment close date (action by the day before close, not the close date itself, to allow for system processing time).
 
@@ -25,7 +25,7 @@ Called by `aireadylife-benefits-op-enrollment-review` when the annual open enrol
 3. Determine urgency: >14 days = watch, ≤14 days = urgent, ≤3 days = urgent + auto-renewal warning.
 4. Check `vault/benefits/open-loops.md` for existing enrollment window flag — if found, update rather than duplicate.
 5. Build election checklist appropriate to the user's situation (include HSA checklist items only if HDHP options exist; include FSA item only if non-HDHP is selected or being considered).
-6. Check if enrollment analysis brief exists at `vault/benefits/04_briefs/enrollment-YYYY.md` — include reference if yes, note it has not been run if no.
+6. Check if enrollment analysis brief exists at `vault/benefits/02_briefs/enrollment-YYYY.md` — include reference if yes, note it has not been run if no.
 7. Write (or update) enrollment flag to `vault/benefits/open-loops.md` with urgency, dates, checklist, and plan comparison reference.
 8. Return confirmation with flag urgency level and action-by date to calling op.
 
@@ -33,7 +33,7 @@ Called by `aireadylife-benefits-op-enrollment-review` when the annual open enrol
 
 - Enrollment window dates from calling op
 - `~/Documents/AIReadyLife/vault/benefits/open-loops.md` — for deduplication check
-- `~/Documents/AIReadyLife/vault/benefits/04_briefs/` — check if enrollment analysis exists
+- `~/Documents/AIReadyLife/vault/benefits/02_briefs/` — check if enrollment analysis exists
 - `~/Documents/AIReadyLife/vault/benefits/config.md` — plan types available (for checklist customization)
 
 ## Output Format
@@ -58,7 +58,7 @@ Election checklist:
 [ ] Beneficiary confirmation (401k + life insurance)
 [ ] Dependent coverage confirmation
 
-Plan comparison brief: vault/benefits/04_briefs/enrollment-[YYYY].md [Available / Not yet run — run enrollment review op first]
+Plan comparison brief: vault/benefits/02_briefs/enrollment-[YYYY].md [Available / Not yet run — run enrollment review op first]
 
 Action by: [end_date minus 1 day]
 Calendar reminder: Add to calendar — enrollment closes [end_date]
@@ -77,5 +77,5 @@ No configuration required. Called by the enrollment review op with specific date
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/benefits/open-loops.md`, `~/Documents/AIReadyLife/vault/benefits/04_briefs/`
+- Reads from: `~/Documents/AIReadyLife/vault/benefits/open-loops.md`, `~/Documents/AIReadyLife/vault/benefits/02_briefs/`
 - Writes to: `~/Documents/AIReadyLife/vault/benefits/open-loops.md`

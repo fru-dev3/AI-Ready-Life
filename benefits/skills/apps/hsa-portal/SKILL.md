@@ -68,7 +68,7 @@ Most HSA carriers require a minimum cash balance before allowing investment — 
 
 ## 5498-SA Tax Form
 
-The 5498-SA is provided by the HSA carrier each May showing total contributions for the prior year. This form is used to verify Box 12 Code W on the W-2 (employer HSA contributions) and to report total HSA contributions on Schedule 1, Form 8889 if any out-of-pocket (non-payroll) contributions were made. Download annually and save to `vault/benefits/payroll/YYYY-5498SA.pdf`.
+The 5498-SA is provided by the HSA carrier each May showing total contributions for the prior year. This form is used to verify Box 12 Code W on the W-2 (employer HSA contributions) and to report total HSA contributions on Schedule 1, Form 8889 if any out-of-pocket (non-payroll) contributions were made. Download annually and save to `vault/benefits/00_current/YYYY-5498SA.pdf`.
 
 ## Technical Notes
 
@@ -84,5 +84,5 @@ The 5498-SA is provided by the HSA carrier each May showing total contributions 
 
 ## Vault Output
 
-- `~/Documents/AIReadyLife/vault/benefits/02_hsa/statements/` — downloaded HSA statements by month
-- `~/Documents/AIReadyLife/vault/benefits/payroll/YYYY-5498SA.pdf` — annual HSA tax form
+- `~/Documents/AIReadyLife/vault/benefits/00_current/statements/` — downloaded HSA statements by month
+- `~/Documents/AIReadyLife/vault/benefits/00_current/YYYY-5498SA.pdf` — annual HSA tax form

@@ -15,11 +15,11 @@ description: >
 # aireadylife-tax-build-deadline-list
 
 **Trigger:** Called by `aireadylife-tax-deadline-watch`
-**Produces:** Deadline list document at `vault/tax/02_deadlines/YYYY-MM-deadlines.md`
+**Produces:** Deadline list document at `vault/tax/00_current/YYYY-MM-deadlines.md`
 
 ## What It Does
 
-Reads the full tax deadline calendar from `vault/tax/02_deadlines/deadline-calendar.md` — a master calendar that covers all known annual deadlines for the user's personal and entity tax situation — and filters to all items due within the next 90 days. The master calendar is populated from config.md when the vault is first set up, incorporating: the user's filing status, state(s) of residence, active entities and their states of formation, and the current tax year.
+Reads the full tax deadline calendar from `vault/tax/00_current/deadline-calendar.md` — a master calendar that covers all known annual deadlines for the user's personal and entity tax situation — and filters to all items due within the next 90 days. The master calendar is populated from config.md when the vault is first set up, incorporating: the user's filing status, state(s) of residence, active entities and their states of formation, and the current tax year.
 
 **Deadline categories included:**
 
@@ -46,25 +46,25 @@ Entity deadlines: S-Corp and partnership return (March 15 or extension); LLC ann
 ## Steps
 
 1. Read `vault/tax/config.md` to identify: filing status, states of residence, active entities, entity states, whether any extensions have been filed
-2. Read `vault/tax/02_deadlines/deadline-calendar.md` — the master deadline calendar for this tax year
+2. Read `vault/tax/00_current/deadline-calendar.md` — the master deadline calendar for this tax year
 3. Filter all calendar entries to those due within the next 90 days
 4. For each filtered deadline, read the associated entity, payment amount (from most recent estimate or known fixed fee), and payment method
-5. Check `vault/tax/01_estimates/` for any quarterly estimate calculations already run this year; populate payment amount where available
+5. Check `vault/tax/00_current/` for any quarterly estimate calculations already run this year; populate payment amount where available
 6. Check `vault/tax/open-loops.md` for any deadlines already flagged to avoid duplication
 7. Sort the list by days remaining (ascending); apply urgency tier to each item
 8. Flag deadlines where payment method requires advance setup (EFTPS enrollment takes 5–7 business days)
-9. Write formatted deadline list to `vault/tax/02_deadlines/YYYY-MM-deadlines.md`
+9. Write formatted deadline list to `vault/tax/00_current/YYYY-MM-deadlines.md`
 10. Return the list of CRITICAL and URGENT items to the calling op for open-loop flag generation
 
 ## Input
 
-- `vault/tax/02_deadlines/deadline-calendar.md` — master deadline calendar
-- `vault/tax/01_estimates/` — quarterly estimate calculations for payment amounts
+- `vault/tax/00_current/deadline-calendar.md` — master deadline calendar
+- `vault/tax/00_current/` — quarterly estimate calculations for payment amounts
 - `vault/tax/config.md` — filing status, entities, states, extension status
 
 ## Output Format
 
-Markdown document at `vault/tax/02_deadlines/YYYY-MM-deadlines.md`:
+Markdown document at `vault/tax/00_current/YYYY-MM-deadlines.md`:
 - Header: run date, days covered (next 90 days), count by urgency tier
 - Deadline table: Deadline | Entity | Due Date | Days Remaining | Amount | Method | Urgency
 - CRITICAL section (separate): any item within 7 days with bold formatting and action step
@@ -87,7 +87,7 @@ Required in `vault/tax/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/tax/02_deadlines/deadline-calendar.md`
-- Reads from: `~/Documents/AIReadyLife/vault/tax/01_estimates/`
+- Reads from: `~/Documents/AIReadyLife/vault/tax/00_current/deadline-calendar.md`
+- Reads from: `~/Documents/AIReadyLife/vault/tax/00_current/`
 - Reads from: `~/Documents/AIReadyLife/vault/tax/config.md`
-- Writes to: `~/Documents/AIReadyLife/vault/tax/02_deadlines/YYYY-MM-deadlines.md`
+- Writes to: `~/Documents/AIReadyLife/vault/tax/00_current/YYYY-MM-deadlines.md`

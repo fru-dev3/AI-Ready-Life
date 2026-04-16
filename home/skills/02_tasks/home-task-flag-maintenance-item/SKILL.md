@@ -3,7 +3,7 @@ name: aireadylife-home-task-flag-maintenance-item
 type: task
 description: >
   Writes a maintenance flag to open-loops.md and creates a maintenance item record in
-  vault/home/01_maintenance/. Captures task description, location, urgency, last-serviced
+  vault/home/00_current/. Captures task description, location, urgency, last-serviced
   date, vendor, estimated cost, and target completion date. Used for both reactive repairs
   and proactive scheduled maintenance.
 ---
@@ -11,7 +11,7 @@ description: >
 # aireadylife-home-flag-maintenance-item
 
 **Trigger:** Called by home seasonal and review flows, or directly when the user reports a home issue
-**Produces:** Maintenance item in `~/Documents/AIReadyLife/vault/home/01_maintenance/` and flag in `~/Documents/AIReadyLife/vault/home/open-loops.md`
+**Produces:** Maintenance item in `~/Documents/AIReadyLife/vault/home/00_current/` and flag in `~/Documents/AIReadyLife/vault/home/open-loops.md`
 
 ## What It Does
 
@@ -36,7 +36,7 @@ Vendor info is pulled from config.md if a preferred vendor is assigned for the r
 3. Set target completion date: routine = today + 30 days; urgent = today + 14 days; emergency = today + 3 days
 4. Record last-serviced date if known (from maintenance history or user input)
 5. Set estimated cost range from knowledge base or user-provided vendor quote
-6. Write detailed item file to `~/Documents/AIReadyLife/vault/home/01_maintenance/YYYY-MM-DD-{issue-slug}.md`
+6. Write detailed item file to `~/Documents/AIReadyLife/vault/home/00_current/YYYY-MM-DD-{issue-slug}.md`
 7. Write condensed flag to `~/Documents/AIReadyLife/vault/home/open-loops.md`
 8. If urgency is emergency: surface immediately in response with strong recommendation to call a contractor today
 
@@ -87,5 +87,5 @@ Required in `~/Documents/AIReadyLife/vault/home/config.md`:
 ## Vault Paths
 
 - Reads from: `~/Documents/AIReadyLife/vault/home/config.md` (vendor assignments)
-- Writes to: `~/Documents/AIReadyLife/vault/home/01_maintenance/YYYY-MM-DD-{issue-slug}.md`
+- Writes to: `~/Documents/AIReadyLife/vault/home/00_current/YYYY-MM-DD-{issue-slug}.md`
 - Writes to: `~/Documents/AIReadyLife/vault/home/open-loops.md`

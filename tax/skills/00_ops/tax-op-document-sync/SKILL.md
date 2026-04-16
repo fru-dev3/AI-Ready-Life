@@ -14,13 +14,13 @@ description: >
 # aireadylife-tax-document-sync
 
 **Cadence:** As-received (active January 1 through April 15)
-**Produces:** Updated document inventory in `vault/tax/00_documents/`; missing document flags in `vault/tax/open-loops.md`
+**Produces:** Updated document inventory in `vault/tax/00_current/`; missing document flags in `vault/tax/open-loops.md`
 
 ## What It Does
 
 Serves as the intake op for all tax documents during filing season. Each time a document arrives — digitally or physically — this op is triggered to log it and update the completeness checklist. The goal is to know, at any point in January through April, exactly which documents have been received, which are still expected, and which are overdue.
 
-**Document intake.** When triggered, the op asks the user to confirm: document type (W-2, 1099-NEC, 1099-B, etc.), payer/issuer name, tax year it covers, and whether the file has been placed in `vault/tax/00_documents/YYYY/`. If the file is not yet in the vault, the user is prompted to save it there before the intake is logged. The op applies the standard naming convention and flags any deviation.
+**Document intake.** When triggered, the op asks the user to confirm: document type (W-2, 1099-NEC, 1099-B, etc.), payer/issuer name, tax year it covers, and whether the file has been placed in `vault/tax/00_current/YYYY/`. If the file is not yet in the vault, the user is prompted to save it there before the intake is logged. The op applies the standard naming convention and flags any deviation.
 
 **Completeness check.** After logging the new document, the op calls `aireadylife-tax-document-completeness` to update the full expected vs. received picture. This ensures the completeness report is always current after each intake event rather than only during scheduled reviews.
 
@@ -41,6 +41,6 @@ None (documents placed manually in vault; portal-specific apps handle downloadin
 
 ## Vault Output
 
-- `vault/tax/00_documents/YYYY/[document-file]` — saved tax document (user places; op confirms)
-- `vault/tax/00_documents/YYYY-completeness.md` — updated completeness report
+- `vault/tax/00_current/YYYY/[document-file]` — saved tax document (user places; op confirms)
+- `vault/tax/00_current/YYYY-completeness.md` — updated completeness report
 - `vault/tax/open-loops.md` — missing document flags

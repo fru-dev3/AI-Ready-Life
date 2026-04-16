@@ -39,22 +39,22 @@ Action items are compiled from open-loops.md and sorted: critical (emergency mai
 
 ## Steps
 
-1. Read current month cash flow report from `~/Documents/AIReadyLife/vault/estate/03_cashflow/YYYY-MM-cashflow.md` (or run cash-flow-review if not yet generated)
-2. Read all open maintenance items from `~/Documents/AIReadyLife/vault/estate/02_maintenance/` and sort by urgency
-3. Read tenant records from `~/Documents/AIReadyLife/vault/estate/01_tenants/` — calculate days to lease expiration and flag <90 days
+1. Read current month cash flow report from `~/Documents/AIReadyLife/vault/estate/00_current/YYYY-MM-cashflow.md` (or run cash-flow-review if not yet generated)
+2. Read all open maintenance items from `~/Documents/AIReadyLife/vault/estate/00_current/` and sort by urgency
+3. Read tenant records from `~/Documents/AIReadyLife/vault/estate/00_current/` — calculate days to lease expiration and flag <90 days
 4. Read payment history from tenant records; flag any tenant with late payment in past 3 months
-5. Read property tax and insurance renewal dates from `~/Documents/AIReadyLife/vault/estate/00_properties/`; flag due within 60 days
+5. Read property tax and insurance renewal dates from `~/Documents/AIReadyLife/vault/estate/00_current/`; flag due within 60 days
 6. Read open-loops.md for existing unresolved flags; include in action items
 7. Compile all sections into brief structure
-8. Write brief to `~/Documents/AIReadyLife/vault/estate/03_briefs/YYYY-MM-estate-brief.md`
+8. Write brief to `~/Documents/AIReadyLife/vault/estate/02_briefs/YYYY-MM-estate-brief.md`
 9. Call `aireadylife-estate-update-open-loops` with any new flags from the brief
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/estate/03_cashflow/YYYY-MM-cashflow.md`
-- `~/Documents/AIReadyLife/vault/estate/02_maintenance/`
-- `~/Documents/AIReadyLife/vault/estate/01_tenants/`
-- `~/Documents/AIReadyLife/vault/estate/00_properties/`
+- `~/Documents/AIReadyLife/vault/estate/00_current/YYYY-MM-cashflow.md`
+- `~/Documents/AIReadyLife/vault/estate/00_current/`
+- `~/Documents/AIReadyLife/vault/estate/00_current/`
+- `~/Documents/AIReadyLife/vault/estate/00_current/`
 - `~/Documents/AIReadyLife/vault/estate/open-loops.md`
 
 ## Output Format
@@ -94,10 +94,10 @@ Required: vault populated, config.md complete, at least one monthly sync complet
 
 - If vault missing: direct to frudev.gumroad.com/l/aireadylife-estate
 - If monthly cash flow report not yet generated: offer to run cash-flow-review first
-- If no tenant records: note "No tenant data — add leases to vault/estate/01_tenants/ to enable lease tracking"
+- If no tenant records: note "No tenant data — add leases to vault/estate/00_current/ to enable lease tracking"
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/estate/03_cashflow/`, `02_maintenance/`, `01_tenants/`, `00_properties/`, `open-loops.md`
-- Writes to: `~/Documents/AIReadyLife/vault/estate/03_briefs/YYYY-MM-estate-brief.md`
+- Reads from: `~/Documents/AIReadyLife/vault/estate/00_current/`, `02_maintenance/`, `01_tenants/`, `00_properties/`, `open-loops.md`
+- Writes to: `~/Documents/AIReadyLife/vault/estate/02_briefs/YYYY-MM-estate-brief.md`
 - Writes to: `~/Documents/AIReadyLife/vault/estate/open-loops.md`

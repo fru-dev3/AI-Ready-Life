@@ -56,4 +56,4 @@ stessa_chrome_profile: /Users/YOU/Library/Application Support/Google/Chrome/Defa
 
 ## Vault Output
 
-`~/Documents/AIReadyLife/vault/estate/03_cashflow/`
+`~/Documents/AIReadyLife/vault/estate/00_current/`

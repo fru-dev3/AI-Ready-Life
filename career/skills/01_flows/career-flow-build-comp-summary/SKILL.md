@@ -8,7 +8,7 @@ description: >
 
 ## What It Does
 
-Called by `aireadylife-career-op-comp-review` to produce the core compensation benchmarking table. Reads the full current compensation picture from `vault/career/02_compensation/` and computes a component-level TC comparison against market benchmarks.
+Called by `aireadylife-career-op-comp-review` to produce the core compensation benchmarking table. Reads the full current compensation picture from `vault/career/00_current/` and computes a component-level TC comparison against market benchmarks.
 
 **Reading current comp:** Pulls base salary, annual bonus target (as a percent of base), current RSU grant value and vesting schedule, and employer benefits contributions from the vault. The bonus component uses target (not actual) because actual fluctuates; target is the stable plan design metric. For RSU equity: annualized value = (total grant shares × current stock price) ÷ remaining vesting years. If the stock is below the grant price (underwater), the annualized equity value is still calculated at current price — economic value is what matters, not the paper gain/loss vs. grant price. Benefits value is quantified as: annual 401k employer match (contribution rate × salary × match rate, capped at employer match cap) + annual health insurance employer premium contribution.
 
@@ -18,24 +18,24 @@ Called by `aireadylife-career-op-comp-review` to produce the core compensation b
 
 ## Steps
 
-1. Read base salary from `vault/career/config.md` or most recent pay stub in `vault/career/02_compensation/pay-stubs/`.
+1. Read base salary from `vault/career/config.md` or most recent pay stub in `vault/career/00_current/pay-stubs/`.
 2. Read bonus target percent from `vault/career/config.md`. Calculate bonus component: base × bonus_target_pct.
-3. Read RSU grant details from `vault/career/02_compensation/equity/`. Calculate annualized equity value: (shares × current_price) ÷ vesting_years.
+3. Read RSU grant details from `vault/career/00_current/equity/`. Calculate annualized equity value: (shares × current_price) ÷ vesting_years.
 4. Calculate 401k match value: base × 401k_contribution_rate × employer_match_rate (capped at employer match maximum).
-5. Read health insurance employer premium contribution from `vault/career/02_compensation/` or config.
+5. Read health insurance employer premium contribution from `vault/career/00_current/` or config.
 6. Sum all components to produce total annual compensation.
 7. Query Levels.fyi for market P25/P50/P75 for configured role, level, and company tier — extract component-level breakdown where available.
 8. Query Glassdoor for market P25/P50/P75 for role title and metro area — use as cross-validation.
 9. Build comparison table with current values and market percentiles per component.
 10. Calculate user's percentile position (linear interpolation between available percentile data points).
 11. Calculate dollar gap vs. P50 for each component and for total TC.
-12. Append current TC and percentile to time series in `vault/career/02_compensation/bench-history.md`.
+12. Append current TC and percentile to time series in `vault/career/00_current/bench-history.md`.
 13. Return completed table to calling op.
 
 ## Input
 
 - `~/Documents/AIReadyLife/vault/career/config.md` — role, level, company tier, metro, salary, bonus target, RSU grant info
-- `~/Documents/AIReadyLife/vault/career/02_compensation/` — pay stubs, equity grant docs
+- `~/Documents/AIReadyLife/vault/career/00_current/` — pay stubs, equity grant docs
 - Levels.fyi (live query or cached data not more than 90 days old)
 - Glassdoor salary data (live query or cached)
 
@@ -66,5 +66,5 @@ Required in `vault/career/config.md`: `base_salary`, `bonus_target_pct`, `rsu_sh
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/career/config.md`, `~/Documents/AIReadyLife/vault/career/02_compensation/`
-- Writes to: `~/Documents/AIReadyLife/vault/career/02_compensation/bench-history.md`
+- Reads from: `~/Documents/AIReadyLife/vault/career/config.md`, `~/Documents/AIReadyLife/vault/career/00_current/`
+- Writes to: `~/Documents/AIReadyLife/vault/career/00_current/bench-history.md`

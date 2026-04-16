@@ -29,7 +29,7 @@ The output table is sorted by monthly cost descending — this prioritization en
 
 ## Steps
 
-1. Read all active subscriptions from `~/Documents/AIReadyLife/vault/records/02_subscriptions/subscriptions.md`
+1. Read all active subscriptions from `~/Documents/AIReadyLife/vault/records/00_current/subscriptions.md`
 2. For each subscription: calculate monthly equivalent and annual equivalent cost
 3. Check last-used date; flag subscriptions with no use in >60 days as "low usage"
 4. Check renewal date; flag any subscription renewing within 30 days
@@ -42,7 +42,7 @@ The output table is sorted by monthly cost descending — this prioritization en
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/records/02_subscriptions/subscriptions.md` — active subscription registry
+- `~/Documents/AIReadyLife/vault/records/00_current/subscriptions.md` — active subscription registry
 
 ## Output Format
 
@@ -63,16 +63,16 @@ The output table is sorted by monthly cost descending — this prioritization en
 
 ## Configuration
 
-Required in `~/Documents/AIReadyLife/vault/records/02_subscriptions/subscriptions.md`:
+Required in `~/Documents/AIReadyLife/vault/records/00_current/subscriptions.md`:
 - For each subscription: `service_name`, `category`, `billing_amount`, `billing_cycle`, `renewal_date`, `last_used_date`, `essential` (true/false)
 
 ## Error Handling
 
-- If no subscriptions are logged: output "No subscriptions tracked — add subscriptions to vault/records/02_subscriptions/"
+- If no subscriptions are logged: output "No subscriptions tracked — add subscriptions to vault/records/00_current/"
 - If last-used date is missing for a subscription: flag as "usage unknown — no log"
 - If renewal date is missing: note "no renewal date — may be month-to-month"
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/records/02_subscriptions/subscriptions.md`
-- Writes to: `~/Documents/AIReadyLife/vault/records/02_subscriptions/YYYY-MM-subscription-summary.md`
+- Reads from: `~/Documents/AIReadyLife/vault/records/00_current/subscriptions.md`
+- Writes to: `~/Documents/AIReadyLife/vault/records/00_current/YYYY-MM-subscription-summary.md`

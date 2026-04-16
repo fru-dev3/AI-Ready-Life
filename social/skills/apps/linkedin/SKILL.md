@@ -80,5 +80,5 @@ analysis rather than scraping the connections list page.
 ## Vault Output
 
 `~/Documents/AIReadyLife/vault/social/00_current/linkedin-connections.csv` — raw connections export
-`~/Documents/AIReadyLife/vault/social/01_contacts/` — enriched context written to individual contact
+`~/Documents/AIReadyLife/vault/social/00_current/` — enriched context written to individual contact
 files by social-op-monthly-sync and social-flow-build-outreach-queue, not by this skill directly

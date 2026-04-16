@@ -62,4 +62,4 @@ When both `oura` and `apple_health` are configured as `wearable_type: both` in c
 
 ## Vault Output
 
-- `vault/health/00_current/wearable/wearable-log.csv` — daily records appended from Apple Health export
+- `vault/health/00_current/wearable-log.csv` — daily records appended from Apple Health export

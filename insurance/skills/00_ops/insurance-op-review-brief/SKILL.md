@@ -29,26 +29,26 @@ The brief has five sections. Active policies: a matrix of all current policies w
 
 1. Check `vault/insurance/00_current/renewal-alerts.md` for most recent renewal watch output — note date of last run.
 2. Read all active policies from `vault/insurance/00_current/` — extract carrier, policy type, annual premium, renewal date.
-3. Check `vault/insurance/02_claims/` for any open claims — extract stage and next action.
+3. Check `vault/insurance/00_current/` for any open claims — extract stage and next action.
 4. Read `vault/insurance/open-loops.md` — extract all open items by severity.
-5. Check most recent coverage audit date from `vault/insurance/02_coverage/` — note if audit is more than 12 months old (flag for re-audit).
+5. Check most recent coverage audit date from `vault/insurance/00_current/` — note if audit is more than 12 months old (flag for re-audit).
 6. Sum all annual premiums for total annual and monthly premium spend.
 7. Identify all policies renewing within 60 days from policy records.
 8. Extract top 3 open coverage gaps from open-loops.md.
 9. Synthesize all data into brief with "Requires Action" section first.
-10. Write monthly brief to `vault/insurance/03_briefs/YYYY-MM-insurance-brief.md`.
+10. Write monthly brief to `vault/insurance/02_briefs/YYYY-MM-insurance-brief.md`.
 11. Call `aireadylife-insurance-task-update-open-loops` if any new flags surfaced during synthesis.
 
 ## Input
 
 - `~/Documents/AIReadyLife/vault/insurance/00_current/` — active policy records and renewal alerts
-- `~/Documents/AIReadyLife/vault/insurance/02_claims/` — active claims
-- `~/Documents/AIReadyLife/vault/insurance/02_coverage/` — most recent coverage audit
+- `~/Documents/AIReadyLife/vault/insurance/00_current/` — active claims
+- `~/Documents/AIReadyLife/vault/insurance/00_current/` — most recent coverage audit
 - `~/Documents/AIReadyLife/vault/insurance/open-loops.md` — all outstanding flags
 
 ## Output Format
 
-**Monthly Insurance Brief** — saved as `vault/insurance/03_briefs/YYYY-MM-insurance-brief.md`
+**Monthly Insurance Brief** — saved as `vault/insurance/02_briefs/YYYY-MM-insurance-brief.md`
 
 ```
 # Insurance Brief — [Month Year]
@@ -94,5 +94,5 @@ No additional configuration beyond standard `vault/insurance/config.md`. Brief r
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/insurance/00_current/`, `~/Documents/AIReadyLife/vault/insurance/02_claims/`, `~/Documents/AIReadyLife/vault/insurance/02_coverage/`, `~/Documents/AIReadyLife/vault/insurance/open-loops.md`
-- Writes to: `~/Documents/AIReadyLife/vault/insurance/03_briefs/YYYY-MM-insurance-brief.md`, `~/Documents/AIReadyLife/vault/insurance/open-loops.md`
+- Reads from: `~/Documents/AIReadyLife/vault/insurance/00_current/`, `~/Documents/AIReadyLife/vault/insurance/00_current/`, `~/Documents/AIReadyLife/vault/insurance/00_current/`, `~/Documents/AIReadyLife/vault/insurance/open-loops.md`
+- Writes to: `~/Documents/AIReadyLife/vault/insurance/02_briefs/YYYY-MM-insurance-brief.md`, `~/Documents/AIReadyLife/vault/insurance/open-loops.md`

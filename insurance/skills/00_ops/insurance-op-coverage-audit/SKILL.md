@@ -10,11 +10,11 @@ description: >
 
 Runs once per year (January is the standard timing) or immediately after a major life event that changes the coverage calculus: home purchase or sale, marriage or divorce, new child, significant salary change, acquisition of a new rental property, or net worth crossing a significant threshold. This is the most important insurance op — it determines whether you have the right coverage for your current life, not for who you were when you last shopped policies.
 
-**Life insurance adequacy:** The calculation is not just 10x income. It starts there, then adjusts. Base need = annual gross income × 10 (or × 12 if multiple dependents or if spouse cannot cover household expenses). Debt adjustment = add outstanding mortgage balance + any other significant personal debt (student loans, car loans if large). Spouse income offset = if spouse earns significant income, the income replacement need is reduced by the present value of their earning capacity over the same period the insurance is meant to cover. Reads annual income from `vault/insurance/config.md`, outstanding mortgage from property records, and dependent status. Sums all active life insurance policies from `vault/insurance/01_policies/life/`. Compares total to calculated need. A common finding: group employer life (1-2x salary) + supplemental employer life (1-2x salary) = 2-4x total, vs. a 12x need — a $1M+ shortfall for a $150K earner.
+**Life insurance adequacy:** The calculation is not just 10x income. It starts there, then adjusts. Base need = annual gross income × 10 (or × 12 if multiple dependents or if spouse cannot cover household expenses). Debt adjustment = add outstanding mortgage balance + any other significant personal debt (student loans, car loans if large). Spouse income offset = if spouse earns significant income, the income replacement need is reduced by the present value of their earning capacity over the same period the insurance is meant to cover. Reads annual income from `vault/insurance/config.md`, outstanding mortgage from property records, and dependent status. Sums all active life insurance policies from `vault/insurance/00_current/life/`. Compares total to calculated need. A common finding: group employer life (1-2x salary) + supplemental employer life (1-2x salary) = 2-4x total, vs. a 12x need — a $1M+ shortfall for a $150K earner.
 
 **Disability coverage adequacy:** Three checks. Check 1: STD waiting period vs. liquid emergency fund — if the STD waiting period is 14 days but the emergency fund only covers 1 week of expenses, there is a liquidity gap. Check 2: LTD income replacement rate — (LTD monthly benefit ÷ gross monthly salary) should be 60-70%. For high earners where employer LTD caps at $10,000-$15,000/month: calculate the effective replacement rate and flag if below 60%. Check 3: LTD policy definition — own-occupation is stronger than any-occupation. If the employer policy is any-occupation, flag the definition risk.
 
-**Liability and umbrella analysis:** Reads auto liability limits (per-person bodily injury / per-accident / property damage) and home/renters liability limit from `vault/insurance/01_policies/`. Reads current net worth from `vault/insurance/config.md` or linked Wealth plugin data. Umbrella gap: if net worth > combined auto liability + home liability, unprotected net worth exists. Calculate unprotected exposure = net worth − (auto per-accident BI + home liability). If umbrella exists: confirm umbrella coverage exceeds unprotected exposure. If no umbrella and net worth > $300K: flag missing umbrella. If umbrella exists but net worth has grown beyond umbrella limit: flag umbrella limit increase needed.
+**Liability and umbrella analysis:** Reads auto liability limits (per-person bodily injury / per-accident / property damage) and home/renters liability limit from `vault/insurance/00_current/`. Reads current net worth from `vault/insurance/config.md` or linked Wealth plugin data. Umbrella gap: if net worth > combined auto liability + home liability, unprotected net worth exists. Calculate unprotected exposure = net worth − (auto per-accident BI + home liability). If umbrella exists: confirm umbrella coverage exceeds unprotected exposure. If no umbrella and net worth > $300K: flag missing umbrella. If umbrella exists but net worth has grown beyond umbrella limit: flag umbrella limit increase needed.
 
 **Property insurance — replacement cost verification:** For homeowners policies: compare dwelling coverage limit to current estimated replacement cost (cost per square foot to rebuild × home square footage). Replacement cost typically runs $150-$300/sq ft depending on construction quality and location — significantly different from market value in appreciated markets. If dwelling coverage < 80% of replacement cost, most policies apply a coinsurance penalty. For rental properties: confirm landlord policy covers current replacement cost and has appropriate liability limits.
 
@@ -34,7 +34,7 @@ Runs once per year (January is the standard timing) or immediately after a major
 ## Steps
 
 1. Read `vault/insurance/config.md` — extract annual gross income, net worth, outstanding mortgage, number of dependents, property list, vehicle list.
-2. Read all active policies from `vault/insurance/01_policies/` — extract coverage limits, deductibles, premiums, and renewal dates for each policy line.
+2. Read all active policies from `vault/insurance/00_current/` — extract coverage limits, deductibles, premiums, and renewal dates for each policy line.
 3. Calculate life insurance need: (income × 10-12) + outstanding_mortgage + other_debt − spouse_income_offset.
 4. Sum all life insurance face values. Calculate gap vs. need.
 5. Read LTD benefit amount and employer LTD cap from benefits vault or policy docs. Calculate income replacement rate.
@@ -47,17 +47,17 @@ Runs once per year (January is the standard timing) or immediately after a major
 12. Identify potential over-insurance (old vehicles with collision, excess personal property coverage).
 13. Call `aireadylife-insurance-flow-analyze-coverage-gaps` for the detailed gap scoring.
 14. Call `aireadylife-insurance-task-flag-coverage-gap` for each identified gap with severity and dollar impact.
-15. Write coverage audit report to `vault/insurance/02_coverage/coverage-audit-YYYY.md`.
+15. Write coverage audit report to `vault/insurance/00_current/coverage-audit-YYYY.md`.
 16. Call `aireadylife-insurance-task-update-open-loops` with all findings.
 
 ## Input
 
 - `~/Documents/AIReadyLife/vault/insurance/config.md` — income, net worth, dependents, properties, vehicles
-- `~/Documents/AIReadyLife/vault/insurance/01_policies/` — all active policy documents
+- `~/Documents/AIReadyLife/vault/insurance/00_current/` — all active policy documents
 
 ## Output Format
 
-**Coverage Audit Report** — saved as `vault/insurance/02_coverage/coverage-audit-YYYY.md`
+**Coverage Audit Report** — saved as `vault/insurance/00_current/coverage-audit-YYYY.md`
 
 ```
 ## Insurance Coverage Audit — [Year]
@@ -116,5 +116,5 @@ Required in `vault/insurance/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/insurance/config.md`, `~/Documents/AIReadyLife/vault/insurance/01_policies/`
-- Writes to: `~/Documents/AIReadyLife/vault/insurance/02_coverage/coverage-audit-YYYY.md`, `~/Documents/AIReadyLife/vault/insurance/open-loops.md`
+- Reads from: `~/Documents/AIReadyLife/vault/insurance/config.md`, `~/Documents/AIReadyLife/vault/insurance/00_current/`
+- Writes to: `~/Documents/AIReadyLife/vault/insurance/00_current/coverage-audit-YYYY.md`, `~/Documents/AIReadyLife/vault/insurance/open-loops.md`

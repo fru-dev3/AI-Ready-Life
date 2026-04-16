@@ -37,22 +37,22 @@ The op also computes the recommended monthly reserves that should be held back f
 ## Steps
 
 1. Confirm vault and config.md are present; halt if missing
-2. Check rent payment logs in `~/Documents/AIReadyLife/vault/estate/01_tenants/` — flag any unit with no payment record for the current month
+2. Check rent payment logs in `~/Documents/AIReadyLife/vault/estate/00_current/` — flag any unit with no payment record for the current month
 3. Call `aireadylife-estate-analyze-cash-flow` to produce per-property income statement
-4. Read prior month cash flow from `~/Documents/AIReadyLife/vault/estate/03_cashflow/` for QoQ comparison
+4. Read prior month cash flow from `~/Documents/AIReadyLife/vault/estate/00_current/` for QoQ comparison
 5. Flag: negative NCF, expense ratio >50%, DSCR <1.25, QoQ decline >15%
 6. Calculate recommended maintenance and CapEx reserves per property
 7. Show "economic cash flow" (accounting cash flow minus reserves) alongside standard NCF
-8. Write monthly cash flow report to `~/Documents/AIReadyLife/vault/estate/03_cashflow/YYYY-MM-cashflow.md`
+8. Write monthly cash flow report to `~/Documents/AIReadyLife/vault/estate/00_current/YYYY-MM-cashflow.md`
 9. Call `aireadylife-estate-update-open-loops` with any flagged conditions
 10. Present results with per-property table, portfolio totals, and plain-language summary
 
 ## Input
 
 - `~/Documents/AIReadyLife/vault/estate/config.md`
-- `~/Documents/AIReadyLife/vault/estate/01_tenants/` — rent payment records
-- `~/Documents/AIReadyLife/vault/estate/03_cashflow/` — expense logs and prior month report
-- `~/Documents/AIReadyLife/vault/estate/00_properties/` — mortgage, insurance, tax data
+- `~/Documents/AIReadyLife/vault/estate/00_current/` — rent payment records
+- `~/Documents/AIReadyLife/vault/estate/00_current/` — expense logs and prior month report
+- `~/Documents/AIReadyLife/vault/estate/00_current/` — mortgage, insurance, tax data
 
 ## Output Format
 
@@ -85,6 +85,6 @@ Required in `~/Documents/AIReadyLife/vault/estate/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/estate/00_properties/`, `01_tenants/`, `03_cashflow/`
-- Writes to: `~/Documents/AIReadyLife/vault/estate/03_cashflow/YYYY-MM-cashflow.md`
+- Reads from: `~/Documents/AIReadyLife/vault/estate/00_current/`, `01_tenants/`, `03_cashflow/`
+- Writes to: `~/Documents/AIReadyLife/vault/estate/00_current/YYYY-MM-cashflow.md`
 - Writes to: `~/Documents/AIReadyLife/vault/estate/open-loops.md`

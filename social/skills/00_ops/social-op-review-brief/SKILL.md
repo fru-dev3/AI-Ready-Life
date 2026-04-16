@@ -11,7 +11,7 @@ description: >
 # aireadylife-social-review-brief
 
 **Cadence:** Weekly (Monday)
-**Produces:** Weekly social brief at ~/Documents/AIReadyLife/vault/social/03_briefs/YYYY-MM-DD-social-brief.md
+**Produces:** Weekly social brief at ~/Documents/AIReadyLife/vault/social/02_briefs/YYYY-MM-DD-social-brief.md
 
 ## What It Does
 
@@ -40,22 +40,22 @@ The brief is designed to be specific and executable — not a list of "you shoul
 ## Steps
 
 1. Verify vault/social/ exists and config.md is filled in
-2. Read vault/social/02_birthdays/ for birthdays and milestones in the next 14 days
-3. Read vault/social/01_interactions/ for last-contact dates per person; calculate days since last contact
+2. Read vault/social/00_current/ for birthdays and milestones in the next 14 days
+3. Read vault/social/00_current/ for last-contact dates per person; calculate days since last contact
 4. Calculate relationship health status per contact (healthy/fading/overdue) based on tier thresholds
 5. Build health summary counts by tier and status
 6. Call `social-flow-build-outreach-queue` for ranked 5-contact outreach queue with context
-7. Read vault/social/01_interactions/ for any unresolved follow-up promises from prior interactions
+7. Read vault/social/00_current/ for any unresolved follow-up promises from prior interactions
 8. Assemble brief in standard four-section format
-9. Write to vault/social/03_briefs/YYYY-MM-DD-social-brief.md
+9. Write to vault/social/02_briefs/YYYY-MM-DD-social-brief.md
 10. Call `social-task-update-open-loops` to write any overdue flags from this scan
 11. Return formatted brief to user
 
 ## Input
 
 - ~/Documents/AIReadyLife/vault/social/00_current/contacts.md
-- ~/Documents/AIReadyLife/vault/social/01_interactions/ (interaction log for last-contact dates)
-- ~/Documents/AIReadyLife/vault/social/02_birthdays/ (birthday and milestone calendar)
+- ~/Documents/AIReadyLife/vault/social/00_current/ (interaction log for last-contact dates)
+- ~/Documents/AIReadyLife/vault/social/00_current/ (birthday and milestone calendar)
 - ~/Documents/AIReadyLife/vault/social/open-loops.md
 - ~/Documents/AIReadyLife/vault/social/config.md
 
@@ -110,9 +110,9 @@ Required in vault/social/config.md:
 
 - **No contacts in vault:** Note "Contact list empty. Add contacts to vault/social/00_current/contacts.md to start relationship tracking."
 - **Interaction log missing or empty:** Cannot calculate last-contact dates — note "Run social-task-log-interaction after each meaningful contact to enable health calculations."
-- **Birthday calendar empty:** Skip birthday section; note "Add birthdays to vault/social/02_birthdays/ to receive birthday reminders."
+- **Birthday calendar empty:** Skip birthday section; note "Add birthdays to vault/social/00_current/ to receive birthday reminders."
 
 ## Vault Paths
 
-- Reads from: ~/Documents/AIReadyLife/vault/social/00_current/contacts.md, ~/Documents/AIReadyLife/vault/social/01_interactions/, ~/Documents/AIReadyLife/vault/social/02_birthdays/, ~/Documents/AIReadyLife/vault/social/open-loops.md
-- Writes to: ~/Documents/AIReadyLife/vault/social/03_briefs/YYYY-MM-DD-social-brief.md, ~/Documents/AIReadyLife/vault/social/open-loops.md
+- Reads from: ~/Documents/AIReadyLife/vault/social/00_current/contacts.md, ~/Documents/AIReadyLife/vault/social/00_current/, ~/Documents/AIReadyLife/vault/social/00_current/, ~/Documents/AIReadyLife/vault/social/open-loops.md
+- Writes to: ~/Documents/AIReadyLife/vault/social/02_briefs/YYYY-MM-DD-social-brief.md, ~/Documents/AIReadyLife/vault/social/open-loops.md

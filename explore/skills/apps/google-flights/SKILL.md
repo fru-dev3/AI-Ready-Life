@@ -49,4 +49,4 @@ explore_preferred_airlines: [United, Delta]
 
 ## Vault Output
 
-`vault/explore/01_trips/` — flight research results written to the trip record as a fare comparison note
+`vault/explore/00_current/` — flight research results written to the trip record as a fare comparison note

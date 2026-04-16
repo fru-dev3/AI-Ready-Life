@@ -11,7 +11,7 @@ description: >
 # aireadylife-vision-quarterly-planning
 
 **Cadence:** Quarterly (first week of January, April, July, October)
-**Produces:** Quarterly retrospective + new OKRs at ~/Documents/AIReadyLife/vault/vision/01_okrs/YYYY-QN-okrs.md and planning session at vault/vision/04_planning/YYYY-QN-planning-session.md
+**Produces:** Quarterly retrospective + new OKRs at ~/Documents/AIReadyLife/vault/vision/00_current/YYYY-QN-okrs.md and planning session at vault/vision/00_current/YYYY-QN-planning-session.md
 
 ## What It Does
 
@@ -21,9 +21,9 @@ The quarterly planning session is the most important strategic conversation in t
 
 **Phase 2 — Quarterly Scorecard (15-20 minutes):** Calls `vision-flow-build-scorecard` and `vision-flow-score-domain-progress` to compile the final picture of the quarter across all 13 domains. Identifies the 2-3 domains with the strongest positive momentum entering the new quarter (candidate for continued investment) and the 2-3 domains most in need of attention (candidate for a focused recovery objective). This domain health picture informs which objectives to carry forward vs. which to pivot.
 
-**Phase 3 — New OKRs (45-60 minutes):** Calls `vision-flow-draft-quarterly-plan` to generate a first-draft set of OKRs for the upcoming quarter based on: the life vision document (3-5 year context), domain health scores from Phase 2, carry-forward milestones from vault/vision/00_goals/, and the lessons from the retrospective. The draft presents 3-5 proposed Objectives with 2-3 draft Key Results per Objective. The user then reviews the draft in conversation — modifying Key Results to be more precise, adjusting the difficulty calibration, or replacing objectives that no longer feel aligned. The final agreed OKRs are saved to vault/vision/01_okrs/YYYY-QN-okrs.md.
+**Phase 3 — New OKRs (45-60 minutes):** Calls `vision-flow-draft-quarterly-plan` to generate a first-draft set of OKRs for the upcoming quarter based on: the life vision document (3-5 year context), domain health scores from Phase 2, carry-forward milestones from vault/vision/00_current/, and the lessons from the retrospective. The draft presents 3-5 proposed Objectives with 2-3 draft Key Results per Objective. The user then reviews the draft in conversation — modifying Key Results to be more precise, adjusting the difficulty calibration, or replacing objectives that no longer feel aligned. The final agreed OKRs are saved to vault/vision/00_current/YYYY-QN-okrs.md.
 
-The planning session document (written to vault/vision/04_planning/) captures the full retrospective notes, the domain health summary, and the final OKRs — creating a searchable archive of how goals evolved quarter over quarter.
+The planning session document (written to vault/vision/00_current/) captures the full retrospective notes, the domain health summary, and the final OKRs — creating a searchable archive of how goals evolved quarter over quarter.
 
 ## Triggers
 
@@ -37,8 +37,8 @@ The planning session document (written to vault/vision/04_planning/) captures th
 
 ## Steps
 
-1. Verify vault/vision/ exists and prior quarter's OKRs are in vault/vision/01_okrs/; if missing, note
-2. **Phase 1:** Read prior quarter OKRs from vault/vision/01_okrs/; for each KR, read completion evidence from relevant domain vaults
+1. Verify vault/vision/ exists and prior quarter's OKRs are in vault/vision/00_current/; if missing, note
+2. **Phase 1:** Read prior quarter OKRs from vault/vision/00_current/; for each KR, read completion evidence from relevant domain vaults
 3. Calculate final completion percentages for each KR; identify achieved vs. missed
 4. Conduct retrospective conversation: for each missed KR, ask "What happened? What did this teach us?"
 5. Capture retrospective notes and lessons learned
@@ -48,21 +48,21 @@ The planning session document (written to vault/vision/04_planning/) captures th
 9. **Phase 3:** Call `vision-flow-draft-quarterly-plan` with: vision doc, domain scores, lessons learned, carry-forward milestones
 10. Present draft OKRs (3-5 Objectives, 2-3 KRs each) for user review
 11. Facilitate OKR refinement conversation: sharpen KR specificity, calibrate difficulty, confirm alignment with vision
-12. Write finalized OKRs to vault/vision/01_okrs/YYYY-QN-okrs.md
-13. Write full planning session document to vault/vision/04_planning/YYYY-QN-planning-session.md
+12. Write finalized OKRs to vault/vision/00_current/YYYY-QN-okrs.md
+13. Write full planning session document to vault/vision/00_current/YYYY-QN-planning-session.md
 14. Call `vision-task-update-open-loops` to clear prior-quarter flags and write new quarter's priority flags
 
 ## Input
 
-- ~/Documents/AIReadyLife/vault/vision/01_okrs/ (prior quarter OKRs)
-- ~/Documents/AIReadyLife/vault/vision/00_goals/ (life vision document, milestones, BHAG)
-- ~/Documents/AIReadyLife/vault/vision/02_scorecard/ (monthly scorecard history)
+- ~/Documents/AIReadyLife/vault/vision/00_current/ (prior quarter OKRs)
+- ~/Documents/AIReadyLife/vault/vision/00_current/ (life vision document, milestones, BHAG)
+- ~/Documents/AIReadyLife/vault/vision/00_current/ (monthly scorecard history)
 - ~/Documents/AIReadyLife/vault/*/open-loops.md (domain health for scorecard)
 - ~/Documents/AIReadyLife/vault/vision/config.md
 
 ## Output Format
 
-OKR file (vault/vision/01_okrs/YYYY-QN-okrs.md):
+OKR file (vault/vision/00_current/YYYY-QN-okrs.md):
 ```markdown
 # Q[N] [YYYY] — Objectives & Key Results
 
@@ -79,7 +79,7 @@ Set: [YYYY-MM-DD]
 Status: active
 ```
 
-Planning session file (vault/vision/04_planning/YYYY-QN-planning-session.md):
+Planning session file (vault/vision/00_current/YYYY-QN-planning-session.md):
 - Prior quarter retrospective with completion percentages and lessons learned
 - Domain health summary (13-domain scores entering new quarter)
 - Final OKRs as agreed
@@ -93,10 +93,10 @@ Required in vault/vision/config.md:
 ## Error Handling
 
 - **No prior quarter OKRs found:** Run Phase 1 as first-time planning with no retrospective; note "First planning session — no prior OKRs to review."
-- **Life vision document missing from vault/vision/00_goals/:** Run draft OKR phase with domain health alone; prompt user to complete the life vision document.
-- **User ends session after Phase 1 or 2:** Save progress to vault/vision/04_planning/YYYY-QN-planning-session-draft.md; resume on next call.
+- **Life vision document missing from vault/vision/00_current/:** Run draft OKR phase with domain health alone; prompt user to complete the life vision document.
+- **User ends session after Phase 1 or 2:** Save progress to vault/vision/00_current/YYYY-QN-planning-session-draft.md; resume on next call.
 
 ## Vault Paths
 
-- Reads from: ~/Documents/AIReadyLife/vault/vision/01_okrs/, ~/Documents/AIReadyLife/vault/vision/00_goals/, ~/Documents/AIReadyLife/vault/vision/02_scorecard/, ~/Documents/AIReadyLife/vault/*/open-loops.md
-- Writes to: ~/Documents/AIReadyLife/vault/vision/01_okrs/YYYY-QN-okrs.md, ~/Documents/AIReadyLife/vault/vision/04_planning/YYYY-QN-planning-session.md
+- Reads from: ~/Documents/AIReadyLife/vault/vision/00_current/, ~/Documents/AIReadyLife/vault/vision/00_current/, ~/Documents/AIReadyLife/vault/vision/00_current/, ~/Documents/AIReadyLife/vault/*/open-loops.md
+- Writes to: ~/Documents/AIReadyLife/vault/vision/00_current/YYYY-QN-okrs.md, ~/Documents/AIReadyLife/vault/vision/00_current/YYYY-QN-planning-session.md

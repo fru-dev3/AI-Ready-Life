@@ -3,7 +3,7 @@ name: aireadylife-home-task-log-expense
 type: task
 cadence: as-received
 description: >
-  Records a home expense to vault/home/02_expenses/ with date, category (utilities/repairs/
+  Records a home expense to vault/home/00_current/ with date, category (utilities/repairs/
   supplies/services), subcategory, vendor, amount, notes, and receipt reference. Category
   tagging feeds directly into monthly budget variance calculations.
 ---
@@ -11,7 +11,7 @@ description: >
 # aireadylife-home-log-expense
 
 **Cadence:** As-received (when a bill is paid, a repair is completed, or a service is rendered)
-**Produces:** New expense record in `~/Documents/AIReadyLife/vault/home/02_expenses/YYYY-MM-expenses.md`
+**Produces:** New expense record in `~/Documents/AIReadyLife/vault/home/00_current/YYYY-MM-expenses.md`
 
 ## What It Does
 
@@ -36,7 +36,7 @@ For expenses above $1,000, the task automatically asks if this is a home improve
 1. Collect: date, expense category and subcategory, vendor name, amount, brief description
 2. Collect receipt reference (invoice number, file path, or "no receipt")
 3. If amount > $1,000: ask if this is a home improvement; note capital basis tracking opportunity
-4. Append structured expense record to `~/Documents/AIReadyLife/vault/home/02_expenses/YYYY-MM-expenses.md`
+4. Append structured expense record to `~/Documents/AIReadyLife/vault/home/00_current/YYYY-MM-expenses.md`
 5. If the expense is linked to an open maintenance item: note the connection in the record
 6. Confirm record saved; note it will appear in the next monthly expense review
 
@@ -72,5 +72,5 @@ No additional configuration required beyond vault existing. Category choices are
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/home/01_maintenance/` (to check for related open items)
-- Writes to: `~/Documents/AIReadyLife/vault/home/02_expenses/YYYY-MM-expenses.md`
+- Reads from: `~/Documents/AIReadyLife/vault/home/00_current/` (to check for related open items)
+- Writes to: `~/Documents/AIReadyLife/vault/home/00_current/YYYY-MM-expenses.md`

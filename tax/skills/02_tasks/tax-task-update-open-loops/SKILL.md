@@ -26,10 +26,10 @@ Serves as the single, authoritative write point for the tax domain's open-loop t
 
 **Auto-resolution rules.** The task scans all existing OPEN entries and applies resolution logic by flag type:
 - Deadline alerts: auto-resolve when the due date has passed; add resolution note "Deadline passed — confirm payment recorded"
-- Missing document flags: auto-resolve when the document appears in `vault/tax/00_documents/YYYY/` with the correct filename (checked by scanning the directory)
+- Missing document flags: auto-resolve when the document appears in `vault/tax/00_current/YYYY/` with the correct filename (checked by scanning the directory)
 - Deduction documentation pending: auto-resolve when the document reference is updated in the deduction log to "DOCUMENTED" status
-- Entity compliance flags: auto-resolve when the confirmed filing date is recorded in `vault/tax/05_entities/` after the deadline
-- Quarterly estimate flags: auto-resolve when the payment is recorded in `vault/tax/01_estimates/payment-log.md`
+- Entity compliance flags: auto-resolve when the confirmed filing date is recorded in `vault/tax/00_current/` after the deadline
+- Quarterly estimate flags: auto-resolve when the payment is recorded in `vault/tax/00_current/payment-log.md`
 
 **Severity escalation.** The task applies automatic severity escalation rules: any deadline flag that was MEDIUM (15–30 days) last month and is now within 14 days is escalated to HIGH; any HIGH within 7 days is escalated to CRITICAL. Any missing document that was PENDING (before issuer deadline) and is now past the issuer deadline by 30+ days is escalated to HIGH.
 

@@ -36,7 +36,7 @@ For homeowners specifically, the op also checks home improvement ROI for any cap
 
 ## Steps
 
-1. Read all expense records from `~/Documents/AIReadyLife/vault/home/02_expenses/YYYY-MM-expenses.md`
+1. Read all expense records from `~/Documents/AIReadyLife/vault/home/00_current/YYYY-MM-expenses.md`
 2. Call `aireadylife-home-build-expense-summary` to produce the full expense summary table
 3. Read annual budget from config.md; calculate MoM and YTD vs. budget per category
 4. Flag categories more than 20% over monthly budget
@@ -44,15 +44,15 @@ For homeowners specifically, the op also checks home improvement ROI for any cap
 6. Calculate YTD repair costs by system; flag any system where YTD repairs > 50% of replacement cost estimate
 7. Check if any repair exceeds $2,500 (potential CapEx threshold for homeowners — not deductible unless rental property)
 8. Check for any home improvement projects logged above $5,000; note estimated resale ROI range
-9. Write expense review to `~/Documents/AIReadyLife/vault/home/02_expenses/YYYY-MM-expense-review.md`
+9. Write expense review to `~/Documents/AIReadyLife/vault/home/00_current/YYYY-MM-expense-review.md`
 10. Call `aireadylife-home-update-open-loops` with budget overrun flags and repair replacement signals
 11. Present results with table, headline numbers, and plain-language summary
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/home/02_expenses/YYYY-MM-expenses.md`
-- `~/Documents/AIReadyLife/vault/home/02_expenses/` (prior months for YTD and MoM)
-- `~/Documents/AIReadyLife/vault/home/04_archive/` (prior year same-month for utility YoY)
+- `~/Documents/AIReadyLife/vault/home/00_current/YYYY-MM-expenses.md`
+- `~/Documents/AIReadyLife/vault/home/00_current/` (prior months for YTD and MoM)
+- `~/Documents/AIReadyLife/vault/home/01_prior/` (prior year same-month for utility YoY)
 - `~/Documents/AIReadyLife/vault/home/config.md` (budget, replacement cost estimates)
 
 ## Output Format
@@ -84,6 +84,6 @@ Required in `~/Documents/AIReadyLife/vault/home/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/home/02_expenses/`, `04_archive/`, `config.md`
-- Writes to: `~/Documents/AIReadyLife/vault/home/02_expenses/YYYY-MM-expense-review.md`
+- Reads from: `~/Documents/AIReadyLife/vault/home/00_current/`, `04_archive/`, `config.md`
+- Writes to: `~/Documents/AIReadyLife/vault/home/00_current/YYYY-MM-expense-review.md`
 - Writes to: `~/Documents/AIReadyLife/vault/home/open-loops.md`

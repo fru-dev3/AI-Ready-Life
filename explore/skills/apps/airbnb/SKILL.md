@@ -52,4 +52,4 @@ explore_min_rating: 4.5
 
 ## Vault Output
 
-`vault/explore/01_trips/` — accommodation research notes written to the trip file as a comparison table
+`vault/explore/00_current/` — accommodation research notes written to the trip file as a comparison table
