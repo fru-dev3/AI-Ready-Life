@@ -33,24 +33,24 @@ The portfolio-level summary aggregates across all properties: total portfolio eq
 
 ## Steps
 
-1. Read all property records from `~/Documents/AIReadyLife/vault/estate/00_current/`
-2. Read tenant records from `~/Documents/AIReadyLife/vault/estate/00_current/` for current rent and occupancy per property
-3. Read most recent cash flow data from `~/Documents/AIReadyLife/vault/estate/00_current/` for actual monthly NCF per property
+1. Read all property records from `~/Documents/aireadylife/vault/estate/00_current/`
+2. Read tenant records from `~/Documents/aireadylife/vault/estate/00_current/` for current rent and occupancy per property
+3. Read most recent cash flow data from `~/Documents/aireadylife/vault/estate/00_current/` for actual monthly NCF per property
 4. Calculate current mortgage balance for each property using amortization schedule or manual update date
 5. Calculate equity per property: current value minus outstanding balance
 6. Calculate cap rate: (annual NOI) ÷ current value
 7. Calculate cash-on-cash return: annual NCF ÷ total cash invested
 8. Calculate annual depreciation: (purchase price minus estimated land value) ÷ 27.5
-9. Read prior quarter's summary from `~/Documents/AIReadyLife/vault/estate/00_current/` for YoY comparison
+9. Read prior quarter's summary from `~/Documents/aireadylife/vault/estate/00_current/` for YoY comparison
 10. Calculate portfolio-level totals and blended metrics
 11. Return full snapshot to calling op
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/estate/00_current/` — all property records
-- `~/Documents/AIReadyLife/vault/estate/00_current/` — current rent and occupancy
-- `~/Documents/AIReadyLife/vault/estate/00_current/` — most recent cash flow data
-- `~/Documents/AIReadyLife/vault/estate/01_prior/` — prior period records for trend comparison
+- `~/Documents/aireadylife/vault/estate/00_current/` — all property records
+- `~/Documents/aireadylife/vault/estate/00_current/` — current rent and occupancy
+- `~/Documents/aireadylife/vault/estate/00_current/` — most recent cash flow data
+- `~/Documents/aireadylife/vault/estate/01_prior/` — prior period records for trend comparison
 
 ## Output Format
 
@@ -69,7 +69,7 @@ The portfolio-level summary aggregates across all properties: total portfolio eq
 
 ## Configuration
 
-Required in `~/Documents/AIReadyLife/vault/estate/config.md`:
+Required in `~/Documents/aireadylife/vault/estate/config.md`:
 - Each property: `address`, `purchase_date`, `purchase_price`, `original_loan`, `loan_rate`, `loan_term_years`, `current_value`, `total_cash_invested`, `land_value_estimate`
 
 ## Error Handling
@@ -80,8 +80,8 @@ Required in `~/Documents/AIReadyLife/vault/estate/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/estate/01_prior/` — prior period records
-- Reads from: `~/Documents/AIReadyLife/vault/estate/00_current/`
-- Reads from: `~/Documents/AIReadyLife/vault/estate/00_current/`
-- Reads from: `~/Documents/AIReadyLife/vault/estate/00_current/`
-- Writes to: `~/Documents/AIReadyLife/vault/estate/00_current/YYYY-MM-portfolio-snapshot.md`
+- Reads from: `~/Documents/aireadylife/vault/estate/01_prior/` — prior period records
+- Reads from: `~/Documents/aireadylife/vault/estate/00_current/`
+- Reads from: `~/Documents/aireadylife/vault/estate/00_current/`
+- Reads from: `~/Documents/aireadylife/vault/estate/00_current/`
+- Writes to: `~/Documents/aireadylife/vault/estate/00_current/YYYY-MM-portfolio-snapshot.md`

@@ -2,13 +2,13 @@
 
 This bundle covers four essential life domains: **Health, Wealth, Tax, Career**.
 
-All vaults live at `~/Documents/AIReadyLife/vault/`. Each domain has its own subfolder.
+All vaults live at `~/Documents/aireadylife/vault/`. Each domain has its own subfolder.
 
 ---
 
 ## Health
 
-**Vault:** `~/Documents/AIReadyLife/vault/health/`
+**Vault:** `~/Documents/aireadylife/vault/health/`
 
 ```
 vault/health/
@@ -41,7 +41,7 @@ vault/health/
 
 ## Wealth
 
-**Vault:** `~/Documents/AIReadyLife/vault/wealth/`
+**Vault:** `~/Documents/aireadylife/vault/wealth/`
 
 ```
 vault/wealth/
@@ -70,7 +70,7 @@ vault/wealth/
 
 ## Tax
 
-**Vault:** `~/Documents/AIReadyLife/vault/tax/`
+**Vault:** `~/Documents/aireadylife/vault/tax/`
 
 ```
 vault/tax/
@@ -101,7 +101,7 @@ vault/tax/
 
 ## Career
 
-**Vault:** `~/Documents/AIReadyLife/vault/career/`
+**Vault:** `~/Documents/aireadylife/vault/career/`
 
 ```
 vault/career/

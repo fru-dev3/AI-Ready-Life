@@ -15,7 +15,7 @@ description: >
 
 This task produces a lightweight backlog snapshot used by the weekly preview and any chief flow that needs to understand system-wide open-loop health without loading the full text of every item. It counts, not reads — it does not return item descriptions, only numbers.
 
-The task scans ~/Documents/AIReadyLife/vault/ for all plugin subdirectories containing an open-loops.md file. For each discovered plugin, it reads the open-loops.md and counts every unresolved item (unchecked checkbox: `- [ ]`). Items are classified by their priority marker (🔴 / 🟡 / 🟢) and counted per tier per domain.
+The task scans ~/Documents/aireadylife/vault/ for all plugin subdirectories containing an open-loops.md file. For each discovered plugin, it reads the open-loops.md and counts every unresolved item (unchecked checkbox: `- [ ]`). Items are classified by their priority marker (🔴 / 🟡 / 🟢) and counted per tier per domain.
 
 The result is a structured table: domain name, total unresolved items, count per tier. A summary row shows totals across all domains. Any domain with 5+ unresolved items gets a "potential backlog buildup" annotation in the result — this threshold signals that items are accumulating faster than they're being resolved, which is worth investigating. Any domain where the unresolved count increased compared to the snapshot in the prior week's vault/chief/02_briefs/ archive gets a "growing" annotation.
 
@@ -23,7 +23,7 @@ This task intentionally does not return item text — that is the job of `chief-
 
 ## Steps
 
-1. Scan ~/Documents/AIReadyLife/vault/ for subdirectories with open-loops.md
+1. Scan ~/Documents/aireadylife/vault/ for subdirectories with open-loops.md
 2. For each discovered domain: read open-loops.md; count unresolved items (unchecked checkboxes)
 3. Classify each unresolved item by priority marker: 🔴, 🟡, or 🟢
 4. Record count per tier per domain
@@ -34,8 +34,8 @@ This task intentionally does not return item text — that is the job of `chief-
 
 ## Input
 
-- ~/Documents/AIReadyLife/vault/*/open-loops.md
-- ~/Documents/AIReadyLife/vault/chief/02_briefs/ (prior week's brief for trend comparison)
+- ~/Documents/aireadylife/vault/*/open-loops.md
+- ~/Documents/aireadylife/vault/chief/02_briefs/ (prior week's brief for trend comparison)
 
 ## Output Format
 
@@ -61,5 +61,5 @@ No configuration required. Auto-discovers plugins from vault/ directory structur
 
 ## Vault Paths
 
-- Reads from: ~/Documents/AIReadyLife/vault/*/open-loops.md, ~/Documents/AIReadyLife/vault/chief/02_briefs/
-- Writes to: ~/Documents/AIReadyLife/vault/chief/00_current/ (via calling op, not directly)
+- Reads from: ~/Documents/aireadylife/vault/*/open-loops.md, ~/Documents/aireadylife/vault/chief/02_briefs/
+- Writes to: ~/Documents/aireadylife/vault/chief/00_current/ (via calling op, not directly)

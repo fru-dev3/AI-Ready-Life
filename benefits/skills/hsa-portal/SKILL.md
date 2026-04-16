@@ -84,5 +84,5 @@ The 5498-SA is provided by the HSA carrier each May showing total contributions 
 
 ## Vault Output
 
-- `~/Documents/AIReadyLife/vault/benefits/00_current/statements/` — downloaded HSA statements by month
-- `~/Documents/AIReadyLife/vault/benefits/00_current/YYYY-5498SA.pdf` — annual HSA tax form
+- `~/Documents/aireadylife/vault/benefits/00_current/statements/` — downloaded HSA statements by month
+- `~/Documents/aireadylife/vault/benefits/00_current/YYYY-5498SA.pdf` — annual HSA tax form

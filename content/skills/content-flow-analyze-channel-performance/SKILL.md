@@ -21,9 +21,9 @@ Called internally by `aireadylife-content-op-channel-review`. Not invoked direct
 
 ## Steps
 
-1. Read analytics from `~/Documents/AIReadyLife/vault/content/00_current/` for current and prior 3 months; extract: views, watch time, subscribers gained, CTR, AVD, top video
-2. Read analytics from `~/Documents/AIReadyLife/vault/content/00_current/` for current and prior 3 months; extract: subscribers, net new, open rate, CTR, send count
-3. Read analytics from `~/Documents/AIReadyLife/vault/content/00_current/` for current and prior 3 months; extract: units sold, revenue, refund rate, conversion rate
+1. Read analytics from `~/Documents/aireadylife/vault/content/00_current/` for current and prior 3 months; extract: views, watch time, subscribers gained, CTR, AVD, top video
+2. Read analytics from `~/Documents/aireadylife/vault/content/00_current/` for current and prior 3 months; extract: subscribers, net new, open rate, CTR, send count
+3. Read analytics from `~/Documents/aireadylife/vault/content/00_current/` for current and prior 3 months; extract: units sold, revenue, refund rate, conversion rate
 4. For each platform, calculate 30-day totals for all metrics
 5. Calculate 90-day rolling average for each primary growth metric (sum of prior 3 months / 3)
 6. Compare current 30-day primary growth metric to 90-day average; calculate deviation percentage
@@ -34,10 +34,10 @@ Called internally by `aireadylife-content-op-channel-review`. Not invoked direct
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/content/00_current/{YYYY-MM}.md` — YouTube analytics, current + prior 3 months
-- `~/Documents/AIReadyLife/vault/content/00_current/{YYYY-MM}.md` — newsletter metrics, current + prior 3 months
-- `~/Documents/AIReadyLife/vault/content/00_current/{YYYY-MM}.md` — Gumroad sales data, current + prior 3 months
-- `~/Documents/AIReadyLife/vault/content/01_prior/` — prior period records for trend comparison
+- `~/Documents/aireadylife/vault/content/00_current/{YYYY-MM}.md` — YouTube analytics, current + prior 3 months
+- `~/Documents/aireadylife/vault/content/00_current/{YYYY-MM}.md` — newsletter metrics, current + prior 3 months
+- `~/Documents/aireadylife/vault/content/00_current/{YYYY-MM}.md` — Gumroad sales data, current + prior 3 months
+- `~/Documents/aireadylife/vault/content/01_prior/` — prior period records for trend comparison
 
 ## Output Format
 
@@ -74,6 +74,6 @@ Required file naming in vault content subfolders:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/content/01_prior/` — prior period records
-- Reads from: `~/Documents/AIReadyLife/vault/content/00_current/`, `~/Documents/AIReadyLife/vault/content/00_current/`, `~/Documents/AIReadyLife/vault/content/00_current/`
+- Reads from: `~/Documents/aireadylife/vault/content/01_prior/` — prior period records
+- Reads from: `~/Documents/aireadylife/vault/content/00_current/`, `~/Documents/aireadylife/vault/content/00_current/`, `~/Documents/aireadylife/vault/content/00_current/`
 - Writes to: returns data to calling op; no direct file writes

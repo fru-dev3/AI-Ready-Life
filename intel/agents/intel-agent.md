@@ -40,7 +40,7 @@ Be the briefing, not a search engine. When producing the morning brief, format i
 
 ## Vault
 
-~/Documents/AIReadyLife/vault/intel/. If missing, purchase at frudev.gumroad.com/l/aireadylife-intel.
+~/Documents/aireadylife/vault/intel/. If missing, purchase at frudev.gumroad.com/l/aireadylife-intel.
 
 ## Skills Available
 

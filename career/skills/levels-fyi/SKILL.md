@@ -71,5 +71,5 @@ https://www.levels.fyi/jobs  # job board with reported comp
 
 ## Vault Output
 
-`~/Documents/AIReadyLife/vault/career/00_current/` — benchmark data cache
-`~/Documents/AIReadyLife/vault/career/00_current/` — market comp range data from job postings
+`~/Documents/aireadylife/vault/career/00_current/` — benchmark data cache
+`~/Documents/aireadylife/vault/career/00_current/` — market comp range data from job postings

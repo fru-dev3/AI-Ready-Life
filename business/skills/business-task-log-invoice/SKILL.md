@@ -9,7 +9,7 @@ description: >
 
 ## What It Does
 
-Accepts invoice details — either provided by the user directly as structured fields, extracted from an invoice document or image, or entered conversationally — and writes a structured invoice record to `~/Documents/AIReadyLife/vault/business/00_current/`. The resulting file feeds directly into the `aireadylife-business-flow-build-pl-summary` flow for monthly P&L calculations and into the `aireadylife-business-task-flag-overdue-invoice` task for payment monitoring.
+Accepts invoice details — either provided by the user directly as structured fields, extracted from an invoice document or image, or entered conversationally — and writes a structured invoice record to `~/Documents/aireadylife/vault/business/00_current/`. The resulting file feeds directly into the `aireadylife-business-flow-build-pl-summary` flow for monthly P&L calculations and into the `aireadylife-business-task-flag-overdue-invoice` task for payment monitoring.
 
 Validates required fields before writing: client name, invoice number, amount, date issued, and payment due date are all required. Service description and entity name are strongly recommended. Payment status defaults to "pending" if not provided. Checks for a duplicate invoice record (same invoice number + client name) before writing to prevent double-counting in P&L calculations.
 
@@ -52,7 +52,7 @@ User-provided fields (one or more of the following):
 
 ## Output Format
 
-Written file at `~/Documents/AIReadyLife/vault/business/00_current/{YYYY-MM-DD}-{client-slug}-invoice-{number}.md`:
+Written file at `~/Documents/aireadylife/vault/business/00_current/{YYYY-MM-DD}-{client-slug}-invoice-{number}.md`:
 ```
 # Invoice Record
 
@@ -72,7 +72,7 @@ notes: {optional notes}
 
 ## Configuration
 
-Optional in `~/Documents/AIReadyLife/vault/business/config.md`:
+Optional in `~/Documents/aireadylife/vault/business/config.md`:
 - `default_payment_terms_days` — default Net days (e.g., 30); applied when due date is not specified
 - `default_entity` — entity to use when not specified by user
 
@@ -81,9 +81,9 @@ Optional in `~/Documents/AIReadyLife/vault/business/config.md`:
 - If client name is missing: "Which client is this invoice for?" — do not write record until provided.
 - If amount is missing or non-numeric: "What is the invoice amount?" — validate it is a positive number.
 - If invoice number is already in vault for the same client: "Invoice #{number} for {client} already exists. Do you want to update the existing record (e.g., mark as paid) or create a separate record?"
-- If no vault/business/00_current/ directory exists: "Revenue folder not found. Has the vault been set up? Check ~/Documents/AIReadyLife/vault/business/."
+- If no vault/business/00_current/ directory exists: "Revenue folder not found. Has the vault been set up? Check ~/Documents/aireadylife/vault/business/."
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/business/00_current/` (duplicate check), `~/Documents/AIReadyLife/vault/business/config.md`
-- Writes to: `~/Documents/AIReadyLife/vault/business/00_current/{YYYY-MM-DD}-{client-slug}-invoice-{number}.md`
+- Reads from: `~/Documents/aireadylife/vault/business/00_current/` (duplicate check), `~/Documents/aireadylife/vault/business/config.md`
+- Writes to: `~/Documents/aireadylife/vault/business/00_current/{YYYY-MM-DD}-{client-slug}-invoice-{number}.md`

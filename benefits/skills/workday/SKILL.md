@@ -122,6 +122,6 @@ When Workday payroll is active (not ADP), use this skill instead of the ADP skil
 
 ## Vault Output
 
-- `~/Documents/AIReadyLife/vault/benefits/00_current/YYYY-elections-confirmed.md` — screenshot or extracted text of confirmed elections after OE submission
-- `~/Documents/AIReadyLife/vault/benefits/00_current/YYYY-MM-paystub.pdf` — monthly pay stubs (if Workday payroll active)
-- `~/Documents/AIReadyLife/vault/benefits/00_current/YYYY-W2.pdf` — annual W-2 (if Workday payroll active)
+- `~/Documents/aireadylife/vault/benefits/00_current/YYYY-elections-confirmed.md` — screenshot or extracted text of confirmed elections after OE submission
+- `~/Documents/aireadylife/vault/benefits/00_current/YYYY-MM-paystub.pdf` — monthly pay stubs (if Workday payroll active)
+- `~/Documents/aireadylife/vault/benefits/00_current/YYYY-W2.pdf` — annual W-2 (if Workday payroll active)

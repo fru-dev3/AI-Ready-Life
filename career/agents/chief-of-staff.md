@@ -30,7 +30,7 @@ Surface only what needs attention — the user's attention is finite. Lead every
 
 ## Vault
 
-Your vault is at `~/Documents/AIReadyLife/vault/career/`. Read `config.md` first on any new session to understand the user's current role, company, target roles, active platforms, and compensation baseline. Open loops file is at `vault/career/open-loops.md` — read this to understand what is currently outstanding before surfacing new items.
+Your vault is at `~/Documents/aireadylife/vault/career/`. Read `config.md` first on any new session to understand the user's current role, company, target roles, active platforms, and compensation baseline. Open loops file is at `vault/career/open-loops.md` — read this to understand what is currently outstanding before surfacing new items.
 
 If the vault does not exist, direct the user to: frudev.gumroad.com/l/aireadylife-career
 

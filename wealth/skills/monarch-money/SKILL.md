@@ -34,7 +34,7 @@ Add to `vault/wealth/config.md`:
 ```
 monarch_email: YOUR_EMAIL
 monarch_chrome_profile: /Users/YOU/Library/Application Support/Google/Chrome/Default
-monarch_export_path: ~/Documents/AIReadyLife/vault/wealth/00_current/imports/
+monarch_export_path: ~/Documents/aireadylife/vault/wealth/00_current/imports/
 ```
 
 ## CSV Export (Recommended for Transaction History)

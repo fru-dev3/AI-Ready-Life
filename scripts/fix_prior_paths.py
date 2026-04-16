@@ -40,7 +40,7 @@ def fix_skill_file(filepath):
         return False
 
     domain = get_domain(filepath)
-    full_prior = f"~/Documents/AIReadyLife/vault/{domain}/01_prior/"
+    full_prior = f"~/Documents/aireadylife/vault/{domain}/01_prior/"
     short_prior = f"vault/{domain}/01_prior/"
     new_content = content
 
@@ -50,7 +50,7 @@ def fix_skill_file(filepath):
     if input_match:
         block = input_match.group(2)
         # Determine which path style is used (full ~ or short vault/)
-        if f"~/Documents/AIReadyLife/vault/{domain}/00_current/" in block:
+        if f"~/Documents/aireadylife/vault/{domain}/00_current/" in block:
             prior_bullet = (
                 f"- `{full_prior}` — prior period records for trend comparison"
             )
@@ -83,7 +83,7 @@ def fix_skill_file(filepath):
     if vp_match:
         after = new_content[vp_match.end() :]
         # Determine path style
-        if f"~/Documents/AIReadyLife/vault/{domain}/" in after[:300]:
+        if f"~/Documents/aireadylife/vault/{domain}/" in after[:300]:
             prior_path = full_prior
         else:
             prior_path = short_prior
@@ -121,8 +121,8 @@ def fix_agent_file(filepath):
     with open(filepath) as f:
         content = f.read()
     fixed = content.replace(
-        "~/Documents/AIReadyLife/~/Documents/AIReadyLife/vault/",
-        "~/Documents/AIReadyLife/vault/",
+        "~/Documents/aireadylife/~/Documents/aireadylife/vault/",
+        "~/Documents/aireadylife/vault/",
     )
     if fixed != content:
         with open(filepath, "w") as f:

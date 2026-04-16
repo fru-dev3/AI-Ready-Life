@@ -10,7 +10,7 @@ description: >
 # aireadylife-social-log-interaction
 
 **Cadence:** As-happened (after any meaningful contact with a tracked person)
-**Produces:** Interaction record in ~/Documents/AIReadyLife/vault/social/00_current/
+**Produces:** Interaction record in ~/Documents/aireadylife/vault/social/00_current/
 
 ## What It Does
 
@@ -36,8 +36,8 @@ This task is the most frequently used skill in the entire social domain — and 
 ## Input
 
 - Interaction details from user (contact name, date, type, notes, follow-up)
-- ~/Documents/AIReadyLife/vault/social/00_current/contacts.md (for contact verification)
-- ~/Documents/AIReadyLife/vault/social/00_current/ (for appending)
+- ~/Documents/aireadylife/vault/social/00_current/contacts.md (for contact verification)
+- ~/Documents/aireadylife/vault/social/00_current/ (for appending)
 
 ## Output Format
 
@@ -84,5 +84,5 @@ No configuration required. Contact name must match vault/social/00_current/conta
 
 ## Vault Paths
 
-- Reads from: ~/Documents/AIReadyLife/vault/social/00_current/contacts.md
-- Writes to: ~/Documents/AIReadyLife/vault/social/00_current/{contact-slug}.md, ~/Documents/AIReadyLife/vault/social/open-loops.md (if follow-up promised)
+- Reads from: ~/Documents/aireadylife/vault/social/00_current/contacts.md
+- Writes to: ~/Documents/aireadylife/vault/social/00_current/{contact-slug}.md, ~/Documents/aireadylife/vault/social/open-loops.md (if follow-up promised)

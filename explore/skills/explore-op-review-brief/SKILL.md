@@ -11,7 +11,7 @@ description: >
 # aireadylife-explore-review-brief
 
 **Cadence:** Monthly (1st of month)
-**Produces:** Monthly explore brief at ~/Documents/AIReadyLife/vault/explore/02_briefs/YYYY-MM-explore-brief.md
+**Produces:** Monthly explore brief at ~/Documents/aireadylife/vault/explore/02_briefs/YYYY-MM-explore-brief.md
 
 ## What It Does
 
@@ -42,12 +42,12 @@ The brief is structured around four sections. Section 1 — Upcoming Trips: list
 
 ## Input
 
-- ~/Documents/AIReadyLife/vault/explore/00_current/
-- ~/Documents/AIReadyLife/vault/explore/00_current/
-- ~/Documents/AIReadyLife/vault/explore/00_current/
-- `~/Documents/AIReadyLife/vault/explore/01_prior/` — prior period records for trend comparison
-- ~/Documents/AIReadyLife/vault/explore/open-loops.md
-- ~/Documents/AIReadyLife/vault/explore/config.md
+- ~/Documents/aireadylife/vault/explore/00_current/
+- ~/Documents/aireadylife/vault/explore/00_current/
+- ~/Documents/aireadylife/vault/explore/00_current/
+- `~/Documents/aireadylife/vault/explore/01_prior/` — prior period records for trend comparison
+- ~/Documents/aireadylife/vault/explore/open-loops.md
+- ~/Documents/aireadylife/vault/explore/config.md
 
 ## Output Format
 
@@ -93,6 +93,6 @@ Required in vault/explore/config.md:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/explore/01_prior/` — prior period records
-- Reads from: ~/Documents/AIReadyLife/vault/explore/00_current/, ~/Documents/AIReadyLife/vault/explore/00_current/, ~/Documents/AIReadyLife/vault/explore/00_current/, ~/Documents/AIReadyLife/vault/explore/open-loops.md
-- Writes to: ~/Documents/AIReadyLife/vault/explore/02_briefs/YYYY-MM-explore-brief.md
+- Reads from: `~/Documents/aireadylife/vault/explore/01_prior/` — prior period records
+- Reads from: ~/Documents/aireadylife/vault/explore/00_current/, ~/Documents/aireadylife/vault/explore/00_current/, ~/Documents/aireadylife/vault/explore/00_current/, ~/Documents/aireadylife/vault/explore/open-loops.md
+- Writes to: ~/Documents/aireadylife/vault/explore/02_briefs/YYYY-MM-explore-brief.md

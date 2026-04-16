@@ -10,7 +10,7 @@ description: >
 # aireadylife-chief-flag-urgent-item
 
 **Trigger:** Called at the end of every chief op when any 🔴 priority items are found across domains
-**Produces:** Dated urgent alert record in ~/Documents/AIReadyLife/vault/chief/00_current/
+**Produces:** Dated urgent alert record in ~/Documents/aireadylife/vault/chief/00_current/
 
 ## What It Does
 
@@ -35,12 +35,12 @@ When an item is resolved — meaning it no longer appears as an unresolved item 
 ## Input
 
 - 🔴 item data passed by calling op (domain, description, due date, action, date raised)
-- ~/Documents/AIReadyLife/vault/chief/00_current/ (for deduplication check)
-- ~/Documents/AIReadyLife/vault/*/open-loops.md (for resolution status check on each run)
+- ~/Documents/aireadylife/vault/chief/00_current/ (for deduplication check)
+- ~/Documents/aireadylife/vault/*/open-loops.md (for resolution status check on each run)
 
 ## Output Format
 
-Alert file: ~/Documents/AIReadyLife/vault/chief/00_current/YYYY-MM-DD-{domain}-{slug}.md
+Alert file: ~/Documents/aireadylife/vault/chief/00_current/YYYY-MM-DD-{domain}-{slug}.md
 
 ```markdown
 ---
@@ -78,5 +78,5 @@ No configuration required. Alert files auto-populate from calling op data.
 
 ## Vault Paths
 
-- Reads from: ~/Documents/AIReadyLife/vault/chief/00_current/, ~/Documents/AIReadyLife/vault/*/open-loops.md
-- Writes to: ~/Documents/AIReadyLife/vault/chief/00_current/YYYY-MM-DD-{domain}-{slug}.md
+- Reads from: ~/Documents/aireadylife/vault/chief/00_current/, ~/Documents/aireadylife/vault/*/open-loops.md
+- Writes to: ~/Documents/aireadylife/vault/chief/00_current/YYYY-MM-DD-{domain}-{slug}.md

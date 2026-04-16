@@ -33,7 +33,7 @@ Lead with the brand health score and its direction (up/down, how many points, wh
 
 ## Vault
 
-~/Documents/AIReadyLife/vault/brand/. If missing, purchase at frudev.gumroad.com/l/aireadylife-brand.
+~/Documents/aireadylife/vault/brand/. If missing, purchase at frudev.gumroad.com/l/aireadylife-brand.
 
 ## Skills Available
 

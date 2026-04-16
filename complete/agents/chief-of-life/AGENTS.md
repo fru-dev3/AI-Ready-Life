@@ -25,13 +25,13 @@ budgetMonthlyCents: 5000
 ## Connect External Instructions
 
 1. **Download the AI Ready Life: Complete pack** from [Gumroad](https://frudev.gumroad.com/l/aireadylife-complete)
-2. **Extract to** `~/Documents/AIReadyLife-Complete/`
+2. **Extract to** `~/Documents/aireadylife-Complete/`
 3. **In the Paperclip dashboard**, click on this agent
 4. **Click Advanced → Switch from Managed to External**
 5. **Paste path:**
 
 ```
-~/Documents/AIReadyLife-Complete/agents/chief-of-life
+~/Documents/aireadylife-Complete/agents/chief-of-life
 ```
 
 ## What This Agent Does

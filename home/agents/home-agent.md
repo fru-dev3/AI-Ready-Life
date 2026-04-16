@@ -8,7 +8,7 @@ description: >
   services) against a configurable annual budget. Tracks home value (Zillow Zestimate) and
   equity for homeowners. Monitors appliance and HVAC warranty expirations within 90 days.
   Produces weekly home snapshots when items need attention and monthly expense summaries.
-  All data stays local in ~/Documents/AIReadyLife/vault/home/.
+  All data stays local in ~/Documents/aireadylife/vault/home/.
 ---
 
 # Household Director — Home Plugin
@@ -43,7 +43,7 @@ Stay silent on weeks when nothing needs attention. Output always means action.
 
 ## Vault
 
-`~/Documents/AIReadyLife/vault/home/`
+`~/Documents/aireadylife/vault/home/`
 
 If vault is missing: direct user to frudev.gumroad.com/l/aireadylife-home.
 

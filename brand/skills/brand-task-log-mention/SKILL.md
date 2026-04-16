@@ -10,7 +10,7 @@ description: >
 
 ## What It Does
 
-Accepts a brand mention — surfaced by the user, detected via a Google Alert, or found during a manual social scan — and logs it as a structured record in `~/Documents/AIReadyLife/vault/brand/00_current/`. This log is the source of truth for the monthly mention analysis and brand health score sentiment component.
+Accepts a brand mention — surfaced by the user, detected via a Google Alert, or found during a manual social scan — and logs it as a structured record in `~/Documents/aireadylife/vault/brand/00_current/`. This log is the source of truth for the monthly mention analysis and brand health score sentiment component.
 
 Each record captures: platform where the mention appeared (LinkedIn, Twitter/X, YouTube comments, news article, podcast, blog, forum, other), the author's name and handle, their approximate follower count if known, the date and time of the mention, sentiment classification (positive / neutral / negative based on the tone and intent of the mention), a 2-3 sentence summary of the mention content (what was said, in what context, whether the user was praised, cited, critiqued, or questioned), a link or URL to the original post, and a "responded" status field (default: no).
 
@@ -52,7 +52,7 @@ User-provided information:
 
 ## Output Format
 
-Written record at `~/Documents/AIReadyLife/vault/brand/00_current/{YYYY-MM-DD}-{platform}-{author-slug}.md`:
+Written record at `~/Documents/aireadylife/vault/brand/00_current/{YYYY-MM-DD}-{platform}-{author-slug}.md`:
 ```
 # Mention Record
 
@@ -72,7 +72,7 @@ notes: {optional additional context}
 
 ## Configuration
 
-Required in `~/Documents/AIReadyLife/vault/brand/config.md`:
+Required in `~/Documents/aireadylife/vault/brand/config.md`:
 - `mention_notable_follower_threshold` — follower count above which a mention triggers high-priority flag (default: 10000)
 - `mention_notable_author_types` — list of author types that always trigger high-priority (e.g., ["journalist", "publication", "academic"])
 
@@ -84,5 +84,5 @@ Required in `~/Documents/AIReadyLife/vault/brand/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/brand/config.md`, `~/Documents/AIReadyLife/vault/brand/00_current/` (duplicate check)
-- Writes to: `~/Documents/AIReadyLife/vault/brand/00_current/{YYYY-MM-DD}-{platform}-{author-slug}.md`, `~/Documents/AIReadyLife/vault/brand/open-loops.md` (if high-priority or negative)
+- Reads from: `~/Documents/aireadylife/vault/brand/config.md`, `~/Documents/aireadylife/vault/brand/00_current/` (duplicate check)
+- Writes to: `~/Documents/aireadylife/vault/brand/00_current/{YYYY-MM-DD}-{platform}-{author-slug}.md`, `~/Documents/aireadylife/vault/brand/open-loops.md` (if high-priority or negative)

@@ -39,12 +39,12 @@ Synthesizes all of this into a brief with: headline business health status, top 
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/business/02_briefs/pl-{YYYY-MM}.md` — current or most recent P&L brief
-- `~/Documents/AIReadyLife/vault/business/02_briefs/pipeline-{YYYY-MM}.md` — most recent pipeline brief
-- `~/Documents/AIReadyLife/vault/business/00_current/compliance-checklist.md` — compliance data
-- `~/Documents/AIReadyLife/vault/business/01_prior/` — prior period records for trend comparison
-- `~/Documents/AIReadyLife/vault/business/open-loops.md` — current action items
-- `~/Documents/AIReadyLife/vault/business/config.md` — entity settings
+- `~/Documents/aireadylife/vault/business/02_briefs/pl-{YYYY-MM}.md` — current or most recent P&L brief
+- `~/Documents/aireadylife/vault/business/02_briefs/pipeline-{YYYY-MM}.md` — most recent pipeline brief
+- `~/Documents/aireadylife/vault/business/00_current/compliance-checklist.md` — compliance data
+- `~/Documents/aireadylife/vault/business/01_prior/` — prior period records for trend comparison
+- `~/Documents/aireadylife/vault/business/open-loops.md` — current action items
+- `~/Documents/aireadylife/vault/business/config.md` — entity settings
 
 ## Output Format
 
@@ -75,7 +75,7 @@ Synthesizes all of this into a brief with: headline business health status, top 
 
 ## Configuration
 
-Required in `~/Documents/AIReadyLife/vault/business/config.md`:
+Required in `~/Documents/aireadylife/vault/business/config.md`:
 - `entity_name` — business name for brief header
 
 Optional:
@@ -88,6 +88,6 @@ Optional:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/business/01_prior/` — prior period records
-- Reads from: `~/Documents/AIReadyLife/vault/business/02_briefs/`, `~/Documents/AIReadyLife/vault/business/00_current/`, `~/Documents/AIReadyLife/vault/business/open-loops.md`, `~/Documents/AIReadyLife/vault/business/config.md`
-- Writes to: `~/Documents/AIReadyLife/vault/business/02_briefs/brief-{YYYY-MM}.md` (if saving the brief)
+- Reads from: `~/Documents/aireadylife/vault/business/01_prior/` — prior period records
+- Reads from: `~/Documents/aireadylife/vault/business/02_briefs/`, `~/Documents/aireadylife/vault/business/00_current/`, `~/Documents/aireadylife/vault/business/open-loops.md`, `~/Documents/aireadylife/vault/business/config.md`
+- Writes to: `~/Documents/aireadylife/vault/business/02_briefs/brief-{YYYY-MM}.md` (if saving the brief)

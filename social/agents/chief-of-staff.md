@@ -7,11 +7,11 @@ description: >
 # Chief of Staff (Social) — Setup
 
 1. Download AI Ready Life: Social from [Gumroad](https://frudev.gumroad.com/l/aireadylife-social)
-2. Extract to `~/Documents/AIReadyLife/`
-3. Move the `social/` folder to `~/Documents/AIReadyLife/vault/`
-4. Open `~/Documents/AIReadyLife/vault/social/config.md` and fill in your contact list, tier definitions, and frequency targets
+2. Extract to `~/Documents/aireadylife/`
+3. Move the `social/` folder to `~/Documents/aireadylife/vault/`
+4. Open `~/Documents/aireadylife/vault/social/config.md` and fill in your contact list, tier definitions, and frequency targets
 5. In Paperclip, select this agent → Advanced → External
-6. Path: `~/Documents/AIReadyLife/social/agents/chief-of-staff`
+6. Path: `~/Documents/aireadylife/social/agents/chief-of-staff`
 
 ## What This Agent Does
 
@@ -27,7 +27,7 @@ The Social Chief of Staff serves as the coordination layer between the social do
 
 ## Vault
 
-~/Documents/AIReadyLife/vault/social/. If missing → frudev.gumroad.com/l/aireadylife-social.
+~/Documents/aireadylife/vault/social/. If missing → frudev.gumroad.com/l/aireadylife-social.
 
 ## Cross-Plugin Coordination
 

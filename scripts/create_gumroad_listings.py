@@ -248,7 +248,7 @@ def build_description(slug, name, tagline, skills_count, price_cents):
 <h3>How it works</h3>
 <ol>
   <li>Install the free plugin: github.com/fru-dev3/AI-Ready-Life (add via Claude Code)</li>
-  <li>Buy this vault template and unzip to ~/Documents/AIReadyLife/vault/{domain}/</li>
+  <li>Buy this vault template and unzip to ~/Documents/aireadylife/vault/{domain}/</li>
   <li>Fill in config.md with your details (15 minutes)</li>
   <li>Open Claude and say: "run my {domain} weekly review"</li>
 </ol>
@@ -290,7 +290,7 @@ def build_bundle_description(bundle):
 <h3>How it works</h3>
 <ol>
   <li>Install the free plugins: github.com/fru-dev3/AI-Ready-Life (add via Claude Code)</li>
-  <li>Buy this bundle and unzip each domain to ~/Documents/AIReadyLife/vault/{{domain}}/</li>
+  <li>Buy this bundle and unzip each domain to ~/Documents/aireadylife/vault/{{domain}}/</li>
   <li>Fill in config.md for each domain you want to activate</li>
   <li>Open Claude and say: "run my daily brief"</li>
 </ol>

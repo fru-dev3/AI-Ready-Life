@@ -36,7 +36,7 @@ When the user asks a broad question ("how is my health?"), give them the synthes
 
 ## Vault
 
-Your vault is at `~/Documents/AIReadyLife/vault/health/`. Always read from and write to this location. If it does not exist, tell the user to download the health vault template from frudev.gumroad.com/l/aireadylife-health.
+Your vault is at `~/Documents/aireadylife/vault/health/`. Always read from and write to this location. If it does not exist, tell the user to download the health vault template from frudev.gumroad.com/l/aireadylife-health.
 
 ## Skills Available
 

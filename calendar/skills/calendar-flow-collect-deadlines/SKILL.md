@@ -15,7 +15,7 @@ description: >
 
 ## What It Does
 
-This flow is the deadline aggregation engine. It discovers all installed plugins by scanning ~/Documents/AIReadyLife/vault/ for subdirectories with an open-loops.md file, then reads each file and extracts every item that contains an explicit due date.
+This flow is the deadline aggregation engine. It discovers all installed plugins by scanning ~/Documents/aireadylife/vault/ for subdirectories with an open-loops.md file, then reads each file and extracts every item that contains an explicit due date.
 
 **Date extraction:** The flow parses due dates from two formats. ISO format (YYYY-MM-DD) is the primary format — if an open-loops item contains a date in this format, it is extracted as the due date. Natural language date phrases are also parsed: "by end of April" → last day of April, "this Friday" → the next upcoming Friday, "April 15" → April 15 of the current or next year (whichever is upcoming), "next quarter" → first day of next quarter. If a date phrase is ambiguous or cannot be parsed with confidence, the item is excluded from the deadline list and noted in the result as "unparseable date — excluded."
 
@@ -27,7 +27,7 @@ This flow is the deadline aggregation engine. It discovers all installed plugins
 
 ## Steps
 
-1. Scan ~/Documents/AIReadyLife/vault/ for subdirectories with open-loops.md files
+1. Scan ~/Documents/aireadylife/vault/ for subdirectories with open-loops.md files
 2. For each discovered plugin: read open-loops.md; identify all items with a date field or date phrase
 3. Parse ISO dates; parse natural language date phrases to ISO format
 4. Exclude items with unparseable dates (note in result metadata)
@@ -40,7 +40,7 @@ This flow is the deadline aggregation engine. It discovers all installed plugins
 
 ## Input
 
-- ~/Documents/AIReadyLife/vault/*/open-loops.md (all installed plugins)
+- ~/Documents/aireadylife/vault/*/open-loops.md (all installed plugins)
 - `vault/calendar/01_prior/` — prior period records for trend comparison
 
 ## Output Format
@@ -70,6 +70,6 @@ Optional override via calling op:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/calendar/01_prior/` — prior period records
-- Reads from: ~/Documents/AIReadyLife/vault/*/open-loops.md
-- Writes to: ~/Documents/AIReadyLife/vault/calendar/00_current/ (via calling op, not directly)
+- Reads from: `~/Documents/aireadylife/vault/calendar/01_prior/` — prior period records
+- Reads from: ~/Documents/aireadylife/vault/*/open-loops.md
+- Writes to: ~/Documents/aireadylife/vault/calendar/00_current/ (via calling op, not directly)

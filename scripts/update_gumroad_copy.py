@@ -351,7 +351,7 @@ def build_plugin_description(slug, copy, price):
 <h3>HOW IT WORKS</h3>
 <ol>
   <li>Install the free plugin via Claude Code settings (GitHub: fru-dev3/aireadyu-life)</li>
-  <li>Download this vault template and unzip to <code>~/Documents/AIReadyLife/vault/{slug}/</code></li>
+  <li>Download this vault template and unzip to <code>~/Documents/aireadylife/vault/{slug}/</code></li>
   <li>Fill in <code>config.md</code> with your real data — takes about 15 minutes</li>
   <li>Open Claude Code and say: <em>"run my {d['domain_label'].lower()} weekly review"</em></li>
 </ol>
@@ -399,7 +399,7 @@ def build_bundle_description(slug, copy):
 <h3>HOW IT WORKS</h3>
 <ol>
   <li>Install the free plugins via Claude Code settings (GitHub: fru-dev3/aireadyu-life)</li>
-  <li>Download this bundle and unzip each domain to <code>~/Documents/AIReadyLife/vault/{{domain}}/</code></li>
+  <li>Download this bundle and unzip each domain to <code>~/Documents/aireadylife/vault/{{domain}}/</code></li>
   <li>Fill in <code>config.md</code> for each domain you want to activate — 15 minutes each</li>
   <li>Open Claude Code and say: <em>"run my daily brief"</em></li>
 </ol>

@@ -17,10 +17,10 @@ The `state.md` file in this demo vault shows what a fully populated insurance st
 Move this `insurance/` folder to:
 
 ```
-~/Documents/AIReadyLife/vault/insurance/
+~/Documents/aireadylife/vault/insurance/
 ```
 
-Your full vault path will be: `~/Documents/AIReadyLife/vault/insurance/`
+Your full vault path will be: `~/Documents/aireadylife/vault/insurance/`
 
 ## Step 2 — Fill in config.md
 
@@ -31,7 +31,7 @@ Open `config.md` and fill in your details. You don't need everything on day one 
 In Claude Desktop, open your AI Ready Life project folder:
 
 ```
-~/Documents/AIReadyLife/
+~/Documents/aireadylife/
 ```
 
 If you've installed the Insurance domain from GitHub, it will be available under `domains/insurance/`. The agent reads your vault automatically from the path in Step 1.

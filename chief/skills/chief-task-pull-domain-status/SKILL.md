@@ -37,8 +37,8 @@ If state.md does not exist for the specified domain, the task returns a "not ini
 
 ## Input
 
-- ~/Documents/AIReadyLife/vault/{domain}/state.md
-- ~/Documents/AIReadyLife/vault/{domain}/open-loops.md
+- ~/Documents/aireadylife/vault/{domain}/state.md
+- ~/Documents/aireadylife/vault/{domain}/open-loops.md
 
 ## Output Format
 
@@ -78,5 +78,5 @@ No configuration required. Domain name is passed by calling op.
 
 ## Vault Paths
 
-- Reads from: ~/Documents/AIReadyLife/vault/{domain}/state.md, ~/Documents/AIReadyLife/vault/{domain}/open-loops.md
+- Reads from: ~/Documents/aireadylife/vault/{domain}/state.md, ~/Documents/aireadylife/vault/{domain}/open-loops.md
 - Writes to: none (returns data to calling op)

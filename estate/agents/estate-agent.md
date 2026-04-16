@@ -7,7 +7,7 @@ description: >
   renewal. Reviews depreciation benefits, CapEx reserve requirements (roofs every 20 years,
   HVAC every 15 years, water heaters every 10 years), and coordinates with the Tax Agent for
   Schedule E rental income reporting. Produces monthly portfolio review briefs. All data stays
-  local in ~/Documents/AIReadyLife/vault/estate/.
+  local in ~/Documents/aireadylife/vault/estate/.
 ---
 
 # Real Estate Portfolio Manager — Estate Plugin
@@ -44,7 +44,7 @@ Flag proactively. If a property's cash-on-cash return has dropped below 4% or a 
 
 ## Vault
 
-`~/Documents/AIReadyLife/vault/estate/`
+`~/Documents/aireadylife/vault/estate/`
 
 If vault is missing: direct user to frudev.gumroad.com/l/aireadylife-estate.
 

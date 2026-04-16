@@ -30,7 +30,7 @@ The resulting brief has three sections: today's top stories, ongoing thread upda
 
 1. Confirm vault/intel/ is set up with config.md and at least one active source
 2. Call `aireadylife-intel-flow-build-news-digest` for today's filtered, ranked digest
-3. Read all files in `~/Documents/AIReadyLife/vault/intel/00_current/`; identify active threads (not marked closed)
+3. Read all files in `~/Documents/aireadylife/vault/intel/00_current/`; identify active threads (not marked closed)
 4. For each active thread: check if any stories in today's digest match the thread topic; prepare a one-line status update
 5. For threads with no update today: confirm they are still active (check last-updated date); if last updated >7 days ago with no new developments, flag as potentially closing
 6. Read vault/intel/open-loops.md for any 🔴 priority story flags that are unresolved (user has not read or acted on them yet)
@@ -41,12 +41,12 @@ The resulting brief has three sections: today's top stories, ongoing thread upda
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/intel/config.md` — topics, sources, priorities
-- `~/Documents/AIReadyLife/vault/intel/00_current/source-list.md` — source registry
-- `~/Documents/AIReadyLife/vault/intel/00_current/` — active story threads
-- `~/Documents/AIReadyLife/vault/intel/01_prior/` — prior period records for trend comparison
-- `~/Documents/AIReadyLife/vault/intel/open-loops.md` — outstanding priority flags
-- `~/Documents/AIReadyLife/vault/intel/02_briefs/` — prior briefs for thread context
+- `~/Documents/aireadylife/vault/intel/config.md` — topics, sources, priorities
+- `~/Documents/aireadylife/vault/intel/00_current/source-list.md` — source registry
+- `~/Documents/aireadylife/vault/intel/00_current/` — active story threads
+- `~/Documents/aireadylife/vault/intel/01_prior/` — prior period records for trend comparison
+- `~/Documents/aireadylife/vault/intel/open-loops.md` — outstanding priority flags
+- `~/Documents/aireadylife/vault/intel/02_briefs/` — prior briefs for thread context
 
 ## Output Format
 
@@ -79,12 +79,12 @@ Same as intel-op-daily-briefing. No additional configuration required.
 
 ## Error Handling
 
-- If vault/intel/ is not set up: "Intel vault not found. Purchase at frudev.gumroad.com/l/aireadylife-intel and set up at ~/Documents/AIReadyLife/vault/intel/."
+- If vault/intel/ is not set up: "Intel vault not found. Purchase at frudev.gumroad.com/l/aireadylife-intel and set up at ~/Documents/aireadylife/vault/intel/."
 - If in demo mode (vault-demo/intel/): use demo data; prefix all content with "[DEMO]."
 - If config.md topics are empty: produce digest without topic filtering (all stories pass); warn "No topics configured — brief includes unfiltered content. Set topics_include in config.md."
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/intel/01_prior/` — prior period records
-- Reads from: `~/Documents/AIReadyLife/vault/intel/config.md`, `~/Documents/AIReadyLife/vault/intel/00_current/`, `~/Documents/AIReadyLife/vault/intel/00_current/`, `~/Documents/AIReadyLife/vault/intel/open-loops.md`
-- Writes to: `~/Documents/AIReadyLife/vault/intel/02_briefs/{YYYY-MM-DD}-morning.md`, `~/Documents/AIReadyLife/vault/intel/open-loops.md`
+- Reads from: `~/Documents/aireadylife/vault/intel/01_prior/` — prior period records
+- Reads from: `~/Documents/aireadylife/vault/intel/config.md`, `~/Documents/aireadylife/vault/intel/00_current/`, `~/Documents/aireadylife/vault/intel/00_current/`, `~/Documents/aireadylife/vault/intel/open-loops.md`
+- Writes to: `~/Documents/aireadylife/vault/intel/02_briefs/{YYYY-MM-DD}-morning.md`, `~/Documents/aireadylife/vault/intel/open-loops.md`

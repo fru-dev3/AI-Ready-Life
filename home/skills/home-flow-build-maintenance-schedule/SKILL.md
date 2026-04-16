@@ -53,7 +53,7 @@ The built-in seasonal maintenance calendar covers the following recurring tasks 
 
 ## Steps
 
-1. Read maintenance history records from `~/Documents/AIReadyLife/vault/home/00_current/`
+1. Read maintenance history records from `~/Documents/aireadylife/vault/home/00_current/`
 2. Load the built-in seasonal task calendar (hardcoded in this skill)
 3. For each recurring task, calculate next due date from last-completion date and frequency
 4. Determine current season from today's date (spring: Mar–May, summer: Jun–Aug, fall: Sep–Nov, winter: Dec–Feb)
@@ -68,9 +68,9 @@ The built-in seasonal maintenance calendar covers the following recurring tasks 
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/home/00_current/` — task completion history records
-- `~/Documents/AIReadyLife/vault/home/01_prior/` — prior period records for trend comparison
-- `~/Documents/AIReadyLife/vault/home/config.md` — vendor assignments per task, home-specific details (1-inch vs. 4-inch HVAC filter, whether home has irrigation system, chimney/fireplace)
+- `~/Documents/aireadylife/vault/home/00_current/` — task completion history records
+- `~/Documents/aireadylife/vault/home/01_prior/` — prior period records for trend comparison
+- `~/Documents/aireadylife/vault/home/config.md` — vendor assignments per task, home-specific details (1-inch vs. 4-inch HVAC filter, whether home has irrigation system, chimney/fireplace)
 
 ## Output Format
 
@@ -82,7 +82,7 @@ The built-in seasonal maintenance calendar covers the following recurring tasks 
 
 ## Configuration
 
-Required in `~/Documents/AIReadyLife/vault/home/config.md`:
+Required in `~/Documents/aireadylife/vault/home/config.md`:
 - `hvac_filter_type` — "1-inch" (monthly) or "4-inch" (90-day)
 - `has_irrigation_system` — true/false (triggers sprinkler blow-out task)
 - `has_chimney` — true/false (triggers chimney inspection task)
@@ -96,7 +96,7 @@ Required in `~/Documents/AIReadyLife/vault/home/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/home/01_prior/` — prior period records
-- Reads from: `~/Documents/AIReadyLife/vault/home/00_current/`
-- Reads from: `~/Documents/AIReadyLife/vault/home/config.md`
-- Writes to: `~/Documents/AIReadyLife/vault/home/00_current/YYYY-{season}-schedule.md`
+- Reads from: `~/Documents/aireadylife/vault/home/01_prior/` — prior period records
+- Reads from: `~/Documents/aireadylife/vault/home/00_current/`
+- Reads from: `~/Documents/aireadylife/vault/home/config.md`
+- Writes to: `~/Documents/aireadylife/vault/home/00_current/YYYY-{season}-schedule.md`

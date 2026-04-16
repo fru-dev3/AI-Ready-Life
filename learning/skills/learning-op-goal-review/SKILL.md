@@ -48,9 +48,9 @@ Runs quarterly (January 1, April 1, July 1, October 1) to ensure your learning i
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/learning/00_current/` — current active goals
-- `~/Documents/AIReadyLife/vault/career/00_current/` — career skills gap data (if Career plugin installed)
-- `~/Documents/AIReadyLife/vault/learning/config.md` — daily study target, weekly availability, vision priorities
+- `~/Documents/aireadylife/vault/learning/00_current/` — current active goals
+- `~/Documents/aireadylife/vault/career/00_current/` — career skills gap data (if Career plugin installed)
+- `~/Documents/aireadylife/vault/learning/config.md` — daily study target, weekly availability, vision priorities
 
 ## Output Format
 
@@ -106,5 +106,5 @@ Required in `vault/learning/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/learning/00_current/`, `~/Documents/AIReadyLife/vault/career/00_current/`, `~/Documents/AIReadyLife/vault/learning/config.md`
-- Writes to: `~/Documents/AIReadyLife/vault/learning/00_current/YYYY-QN-learning-plan.md`, `~/Documents/AIReadyLife/vault/learning/01_prior/goals-paused.md`, `~/Documents/AIReadyLife/vault/learning/open-loops.md`
+- Reads from: `~/Documents/aireadylife/vault/learning/00_current/`, `~/Documents/aireadylife/vault/career/00_current/`, `~/Documents/aireadylife/vault/learning/config.md`
+- Writes to: `~/Documents/aireadylife/vault/learning/00_current/YYYY-QN-learning-plan.md`, `~/Documents/aireadylife/vault/learning/01_prior/goals-paused.md`, `~/Documents/aireadylife/vault/learning/open-loops.md`

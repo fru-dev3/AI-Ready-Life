@@ -88,8 +88,8 @@ Required in `vault/tax/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/tax/01_prior/` — prior period records
-- Reads from: `~/Documents/AIReadyLife/vault/tax/00_current/deadline-calendar.md`
-- Reads from: `~/Documents/AIReadyLife/vault/tax/00_current/`
-- Reads from: `~/Documents/AIReadyLife/vault/tax/config.md`
-- Writes to: `~/Documents/AIReadyLife/vault/tax/00_current/YYYY-MM-deadlines.md`
+- Reads from: `~/Documents/aireadylife/vault/tax/01_prior/` — prior period records
+- Reads from: `~/Documents/aireadylife/vault/tax/00_current/deadline-calendar.md`
+- Reads from: `~/Documents/aireadylife/vault/tax/00_current/`
+- Reads from: `~/Documents/aireadylife/vault/tax/config.md`
+- Writes to: `~/Documents/aireadylife/vault/tax/00_current/YYYY-MM-deadlines.md`

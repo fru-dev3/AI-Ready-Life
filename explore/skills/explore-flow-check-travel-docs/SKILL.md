@@ -38,8 +38,8 @@ This flow reads the full travel document inventory from vault/explore/00_current
 
 ## Input
 
-- ~/Documents/AIReadyLife/vault/explore/00_current/ (all travel documents)
-- `~/Documents/AIReadyLife/vault/explore/01_prior/` — prior period records for trend comparison
+- ~/Documents/aireadylife/vault/explore/00_current/ (all travel documents)
+- `~/Documents/aireadylife/vault/explore/01_prior/` — prior period records for trend comparison
 - Trip context from calling op (destination, departure date, return date, travelers) — optional for general check
 
 ## Output Format
@@ -84,6 +84,6 @@ Required in vault/explore/config.md:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/explore/01_prior/` — prior period records
-- Reads from: ~/Documents/AIReadyLife/vault/explore/00_current/, ~/Documents/AIReadyLife/vault/explore/config.md
+- Reads from: `~/Documents/aireadylife/vault/explore/01_prior/` — prior period records
+- Reads from: ~/Documents/aireadylife/vault/explore/00_current/, ~/Documents/aireadylife/vault/explore/config.md
 - Writes to: none (returns data to calling op)

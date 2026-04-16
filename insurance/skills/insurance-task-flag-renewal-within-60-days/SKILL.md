@@ -33,7 +33,7 @@ Called by `aireadylife-insurance-op-renewal-watch` for each policy renewal ident
 ## Input
 
 - Renewal data from calling op
-- `~/Documents/AIReadyLife/vault/insurance/open-loops.md` — for deduplication check
+- `~/Documents/aireadylife/vault/insurance/open-loops.md` — for deduplication check
 
 ## Output Format
 
@@ -80,5 +80,5 @@ No configuration required. All data passed by calling op. Reads/writes `vault/in
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/insurance/open-loops.md`
-- Writes to: `~/Documents/AIReadyLife/vault/insurance/open-loops.md`
+- Reads from: `~/Documents/aireadylife/vault/insurance/open-loops.md`
+- Writes to: `~/Documents/aireadylife/vault/insurance/open-loops.md`

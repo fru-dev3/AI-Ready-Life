@@ -41,24 +41,24 @@ Action items are sorted by urgency across all sections. The user should be able 
 
 ## Steps
 
-1. Read monthly sync output from `~/Documents/AIReadyLife/vault/records/00_current/last-sync.md` to confirm sync has run
-2. Read expiration report from `~/Documents/AIReadyLife/vault/records/00_current/YYYY-MM-expiration-report.md`
-3. Read subscription summary from `~/Documents/AIReadyLife/vault/records/00_current/YYYY-MM-subscription-summary.md`
+1. Read monthly sync output from `~/Documents/aireadylife/vault/records/00_current/last-sync.md` to confirm sync has run
+2. Read expiration report from `~/Documents/aireadylife/vault/records/00_current/YYYY-MM-expiration-report.md`
+3. Read subscription summary from `~/Documents/aireadylife/vault/records/00_current/YYYY-MM-subscription-summary.md`
 4. Read open-loops.md for existing unresolved flags
 5. Check document inventory for gaps against standard checklist
 6. Read legal document review dates; compile review flags
 7. Calculate headline numbers: total subscription spend, documents expiring <90 days, open loops count
 8. Compile all sections into brief structure
-9. Write brief to `~/Documents/AIReadyLife/vault/records/02_briefs/YYYY-MM-records-brief.md`
+9. Write brief to `~/Documents/aireadylife/vault/records/02_briefs/YYYY-MM-records-brief.md`
 10. Call `aireadylife-records-update-open-loops` with any new flags from the brief
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/records/00_current/YYYY-MM-expiration-report.md`
-- `~/Documents/AIReadyLife/vault/records/00_current/YYYY-MM-subscription-summary.md`
-- `~/Documents/AIReadyLife/vault/records/00_current/`
-- `~/Documents/AIReadyLife/vault/records/01_prior/` — prior period records for trend comparison
-- `~/Documents/AIReadyLife/vault/records/open-loops.md`
+- `~/Documents/aireadylife/vault/records/00_current/YYYY-MM-expiration-report.md`
+- `~/Documents/aireadylife/vault/records/00_current/YYYY-MM-subscription-summary.md`
+- `~/Documents/aireadylife/vault/records/00_current/`
+- `~/Documents/aireadylife/vault/records/01_prior/` — prior period records for trend comparison
+- `~/Documents/aireadylife/vault/records/open-loops.md`
 
 ## Output Format
 
@@ -98,7 +98,7 @@ Required: vault populated, config.md complete, monthly sync completed at least o
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/records/01_prior/` — prior period records
-- Reads from: `~/Documents/AIReadyLife/vault/records/00_current/`, `01_legal/`, `02_subscriptions/`, `open-loops.md`
-- Writes to: `~/Documents/AIReadyLife/vault/records/02_briefs/YYYY-MM-records-brief.md`
-- Writes to: `~/Documents/AIReadyLife/vault/records/open-loops.md`
+- Reads from: `~/Documents/aireadylife/vault/records/01_prior/` — prior period records
+- Reads from: `~/Documents/aireadylife/vault/records/00_current/`, `01_legal/`, `02_subscriptions/`, `open-loops.md`
+- Writes to: `~/Documents/aireadylife/vault/records/02_briefs/YYYY-MM-records-brief.md`
+- Writes to: `~/Documents/aireadylife/vault/records/open-loops.md`

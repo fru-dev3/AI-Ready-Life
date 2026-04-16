@@ -8,7 +8,7 @@ description: >
 
 # aireadylife-vision-update-open-loops
 
-**Produces:** Updated ~/Documents/AIReadyLife/vault/vision/open-loops.md with new flags added and resolved items marked complete
+**Produces:** Updated ~/Documents/aireadylife/vault/vision/open-loops.md with new flags added and resolved items marked complete
 
 ## What It Does
 
@@ -38,10 +38,10 @@ This task maintains vault/vision/open-loops.md — the highest-level open-loops 
 ## Input
 
 - New flags from calling op (stalled goals, at-risk OKRs, domain declines)
-- ~/Documents/AIReadyLife/vault/vision/open-loops.md (current state)
-- ~/Documents/AIReadyLife/vault/vision/00_current/milestones.md (for resolution verification)
-- ~/Documents/AIReadyLife/vault/vision/00_current/ (for OKR completion verification)
-- ~/Documents/AIReadyLife/vault/vision/00_current/ (for domain score recovery verification)
+- ~/Documents/aireadylife/vault/vision/open-loops.md (current state)
+- ~/Documents/aireadylife/vault/vision/00_current/milestones.md (for resolution verification)
+- ~/Documents/aireadylife/vault/vision/00_current/ (for OKR completion verification)
+- ~/Documents/aireadylife/vault/vision/00_current/ (for domain score recovery verification)
 
 ## Output Format
 
@@ -81,5 +81,5 @@ Optional in vault/vision/config.md:
 
 ## Vault Paths
 
-- Reads from: ~/Documents/AIReadyLife/vault/vision/open-loops.md, ~/Documents/AIReadyLife/vault/vision/00_current/milestones.md, ~/Documents/AIReadyLife/vault/vision/00_current/, ~/Documents/AIReadyLife/vault/vision/00_current/
-- Writes to: ~/Documents/AIReadyLife/vault/vision/open-loops.md, ~/Documents/AIReadyLife/vault/vision/open-loops-archive.md
+- Reads from: ~/Documents/aireadylife/vault/vision/open-loops.md, ~/Documents/aireadylife/vault/vision/00_current/milestones.md, ~/Documents/aireadylife/vault/vision/00_current/, ~/Documents/aireadylife/vault/vision/00_current/
+- Writes to: ~/Documents/aireadylife/vault/vision/open-loops.md, ~/Documents/aireadylife/vault/vision/open-loops-archive.md

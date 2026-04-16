@@ -44,7 +44,7 @@ Records every job application to the pipeline immediately upon submission — no
 
 - User-provided application details (company, role, source, etc.)
 - Job description text (optional, for tech stack match assessment)
-- `~/Documents/AIReadyLife/vault/career/00_current/skills.md` — for stack match calculation
+- `~/Documents/aireadylife/vault/career/00_current/skills.md` — for stack match calculation
 
 ## Output Format
 
@@ -90,5 +90,5 @@ No configuration required beyond standard vault setup. Pipeline entries stored i
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/career/00_current/skills.md` (optional, for stack match)
-- Writes to: `~/Documents/AIReadyLife/vault/career/00_current/`
+- Reads from: `~/Documents/aireadylife/vault/career/00_current/skills.md` (optional, for stack match)
+- Writes to: `~/Documents/aireadylife/vault/career/00_current/`

@@ -47,7 +47,7 @@ User-provided:
 
 ## Output Format
 
-Entry added to `~/Documents/AIReadyLife/vault/intel/00_current/source-list.md`:
+Entry added to `~/Documents/aireadylife/vault/intel/00_current/source-list.md`:
 ```
 ---
 name: {Source Name}
@@ -65,7 +65,7 @@ notes: {optional notes on why this source was added}
 
 ## Configuration
 
-Required in `~/Documents/AIReadyLife/vault/intel/config.md`:
+Required in `~/Documents/aireadylife/vault/intel/config.md`:
 - `topics_include` — for validating that new source tags map to configured interest topics
 - `source_list_path` — path to source-list.md (default: vault/intel/00_current/source-list.md)
 
@@ -77,5 +77,5 @@ Required in `~/Documents/AIReadyLife/vault/intel/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/intel/00_current/source-list.md`, `~/Documents/AIReadyLife/vault/intel/config.md`
-- Writes to: `~/Documents/AIReadyLife/vault/intel/00_current/source-list.md`
+- Reads from: `~/Documents/aireadylife/vault/intel/00_current/source-list.md`, `~/Documents/aireadylife/vault/intel/config.md`
+- Writes to: `~/Documents/aireadylife/vault/intel/00_current/source-list.md`

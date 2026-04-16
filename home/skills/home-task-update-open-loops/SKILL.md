@@ -10,7 +10,7 @@ description: >
 # aireadylife-home-update-open-loops
 
 **Trigger:** Called by home ops and flows at the end of every run
-**Produces:** Updated `~/Documents/AIReadyLife/vault/home/open-loops.md` with current action items
+**Produces:** Updated `~/Documents/aireadylife/vault/home/open-loops.md` with current action items
 
 ## What It Does
 
@@ -28,26 +28,26 @@ Flags written to open-loops.md fall into the following categories, each with urg
 
 Each flag entry includes: the category, a short title, the full description with financial context (cost estimate, risk if unaddressed), a recommended action with enough detail to execute, and an action-by date. The action-by date is calibrated to the urgency: critical items have today or tomorrow as action-by; medium items have a date within 2 weeks.
 
-On every run, the task evaluates existing open items against current vault data. Resolved conditions: a maintenance item marked completed in the maintenance folder, a budget overage that corrected itself in the next month's data, an insurance renewal that was confirmed paid. Resolved items are moved to `~/Documents/AIReadyLife/vault/home/open-loops-archive.md`.
+On every run, the task evaluates existing open items against current vault data. Resolved conditions: a maintenance item marked completed in the maintenance folder, a budget overage that corrected itself in the next month's data, an insurance renewal that was confirmed paid. Resolved items are moved to `~/Documents/aireadylife/vault/home/open-loops-archive.md`.
 
 The open-loops file format uses consistent section headers so the calendar agent can parse action-by dates and surface them in the weekly calendar brief.
 
 ## Steps
 
 1. Receive flag data from calling op (category, title, description, financial context, action, urgency, action-by date)
-2. Read existing `~/Documents/AIReadyLife/vault/home/open-loops.md`; check for duplicate flags
+2. Read existing `~/Documents/aireadylife/vault/home/open-loops.md`; check for duplicate flags
 3. If duplicate: update timestamp and context rather than creating a duplicate entry
 4. If new: append structured flag entry with all fields
 5. Scan existing open items against current vault data for resolved conditions
-6. Move resolved items to `~/Documents/AIReadyLife/vault/home/open-loops-archive.md` with resolution date and outcome
+6. Move resolved items to `~/Documents/aireadylife/vault/home/open-loops-archive.md` with resolution date and outcome
 7. Return summary to calling op: total open items by urgency
 
 ## Input
 
 - Flag data from calling op
-- `~/Documents/AIReadyLife/vault/home/open-loops.md` — existing flags
-- `~/Documents/AIReadyLife/vault/home/00_current/` — for maintenance flag resolution check
-- `~/Documents/AIReadyLife/vault/home/00_current/` — for budget flag resolution check
+- `~/Documents/aireadylife/vault/home/open-loops.md` — existing flags
+- `~/Documents/aireadylife/vault/home/00_current/` — for maintenance flag resolution check
+- `~/Documents/aireadylife/vault/home/00_current/` — for budget flag resolution check
 
 ## Output Format
 
@@ -74,7 +74,7 @@ No additional configuration required.
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/home/open-loops.md`
-- Reads from: `~/Documents/AIReadyLife/vault/home/00_current/`, `02_expenses/`
-- Writes to: `~/Documents/AIReadyLife/vault/home/open-loops.md`
-- Writes to: `~/Documents/AIReadyLife/vault/home/open-loops-archive.md`
+- Reads from: `~/Documents/aireadylife/vault/home/open-loops.md`
+- Reads from: `~/Documents/aireadylife/vault/home/00_current/`, `02_expenses/`
+- Writes to: `~/Documents/aireadylife/vault/home/open-loops.md`
+- Writes to: `~/Documents/aireadylife/vault/home/open-loops-archive.md`

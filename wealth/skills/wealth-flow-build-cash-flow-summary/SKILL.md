@@ -83,7 +83,7 @@ Required fields in `vault/wealth/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/wealth/01_prior/` — prior period records
-- Reads from: `~/Documents/AIReadyLife/vault/wealth/00_current/YYYY-MM/`
-- Reads from: `~/Documents/AIReadyLife/vault/wealth/config.md`
-- Writes to: `~/Documents/AIReadyLife/vault/wealth/00_current/YYYY-MM-cashflow.md`
+- Reads from: `~/Documents/aireadylife/vault/wealth/01_prior/` — prior period records
+- Reads from: `~/Documents/aireadylife/vault/wealth/00_current/YYYY-MM/`
+- Reads from: `~/Documents/aireadylife/vault/wealth/config.md`
+- Writes to: `~/Documents/aireadylife/vault/wealth/00_current/YYYY-MM-cashflow.md`

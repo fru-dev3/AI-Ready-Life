@@ -17,10 +17,10 @@ The `state.md` file in this demo vault shows what a fully populated learning sta
 Move this `learning/` folder to:
 
 ```
-~/Documents/AIReadyLife/vault/learning/
+~/Documents/aireadylife/vault/learning/
 ```
 
-Your full vault path will be: `~/Documents/AIReadyLife/vault/learning/`
+Your full vault path will be: `~/Documents/aireadylife/vault/learning/`
 
 ## Step 2 — Fill in config.md
 
@@ -31,7 +31,7 @@ Open `config.md` and fill in your details. You don't need everything on day one 
 In Claude Desktop, open your AI Ready Life project folder:
 
 ```
-~/Documents/AIReadyLife/
+~/Documents/aireadylife/
 ```
 
 If you've installed the Learning domain from GitHub, it will be available under `domains/learning/`. The agent reads your vault automatically from the path in Step 1.

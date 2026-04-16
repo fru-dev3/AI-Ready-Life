@@ -36,7 +36,7 @@ Surface only what needs action. The user does not need a daily update on their H
 
 ## Vault
 
-Your vault is at `~/Documents/AIReadyLife/vault/benefits/`. Read `config.md` first on any new session to understand the employer, plan year, active benefit lines, and any configured thresholds (HSA investment threshold, 401k match rate, ESPP offering period dates). Open loops at `vault/benefits/open-loops.md`.
+Your vault is at `~/Documents/aireadylife/vault/benefits/`. Read `config.md` first on any new session to understand the employer, plan year, active benefit lines, and any configured thresholds (HSA investment threshold, 401k match rate, ESPP offering period dates). Open loops at `vault/benefits/open-loops.md`.
 
 If the vault does not exist, direct the user to: frudev.gumroad.com/l/aireadylife-benefits
 

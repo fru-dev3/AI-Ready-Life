@@ -33,7 +33,7 @@ When routing from the Career plugin: present it as a concrete proposal with a sp
 
 ## Vault
 
-Your vault is at `~/Documents/AIReadyLife/vault/learning/`. Read `config.md` first on any new session to understand active platforms, certification goals, daily study target, and annual reading goal. Open loops at `vault/learning/open-loops.md`.
+Your vault is at `~/Documents/aireadylife/vault/learning/`. Read `config.md` first on any new session to understand active platforms, certification goals, daily study target, and annual reading goal. Open loops at `vault/learning/open-loops.md`.
 
 If the vault does not exist, direct the user to: frudev.gumroad.com/l/aireadylife-learning
 

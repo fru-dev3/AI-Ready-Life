@@ -46,9 +46,9 @@ Runs monthly to ensure no insurance policy auto-renews without your awareness an
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/insurance/00_current/` — all active policy records with renewal dates
-- `~/Documents/AIReadyLife/vault/insurance/01_prior/` — prior year premiums for change detection
-- `~/Documents/AIReadyLife/vault/insurance/config.md` — life events and changes since last renewal
+- `~/Documents/aireadylife/vault/insurance/00_current/` — all active policy records with renewal dates
+- `~/Documents/aireadylife/vault/insurance/01_prior/` — prior year premiums for change detection
+- `~/Documents/aireadylife/vault/insurance/config.md` — life events and changes since last renewal
 
 ## Output Format
 
@@ -94,5 +94,5 @@ Required in `vault/insurance/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/insurance/00_current/`, `~/Documents/AIReadyLife/vault/insurance/01_prior/`, `~/Documents/AIReadyLife/vault/insurance/config.md`
-- Writes to: `~/Documents/AIReadyLife/vault/insurance/00_current/renewal-alerts.md`, `~/Documents/AIReadyLife/vault/insurance/open-loops.md`
+- Reads from: `~/Documents/aireadylife/vault/insurance/00_current/`, `~/Documents/aireadylife/vault/insurance/01_prior/`, `~/Documents/aireadylife/vault/insurance/config.md`
+- Writes to: `~/Documents/aireadylife/vault/insurance/00_current/renewal-alerts.md`, `~/Documents/aireadylife/vault/insurance/open-loops.md`

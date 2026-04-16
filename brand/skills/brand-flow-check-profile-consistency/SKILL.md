@@ -9,9 +9,9 @@ description: >
 
 ## What It Does
 
-Reads the master brand profile from `~/Documents/AIReadyLife/vault/brand/00_current/master-profile.md`, which is the canonical reference for all brand identity fields. The master profile defines: display name (exact spelling and capitalization), short bio (100-200 characters), long bio / "About" section (500-2,000 characters depending on platform), headshot filename (the specific image file that should be used), primary website URL, primary handle or username, LinkedIn vanity URL, Twitter/X handle, YouTube channel URL, GitHub username (if applicable), and current tagline or headline.
+Reads the master brand profile from `~/Documents/aireadylife/vault/brand/00_current/master-profile.md`, which is the canonical reference for all brand identity fields. The master profile defines: display name (exact spelling and capitalization), short bio (100-200 characters), long bio / "About" section (500-2,000 characters depending on platform), headshot filename (the specific image file that should be used), primary website URL, primary handle or username, LinkedIn vanity URL, Twitter/X handle, YouTube channel URL, GitHub username (if applicable), and current tagline or headline.
 
-For each configured platform, reads the stored current-state snapshot from `~/Documents/AIReadyLife/vault/brand/00_current/{platform}.md`. These snapshots are updated manually after each profile edit (the profile audit op prompts the user to update them). Performs a field-by-field comparison between each platform snapshot and the master profile.
+For each configured platform, reads the stored current-state snapshot from `~/Documents/aireadylife/vault/brand/00_current/{platform}.md`. These snapshots are updated manually after each profile edit (the profile audit op prompts the user to update them). Performs a field-by-field comparison between each platform snapshot and the master profile.
 
 For each field that differs from master: records the platform, field name, current value on the platform, expected value from master, and a plain-language recommended action. Prioritizes discrepancies by impact: missing or wrong website URL on any platform is 🔴 (direct SEO and traffic impact), outdated headline on LinkedIn is 🔴 (primary professional discovery signal), wrong headshot is 🟡 (brand consistency), minor bio wording variation is 🟢 (low priority). Treats missing platform snapshot files as "unknown — manual verification needed" rather than assuming consistency.
 
@@ -23,8 +23,8 @@ Called internally by `aireadylife-brand-op-profile-audit`. Not invoked directly 
 
 ## Steps
 
-1. Read `~/Documents/AIReadyLife/vault/brand/00_current/master-profile.md` and extract all canonical field values
-2. List all platform snapshot files present in `~/Documents/AIReadyLife/vault/brand/00_current/` (e.g., linkedin.md, twitter.md, youtube.md, github.md, personal-site.md)
+1. Read `~/Documents/aireadylife/vault/brand/00_current/master-profile.md` and extract all canonical field values
+2. List all platform snapshot files present in `~/Documents/aireadylife/vault/brand/00_current/` (e.g., linkedin.md, twitter.md, youtube.md, github.md, personal-site.md)
 3. For each configured platform in config.md: check whether a snapshot file exists; if missing, record as "unknown — manual verification needed"
 4. For each existing platform snapshot: compare each field to master; record any field where the values differ
 5. Assign priority to each discrepancy: website URL or primary handle mismatch = 🔴; headline or bio drift = 🟡 if LinkedIn/YouTube, 🟢 if secondary platform; headshot mismatch = 🟡; cosmetic bio wording variation = 🟢
@@ -34,10 +34,10 @@ Called internally by `aireadylife-brand-op-profile-audit`. Not invoked directly 
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/brand/00_current/master-profile.md` — canonical brand identity fields
-- `~/Documents/AIReadyLife/vault/brand/00_current/{platform}.md` — per-platform current-state snapshots
-- `~/Documents/AIReadyLife/vault/brand/01_prior/` — prior period records for trend comparison
-- `~/Documents/AIReadyLife/vault/brand/config.md` — list of configured platforms, platform-specific override fields
+- `~/Documents/aireadylife/vault/brand/00_current/master-profile.md` — canonical brand identity fields
+- `~/Documents/aireadylife/vault/brand/00_current/{platform}.md` — per-platform current-state snapshots
+- `~/Documents/aireadylife/vault/brand/01_prior/` — prior period records for trend comparison
+- `~/Documents/aireadylife/vault/brand/config.md` — list of configured platforms, platform-specific override fields
 
 ## Output Format
 
@@ -61,21 +61,21 @@ Called internally by `aireadylife-brand-op-profile-audit`. Not invoked directly 
 
 ## Configuration
 
-Required in `~/Documents/AIReadyLife/vault/brand/00_current/master-profile.md`:
+Required in `~/Documents/aireadylife/vault/brand/00_current/master-profile.md`:
 - All canonical fields must be defined. Platform-specific overrides (intentional variations) should be noted with a comment so they are not flagged as discrepancies.
 
-Required in `~/Documents/AIReadyLife/vault/brand/config.md`:
+Required in `~/Documents/aireadylife/vault/brand/config.md`:
 - `platforms` — list of all platforms to check
 - `platform_specific_fields` — fields that are intentionally different per platform (excluded from discrepancy check)
 
 ## Error Handling
 
-- If master-profile.md does not exist: "Master brand profile not found. Create ~/Documents/AIReadyLife/vault/brand/00_current/master-profile.md with your canonical brand identity fields before running a profile audit."
+- If master-profile.md does not exist: "Master brand profile not found. Create ~/Documents/aireadylife/vault/brand/00_current/master-profile.md with your canonical brand identity fields before running a profile audit."
 - If master-profile.md exists but is missing key fields (e.g., no website URL): flag "master profile incomplete — add {field} to enable consistency checking on that field."
 - If no platform snapshots exist at all: "No platform snapshots found. After setting up your master profile, run the profile audit and update each platform snapshot with your current profile state."
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/brand/01_prior/` — prior period records
-- Reads from: `~/Documents/AIReadyLife/vault/brand/00_current/`, `~/Documents/AIReadyLife/vault/brand/config.md`
+- Reads from: `~/Documents/aireadylife/vault/brand/01_prior/` — prior period records
+- Reads from: `~/Documents/aireadylife/vault/brand/00_current/`, `~/Documents/aireadylife/vault/brand/config.md`
 - Writes to: returns data to calling op; no direct file writes

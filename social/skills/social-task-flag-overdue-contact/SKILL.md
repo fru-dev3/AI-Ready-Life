@@ -10,7 +10,7 @@ description: >
 # aireadylife-social-flag-overdue-contact
 
 **Trigger:** Called by social relationship review flows when a contact crosses the overdue threshold
-**Produces:** Overdue relationship flag in ~/Documents/AIReadyLife/vault/social/open-loops.md
+**Produces:** Overdue relationship flag in ~/Documents/aireadylife/vault/social/open-loops.md
 
 ## What It Does
 
@@ -40,8 +40,8 @@ This task fires when the relationship health flow identifies a contact who has c
 ## Input
 
 - Contact data from calling flow (name, tier, last contact date, days since contact)
-- ~/Documents/AIReadyLife/vault/social/00_current/{contact-slug}.md (for reconnect context)
-- ~/Documents/AIReadyLife/vault/social/open-loops.md (for deduplication check)
+- ~/Documents/aireadylife/vault/social/00_current/{contact-slug}.md (for reconnect context)
+- ~/Documents/aireadylife/vault/social/open-loops.md (for deduplication check)
 
 ## Output Format
 
@@ -79,5 +79,5 @@ Optional in vault/social/config.md:
 
 ## Vault Paths
 
-- Reads from: ~/Documents/AIReadyLife/vault/social/00_current/, ~/Documents/AIReadyLife/vault/social/open-loops.md
-- Writes to: ~/Documents/AIReadyLife/vault/social/open-loops.md
+- Reads from: ~/Documents/aireadylife/vault/social/00_current/, ~/Documents/aireadylife/vault/social/open-loops.md
+- Writes to: ~/Documents/aireadylife/vault/social/open-loops.md

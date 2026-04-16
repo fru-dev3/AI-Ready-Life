@@ -11,7 +11,7 @@ description: >
 # aireadylife-social-relationship-review
 
 **Cadence:** Monthly (1st of month)
-**Produces:** Relationship health table and outreach queue at ~/Documents/AIReadyLife/vault/social/00_current/
+**Produces:** Relationship health table and outreach queue at ~/Documents/aireadylife/vault/social/00_current/
 
 ## What It Does
 
@@ -47,10 +47,10 @@ After producing the health table, the op calls `social-flow-build-outreach-queue
 
 ## Input
 
-- ~/Documents/AIReadyLife/vault/social/00_current/contacts.md
-- ~/Documents/AIReadyLife/vault/social/00_current/ (last-contact dates)
-- `~/Documents/AIReadyLife/vault/social/01_prior/` — prior period records for trend comparison
-- ~/Documents/AIReadyLife/vault/social/config.md (tier thresholds)
+- ~/Documents/aireadylife/vault/social/00_current/contacts.md
+- ~/Documents/aireadylife/vault/social/00_current/ (last-contact dates)
+- `~/Documents/aireadylife/vault/social/01_prior/` — prior period records for trend comparison
+- ~/Documents/aireadylife/vault/social/config.md (tier thresholds)
 
 ## Output Format
 
@@ -105,6 +105,6 @@ Required in vault/social/config.md:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/social/01_prior/` — prior period records
-- Reads from: ~/Documents/AIReadyLife/vault/social/00_current/contacts.md, ~/Documents/AIReadyLife/vault/social/00_current/, ~/Documents/AIReadyLife/vault/social/config.md
-- Writes to: ~/Documents/AIReadyLife/vault/social/00_current/health-YYYY-MM.md, ~/Documents/AIReadyLife/vault/social/open-loops.md
+- Reads from: `~/Documents/aireadylife/vault/social/01_prior/` — prior period records
+- Reads from: ~/Documents/aireadylife/vault/social/00_current/contacts.md, ~/Documents/aireadylife/vault/social/00_current/, ~/Documents/aireadylife/vault/social/config.md
+- Writes to: ~/Documents/aireadylife/vault/social/00_current/health-YYYY-MM.md, ~/Documents/aireadylife/vault/social/open-loops.md

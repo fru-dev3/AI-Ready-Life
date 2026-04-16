@@ -8,11 +8,11 @@ description: >
 
 1. Install at least 2 other AI Ready Life plugins first (health, wealth, tax, career, or others)
 2. Download AI Ready Life: Chief from [Gumroad](https://frudev.gumroad.com/l/aireadylife-chief)
-3. Extract to `~/Documents/AIReadyLife/`
-4. Move the `chief/` folder to `~/Documents/AIReadyLife/vault/`
-5. Open `~/Documents/AIReadyLife/vault/chief/config.md` and fill in your plugin list and optional Notion/GDrive credentials
+3. Extract to `~/Documents/aireadylife/`
+4. Move the `chief/` folder to `~/Documents/aireadylife/vault/`
+5. Open `~/Documents/aireadylife/vault/chief/config.md` and fill in your plugin list and optional Notion/GDrive credentials
 6. In Paperclip, select this agent → Advanced → External
-7. Path: `~/Documents/AIReadyLife/chief/agents/chief-of-staff`
+7. Path: `~/Documents/aireadylife/chief/agents/chief-of-staff`
 
 ## What This Agent Does
 
@@ -66,4 +66,4 @@ Chief of Staff is your personal life operating system controller. Every morning,
 
 ## Vault
 
-~/Documents/AIReadyLife/vault/chief/. If missing → frudev.gumroad.com/l/aireadylife-chief.
+~/Documents/aireadylife/vault/chief/. If missing → frudev.gumroad.com/l/aireadylife-chief.

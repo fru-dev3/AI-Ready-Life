@@ -8,7 +8,7 @@ description: >
 
 ## What It Does
 
-Maintains `~/Documents/AIReadyLife/vault/intel/open-loops.md` as the live action list for the intel domain. Unlike the business and brand open-loops files which track problems and compliance items, the intel open-loops file is primarily a reading and action queue — a list of stories that warrant a deeper read, responses to share, routing actions to take, and source management tasks that have been identified but not yet completed.
+Maintains `~/Documents/aireadylife/vault/intel/open-loops.md` as the live action list for the intel domain. Unlike the business and brand open-loops files which track problems and compliance items, the intel open-loops file is primarily a reading and action queue — a list of stories that warrant a deeper read, responses to share, routing actions to take, and source management tasks that have been identified but not yet completed.
 
 Receives flags from calling ops — new priority story alerts, source gap flags from the weekly source scan, follow-up items from topic deep dives, and thread management tasks (threads that should be closed or need a status update). Appends new items with a priority marker (🔴 for stories needing immediate action or today's read, 🟡 for items to address within the week, 🟢 for informational items with no deadline).
 
@@ -37,13 +37,13 @@ Called by `aireadylife-intel-op-daily-briefing`, `aireadylife-intel-op-review-br
 ## Input
 
 - Flag list from calling op
-- `~/Documents/AIReadyLife/vault/intel/open-loops.md` — current file for dedup and resolution check
-- `~/Documents/AIReadyLife/vault/intel/00_current/source-list.md` — to verify if a source gap has been addressed
-- `~/Documents/AIReadyLife/vault/intel/00_current/` — to verify if a thread management item has been completed
+- `~/Documents/aireadylife/vault/intel/open-loops.md` — current file for dedup and resolution check
+- `~/Documents/aireadylife/vault/intel/00_current/source-list.md` — to verify if a source gap has been addressed
+- `~/Documents/aireadylife/vault/intel/00_current/` — to verify if a thread management item has been completed
 
 ## Output Format
 
-`~/Documents/AIReadyLife/vault/intel/open-loops.md`:
+`~/Documents/aireadylife/vault/intel/open-loops.md`:
 ```
 # Intel Open Loops
 Last updated: {YYYY-MM-DD HH:MM}
@@ -70,7 +70,7 @@ Source: intel-op-review-brief | Raised: 2026-04-10
 
 ## Configuration
 
-Optional in `~/Documents/AIReadyLife/vault/intel/config.md`:
+Optional in `~/Documents/aireadylife/vault/intel/config.md`:
 - `open_loops_archive_after_days_priority` — days before a 🔴 that has not been read auto-downgrades to 🟡 (default: 3; breaking news loses urgency quickly)
 - `open_loops_archive_after_days_info` — days before a 🟢 auto-archives (default: 14)
 
@@ -82,5 +82,5 @@ Optional in `~/Documents/AIReadyLife/vault/intel/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/intel/open-loops.md`, `~/Documents/AIReadyLife/vault/intel/00_current/`, `~/Documents/AIReadyLife/vault/intel/00_current/`
-- Writes to: `~/Documents/AIReadyLife/vault/intel/open-loops.md`, `~/Documents/AIReadyLife/vault/intel/open-loops-archive.md`
+- Reads from: `~/Documents/aireadylife/vault/intel/open-loops.md`, `~/Documents/aireadylife/vault/intel/00_current/`, `~/Documents/aireadylife/vault/intel/00_current/`
+- Writes to: `~/Documents/aireadylife/vault/intel/open-loops.md`, `~/Documents/aireadylife/vault/intel/open-loops-archive.md`

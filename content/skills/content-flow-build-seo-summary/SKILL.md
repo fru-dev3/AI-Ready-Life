@@ -10,7 +10,7 @@ description: >
 
 ## What It Does
 
-Reads SEO data from `~/Documents/AIReadyLife/vault/content/00_current/` and produces a monthly SEO intelligence summary with three specific outputs: quick-win opportunities, ranking loss alerts, and content gap flags.
+Reads SEO data from `~/Documents/aireadylife/vault/content/00_current/` and produces a monthly SEO intelligence summary with three specific outputs: quick-win opportunities, ranking loss alerts, and content gap flags.
 
 Quick-win zone (positions 4-15): these keywords already have proven search demand and the user's content has demonstrated enough authority to rank in the top 2 pages. The gap between position 11 and position 3 is often bridgeable with targeted on-page optimization — updating the title tag to include the keyword more naturally, adding the keyword to subheadings, improving internal linking to the page, refreshing the publication date, or adding a table or summary section that could capture a featured snippet. Quick wins are sorted by search volume (highest potential traffic impact first).
 
@@ -24,7 +24,7 @@ Called internally by `aireadylife-content-op-seo-review`. Not invoked directly b
 
 ## Steps
 
-1. Read keyword ranking data from `~/Documents/AIReadyLife/vault/content/00_current/` — current month and prior month keyword snapshots, each with keyword, ranking position, search volume, page URL, CTR
+1. Read keyword ranking data from `~/Documents/aireadylife/vault/content/00_current/` — current month and prior month keyword snapshots, each with keyword, ranking position, search volume, page URL, CTR
 2. Identify all keywords ranking in positions 4-15 (quick-win zone): list with current position, search volume, page URL, and a specific optimization recommendation
 3. Sort quick-win keywords by search volume descending (highest potential click impact first)
 4. Identify all keywords that have dropped more than 3 positions vs prior month; record: keyword, prior position, current position, page URL, estimated traffic impact (click loss)
@@ -36,11 +36,11 @@ Called internally by `aireadylife-content-op-seo-review`. Not invoked directly b
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/content/00_current/{YYYY-MM}-rankings.md` — keyword rankings current month
-- `~/Documents/AIReadyLife/vault/content/00_current/{prior YYYY-MM}-rankings.md` — prior month rankings for comparison
-- `~/Documents/AIReadyLife/vault/content/00_current/keyword-gaps.md` — keyword gap list (optional)
-- `~/Documents/AIReadyLife/vault/content/01_prior/` — prior period records for trend comparison
-- `~/Documents/AIReadyLife/vault/content/config.md` — keyword volume threshold, topic areas
+- `~/Documents/aireadylife/vault/content/00_current/{YYYY-MM}-rankings.md` — keyword rankings current month
+- `~/Documents/aireadylife/vault/content/00_current/{prior YYYY-MM}-rankings.md` — prior month rankings for comparison
+- `~/Documents/aireadylife/vault/content/00_current/keyword-gaps.md` — keyword gap list (optional)
+- `~/Documents/aireadylife/vault/content/01_prior/` — prior period records for trend comparison
+- `~/Documents/aireadylife/vault/content/config.md` — keyword volume threshold, topic areas
 
 ## Output Format
 
@@ -71,7 +71,7 @@ Called internally by `aireadylife-content-op-seo-review`. Not invoked directly b
 
 ## Configuration
 
-Required in `~/Documents/AIReadyLife/vault/content/config.md`:
+Required in `~/Documents/aireadylife/vault/content/config.md`:
 - `seo_topic_areas` — list of topic domains to focus gap analysis on
 - `seo_volume_threshold` — minimum monthly search volume to include in gap analysis (default: 500)
 - `seo_quick_win_positions` — position range for quick-win zone (default: 4-15)
@@ -87,6 +87,6 @@ Required file format in `03_seo/{YYYY-MM}-rankings.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/content/01_prior/` — prior period records
-- Reads from: `~/Documents/AIReadyLife/vault/content/00_current/`, `~/Documents/AIReadyLife/vault/content/config.md`
+- Reads from: `~/Documents/aireadylife/vault/content/01_prior/` — prior period records
+- Reads from: `~/Documents/aireadylife/vault/content/00_current/`, `~/Documents/aireadylife/vault/content/config.md`
 - Writes to: returns data to calling op; no direct file writes

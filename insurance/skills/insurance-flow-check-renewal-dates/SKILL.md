@@ -38,9 +38,9 @@ Called by `aireadylife-insurance-op-renewal-watch` to perform the renewal date s
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/insurance/00_current/` — active policy records with renewal dates and current premiums
-- `~/Documents/AIReadyLife/vault/insurance/01_prior/` — prior year premium data
-- `~/Documents/AIReadyLife/vault/insurance/config.md` — recent life events for coverage-review trigger
+- `~/Documents/aireadylife/vault/insurance/00_current/` — active policy records with renewal dates and current premiums
+- `~/Documents/aireadylife/vault/insurance/01_prior/` — prior year premium data
+- `~/Documents/aireadylife/vault/insurance/config.md` — recent life events for coverage-review trigger
 
 ## Output Format
 
@@ -89,5 +89,5 @@ Life events stored in `vault/insurance/config.md` under `recent_life_events` lis
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/insurance/00_current/`, `~/Documents/AIReadyLife/vault/insurance/01_prior/`, `~/Documents/AIReadyLife/vault/insurance/config.md`
+- Reads from: `~/Documents/aireadylife/vault/insurance/00_current/`, `~/Documents/aireadylife/vault/insurance/01_prior/`, `~/Documents/aireadylife/vault/insurance/config.md`
 - Writes to: None (returns data to calling op)

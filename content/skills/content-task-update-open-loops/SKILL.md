@@ -8,7 +8,7 @@ description: >
 
 ## What It Does
 
-Maintains `~/Documents/AIReadyLife/vault/content/open-loops.md` as the live action list for the content domain. This file aggregates flags from every content op — channel underperformance, revenue declines, SEO drops, publishing gaps, and optimization opportunities — into a single prioritized list that drives the weekly and monthly action agenda.
+Maintains `~/Documents/aireadylife/vault/content/open-loops.md` as the live action list for the content domain. This file aggregates flags from every content op — channel underperformance, revenue declines, SEO drops, publishing gaps, and optimization opportunities — into a single prioritized list that drives the weekly and monthly action agenda.
 
 Receives flags from calling ops and writes them as structured entries with priority marker (🔴 / 🟡 / 🟢), flag type, specific finding, recommended action, and date raised. Before appending new items, scans existing entries for resolvable conditions: a revenue decline flag is resolved if the channel's most recent data shows recovery; an SEO gap flag is resolved if a new piece of content targeting that keyword has been published (check vault/content/00_current/ for new entries); a publishing gap flag is resolved if content has since been published on the flagged platform; a flag explicitly marked resolved by the user. Resolved items are moved to `vault/content/open-loops-archive.md` with a resolution date.
 
@@ -35,13 +35,13 @@ Called at the end of every content op: `aireadylife-content-op-channel-review`, 
 ## Input
 
 - Flag list from calling op
-- `~/Documents/AIReadyLife/vault/content/open-loops.md` — current file
-- `~/Documents/AIReadyLife/vault/content/00_current/` — for publishing resolution check
-- `~/Documents/AIReadyLife/vault/content/00_current/` — for revenue recovery resolution check
+- `~/Documents/aireadylife/vault/content/open-loops.md` — current file
+- `~/Documents/aireadylife/vault/content/00_current/` — for publishing resolution check
+- `~/Documents/aireadylife/vault/content/00_current/` — for revenue recovery resolution check
 
 ## Output Format
 
-`~/Documents/AIReadyLife/vault/content/open-loops.md`:
+`~/Documents/aireadylife/vault/content/open-loops.md`:
 ```
 # Content Open Loops
 Last updated: {YYYY-MM-DD}
@@ -66,7 +66,7 @@ Source: content-op-channel-review | Raised: 2026-03-01
 
 ## Configuration
 
-Optional in `~/Documents/AIReadyLife/vault/content/config.md`:
+Optional in `~/Documents/aireadylife/vault/content/config.md`:
 - `open_loops_archive_after_days` — days before a 🟢 item auto-archives (default: 60)
 
 ## Error Handling
@@ -77,5 +77,5 @@ Optional in `~/Documents/AIReadyLife/vault/content/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/content/open-loops.md`, `~/Documents/AIReadyLife/vault/content/00_current/`, `~/Documents/AIReadyLife/vault/content/00_current/`
-- Writes to: `~/Documents/AIReadyLife/vault/content/open-loops.md`, `~/Documents/AIReadyLife/vault/content/open-loops-archive.md`
+- Reads from: `~/Documents/aireadylife/vault/content/open-loops.md`, `~/Documents/aireadylife/vault/content/00_current/`, `~/Documents/aireadylife/vault/content/00_current/`
+- Writes to: `~/Documents/aireadylife/vault/content/open-loops.md`, `~/Documents/aireadylife/vault/content/open-loops-archive.md`

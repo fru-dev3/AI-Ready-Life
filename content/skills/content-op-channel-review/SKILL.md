@@ -43,11 +43,11 @@ Calls `aireadylife-content-flow-analyze-channel-performance` to run the 90-day b
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/content/00_current/{YYYY-MM}.md` — YouTube analytics
-- `~/Documents/AIReadyLife/vault/content/00_current/{YYYY-MM}.md` — newsletter metrics
-- `~/Documents/AIReadyLife/vault/content/00_current/{YYYY-MM}.md` — Gumroad sales
-- `~/Documents/AIReadyLife/vault/content/01_prior/` — prior period records for trend comparison
-- `~/Documents/AIReadyLife/vault/content/config.md` — channel list, cadence targets, benchmarks
+- `~/Documents/aireadylife/vault/content/00_current/{YYYY-MM}.md` — YouTube analytics
+- `~/Documents/aireadylife/vault/content/00_current/{YYYY-MM}.md` — newsletter metrics
+- `~/Documents/aireadylife/vault/content/00_current/{YYYY-MM}.md` — Gumroad sales
+- `~/Documents/aireadylife/vault/content/01_prior/` — prior period records for trend comparison
+- `~/Documents/aireadylife/vault/content/config.md` — channel list, cadence targets, benchmarks
 
 ## Output Format
 
@@ -87,7 +87,7 @@ Top video: "[Title]" — X,XXX views, X.X% CTR
 
 ## Configuration
 
-Required in `~/Documents/AIReadyLife/vault/content/config.md`:
+Required in `~/Documents/aireadylife/vault/content/config.md`:
 - `channels` — list of active content platforms
 - `youtube_cadence_monthly`, `newsletter_cadence_monthly` — publishing targets
 - `underperformance_threshold_pct` — % below 90-day avg to flag (default: 15)
@@ -99,6 +99,6 @@ Required in `~/Documents/AIReadyLife/vault/content/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/content/01_prior/` — prior period records
-- Reads from: `~/Documents/AIReadyLife/vault/content/00_current/`, `~/Documents/AIReadyLife/vault/content/00_current/`, `~/Documents/AIReadyLife/vault/content/00_current/`, `~/Documents/AIReadyLife/vault/content/config.md`
-- Writes to: `~/Documents/AIReadyLife/vault/content/00_current/channel-review-{YYYY-MM}.md`, `~/Documents/AIReadyLife/vault/content/open-loops.md`
+- Reads from: `~/Documents/aireadylife/vault/content/01_prior/` — prior period records
+- Reads from: `~/Documents/aireadylife/vault/content/00_current/`, `~/Documents/aireadylife/vault/content/00_current/`, `~/Documents/aireadylife/vault/content/00_current/`, `~/Documents/aireadylife/vault/content/config.md`
+- Writes to: `~/Documents/aireadylife/vault/content/00_current/channel-review-{YYYY-MM}.md`, `~/Documents/aireadylife/vault/content/open-loops.md`

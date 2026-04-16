@@ -42,10 +42,10 @@ The op also scans for new first-degree connections added in the last 30 days and
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/career/` — contact log with relationship recency data
-- `~/Documents/AIReadyLife/vault/career/00_current/` — active pipeline for contact overlap check
-- `~/Documents/AIReadyLife/vault/career/01_prior/` — prior period records for trend comparison
-- `~/Documents/AIReadyLife/vault/career/config.md` — target companies and industries for contact prioritization
+- `~/Documents/aireadylife/vault/career/` — contact log with relationship recency data
+- `~/Documents/aireadylife/vault/career/00_current/` — active pipeline for contact overlap check
+- `~/Documents/aireadylife/vault/career/01_prior/` — prior period records for trend comparison
+- `~/Documents/aireadylife/vault/career/config.md` — target companies and industries for contact prioritization
 
 ## Output Format
 
@@ -92,6 +92,6 @@ Contact records should be stored in `vault/career/` with fields: name, current c
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/career/01_prior/` — prior period records
-- Reads from: `~/Documents/AIReadyLife/vault/career/` (contact log), `~/Documents/AIReadyLife/vault/career/00_current/`, `~/Documents/AIReadyLife/vault/career/config.md`
-- Writes to: `~/Documents/AIReadyLife/vault/career/02_briefs/`, `~/Documents/AIReadyLife/vault/career/open-loops.md`, `~/Documents/AIReadyLife/vault/career/` (contact log updates)
+- Reads from: `~/Documents/aireadylife/vault/career/01_prior/` — prior period records
+- Reads from: `~/Documents/aireadylife/vault/career/` (contact log), `~/Documents/aireadylife/vault/career/00_current/`, `~/Documents/aireadylife/vault/career/config.md`
+- Writes to: `~/Documents/aireadylife/vault/career/02_briefs/`, `~/Documents/aireadylife/vault/career/open-loops.md`, `~/Documents/aireadylife/vault/career/` (contact log updates)

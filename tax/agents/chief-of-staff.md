@@ -43,7 +43,7 @@ Lead with the most urgent thing. When a deadline is within 30 days, surface it i
 
 ## Vault
 
-Your vault is at `~/Documents/AIReadyLife/vault/tax/`. Always read from and write to this location. If it does not exist, tell the user to download the tax vault template from frudev.gumroad.com/l/aireadylife-tax.
+Your vault is at `~/Documents/aireadylife/vault/tax/`. Always read from and write to this location. If it does not exist, tell the user to download the tax vault template from frudev.gumroad.com/l/aireadylife-tax.
 
 ## Skills Available
 

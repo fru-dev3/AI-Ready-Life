@@ -11,7 +11,7 @@ description: >
 # aireadylife-explore-document-check
 
 **Cadence:** Quarterly (1st of January, April, July, October)
-**Produces:** Travel document status report at ~/Documents/AIReadyLife/vault/explore/00_current/
+**Produces:** Travel document status report at ~/Documents/aireadylife/vault/explore/00_current/
 
 ## What It Does
 
@@ -48,10 +48,10 @@ The quarterly document check is a dedicated deep audit of every travel document 
 
 ## Input
 
-- ~/Documents/AIReadyLife/vault/explore/00_current/ (all travel documents)
-- ~/Documents/AIReadyLife/vault/explore/00_current/ (planned destinations for forward validation)
-- `~/Documents/AIReadyLife/vault/explore/01_prior/` — prior period records for trend comparison
-- ~/Documents/AIReadyLife/vault/explore/config.md (travelers, citizenship)
+- ~/Documents/aireadylife/vault/explore/00_current/ (all travel documents)
+- ~/Documents/aireadylife/vault/explore/00_current/ (planned destinations for forward validation)
+- `~/Documents/aireadylife/vault/explore/01_prior/` — prior period records for trend comparison
+- ~/Documents/aireadylife/vault/explore/config.md (travelers, citizenship)
 
 ## Output Format
 
@@ -96,6 +96,6 @@ Required in vault/explore/config.md:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/explore/01_prior/` — prior period records
-- Reads from: ~/Documents/AIReadyLife/vault/explore/00_current/, ~/Documents/AIReadyLife/vault/explore/00_current/, ~/Documents/AIReadyLife/vault/explore/config.md
-- Writes to: ~/Documents/AIReadyLife/vault/explore/00_current/document-audit-YYYY-MM-DD.md, ~/Documents/AIReadyLife/vault/explore/open-loops.md
+- Reads from: `~/Documents/aireadylife/vault/explore/01_prior/` — prior period records
+- Reads from: ~/Documents/aireadylife/vault/explore/00_current/, ~/Documents/aireadylife/vault/explore/00_current/, ~/Documents/aireadylife/vault/explore/config.md
+- Writes to: ~/Documents/aireadylife/vault/explore/00_current/document-audit-YYYY-MM-DD.md, ~/Documents/aireadylife/vault/explore/open-loops.md

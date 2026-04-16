@@ -32,7 +32,7 @@ Called by `aireadylife-insurance-op-coverage-audit` for each gap identified in t
 ## Input
 
 - Gap data from calling op (all fields required: type, current, recommended, exposure, severity, premium, action)
-- `~/Documents/AIReadyLife/vault/insurance/open-loops.md` — for deduplication
+- `~/Documents/aireadylife/vault/insurance/open-loops.md` — for deduplication
 
 ## Output Format
 
@@ -71,5 +71,5 @@ No configuration required. Reads and writes `vault/insurance/open-loops.md` only
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/insurance/open-loops.md`
-- Writes to: `~/Documents/AIReadyLife/vault/insurance/open-loops.md`
+- Reads from: `~/Documents/aireadylife/vault/insurance/open-loops.md`
+- Writes to: `~/Documents/aireadylife/vault/insurance/open-loops.md`

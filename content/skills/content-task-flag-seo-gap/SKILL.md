@@ -35,7 +35,7 @@ Called internally by `aireadylife-content-op-seo-review` and `aireadylife-conten
 ## Input
 
 - Flag data from calling op (keyword, positions, volume, action)
-- `~/Documents/AIReadyLife/vault/content/open-loops.md` — for duplicate check
+- `~/Documents/aireadylife/vault/content/open-loops.md` — for duplicate check
 
 ## Output Format
 
@@ -60,7 +60,7 @@ Source: content-op-seo-review | Raised: {date}
 
 ## Configuration
 
-Required in `~/Documents/AIReadyLife/vault/content/config.md`:
+Required in `~/Documents/aireadylife/vault/content/config.md`:
 - `seo_volume_threshold` — minimum volume to flag a gap (default: 500)
 - `seo_drop_threshold_positions` — minimum position drop to flag (default: 3)
 
@@ -72,5 +72,5 @@ Required in `~/Documents/AIReadyLife/vault/content/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/content/open-loops.md`
-- Writes to: `~/Documents/AIReadyLife/vault/content/open-loops.md`
+- Reads from: `~/Documents/aireadylife/vault/content/open-loops.md`
+- Writes to: `~/Documents/aireadylife/vault/content/open-loops.md`

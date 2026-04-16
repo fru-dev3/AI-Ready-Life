@@ -39,7 +39,7 @@ Add to `vault/social/config.md`:
 ```
 linkedin_profile_url: https://www.linkedin.com/in/YOUR-HANDLE
 linkedin_chrome_profile: /Users/YOU/Library/Application Support/Google/Chrome/Default
-linkedin_connections_export_path: ~/Documents/AIReadyLife/vault/social/00_current/linkedin-connections.csv
+linkedin_connections_export_path: ~/Documents/aireadylife/vault/social/00_current/linkedin-connections.csv
 ```
 
 **Chrome profile requirement:** LinkedIn detects headless browsers and bot-like behavior. Must use
@@ -79,6 +79,6 @@ analysis rather than scraping the connections list page.
 
 ## Vault Output
 
-`~/Documents/AIReadyLife/vault/social/00_current/linkedin-connections.csv` — raw connections export
-`~/Documents/AIReadyLife/vault/social/00_current/` — enriched context written to individual contact
+`~/Documents/aireadylife/vault/social/00_current/linkedin-connections.csv` — raw connections export
+`~/Documents/aireadylife/vault/social/00_current/` — enriched context written to individual contact
 files by social-op-monthly-sync and social-flow-build-outreach-queue, not by this skill directly

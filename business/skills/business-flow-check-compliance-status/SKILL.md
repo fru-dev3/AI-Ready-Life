@@ -9,7 +9,7 @@ description: >
 
 ## What It Does
 
-Reads the compliance checklist from `~/Documents/AIReadyLife/vault/business/00_current/compliance-checklist.md`, which is a structured list of every recurring entity obligation with its frequency, last-completed date, and next-due date. Iterates through each item and calculates the days until due (or days overdue if past due) by comparing the next-due date to today's date. Assigns a traffic-light status: 🔴 overdue (past due date with no completion recorded), 🟡 due within 60 days (action required soon), 🟢 current (more than 60 days until due and completion documented).
+Reads the compliance checklist from `~/Documents/aireadylife/vault/business/00_current/compliance-checklist.md`, which is a structured list of every recurring entity obligation with its frequency, last-completed date, and next-due date. Iterates through each item and calculates the days until due (or days overdue if past due) by comparing the next-due date to today's date. Assigns a traffic-light status: 🔴 overdue (past due date with no completion recorded), 🟡 due within 60 days (action required soon), 🟢 current (more than 60 days until due and completion documented).
 
 Coverage includes all standard LLC and S-corp obligations: state annual report filing (deadline varies by state — California April 15, Delaware June 1, Wyoming/Nevada: annual fee, no report), registered agent renewal date and current mailing address confirmation, S-Corp election confirmation (Form 2553 on file), quarterly estimated tax payment dates (April 15, June 15, September 15, January 15), operating agreement review (annual), federal and state payroll tax filings (if applicable), 1099-NEC preparation and filing (February 15 recipient deadline, March 31 IRS deadline), and any state-specific business licenses.
 
@@ -23,7 +23,7 @@ Called internally by `aireadylife-business-op-compliance-review` and `aireadylif
 
 ## Steps
 
-1. Read `~/Documents/AIReadyLife/vault/business/00_current/compliance-checklist.md`; parse each obligation into: name, frequency, last-completed date, next-due date
+1. Read `~/Documents/aireadylife/vault/business/00_current/compliance-checklist.md`; parse each obligation into: name, frequency, last-completed date, next-due date
 2. Calculate days-until-due or days-overdue for each item (next-due date minus today)
 3. Assign status: 🔴 if days-overdue > 0, 🟡 if 1-60 days until due, 🟢 if >60 days until due
 4. For each item marked complete, check vault/business/00_current/ for a matching backing document; flag "verify — no documentation" if none found
@@ -34,10 +34,10 @@ Called internally by `aireadylife-business-op-compliance-review` and `aireadylif
 
 ## Input
 
-- `~/Documents/AIReadyLife/vault/business/00_current/compliance-checklist.md` — master list of all entity obligations with frequencies and dates
-- `~/Documents/AIReadyLife/vault/business/00_current/` — backing documentation files (annual report confirmations, registered agent receipts, etc.)
-- `~/Documents/AIReadyLife/vault/business/01_prior/` — prior period records for trend comparison
-- `~/Documents/AIReadyLife/vault/business/config.md` — entity list, states of formation, registered agent name and address
+- `~/Documents/aireadylife/vault/business/00_current/compliance-checklist.md` — master list of all entity obligations with frequencies and dates
+- `~/Documents/aireadylife/vault/business/00_current/` — backing documentation files (annual report confirmations, registered agent receipts, etc.)
+- `~/Documents/aireadylife/vault/business/01_prior/` — prior period records for trend comparison
+- `~/Documents/aireadylife/vault/business/config.md` — entity list, states of formation, registered agent name and address
 
 ## Output Format
 
@@ -55,10 +55,10 @@ Called internally by `aireadylife-business-op-compliance-review` and `aireadylif
 
 ## Configuration
 
-Required fields in `~/Documents/AIReadyLife/vault/business/00_current/compliance-checklist.md`:
+Required fields in `~/Documents/aireadylife/vault/business/00_current/compliance-checklist.md`:
 - Each row: obligation name, entity name, frequency (annual/quarterly/monthly), last-completed date (YYYY-MM-DD), next-due date (YYYY-MM-DD), documentation filename (optional)
 
-Required in `~/Documents/AIReadyLife/vault/business/config.md`:
+Required in `~/Documents/aireadylife/vault/business/config.md`:
 - `entities` — name, state, entity type, registered agent name and address
 - `contractors_paid_ytd` — whether any contractor was paid $600+ this year (triggers 1099-NEC requirement)
 
@@ -71,6 +71,6 @@ Required in `~/Documents/AIReadyLife/vault/business/config.md`:
 
 ## Vault Paths
 
-- Reads from: `~/Documents/AIReadyLife/vault/business/01_prior/` — prior period records
-- Reads from: `~/Documents/AIReadyLife/vault/business/00_current/compliance-checklist.md`, `~/Documents/AIReadyLife/vault/business/00_current/`, `~/Documents/AIReadyLife/vault/business/config.md`
-- Writes to: called by ops that write to `~/Documents/AIReadyLife/vault/business/02_briefs/`
+- Reads from: `~/Documents/aireadylife/vault/business/01_prior/` — prior period records
+- Reads from: `~/Documents/aireadylife/vault/business/00_current/compliance-checklist.md`, `~/Documents/aireadylife/vault/business/00_current/`, `~/Documents/aireadylife/vault/business/config.md`
+- Writes to: called by ops that write to `~/Documents/aireadylife/vault/business/02_briefs/`
