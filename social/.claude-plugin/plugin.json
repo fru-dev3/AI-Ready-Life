@@ -1,7 +1,7 @@
 {
   "name": "social",
   "description": "Relationship management \u2014 network health, outreach, contacts, social capital",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": {
     "name": "AI-Ready U.",
     "email": "hello@fru.dev"
