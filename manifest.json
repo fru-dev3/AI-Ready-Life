@@ -2,7 +2,6 @@
   "name": "AI Ready Life",
   "slug": "aireadyu-life",
   "version": "1.0.2",
-  "schema": "agentcompanies/v1",
   "license": "MIT",
   "authors": [{ "name": "fru.dev", "url": "https://fru.dev" }],
   "plugins": [
@@ -10,213 +9,178 @@
       "id": "health",
       "name": "AI Ready Life: Health",
       "description": "Personal health management — labs, wellness, medications, appointments, insurance",
-      "agents": 2,
       "skills": 17,
       "price": 2900,
-      "gumroad": "https://frudev.gumroad.com/l/aireadylife-health",
-      "mcp": "@aireadylife/health-plugin"
+      "gumroad": "https://frudev.gumroad.com/l/aireadylife-health"
     },
     {
       "id": "wealth",
       "name": "AI Ready Life: Wealth",
       "description": "Wealth management — net worth, investments, cash flow, estate planning",
-      "agents": 2,
       "skills": 17,
       "price": 2900,
-      "gumroad": "https://frudev.gumroad.com/l/aireadylife-wealth",
-      "mcp": "@aireadylife/wealth-plugin"
+      "gumroad": "https://frudev.gumroad.com/l/aireadylife-wealth"
     },
     {
       "id": "tax",
       "name": "AI Ready Life: Tax",
       "description": "Tax planning — deadlines, estimates, deductions, entity compliance, filing",
-      "agents": 2,
       "skills": 17,
       "price": 2900,
-      "gumroad": "https://frudev.gumroad.com/l/aireadylife-tax",
-      "mcp": "@aireadylife/tax-plugin"
+      "gumroad": "https://frudev.gumroad.com/l/aireadylife-tax"
     },
     {
       "id": "career",
       "name": "AI Ready Life: Career",
       "description": "Career management — compensation benchmarks, job search, market scanning, skills gaps",
-      "agents": 2,
       "skills": 17,
       "price": 2900,
-      "gumroad": "https://frudev.gumroad.com/l/aireadylife-career",
-      "mcp": "@aireadylife/career-plugin"
+      "gumroad": "https://frudev.gumroad.com/l/aireadylife-career"
     },
     {
       "id": "benefits",
-      "name": "AI Ready Life: Chiefefits",
+      "name": "AI Ready Life: Benefits",
       "description": "Benefits management — open enrollment, HSA, 401k, equity, ESPP",
-      "agents": 2,
       "skills": 16,
       "price": 2900,
-      "gumroad": "https://frudev.gumroad.com/l/aireadylife-chiefefits",
-      "mcp": "@aireadylife/benefits-plugin"
+      "gumroad": "https://frudev.gumroad.com/l/aireadylife-benefits"
     },
     {
       "id": "brand",
       "name": "AI Ready Life: Brand",
       "description": "Personal brand management — online presence, reputation, content performance",
-      "agents": 2,
       "skills": 15,
       "price": 2900,
-      "gumroad": "https://frudev.gumroad.com/l/aireadylife-brand",
-      "mcp": "@aireadylife/brand-plugin"
+      "gumroad": "https://frudev.gumroad.com/l/aireadylife-brand"
     },
     {
       "id": "business",
       "name": "AI Ready Life: Business",
       "description": "Business management — P&L, invoicing, contractors, entity compliance",
-      "agents": 2,
       "skills": 13,
       "price": 2900,
-      "gumroad": "https://frudev.gumroad.com/l/aireadylife-business",
-      "mcp": "@aireadylife/business-plugin"
+      "gumroad": "https://frudev.gumroad.com/l/aireadylife-business"
     },
     {
       "id": "chief",
-      "name": "AI Ready Life: Personal",
-      "description": "Personal admin — inbox management, tasks, priorities, personal assistant",
-      "agents": 2,
+      "name": "AI Ready Life: Chief",
+      "description": "Cross-domain daily brief and life overview — orchestrates all other domains",
       "skills": 12,
       "price": 2900,
-      "gumroad": "https://frudev.gumroad.com/l/aireadylife-chief",
-      "mcp": "@aireadylife/chief-plugin"
+      "gumroad": "https://frudev.gumroad.com/l/aireadylife-chief"
     },
     {
       "id": "calendar",
       "name": "AI Ready Life: Calendar",
-      "description": "Calendar intelligence — event context, deadlines, scheduling, time blocking",
-      "agents": 2,
+      "description": "Calendar intelligence — deadlines, scheduling, focus time, agenda",
       "skills": 13,
       "price": 2900,
-      "gumroad": "https://frudev.gumroad.com/l/aireadylife-calendar",
-      "mcp": "@aireadylife/calendar-plugin"
+      "gumroad": "https://frudev.gumroad.com/l/aireadylife-calendar"
     },
     {
       "id": "content",
       "name": "AI Ready Life: Content",
       "description": "Content management — publishing pipeline, analytics, audience growth",
-      "agents": 2,
       "skills": 13,
       "price": 2900,
-      "gumroad": "https://frudev.gumroad.com/l/aireadylife-content",
-      "mcp": "@aireadylife/content-plugin"
+      "gumroad": "https://frudev.gumroad.com/l/aireadylife-content"
     },
     {
       "id": "estate",
       "name": "AI Ready Life: Estate",
       "description": "Property management — rentals, leases, maintenance, cash flow, occupancy",
-      "agents": 2,
       "skills": 13,
       "price": 2900,
-      "gumroad": "https://frudev.gumroad.com/l/aireadylife-estate",
-      "mcp": "@aireadylife/estate-plugin"
+      "gumroad": "https://frudev.gumroad.com/l/aireadylife-estate"
     },
     {
       "id": "explore",
-      "name": "AI Ready Life: Travel",
+      "name": "AI Ready Life: Explore",
       "description": "Travel management — trip planning, visa tracking, loyalty rewards, itineraries",
-      "agents": 2,
       "skills": 11,
       "price": 1900,
-      "gumroad": "https://frudev.gumroad.com/l/aireadylife-explore",
-      "mcp": "@aireadylife/explore-plugin"
+      "gumroad": "https://frudev.gumroad.com/l/aireadylife-explore"
     },
     {
       "id": "home",
       "name": "AI Ready Life: Home",
-      "description": "Home management — maintenance tracking, contractor reviews, home value",
-      "agents": 2,
+      "description": "Home management — maintenance tracking, expenses, seasonal tasks",
       "skills": 12,
       "price": 1900,
-      "gumroad": "https://frudev.gumroad.com/l/aireadylife-home",
-      "mcp": "@aireadylife/home-plugin"
+      "gumroad": "https://frudev.gumroad.com/l/aireadylife-home"
     },
     {
       "id": "insurance",
       "name": "AI Ready Life: Insurance",
       "description": "Insurance management — policy coverage, renewals, claims, gap analysis",
-      "agents": 2,
       "skills": 12,
       "price": 2900,
-      "gumroad": "https://frudev.gumroad.com/l/aireadylife-insurance",
-      "mcp": "@aireadylife/insurance-plugin"
+      "gumroad": "https://frudev.gumroad.com/l/aireadylife-insurance"
     },
     {
       "id": "intel",
-      "name": "AI Ready Life: Intelligence",
+      "name": "AI Ready Life: Intel",
       "description": "News and market intelligence — monitoring, research, signal filtering",
-      "agents": 2,
       "skills": 11,
       "price": 1900,
-      "gumroad": "https://frudev.gumroad.com/l/aireadylife-intel",
-      "mcp": "@aireadylife/intel-plugin"
+      "gumroad": "https://frudev.gumroad.com/l/aireadylife-intel"
     },
     {
       "id": "learning",
       "name": "AI Ready Life: Learning",
       "description": "Learning management — courses, reading, skill development, certifications",
-      "agents": 2,
       "skills": 11,
       "price": 1900,
-      "gumroad": "https://frudev.gumroad.com/l/aireadylife-learning",
-      "mcp": "@aireadylife/learning-plugin"
+      "gumroad": "https://frudev.gumroad.com/l/aireadylife-learning"
     },
     {
       "id": "real-estate",
       "name": "AI Ready Life: Real Estate",
       "description": "Real estate — market data, mortgage tracking, home search, investment analysis",
-      "agents": 2,
       "skills": 11,
       "price": 1900,
-      "gumroad": "https://frudev.gumroad.com/l/aireadylife-real-estate",
-      "mcp": "@aireadylife/real-estate-plugin"
+      "gumroad": "https://frudev.gumroad.com/l/aireadylife-real-estate"
     },
     {
       "id": "records",
       "name": "AI Ready Life: Records",
-      "description": "Records management — document vault, password health, data organization",
-      "agents": 2,
+      "description": "Records management — document vault, subscriptions, IDs, legal documents",
       "skills": 11,
       "price": 1900,
-      "gumroad": "https://frudev.gumroad.com/l/aireadylife-records",
-      "mcp": "@aireadylife/records-plugin"
+      "gumroad": "https://frudev.gumroad.com/l/aireadylife-records"
     },
     {
       "id": "social",
       "name": "AI Ready Life: Social",
-      "description": "Relationship management — network health, outreach, contacts, social capital",
-      "agents": 2,
+      "description": "Relationship management — network health, outreach, contacts, birthdays",
       "skills": 11,
       "price": 1900,
-      "gumroad": "https://frudev.gumroad.com/l/aireadylife-social",
-      "mcp": "@aireadylife/social-plugin"
+      "gumroad": "https://frudev.gumroad.com/l/aireadylife-social"
     },
     {
       "id": "vision",
       "name": "AI Ready Life: Vision",
       "description": "Goals and life planning — OKRs, annual review, vision tracking, milestones",
-      "agents": 2,
       "skills": 12,
       "price": 2900,
-      "gumroad": "https://frudev.gumroad.com/l/aireadylife-vision",
-      "mcp": "@aireadylife/vision-plugin"
+      "gumroad": "https://frudev.gumroad.com/l/aireadylife-vision"
     }
   ],
   "bundles": [
     {
+      "id": "core",
+      "name": "AI Ready Life: Core",
+      "description": "Health, wealth, tax, and career — the four essential life domains",
+      "price": 7900,
+      "gumroad": "https://frudev.gumroad.com/l/aireadylife-core",
+      "includes": ["health", "wealth", "tax", "career"]
+    },
+    {
       "id": "complete",
       "name": "AI Ready Life: Complete",
-      "description": "All 20 domain plugins — 21 agents, 260+ skills, one vault",
-      "agents": 21,
-      "skills": 260,
+      "description": "All 20 domain plugins — one vault, every life domain",
       "price": 19900,
       "gumroad": "https://frudev.gumroad.com/l/aireadylife-complete",
-      "mcp": "@aireadylife/complete-plugin",
       "includes": "all"
     }
   ]
