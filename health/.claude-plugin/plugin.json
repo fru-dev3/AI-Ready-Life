@@ -1,7 +1,7 @@
 {
   "name": "health",
   "description": "Personal health management \u2014 labs, wellness, medications, appointments, insurance",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": {
     "name": "AI-Ready U.",
     "email": "hello@fru.dev"

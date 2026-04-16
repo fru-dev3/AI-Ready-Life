@@ -1,7 +1,7 @@
 {
   "name": "AI Ready Life",
   "slug": "aireadyu-life",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "schema": "agentcompanies/v1",
   "license": "MIT",
   "authors": [{ "name": "fru.dev", "url": "https://fru.dev" }],

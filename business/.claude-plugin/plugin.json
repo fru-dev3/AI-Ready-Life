@@ -1,7 +1,7 @@
 {
   "name": "business",
   "description": "Business management \u2014 P&L, invoicing, contractors, entity compliance",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": {
     "name": "AI-Ready U.",
     "email": "hello@fru.dev"
