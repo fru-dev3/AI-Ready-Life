@@ -2,32 +2,34 @@
 
 **20 AI plugins. Every life domain. Private. On your machine.**
 
+Built by [fru.dev](https://fru.dev)
+
 AI Ready Life packages your most important life domains as installable Claude Desktop plugins — each one a self-contained expert with its own skills, vault, and AI integration. Start with one domain. Add more as needed.
 
 ## Plugins
 
 | Plugin | Domain |
 |--------|--------|
-| `health` | Labs, medications, preventive care, wearables |
-| `wealth` | Net worth, investments, debt, cash flow |
-| `tax` | Tax planning, filing, deadlines, deductions |
-| `career` | Compensation, market data, job search, skills |
-| `benefits` | 401k, HSA, employer benefits, enrollment |
-| `brand` | Personal brand, social analytics, content |
-| `business` | Revenue, expenses, compliance, contracts |
-| `calendar` | Deadlines, focus time, agenda |
-| `chief` | Cross-domain daily brief and life overview |
-| `content` | Content pipeline, SEO, revenue tracking |
-| `estate` | Rental properties, tenants, cash flow |
-| `explore` | Travel, trips, documents, wishlist |
-| `home` | Maintenance, expenses, seasonal tasks |
-| `insurance` | Policies, claims, renewals, coverage gaps |
-| `intel` | News sources, topics, research briefs |
-| `learning` | Courses, books, goals, progress |
-| `real-estate` | Market data, listings, buy vs. rent |
-| `records` | Identity documents, legal, subscriptions |
-| `social` | Contacts, relationships, birthdays, outreach |
-| `vision` | Goals, OKRs, quarterly planning, scorecard |
+| [`health`](https://frudev.gumroad.com/l/aireadylife-health) | Labs, medications, preventive care, wearables |
+| [`wealth`](https://frudev.gumroad.com/l/aireadylife-wealth) | Net worth, investments, debt, cash flow |
+| [`tax`](https://frudev.gumroad.com/l/aireadylife-tax) | Tax planning, filing, deadlines, deductions |
+| [`career`](https://frudev.gumroad.com/l/aireadylife-career) | Compensation, market data, job search, skills |
+| [`benefits`](https://frudev.gumroad.com/l/aireadylife-benefits) | 401k, HSA, employer benefits, enrollment |
+| [`brand`](https://frudev.gumroad.com/l/aireadylife-brand) | Personal brand, social analytics, content |
+| [`business`](https://frudev.gumroad.com/l/aireadylife-business) | Revenue, expenses, compliance, contracts |
+| [`calendar`](https://frudev.gumroad.com/l/aireadylife-calendar) | Deadlines, focus time, agenda |
+| [`chief`](https://frudev.gumroad.com/l/aireadylife-chief) | Cross-domain daily brief and life overview |
+| [`content`](https://frudev.gumroad.com/l/aireadylife-content) | Content pipeline, SEO, revenue tracking |
+| [`estate`](https://frudev.gumroad.com/l/aireadylife-estate) | Rental properties, tenants, cash flow |
+| [`explore`](https://frudev.gumroad.com/l/aireadylife-explore) | Travel, trips, documents, wishlist |
+| [`home`](https://frudev.gumroad.com/l/aireadylife-home) | Maintenance, expenses, seasonal tasks |
+| [`insurance`](https://frudev.gumroad.com/l/aireadylife-insurance) | Policies, claims, renewals, coverage gaps |
+| [`intel`](https://frudev.gumroad.com/l/aireadylife-intel) | News sources, topics, research briefs |
+| [`learning`](https://frudev.gumroad.com/l/aireadylife-learning) | Courses, books, goals, progress |
+| [`real-estate`](https://frudev.gumroad.com/l/aireadylife-real-estate) | Market data, listings, buy vs. rent |
+| [`records`](https://frudev.gumroad.com/l/aireadylife-records) | Identity documents, legal, subscriptions |
+| [`social`](https://frudev.gumroad.com/l/aireadylife-social) | Contacts, relationships, birthdays, outreach |
+| [`vision`](https://frudev.gumroad.com/l/aireadylife-vision) | Goals, OKRs, quarterly planning, scorecard |
 
 ## Bundles
 
