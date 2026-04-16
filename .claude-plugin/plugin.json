@@ -1,0 +1,11 @@
+{
+  "name": "AI Ready Life",
+  "description": "20 AI plugins for personal life management — health, wealth, tax, career, and 16 more domains",
+  "version": "1.0.2",
+  "author": {
+    "name": "fru.dev",
+    "email": "hello@fru.dev"
+  },
+  "license": "MIT",
+  "homepage": "https://aireadyu.dev"
+}
