@@ -1,0 +1,11 @@
+{
+  "name": "complete",
+  "description": "AI Ready Life Complete — all 20 life domains in one plugin",
+  "version": "1.0.2",
+  "author": {
+    "name": "AI-Ready U.",
+    "email": "hello@fru.dev"
+  },
+  "license": "MIT",
+  "homepage": "https://aireadyu.dev"
+}

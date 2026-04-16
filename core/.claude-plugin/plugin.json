@@ -1,0 +1,11 @@
+{
+  "name": "core",
+  "description": "AI Ready Life Core — health, wealth, tax, and career in one plugin",
+  "version": "1.0.2",
+  "author": {
+    "name": "AI-Ready U.",
+    "email": "hello@fru.dev"
+  },
+  "license": "MIT",
+  "homepage": "https://aireadyu.dev"
+}
