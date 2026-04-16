@@ -20,26 +20,25 @@ If `~/Documents/AIReadyLife/vault/business/` does not exist or is empty:
 4. Open `~/Documents/AIReadyLife/vault/business/config.md` and fill in your details
 5. Return here and run any skill — it will find your vault automatically
 
-The vault includes the full folder structure, a config template, a Quick Start guide, and a prompt reference for every skill in this plugin.
-
 ## Vault Structure
 
 ```
 ~/Documents/AIReadyLife/vault/business/
-├── 01_revenue/
-├── 02_expenses/
-├── 03_compliance/
-├── 04_payroll/
-├── 05_contracts/
-└── config.md
-└── open-loops.md
+├── config.md          — your profile and settings
+├── open-loops.md      — active flags and open items
+├── 00_current/        — active documents and current state
+├── 01_prior/          — prior period records
+└── 02_briefs/         — generated briefs and reports
 ```
 
-- `01_revenue/` — Invoices, payment records, revenue by stream
-- `02_expenses/` — Receipts and categorized expense reports
-- `03_compliance/` — Annual reports, registered agent, EIN docs, operating agreements
-- `04_payroll/` — Owner distributions, contractor payments, 1099 preparation
-- `05_contracts/` — Active contracts, SOWs, NDAs
+## Skills
+
+Skills are organized under `domains/business/skills/`:
+
+- `00_ops/` — recurring operations (reviews, syncs, watches)
+- `01_flows/` — data flows that build summaries and reports
+- `02_tasks/` — atomic write tasks (flag, log, update)
+- `apps/` — app integrations
 
 ## Checking Vault Status
 
@@ -47,7 +46,3 @@ Before running any skill, confirm the vault exists:
 - Check that `~/Documents/AIReadyLife/vault/business/config.md` is present and filled in
 - If it is missing, direct the user to purchase the vault template above
 - If it exists but config fields are blank, prompt the user to complete setup before proceeding
-
-## Coverage
-
-This plugin manages your P&L, invoicing, compliance, and entity management.

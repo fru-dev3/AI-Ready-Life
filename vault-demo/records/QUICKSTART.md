@@ -1,46 +1,56 @@
 # AI Ready Life: Records — Quickstart
 
-Welcome to your Records vault. Expiring passports, lapsed subscriptions, lost legal documents — these are the kinds of problems that are completely avoidable with a simple system. This vault is that system.
+Welcome to your Records vault. This is where your track your documents, IDs, and subscriptions.
 
 ## What's in this vault
 
-- **config.md** — your records profile: government IDs, subscriptions, legal document locations, password manager
-- **state.md** — demo data (Alex Rivera) showing a complete records picture with expiry dates and subscription list
-- **PROMPTS.md** — 25+ example prompts to get you started
-- **00_current/** — active document status and expiry alerts
-- **01_ids/** — government ID records and expiry tracking
-- **02_subscriptions/** — subscription inventory
-- **03_legal/** — legal document index (locations, not copies)
-- **04_archive/** — expired or cancelled items
+- **config.md** — your records profile and settings
+- **open-loops.md** — active flags and open items the agent is tracking
+- **00_current/** — active documents and your current records state
+- **01_prior/** — prior period records, organized by date
+- **02_briefs/** — briefs and reports the agent generates
 
-## Step 1 — Fill in config.md
+The `state.md` file in this demo vault shows what a fully populated records state looks like (Alex Rivera demo data).
 
-Open `config.md` and fill in your passport expiry, driver's license expiry and state, Global Entry / TSA PreCheck number and expiry, and your subscription list. You don't need to add every subscription on day one — add the ones that come to mind and add more as you remember them.
+## Step 1 — Place your vault
 
-## Step 2 — Install the plugin
-
-In Claude Code, add the Records plugin from GitHub:
+Move this `records/` folder to:
 
 ```
-/install github.com/fru-dev3/aireadyu-life/records
+~/Documents/AIReadyLife/vault/records/
 ```
 
-## Step 3 — Run your first skill
+Your full vault path will be: `~/Documents/AIReadyLife/vault/records/`
 
-Open Claude and try one of these:
+## Step 2 — Fill in config.md
 
-- "Run my document audit"
-- "What IDs are expiring in the next 12 months?"
-- "Review my subscriptions"
-- "Check my expiring documents"
+Open `config.md` and fill in your details. You don't need everything on day one — fill what you know and leave the rest blank. The agent will tell you what's missing when you run your first skill.
 
-Claude will review your records state and flag anything expiring, any subscriptions that look redundant, and any legal documents that might need updating.
+## Step 3 — Add the domain to Claude Desktop
+
+In Claude Desktop, open your AI Ready Life project folder:
+
+```
+~/Documents/AIReadyLife/
+```
+
+If you've installed the Records domain from GitHub, it will be available under `domains/records/`. The agent reads your vault automatically from the path in Step 1.
+
+## Step 4 — Run your first skill
+
+Open Claude and try:
+
+- "Give me a records brief"
+- "What's my records status?"
+- "Run my records review"
+
+Claude will read your config and vault, then give you a personalized records summary.
 
 ## Tips
 
-- **Passport needs 6 months of validity.** Set the expiry date and Claude will flag when you need to renew based on your travel plans.
-- **Subscription creep is real.** Most people are paying for 2-3 services they don't actively use. Claude will surface them.
-- **Legal document locations matter.** You don't store the will itself here — just where it lives. That's enough for Claude to flag if it's outdated.
-- **Global Entry renewal takes months.** Claude will remind you to apply early.
+- **Start with config.md.** The more complete it is, the smarter your agent.
+- **00_current/ is your working space.** Drop documents, notes, and exports here.
+- **02_briefs/ fills up automatically.** The agent writes reports here after each review.
+- **open-loops.md tracks what needs action.** The agent flags items here and clears them when resolved.
 
-Records are boring until they matter. Keep them current and they never become urgent.
+Your Records AI is only as smart as the data you give it. Start simple, add more over time.

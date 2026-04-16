@@ -1,46 +1,56 @@
 # AI Ready Life: Content — Quickstart
 
-Welcome to your Content vault. If you publish on YouTube, have a newsletter, or sell digital products, this vault tracks your analytics, revenue, SEO performance, and publishing schedule — so you know what's working and what to do next.
+Welcome to your Content vault. This is where your track your channel performance, revenue, and publishing cadence.
 
 ## What's in this vault
 
-- **config.md** — your content profile: YouTube channel, newsletter platform, Gumroad, content cadence, monetization
-- **state.md** — demo data (Alex Rivera) showing a live content business with YouTube and newsletter data
-- **PROMPTS.md** — 30+ example prompts to get you started
-- **00_current/** — active metrics and current month revenue
-- **01_analytics/** — analytics snapshots by month
-- **02_schedule/** — content calendar and publishing schedule
-- **03_archive/** — past analytics and completed campaigns
-- **04_briefs/** — weekly and monthly content briefs the AI generates
+- **config.md** — your content profile and settings
+- **open-loops.md** — active flags and open items the agent is tracking
+- **00_current/** — active documents and your current content state
+- **01_prior/** — prior period records, organized by date
+- **02_briefs/** — briefs and reports the agent generates
 
-## Step 1 — Fill in config.md
+The `state.md` file in this demo vault shows what a fully populated content state looks like (Alex Rivera demo data).
 
-Open `config.md` and fill in your YouTube channel ID, newsletter platform and subscriber count, Gumroad URL, and content cadence. Add your primary niche — the more specific you are, the better the SEO and audience growth advice.
+## Step 1 — Place your vault
 
-## Step 2 — Install the plugin
-
-In Claude Code, add the Content plugin from GitHub:
+Move this `content/` folder to:
 
 ```
-/install github.com/fru-dev3/aireadyu-life/content
+~/Documents/AIReadyLife/vault/content/
 ```
 
-## Step 3 — Run your first skill
+Your full vault path will be: `~/Documents/AIReadyLife/vault/content/`
 
-Open Claude and try one of these:
+## Step 2 — Fill in config.md
 
-- "Run my content weekly review"
-- "Build my revenue summary for this month"
-- "What are my SEO gaps?"
-- "How is my channel performing?"
+Open `config.md` and fill in your details. You don't need everything on day one — fill what you know and leave the rest blank. The agent will tell you what's missing when you run your first skill.
 
-Claude will analyze your content state and give you a brief with performance highlights and recommendations.
+## Step 3 — Add the domain to Claude Desktop
+
+In Claude Desktop, open your AI Ready Life project folder:
+
+```
+~/Documents/AIReadyLife/
+```
+
+If you've installed the Content domain from GitHub, it will be available under `domains/content/`. The agent reads your vault automatically from the path in Step 1.
+
+## Step 4 — Run your first skill
+
+Open Claude and try:
+
+- "Give me a content brief"
+- "What's my content status?"
+- "Run my content review"
+
+Claude will read your config and vault, then give you a personalized content summary.
 
 ## Tips
 
-- **Update subscriber counts monthly.** Growth trends are only visible when you update the numbers regularly.
-- **Log revenue as it comes in.** Ask Claude to "log YouTube revenue" after each AdSense deposit.
-- **SEO review is proactive.** Claude will flag keyword opportunities you're missing based on your niche.
-- **Content cadence is a commitment device.** Set it in config.md and Claude will flag when you're behind.
+- **Start with config.md.** The more complete it is, the smarter your agent.
+- **00_current/ is your working space.** Drop documents, notes, and exports here.
+- **02_briefs/ fills up automatically.** The agent writes reports here after each review.
+- **open-loops.md tracks what needs action.** The agent flags items here and clears them when resolved.
 
-Content is a business. Run it like one.
+Your Content AI is only as smart as the data you give it. Start simple, add more over time.

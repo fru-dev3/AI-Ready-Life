@@ -1,6 +1,0 @@
-schema: paperclip/v1
-
-plugin:
-  brandColor: "#4A8B3A"
-  description: "1 AI agent that manages your home — maintenance tracking, home expenses, seasonal task lists, and household organization. 3 skills."
-  requireBoardApprovalForNewAgents: false

@@ -1,45 +1,56 @@
 # AI Ready Life: Brand — Quickstart
 
-Welcome to your Brand vault. Whether you're building a personal brand alongside your career or running a full creator business, this vault tracks your analytics, mentions, profile consistency, and growth in one place.
+Welcome to your Brand vault. This is where your track your brand presence, mentions, and analytics.
 
 ## What's in this vault
 
-- **config.md** — your brand profile: handles, website, channels, newsletter, keywords to monitor
-- **state.md** — demo data (Alex Rivera) showing brand analytics across multiple channels
-- **PROMPTS.md** — 30+ example prompts to get you started
-- **00_current/** — your active brand snapshot and metrics
-- **01_analytics/** — analytics reports and performance data
-- **02_mentions/** — brand mentions and press coverage
-- **03_briefs/** — monthly brand briefs the AI generates
+- **config.md** — your brand profile and settings
+- **open-loops.md** — active flags and open items the agent is tracking
+- **00_current/** — active documents and your current brand state
+- **01_prior/** — prior period records, organized by date
+- **02_briefs/** — briefs and reports the agent generates
 
-## Step 1 — Fill in config.md
+The `state.md` file in this demo vault shows what a fully populated brand state looks like (Alex Rivera demo data).
 
-Open `config.md` and fill in your handles, website URL, social profiles, and newsletter details. Add your primary brand keywords — these are the terms you want to be known for. The more specific you are, the better the agent's monitoring and analysis.
+## Step 1 — Place your vault
 
-## Step 2 — Install the plugin
-
-In Claude Code, add the Brand plugin from GitHub:
+Move this `brand/` folder to:
 
 ```
-/install github.com/fru-dev3/aireadyu-life/brand
+~/Documents/AIReadyLife/vault/brand/
 ```
 
-## Step 3 — Run your first skill
+Your full vault path will be: `~/Documents/AIReadyLife/vault/brand/`
 
-Open Claude and try one of these:
+## Step 2 — Fill in config.md
 
-- "Run my monthly brand review"
-- "Check my profile consistency across channels"
-- "Build my analytics summary"
-- "What brand opportunities am I missing?"
+Open `config.md` and fill in your details. You don't need everything on day one — fill what you know and leave the rest blank. The agent will tell you what's missing when you run your first skill.
 
-Claude will audit your presence, flag inconsistencies, and give you a brand brief with growth observations.
+## Step 3 — Add the domain to Claude Desktop
+
+In Claude Desktop, open your AI Ready Life project folder:
+
+```
+~/Documents/AIReadyLife/
+```
+
+If you've installed the Brand domain from GitHub, it will be available under `domains/brand/`. The agent reads your vault automatically from the path in Step 1.
+
+## Step 4 — Run your first skill
+
+Open Claude and try:
+
+- "Give me a brand brief"
+- "What's my brand status?"
+- "Run my brand review"
+
+Claude will read your config and vault, then give you a personalized brand summary.
 
 ## Tips
 
-- **Profile consistency is easy to break.** Headshots, bios, and handle names drift over time. Ask Claude to audit quarterly.
-- **Mention monitoring needs keywords.** The more specific your `monitoring_keywords` in config.md, the better the signal-to-noise ratio.
-- **Subscriber count updates drive trend analysis.** Update your newsletter count monthly so Claude can surface growth or churn trends.
-- **Benchmarks help.** Add 2-3 peers to `benchmark_accounts` and Claude will contextualize your growth.
+- **Start with config.md.** The more complete it is, the smarter your agent.
+- **00_current/ is your working space.** Drop documents, notes, and exports here.
+- **02_briefs/ fills up automatically.** The agent writes reports here after each review.
+- **open-loops.md tracks what needs action.** The agent flags items here and clears them when resolved.
 
-Your brand compounds over time. Track it like an asset.
+Your Brand AI is only as smart as the data you give it. Start simple, add more over time.

@@ -1,44 +1,56 @@
 # AI Ready Life: Intel — Quickstart
 
-Welcome to your Intel vault. Instead of drowning in news, you get a curated briefing filtered to exactly what matters for your work, investments, and interests — daily or weekly, however you prefer.
+Welcome to your Intel vault. This is where your get a daily digest of news filtered to your interests.
 
 ## What's in this vault
 
-- **config.md** — your intel profile: interests, industries, companies, news sources, digest preferences
-- **state.md** — demo data (Alex Rivera) showing a morning briefing with priority stories
-- **PROMPTS.md** — 25+ example prompts to get you started
-- **00_current/** — today's digest and active story threads
-- **01_digests/** — saved daily and weekly digests by date
-- **02_archive/** — older digests
+- **config.md** — your intel profile and settings
+- **open-loops.md** — active flags and open items the agent is tracking
+- **00_current/** — active documents and your current intel state
+- **01_prior/** — prior period records, organized by date
+- **02_briefs/** — briefs and reports the agent generates
 
-## Step 1 — Fill in config.md
+The `state.md` file in this demo vault shows what a fully populated intel state looks like (Alex Rivera demo data).
 
-Open `config.md` and fill in your primary interests (e.g., AI, personal finance, health tech), industries to monitor, and any specific companies you want tracked. Set your digest cadence (daily or weekly) and depth (headline / summary / deep dive).
+## Step 1 — Place your vault
 
-## Step 2 — Install the plugin
-
-In Claude Code, add the Intel plugin from GitHub:
+Move this `intel/` folder to:
 
 ```
-/install github.com/fru-dev3/aireadyu-life/intel
+~/Documents/AIReadyLife/vault/intel/
 ```
 
-## Step 3 — Run your first skill
+Your full vault path will be: `~/Documents/AIReadyLife/vault/intel/`
 
-Open Claude and try one of these:
+## Step 2 — Fill in config.md
 
-- "Run my daily briefing"
-- "What's happening in AI this week?"
-- "Give me a deep dive on [company name]"
-- "Scan for stories on personal finance"
+Open `config.md` and fill in your details. You don't need everything on day one — fill what you know and leave the rest blank. The agent will tell you what's missing when you run your first skill.
 
-Claude will pull from your configured interests and give you a briefing filtered to what's actually relevant for you.
+## Step 3 — Add the domain to Claude Desktop
+
+In Claude Desktop, open your AI Ready Life project folder:
+
+```
+~/Documents/AIReadyLife/
+```
+
+If you've installed the Intel domain from GitHub, it will be available under `domains/intel/`. The agent reads your vault automatically from the path in Step 1.
+
+## Step 4 — Run your first skill
+
+Open Claude and try:
+
+- "Give me a intel brief"
+- "What's my intel status?"
+- "Run my intel review"
+
+Claude will read your config and vault, then give you a personalized intel summary.
 
 ## Tips
 
-- **Specificity beats breadth.** "AI productivity tools for developers" gives better results than just "AI."
-- **Companies to monitor unlock earnings and news alerts.** Add any company you have stock in or are considering.
-- **Digest depth matters.** Start with "summary" — if you want more, ask Claude to go deeper on any specific story.
-- **Save the stories that matter.** Ask Claude to "log this to the archive" for any story you want to reference later.
+- **Start with config.md.** The more complete it is, the smarter your agent.
+- **00_current/ is your working space.** Drop documents, notes, and exports here.
+- **02_briefs/ fills up automatically.** The agent writes reports here after each review.
+- **open-loops.md tracks what needs action.** The agent flags items here and clears them when resolved.
 
-Good intelligence is a competitive advantage. Stop scrolling, start briefing.
+Your Intel AI is only as smart as the data you give it. Start simple, add more over time.

@@ -1,6 +1,0 @@
-schema: paperclip/v1
-
-plugin:
-  brandColor: "#3A3A8B"
-  description: "1 AI agent that scans your curated news sources daily — AI, tech, finance, and world news filtered to your interests. Produces morning and evening intelligence briefs. Everything runs locally. Private. On your machine."
-  requireBoardApprovalForNewAgents: false

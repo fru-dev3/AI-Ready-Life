@@ -1,6 +1,0 @@
-schema: paperclip/v1
-
-plugin:
-  brandColor: "#D4380D"
-  description: "2 AI agents that manage your content business — YouTube analytics, newsletter metrics, LinkedIn growth, Gumroad revenue, SEO priorities, and publishing schedule. 10 skills. Built for solo content creators."
-  requireBoardApprovalForNewAgents: false

@@ -1,48 +1,56 @@
 # AI Ready Life: Health — Quickstart
 
-Welcome to your Health vault. This is where your medical life lives — labs, medications, appointments, HSA, preventive care, and wellness data all in one place that your AI actually reads.
+Welcome to your Health vault. This is where your track your labs, medications, wearable data, and preventive care.
 
 ## What's in this vault
 
-- **config.md** — your health profile: insurance, doctor, medications, conditions, goals
-- **state.md** — demo data (Alex Rivera) showing what a full health state looks like
-- **PROMPTS.md** — 30+ example prompts to get you started
-- **00_current/** — your active health snapshot
-- **01_labs/** — lab results you upload or paste in
-- **02_visits/** — visit notes and after-visit summaries
-- **03_briefs/** — weekly and monthly health briefs the AI generates
-- **04_archive/** — older records, sorted by year
+- **config.md** — your health profile and settings
+- **open-loops.md** — active flags and open items the agent is tracking
+- **00_current/** — active documents and your current health state
+- **01_prior/** — prior period records, organized by date
+- **02_briefs/** — briefs and reports the agent generates
 
-## Step 1 — Fill in config.md
+The `state.md` file in this demo vault shows what a fully populated health state looks like (Alex Rivera demo data).
 
-Open `config.md` and fill in your details: insurance carrier, primary care doctor, current medications, known conditions, and health goals. This takes about 10 minutes. You don't need everything — fill what you know and leave the rest blank. The agent will tell you what's missing.
+## Step 1 — Place your vault
 
-## Step 2 — Install the plugin
-
-In Claude Code, add the Health plugin from GitHub:
+Move this `health/` folder to:
 
 ```
-/install github.com/fru-dev3/aireadyu-life/health
+~/Documents/AIReadyLife/vault/health/
 ```
 
-Or if you're using the full AI Ready Life repo, it's already included.
+Your full vault path will be: `~/Documents/AIReadyLife/vault/health/`
 
-## Step 3 — Run your first skill
+## Step 2 — Fill in config.md
 
-Open Claude and try one of these:
+Open `config.md` and fill in your details. You don't need everything on day one — fill what you know and leave the rest blank. The agent will tell you what's missing when you run your first skill.
 
-- "Run my health weekly review"
-- "Check my medication refill dates"
-- "Am I up to date on preventive care?"
-- "Review my latest labs"
+## Step 3 — Add the domain to Claude Desktop
 
-Claude will read your config.md and state.md, then give you a personalized health brief.
+In Claude Desktop, open your AI Ready Life project folder:
+
+```
+~/Documents/AIReadyLife/
+```
+
+If you've installed the Health domain from GitHub, it will be available under `domains/health/`. The agent reads your vault automatically from the path in Step 1.
+
+## Step 4 — Run your first skill
+
+Open Claude and try:
+
+- "Give me a health brief"
+- "What's my health status?"
+- "Run my health review"
+
+Claude will read your config and vault, then give you a personalized health summary.
 
 ## Tips
 
-- **Add labs as you get them.** Drop a PDF or paste the text into `01_labs/` with a date in the filename (e.g., `2026-03-labs.md`).
-- **Log visits after appointments.** A quick paste of your after-visit summary into `02_visits/` keeps your record complete.
-- **Your HSA balance matters.** Keep it updated in config.md — the agent tracks it against your deductible progress.
-- **Medications drive refill alerts.** The more complete your med list, the smarter the refill reminders.
+- **Start with config.md.** The more complete it is, the smarter your agent.
+- **00_current/ is your working space.** Drop documents, notes, and exports here.
+- **02_briefs/ fills up automatically.** The agent writes reports here after each review.
+- **open-loops.md tracks what needs action.** The agent flags items here and clears them when resolved.
 
 Your Health AI is only as smart as the data you give it. Start simple, add more over time.

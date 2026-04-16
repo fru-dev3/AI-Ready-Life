@@ -1,47 +1,56 @@
 # AI Ready Life: Tax — Quickstart
 
-Welcome to your Tax vault. This is where deadlines, estimates, deductions, entity compliance, and document checklists live — so your AI can keep you ahead of the IRS instead of scrambling to catch up.
+Welcome to your Tax vault. This is where your track deadlines, estimates, deductions, and entity compliance.
 
 ## What's in this vault
 
-- **config.md** — your tax profile: filing status, employer, CPA, business entities, payment methods
-- **state.md** — demo data (Alex Rivera) showing a complete tax state with deadlines and estimates
-- **PROMPTS.md** — 30+ example prompts to get you started
-- **00_current/** — current year tax snapshot and active deadlines
-- **01_federal/** — federal documents, returns, and correspondence
-- **02_state/** — state tax documents and returns
-- **03_entities/** — LLC and business entity filings
-- **04_briefs/** — tax briefings the AI generates
-- **05_archive/** — prior year returns and documents
+- **config.md** — your tax profile and settings
+- **open-loops.md** — active flags and open items the agent is tracking
+- **00_current/** — active documents and your current tax state
+- **01_prior/** — prior period records, organized by date
+- **02_briefs/** — briefs and reports the agent generates
 
-## Step 1 — Fill in config.md
+The `state.md` file in this demo vault shows what a fully populated tax state looks like (Alex Rivera demo data).
 
-Open `config.md` and fill in your filing status, state, employer name, CPA contact, and any business entities you have. If you have LLCs or S-corps, list them. This is the most important config in the system — accurate info here prevents missed deadlines.
+## Step 1 — Place your vault
 
-## Step 2 — Install the plugin
-
-In Claude Code, add the Tax plugin from GitHub:
+Move this `tax/` folder to:
 
 ```
-/install github.com/fru-dev3/aireadyu-life/tax
+~/Documents/AIReadyLife/vault/tax/
 ```
 
-## Step 3 — Run your first skill
+Your full vault path will be: `~/Documents/AIReadyLife/vault/tax/`
 
-Open Claude and try one of these:
+## Step 2 — Fill in config.md
 
-- "What are my upcoming tax deadlines?"
-- "Check my document completeness for this tax season"
-- "Estimate my Q2 quarterly payment"
-- "Review deductions I might be missing"
+Open `config.md` and fill in your details. You don't need everything on day one — fill what you know and leave the rest blank. The agent will tell you what's missing when you run your first skill.
 
-Claude will build a personalized deadline list and flag anything that needs your attention.
+## Step 3 — Add the domain to Claude Desktop
+
+In Claude Desktop, open your AI Ready Life project folder:
+
+```
+~/Documents/AIReadyLife/
+```
+
+If you've installed the Tax domain from GitHub, it will be available under `domains/tax/`. The agent reads your vault automatically from the path in Step 1.
+
+## Step 4 — Run your first skill
+
+Open Claude and try:
+
+- "Give me a tax brief"
+- "What's my tax status?"
+- "Run my tax review"
+
+Claude will read your config and vault, then give you a personalized tax summary.
 
 ## Tips
 
-- **Deadlines are the whole point.** Keep your entity list accurate in config.md — each entity has its own filing calendar.
-- **Log deductible expenses as they happen.** Ask Claude to "log a deductible expense" after any business purchase.
-- **Quarterly estimates matter most if you're self-employed.** Set up your Q dates and payment method in config.md.
-- **Share your CPA's contact.** When you ask Claude to draft a question for your CPA, it'll know who to address.
+- **Start with config.md.** The more complete it is, the smarter your agent.
+- **00_current/ is your working space.** Drop documents, notes, and exports here.
+- **02_briefs/ fills up automatically.** The agent writes reports here after each review.
+- **open-loops.md tracks what needs action.** The agent flags items here and clears them when resolved.
 
-Tax stress is almost always caused by surprises. This vault eliminates the surprises.
+Your Tax AI is only as smart as the data you give it. Start simple, add more over time.

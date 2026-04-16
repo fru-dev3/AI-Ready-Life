@@ -1,47 +1,56 @@
 # AI Ready Life: Estate — Quickstart
 
-Welcome to your Estate vault. If you own rental properties, this vault tracks cash flow, maintenance schedules, tenant status, insurance renewals, and portfolio performance — so your rental business runs on autopilot instead of in your head.
+Welcome to your Estate vault. This is where your track your rental portfolio, cash flow, and tenants.
 
 ## What's in this vault
 
-- **config.md** — your portfolio profile: properties, mortgages, rents, property managers, insurance
-- **state.md** — demo data (Alex Rivera) showing a two-property rental portfolio with full data
-- **PROMPTS.md** — 30+ example prompts to get you started
-- **00_current/** — active portfolio snapshot and cash flow summary
-- **01_properties/** — individual property records and documents
-- **02_tenants/** — tenant information and lease tracking
-- **03_maintenance/** — maintenance logs and scheduled tasks
-- **04_insurance/** — policy details and renewal tracking
-- **05_briefs/** — monthly portfolio briefs the AI generates
+- **config.md** — your estate profile and settings
+- **open-loops.md** — active flags and open items the agent is tracking
+- **00_current/** — active documents and your current estate state
+- **01_prior/** — prior period records, organized by date
+- **02_briefs/** — briefs and reports the agent generates
 
-## Step 1 — Fill in config.md
+The `state.md` file in this demo vault shows what a fully populated estate state looks like (Alex Rivera demo data).
 
-Open `config.md` and fill in each property: address, purchase price, current value, mortgage balance and rate, monthly rent, and property manager. Even rough numbers give the agent what it needs to calculate cash flow and cap rate.
+## Step 1 — Place your vault
 
-## Step 2 — Install the plugin
-
-In Claude Code, add the Estate plugin from GitHub:
+Move this `estate/` folder to:
 
 ```
-/install github.com/fru-dev3/aireadyu-life/estate
+~/Documents/AIReadyLife/vault/estate/
 ```
 
-## Step 3 — Run your first skill
+Your full vault path will be: `~/Documents/AIReadyLife/vault/estate/`
 
-Open Claude and try one of these:
+## Step 2 — Fill in config.md
 
-- "Run my estate monthly review"
-- "Build my portfolio cash flow summary"
-- "What maintenance is coming up?"
-- "Review my tenant status"
+Open `config.md` and fill in your details. You don't need everything on day one — fill what you know and leave the rest blank. The agent will tell you what's missing when you run your first skill.
 
-Claude will give you a complete portfolio brief with cash flow analysis, maintenance flags, and tenant status.
+## Step 3 — Add the domain to Claude Desktop
+
+In Claude Desktop, open your AI Ready Life project folder:
+
+```
+~/Documents/AIReadyLife/
+```
+
+If you've installed the Estate domain from GitHub, it will be available under `domains/estate/`. The agent reads your vault automatically from the path in Step 1.
+
+## Step 4 — Run your first skill
+
+Open Claude and try:
+
+- "Give me a estate brief"
+- "What's my estate status?"
+- "Run my estate review"
+
+Claude will read your config and vault, then give you a personalized estate summary.
 
 ## Tips
 
-- **Cash flow is the scoreboard.** Keep rent and mortgage amounts current in config.md for accurate monthly calculations.
-- **Log maintenance expenses.** Ask Claude to "log a maintenance expense" after every repair to track actual spend vs. reserve.
-- **Lease end dates are critical.** Add them in config.md so Claude flags renewal conversations 90 days out.
-- **Insurance renewals sneak up.** The agent monitors renewal dates and alerts you 60 days before.
+- **Start with config.md.** The more complete it is, the smarter your agent.
+- **00_current/ is your working space.** Drop documents, notes, and exports here.
+- **02_briefs/ fills up automatically.** The agent writes reports here after each review.
+- **open-loops.md tracks what needs action.** The agent flags items here and clears them when resolved.
 
-Rental properties are a business. Your vault makes them feel like one.
+Your Estate AI is only as smart as the data you give it. Start simple, add more over time.

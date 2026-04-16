@@ -1,47 +1,56 @@
 # AI Ready Life: Wealth — Quickstart
 
-Welcome to your Wealth vault. This is your personal financial command center — net worth tracking, investments, cash flow, debt, and estate planning in one place that your AI reads and reasons over.
+Welcome to your Wealth vault. This is where your track your net worth, cash flow, investments, and debt.
 
 ## What's in this vault
 
-- **config.md** — your financial profile: accounts, balances, allocation targets, liabilities
-- **state.md** — demo data (Alex Rivera) showing a complete wealth snapshot
-- **PROMPTS.md** — 30+ example prompts to get you started
-- **00_current/** — your current net worth and cash flow snapshot
-- **01_statements/** — monthly statements you paste or upload
-- **02_investments/** — investment holdings, allocations, and performance notes
-- **03_estate/** — will, trust, beneficiary designations
-- **04_briefs/** — weekly and monthly wealth briefs the AI generates
-- **05_archive/** — older snapshots and statements
+- **config.md** — your wealth profile and settings
+- **open-loops.md** — active flags and open items the agent is tracking
+- **00_current/** — active documents and your current wealth state
+- **01_prior/** — prior period records, organized by date
+- **02_briefs/** — briefs and reports the agent generates
 
-## Step 1 — Fill in config.md
+The `state.md` file in this demo vault shows what a fully populated wealth state looks like (Alex Rivera demo data).
 
-Open `config.md` and fill in what you know: checking/savings accounts (institution + last 4 digits), brokerage and retirement account balances, any loans, and your investment allocation target. Rough numbers are fine to start — the agent will help you refine them.
+## Step 1 — Place your vault
 
-## Step 2 — Install the plugin
-
-In Claude Code, add the Wealth plugin from GitHub:
+Move this `wealth/` folder to:
 
 ```
-/install github.com/fru-dev3/aireadyu-life/wealth
+~/Documents/AIReadyLife/vault/wealth/
 ```
 
-## Step 3 — Run your first skill
+Your full vault path will be: `~/Documents/AIReadyLife/vault/wealth/`
 
-Open Claude and try one of these:
+## Step 2 — Fill in config.md
 
-- "Run my wealth monthly review"
-- "Build my net worth summary"
-- "How is my cash flow looking?"
-- "Summarize my investment performance"
+Open `config.md` and fill in your details. You don't need everything on day one — fill what you know and leave the rest blank. The agent will tell you what's missing when you run your first skill.
 
-Claude will read your config and state, then give you a complete financial picture with observations and action items.
+## Step 3 — Add the domain to Claude Desktop
+
+In Claude Desktop, open your AI Ready Life project folder:
+
+```
+~/Documents/AIReadyLife/
+```
+
+If you've installed the Wealth domain from GitHub, it will be available under `domains/wealth/`. The agent reads your vault automatically from the path in Step 1.
+
+## Step 4 — Run your first skill
+
+Open Claude and try:
+
+- "Give me a wealth brief"
+- "What's my wealth status?"
+- "Run my wealth review"
+
+Claude will read your config and vault, then give you a personalized wealth summary.
 
 ## Tips
 
-- **Update balances monthly.** Pull your account balances from your bank and brokerage apps once a month and update state.md. 15 minutes a month keeps everything current.
-- **Track every liability.** Loans, credit card balances, and car payments matter for your net worth calculation.
-- **Your allocation target is the north star.** Set it in config.md and the agent will flag when you drift.
-- **Estate docs location matters.** Even just noting where your will lives helps the agent give complete advice.
+- **Start with config.md.** The more complete it is, the smarter your agent.
+- **00_current/ is your working space.** Drop documents, notes, and exports here.
+- **02_briefs/ fills up automatically.** The agent writes reports here after each review.
+- **open-loops.md tracks what needs action.** The agent flags items here and clears them when resolved.
 
-Wealth clarity compounds just like money. Start with what you know and add more each month.
+Your Wealth AI is only as smart as the data you give it. Start simple, add more over time.
