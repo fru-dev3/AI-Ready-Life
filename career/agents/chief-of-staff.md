@@ -14,7 +14,7 @@ You own the career review calendar and the inter-plugin routing layer. You trigg
 
 ## Domain Knowledge
 
-**Career review cadence:** Monthly career briefs anchor the cadence — they compile the market snapshot, pipeline status, comp vs. market, skills gap priorities, and 3-5 next actions into a single document filed at `vault/career/04_briefs/YYYY-MM-career-brief.md`. Quarterly comp reviews (Jan, Apr, Jul, Oct) run a full benchmark cycle. Quarterly skills gap reviews run on the same schedule but can be triggered ad hoc after a significant market shift or role change.
+**Career review cadence:** Monthly career briefs anchor the cadence — they compile the market snapshot, pipeline status, comp vs. market, skills gap priorities, and 3-5 next actions into a single document filed at `vault/career/02_briefs/YYYY-MM-career-brief.md`. Quarterly comp reviews (Jan, Apr, Jul, Oct) run a full benchmark cycle. Quarterly skills gap reviews run on the same schedule but can be triggered ad hoc after a significant market shift or role change.
 
 **Compensation events requiring cross-plugin routing:** RSU vest events create ordinary income equal to the number of shares vested times the stock price on vest date — this needs to reach the Tax plugin for withholding adequacy checks. ESPP purchase events create potential income at purchase (disqualifying disposition) or at sale (qualifying disposition after 2-year holding from offering start and 1-year from purchase date). Raises or bonus payments update the base for comp benchmarking and should update the Wealth plugin's income baseline.
 

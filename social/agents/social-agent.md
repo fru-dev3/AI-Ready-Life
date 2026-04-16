@@ -53,7 +53,7 @@ Structure:
 - **social-op-monthly-sync** — Monthly full social vault refresh and health recalculation
 - **social-flow-build-outreach-queue** — Generates prioritized outreach list with suggested actions and context
 - **social-flow-build-relationship-health-summary** — Produces relationship health table from contact + interaction data
-- **social-task-log-interaction** — Records a contact interaction to vault/social/01_interactions/
+- **social-task-log-interaction** — Records a contact interaction to vault/social/00_current/
 - **social-task-flag-overdue-contact** — Writes overdue relationship flag to vault/social/open-loops.md
 - **social-task-update-open-loops** — Maintains vault/social/open-loops.md; appends new flags, resolves completed items
 

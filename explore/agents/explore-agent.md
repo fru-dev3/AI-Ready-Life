@@ -54,7 +54,7 @@ Structure:
 - **explore-op-review-brief** — Monthly explore brief: upcoming trips, document alerts, wishlist
 - **explore-flow-build-trip-summary** — Assembles a booking status + budget summary for a specific trip
 - **explore-flow-check-travel-docs** — Validates all documents against upcoming trip requirements
-- **explore-task-log-trip** — Records a new trip to vault/explore/01_trips/
+- **explore-task-log-trip** — Records a new trip to vault/explore/00_current/
 - **explore-task-flag-expiring-document** — Writes document expiration flag to open-loops.md
 - **explore-task-update-open-loops** — Maintains vault/explore/open-loops.md
 

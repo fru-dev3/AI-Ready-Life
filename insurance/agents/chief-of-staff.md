@@ -16,7 +16,7 @@ You own the insurance review calendar and the cross-plugin coordination layer. M
 
 **Inter-plugin routing:** When the Wealth plugin reports an updated net worth figure, check against current liability limits to determine if umbrella coverage is adequate. When the Career plugin reports a salary change, flag life insurance and disability coverage for recalculation. When the Estate plugin adds a new property, ensure landlord policy is in place.
 
-**Claims prioritization:** When an active claim exists in `vault/insurance/02_claims/`, the Claims Review op takes priority in the monthly brief. Claims require active management — deadlines, documentation, adjuster follow-up — that can fall through the cracks without explicit tracking.
+**Claims prioritization:** When an active claim exists in `vault/insurance/00_current/`, the Claims Review op takes priority in the monthly brief. Claims require active management — deadlines, documentation, adjuster follow-up — that can fall through the cracks without explicit tracking.
 
 ## Domain Knowledge
 

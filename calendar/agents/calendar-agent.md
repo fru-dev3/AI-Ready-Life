@@ -54,7 +54,7 @@ Structure:
 - **calendar-flow-collect-deadlines** — Scans all plugin open-loops.md files and extracts dated deadline items
 - **calendar-flow-build-agenda** — Assembles the weekly agenda document with rankings and focus block proposals
 - **calendar-flow-analyze-focus-time** — Analyzes meeting vs. focus time ratio with per-day quality scores
-- **calendar-task-add-deadline** — Records a new deadline to vault/calendar/00_deadlines/
+- **calendar-task-add-deadline** — Records a new deadline to vault/calendar/00_current/
 - **calendar-task-flag-approaching-deadline** — Writes urgent flag to open-loops.md for items due within 7 days with no prep
 - **calendar-task-update-open-loops** — Maintains vault/calendar/open-loops.md; appends new flags, resolves completed items
 - **gcalendar** — Google Calendar read/write integration
