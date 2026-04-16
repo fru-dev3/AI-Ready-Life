@@ -20,26 +20,25 @@ If `~/Documents/AIReadyLife/vault/records/` does not exist or is empty:
 4. Open `~/Documents/AIReadyLife/vault/records/config.md` and fill in your details
 5. Return here and run any skill — it will find your vault automatically
 
-The vault includes the full folder structure, a config template, a Quick Start guide, and a prompt reference for every skill in this plugin.
-
 ## Vault Structure
 
 ```
 ~/Documents/AIReadyLife/vault/records/
-├── 00_current/
-├── 01_ids/
-├── 02_legal/
-├── 03_briefs/
-├── 04_archive/
-└── config.md
-└── open-loops.md
+├── config.md          — your profile and settings
+├── open-loops.md      — active flags and open items
+├── 00_current/        — active documents and current state
+├── 01_prior/          — prior period records
+└── 02_briefs/         — generated briefs and reports
 ```
 
-- `00_current/` — Active document inventory and subscription list
-- `01_ids/` — ID document scans and expiration tracking
-- `02_legal/` — Legal document index with storage locations
-- `03_briefs/` — Monthly records review briefs
-- `04_archive/` — Expired documents and cancelled subscriptions
+## Skills
+
+Skills are organized under `domains/records/skills/`:
+
+- `00_ops/` — recurring operations (reviews, syncs, watches)
+- `01_flows/` — data flows that build summaries and reports
+- `02_tasks/` — atomic write tasks (flag, log, update)
+- `apps/` — app integrations
 
 ## Checking Vault Status
 
@@ -47,7 +46,3 @@ Before running any skill, confirm the vault exists:
 - Check that `~/Documents/AIReadyLife/vault/records/config.md` is present and filled in
 - If it is missing, direct the user to purchase the vault template above
 - If it exists but config fields are blank, prompt the user to complete setup before proceeding
-
-## Coverage
-
-This plugin manages your documents, expiring IDs, and subscriptions.

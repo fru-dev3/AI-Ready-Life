@@ -1,46 +1,56 @@
 # AI Ready Life: Home — Quickstart
 
-Welcome to your Home vault. Whether you own or rent, this vault tracks maintenance schedules, home expenses, seasonal tasks, contractor contacts, and your home warranty — so your home runs smoothly instead of surprising you with expensive problems.
+Welcome to your Home vault. This is where your track maintenance, expenses, and seasonal tasks.
 
 ## What's in this vault
 
-- **config.md** — your home profile: property details, landlord or mortgage info, HOA, contractors, home warranty
-- **state.md** — demo data (Alex Rivera) showing a complete home maintenance picture
-- **PROMPTS.md** — 30+ example prompts to get you started
-- **00_current/** — active maintenance schedule and expense summary
-- **01_maintenance/** — maintenance logs and work orders
-- **02_expenses/** — home expense tracker
-- **03_seasonal/** — seasonal maintenance checklists (spring, summer, fall, winter)
-- **04_contractors/** — contractor contact list and job history
+- **config.md** — your home profile and settings
+- **open-loops.md** — active flags and open items the agent is tracking
+- **00_current/** — active documents and your current home state
+- **01_prior/** — prior period records, organized by date
+- **02_briefs/** — briefs and reports the agent generates
 
-## Step 1 — Fill in config.md
+The `state.md` file in this demo vault shows what a fully populated home state looks like (Alex Rivera demo data).
 
-Open `config.md` and fill in whether you own or rent, your address, and a few key details about your home (year built, square footage). Add your landlord or mortgage info. If you have a home warranty, add the provider and phone number — you'll want that when something breaks at 10pm.
+## Step 1 — Place your vault
 
-## Step 2 — Install the plugin
-
-In Claude Code, add the Home plugin from GitHub:
+Move this `home/` folder to:
 
 ```
-/install github.com/fru-dev3/aireadyu-life/home
+~/Documents/AIReadyLife/vault/home/
 ```
 
-## Step 3 — Run your first skill
+Your full vault path will be: `~/Documents/AIReadyLife/vault/home/`
 
-Open Claude and try one of these:
+## Step 2 — Fill in config.md
 
-- "Build my home maintenance schedule"
-- "Run my home weekly review"
-- "What seasonal maintenance should I do this month?"
-- "Log a home expense"
+Open `config.md` and fill in your details. You don't need everything on day one — fill what you know and leave the rest blank. The agent will tell you what's missing when you run your first skill.
 
-Claude will generate a maintenance schedule based on your home's age and type, and flag any overdue items.
+## Step 3 — Add the domain to Claude Desktop
+
+In Claude Desktop, open your AI Ready Life project folder:
+
+```
+~/Documents/AIReadyLife/
+```
+
+If you've installed the Home domain from GitHub, it will be available under `domains/home/`. The agent reads your vault automatically from the path in Step 1.
+
+## Step 4 — Run your first skill
+
+Open Claude and try:
+
+- "Give me a home brief"
+- "What's my home status?"
+- "Run my home review"
+
+Claude will read your config and vault, then give you a personalized home summary.
 
 ## Tips
 
-- **HVAC filter age matters.** Add your filter size and last service date — Claude will remind you every 3 months.
-- **Contractor list saves money.** Pre-vetted contractors you add to config.md mean you're not Googling in a panic when something breaks.
-- **Log expenses as you go.** Tracking home expenses throughout the year makes tax time easier if you own.
-- **Seasonal checklists are built-in.** Ask Claude "what should I do this fall?" and it will generate a home-specific list.
+- **Start with config.md.** The more complete it is, the smarter your agent.
+- **00_current/ is your working space.** Drop documents, notes, and exports here.
+- **02_briefs/ fills up automatically.** The agent writes reports here after each review.
+- **open-loops.md tracks what needs action.** The agent flags items here and clears them when resolved.
 
-A well-maintained home is worth more and costs less to own. This vault helps you stay ahead.
+Your Home AI is only as smart as the data you give it. Start simple, add more over time.

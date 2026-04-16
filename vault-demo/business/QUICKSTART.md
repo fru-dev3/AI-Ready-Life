@@ -1,47 +1,56 @@
 # AI Ready Life: Business — Quickstart
 
-Welcome to your Business vault. If you run an LLC, S-corp, or freelance business, this vault tracks your revenue, expenses, compliance deadlines, contractor relationships, and P&L — so you never get caught off guard by a filing or cash flow issue.
+Welcome to your Business vault. This is where your track your LLC revenue, expenses, and compliance.
 
 ## What's in this vault
 
-- **config.md** — your business profile: entity type, EIN, accounting software, bank, Stripe, services offered
-- **state.md** — demo data (Alex Rivera) showing an active consulting LLC with revenue and compliance data
-- **PROMPTS.md** — 30+ example prompts to get you started
-- **00_current/** — active business snapshot and P&L summary
-- **01_revenue/** — revenue logs and invoice records
-- **02_expenses/** — expense logs and categorized spend
-- **03_compliance/** — annual report dates, BOI filings, state requirements
-- **04_contractors/** — contractor agreements and 1099 tracking
-- **05_briefs/** — monthly business briefs the AI generates
+- **config.md** — your business profile and settings
+- **open-loops.md** — active flags and open items the agent is tracking
+- **00_current/** — active documents and your current business state
+- **01_prior/** — prior period records, organized by date
+- **02_briefs/** — briefs and reports the agent generates
 
-## Step 1 — Fill in config.md
+The `state.md` file in this demo vault shows what a fully populated business state looks like (Alex Rivera demo data).
 
-Open `config.md` and fill in your entity name, type (LLC/S-corp/sole prop), state of formation, and annual report due date. Add your accounting software and bank account info. If you use Stripe, add your account status. This gives the agent the context it needs for compliance tracking.
+## Step 1 — Place your vault
 
-## Step 2 — Install the plugin
-
-In Claude Code, add the Business plugin from GitHub:
+Move this `business/` folder to:
 
 ```
-/install github.com/fru-dev3/aireadyu-life/business
+~/Documents/AIReadyLife/vault/business/
 ```
 
-## Step 3 — Run your first skill
+Your full vault path will be: `~/Documents/AIReadyLife/vault/business/`
 
-Open Claude and try one of these:
+## Step 2 — Fill in config.md
 
-- "Run my business monthly review"
-- "Build my P&L summary"
-- "Check my compliance status"
-- "What invoices are overdue?"
+Open `config.md` and fill in your details. You don't need everything on day one — fill what you know and leave the rest blank. The agent will tell you what's missing when you run your first skill.
 
-Claude will review your business state and flag anything that needs attention — compliance deadlines, pipeline gaps, or overdue payments.
+## Step 3 — Add the domain to Claude Desktop
+
+In Claude Desktop, open your AI Ready Life project folder:
+
+```
+~/Documents/AIReadyLife/
+```
+
+If you've installed the Business domain from GitHub, it will be available under `domains/business/`. The agent reads your vault automatically from the path in Step 1.
+
+## Step 4 — Run your first skill
+
+Open Claude and try:
+
+- "Give me a business brief"
+- "What's my business status?"
+- "Run my business review"
+
+Claude will read your config and vault, then give you a personalized business summary.
 
 ## Tips
 
-- **Annual report deadlines are easy to miss.** Add your state's due date to config.md and Claude will flag it 60 days out.
-- **Log invoices as you send them.** Ask Claude to "log an invoice" and it'll track status and flag overdue payments.
-- **Contractor 1099 threshold is $600.** Claude tracks this for you if contractor payments are in state.md.
-- **BOI report is a new federal requirement.** If you formed an LLC after 2024, make sure it's logged as filed.
+- **Start with config.md.** The more complete it is, the smarter your agent.
+- **00_current/ is your working space.** Drop documents, notes, and exports here.
+- **02_briefs/ fills up automatically.** The agent writes reports here after each review.
+- **open-loops.md tracks what needs action.** The agent flags items here and clears them when resolved.
 
-Running a business solo is hard. Let your AI handle the admin overhead.
+Your Business AI is only as smart as the data you give it. Start simple, add more over time.

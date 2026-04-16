@@ -20,24 +20,25 @@ If `~/Documents/AIReadyLife/vault/brand/` does not exist or is empty:
 4. Open `~/Documents/AIReadyLife/vault/brand/config.md` and fill in your details
 5. Return here and run any skill — it will find your vault automatically
 
-The vault includes the full folder structure, a config template, a Quick Start guide, and a prompt reference for every skill in this plugin.
-
 ## Vault Structure
 
 ```
 ~/Documents/AIReadyLife/vault/brand/
-├── 01_analytics/
-├── 02_assets/
-├── 03_mentions/
-├── 04_profiles/
-└── config.md
-└── open-loops.md
+├── config.md          — your profile and settings
+├── open-loops.md      — active flags and open items
+├── 00_current/        — active documents and current state
+├── 01_prior/          — prior period records
+└── 02_briefs/         — generated briefs and reports
 ```
 
-- `01_analytics/` — Platform metrics history by month
-- `02_assets/` — Headshots, logos, bio copy, brand guidelines
-- `03_mentions/` — Mention logs and sentiment tracking
-- `04_profiles/` — Screenshot audits of each platform profile
+## Skills
+
+Skills are organized under `domains/brand/skills/`:
+
+- `00_ops/` — recurring operations (reviews, syncs, watches)
+- `01_flows/` — data flows that build summaries and reports
+- `02_tasks/` — atomic write tasks (flag, log, update)
+- `apps/` — app integrations
 
 ## Checking Vault Status
 
@@ -45,7 +46,3 @@ Before running any skill, confirm the vault exists:
 - Check that `~/Documents/AIReadyLife/vault/brand/config.md` is present and filled in
 - If it is missing, direct the user to purchase the vault template above
 - If it exists but config fields are blank, prompt the user to complete setup before proceeding
-
-## Coverage
-
-This plugin manages your online presence, mentions, analytics, and profile consistency.

@@ -1,46 +1,56 @@
 # AI Ready Life: Vision — Quickstart
 
-Welcome to your Vision vault. Most people think about their goals on January 1st and forget about them by February. This vault creates a quarterly rhythm — scorecards, OKRs, and reviews — that keeps your long-term vision connected to your daily decisions.
+Welcome to your Vision vault. This is where your set goals, run quarterly reviews, and score your life domains.
 
 ## What's in this vault
 
-- **config.md** — your vision profile: life domains to score, current quarter OKRs, annual goals, values, review cadence
-- **state.md** — demo data (Alex Rivera) showing a quarterly scorecard and goal tracking
-- **PROMPTS.md** — 30+ example prompts to get you started
-- **00_current/** — current quarter scorecard and active OKRs
-- **01_goals/** — long-term goal documentation
-- **02_quarters/** — quarterly plans and reviews by quarter
-- **03_scorecard/** — monthly scorecard history
-- **04_briefs/** — monthly and quarterly vision briefs
+- **config.md** — your vision profile and settings
+- **open-loops.md** — active flags and open items the agent is tracking
+- **00_current/** — active documents and your current vision state
+- **01_prior/** — prior period records, organized by date
+- **02_briefs/** — briefs and reports the agent generates
 
-## Step 1 — Fill in config.md
+The `state.md` file in this demo vault shows what a fully populated vision state looks like (Alex Rivera demo data).
 
-Open `config.md` and fill in your 3-5 values (one-word: family, growth, freedom, etc.), your annual theme, your top 3-5 annual goals, and your Q objectives with key results. Set your review day and scorecard cadence. Then score each life domain from 0-10 based on where you are today.
+## Step 1 — Place your vault
 
-## Step 2 — Install the plugin
-
-In Claude Code, add the Vision plugin from GitHub:
+Move this `vision/` folder to:
 
 ```
-/install github.com/fru-dev3/aireadyu-life/vision
+~/Documents/AIReadyLife/vault/vision/
 ```
 
-## Step 3 — Run your first skill
+Your full vault path will be: `~/Documents/AIReadyLife/vault/vision/`
 
-Open Claude and try one of these:
+## Step 2 — Fill in config.md
 
-- "Run my monthly scorecard"
-- "Draft my Q2 quarterly plan"
-- "Score my life domains"
-- "Am I aligned with my annual goals?"
+Open `config.md` and fill in your details. You don't need everything on day one — fill what you know and leave the rest blank. The agent will tell you what's missing when you run your first skill.
 
-Claude will generate a scorecard based on your current domain scores, flag stalled goals, and suggest focus areas for the next period.
+## Step 3 — Add the domain to Claude Desktop
+
+In Claude Desktop, open your AI Ready Life project folder:
+
+```
+~/Documents/AIReadyLife/
+```
+
+If you've installed the Vision domain from GitHub, it will be available under `domains/vision/`. The agent reads your vault automatically from the path in Step 1.
+
+## Step 4 — Run your first skill
+
+Open Claude and try:
+
+- "Give me a vision brief"
+- "What's my vision status?"
+- "Run my vision review"
+
+Claude will read your config and vault, then give you a personalized vision summary.
 
 ## Tips
 
-- **Values guide decisions.** When you're stuck, ask Claude "does this decision align with my values?" — it will check your config.
-- **Quarterly OKRs work better than annual goals.** 90-day sprints are long enough to move the needle and short enough to stay motivated.
-- **Score honestly, not aspirationally.** A 6/10 on wealth that you update accurately is more useful than an optimistic 8.
-- **Monthly scorecard compounds.** After 6 months of monthly reviews, you'll have clear trend data on every domain in your life.
+- **Start with config.md.** The more complete it is, the smarter your agent.
+- **00_current/ is your working space.** Drop documents, notes, and exports here.
+- **02_briefs/ fills up automatically.** The agent writes reports here after each review.
+- **open-loops.md tracks what needs action.** The agent flags items here and clears them when resolved.
 
-Clarity about where you're going is the biggest competitive advantage you can have.
+Your Vision AI is only as smart as the data you give it. Start simple, add more over time.

@@ -1,45 +1,56 @@
 # AI Ready Life: Explore — Quickstart
 
-Welcome to your Explore vault. Travel is more enjoyable when you're not scrambling to check if your passport is valid, where your loyalty points stand, or whether your Global Entry is expired. This vault keeps all of that straight.
+Welcome to your Explore vault. This is where your plan trips, track travel docs, and manage your loyalty programs.
 
 ## What's in this vault
 
-- **config.md** — your travel profile: passport, loyalty programs, travel style, budget, wishlist
-- **state.md** — demo data (Alex Rivera) showing travel docs, loyalty balances, and upcoming trips
-- **PROMPTS.md** — 30+ example prompts to get you started
-- **00_current/** — active trip information and document status
-- **01_trips/** — past and upcoming trip records
-- **02_wishlist/** — destinations you want to visit
-- **03_archive/** — completed trip notes
+- **config.md** — your explore profile and settings
+- **open-loops.md** — active flags and open items the agent is tracking
+- **00_current/** — active documents and your current explore state
+- **01_prior/** — prior period records, organized by date
+- **02_briefs/** — briefs and reports the agent generates
 
-## Step 1 — Fill in config.md
+The `state.md` file in this demo vault shows what a fully populated explore state looks like (Alex Rivera demo data).
 
-Open `config.md` and fill in your passport expiry, home airport, TSA PreCheck/Global Entry number and expiry, and your loyalty programs with membership numbers. The expiry dates are the most important — everything else is nice-to-have.
+## Step 1 — Place your vault
 
-## Step 2 — Install the plugin
-
-In Claude Code, add the Explore plugin from GitHub:
+Move this `explore/` folder to:
 
 ```
-/install github.com/fru-dev3/aireadyu-life/explore
+~/Documents/AIReadyLife/vault/explore/
 ```
 
-## Step 3 — Run your first skill
+Your full vault path will be: `~/Documents/AIReadyLife/vault/explore/`
 
-Open Claude and try one of these:
+## Step 2 — Fill in config.md
 
-- "Check my travel document status"
-- "Run my explore monthly review"
-- "Plan a trip to Japan for next spring"
-- "What loyalty points do I have and where can I use them?"
+Open `config.md` and fill in your details. You don't need everything on day one — fill what you know and leave the rest blank. The agent will tell you what's missing when you run your first skill.
 
-Claude will review your travel profile and flag any documents nearing expiry, plus give you a readiness snapshot for upcoming travel.
+## Step 3 — Add the domain to Claude Desktop
+
+In Claude Desktop, open your AI Ready Life project folder:
+
+```
+~/Documents/AIReadyLife/
+```
+
+If you've installed the Explore domain from GitHub, it will be available under `domains/explore/`. The agent reads your vault automatically from the path in Step 1.
+
+## Step 4 — Run your first skill
+
+Open Claude and try:
+
+- "Give me a explore brief"
+- "What's my explore status?"
+- "Run my explore review"
+
+Claude will read your config and vault, then give you a personalized explore summary.
 
 ## Tips
 
-- **Passport expiry is the #1 thing people forget.** Many countries require 6 months of validity beyond your travel dates. Claude will flag this.
-- **Global Entry renewal takes 6+ months.** If yours expires in the next 12 months, Claude will remind you to start the process.
-- **Wishlist destinations make trip planning faster.** When you're ready to book, Claude already knows your preferences.
-- **Log trips after you complete them.** A quick note about what worked and what didn't helps Claude give better planning advice next time.
+- **Start with config.md.** The more complete it is, the smarter your agent.
+- **00_current/ is your working space.** Drop documents, notes, and exports here.
+- **02_briefs/ fills up automatically.** The agent writes reports here after each review.
+- **open-loops.md tracks what needs action.** The agent flags items here and clears them when resolved.
 
-Travel surprises are only fun when they're good ones.
+Your Explore AI is only as smart as the data you give it. Start simple, add more over time.

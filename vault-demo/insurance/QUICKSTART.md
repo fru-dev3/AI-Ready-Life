@@ -1,48 +1,56 @@
 # AI Ready Life: Insurance — Quickstart
 
-Welcome to your Insurance vault. Most people have no idea what they're actually covered for until they need to file a claim. This vault gives you a clear picture of every policy you own, when they renew, what they cover, and where the gaps are.
+Welcome to your Insurance vault. This is where your track all your policies, renewals, and coverage gaps.
 
 ## What's in this vault
 
-- **config.md** — your insurance profile: health, life, auto, home/renters, umbrella, disability policies
-- **state.md** — demo data (Alex Rivera) showing a complete insurance portfolio with coverage analysis
-- **PROMPTS.md** — 30+ example prompts to get you started
-- **00_current/** — active coverage summary and upcoming renewals
-- **01_health/** — health insurance details and claims
-- **02_life/** — life insurance policy and beneficiary info
-- **03_auto/** — auto policy details and vehicles covered
-- **04_home-renters/** — home or renters policy details
-- **05_umbrella/** — umbrella policy details
-- **06_other/** — any additional policies
+- **config.md** — your insurance profile and settings
+- **open-loops.md** — active flags and open items the agent is tracking
+- **00_current/** — active documents and your current insurance state
+- **01_prior/** — prior period records, organized by date
+- **02_briefs/** — briefs and reports the agent generates
 
-## Step 1 — Fill in config.md
+The `state.md` file in this demo vault shows what a fully populated insurance state looks like (Alex Rivera demo data).
 
-Open `config.md` and fill in what you have. You don't need every field — start with carrier name, coverage amount, and renewal date for each policy type. The renewal dates are the most critical — missing a renewal can lead to coverage gaps.
+## Step 1 — Place your vault
 
-## Step 2 — Install the plugin
-
-In Claude Code, add the Insurance plugin from GitHub:
+Move this `insurance/` folder to:
 
 ```
-/install github.com/fru-dev3/aireadyu-life/insurance
+~/Documents/AIReadyLife/vault/insurance/
 ```
 
-## Step 3 — Run your first skill
+Your full vault path will be: `~/Documents/AIReadyLife/vault/insurance/`
 
-Open Claude and try one of these:
+## Step 2 — Fill in config.md
 
-- "Run my insurance coverage audit"
-- "What renewals are coming up in the next 60 days?"
-- "Do I have any coverage gaps?"
-- "Build my coverage summary"
+Open `config.md` and fill in your details. You don't need everything on day one — fill what you know and leave the rest blank. The agent will tell you what's missing when you run your first skill.
 
-Claude will review your portfolio and flag anything approaching renewal, any coverage gaps, or any policies that look underpriced for your situation.
+## Step 3 — Add the domain to Claude Desktop
+
+In Claude Desktop, open your AI Ready Life project folder:
+
+```
+~/Documents/AIReadyLife/
+```
+
+If you've installed the Insurance domain from GitHub, it will be available under `domains/insurance/`. The agent reads your vault automatically from the path in Step 1.
+
+## Step 4 — Run your first skill
+
+Open Claude and try:
+
+- "Give me a insurance brief"
+- "What's my insurance status?"
+- "Run my insurance review"
+
+Claude will read your config and vault, then give you a personalized insurance summary.
 
 ## Tips
 
-- **Coverage gaps are invisible until you need coverage.** The audit skill is specifically designed to find them.
-- **Renewal timing is 60 days.** Claude will flag any policy renewing within 60 days so you have time to shop.
-- **Umbrella insurance is often missing.** If you own assets or have income above $100k, Claude will flag if you don't have it.
-- **Beneficiary designations drift.** Life circumstances change — ask Claude to flag if beneficiaries haven't been reviewed recently.
+- **Start with config.md.** The more complete it is, the smarter your agent.
+- **00_current/ is your working space.** Drop documents, notes, and exports here.
+- **02_briefs/ fills up automatically.** The agent writes reports here after each review.
+- **open-loops.md tracks what needs action.** The agent flags items here and clears them when resolved.
 
-You're already paying for insurance. Make sure it actually covers you.
+Your Insurance AI is only as smart as the data you give it. Start simple, add more over time.

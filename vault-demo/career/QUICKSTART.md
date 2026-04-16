@@ -1,46 +1,56 @@
 # AI Ready Life: Career — Quickstart
 
-Welcome to your Career vault. This is your personal career intelligence system — comp benchmarking, job market scanning, application pipeline, skills gap analysis, and network management, all in one place.
+Welcome to your Career vault. This is where your benchmark your comp, track the market, and manage your pipeline.
 
 ## What's in this vault
 
-- **config.md** — your career profile: current role, comp, target roles, salary range, skills
-- **state.md** — demo data (Alex Rivera) showing an active job search in progress
-- **PROMPTS.md** — 30+ example prompts to get you started
-- **00_current/** — your active career snapshot and market position
-- **01_applications/** — jobs you've applied to or are tracking
-- **02_offers/** — offers received, compared, and negotiated
-- **03_briefs/** — weekly career briefs the AI generates
-- **04_archive/** — past applications, roles, and review notes
+- **config.md** — your career profile and settings
+- **open-loops.md** — active flags and open items the agent is tracking
+- **00_current/** — active documents and your current career state
+- **01_prior/** — prior period records, organized by date
+- **02_briefs/** — briefs and reports the agent generates
 
-## Step 1 — Fill in config.md
+The `state.md` file in this demo vault shows what a fully populated career state looks like (Alex Rivera demo data).
 
-Open `config.md` and fill in your current title, employer, base salary, total comp, and years of experience. Then add your target titles, target salary range, and primary skills. This gives the agent everything it needs to benchmark you against the market.
+## Step 1 — Place your vault
 
-## Step 2 — Install the plugin
-
-In Claude Code, add the Career plugin from GitHub:
+Move this `career/` folder to:
 
 ```
-/install github.com/fru-dev3/aireadyu-life/career
+~/Documents/AIReadyLife/vault/career/
 ```
 
-## Step 3 — Run your first skill
+Your full vault path will be: `~/Documents/AIReadyLife/vault/career/`
 
-Open Claude and try one of these:
+## Step 2 — Fill in config.md
 
-- "Scan the market for roles matching my profile"
-- "What's my comp gap vs. the market?"
-- "Run my career weekly review"
-- "What skills should I be developing?"
+Open `config.md` and fill in your details. You don't need everything on day one — fill what you know and leave the rest blank. The agent will tell you what's missing when you run your first skill.
 
-Claude will pull from your config and state to give you a market-positioned career brief.
+## Step 3 — Add the domain to Claude Desktop
+
+In Claude Desktop, open your AI Ready Life project folder:
+
+```
+~/Documents/AIReadyLife/
+```
+
+If you've installed the Career domain from GitHub, it will be available under `domains/career/`. The agent reads your vault automatically from the path in Step 1.
+
+## Step 4 — Run your first skill
+
+Open Claude and try:
+
+- "Give me a career brief"
+- "What's my career status?"
+- "Run my career review"
+
+Claude will read your config and vault, then give you a personalized career summary.
 
 ## Tips
 
-- **Keep comp updated after every review cycle.** Even a $5k change shifts your benchmarking percentile.
-- **Log applications as you send them.** Ask Claude to "log a job application" and it'll track status, contacts, and follow-up dates.
-- **Skills gap review is powerful.** Claude compares your skills against target role requirements and tells you exactly what's missing.
-- **Network is searchable.** Add key contacts to state.md and Claude can flag who to reach out to and why.
+- **Start with config.md.** The more complete it is, the smarter your agent.
+- **00_current/ is your working space.** Drop documents, notes, and exports here.
+- **02_briefs/ fills up automatically.** The agent writes reports here after each review.
+- **open-loops.md tracks what needs action.** The agent flags items here and clears them when resolved.
 
-Your career is your biggest financial asset. Manage it like one.
+Your Career AI is only as smart as the data you give it. Start simple, add more over time.

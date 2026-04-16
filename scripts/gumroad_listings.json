@@ -1,0 +1,178 @@
+[
+  {
+    "name": "AI Ready Life: Social",
+    "slug": "aireadylife-social",
+    "domain": "social",
+    "product_id": "QTdmw-XCurBsA9_6xPcwgg==",
+    "status": "existing",
+    "url": "https://frudev.gumroad.com/l/aireadylife-social"
+  },
+  {
+    "name": "AI Ready Life: Intel",
+    "slug": "aireadylife-intel",
+    "domain": "intel",
+    "product_id": "tYNtSxTpQlShDt0dhEvdLQ==",
+    "status": "existing",
+    "url": "https://frudev.gumroad.com/l/aireadylife-intel"
+  },
+  {
+    "name": "AI Ready Life: Vision",
+    "slug": "aireadylife-vision",
+    "domain": "vision",
+    "product_id": "EIRqoh8qDqWiFs3Hi0J1nA==",
+    "status": "existing",
+    "url": "https://frudev.gumroad.com/l/aireadylife-vision"
+  },
+  {
+    "name": "AI Ready Life: Content",
+    "slug": "aireadylife-content",
+    "domain": "content",
+    "product_id": "2mFOLwMU2OWnX9urhtyAgQ==",
+    "status": "existing",
+    "url": "https://frudev.gumroad.com/l/aireadylife-content"
+  },
+  {
+    "name": "AI Ready Life: Brand",
+    "slug": "aireadylife-brand",
+    "domain": "brand",
+    "product_id": "AkVBL6tr9UWxxA19miXBFw==",
+    "status": "existing",
+    "url": "https://frudev.gumroad.com/l/aireadylife-brand"
+  },
+  {
+    "name": "AI Ready Life: Wealth",
+    "slug": "aireadylife-wealth",
+    "domain": "wealth",
+    "product_id": "TOr_nQpyEPE_Z_9lR3zuAQ==",
+    "status": "existing",
+    "url": "https://frudev.gumroad.com/l/aireadylife-wealth"
+  },
+  {
+    "name": "AI Ready Life: Tax",
+    "slug": "aireadylife-tax",
+    "domain": "tax",
+    "product_id": "dOPValmbCDtFt3treKsY5w==",
+    "status": "existing",
+    "url": "https://frudev.gumroad.com/l/aireadylife-tax"
+  },
+  {
+    "name": "AI Ready Life: Insurance",
+    "slug": "aireadylife-insurance",
+    "domain": "insurance",
+    "product_id": "9w3UOv067EfDiH9Z8WKejg==",
+    "status": "existing",
+    "url": "https://frudev.gumroad.com/l/aireadylife-insurance"
+  },
+  {
+    "name": "AI Ready Life: Health",
+    "slug": "aireadylife-health",
+    "domain": "health",
+    "product_id": "Qq4mXJUgHbrvBbT4aWRNHQ==",
+    "status": "existing",
+    "url": "https://frudev.gumroad.com/l/aireadylife-health"
+  },
+  {
+    "name": "AI Ready Life: Estate",
+    "slug": "aireadylife-estate",
+    "domain": "estate",
+    "product_id": "mDh9psQxyLpooxd-8HG-FA==",
+    "status": "existing",
+    "url": "https://frudev.gumroad.com/l/aireadylife-estate"
+  },
+  {
+    "name": "AI Ready Life: Chief of Staff",
+    "slug": "aireadylife-chief",
+    "domain": "chief",
+    "product_id": "yR5ykTsZEHqbx7MPcBTUxg==",
+    "status": "created",
+    "url": "https://frudev.gumroad.com/l/aireadylife-chief"
+  },
+  {
+    "name": "AI Ready Life: Benefits",
+    "slug": "aireadylife-benefits",
+    "domain": "benefits",
+    "product_id": "6u61MAPHNRPvKiFFNdK42A==",
+    "status": "created",
+    "url": "https://frudev.gumroad.com/l/aireadylife-benefits"
+  },
+  {
+    "name": "AI Ready Life: Business",
+    "slug": "aireadylife-business",
+    "domain": "business",
+    "product_id": "oHdkjlFjcdrb7HH-RktyrA==",
+    "status": "created",
+    "url": "https://frudev.gumroad.com/l/aireadylife-business"
+  },
+  {
+    "name": "AI Ready Life: Calendar",
+    "slug": "aireadylife-calendar",
+    "domain": "calendar",
+    "product_id": "gLo4xweNW3a0qIzFLCPwUQ==",
+    "status": "created",
+    "url": "https://frudev.gumroad.com/l/aireadylife-calendar"
+  },
+  {
+    "name": "AI Ready Life: Career",
+    "slug": "aireadylife-career",
+    "domain": "career",
+    "product_id": "hWkiCWGAk7Mab6-96I1G8w==",
+    "status": "created",
+    "url": "https://frudev.gumroad.com/l/aireadylife-career"
+  },
+  {
+    "name": "AI Ready Life: Explore",
+    "slug": "aireadylife-explore",
+    "domain": "explore",
+    "product_id": "WRIIq2dDfQKFSgr1JQTB7g==",
+    "status": "created",
+    "url": "https://frudev.gumroad.com/l/aireadylife-explore"
+  },
+  {
+    "name": "AI Ready Life: Home",
+    "slug": "aireadylife-home",
+    "domain": "home",
+    "product_id": "10VoUk1dj1zWyiUi1GyAKg==",
+    "status": "created",
+    "url": "https://frudev.gumroad.com/l/aireadylife-home"
+  },
+  {
+    "name": "AI Ready Life: Learning",
+    "slug": "aireadylife-learning",
+    "domain": "learning",
+    "product_id": "CD5pJih5daB00CfTd4t4Nw==",
+    "status": "created",
+    "url": "https://frudev.gumroad.com/l/aireadylife-learning"
+  },
+  {
+    "name": "AI Ready Life: Real Estate",
+    "slug": "aireadylife-real-estate",
+    "domain": "real-estate",
+    "product_id": "WiP7fkhiONFlPQ1azrJXnw==",
+    "status": "created",
+    "url": "https://frudev.gumroad.com/l/aireadylife-real-estate"
+  },
+  {
+    "name": "AI Ready Life: Records",
+    "slug": "aireadylife-records",
+    "domain": "records",
+    "product_id": "MpOtBtOeRs2eDyLXO_ZS6Q==",
+    "status": "created",
+    "url": "https://frudev.gumroad.com/l/aireadylife-records"
+  },
+  {
+    "name": "AI Ready Life: Complete Bundle",
+    "slug": "aireadylife-bundle",
+    "domain": "bundle",
+    "product_id": "Nya3A6QAHn_RkTfHDqi7Fg==",
+    "status": "created",
+    "url": "https://frudev.gumroad.com/l/aireadylife-bundle"
+  },
+  {
+    "name": "AI Ready Life: Core Bundle",
+    "slug": "aireadylife-core-bundle",
+    "domain": "core-bundle",
+    "product_id": "hnm41xJUM6dHZYCb2YHDXg==",
+    "status": "created",
+    "url": "https://frudev.gumroad.com/l/aireadylife-core-bundle"
+  }
+]

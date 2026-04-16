@@ -1,6 +1,0 @@
-schema: paperclip/v1
-
-plugin:
-  brandColor: "#1A4B8B"
-  description: "2 AI agents focused on your life vision — quarterly planning, goal tracking, 13-domain life scorecard, and strategic alignment between your calendar and your priorities. Monthly scorecards. Quarterly planning sessions. Everything runs locally. Private. On your machine."
-  requireBoardApprovalForNewAgents: false

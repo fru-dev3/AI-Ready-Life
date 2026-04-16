@@ -1,45 +1,56 @@
 # AI Ready Life: Calendar — Quickstart
 
-Welcome to your Calendar vault. This plugin bridges your calendar with every other domain in your life — pulling deadlines from Tax, Benefits, Estate, and Records into a unified view, and protecting your focus time against meeting creep.
+Welcome to your Calendar vault. This is where your protect focus time and surface deadlines before they pile up.
 
 ## What's in this vault
 
-- **config.md** — your calendar profile: primary calendar, work hours, focus preferences, domains to sync
-- **state.md** — demo data (Alex Rivera) showing deadlines and focus time analysis
-- **PROMPTS.md** — 30+ example prompts to get you started
-- **00_current/** — active deadlines and this week's agenda
-- **01_events/** — manually logged events and milestones
-- **02_deadlines/** — cross-domain deadline registry
-- **03_briefs/** — weekly agenda briefs the AI generates
+- **config.md** — your calendar profile and settings
+- **open-loops.md** — active flags and open items the agent is tracking
+- **00_current/** — active documents and your current calendar state
+- **01_prior/** — prior period records, organized by date
+- **02_briefs/** — briefs and reports the agent generates
 
-## Step 1 — Fill in config.md
+The `state.md` file in this demo vault shows what a fully populated calendar state looks like (Alex Rivera demo data).
 
-Open `config.md` and set your primary calendar, timezone, work hours, and focus block preferences. Add which domains you want deadline sync from — at minimum add `tax, benefits, estate, records`. These are the domains with hard external deadlines.
+## Step 1 — Place your vault
 
-## Step 2 — Install the plugin
-
-In Claude Code, add the Calendar plugin from GitHub:
+Move this `calendar/` folder to:
 
 ```
-/install github.com/fru-dev3/aireadyu-life/calendar
+~/Documents/AIReadyLife/vault/calendar/
 ```
 
-## Step 3 — Run your first skill
+Your full vault path will be: `~/Documents/AIReadyLife/vault/calendar/`
 
-Open Claude and try one of these:
+## Step 2 — Fill in config.md
 
-- "Build my weekly agenda"
-- "What deadlines are coming up in the next 30 days?"
-- "How much focus time did I have this week?"
-- "Add the Q2 tax deadline to my deadlines list"
+Open `config.md` and fill in your details. You don't need everything on day one — fill what you know and leave the rest blank. The agent will tell you what's missing when you run your first skill.
 
-Claude will build your agenda from all active domains and surface any approaching deadlines.
+## Step 3 — Add the domain to Claude Desktop
+
+In Claude Desktop, open your AI Ready Life project folder:
+
+```
+~/Documents/AIReadyLife/
+```
+
+If you've installed the Calendar domain from GitHub, it will be available under `domains/calendar/`. The agent reads your vault automatically from the path in Step 1.
+
+## Step 4 — Run your first skill
+
+Open Claude and try:
+
+- "Give me a calendar brief"
+- "What's my calendar status?"
+- "Run my calendar review"
+
+Claude will read your config and vault, then give you a personalized calendar summary.
 
 ## Tips
 
-- **Deadlines beat appointments.** The most valuable thing Calendar does is pull hard deadlines from other domains before you forget them.
-- **Focus time analysis is honest.** If your calendar is full of meetings and you wonder why nothing gets done, this skill will quantify it.
-- **School calendar matters.** If you have kids, add your school district name — Claude knows the major school events.
-- **Sync with your real calendar.** The Google Calendar integration lets Claude add events directly.
+- **Start with config.md.** The more complete it is, the smarter your agent.
+- **00_current/ is your working space.** Drop documents, notes, and exports here.
+- **02_briefs/ fills up automatically.** The agent writes reports here after each review.
+- **open-loops.md tracks what needs action.** The agent flags items here and clears them when resolved.
 
-Time is your only non-renewable resource. Protect it deliberately.
+Your Calendar AI is only as smart as the data you give it. Start simple, add more over time.

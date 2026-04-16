@@ -1,5 +1,0 @@
-schema: paperclip/v1
-plugin:
-  brandColor: "#1A6B3A"
-  description: "2 AI agents that maximize your 401k match, HSA triple-tax advantage, and coverage optimization. 10 skills for year-round benefits clarity."
-  requireBoardApprovalForNewAgents: false

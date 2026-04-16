@@ -20,28 +20,25 @@ If `~/Documents/AIReadyLife/vault/vision/` does not exist or is empty:
 4. Open `~/Documents/AIReadyLife/vault/vision/config.md` and fill in your details
 5. Return here and run any skill — it will find your vault automatically
 
-The vault includes the full folder structure, a config template, a Quick Start guide, and a prompt reference for every skill in this plugin.
-
 ## Vault Structure
 
 ```
 ~/Documents/AIReadyLife/vault/vision/
-├── 00_current/
-├── 01_goals/
-├── 02_scorecard/
-├── 03_briefs/
-├── 04_planning/
-├── 05_archive/
-└── config.md
-└── open-loops.md
+├── config.md          — your profile and settings
+├── open-loops.md      — active flags and open items
+├── 00_current/        — active documents and current state
+├── 01_prior/          — prior period records
+└── 02_briefs/         — generated briefs and reports
 ```
 
-- `00_current/` — Active vision document and current OKRs
-- `01_goals/` — Quarterly OKR history by year/quarter
-- `02_scorecard/` — Monthly 13-domain life scorecard history
-- `03_briefs/` — Monthly vision review briefs
-- `04_planning/` — Quarterly planning session notes and outcomes
-- `05_archive/` — Prior year vision docs and annual reviews
+## Skills
+
+Skills are organized under `domains/vision/skills/`:
+
+- `00_ops/` — recurring operations (reviews, syncs, watches)
+- `01_flows/` — data flows that build summaries and reports
+- `02_tasks/` — atomic write tasks (flag, log, update)
+- `apps/` — app integrations
 
 ## Checking Vault Status
 
@@ -49,7 +46,3 @@ Before running any skill, confirm the vault exists:
 - Check that `~/Documents/AIReadyLife/vault/vision/config.md` is present and filled in
 - If it is missing, direct the user to purchase the vault template above
 - If it exists but config fields are blank, prompt the user to complete setup before proceeding
-
-## Coverage
-
-This plugin manages your goals, scorecard, quarterly plans, and milestones.

@@ -1,44 +1,56 @@
 # AI Ready Life: Chief — Quickstart
 
-Welcome to your Chief of Staff vault. Chief is your daily briefing system — it pulls status from all your active domain plugins, surfaces what needs your attention, and keeps you oriented across every area of your life.
+Welcome to your Chief vault. This is where your orchestrate all your life domains from one place.
 
 ## What's in this vault
 
-- **config.md** — your Chief profile: timezone, active domains, top priorities, brief schedule
-- **state.md** — demo data (Alex Rivera) showing a daily brief with cross-domain alerts
-- **PROMPTS.md** — 30+ example prompts to get you started
-- **00_current/** — today's brief and active open loops
-- **01_briefs/** — historical daily and weekly briefs
-- **02_archive/** — older briefs by month
+- **config.md** — your chief profile and settings
+- **open-loops.md** — active flags and open items the agent is tracking
+- **00_current/** — active documents and your current chief state
+- **01_prior/** — prior period records, organized by date
+- **02_briefs/** — briefs and reports the agent generates
 
-## Step 1 — Fill in config.md
+The `state.md` file in this demo vault shows what a fully populated chief state looks like (Alex Rivera demo data).
 
-Open `config.md` and set your timezone, your daily brief time, and the list of active domains (only include domains where you've installed the plugin and filled in config). Add your top 3-5 priorities for the quarter — Chief uses these to flag what's most relevant.
+## Step 1 — Place your vault
 
-## Step 2 — Install the plugin
-
-In Claude Code, add the Chief plugin from GitHub:
+Move this `chief/` folder to:
 
 ```
-/install github.com/fru-dev3/aireadyu-life/chief
+~/Documents/AIReadyLife/vault/chief/
 ```
 
-## Step 3 — Run your first skill
+Your full vault path will be: `~/Documents/AIReadyLife/vault/chief/`
 
-Open Claude and try one of these:
+## Step 2 — Fill in config.md
 
-- "Run my daily brief"
-- "What needs my attention today?"
-- "Build my weekly agenda"
-- "What open loops are unresolved across all domains?"
+Open `config.md` and fill in your details. You don't need everything on day one — fill what you know and leave the rest blank. The agent will tell you what's missing when you run your first skill.
 
-Claude will pull status from every active domain and give you a unified brief — alerts, deadlines, and priorities in one place.
+## Step 3 — Add the domain to Claude Desktop
+
+In Claude Desktop, open your AI Ready Life project folder:
+
+```
+~/Documents/AIReadyLife/
+```
+
+If you've installed the Chief domain from GitHub, it will be available under `domains/chief/`. The agent reads your vault automatically from the path in Step 1.
+
+## Step 4 — Run your first skill
+
+Open Claude and try:
+
+- "Give me a chief brief"
+- "What's my chief status?"
+- "Run my chief review"
+
+Claude will read your config and vault, then give you a personalized chief summary.
 
 ## Tips
 
-- **Chief is most powerful with multiple domains.** The more plugins you have installed, the richer the cross-domain picture.
-- **Set your top priorities.** Chief uses them to surface the most relevant items from each domain every day.
-- **Daily briefs compound.** The more consistently you run them, the better Claude gets at what matters to you.
-- **Open loops are tracked here.** Ask Chief to "check all open loops" and it'll pull the unresolved list from every domain.
+- **Start with config.md.** The more complete it is, the smarter your agent.
+- **00_current/ is your working space.** Drop documents, notes, and exports here.
+- **02_briefs/ fills up automatically.** The agent writes reports here after each review.
+- **open-loops.md tracks what needs action.** The agent flags items here and clears them when resolved.
 
-Chief is the connective tissue between all your other plugins. Install it last, use it daily.
+Your Chief AI is only as smart as the data you give it. Start simple, add more over time.

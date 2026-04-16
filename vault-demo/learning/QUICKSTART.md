@@ -1,45 +1,56 @@
 # AI Ready Life: Learning — Quickstart
 
-Welcome to your Learning vault. Most people have half-finished courses, books they meant to read, and certifications they've been "going to get" for two years. This vault gives your learning system accountability and momentum.
+Welcome to your Learning vault. This is where your track your courses, reading, and certifications.
 
 ## What's in this vault
 
-- **config.md** — your learning profile: target skills, active courses, certifications, reading list, weekly hours
-- **state.md** — demo data (Alex Rivera) showing active courses, certifications in progress, and a reading list
-- **PROMPTS.md** — 30+ example prompts to get you started
-- **00_current/** — active learning snapshot and progress
-- **01_active/** — current courses and study materials
-- **02_completed/** — completed courses and certifications earned
-- **03_wishlist/** — future courses and books to add
+- **config.md** — your learning profile and settings
+- **open-loops.md** — active flags and open items the agent is tracking
+- **00_current/** — active documents and your current learning state
+- **01_prior/** — prior period records, organized by date
+- **02_briefs/** — briefs and reports the agent generates
 
-## Step 1 — Fill in config.md
+The `state.md` file in this demo vault shows what a fully populated learning state looks like (Alex Rivera demo data).
 
-Open `config.md` and fill in your current role, target skills, and any active courses (name, platform, and rough progress percentage). Add certifications you're pursuing or planning to pursue. Set your weekly learning hours — even if it feels optimistic, committing to a number matters.
+## Step 1 — Place your vault
 
-## Step 2 — Install the plugin
-
-In Claude Code, add the Learning plugin from GitHub:
+Move this `learning/` folder to:
 
 ```
-/install github.com/fru-dev3/aireadyu-life/learning
+~/Documents/AIReadyLife/vault/learning/
 ```
 
-## Step 3 — Run your first skill
+Your full vault path will be: `~/Documents/AIReadyLife/vault/learning/`
 
-Open Claude and try one of these:
+## Step 2 — Fill in config.md
 
-- "Run my learning monthly review"
-- "Am I on track with my courses?"
-- "What should I be learning for my target role?"
-- "Build my reading progress summary"
+Open `config.md` and fill in your details. You don't need everything on day one — fill what you know and leave the rest blank. The agent will tell you what's missing when you run your first skill.
 
-Claude will review your learning state, flag anything falling behind, and give you a prioritized recommendation.
+## Step 3 — Add the domain to Claude Desktop
+
+In Claude Desktop, open your AI Ready Life project folder:
+
+```
+~/Documents/AIReadyLife/
+```
+
+If you've installed the Learning domain from GitHub, it will be available under `domains/learning/`. The agent reads your vault automatically from the path in Step 1.
+
+## Step 4 — Run your first skill
+
+Open Claude and try:
+
+- "Give me a learning brief"
+- "What's my learning status?"
+- "Run my learning review"
+
+Claude will read your config and vault, then give you a personalized learning summary.
 
 ## Tips
 
-- **Progress percentage is a forcing function.** Updating it regularly makes it obvious when a course is stalling.
-- **Skills gap review is the killer feature.** Tell Claude your target role and it'll compare your skills to real job requirements.
-- **Log completions immediately.** When you finish a course or book, ask Claude to "log this completion" — it builds a satisfying record.
-- **Employer benefits go unused.** If your employer offers tuition reimbursement or a Udemy license, add it — Claude will remind you to use it.
+- **Start with config.md.** The more complete it is, the smarter your agent.
+- **00_current/ is your working space.** Drop documents, notes, and exports here.
+- **02_briefs/ fills up automatically.** The agent writes reports here after each review.
+- **open-loops.md tracks what needs action.** The agent flags items here and clears them when resolved.
 
-Learning is the highest ROI investment you can make in yourself.
+Your Learning AI is only as smart as the data you give it. Start simple, add more over time.

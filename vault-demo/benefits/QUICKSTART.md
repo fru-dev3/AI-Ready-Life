@@ -1,45 +1,56 @@
 # AI Ready Life: Benefits — Quickstart
 
-Welcome to your Benefits vault. Employee benefits are worth tens of thousands of dollars a year — but most people leave money on the table because they don't track them. This vault changes that.
+Welcome to your Benefits vault. This is where your maximize your 401k match, HSA contributions, and coverage.
 
 ## What's in this vault
 
-- **config.md** — your benefits profile: 401k, HSA, health plan, ESPP, equity grants, open enrollment dates
-- **state.md** — demo data (Alex Rivera) showing a fully populated benefits picture
-- **PROMPTS.md** — 30+ example prompts to get you started
-- **00_current/** — your current benefits snapshot
-- **01_enrollment/** — open enrollment elections and plan comparisons
-- **02_claims/** — insurance claims and reimbursements
-- **03_briefs/** — benefits review briefs the AI generates
+- **config.md** — your benefits profile and settings
+- **open-loops.md** — active flags and open items the agent is tracking
+- **00_current/** — active documents and your current benefits state
+- **01_prior/** — prior period records, organized by date
+- **02_briefs/** — briefs and reports the agent generates
 
-## Step 1 — Fill in config.md
+The `state.md` file in this demo vault shows what a fully populated benefits state looks like (Alex Rivera demo data).
 
-Open `config.md` and fill in your employer, 401k custodian and contribution percentage, employer match formula, health plan details, and HSA balance. If you have ESPP or equity grants, add those too. Open enrollment dates are critical — add them.
+## Step 1 — Place your vault
 
-## Step 2 — Install the plugin
-
-In Claude Code, add the Benefits plugin from GitHub:
+Move this `benefits/` folder to:
 
 ```
-/install github.com/fru-dev3/aireadyu-life/benefits
+~/Documents/AIReadyLife/vault/benefits/
 ```
 
-## Step 3 — Run your first skill
+Your full vault path will be: `~/Documents/AIReadyLife/vault/benefits/`
 
-Open Claude and try one of these:
+## Step 2 — Fill in config.md
 
+Open `config.md` and fill in your details. You don't need everything on day one — fill what you know and leave the rest blank. The agent will tell you what's missing when you run your first skill.
+
+## Step 3 — Add the domain to Claude Desktop
+
+In Claude Desktop, open your AI Ready Life project folder:
+
+```
+~/Documents/AIReadyLife/
+```
+
+If you've installed the Benefits domain from GitHub, it will be available under `domains/benefits/`. The agent reads your vault automatically from the path in Step 1.
+
+## Step 4 — Run your first skill
+
+Open Claude and try:
+
+- "Give me a benefits brief"
+- "What's my benefits status?"
 - "Run my benefits review"
-- "Check my HSA balance and contributions"
-- "Review my 401k allocation"
-- "Is my open enrollment window coming up?"
 
-Claude will give you a benefits brief with observations, gaps, and action items.
+Claude will read your config and vault, then give you a personalized benefits summary.
 
 ## Tips
 
-- **Employer match is free money.** Confirm you're contributing at least enough to capture the full match — ask Claude to verify.
-- **HSA has a triple tax advantage.** Keep the balance updated. Claude will track it against your deductible.
-- **ESPP is often underutilized.** If your company offers it, Claude can calculate the guaranteed return on the discount.
-- **Equity vesting schedules matter for career decisions.** Keep your grants updated in config.md.
+- **Start with config.md.** The more complete it is, the smarter your agent.
+- **00_current/ is your working space.** Drop documents, notes, and exports here.
+- **02_briefs/ fills up automatically.** The agent writes reports here after each review.
+- **open-loops.md tracks what needs action.** The agent flags items here and clears them when resolved.
 
-Open enrollment only comes once a year. Let your AI help you make the right choices.
+Your Benefits AI is only as smart as the data you give it. Start simple, add more over time.

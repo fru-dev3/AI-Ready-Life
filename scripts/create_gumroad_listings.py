@@ -317,7 +317,13 @@ def create_product(name, description, price_cents, custom_url):
         },
         timeout=15,
     )
-    return resp.json()
+    try:
+        return resp.json()
+    except Exception:
+        return {
+            "success": False,
+            "message": f"HTTP {resp.status_code}: empty or non-JSON response",
+        }
 
 
 def list_existing():

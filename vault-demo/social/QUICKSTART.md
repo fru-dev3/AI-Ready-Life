@@ -1,45 +1,56 @@
 # AI Ready Life: Social — Quickstart
 
-Welcome to your Social vault. The relationships that matter most often get neglected the most — not because you don't care, but because life gets busy. This vault makes staying in touch systematic without making it feel transactional.
+Welcome to your Social vault. This is where your stay on top of your relationships and never miss a birthday.
 
 ## What's in this vault
 
-- **config.md** — your social profile: check-in intervals by relationship tier, outreach preferences, birthday tracking
-- **state.md** — demo data (Alex Rivera) showing a relationship health summary with an outreach queue
-- **PROMPTS.md** — 25+ example prompts to get you started
-- **00_current/** — today's outreach queue and relationship health snapshot
-- **01_contacts/** — your relationship database
-- **02_outreach/** — drafted messages and outreach history
-- **03_archive/** — past interaction logs
+- **config.md** — your social profile and settings
+- **open-loops.md** — active flags and open items the agent is tracking
+- **00_current/** — active documents and your current social state
+- **01_prior/** — prior period records, organized by date
+- **02_briefs/** — briefs and reports the agent generates
 
-## Step 1 — Fill in config.md
+The `state.md` file in this demo vault shows what a fully populated social state looks like (Alex Rivera demo data).
 
-Open `config.md` and set your check-in intervals by tier — how often do you want to hear from your closest friends? Every 30 days? 60? Set your preferred outreach channels (text, email, LinkedIn, coffee) and your birthday calendar ID.
+## Step 1 — Place your vault
 
-## Step 2 — Install the plugin
-
-In Claude Code, add the Social plugin from GitHub:
+Move this `social/` folder to:
 
 ```
-/install github.com/fru-dev3/aireadyu-life/social
+~/Documents/AIReadyLife/vault/social/
 ```
 
-## Step 3 — Run your first skill
+Your full vault path will be: `~/Documents/AIReadyLife/vault/social/`
 
-Open Claude and try one of these:
+## Step 2 — Fill in config.md
 
-- "Run my relationship review"
-- "Who's overdue for a check-in?"
-- "Build my outreach queue for this week"
-- "Log an interaction with [name]"
+Open `config.md` and fill in your details. You don't need everything on day one — fill what you know and leave the rest blank. The agent will tell you what's missing when you run your first skill.
 
-Claude will analyze your relationship state and give you a prioritized outreach list with suggested conversation starters.
+## Step 3 — Add the domain to Claude Desktop
+
+In Claude Desktop, open your AI Ready Life project folder:
+
+```
+~/Documents/AIReadyLife/
+```
+
+If you've installed the Social domain from GitHub, it will be available under `domains/social/`. The agent reads your vault automatically from the path in Step 1.
+
+## Step 4 — Run your first skill
+
+Open Claude and try:
+
+- "Give me a social brief"
+- "What's my social status?"
+- "Run my social review"
+
+Claude will read your config and vault, then give you a personalized social summary.
 
 ## Tips
 
-- **Tiers make it manageable.** You don't need to stay in touch with everyone at the same frequency. Close friends every 30 days, broader network every 90-180 days is a good starting point.
-- **Log interactions when they happen.** A quick "log interaction with Sarah — coffee chat about career change" keeps your history current.
-- **Birthday reminders are the easiest wins.** Set your birthday calendar ID and Claude will surface upcoming birthdays in your outreach queue.
-- **Outreach drafts reduce friction.** Claude will draft a personalized message for anyone on your queue — you just need to send it.
+- **Start with config.md.** The more complete it is, the smarter your agent.
+- **00_current/ is your working space.** Drop documents, notes, and exports here.
+- **02_briefs/ fills up automatically.** The agent writes reports here after each review.
+- **open-loops.md tracks what needs action.** The agent flags items here and clears them when resolved.
 
-Strong relationships are built through consistency, not grand gestures.
+Your Social AI is only as smart as the data you give it. Start simple, add more over time.
