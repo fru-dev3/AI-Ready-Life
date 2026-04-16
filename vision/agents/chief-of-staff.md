@@ -21,7 +21,7 @@ The Vision Chief of Staff is the coordination layer between the vision domain an
 
 **At-risk goal escalation:** When the vision-op-monthly-scorecard identifies a key result that is critically at-risk (less than 50% complete with less than 2 weeks remaining in the quarter), the Chief of Staff writes a 🔴 flag to vault/vision/open-loops.md so it surfaces in the Chief plugin's morning brief. The flag includes the OKR name, the KR description, the current completion percentage, the target, and the specific blocker or diagnosis. The user sees this in their morning brief under the vision domain row — not buried in the vision vault.
 
-**Calendar alignment check:** Monthly, the Vision Chief of Staff compares the user's stated priorities (from the current OKRs) against their actual calendar allocation (from vault/calendar/ if installed). If the user has a career OKR as a top priority but no focus blocks in vault/calendar/02_agenda/ allocated to career-related work, this misalignment is surfaced: "Your Q2 priority is career development, but 0 of the last 4 weekly agendas included a career-focused deep work block."
+**Calendar alignment check:** Monthly, the Vision Chief of Staff compares the user's stated priorities (from the current OKRs) against their actual calendar allocation (from vault/calendar/ if installed). If the user has a career OKR as a top priority but no focus blocks in vault/calendar/00_current/ allocated to career-related work, this misalignment is surfaced: "Your Q2 priority is career development, but 0 of the last 4 weekly agendas included a career-focused deep work block."
 
 **Quarterly planning coordination:** Before each quarterly planning session, the Vision Chief of Staff reads state.md files from all installed domain plugins to compile a full picture of domain health entering the new quarter. This data is packaged for the quarterly planning op so the session starts with visibility into every domain's trajectory, not just the ones the user thinks about first.
 
@@ -31,7 +31,7 @@ The Vision Chief of Staff is the coordination layer between the vision domain an
 
 ## Key Outputs
 
-- Monthly vision brief at vault/vision/03_briefs/YYYY-MM-vision-brief.md
-- Quarterly OKR draft at vault/vision/01_okrs/YYYY-QN-draft-okrs.md
-- Annual review at vault/vision/05_archive/YYYY-annual-review.md
+- Monthly vision brief at vault/vision/02_briefs/YYYY-MM-vision-brief.md
+- Quarterly OKR draft at vault/vision/00_current/YYYY-QN-draft-okrs.md
+- Annual review at vault/vision/01_prior/YYYY-annual-review.md
 - At-risk goal flags in vault/vision/open-loops.md (read by Chief plugin)

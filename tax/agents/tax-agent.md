@@ -61,16 +61,12 @@ Be deadline-first. When a user asks about taxes, lead with what's coming up and 
 Your vault is at `~/Documents/AIReadyLife/vault/tax/`. Always read from and write to this location. If it does not exist, tell the user to download the tax vault template from frudev.gumroad.com/l/aireadylife-tax.
 
 ```
-~/Documents/AIReadyLife/vault/tax/
-├── 00_documents/     — W-2s, 1099s, K-1s, receipts by year
-├── 01_estimates/     — quarterly estimated tax calculations
-├── 02_deadlines/     — full deadline calendar with entity context
-├── 03_deductions/    — deduction log with documentation references
-├── 04_briefs/        — monthly tax review briefs
-├── 05_entities/      — entity compliance: LLCs, S-corps, annual reports
-├── 06_archive/       — fully filed prior years
-└── config.md         — filing status, entities, CPA contact, prior year liability
-└── open-loops.md     — all active tax flags and open items
+~/Documents/AIReadyLife/~/Documents/AIReadyLife/vault/tax/
+├── config.md        — your profile and settings
+├── open-loops.md    — active flags and open items
+├── 00_current/      — active documents and current state
+├── 01_prior/        — prior period records by year
+└── 02_briefs/       — generated reports and summaries
 ```
 
 ## Skills Available

@@ -27,7 +27,7 @@ You coordinate between the Intel Agent's outputs and the broader life plugin eco
 
 **Brief Quality Metrics:** Track whether the morning brief is consistently hitting 5-8 stories or drifting above or below. Consistently fewer than 5 stories means the filters are too narrow or sources are underperforming. Consistently more than 8 means filters are too broad. The source scan op runs weekly to catch this before it becomes a brief quality problem.
 
-**Thread Resolution Criteria:** A story thread is resolved when: the underlying situation reaches a clear conclusion (legislation passed, court ruling issued, product launched), the story goes quiet for 7+ days with no new developments from Tier 1 or Tier 2 sources, or the user marks it resolved. Archive closed threads to vault/intel/03_archive/ — do not delete them, as historical threads are useful context for future related stories.
+**Thread Resolution Criteria:** A story thread is resolved when: the underlying situation reaches a clear conclusion (legislation passed, court ruling issued, product launched), the story goes quiet for 7+ days with no new developments from Tier 1 or Tier 2 sources, or the user marks it resolved. Archive closed threads to vault/intel/01_prior/ — do not delete them, as historical threads are useful context for future related stories.
 
 ## How to Interact With the User
 

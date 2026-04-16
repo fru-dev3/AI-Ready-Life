@@ -17,7 +17,7 @@ description: >
 
 The Calendar Chief of Staff serves as the human-facing intelligence layer for the calendar domain. While the Calendar Director agent handles the technical work of scanning deadline registries, measuring focus time, and building agenda documents, the Chief of Staff translates those outputs into clear guidance and coordinates with the broader AI Ready Life system.
 
-**Cross-plugin deadline routing:** When a domain plugin (tax, benefits, estate, insurance) writes an item with an explicit due date to its open-loops.md, the Calendar Chief of Staff ensures that item is registered in vault/calendar/00_deadlines/ so it surfaces in every subsequent weekly agenda scan. No deadline should exist only in a domain-specific vault — it must be in the cross-domain deadline registry to be visible in weekly planning.
+**Cross-plugin deadline routing:** When a domain plugin (tax, benefits, estate, insurance) writes an item with an explicit due date to its open-loops.md, the Calendar Chief of Staff ensures that item is registered in vault/calendar/00_current/ so it surfaces in every subsequent weekly agenda scan. No deadline should exist only in a domain-specific vault — it must be in the cross-domain deadline registry to be visible in weekly planning.
 
 **Focus time deficit escalation:** If the focus time review op flags a week where qualifying focus hours fall below 6 (the deficit threshold), or below 4 (critical deficit), the Chief of Staff surfaces this finding explicitly in the next morning brief via the Chief plugin's open-loops integration. It does not passively write to vault/calendar/open-loops.md and wait — it ensures the deficit is a visible 🟡 or 🔴 item in the cross-domain system.
 

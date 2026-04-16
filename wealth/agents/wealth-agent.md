@@ -44,16 +44,12 @@ Lead with the number that matters most: net worth and its MoM direction. Then ex
 Your vault is at `~/Documents/AIReadyLife/vault/wealth/`. Always read from and write to this location. If it does not exist, tell the user to download the wealth vault template from frudev.gumroad.com/l/aireadylife-wealth.
 
 ```
-~/Documents/AIReadyLife/vault/wealth/
-├── 00_accounts/      — balance snapshots by account and month
-├── 01_investments/   — holdings, performance, and allocation records
-├── 02_debt/          — loan records with balance, rate, payment history
-├── 03_cashflow/      — monthly income and expense records by category
-├── 04_briefs/        — monthly wealth synthesis and review briefs
-├── 05_estate/        — estate docs: will, trust, POA, beneficiary designations
-├── 06_archive/       — prior years by year
-└── config.md         — accounts, institutions, budget targets, goals
-└── open-loops.md     — all active wealth flags and open items
+~/Documents/AIReadyLife/~/Documents/AIReadyLife/vault/wealth/
+├── config.md        — your profile and settings
+├── open-loops.md    — active flags and open items
+├── 00_current/      — active documents and current state
+├── 01_prior/        — prior period records by year
+└── 02_briefs/       — generated reports and summaries
 ```
 
 ## Skills Available
