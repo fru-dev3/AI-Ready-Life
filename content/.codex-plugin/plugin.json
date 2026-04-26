@@ -1,6 +1,6 @@
 {
   "name": "content",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "2 AI agents that manage your content business \u2014 YouTube analytics, newsletter metrics, LinkedIn growth, Gumroad revenue, and publishing schedule.",
   "author": {
     "name": "fru.dev",
@@ -32,6 +32,6 @@
     "websiteURL": "https://aireadyu.dev",
     "composerIcon": "./.codex-plugin/icon.svg",
     "logo": "./.codex-plugin/logo.svg",
-    "brandColor": "#C4A35A"
+    "brandColor": "#3B8A6A"
   }
 }

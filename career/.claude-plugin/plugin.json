@@ -1,7 +1,7 @@
 {
   "name": "career",
   "description": "Career management \u2014 compensation benchmarks, job search, market scanning, skills gaps",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "author": {
     "name": "AI-Ready U.",
     "email": "hello@fru.dev"

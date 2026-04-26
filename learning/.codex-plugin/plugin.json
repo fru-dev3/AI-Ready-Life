@@ -1,6 +1,6 @@
 {
   "name": "learning",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "1 AI agent that manages your skill development \u2014 active courses, reading list, certifications, and learning goals.",
   "author": {
     "name": "fru.dev",
@@ -32,6 +32,6 @@
     "websiteURL": "https://aireadyu.dev",
     "composerIcon": "./.codex-plugin/icon.svg",
     "logo": "./.codex-plugin/logo.svg",
-    "brandColor": "#C4A35A"
+    "brandColor": "#3B8A6A"
   }
 }

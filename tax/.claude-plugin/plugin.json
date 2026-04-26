@@ -1,7 +1,7 @@
 {
   "name": "tax",
   "description": "Tax planning \u2014 deadlines, estimates, deductions, entity compliance, filing",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "author": {
     "name": "AI-Ready U.",
     "email": "hello@fru.dev"

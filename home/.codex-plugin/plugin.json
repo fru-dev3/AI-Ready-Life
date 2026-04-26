@@ -1,6 +1,6 @@
 {
   "name": "home",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "1 AI agent that manages your home \u2014 maintenance tracking, home expenses, seasonal task lists, and household organization.",
   "author": {
     "name": "fru.dev",
@@ -31,6 +31,6 @@
     "websiteURL": "https://aireadyu.dev",
     "composerIcon": "./.codex-plugin/icon.svg",
     "logo": "./.codex-plugin/logo.svg",
-    "brandColor": "#C4A35A"
+    "brandColor": "#3B8A6A"
   }
 }

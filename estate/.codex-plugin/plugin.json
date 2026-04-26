@@ -1,6 +1,6 @@
 {
   "name": "estate",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "2 AI agents that manage your rental property portfolio \u2014 cash flow tracking, tenant management, maintenance, insurance, and investment performance.",
   "author": {
     "name": "fru.dev",
@@ -32,6 +32,6 @@
     "websiteURL": "https://aireadyu.dev",
     "composerIcon": "./.codex-plugin/icon.svg",
     "logo": "./.codex-plugin/logo.svg",
-    "brandColor": "#C4A35A"
+    "brandColor": "#3B8A6A"
   }
 }

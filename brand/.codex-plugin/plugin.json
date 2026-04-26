@@ -1,6 +1,6 @@
 {
   "name": "brand",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "2 AI agents \u2014 Chief of Staff + Brand Director. Consistent brand presence, mention monitoring, analytics tracking, and monthly synthesis reports.",
   "author": {
     "name": "fru.dev",
@@ -31,6 +31,6 @@
     "websiteURL": "https://aireadyu.dev",
     "composerIcon": "./.codex-plugin/icon.svg",
     "logo": "./.codex-plugin/logo.svg",
-    "brandColor": "#C4A35A"
+    "brandColor": "#3B8A6A"
   }
 }
