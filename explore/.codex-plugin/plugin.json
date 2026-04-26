@@ -1,6 +1,6 @@
 {
   "name": "explore",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "1 AI agent that manages your travel life \u2014 trip planning, passport and document status, travel wishlist, and upcoming adventure prep.",
   "author": {
     "name": "fru.dev",
@@ -29,6 +29,9 @@
       "Read",
       "Write"
     ],
-    "websiteURL": "https://aireadyu.dev"
+    "websiteURL": "https://aireadyu.dev",
+    "composerIcon": "./.codex-plugin/icon.svg",
+    "logo": "./.codex-plugin/logo.svg",
+    "brandColor": "#C4A35A"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "tax",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "2 AI agents that manage your personal tax picture \u2014 deadline tracking, estimate calculations, deduction reviews, entity compliance, and accountant readiness.",
   "author": {
     "name": "fru.dev",
@@ -29,6 +29,9 @@
       "Read",
       "Write"
     ],
-    "websiteURL": "https://aireadyu.dev"
+    "websiteURL": "https://aireadyu.dev",
+    "composerIcon": "./.codex-plugin/icon.svg",
+    "logo": "./.codex-plugin/logo.svg",
+    "brandColor": "#C4A35A"
   }
 }

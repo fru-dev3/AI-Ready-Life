@@ -1,6 +1,6 @@
 {
   "name": "calendar",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "2 AI agents \u2014 Chief of Staff + Calendar Director. Protect focus time, surface deadlines before they're urgent, align schedule with priorities.",
   "author": {
     "name": "fru.dev",
@@ -28,6 +28,9 @@
       "Read",
       "Write"
     ],
-    "websiteURL": "https://aireadyu.dev"
+    "websiteURL": "https://aireadyu.dev",
+    "composerIcon": "./.codex-plugin/icon.svg",
+    "logo": "./.codex-plugin/logo.svg",
+    "brandColor": "#C4A35A"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "health",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "2 AI agents that manage your personal health \u2014 wellness tracking, lab review, medication monitoring, appointment management, and insurance/HSA oversight.",
   "author": {
     "name": "fru.dev",
@@ -30,6 +30,9 @@
       "Read",
       "Write"
     ],
-    "websiteURL": "https://aireadyu.dev"
+    "websiteURL": "https://aireadyu.dev",
+    "composerIcon": "./.codex-plugin/icon.svg",
+    "logo": "./.codex-plugin/logo.svg",
+    "brandColor": "#C4A35A"
   }
 }

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" width="320" height="80">
+  <rect x="8" y="8" width="64" height="64" rx="14" fill="#1A1A1A"/>
+  <text x="40" y="48" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="700" fill="#C4A35A" text-anchor="middle" letter-spacing="-0.5">IN</text>
+  <text x="88" y="40" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="700" fill="#1A1A1A">Insurance</text>
+  <text x="88" y="60" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#666">AI Ready Life</text>
+</svg>

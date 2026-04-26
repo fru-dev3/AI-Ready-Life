@@ -1,6 +1,6 @@
 {
   "name": "intel",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "1 AI agent that scans your curated news sources daily \u2014 AI, tech, finance, and world news filtered to your interests.",
   "author": {
     "name": "fru.dev",
@@ -28,6 +28,9 @@
       "Read",
       "Write"
     ],
-    "websiteURL": "https://aireadyu.dev"
+    "websiteURL": "https://aireadyu.dev",
+    "composerIcon": "./.codex-plugin/icon.svg",
+    "logo": "./.codex-plugin/logo.svg",
+    "brandColor": "#C4A35A"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "vision",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "2 AI agents focused on your life vision \u2014 quarterly planning, goal tracking, 13-domain life scorecard, and strategic alignment.",
   "author": {
     "name": "fru.dev",
@@ -29,6 +29,9 @@
       "Read",
       "Write"
     ],
-    "websiteURL": "https://aireadyu.dev"
+    "websiteURL": "https://aireadyu.dev",
+    "composerIcon": "./.codex-plugin/icon.svg",
+    "logo": "./.codex-plugin/logo.svg",
+    "brandColor": "#C4A35A"
   }
 }

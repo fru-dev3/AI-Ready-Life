@@ -1,7 +1,7 @@
 {
   "name": "benefits",
   "description": "Benefits management \u2014 401k, HSA, open enrollment, equity, ESPP",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "author": {
     "name": "AI-Ready U.",
     "email": "hello@fru.dev"

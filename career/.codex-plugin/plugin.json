@@ -1,6 +1,6 @@
 {
   "name": "career",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "2 AI agents that manage your career \u2014 compensation benchmarking, job market scanning, application pipeline, skills gap analysis, and network outreach.",
   "author": {
     "name": "fru.dev",
@@ -29,6 +29,9 @@
       "Read",
       "Write"
     ],
-    "websiteURL": "https://aireadyu.dev"
+    "websiteURL": "https://aireadyu.dev",
+    "composerIcon": "./.codex-plugin/icon.svg",
+    "logo": "./.codex-plugin/logo.svg",
+    "brandColor": "#C4A35A"
   }
 }

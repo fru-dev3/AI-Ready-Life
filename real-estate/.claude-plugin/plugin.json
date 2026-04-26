@@ -1,7 +1,7 @@
 {
   "name": "real-estate",
   "description": "Real estate \u2014 market data, mortgage tracking, home search, investment analysis",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "author": {
     "name": "AI-Ready U.",
     "email": "hello@fru.dev"
