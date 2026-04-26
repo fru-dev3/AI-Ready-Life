@@ -1,10 +1,11 @@
 {
-  "name": "AI Ready Life",
+  "name": "ai-ready-life",
   "owner": {
     "name": "fru.dev",
     "email": "hello@fru.dev"
   },
   "metadata": {
+    "displayName": "AI Ready Life",
     "description": "AI Ready Life — 20 domain plugins for personal life management. Install one domain at a time.",
     "version": "1.0.2"
   },

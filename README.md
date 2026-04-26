@@ -101,12 +101,15 @@ The plugin reads your vault automatically via the path in `config.md`.
 
 #### Option B — Codex CLI
 
+Requires Codex CLI 0.125.0 or later (`brew upgrade --cask codex` if needed).
+
 ```bash
 codex plugin marketplace add fru-dev3/AI-Ready-Life
-codex plugin install health     # or wealth, tax, career, etc.
+codex                # start the interactive session
+/plugins             # browse the marketplace, select a domain, hit Install
 ```
 
-The marketplace manifest lives at `.agents/plugins/marketplace.json` and exposes all 20 domains. Install one or many. Skills are auto-discovered; if a new skill doesn't appear, restart Codex.
+The marketplace manifest lives at `.agents/plugins/marketplace.json` and exposes all 20 domains. Install one or many from the `/plugins` panel. Skills auto-discover after install; if a new skill doesn't appear, restart Codex.
 
 ### Step 3 — Run your first skill
 
