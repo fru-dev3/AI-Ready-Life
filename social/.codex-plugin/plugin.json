@@ -1,0 +1,34 @@
+{
+  "name": "aireadylife-social",
+  "version": "1.0.2",
+  "description": "1 AI agent that manages your personal relationships \u2014 birthday and milestone tracking, relationship health scores, check-in reminders.",
+  "author": {
+    "name": "fru.dev",
+    "email": "hello@fru.dev",
+    "url": "https://fru.dev"
+  },
+  "homepage": "https://aireadyu.dev",
+  "repository": "https://github.com/fru-dev3/AI-Ready-Life",
+  "license": "MIT",
+  "keywords": [
+    "relationships",
+    "network",
+    "birthdays",
+    "outreach",
+    "contacts",
+    "social"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "AI Ready Life: Social",
+    "shortDescription": "1 AI agent that manages your personal relationships \u2014 birthday and milestone tracking, relationship health scores, check-in reminders.",
+    "longDescription": "Relationship management \u2014 network health, outreach, contacts, birthdays Vault template: https://frudev.gumroad.com/l/aireadylife-social",
+    "developerName": "fru.dev",
+    "category": "Personal",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://aireadyu.dev"
+  }
+}

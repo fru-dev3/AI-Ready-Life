@@ -1,0 +1,34 @@
+{
+  "name": "aireadylife-real-estate",
+  "version": "1.0.2",
+  "description": "1 AI agent focused on real estate market research \u2014 home purchase analysis, buy vs. rent decisions, market trends, and portfolio expansion strategy.",
+  "author": {
+    "name": "fru.dev",
+    "email": "hello@fru.dev",
+    "url": "https://fru.dev"
+  },
+  "homepage": "https://aireadyu.dev",
+  "repository": "https://github.com/fru-dev3/AI-Ready-Life",
+  "license": "MIT",
+  "keywords": [
+    "real-estate",
+    "buy-vs-rent",
+    "market",
+    "mortgage",
+    "listings",
+    "investment"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "AI Ready Life: Real Estate",
+    "shortDescription": "1 AI agent focused on real estate market research \u2014 home purchase analysis, buy vs. rent decisions, market trends, and portfolio expansion strategy.",
+    "longDescription": "Real estate \u2014 market data, mortgage tracking, home search, investment analysis Vault template: https://frudev.gumroad.com/l/aireadylife-real-estate",
+    "developerName": "fru.dev",
+    "category": "Finance",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://aireadyu.dev"
+  }
+}

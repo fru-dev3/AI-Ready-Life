@@ -1,0 +1,33 @@
+{
+  "name": "aireadylife-intel",
+  "version": "1.0.2",
+  "description": "1 AI agent that scans your curated news sources daily \u2014 AI, tech, finance, and world news filtered to your interests.",
+  "author": {
+    "name": "fru.dev",
+    "email": "hello@fru.dev",
+    "url": "https://fru.dev"
+  },
+  "homepage": "https://aireadyu.dev",
+  "repository": "https://github.com/fru-dev3/AI-Ready-Life",
+  "license": "MIT",
+  "keywords": [
+    "news",
+    "intelligence",
+    "research",
+    "monitoring",
+    "signals"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "AI Ready Life: Intel",
+    "shortDescription": "1 AI agent that scans your curated news sources daily \u2014 AI, tech, finance, and world news filtered to your interests.",
+    "longDescription": "News and market intelligence \u2014 monitoring, research, signal filtering Vault template: https://frudev.gumroad.com/l/aireadylife-intel",
+    "developerName": "fru.dev",
+    "category": "Personal",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://aireadyu.dev"
+  }
+}

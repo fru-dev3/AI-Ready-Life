@@ -1,0 +1,33 @@
+{
+  "name": "aireadylife-chief",
+  "version": "1.0.2",
+  "description": "1 AI agent \u2014 your personal Chief of Staff. Orchestrates all other life plugins, synthesizes daily briefs, syncs tasks, and monitors priorities.",
+  "author": {
+    "name": "fru.dev",
+    "email": "hello@fru.dev",
+    "url": "https://fru.dev"
+  },
+  "homepage": "https://aireadyu.dev",
+  "repository": "https://github.com/fru-dev3/AI-Ready-Life",
+  "license": "MIT",
+  "keywords": [
+    "chief-of-staff",
+    "personal-assistant",
+    "tasks",
+    "priorities",
+    "inbox"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "AI Ready Life: Chief",
+    "shortDescription": "1 AI agent \u2014 your personal Chief of Staff. Orchestrates all other life plugins, synthesizes daily briefs, syncs tasks, and monitors priorities.",
+    "longDescription": "Cross-domain daily brief and life overview \u2014 orchestrates all other domains Vault template: https://frudev.gumroad.com/l/aireadylife-chief",
+    "developerName": "fru.dev",
+    "category": "Personal",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://aireadyu.dev"
+  }
+}
