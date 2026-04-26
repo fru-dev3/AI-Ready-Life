@@ -1,6 +1,6 @@
 {
   "name": "records",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "1 AI agent that manages your document inventory and subscriptions \u2014 tracks expiring IDs, memberships, subscriptions to cancel.",
   "author": {
     "name": "fru.dev",

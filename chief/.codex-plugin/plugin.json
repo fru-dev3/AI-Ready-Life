@@ -1,6 +1,6 @@
 {
   "name": "chief",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "1 AI agent \u2014 your personal Chief of Staff. Orchestrates all other life plugins, synthesizes daily briefs, syncs tasks, and monitors priorities.",
   "author": {
     "name": "fru.dev",

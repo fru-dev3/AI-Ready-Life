@@ -1,6 +1,6 @@
 {
   "name": "insurance",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "2 AI agents that manage all your insurance policies \u2014 health, life, auto, home/renters, umbrella. Renewal tracking, coverage gap analysis, and claims.",
   "author": {
     "name": "fru.dev",
