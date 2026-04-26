@@ -1,0 +1,102 @@
+<!-- Codex / non-Claude agents: this file mirrors CLAUDE.md so any AGENTS.md-aware agent (Codex CLI, etc.) reads the same instructions. Both files stay in sync. -->
+
+# AI Ready Life: Home Plugin
+
+## Vault Location
+
+| OS | Vault path |
+|----|------------|
+| **Mac** | `~/Documents/aireadylife/vault/home/` |
+| **Windows** | `%USERPROFILE%\Documents\aireadylife\vault\home\` |
+
+Determine the user's OS from context (file paths they share, or ask if unclear). Use the correct path for their OS. Never use relative paths.
+
+## First Time Setup
+
+If `~/Documents/aireadylife/vault/home/` does not exist or is empty:
+
+1. Purchase the **AI Ready Life: Home Vault** at [frudev.gumroad.com/l/aireadylife-home](https://frudev.gumroad.com/l/aireadylife-home)
+2. Unzip the download
+3. Move the `home/` folder to `~/Documents/aireadylife/vault/`
+4. Open `~/Documents/aireadylife/vault/home/config.md` and fill in your details
+5. Return here and run any skill — it will find your vault automatically
+
+## Vault Structure
+
+```
+~/Documents/aireadylife/vault/home/
+├── config.md          — your profile and settings
+├── open-loops.md      — active flags and open items
+├── 00_current/        — active documents and current state
+├── 01_prior/          — prior period records
+└── 02_briefs/         — generated briefs and reports
+```
+
+## Skills
+
+Skills are located under `home/skills/` — each skill has its own folder containing a `SKILL.md` file.
+
+## Vault Access
+
+**Mac:** If a file read fails with a permission error, Claude Desktop needs filesystem access. Tell the user:
+> *Go to **System Settings → Privacy & Security → Full Disk Access**, add **Claude**, then restart Claude Desktop.*
+
+**Windows:** Claude Desktop runs unrestricted — no permission grant needed.
+
+Do not proceed with the skill until access is confirmed (Mac) or reassure the user that no action is needed (Windows).
+
+## First Run
+
+Before running **any skill or flow** in this domain — including flows called by other skills — read `~/Documents/aireadylife/vault/home/config.md` and check whether the key fields have been filled in (non-blank values after the `:`).
+
+**Rules (follow exactly, no improvisation):**
+
+1. **Vault folder is missing entirely** → output only: *"Your home vault isn't installed. Download it at [frudev.gumroad.com/l/aireadylife-home](https://frudev.gumroad.com/l/aireadylife-home), unzip, and place the `home/` folder at `~/Documents/aireadylife/vault/`."* Stop.
+
+2. **Config fields are blank** (empty after `:`) → output the First-Run Message below verbatim. Stop. Do **not** scaffold files, offer alternatives, or ask questions.
+
+3. **Config is filled in** → proceed with the requested skill normally.
+
+### First-Run Message
+
+> **Welcome to AI Ready Life: Home!**
+>
+> Your vault is installed at:
+> - **Mac:** `~/Documents/aireadylife/vault/home/`
+> - **Windows:** `%USERPROFILE%\Documents\aireadylife\vault\home\` Before skills can run, your config and documents need to be in place.
+>
+> **Step 1 — Complete your config**
+> Open `~/Documents/aireadylife/vault/home/config.md` and fill in every field. Leave a field blank rather than guessing — the skills will flag anything that's missing.
+>
+> **Step 2 — Gather your documents and add them to `00_current/`**
+> Here's what this domain needs:
+>
+- **Home details** — address, purchase price, purchase date, and estimated current value (or lease start date and monthly rent if renting).
+- **Open maintenance items** — anything that needs repair, inspection, or replacement. Note the room, issue, priority, and how long it's been open.
+- **Seasonal task list** — recurring tasks by season (HVAC filter, gutter cleaning, winterizing, etc.) with when they were last done.
+- **Home expense records** — any major repairs, appliance purchases, or improvement costs from the current year.
+- **HOA or utility contacts** — HOA management company, property insurance policy number, and utility providers.
+>
+> **Step 3 — Run your first skill**
+> Once config.md is filled in and at least a few documents are in `00_current/`, try: *"home review"*
+>
+> You don't need everything perfect to start — add what you have and the skills will tell you what's still missing.
+>
+> **Stop here.** Do not scaffold files, do not offer options, do not ask questions. Wait for the user to complete setup and re-run the skill.
+
+## Skill Index
+
+Skills live in `skills/<skill-name>/SKILL.md`. To run a skill, read its `SKILL.md` and follow the instructions inside.
+
+- **`angi`** — Searches contractor listings, ratings, license status, and cost guides on Angi (formerly Angie's List) via Playwright.
+- **`home-flow-build-expense-summary`** — Summarizes monthly home expenses by category (utilities, repairs, supplies, services) vs.
+- **`home-flow-build-maintenance-schedule`** — Generates the complete seasonal maintenance checklist for the current season: task name, frequency, last-done date, next-due date, urgency, assigned vendor, and estimated cost.
+- **`home-op-expense-review`** — Monthly home expense review.
+- **`home-op-monthly-sync`** — Full monthly home sync on the 1st of each month.
+- **`home-op-review-brief`** — Home review brief — produced weekly when maintenance items are flagged or seasonal tasks are due, or on-demand.
+- **`home-op-seasonal-maintenance`** — Quarterly seasonal maintenance planner.
+- **`home-op-weekly-review`** — Weekly home check.
+- **`home-task-flag-maintenance-item`** — Writes a maintenance flag to open-loops.md and creates a maintenance item record in vault/home/00_current/.
+- **`home-task-log-expense`** — Records a home expense to vault/home/00_current/ with date, category (utilities/repairs/ supplies/services), subcategory, vendor, amount, notes, and receipt reference.
+- **`home-task-update-open-loops`** — Writes all home flags (overdue maintenance, budget overruns, expiring warranties, renewal deadlines) to open-loops.md and resolves completed items.
+- **`thumbtack`** — Searches local professional listings and quote requests on Thumbtack via Playwright.
