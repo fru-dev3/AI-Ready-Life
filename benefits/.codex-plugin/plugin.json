@@ -1,6 +1,6 @@
 {
   "name": "benefits",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "2 AI agents \u2014 Chief of Staff + Benefits Director. Maximize your 401k match, HSA triple-tax advantage, and coverage optimization.",
   "author": {
     "name": "fru.dev",
@@ -19,6 +19,7 @@
     "espp"
   ],
   "skills": "./skills/",
+  "commands": "./commands/",
   "interface": {
     "displayName": "AI Ready Life: Benefits",
     "shortDescription": "2 AI agents \u2014 Chief of Staff + Benefits Director. Maximize your 401k match, HSA triple-tax advantage, and coverage optimization.",

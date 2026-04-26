@@ -1,6 +1,6 @@
 {
   "name": "wealth",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "2 AI agents that manage your personal wealth \u2014 net worth tracking, investment performance, cash flow analysis, and estate planning oversight.",
   "author": {
     "name": "fru.dev",
@@ -18,6 +18,7 @@
     "estate-planning"
   ],
   "skills": "./skills/",
+  "commands": "./commands/",
   "interface": {
     "displayName": "AI Ready Life: Wealth",
     "shortDescription": "2 AI agents that manage your personal wealth \u2014 net worth tracking, investment performance, cash flow analysis, and estate planning oversight.",

@@ -1,6 +1,6 @@
 {
   "name": "content",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "2 AI agents that manage your content business \u2014 YouTube analytics, newsletter metrics, LinkedIn growth, Gumroad revenue, and publishing schedule.",
   "author": {
     "name": "fru.dev",
@@ -19,6 +19,7 @@
     "seo"
   ],
   "skills": "./skills/",
+  "commands": "./commands/",
   "interface": {
     "displayName": "AI Ready Life: Content",
     "shortDescription": "2 AI agents that manage your content business \u2014 YouTube analytics, newsletter metrics, LinkedIn growth, Gumroad revenue, and publishing schedule.",

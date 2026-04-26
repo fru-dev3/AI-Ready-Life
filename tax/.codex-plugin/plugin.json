@@ -1,6 +1,6 @@
 {
   "name": "tax",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "2 AI agents that manage your personal tax picture \u2014 deadline tracking, estimate calculations, deduction reviews, entity compliance, and accountant readiness.",
   "author": {
     "name": "fru.dev",
@@ -19,6 +19,7 @@
     "filing"
   ],
   "skills": "./skills/",
+  "commands": "./commands/",
   "interface": {
     "displayName": "AI Ready Life: Tax",
     "shortDescription": "2 AI agents that manage your personal tax picture \u2014 deadline tracking, estimate calculations, deduction reviews, entity compliance, and accountant readiness.",

@@ -1,6 +1,6 @@
 {
   "name": "insurance",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "2 AI agents that manage all your insurance policies \u2014 health, life, auto, home/renters, umbrella. Renewal tracking, coverage gap analysis, and claims.",
   "author": {
     "name": "fru.dev",
@@ -19,6 +19,7 @@
     "gaps"
   ],
   "skills": "./skills/",
+  "commands": "./commands/",
   "interface": {
     "displayName": "AI Ready Life: Insurance",
     "shortDescription": "2 AI agents that manage all your insurance policies \u2014 health, life, auto, home/renters, umbrella. Renewal tracking, coverage gap analysis, and claims.",

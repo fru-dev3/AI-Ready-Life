@@ -1,6 +1,6 @@
 {
   "name": "social",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "1 AI agent that manages your personal relationships \u2014 birthday and milestone tracking, relationship health scores, check-in reminders.",
   "author": {
     "name": "fru.dev",
@@ -19,6 +19,7 @@
     "social"
   ],
   "skills": "./skills/",
+  "commands": "./commands/",
   "interface": {
     "displayName": "AI Ready Life: Social",
     "shortDescription": "1 AI agent that manages your personal relationships \u2014 birthday and milestone tracking, relationship health scores, check-in reminders.",

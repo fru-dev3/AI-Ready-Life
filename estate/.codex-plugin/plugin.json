@@ -1,6 +1,6 @@
 {
   "name": "estate",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "2 AI agents that manage your rental property portfolio \u2014 cash flow tracking, tenant management, maintenance, insurance, and investment performance.",
   "author": {
     "name": "fru.dev",
@@ -19,6 +19,7 @@
     "real-estate"
   ],
   "skills": "./skills/",
+  "commands": "./commands/",
   "interface": {
     "displayName": "AI Ready Life: Estate",
     "shortDescription": "2 AI agents that manage your rental property portfolio \u2014 cash flow tracking, tenant management, maintenance, insurance, and investment performance.",

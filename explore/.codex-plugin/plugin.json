@@ -1,6 +1,6 @@
 {
   "name": "explore",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "1 AI agent that manages your travel life \u2014 trip planning, passport and document status, travel wishlist, and upcoming adventure prep.",
   "author": {
     "name": "fru.dev",
@@ -19,6 +19,7 @@
     "itineraries"
   ],
   "skills": "./skills/",
+  "commands": "./commands/",
   "interface": {
     "displayName": "AI Ready Life: Explore",
     "shortDescription": "1 AI agent that manages your travel life \u2014 trip planning, passport and document status, travel wishlist, and upcoming adventure prep.",

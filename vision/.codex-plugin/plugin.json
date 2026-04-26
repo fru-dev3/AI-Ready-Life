@@ -1,6 +1,6 @@
 {
   "name": "vision",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "2 AI agents focused on your life vision \u2014 quarterly planning, goal tracking, 13-domain life scorecard, and strategic alignment.",
   "author": {
     "name": "fru.dev",
@@ -19,6 +19,7 @@
     "milestones"
   ],
   "skills": "./skills/",
+  "commands": "./commands/",
   "interface": {
     "displayName": "AI Ready Life: Vision",
     "shortDescription": "2 AI agents focused on your life vision \u2014 quarterly planning, goal tracking, 13-domain life scorecard, and strategic alignment.",

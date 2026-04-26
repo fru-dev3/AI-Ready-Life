@@ -1,7 +1,7 @@
 {
   "name": "intel",
   "description": "News intelligence \u2014 daily briefing filtered to your interests",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "author": {
     "name": "AI-Ready U.",
     "email": "hello@fru.dev"

@@ -1,6 +1,6 @@
 {
   "name": "business",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "2 AI agents \u2014 Chief of Staff + Chief Corporate Officer. Track LLC/entity revenue and expenses, compliance deadlines, and books.",
   "author": {
     "name": "fru.dev",
@@ -19,6 +19,7 @@
     "contractors"
   ],
   "skills": "./skills/",
+  "commands": "./commands/",
   "interface": {
     "displayName": "AI Ready Life: Business",
     "shortDescription": "2 AI agents \u2014 Chief of Staff + Chief Corporate Officer. Track LLC/entity revenue and expenses, compliance deadlines, and books.",
