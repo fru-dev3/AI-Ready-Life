@@ -1,5 +1,5 @@
 ---
-name: aireadylife-chief-flow-build-daily-brief
+name: chief-flow-build-daily-brief
 type: flow
 trigger: called-by-op
 description: >
@@ -7,9 +7,9 @@ description: >
   ACTION TODAY format with Top 3 callout, domain alert table, and full open-loops list.
 ---
 
-# aireadylife-chief-build-daily-brief
+# chief-build-daily-brief
 
-**Trigger:** Called by `aireadylife-chief-op-daily-brief`
+**Trigger:** Called by `chief-op-daily-brief`
 **Produces:** Fully formatted daily brief document written to ~/Documents/aireadylife/vault/chief/02_briefs/daily-YYYY-MM-DD.md
 
 ## What It Does

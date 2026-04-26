@@ -1,5 +1,5 @@
 ---
-name: aireadylife-estate-op-tenant-review
+name: estate-op-tenant-review
 type: op
 cadence: monthly
 description: >
@@ -8,7 +8,7 @@ description: >
   days for renewal outreach. Triggers: "tenant review", "lease review", "rent status", "tenant update".
 ---
 
-# aireadylife-estate-tenant-review
+# estate-tenant-review
 
 **Cadence:** Monthly (1st of month)
 **Produces:** Tenant status report in `~/Documents/aireadylife/vault/estate/00_current/` with lease timelines, payment history, security deposit summary, and renewal/vacancy flags
@@ -41,12 +41,12 @@ This op reviews every active tenancy across the portfolio and evaluates it acros
 2. Calculate days to lease expiration for each active lease; apply 3-tier alert (91–180/31–90/0–30 days)
 3. Read payment records for past 3 months per unit; identify on-time, late, chronic-late, or missed
 4. Verify security deposit amount matches lease agreement; flag discrepancies
-5. Call `aireadylife-estate-build-portfolio-summary` to get current rent-to-market comparison
+5. Call `estate-build-portfolio-summary` to get current rent-to-market comparison
 6. For leases expiring within 90 days: calculate recommended renewal rent and rent increase %
 7. For vacant units: calculate days vacant; flag if >30 days without signed lease
 8. Flag any units requiring move-out inspection scheduling (lease ending within 30 days)
 9. Write tenant status report to `~/Documents/aireadylife/vault/estate/00_current/YYYY-MM-tenant-report.md`
-10. Call `aireadylife-estate-update-open-loops` with all tenant flags
+10. Call `estate-update-open-loops` with all tenant flags
 
 ## Input
 

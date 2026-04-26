@@ -1,5 +1,5 @@
 ---
-name: aireadylife-benefits-op-review-brief
+name: benefits-op-review-brief
 type: op
 cadence: monthly
 description: >
@@ -40,7 +40,7 @@ The brief also monitors the benefits calendar for upcoming events: enrollment wi
 9. Extract upcoming calendar events within 60 days with action-by dates.
 10. Synthesize all data into brief with sections ordered by priority.
 11. Write monthly brief to `vault/benefits/00_current/brief-YYYY-MM.md`.
-12. Call `aireadylife-benefits-task-update-open-loops` if any new items were identified during synthesis.
+12. Call `benefits-task-update-open-loops` if any new items were identified during synthesis.
 
 ## Input
 

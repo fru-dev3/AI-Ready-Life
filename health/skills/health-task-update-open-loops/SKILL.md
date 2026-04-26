@@ -1,5 +1,5 @@
 ---
-name: aireadylife-health-task-update-open-loops
+name: health-task-update-open-loops
 type: task
 cadence: called-by-op
 description: >
@@ -11,7 +11,7 @@ description: >
   Preserves resolved items with resolution date for audit trail.
 ---
 
-# aireadylife-health-update-open-loops
+# health-update-open-loops
 
 **Cadence:** Called at the end of every health op and flow
 **Produces:** Updated `vault/health/open-loops.md` with new flags appended and resolved items closed

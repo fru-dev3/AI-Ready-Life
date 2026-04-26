@@ -42,7 +42,7 @@ GDRIVE_CREDENTIALS_PATH=~/Documents/aireadylife/vault/records/00_current/gdrive-
 
 ```
 My Drive/
-└── aireadylife-Records/
+└── Records/
     ├── IDs/
     │   ├── Passports/
     │   ├── Driver-Licenses/
@@ -86,8 +86,8 @@ GET https://www.googleapis.com/drive/v3/files
 
 ## Used By
 
-- `aireadylife-records-log-document` — upload a scanned document to the appropriate Drive subfolder after adding the document record to the vault
-- `aireadylife-records-document-audit` — verify that a scan exists in Drive for each document in the vault; flag documents with no digital scan on file
+- `records-log-document` — upload a scanned document to the appropriate Drive subfolder after adding the document record to the vault
+- `records-document-audit` — verify that a scan exists in Drive for each document in the vault; flag documents with no digital scan on file
 
 ## Vault Output
 

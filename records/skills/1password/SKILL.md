@@ -71,8 +71,8 @@ op item get "Document: US Passport" --fields label=expiry_date --format json
 
 ## Used By
 
-- `aireadylife-records-document-audit` — list all document items in the vault and check expiry fields against today; flag those nearing expiration
-- `aireadylife-records-log-document` — create or update a secure note with document metadata (expiry, storage location, holder) when a new document is obtained
+- `records-document-audit` — list all document items in the vault and check expiry fields against today; flag those nearing expiration
+- `records-log-document` — create or update a secure note with document metadata (expiry, storage location, holder) when a new document is obtained
 
 ## Vault Output
 

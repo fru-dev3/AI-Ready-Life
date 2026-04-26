@@ -1,5 +1,5 @@
 ---
-name: aireadylife-wealth-task-flag-budget-variance
+name: wealth-task-flag-budget-variance
 type: task
 cadence: monthly
 description: >
@@ -10,14 +10,14 @@ description: >
   Recurring overages (same category flagged 3+ consecutive months) auto-escalate to HIGH.
 ---
 
-# aireadylife-wealth-flag-budget-variance
+# wealth-flag-budget-variance
 
 **Cadence:** Monthly (called by cash flow review op)
 **Produces:** Budget variance entries in `vault/wealth/open-loops.md`
 
 ## What It Does
 
-Called by `aireadylife-wealth-build-cash-flow-summary` for each expense category that exceeded its monthly budget by more than 20%. The 20% threshold is intentional: it filters out normal month-to-month variation (e.g., a grocery bill $40 over a $400 budget is not actionable) while surfacing overages that indicate a genuine pattern or a one-time large expense that warrants awareness.
+Called by `wealth-build-cash-flow-summary` for each expense category that exceeded its monthly budget by more than 20%. The 20% threshold is intentional: it filters out normal month-to-month variation (e.g., a grocery bill $40 over a $400 budget is not actionable) while surfacing overages that indicate a genuine pattern or a one-time large expense that warrants awareness.
 
 Each flag entry contains:
 - **Category name** — e.g., "Healthcare," "Food and Dining," "Subscriptions"

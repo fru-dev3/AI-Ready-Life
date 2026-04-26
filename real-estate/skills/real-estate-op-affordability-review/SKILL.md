@@ -1,5 +1,5 @@
 ---
-name: aireadylife-real-estate-op-affordability-review
+name: real-estate-op-affordability-review
 type: op
 cadence: on-demand
 description: >
@@ -9,7 +9,7 @@ description: >
   "how much house can I buy", "buy vs rent", "what can I qualify for".
 ---
 
-# aireadylife-real-estate-affordability-review
+# real-estate-affordability-review
 
 **Cadence:** On-demand (when evaluating a purchase, after a rate change, or when income changes)
 **Produces:** Affordability analysis with max purchase price, payment breakdown, and buy vs. rent recommendation
@@ -41,13 +41,13 @@ The op also applies the 3–5x income rule as a secondary sanity check: most fin
 
 1. Read gross monthly income and monthly debts from `~/Documents/aireadylife/vault/real-estate/config.md`
 2. Confirm current 30-year fixed rate in config.md is up-to-date; warn if older than 60 days
-3. Call `aireadylife-real-estate-build-affordability-analysis` to calculate max purchase price and PITI breakdown
+3. Call `real-estate-build-affordability-analysis` to calculate max purchase price and PITI breakdown
 4. Apply 3–5x income rule to max purchase price; flag if purchase price exceeds 5x annual gross
 5. Calculate PMI if down payment < 20%; show savings needed to reach 20% down at the max price
-6. Call `aireadylife-real-estate-run-buy-vs-rent` for break-even analysis at 5, 7, and 10 years
+6. Call `real-estate-run-buy-vs-rent` for break-even analysis at 5, 7, and 10 years
 7. Read target market median price from `~/Documents/aireadylife/vault/real-estate/00_current/` and compare to user's max purchase price
 8. Write affordability report to `~/Documents/aireadylife/vault/real-estate/00_current/YYYY-MM-affordability.md`
-9. Call `aireadylife-real-estate-update-open-loops` to log any flags (DTI tight, PMI exposure, market above affordability ceiling)
+9. Call `real-estate-update-open-loops` to log any flags (DTI tight, PMI exposure, market above affordability ceiling)
 10. Present results as a narrative summary with the table, then state a plain-language verdict
 
 ## Input

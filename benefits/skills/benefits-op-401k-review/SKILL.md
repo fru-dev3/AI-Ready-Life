@@ -1,5 +1,5 @@
 ---
-name: aireadylife-benefits-op-401k-review
+name: benefits-op-401k-review
 type: op
 cadence: monthly
 description: >
@@ -43,7 +43,7 @@ Runs monthly to ensure your 401k is capturing every employer match dollar availa
 9. Run retirement projection: (current_balance + ongoing_annual_contributions) × (1.07 ^ years_to_retirement) — display as estimated balance at target retirement age.
 10. Calculate vested employer contribution percentage based on vesting schedule and tenure.
 11. Write 401k review to `vault/benefits/00_current/401k-review-YYYY-MM.md`.
-12. Call `aireadylife-benefits-task-update-open-loops` with any flags (match gap, contribution shortfall, rebalancing needed).
+12. Call `benefits-task-update-open-loops` with any flags (match gap, contribution shortfall, rebalancing needed).
 
 ## Input
 

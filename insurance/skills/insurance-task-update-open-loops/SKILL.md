@@ -1,5 +1,5 @@
 ---
-name: aireadylife-insurance-task-update-open-loops
+name: insurance-task-update-open-loops
 type: task
 description: >
   Maintains vault/insurance/open-loops.md as the canonical list of outstanding insurance action items. Appends new flags from any insurance op (renewals, coverage gaps, active claims, missing policies). Resolves completed items with resolution notes. Archives resolved items to open-loops-archive.md. Called at the end of every insurance op.

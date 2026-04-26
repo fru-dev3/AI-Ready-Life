@@ -1,5 +1,5 @@
 ---
-name: aireadylife-home-flow-build-maintenance-schedule
+name: home-flow-build-maintenance-schedule
 type: flow
 trigger: called-by-op
 description: >
@@ -8,9 +8,9 @@ description: >
   Checks completion records against the seasonal calendar and flags overdue or due-this-season tasks.
 ---
 
-# aireadylife-home-build-maintenance-schedule
+# home-build-maintenance-schedule
 
-**Trigger:** Called by `aireadylife-home-seasonal-maintenance`
+**Trigger:** Called by `home-seasonal-maintenance`
 **Produces:** Structured maintenance schedule table sorted by urgency and due date
 
 ## What It Does

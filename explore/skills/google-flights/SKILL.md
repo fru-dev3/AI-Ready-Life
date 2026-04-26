@@ -44,8 +44,8 @@ explore_preferred_airlines: [United, Delta]
 
 ## Used By
 
-- `aireadylife-explore-op-trip-planning-review` — check current fare options for a planned trip's dates; compare against budget estimate in trip record
-- `aireadylife-explore-flow-build-trip-summary` — surface current round-trip fare if flights are unbooked, to populate the budget estimate field
+- `explore-op-trip-planning-review` — check current fare options for a planned trip's dates; compare against budget estimate in trip record
+- `explore-flow-build-trip-summary` — surface current round-trip fare if flights are unbooked, to populate the budget estimate field
 
 ## Vault Output
 

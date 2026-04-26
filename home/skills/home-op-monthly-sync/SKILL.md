@@ -1,5 +1,5 @@
 ---
-name: aireadylife-home-op-monthly-sync
+name: home-op-monthly-sync
 type: op
 cadence: monthly
 description: >
@@ -9,7 +9,7 @@ description: >
   Triggers: "home monthly sync", "sync home data", "monthly home review".
 ---
 
-# aireadylife-home-monthly-sync
+# home-monthly-sync
 
 **Cadence:** Monthly (1st of month)
 **Produces:** Updated maintenance status, monthly expense summary, seasonal task check, and a home review brief
@@ -37,13 +37,13 @@ The sync also checks for any time-sensitive renewals: if the home is a rental, l
 
 1. Check `~/Documents/aireadylife/vault/home/config.md` — confirm required fields are present; prompt for missing data
 2. Read all open maintenance items from `~/Documents/aireadylife/vault/home/00_current/`; check for completed or escalated items
-3. Call `aireadylife-home-expense-review` to produce the monthly expense summary
+3. Call `home-expense-review` to produce the monthly expense summary
 4. Evaluate seasonal maintenance calendar for current month; identify tasks due with no completion record
 5. Check renewal dates: insurance (60-day flag), lease if renting (90-day flag), home warranty (30-day flag)
 6. Check if mortgage has any milestone approaching: ARM adjustment, 20% equity PMI removal eligibility
 7. Update open-loops.md: add new flags, resolve completed items
 8. Write sync completion record to `~/Documents/aireadylife/vault/home/00_current/last-sync.md`
-9. Trigger `aireadylife-home-review-brief` to compile all results
+9. Trigger `home-review-brief` to compile all results
 10. Present sync summary with count of items updated, expenses reviewed, and seasonal tasks flagged
 
 ## Input

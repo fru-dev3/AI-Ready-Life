@@ -1,5 +1,5 @@
 ---
-name: aireadylife-real-estate-op-market-scan
+name: real-estate-op-market-scan
 type: op
 cadence: monthly
 description: >
@@ -9,7 +9,7 @@ description: >
   "what's the market doing".
 ---
 
-# aireadylife-real-estate-market-scan
+# real-estate-market-scan
 
 **Cadence:** Monthly (1st of month)
 **Produces:** Market trend report for configured target neighborhoods with key metrics, MoM changes, and buy-window signals
@@ -38,14 +38,14 @@ Buy-window signals are flagged when three or more of the following conditions ex
 ## Steps
 
 1. Read target markets and search criteria from `~/Documents/aireadylife/vault/real-estate/config.md`
-2. Call `aireadylife-real-estate-scan-market-listings` to pull current listings and market stats for each target market
+2. Call `real-estate-scan-market-listings` to pull current listings and market stats for each target market
 3. Read prior month and prior year snapshots from `~/Documents/aireadylife/vault/real-estate/00_current/` for comparison
 4. Calculate MoM and YoY change for: median price, active inventory, median DOM, price/sqft, months of supply
 5. Flag any metric with >5% MoM change as a significant shift
 6. Evaluate buy-window signal criteria; flag if 3+ conditions are met
 7. Log any buy-window signals or significant shifts to open-loops.md
 8. Write market trend report to `~/Documents/aireadylife/vault/real-estate/00_current/YYYY-MM-market-report.md`
-9. Call `aireadylife-real-estate-update-open-loops` with any flagged signals
+9. Call `real-estate-update-open-loops` with any flagged signals
 10. Present full report with narrative summary and tables
 
 ## Input

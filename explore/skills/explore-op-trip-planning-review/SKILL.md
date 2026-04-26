@@ -1,5 +1,5 @@
 ---
-name: aireadylife-explore-op-trip-planning-review
+name: explore-op-trip-planning-review
 type: op
 cadence: on-demand
 description: >
@@ -8,7 +8,7 @@ description: >
   "travel prep", "plan my trip", "travel checklist".
 ---
 
-# aireadylife-explore-trip-planning-review
+# explore-trip-planning-review
 
 **Cadence:** On-demand (before each upcoming trip, or when planning a new trip)
 **Produces:** Trip readiness report at ~/Documents/aireadylife/vault/explore/00_current/YYYY-{destination}-trip.md

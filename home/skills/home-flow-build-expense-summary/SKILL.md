@@ -1,5 +1,5 @@
 ---
-name: aireadylife-home-flow-build-expense-summary
+name: home-flow-build-expense-summary
 type: flow
 trigger: called-by-op
 description: >
@@ -8,9 +8,9 @@ description: >
   bills against same month prior year to catch rate increases and seasonal anomalies.
 ---
 
-# aireadylife-home-build-expense-summary
+# home-build-expense-summary
 
-**Trigger:** Called by `aireadylife-home-expense-review`
+**Trigger:** Called by `home-expense-review`
 **Produces:** Expense summary table with category totals, MoM variance, YTD vs. budget, and flagged overruns
 
 ## What It Does

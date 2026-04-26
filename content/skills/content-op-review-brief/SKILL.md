@@ -1,5 +1,5 @@
 ---
-name: aireadylife-content-op-review-brief
+name: content-op-review-brief
 type: op
 cadence: monthly
 description: >
@@ -26,9 +26,9 @@ If the monthly channel review, revenue review, or SEO review have not yet been r
 ## Steps
 
 1. Check vault/content/ exists and config.md is configured
-2. Check for current month channel review in vault/content/00_current/channel-review-{YYYY-MM}.md; if missing, call `aireadylife-content-op-channel-review`
-3. Check for current month revenue review in vault/content/00_current/revenue-{YYYY-MM}.md; if missing, call `aireadylife-content-op-revenue-review`
-4. Check for current month SEO review in vault/content/00_current/seo-review-{YYYY-MM}.md; if missing, call `aireadylife-content-op-seo-review`
+2. Check for current month channel review in vault/content/00_current/channel-review-{YYYY-MM}.md; if missing, call `content-op-channel-review`
+3. Check for current month revenue review in vault/content/00_current/revenue-{YYYY-MM}.md; if missing, call `content-op-revenue-review`
+4. Check for current month SEO review in vault/content/00_current/seo-review-{YYYY-MM}.md; if missing, call `content-op-seo-review`
 5. Extract key figures from each: total revenue + MoM, total views + trend, newsletter subscribers + open rate, publishing status, top SEO opportunity
 6. Read vault/content/open-loops.md; extract top 5 open items by priority
 7. Assess overall content business status: Growing (revenue up, at least 1 channel above baseline), Stable (flat metrics, on-cadence publishing), At Risk (revenue decline >20%, publishing gap, underperforming channels)

@@ -53,10 +53,10 @@ min_sqft: 1500
 
 ## Used By
 
-- `aireadylife-real-estate-market-scan` — scan active listings in target cities matching filters
-- `aireadylife-real-estate-scan-market-listings` — pull current inventory, prices, and DOM trends
-- `aireadylife-real-estate-log-listing` — look up Zestimate and rental estimate for a saved listing
-- `aireadylife-real-estate-run-buy-vs-rent` — pull Rental Zestimate for the rent side of the model
+- `real-estate-market-scan` — scan active listings in target cities matching filters
+- `real-estate-scan-market-listings` — pull current inventory, prices, and DOM trends
+- `real-estate-log-listing` — look up Zestimate and rental estimate for a saved listing
+- `real-estate-run-buy-vs-rent` — pull Rental Zestimate for the rent side of the model
 
 ## Vault Output
 

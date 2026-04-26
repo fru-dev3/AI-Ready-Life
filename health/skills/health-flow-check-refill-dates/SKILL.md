@@ -1,5 +1,5 @@
 ---
-name: aireadylife-health-flow-check-refill-dates
+name: health-flow-check-refill-dates
 type: flow
 trigger: called-by-op
 description: >
@@ -10,16 +10,16 @@ description: >
   flagged list with pharmacy, estimated cost, and HSA eligibility for each item.
 ---
 
-# aireadylife-health-check-refill-dates
+# health-check-refill-dates
 
-**Trigger:** Called by `aireadylife-health-medication-review`
-**Produces:** Flagged refill list passed to `aireadylife-health-flag-upcoming-refill`
+**Trigger:** Called by `health-medication-review`
+**Produces:** Flagged refill list passed to `health-flag-upcoming-refill`
 
 ## What It Does
 
 Reads the active medication list from `vault/health/00_current/medications.md` — which stores each prescription's name, dosage, fill date, days supply, dispensing pharmacy (name and phone), estimated out-of-pocket cost per fill, and HSA eligibility flag. For each entry, the projected refill date is computed as: fill date + days supply − early-fill buffer. The early-fill buffer is 7 days for prescriptions with a 90-day supply (common with mail-order pharmacy and specialty drugs) and 3 days for 30-day supplies. This buffer ensures the refill reminder fires with enough lead time to call the pharmacy, request a mail-order refill, or transfer a prescription without a gap in the supply.
 
-Any medication whose refill window opens within 30 days of today is flagged. The output is a structured list — not written to the vault directly — returned to the calling op (`aireadylife-health-medication-review`) which then passes each flagged item to `aireadylife-health-flag-upcoming-refill` for logging. This two-step design keeps the flag-writing logic separate from the date-calculation logic, so each piece can be tested independently.
+Any medication whose refill window opens within 30 days of today is flagged. The output is a structured list — not written to the vault directly — returned to the calling op (`health-medication-review`) which then passes each flagged item to `health-flag-upcoming-refill` for logging. This two-step design keeps the flag-writing logic separate from the date-calculation logic, so each piece can be tested independently.
 
 For medications with automatic refills enrolled (pharmacy auto-refill programs), the flag is still generated but tagged with "auto-refill enrolled" so the user knows no action is required. For controlled substances (Schedule II–V), which typically cannot be auto-refilled or early-filled, the flag is tagged "controlled — contact provider for new Rx if needed."
 
@@ -44,7 +44,7 @@ HSA eligibility is checked against the IRS Publication 502 category list: all pr
 5. Flag any medication with days-until-refill ≤ 30
 6. For each flagged medication, attach: pharmacy name and phone, estimated cost, HSA eligibility, auto-refill status, controlled status
 7. Sort flagged list by urgency (fewest days remaining first)
-8. Return structured flagged list to `aireadylife-health-medication-review` for downstream processing
+8. Return structured flagged list to `health-medication-review` for downstream processing
 
 ## Input
 

@@ -47,9 +47,9 @@ appfolio_chrome_profile: /Users/YOU/Library/Application Support/Google/Chrome/De
 
 ## Used By
 
-- `aireadylife-estate-cash-flow-review` — download and parse monthly owner statements; cross-reference with logged expenses
-- `aireadylife-estate-tenant-review` — check tenant payment history and current lease status
-- `aireadylife-estate-maintenance-review` — pull open work orders from AppFolio to compare against vault maintenance records
+- `estate-cash-flow-review` — download and parse monthly owner statements; cross-reference with logged expenses
+- `estate-tenant-review` — check tenant payment history and current lease status
+- `estate-maintenance-review` — pull open work orders from AppFolio to compare against vault maintenance records
 
 ## Vault Output
 

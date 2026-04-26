@@ -1,5 +1,5 @@
 ---
-name: aireadylife-social-op-monthly-sync
+name: social-op-monthly-sync
 type: op
 cadence: monthly
 description: >
@@ -8,7 +8,7 @@ description: >
   Triggers: "social monthly sync", "relationship review", "refresh social vault".
 ---
 
-# aireadylife-social-monthly-sync
+# social-monthly-sync
 
 **Cadence:** Monthly (1st of month)
 **Produces:** Full vault refresh with updated health status, monthly outreach plan, and open-loops update

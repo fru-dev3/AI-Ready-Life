@@ -1,5 +1,5 @@
 ---
-name: aireadylife-wealth-flow-analyze-investment-performance
+name: wealth-flow-analyze-investment-performance
 type: flow
 trigger: called-by-op
 description: >
@@ -11,9 +11,9 @@ description: >
   401k contribution pace against the 2025 IRS limit of $23,500.
 ---
 
-# aireadylife-wealth-analyze-investment-performance
+# wealth-analyze-investment-performance
 
-**Trigger:** Called by `aireadylife-wealth-investment-review`
+**Trigger:** Called by `wealth-investment-review`
 **Produces:** Investment performance summary at `vault/wealth/00_current/YYYY-MM-performance.md`
 
 ## What It Does

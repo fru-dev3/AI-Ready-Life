@@ -1,5 +1,5 @@
 ---
-name: aireadylife-career-op-market-scan
+name: career-op-market-scan
 type: op
 cadence: monthly
 description: >
@@ -43,7 +43,7 @@ The scan also monitors company-specific signals: if a company on your target lis
 10. Log all roles with fit score ≥ 70 to `vault/career/00_current/` as "watch" stage items with extracted data and fit score.
 11. Flag roles with fit score ≥ 90 or from named target companies as high-priority watch items.
 12. Write market scan brief to `vault/career/02_briefs/YYYY-MM-market-scan.md` with summary statistics, notable openings, and market health signals.
-13. Call `aireadylife-career-task-update-open-loops` with any high-priority watch items and market alerts.
+13. Call `career-task-update-open-loops` with any high-priority watch items and market alerts.
 
 ## Input
 

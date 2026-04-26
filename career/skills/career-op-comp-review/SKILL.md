@@ -1,5 +1,5 @@
 ---
-name: aireadylife-career-op-comp-review
+name: career-op-comp-review
 type: op
 cadence: quarterly
 description: >
@@ -40,10 +40,10 @@ All output is saved to `vault/career/02_briefs/` and all flags are appended to `
 7. Cross-validate with LinkedIn Salary data if available for role and location.
 8. Calculate your market percentile position — where does your TC fall on the P25-P75 range?
 9. Calculate the dollar gap vs. market P50 (positive = premium, negative = gap).
-10. If gap exists (TC below P50): call `aireadylife-career-task-flag-comp-gap` with gap amount, severity tier, market data sources, and recommended action.
+10. If gap exists (TC below P50): call `career-task-flag-comp-gap` with gap amount, severity tier, market data sources, and recommended action.
 11. Append historical benchmark entry to the comp review time series in `vault/career/00_current/bench-history.md`.
 12. Write dated comp review brief to `vault/career/02_briefs/YYYY-QN-comp-review.md`.
-13. Call `aireadylife-career-task-update-open-loops` with all flags from this run.
+13. Call `career-task-update-open-loops` with all flags from this run.
 
 ## Input
 

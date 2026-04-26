@@ -1,5 +1,5 @@
 ---
-name: aireadylife-home-op-weekly-review
+name: home-op-weekly-review
 type: op
 cadence: weekly
 description: >
@@ -9,7 +9,7 @@ description: >
   "home this week", "maintenance this week", "home check".
 ---
 
-# aireadylife-home-weekly-review
+# home-weekly-review
 
 **Cadence:** Weekly (Monday) — only outputs when items need attention
 **Produces:** Weekly home snapshot in `~/Documents/aireadylife/vault/home/00_current/weekly-snapshot.md` when items are flagged

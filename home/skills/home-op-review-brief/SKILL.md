@@ -1,5 +1,5 @@
 ---
-name: aireadylife-home-op-review-brief
+name: home-op-review-brief
 type: op
 cadence: weekly
 description: >
@@ -9,7 +9,7 @@ description: >
   Triggers: "home brief", "home review", "maintenance check", "home status", "what's due at home".
 ---
 
-# aireadylife-home-review-brief
+# home-review-brief
 
 **Cadence:** Weekly (when items flagged) or on-demand
 **Produces:** Home brief — open maintenance, seasonal tasks, home expenses, renewal alerts, and action items
@@ -50,7 +50,7 @@ For homeowners, the brief optionally includes a home value section: the most rec
 6. If homeowner: pull Zestimate or most recent appraisal value from `~/Documents/aireadylife/vault/home/config.md`; calculate equity snapshot
 7. Compile all sections into brief structure
 8. Write brief to `~/Documents/aireadylife/vault/home/02_briefs/YYYY-MM-DD-home-brief.md`
-9. Call `aireadylife-home-update-open-loops` with any new flags from the brief
+9. Call `home-update-open-loops` with any new flags from the brief
 
 ## Input
 

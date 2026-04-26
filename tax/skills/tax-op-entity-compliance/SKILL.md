@@ -1,5 +1,5 @@
 ---
-name: aireadylife-tax-op-entity-compliance
+name: tax-op-entity-compliance
 type: op
 cadence: quarterly
 description: >
@@ -12,7 +12,7 @@ description: >
   "LLC filing due", "state tax deadlines", "business entity compliance".
 ---
 
-# aireadylife-tax-entity-compliance
+# tax-entity-compliance
 
 **Cadence:** Quarterly (1st of January, April, July, October)
 **Produces:** Compliance status in `vault/tax/00_current/YYYY-QN-compliance.md`; entity flags in `vault/tax/open-loops.md`
@@ -35,8 +35,8 @@ K-1 issuance: partnerships and S-Corps must issue K-1s to partners/shareholders 
 
 ## Calls
 
-- **Flows:** `aireadylife-tax-document-completeness` (entity scope)
-- **Tasks:** `aireadylife-tax-update-open-loops`
+- **Flows:** `tax-document-completeness` (entity scope)
+- **Tasks:** `tax-update-open-loops`
 
 ## Apps
 

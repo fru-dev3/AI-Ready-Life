@@ -1,5 +1,5 @@
 ---
-name: aireadylife-career-task-update-open-loops
+name: career-task-update-open-loops
 type: task
 cadence: called-by-op
 description: >

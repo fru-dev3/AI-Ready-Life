@@ -1,5 +1,5 @@
 ---
-name: aireadylife-insurance-task-flag-coverage-gap
+name: insurance-task-flag-coverage-gap
 type: task
 description: >
   Writes a structured coverage gap flag to vault/insurance/open-loops.md with coverage type, current limit, recommended limit, financial exposure of the gap (in dollars), severity rating (minor/moderate/significant), estimated annual premium to close, and specific recommended action. Called by coverage-audit for each identified gap.
@@ -7,7 +7,7 @@ description: >
 
 ## What It Does
 
-Called by `aireadylife-insurance-op-coverage-audit` for each gap identified in the coverage analysis. The flag is not a vague alert — it provides the complete picture needed to take action: what the gap is, how large it is in dollar terms, what it would cost to close, and exactly what to do.
+Called by `insurance-op-coverage-audit` for each gap identified in the coverage analysis. The flag is not a vague alert — it provides the complete picture needed to take action: what the gap is, how large it is in dollar terms, what it would cost to close, and exactly what to do.
 
 **Financial exposure framing:** Every flag quantifies the exposure in concrete terms, not percentages. "Your life insurance covers $500K but your need is $1.5M — the $1M gap means your family would be $1M short of income replacement if you die today." "Your net worth is $800K and your liability coverage is $500K — the $300K of unprotected net worth could be lost in a single at-fault accident lawsuit." This framing drives action better than percentages or abstract coverage ratios.
 

@@ -1,5 +1,5 @@
 ---
-name: aireadylife-home-op-seasonal-maintenance
+name: home-op-seasonal-maintenance
 type: op
 cadence: quarterly
 description: >
@@ -9,7 +9,7 @@ description: >
   "home maintenance", "maintenance checklist", "spring maintenance", "fall maintenance".
 ---
 
-# aireadylife-home-seasonal-maintenance
+# home-seasonal-maintenance
 
 **Cadence:** Quarterly (March, June, September, December)
 **Produces:** Seasonal maintenance checklist with due dates, vendors, costs, and total seasonal budget
@@ -45,14 +45,14 @@ The op calculates total estimated seasonal maintenance cost across all planned t
 ## Steps
 
 1. Determine current season from today's date (spring: Mar–May, summer: Jun–Aug, fall: Sep–Nov, winter: Dec–Feb)
-2. Call `aireadylife-home-build-maintenance-schedule` to compute task due dates and overdue status
+2. Call `home-build-maintenance-schedule` to compute task due dates and overdue status
 3. Filter to current season's task set plus any overdue tasks from prior seasons
 4. For each task: look up preferred vendor in config.md; note vendor contact info if present
 5. Flag any tasks deferred from a prior season as overdue with cost-of-deferral context
 6. Calculate total estimated seasonal maintenance cost (sum of all task cost estimates using midpoint of range)
 7. Write seasonal checklist to `~/Documents/aireadylife/vault/home/00_current/YYYY-{season}-checklist.md`
-8. Call `aireadylife-home-flag-maintenance-item` for any overdue or significantly-overdue items
-9. Call `aireadylife-home-update-open-loops` with all newly flagged items
+8. Call `home-flag-maintenance-item` for any overdue or significantly-overdue items
+9. Call `home-update-open-loops` with all newly flagged items
 10. Present checklist sorted by urgency with total cost estimate and scheduling notes
 
 ## Input

@@ -1,5 +1,5 @@
 ---
-name: aireadylife-learning-op-goal-review
+name: learning-op-goal-review
 type: op
 cadence: quarterly
 description: >
@@ -44,7 +44,7 @@ Runs quarterly (January 1, April 1, July 1, October 1) to ensure your learning i
 10. Calculate weekly study time commitment for each goal — verify total commitment fits within configured daily study target × days/week.
 11. Write quarterly learning plan to `vault/learning/00_current/YYYY-QN-learning-plan.md` with prioritized goals, weekly milestones, and career/vision connection for each.
 12. Archive removed or paused goals to `vault/learning/01_prior/goals-paused.md`.
-13. Call `aireadylife-learning-task-update-open-loops` with any goals flagged as at-risk or behind.
+13. Call `learning-task-update-open-loops` with any goals flagged as at-risk or behind.
 
 ## Input
 

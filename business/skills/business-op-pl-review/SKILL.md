@@ -1,5 +1,5 @@
 ---
-name: aireadylife-business-op-pl-review
+name: business-op-pl-review
 type: op
 cadence: monthly
 description: >
@@ -14,7 +14,7 @@ Runs on the first of each month to produce a complete P&L statement for the prio
 
 Compares each figure to the prior month to surface MoM variances — dollar and percentage change for gross revenue, each expense category, net income, and margin. If a monthly budget is configured in `config.md`, flags any expense category running more than 10% over budget as a 🟡 watch item; more than 25% over budget as 🔴 urgent. Flags any revenue stream down more than 20% MoM for investigation.
 
-Calls `aireadylife-business-task-flag-overdue-invoice` to scan the invoice file for any unpaid invoices where the due date has passed 30 days or more. Calls `aireadylife-business-flow-build-pl-summary` to produce the formatted P&L table. Writes the complete dated brief to `vault/business/02_briefs/pl-{YYYY-MM}.md` and pushes all action items to `vault/business/open-loops.md`.
+Calls `business-task-flag-overdue-invoice` to scan the invoice file for any unpaid invoices where the due date has passed 30 days or more. Calls `business-flow-build-pl-summary` to produce the formatted P&L table. Writes the complete dated brief to `vault/business/02_briefs/pl-{YYYY-MM}.md` and pushes all action items to `vault/business/open-loops.md`.
 
 ## Triggers
 
@@ -32,14 +32,14 @@ Calls `aireadylife-business-task-flag-overdue-invoice` to scan the invoice file 
 2. Determine the review period: prior full calendar month (1st through last day)
 3. Read all revenue records from vault/business/00_current/ for the review period; filter to paid status
 4. Read all expense records from vault/business/00_current/ for the review period
-5. Call `aireadylife-business-flow-build-pl-summary` to calculate and format the P&L table with MoM comparison
+5. Call `business-flow-build-pl-summary` to calculate and format the P&L table with MoM comparison
 6. If budget configured in config.md: compare each expense category to budget; flag overages >10% as 🟡, >25% as 🔴
 7. Flag any revenue stream down >20% MoM for investigation
-8. Call `aireadylife-business-task-flag-overdue-invoice` to scan for unpaid invoices >30 days past due
+8. Call `business-task-flag-overdue-invoice` to scan for unpaid invoices >30 days past due
 9. Calculate estimated SE tax liability on net income for the period at 15.3% rate; surface as "estimated tax set-aside needed" line
 10. Compile all flags and action items
 11. Write complete P&L brief to vault/business/02_briefs/pl-{YYYY-MM}.md
-12. Call `aireadylife-business-task-update-open-loops` with all flags
+12. Call `business-task-update-open-loops` with all flags
 13. Present the brief to the user with a prioritized action list
 
 ## Input

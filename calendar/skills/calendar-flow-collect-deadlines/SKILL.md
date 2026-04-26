@@ -1,5 +1,5 @@
 ---
-name: aireadylife-calendar-flow-collect-deadlines
+name: calendar-flow-collect-deadlines
 type: flow
 trigger: called-by-op
 description: >
@@ -8,9 +8,9 @@ description: >
   (due within 7 days) flagged separately.
 ---
 
-# aireadylife-calendar-collect-deadlines
+# calendar-collect-deadlines
 
-**Trigger:** Called by `aireadylife-calendar-op-deadline-alert`, `aireadylife-calendar-op-weekly-agenda`, `aireadylife-calendar-op-deadline-planning`
+**Trigger:** Called by `calendar-op-deadline-alert`, `calendar-op-weekly-agenda`, `calendar-op-deadline-planning`
 **Produces:** Sorted list of cross-domain deadline items with urgency flags passed to the calling op
 
 ## What It Does

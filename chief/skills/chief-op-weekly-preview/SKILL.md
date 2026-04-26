@@ -1,5 +1,5 @@
 ---
-name: aireadylife-chief-op-weekly-preview
+name: chief-op-weekly-preview
 type: op
 cadence: weekly
 description: >
@@ -8,7 +8,7 @@ description: >
   "monday brief".
 ---
 
-# aireadylife-chief-weekly-preview
+# chief-weekly-preview
 
 **Cadence:** Weekly (Monday morning)
 **Produces:** Weekly agenda written to ~/Documents/aireadylife/vault/chief/00_current/week-YYYY-MM-DD.md

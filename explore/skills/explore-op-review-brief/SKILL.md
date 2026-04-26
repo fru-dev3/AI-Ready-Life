@@ -1,5 +1,5 @@
 ---
-name: aireadylife-explore-op-review-brief
+name: explore-op-review-brief
 type: op
 cadence: monthly
 description: >
@@ -8,7 +8,7 @@ description: >
   Triggers: "explore brief", "travel review", "trip status", "passport check".
 ---
 
-# aireadylife-explore-review-brief
+# explore-review-brief
 
 **Cadence:** Monthly (1st of month)
 **Produces:** Monthly explore brief at ~/Documents/aireadylife/vault/explore/02_briefs/YYYY-MM-explore-brief.md

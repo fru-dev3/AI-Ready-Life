@@ -1,5 +1,5 @@
 ---
-name: aireadylife-vision-task-flag-stalled-goal
+name: vision-task-flag-stalled-goal
 type: task
 description: >
   Writes a stalled goal flag to vault/vision/open-loops.md when a goal has had no
@@ -7,7 +7,7 @@ description: >
   date, and recommended next action (recommit, modify, or drop).
 ---
 
-# aireadylife-vision-flag-stalled-goal
+# vision-flag-stalled-goal
 
 **Produces:** New stalled goal flag entry in ~/Documents/aireadylife/vault/vision/open-loops.md
 

@@ -1,5 +1,5 @@
 ---
-name: aireadylife-wealth-op-investment-review
+name: wealth-op-investment-review
 type: op
 cadence: monthly
 description: >
@@ -11,14 +11,14 @@ description: >
   "how are my investments doing", "portfolio check".
 ---
 
-# aireadylife-wealth-investment-review
+# wealth-investment-review
 
 **Cadence:** Monthly (1st of month)
 **Produces:** Investment performance summary at `vault/wealth/00_current/YYYY-MM-performance.md`; rebalancing flags in `vault/wealth/open-loops.md`
 
 ## What It Does
 
-Pulls investment account data from `vault/wealth/00_current/` and runs `aireadylife-wealth-analyze-investment-performance` to produce a complete investment health check across all accounts.
+Pulls investment account data from `vault/wealth/00_current/` and runs `wealth-analyze-investment-performance` to produce a complete investment health check across all accounts.
 
 **Returns.** For each account, the review reports 30-day and YTD returns in both dollar and percentage terms. Returns are time-weighted where possible (to eliminate the distortion of large contributions mid-period). If a Fidelity or M1 Finance download has been completed, the return data from the institution is used directly; otherwise, the return is approximated from balance changes net of contributions.
 
@@ -30,8 +30,8 @@ Pulls investment account data from `vault/wealth/00_current/` and runs `aireadyl
 
 ## Calls
 
-- **Flows:** `aireadylife-wealth-analyze-investment-performance`
-- **Tasks:** `aireadylife-wealth-update-open-loops`
+- **Flows:** `wealth-analyze-investment-performance`
+- **Tasks:** `wealth-update-open-loops`
 
 ## Apps
 

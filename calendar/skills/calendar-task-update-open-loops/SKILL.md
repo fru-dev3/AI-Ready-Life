@@ -1,12 +1,12 @@
 ---
-name: aireadylife-calendar-task-update-open-loops
+name: calendar-task-update-open-loops
 type: task
 description: >
   Writes calendar flags (upcoming deadline clusters, focus time deficits, unscheduled
   high-priority items) to vault/calendar/open-loops.md and resolves completed items.
 ---
 
-# aireadylife-calendar-update-open-loops
+# calendar-update-open-loops
 
 **Produces:** Updated ~/Documents/aireadylife/vault/calendar/open-loops.md with new flags added and resolved items marked complete
 

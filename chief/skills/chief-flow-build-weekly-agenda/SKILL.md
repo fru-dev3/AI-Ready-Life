@@ -1,5 +1,5 @@
 ---
-name: aireadylife-chief-flow-build-weekly-agenda
+name: chief-flow-build-weekly-agenda
 type: flow
 trigger: called-by-op
 description: >
@@ -7,9 +7,9 @@ description: >
   time block recommendations.
 ---
 
-# aireadylife-chief-build-weekly-agenda
+# chief-build-weekly-agenda
 
-**Trigger:** Called by `aireadylife-chief-op-weekly-preview`
+**Trigger:** Called by `chief-op-weekly-preview`
 **Produces:** Structured weekly agenda document written to ~/Documents/aireadylife/vault/chief/00_current/week-YYYY-MM-DD.md
 
 ## What It Does

@@ -1,5 +1,5 @@
 ---
-name: aireadylife-intel-task-log-source
+name: intel-task-log-source
 type: task
 cadence: as-added
 description: >

@@ -1,5 +1,5 @@
 ---
-name: aireadylife-benefits-flow-build-coverage-summary
+name: benefits-flow-build-coverage-summary
 type: flow
 trigger: called-by-op
 description: >
@@ -8,7 +8,7 @@ description: >
 
 ## What It Does
 
-Called by `aireadylife-benefits-op-enrollment-review`, `aireadylife-benefits-op-coverage-review`, and `aireadylife-benefits-op-review-brief` to produce the core benefits coverage table. This is the inventory and status layer — it compiles what coverage exists and where you stand on utilization of each limit. The calling ops use this table for enrollment comparisons, gap analysis, and monthly briefing.
+Called by `benefits-op-enrollment-review`, `benefits-op-coverage-review`, and `benefits-op-review-brief` to produce the core benefits coverage table. This is the inventory and status layer — it compiles what coverage exists and where you stand on utilization of each limit. The calling ops use this table for enrollment comparisons, gap analysis, and monthly briefing.
 
 **Medical coverage:** Reads the active medical plan from `vault/benefits/00_current/` — extracts plan name, plan type (HMO / PPO / HDHP / EPO), calendar year deductible (individual and family amounts), out-of-pocket maximum (individual and family), coinsurance rate after deductible, and monthly employee premium. Pulls YTD deductible spend and YTD OOP spend from claim records in `vault/benefits/00_current/` (EOBs filed during the plan year). Calculates remaining deductible and remaining OOP max for the plan year.
 

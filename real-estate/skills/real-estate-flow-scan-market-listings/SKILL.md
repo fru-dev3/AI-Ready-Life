@@ -1,5 +1,5 @@
 ---
-name: aireadylife-real-estate-flow-scan-market-listings
+name: real-estate-flow-scan-market-listings
 type: flow
 trigger: called-by-op
 description: >
@@ -8,9 +8,9 @@ description: >
   ratio, and months of supply. Stores a timestamped snapshot for trend tracking over time.
 ---
 
-# aireadylife-real-estate-scan-market-listings
+# real-estate-scan-market-listings
 
-**Trigger:** Called by `aireadylife-real-estate-market-scan`
+**Trigger:** Called by `real-estate-market-scan`
 **Produces:** Market snapshot table with aggregate stats and filtered active listings per target market
 
 ## What It Does

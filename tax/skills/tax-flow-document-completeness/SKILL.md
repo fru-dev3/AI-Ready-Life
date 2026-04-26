@@ -1,5 +1,5 @@
 ---
-name: aireadylife-tax-flow-document-completeness
+name: tax-flow-document-completeness
 type: flow
 trigger: called-by-op
 description: >
@@ -11,9 +11,9 @@ description: >
   consistent file naming convention across all documents.
 ---
 
-# aireadylife-tax-document-completeness
+# tax-document-completeness
 
-**Trigger:** Called by `aireadylife-tax-document-sync` and `aireadylife-tax-entity-compliance`
+**Trigger:** Called by `tax-document-sync` and `tax-entity-compliance`
 **Produces:** Completeness report at `vault/tax/00_current/YYYY-completeness.md`
 
 ## What It Does
@@ -41,7 +41,7 @@ Reads the expected document checklist from `vault/tax/00_current/expected-docs.m
 
 **File naming convention.** The flow enforces consistent naming so documents are always findable: `W2_{employer-name}_{year}.pdf`, `1099NEC_{payer-name}_{year}.pdf`, `1099B_{institution-name}_{year}.pdf`, `K1_{entity-name}_{year}.pdf`, etc. Files that don't match the convention are flagged as "Naming violation — rename to [correct name]."
 
-**Entity-scoped mode.** When called by `aireadylife-tax-entity-compliance`, the scope narrows to entity-level documents only: K-1s, entity tax returns, payroll summaries (W-2s issued to owner-employees), franchise tax receipts, and annual report confirmations.
+**Entity-scoped mode.** When called by `tax-entity-compliance`, the scope narrows to entity-level documents only: K-1s, entity tax returns, payroll summaries (W-2s issued to owner-employees), franchise tax receipts, and annual report confirmations.
 
 ## Triggers
 

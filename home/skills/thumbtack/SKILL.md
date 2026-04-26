@@ -50,8 +50,8 @@ thumbtack_chrome_profile: /Users/YOU/Library/Application Support/Google/Chrome/D
 
 ## Used By
 
-- `aireadylife-home-seasonal-maintenance` — obtain competitive quotes from multiple pros for scheduled seasonal projects (deck sealing, driveway sealing, cleaning services)
-- `aireadylife-home-flag-maintenance-item` — find contractors for flagged repair when no preferred vendor is assigned in config
+- `home-seasonal-maintenance` — obtain competitive quotes from multiple pros for scheduled seasonal projects (deck sealing, driveway sealing, cleaning services)
+- `home-flag-maintenance-item` — find contractors for flagged repair when no preferred vendor is assigned in config
 
 ## Vault Output
 

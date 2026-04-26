@@ -1,5 +1,5 @@
 ---
-name: aireadylife-health-op-review-brief
+name: health-op-review-brief
 type: op
 cadence: monthly
 description: >
@@ -10,7 +10,7 @@ description: >
   "how is my health", "give me my health report".
 ---
 
-# aireadylife-health-review-brief
+# health-review-brief
 
 **Cadence:** Monthly (1st of month, after monthly sync completes)
 **Produces:** Health review brief at `vault/health/02_briefs/YYYY-MM-health-brief.md`
@@ -41,8 +41,8 @@ Configure in `vault/health/config.md`:
 
 ## Calls
 
-- **Flows:** `aireadylife-health-build-wellness-summary`, `aireadylife-health-build-lab-summary` (if new labs present)
-- **Tasks:** `aireadylife-health-update-open-loops`
+- **Flows:** `health-build-wellness-summary`, `health-build-lab-summary` (if new labs present)
+- **Tasks:** `health-update-open-loops`
 
 ## Apps
 

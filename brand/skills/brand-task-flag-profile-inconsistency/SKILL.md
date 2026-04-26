@@ -1,5 +1,5 @@
 ---
-name: aireadylife-brand-task-flag-profile-inconsistency
+name: brand-task-flag-profile-inconsistency
 type: task
 description: >
   Writes a flag to vault/brand/open-loops.md when a platform profile field diverges from the
@@ -16,7 +16,7 @@ Deduplicates before writing: checks vault/brand/open-loops.md for an existing un
 
 ## Triggers
 
-Called internally by `aireadylife-brand-op-profile-audit` and `aireadylife-brand-flow-check-profile-consistency` when a discrepancy is identified.
+Called internally by `brand-op-profile-audit` and `brand-flow-check-profile-consistency` when a discrepancy is identified.
 
 ## Steps
 

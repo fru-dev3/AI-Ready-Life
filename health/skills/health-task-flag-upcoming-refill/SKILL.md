@@ -1,5 +1,5 @@
 ---
-name: aireadylife-health-task-flag-upcoming-refill
+name: health-task-flag-upcoming-refill
 type: task
 cadence: monthly
 description: >
@@ -7,17 +7,17 @@ description: >
   is due within 30 days. Each entry includes: medication name, pharmacy name and phone,
   projected refill date, estimated out-of-pocket cost, HSA eligibility flag, auto-refill
   status, and urgency tier (HIGH ≤7 days, MEDIUM 8–21 days, LOW 22–30 days). Called by
-  aireadylife-health-medication-review for each flagged prescription.
+  health-medication-review for each flagged prescription.
 ---
 
-# aireadylife-health-flag-upcoming-refill
+# health-flag-upcoming-refill
 
 **Cadence:** Monthly (called by medication review op)
 **Produces:** Refill reminder entries in `vault/health/open-loops.md`
 
 ## What It Does
 
-Called once per medication identified as due within 30 days by `aireadylife-health-check-refill-dates`. Writes a structured, immediately actionable refill reminder that gives the user everything needed to complete the refill in a single phone call or app interaction.
+Called once per medication identified as due within 30 days by `health-check-refill-dates`. Writes a structured, immediately actionable refill reminder that gives the user everything needed to complete the refill in a single phone call or app interaction.
 
 Each flag entry contains:
 - **Medication name and dosage** — e.g., "Metformin 500mg," "Levothyroxine 50mcg"
@@ -32,7 +32,7 @@ Each flag entry contains:
 
 When a prescription is marked HSA-eligible and the HSA balance in `vault/health/00_current/hsa-balance.md` is sufficient to cover the estimated cost, the flag adds a note: "Pay with HSA card to use tax-advantaged funds." When the HSA balance is low, the flag notes: "Consider paying out-of-pocket and filing for HSA reimbursement later if balance is replenished."
 
-Items are auto-resolved by `aireadylife-health-update-open-loops` when the refill date has passed, keeping open-loops.md clean between monthly runs.
+Items are auto-resolved by `health-update-open-loops` when the refill date has passed, keeping open-loops.md clean between monthly runs.
 
 ## Apps
 

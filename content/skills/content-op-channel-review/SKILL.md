@@ -1,5 +1,5 @@
 ---
-name: aireadylife-content-op-channel-review
+name: content-op-channel-review
 type: op
 cadence: monthly
 description: >
@@ -15,7 +15,7 @@ Runs in the first week of each month to produce a complete cross-channel perform
 
 For YouTube: total views for the period, watch time in hours, net subscriber change, CTR on impressions (benchmark: 4-10% is strong), average view duration as a percentage of total video length (AVD >50% is strong), and the top-performing video by views with its CTR and AVD highlighted. For the newsletter: total subscriber count, net new subscribers for the period, open rate (benchmark: 30-40% for niche), click rate (benchmark: 2-5%), and the top-performing issue by open rate. For digital products (Gumroad): total units sold, revenue, conversion rate from page visits to purchases, and top-performing product. For LinkedIn: impressions and follower count change.
 
-Calls `aireadylife-content-flow-analyze-channel-performance` to run the 90-day baseline comparison and identify underperforming channels. For each underperforming channel, produces a 1-line diagnosis and a specific recommended corrective action — not just "performance is down" but "YouTube subscriber growth is 23% below average; publishing cadence was 1 video/week vs prior 2 — resume 2/week cadence." Writes the dashboard brief to vault/content/00_current/channel-review-{YYYY-MM}.md.
+Calls `content-flow-analyze-channel-performance` to run the 90-day baseline comparison and identify underperforming channels. For each underperforming channel, produces a 1-line diagnosis and a specific recommended corrective action — not just "performance is down" but "YouTube subscriber growth is 23% below average; publishing cadence was 1 video/week vs prior 2 — resume 2/week cadence." Writes the dashboard brief to vault/content/00_current/channel-review-{YYYY-MM}.md.
 
 ## Triggers
 
@@ -30,7 +30,7 @@ Calls `aireadylife-content-flow-analyze-channel-performance` to run the 90-day b
 ## Steps
 
 1. Confirm vault/content/ is set up with analytics subfolders; list which platforms have current month data
-2. Call `aireadylife-content-flow-analyze-channel-performance` for cross-channel performance table, 90-day baseline comparison, and underperformance flags
+2. Call `content-flow-analyze-channel-performance` for cross-channel performance table, 90-day baseline comparison, and underperformance flags
 3. Extract YouTube key metrics from vault/content/00_current/: views, watch hours, sub change, CTR, AVD, top video
 4. Extract newsletter key metrics from vault/content/00_current/: subscribers, net new, open rate, CTR, top issue
 5. Extract Gumroad metrics from vault/content/00_current/: units, revenue, conversion rate, top product
@@ -39,7 +39,7 @@ Calls `aireadylife-content-flow-analyze-channel-performance` to run the 90-day b
 8. Identify the single best-performing piece of content across all platforms this month
 9. Calculate publishing cadence for each platform: posts/videos published vs target from config.md
 10. Write channel review brief to vault/content/00_current/channel-review-{YYYY-MM}.md
-11. Call `aireadylife-content-task-update-open-loops` with all underperformance flags and cadence misses
+11. Call `content-task-update-open-loops` with all underperformance flags and cadence misses
 
 ## Input
 

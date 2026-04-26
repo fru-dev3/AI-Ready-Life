@@ -59,8 +59,8 @@ From the prior year return PDF (Form 1040):
 
 ## Used By
 
-- `aireadylife-tax-document-sync` — download completed return PDFs for archive and future reference
-- `aireadylife-tax-build-estimate` — read prior year AGI (line 11) and total tax (line 24) for safe harbor calculation
+- `tax-document-sync` — download completed return PDFs for archive and future reference
+- `tax-build-estimate` — read prior year AGI (line 11) and total tax (line 24) for safe harbor calculation
 
 ## Vault Output
 

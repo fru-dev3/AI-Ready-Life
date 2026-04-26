@@ -1,6 +1,6 @@
 {
   "version": "1.0.2",
-  "plugin": "aireadylife-calendar",
+  "plugin": "calendar",
   "structure": {
     "subfolders": [
       {"folder": "01_events", "description": "Key event archive by month"},

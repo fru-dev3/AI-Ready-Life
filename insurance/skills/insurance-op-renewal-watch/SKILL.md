@@ -1,5 +1,5 @@
 ---
-name: aireadylife-insurance-op-renewal-watch
+name: insurance-op-renewal-watch
 type: op
 cadence: monthly
 description: >
@@ -39,10 +39,10 @@ Runs monthly to ensure no insurance policy auto-renews without your awareness an
 5. Check for premium increase signal: read prior year premium from `vault/insurance/01_prior/` if available; flag if current year premium is >10% higher.
 6. For "shop" categorized renewals: compile current coverage parameters (limits, deductible, endorsements) and generate competing quote action steps.
 7. For "coverage-review" categorized renewals: identify the specific coverage parameter needing reassessment and the triggering life event or change.
-8. Call `aireadylife-insurance-flow-check-renewal-dates` for the detailed renewal timeline analysis.
-9. Call `aireadylife-insurance-task-flag-renewal-within-60-days` for each flagged renewal.
+8. Call `insurance-flow-check-renewal-dates` for the detailed renewal timeline analysis.
+9. Call `insurance-task-flag-renewal-within-60-days` for each flagged renewal.
 10. Write renewal watch summary to `vault/insurance/00_current/renewal-alerts.md`.
-11. Call `aireadylife-insurance-task-update-open-loops` with all renewal flags.
+11. Call `insurance-task-update-open-loops` with all renewal flags.
 
 ## Input
 

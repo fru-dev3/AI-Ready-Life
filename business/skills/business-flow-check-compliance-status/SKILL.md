@@ -1,5 +1,5 @@
 ---
-name: aireadylife-business-flow-check-compliance-status
+name: business-flow-check-compliance-status
 type: flow
 trigger: called-by-op
 description: >
@@ -19,7 +19,7 @@ Returns the full status table sorted by urgency (overdue first, then by soonest 
 
 ## Triggers
 
-Called internally by `aireadylife-business-op-compliance-review` and `aireadylife-business-op-review-brief`. Not invoked directly by the user.
+Called internally by `business-op-compliance-review` and `business-op-review-brief`. Not invoked directly by the user.
 
 ## Steps
 

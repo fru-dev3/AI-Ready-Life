@@ -1,5 +1,5 @@
 ---
-name: aireadylife-wealth-flow-build-cash-flow-summary
+name: wealth-flow-build-cash-flow-summary
 type: flow
 trigger: called-by-op
 description: >
@@ -11,9 +11,9 @@ description: >
   net cash flow and MoM comparison for each category.
 ---
 
-# aireadylife-wealth-build-cash-flow-summary
+# wealth-build-cash-flow-summary
 
-**Trigger:** Called by `aireadylife-wealth-cash-flow-review`
+**Trigger:** Called by `wealth-cash-flow-review`
 **Produces:** Cash flow summary at `vault/wealth/00_current/YYYY-MM-cashflow.md`
 
 ## What It Does
@@ -24,7 +24,7 @@ Reads all income and expense transaction records from `vault/wealth/00_current/`
 
 **Expense categorization.** Expenses from transaction records are grouped into standard categories with budget targets from config: Housing (rent or mortgage payment, HOA, renter's/homeowner's insurance, utilities — electricity, gas, water, internet), Transportation (car payment, auto insurance, gas, parking, tolls, rideshare), Food and Dining (groceries separate from dining out), Healthcare (insurance premiums paid out-of-pocket, copays, prescriptions, dental, vision), Subscriptions (streaming services, software, gym, all recurring charges), Entertainment (events, hobbies, travel), Personal (clothing, personal care), Children (childcare, school, activities), Savings Contributions (401k beyond employer match, IRA contributions, brokerage auto-invest, HYSA transfers). Savings contributions are shown as an expense line but also tracked separately as savings rate: total savings contributions ÷ total net income.
 
-**Budget variance.** Each expense category is compared to its monthly budget target in config. Variance is shown as dollar difference and percent difference. Categories more than 20% over budget are passed to `aireadylife-wealth-flag-budget-variance`. Categories more than 20% under budget are noted as "under budget — expected or actual saving?"
+**Budget variance.** Each expense category is compared to its monthly budget target in config. Variance is shown as dollar difference and percent difference. Categories more than 20% over budget are passed to `wealth-flag-budget-variance`. Categories more than 20% under budget are noted as "under budget — expected or actual saving?"
 
 **Net cash flow.** Total income minus total expenses (excluding savings contributions from "expenses" to show true discretionary cash flow), and separately, total income minus all outflows including savings. If the review runs mid-month, a projected month-end figure is shown based on average daily spend rates for variable categories with the days remaining in the month.
 
@@ -48,7 +48,7 @@ Reads all income and expense transaction records from `vault/wealth/00_current/`
 5. Calculate net cash flow: total income minus total expenses
 6. Calculate savings rate: total savings contributions ÷ total net income
 7. Compare each expense category to its budget target from config.md; calculate dollar and percent variance
-8. Flag categories more than 20% over budget for `aireadylife-wealth-flag-budget-variance`
+8. Flag categories more than 20% over budget for `wealth-flag-budget-variance`
 9. Compare to prior month per-category totals and calculate MoM delta
 10. Write formatted cash flow summary to `vault/wealth/00_current/YYYY-MM-cashflow.md`
 

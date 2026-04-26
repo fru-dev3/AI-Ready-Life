@@ -1,5 +1,5 @@
 ---
-name: aireadylife-calendar-op-review-brief
+name: calendar-op-review-brief
 type: op
 cadence: weekly
 description: >
@@ -7,7 +7,7 @@ description: >
   Triggers: "calendar brief", "what's due this week", "deadline check", "focus time", "schedule review".
 ---
 
-# aireadylife-calendar-review-brief
+# calendar-review-brief
 
 **Cadence:** Weekly (Monday morning)
 **Produces:** Weekly calendar brief written to ~/Documents/aireadylife/vault/calendar/02_briefs/week-YYYY-WNN.md

@@ -47,16 +47,16 @@ If the vault does not exist, direct the user to: frudev.gumroad.com/l/aireadylif
 
 ## Skills Available
 
-- **aireadylife-insurance-op-coverage-audit** — Annual portfolio audit vs. assets, income, liabilities
-- **aireadylife-insurance-op-renewal-watch** — Monthly renewal watch with 60-day advance flagging
-- **aireadylife-insurance-op-claims-review** — On-demand active claims management
-- **aireadylife-insurance-op-review-brief** — Monthly insurance brief with all policy premiums and alerts
-- **aireadylife-insurance-flow-analyze-coverage-gaps** — Coverage gap analysis with severity ratings
-- **aireadylife-insurance-flow-build-coverage-summary** — Full policy matrix table with coverage limits
-- **aireadylife-insurance-flow-check-renewal-dates** — Renewal date scan with shop/auto-renew/review categorization
-- **aireadylife-insurance-task-flag-coverage-gap** — Writes coverage gap alert to open-loops.md
-- **aireadylife-insurance-task-flag-renewal-within-60-days** — Writes renewal alert to open-loops.md
-- **aireadylife-insurance-task-update-open-loops** — Maintains insurance open-loops.md
+- **insurance-op-coverage-audit** — Annual portfolio audit vs. assets, income, liabilities
+- **insurance-op-renewal-watch** — Monthly renewal watch with 60-day advance flagging
+- **insurance-op-claims-review** — On-demand active claims management
+- **insurance-op-review-brief** — Monthly insurance brief with all policy premiums and alerts
+- **insurance-flow-analyze-coverage-gaps** — Coverage gap analysis with severity ratings
+- **insurance-flow-build-coverage-summary** — Full policy matrix table with coverage limits
+- **insurance-flow-check-renewal-dates** — Renewal date scan with shop/auto-renew/review categorization
+- **insurance-task-flag-coverage-gap** — Writes coverage gap alert to open-loops.md
+- **insurance-task-flag-renewal-within-60-days** — Writes renewal alert to open-loops.md
+- **insurance-task-update-open-loops** — Maintains insurance open-loops.md
 
 ## What You Do NOT Do
 

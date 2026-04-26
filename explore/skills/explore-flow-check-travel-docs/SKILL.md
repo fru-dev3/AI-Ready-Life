@@ -1,5 +1,5 @@
 ---
-name: aireadylife-explore-flow-check-travel-docs
+name: explore-flow-check-travel-docs
 type: flow
 trigger: called-by-op
 description: >
@@ -7,9 +7,9 @@ description: >
   validity rule and vaccination requirements for wishlist destinations.
 ---
 
-# aireadylife-explore-check-travel-docs
+# explore-check-travel-docs
 
-**Trigger:** Called by `aireadylife-explore-op-document-check`, `aireadylife-explore-op-monthly-sync`, `aireadylife-explore-op-trip-planning-review`
+**Trigger:** Called by `explore-op-document-check`, `explore-op-monthly-sync`, `explore-op-trip-planning-review`
 **Produces:** Document validity report with per-document expiration status and renewal flags returned to calling op
 
 ## What It Does

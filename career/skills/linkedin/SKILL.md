@@ -59,9 +59,9 @@ Standard filter parameters for target role search:
 
 ## Used By
 
-- `aireadylife-career-flow-scan-target-roles` — search open roles matching target criteria
-- `aireadylife-career-op-network-review` — review connections and recruiter inbox
-- `aireadylife-career-op-monthly-sync` — capture profile analytics and recruiter message activity
+- `career-flow-scan-target-roles` — search open roles matching target criteria
+- `career-op-network-review` — review connections and recruiter inbox
+- `career-op-monthly-sync` — capture profile analytics and recruiter message activity
 
 ## Vault Output
 

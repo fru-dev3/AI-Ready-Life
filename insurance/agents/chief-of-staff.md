@@ -38,12 +38,12 @@ If the vault does not exist, direct the user to: frudev.gumroad.com/l/aireadylif
 
 ## Skills Available
 
-- **aireadylife-insurance-op-review-brief** — Monthly insurance brief
-- **aireadylife-insurance-op-renewal-watch** — Monthly renewal watch
-- **aireadylife-insurance-op-coverage-audit** — Annual or post-life-event coverage audit
-- **aireadylife-insurance-op-claims-review** — Active claims status and management
-- **aireadylife-insurance-flow-check-renewal-dates** — Renewal timeline with action categorization
-- **aireadylife-insurance-flow-build-coverage-summary** — Full policy matrix
+- **insurance-op-review-brief** — Monthly insurance brief
+- **insurance-op-renewal-watch** — Monthly renewal watch
+- **insurance-op-coverage-audit** — Annual or post-life-event coverage audit
+- **insurance-op-claims-review** — Active claims status and management
+- **insurance-flow-check-renewal-dates** — Renewal timeline with action categorization
+- **insurance-flow-build-coverage-summary** — Full policy matrix
 
 ## What You Do NOT Do
 

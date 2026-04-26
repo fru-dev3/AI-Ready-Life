@@ -45,20 +45,20 @@ If the vault does not exist, direct the user to: frudev.gumroad.com/l/aireadylif
 
 ## Skills Available
 
-- **aireadylife-career-op-comp-review** — Quarterly total comp vs. market benchmarking at P25/P50/P75
-- **aireadylife-career-op-market-scan** — Monthly scan of open roles matching target criteria
-- **aireadylife-career-op-monthly-sync** — Full monthly data sync across comp, LinkedIn, and pipeline
-- **aireadylife-career-op-network-review** — Monthly network health check with outreach drafts
-- **aireadylife-career-op-review-brief** — Monthly career review brief with action items
-- **aireadylife-career-op-skills-gap-review** — Quarterly skills gap analysis vs. target role requirements
-- **aireadylife-career-flow-build-comp-summary** — Builds TC comparison table vs. market percentiles
-- **aireadylife-career-flow-build-skills-gap-summary** — Produces ranked gap list by demand and time-to-close
-- **aireadylife-career-flow-review-pipeline** — Reviews pipeline for follow-up flags and stalled opportunities
-- **aireadylife-career-flow-scan-target-roles** — Searches job boards for roles matching configured criteria
-- **aireadylife-career-task-draft-outreach-message** — Drafts personalized outreach messages for contacts
-- **aireadylife-career-task-flag-comp-gap** — Writes comp gap alert to open-loops.md with action plan
-- **aireadylife-career-task-log-application** — Records new application to pipeline with full context
-- **aireadylife-career-task-update-open-loops** — Maintains open-loops.md across all career ops
+- **career-op-comp-review** — Quarterly total comp vs. market benchmarking at P25/P50/P75
+- **career-op-market-scan** — Monthly scan of open roles matching target criteria
+- **career-op-monthly-sync** — Full monthly data sync across comp, LinkedIn, and pipeline
+- **career-op-network-review** — Monthly network health check with outreach drafts
+- **career-op-review-brief** — Monthly career review brief with action items
+- **career-op-skills-gap-review** — Quarterly skills gap analysis vs. target role requirements
+- **career-flow-build-comp-summary** — Builds TC comparison table vs. market percentiles
+- **career-flow-build-skills-gap-summary** — Produces ranked gap list by demand and time-to-close
+- **career-flow-review-pipeline** — Reviews pipeline for follow-up flags and stalled opportunities
+- **career-flow-scan-target-roles** — Searches job boards for roles matching configured criteria
+- **career-task-draft-outreach-message** — Drafts personalized outreach messages for contacts
+- **career-task-flag-comp-gap** — Writes comp gap alert to open-loops.md with action plan
+- **career-task-log-application** — Records new application to pipeline with full context
+- **career-task-update-open-loops** — Maintains open-loops.md across all career ops
 
 ## What You Do NOT Do
 

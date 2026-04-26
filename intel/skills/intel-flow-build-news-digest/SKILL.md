@@ -1,5 +1,5 @@
 ---
-name: aireadylife-intel-flow-build-news-digest
+name: intel-flow-build-news-digest
 type: flow
 trigger: called-by-op
 description: >
@@ -23,7 +23,7 @@ Formats the final digest: top 5-8 stories by score, each with headline (10-15 wo
 
 ## Triggers
 
-Called internally by `aireadylife-intel-op-daily-briefing` and `aireadylife-intel-op-review-brief`. Not invoked directly by the user.
+Called internally by `intel-op-daily-briefing` and `intel-op-review-brief`. Not invoked directly by the user.
 
 ## Steps
 

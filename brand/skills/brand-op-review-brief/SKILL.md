@@ -1,5 +1,5 @@
 ---
-name: aireadylife-brand-op-review-brief
+name: brand-op-review-brief
 type: op
 cadence: monthly
 description: >
@@ -26,7 +26,7 @@ Synthesizes into a brief with: brand health score with direction (up/down), plat
 ## Steps
 
 1. Check vault/brand/ exists; if missing, direct to setup
-2. Locate most recent brand synthesis in vault/brand/00_current/synthesis-{YYYY-MM}.md; if current month not found, call `aireadylife-brand-op-monthly-synthesis` first
+2. Locate most recent brand synthesis in vault/brand/00_current/synthesis-{YYYY-MM}.md; if current month not found, call `brand-op-monthly-synthesis` first
 3. Extract health score, component scores, and top content from synthesis
 4. Read vault/brand/00_current/ for most notable mention of the period (highest-priority mention in terms of source credibility or sentiment)
 5. Read vault/brand/open-loops.md; count 🔴 and 🟡 items; extract top 3 by priority

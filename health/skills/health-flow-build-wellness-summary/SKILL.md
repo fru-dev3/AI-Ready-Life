@@ -1,5 +1,5 @@
 ---
-name: aireadylife-health-flow-build-wellness-summary
+name: health-flow-build-wellness-summary
 type: flow
 trigger: called-by-op
 description: >
@@ -10,9 +10,9 @@ description: >
   Supports Oura Ring and Apple Health as data sources.
 ---
 
-# aireadylife-health-build-wellness-summary
+# health-build-wellness-summary
 
-**Trigger:** Called by `aireadylife-health-review-brief` and `aireadylife-health-anomaly-watch`
+**Trigger:** Called by `health-review-brief` and `health-anomaly-watch`
 **Produces:** Monthly wellness summary in `vault/health/02_briefs/YYYY-MM-wellness-summary.md`
 
 ## What It Does

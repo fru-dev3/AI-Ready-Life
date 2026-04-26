@@ -1,5 +1,5 @@
 ---
-name: aireadylife-estate-task-flag-maintenance-item
+name: estate-task-flag-maintenance-item
 type: task
 description: >
   Writes a maintenance flag to open-loops.md and creates a detailed maintenance item record
@@ -7,7 +7,7 @@ description: >
   status, estimated cost, and target completion date. Urgency drives escalation timing.
 ---
 
-# aireadylife-estate-flag-maintenance-item
+# estate-flag-maintenance-item
 
 **Produces:** New maintenance item in `~/Documents/aireadylife/vault/estate/00_current/` and a flag in `~/Documents/aireadylife/vault/estate/open-loops.md`
 

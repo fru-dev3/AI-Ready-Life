@@ -1,5 +1,5 @@
 ---
-name: aireadylife-wealth-task-update-open-loops
+name: wealth-task-update-open-loops
 type: task
 cadence: called-by-op
 description: >
@@ -11,7 +11,7 @@ description: >
   resolved items with resolution date for audit trail.
 ---
 
-# aireadylife-wealth-update-open-loops
+# wealth-update-open-loops
 
 **Cadence:** Called at the end of every wealth op
 **Produces:** Updated `vault/wealth/open-loops.md` with new flags appended and resolved items closed

@@ -1,5 +1,5 @@
 ---
-name: aireadylife-business-task-log-invoice
+name: business-task-log-invoice
 type: task
 cadence: as-received
 description: >
@@ -9,11 +9,11 @@ description: >
 
 ## What It Does
 
-Accepts invoice details — either provided by the user directly as structured fields, extracted from an invoice document or image, or entered conversationally — and writes a structured invoice record to `~/Documents/aireadylife/vault/business/00_current/`. The resulting file feeds directly into the `aireadylife-business-flow-build-pl-summary` flow for monthly P&L calculations and into the `aireadylife-business-task-flag-overdue-invoice` task for payment monitoring.
+Accepts invoice details — either provided by the user directly as structured fields, extracted from an invoice document or image, or entered conversationally — and writes a structured invoice record to `~/Documents/aireadylife/vault/business/00_current/`. The resulting file feeds directly into the `business-flow-build-pl-summary` flow for monthly P&L calculations and into the `business-task-flag-overdue-invoice` task for payment monitoring.
 
 Validates required fields before writing: client name, invoice number, amount, date issued, and payment due date are all required. Service description and entity name are strongly recommended. Payment status defaults to "pending" if not provided. Checks for a duplicate invoice record (same invoice number + client name) before writing to prevent double-counting in P&L calculations.
 
-If the invoice being logged already has a due date in the past and status is still pending: immediately writes the record with status "overdue" and calls `aireadylife-business-task-flag-overdue-invoice` — this ensures the overdue alert appears in open-loops.md without waiting for the next monthly P&L review cycle.
+If the invoice being logged already has a due date in the past and status is still pending: immediately writes the record with status "overdue" and calls `business-task-flag-overdue-invoice` — this ensures the overdue alert appears in open-loops.md without waiting for the next monthly P&L review cycle.
 
 Filename format: `{YYYY-MM-DD}-{client-slug}-invoice-{number}.md`. Client slug is a lowercase, hyphen-separated version of the client name (e.g., "Acme Corp" → "acme-corp"). This naming convention enables automatic date-range filtering during monthly reviews.
 
@@ -34,7 +34,7 @@ Filename format: `{YYYY-MM-DD}-{client-slug}-invoice-{number}.md`. Client slug i
 4. Determine payment status: paid (if user reports payment received), overdue (if due date is in the past and no payment), pending (default for new invoices with future due dates)
 5. If marking an existing invoice as paid: locate the existing record, update the status and payment-received date, do not create a new file
 6. If creating a new record: write structured invoice file to vault/business/00_current/{YYYY-MM-DD}-{client-slug}-invoice-{number}.md
-7. If the invoice is overdue (due date past, status pending): call `aireadylife-business-task-flag-overdue-invoice` immediately
+7. If the invoice is overdue (due date past, status pending): call `business-task-flag-overdue-invoice` immediately
 8. Confirm the record was written and return the file path
 
 ## Input

@@ -1,5 +1,5 @@
 ---
-name: aireadylife-social-op-birthday-watch
+name: social-op-birthday-watch
 type: op
 cadence: weekly
 description: >
@@ -8,7 +8,7 @@ description: >
   a birthday", "milestone check".
 ---
 
-# aireadylife-social-birthday-watch
+# social-birthday-watch
 
 **Cadence:** Weekly (Monday morning)
 **Produces:** Upcoming birthday and milestone list with suggested actions for the next 14 days

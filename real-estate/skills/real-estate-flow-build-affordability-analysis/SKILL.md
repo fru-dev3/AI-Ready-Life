@@ -1,5 +1,5 @@
 ---
-name: aireadylife-real-estate-flow-build-affordability-analysis
+name: real-estate-flow-build-affordability-analysis
 type: flow
 trigger: called-by-op
 description: >
@@ -8,9 +8,9 @@ description: >
   max purchase price, required down payment, monthly PITI breakdown, and PMI cost if applicable.
 ---
 
-# aireadylife-real-estate-build-affordability-analysis
+# real-estate-build-affordability-analysis
 
-**Trigger:** Called by `aireadylife-real-estate-affordability-review`
+**Trigger:** Called by `real-estate-affordability-review`
 **Produces:** Affordability worksheet with max purchase price, PITI breakdown, down payment required, and PMI status
 
 ## What It Does

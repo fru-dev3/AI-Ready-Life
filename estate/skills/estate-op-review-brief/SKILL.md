@@ -1,5 +1,5 @@
 ---
-name: aireadylife-estate-op-review-brief
+name: estate-op-review-brief
 type: op
 cadence: monthly
 description: >
@@ -9,7 +9,7 @@ description: >
   Triggers: "estate brief", "estate review", "portfolio review", "rental property status".
 ---
 
-# aireadylife-estate-review-brief
+# estate-review-brief
 
 **Cadence:** Monthly (1st of month) or on-demand
 **Produces:** Portfolio brief — cash flow, maintenance, tenant lease timeline, tax deadlines, equity summary
@@ -47,7 +47,7 @@ Action items are compiled from open-loops.md and sorted: critical (emergency mai
 6. Read open-loops.md for existing unresolved flags; include in action items
 7. Compile all sections into brief structure
 8. Write brief to `~/Documents/aireadylife/vault/estate/02_briefs/YYYY-MM-estate-brief.md`
-9. Call `aireadylife-estate-update-open-loops` with any new flags from the brief
+9. Call `estate-update-open-loops` with any new flags from the brief
 
 ## Input
 

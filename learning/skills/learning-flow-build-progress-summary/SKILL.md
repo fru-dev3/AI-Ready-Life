@@ -1,5 +1,5 @@
 ---
-name: aireadylife-learning-flow-build-progress-summary
+name: learning-flow-build-progress-summary
 type: flow
 trigger: called-by-op
 description: >
@@ -8,7 +8,7 @@ description: >
 
 ## What It Does
 
-Called by `aireadylife-learning-op-monthly-sync` and `aireadylife-learning-op-progress-review` to produce the core learning pace analysis. This flow handles the quantitative calculation layer — reading all active items, computing pace metrics, and producing a structured table — while the calling op handles brief writing and flag routing.
+Called by `learning-op-monthly-sync` and `learning-op-progress-review` to produce the core learning pace analysis. This flow handles the quantitative calculation layer — reading all active items, computing pace metrics, and producing a structured table — while the calling op handles brief writing and flag routing.
 
 **Loading active items:** Reads all learning items in `vault/learning/00_current/` where status is "active" (not completed, paused, or archived). Each item has: title, type (course/certification/book), platform, total_units (hours or modules or pages — consistent within each item), completed_units, start_date, target_completion_date.
 

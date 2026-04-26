@@ -1,5 +1,5 @@
 ---
-name: aireadylife-content-task-log-revenue
+name: content-task-log-revenue
 type: task
 cadence: as-received
 description: >
@@ -10,7 +10,7 @@ description: >
 
 ## What It Does
 
-Records individual revenue events to the vault so `aireadylife-content-flow-build-revenue-summary` has clean, structured data to aggregate from. The log is the single source of truth for all content revenue — if it is not logged here, it will not appear in monthly revenue reviews, YTD calculations, or revenue trend analysis.
+Records individual revenue events to the vault so `content-flow-build-revenue-summary` has clean, structured data to aggregate from. The log is the single source of truth for all content revenue — if it is not logged here, it will not appear in monthly revenue reviews, YTD calculations, or revenue trend analysis.
 
 Each log entry captures: the platform (YouTube AdSense, newsletter platform, Gumroad, direct, other), the revenue amount and currency, the date earned or paid, the revenue type (AdSense CPM payout, direct sponsorship fee, digital product sale, paid subscription renewal, tip/donation, affiliate commission), the product name or campaign name when relevant (for Gumroad product-level tracking and sponsorship source tracking), and optional notes.
 
@@ -25,7 +25,7 @@ Writes to the platform-specific subfolder using a consistent filename convention
 - "I got paid from Gumroad"
 - "newsletter sponsorship received"
 - "log a product sale"
-- Called by `aireadylife-content-op-revenue-review` after each monthly review cycle
+- Called by `content-op-revenue-review` after each monthly review cycle
 
 ## Steps
 

@@ -1,5 +1,5 @@
 ---
-name: aireadylife-benefits-task-flag-enrollment-window
+name: benefits-task-flag-enrollment-window
 type: task
 cadence: annual
 description: >
@@ -8,7 +8,7 @@ description: >
 
 ## What It Does
 
-Called by `aireadylife-benefits-op-enrollment-review` when the annual open enrollment window is detected or approaching. Open enrollment is the single most time-constrained benefits event — the window is typically 2-4 weeks, elections made after the close cannot be changed until the next plan year (absent a qualifying life event), and missing the window entirely locks you into current elections for 12 more months. This flag ensures the deadline never sneaks up undetected.
+Called by `benefits-op-enrollment-review` when the annual open enrollment window is detected or approaching. Open enrollment is the single most time-constrained benefits event — the window is typically 2-4 weeks, elections made after the close cannot be changed until the next plan year (absent a qualifying life event), and missing the window entirely locks you into current elections for 12 more months. This flag ensures the deadline never sneaks up undetected.
 
 **Urgency escalation:** The flag's urgency level escalates as the deadline approaches. Written as "watch" when the window opens (more than 14 days before close). Escalated to "urgent" when 14 days or fewer remain. When 3 days or fewer remain: the flag is written as a top-priority urgent item with a specific note that auto-renewal will occur if no action is taken — auto-renewal may perpetuate a suboptimal plan election for another full year.
 

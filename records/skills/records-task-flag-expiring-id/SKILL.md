@@ -1,5 +1,5 @@
 ---
-name: aireadylife-records-task-flag-expiring-id
+name: records-task-flag-expiring-id
 type: task
 description: >
   Writes an ID expiration flag to open-loops.md with document type, holder name, expiration
@@ -7,7 +7,7 @@ description: >
   renewal action, official renewal portal link, and cost. Urgency calibrated by document type.
 ---
 
-# aireadylife-records-flag-expiring-id
+# records-flag-expiring-id
 
 **Trigger:** Called by document audit and monthly sync when a document enters its alert window
 **Produces:** ID expiration flag in `~/Documents/aireadylife/vault/records/open-loops.md`

@@ -55,10 +55,10 @@ min_sqft: 1500
 
 ## Used By
 
-- `aireadylife-real-estate-market-scan` — pull active listings and market stats for all target markets
-- `aireadylife-real-estate-scan-market-listings` — get current inventory, prices, and DOM data
-- `aireadylife-real-estate-run-buy-vs-rent` — gather rental comp data for the rent side of the model
-- `aireadylife-real-estate-log-listing` — look up Redfin Estimate and price history for a saved listing
+- `real-estate-market-scan` — pull active listings and market stats for all target markets
+- `real-estate-scan-market-listings` — get current inventory, prices, and DOM data
+- `real-estate-run-buy-vs-rent` — gather rental comp data for the rent side of the model
+- `real-estate-log-listing` — look up Redfin Estimate and price history for a saved listing
 
 ## Vault Output
 

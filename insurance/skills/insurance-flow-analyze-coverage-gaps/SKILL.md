@@ -1,5 +1,5 @@
 ---
-name: aireadylife-insurance-flow-analyze-coverage-gaps
+name: insurance-flow-analyze-coverage-gaps
 type: flow
 trigger: called-by-op
 description: >
@@ -8,7 +8,7 @@ description: >
 
 ## What It Does
 
-Called by `aireadylife-insurance-op-coverage-audit` to perform the quantitative gap analysis. Reads coverage limits from `vault/insurance/00_current/` and applies domain-specific adequacy rules to produce a scored, ranked gap list with financial exposure quantification and estimated cost to resolve.
+Called by `insurance-op-coverage-audit` to perform the quantitative gap analysis. Reads coverage limits from `vault/insurance/00_current/` and applies domain-specific adequacy rules to produce a scored, ranked gap list with financial exposure quantification and estimated cost to resolve.
 
 **Life insurance gap calculation:** Life insurance need = (annual_gross_income × multiplier) + outstanding_mortgage + significant_debts − spouse_income_offset. Multiplier: 10 for no dependents or single-income household, 12 for multiple dependents or if coverage must support stay-at-home partner. Sum all active life policies (group life, supplemental life, individual term). Gap = need − total_coverage. If gap > 0: severity is minor for gaps under 25% of need, moderate for 25-50% of need, significant for > 50% of need. Premium estimate to close: term life premiums roughly $500-$800/year per $500K of coverage for a healthy 35-year-old (varies significantly with age and health class).
 

@@ -1,5 +1,5 @@
 ---
-name: aireadylife-benefits-flow-analyze-401k-allocation
+name: benefits-flow-analyze-401k-allocation
 type: flow
 trigger: called-by-op
 description: >
@@ -8,7 +8,7 @@ description: >
 
 ## What It Does
 
-Called by `aireadylife-benefits-op-401k-review` to produce the investment allocation analysis layer of the 401k review. This flow handles the quantitative analysis — allocation drift calculations, match capture verification, and retirement projection — while the op handles overall synthesis and brief writing.
+Called by `benefits-op-401k-review` to produce the investment allocation analysis layer of the 401k review. This flow handles the quantitative analysis — allocation drift calculations, match capture verification, and retirement projection — while the op handles overall synthesis and brief writing.
 
 **Match capture verification:** Reads the employer match formula from `vault/benefits/config.md` (e.g., "50% match on first 6% of salary"). Reads the employee's current contribution rate from the 401k statement. Calculates the minimum contribution rate required to capture the full match. If the employee contribution rate is below this threshold, calculates: (a) the unvested match forfeited per paycheck, (b) the unvested match forfeited per year, and (c) the match capture percentage (what fraction of available match is being captured).
 

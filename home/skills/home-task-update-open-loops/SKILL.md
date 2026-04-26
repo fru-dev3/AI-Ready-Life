@@ -1,5 +1,5 @@
 ---
-name: aireadylife-home-task-update-open-loops
+name: home-task-update-open-loops
 type: task
 description: >
   Writes all home flags (overdue maintenance, budget overruns, expiring warranties, renewal
@@ -7,7 +7,7 @@ description: >
   canonical action list readable by calendar and morning brief routing.
 ---
 
-# aireadylife-home-update-open-loops
+# home-update-open-loops
 
 **Trigger:** Called by home ops and flows at the end of every run
 **Produces:** Updated `~/Documents/aireadylife/vault/home/open-loops.md` with current action items

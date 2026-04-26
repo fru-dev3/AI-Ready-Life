@@ -49,8 +49,8 @@ angi_email: YOUR_ANGI_EMAIL   # optional; for booking history access
 
 ## Used By
 
-- `aireadylife-home-seasonal-maintenance` — find top-rated contractors for scheduled seasonal tasks (furnace inspection, gutter cleaning, roof inspection)
-- `aireadylife-home-flag-maintenance-item` — search for qualified contractor for a newly flagged repair when no vendor is assigned in config
+- `home-seasonal-maintenance` — find top-rated contractors for scheduled seasonal tasks (furnace inspection, gutter cleaning, roof inspection)
+- `home-flag-maintenance-item` — search for qualified contractor for a newly flagged repair when no vendor is assigned in config
 
 ## Vault Output
 

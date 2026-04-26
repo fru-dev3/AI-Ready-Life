@@ -1,5 +1,5 @@
 ---
-name: aireadylife-business-flow-build-pipeline-summary
+name: business-flow-build-pipeline-summary
 type: flow
 trigger: called-by-op
 description: >
@@ -17,7 +17,7 @@ Flags proposals where the last-contact date is more than 7 days ago with no resp
 
 ## Triggers
 
-Called internally by `aireadylife-business-op-pipeline-review`. Not invoked directly by the user.
+Called internally by `business-op-pipeline-review`. Not invoked directly by the user.
 
 ## Steps
 

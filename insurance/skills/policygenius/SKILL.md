@@ -72,8 +72,8 @@ https://www.policygenius.com/homeowners-insurance/
 
 ## Used By
 
-- `aireadylife-insurance-op-coverage-audit` — estimate cost to close life, disability, and umbrella gaps for gap analysis output
-- `aireadylife-insurance-flow-analyze-coverage-gaps` — populate premium estimate fields in gap severity ratings
+- `insurance-op-coverage-audit` — estimate cost to close life, disability, and umbrella gaps for gap analysis output
+- `insurance-flow-analyze-coverage-gaps` — populate premium estimate fields in gap severity ratings
 
 ## Vault Output
 

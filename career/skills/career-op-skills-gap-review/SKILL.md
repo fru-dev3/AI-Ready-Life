@@ -1,5 +1,5 @@
 ---
-name: aireadylife-career-op-skills-gap-review
+name: career-op-skills-gap-review
 type: op
 cadence: quarterly
 description: >
@@ -43,7 +43,7 @@ The quarterly cadence prevents the list from shifting so frequently it loses foc
 10. For each priority gap: identify a specific recommended resource (platform, course name, estimated hours, and estimated cost if any).
 11. Write skills gap analysis to `vault/career/00_current/YYYY-QN-skills-gap.md` with ranked gaps and recommendations.
 12. Compare to prior quarter's gap analysis — note which gaps were closed (skill reached working proficiency) and which persist.
-13. Call `aireadylife-career-task-update-open-loops` with top 3 gaps as learning priority flags, routed to Learning plugin if installed.
+13. Call `career-task-update-open-loops` with top 3 gaps as learning priority flags, routed to Learning plugin if installed.
 
 ## Input
 

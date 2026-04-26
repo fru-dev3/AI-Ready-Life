@@ -54,9 +54,9 @@ Save to `vault/wealth/00_current/imports/YYYY-MM-transactions.csv` before runnin
 
 ## Used By
 
-- `aireadylife-wealth-cash-flow-review` — primary source for monthly transaction data and budget vs. actual
-- `aireadylife-wealth-build-cash-flow-summary` — read categorized transactions to build the cash flow summary
-- `aireadylife-wealth-net-worth-review` — optional cross-check against Monarch's aggregated net worth
+- `wealth-cash-flow-review` — primary source for monthly transaction data and budget vs. actual
+- `wealth-build-cash-flow-summary` — read categorized transactions to build the cash flow summary
+- `wealth-net-worth-review` — optional cross-check against Monarch's aggregated net worth
 
 ## Vault Output
 

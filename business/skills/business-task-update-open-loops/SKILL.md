@@ -1,5 +1,5 @@
 ---
-name: aireadylife-business-task-update-open-loops
+name: business-task-update-open-loops
 type: task
 description: >
   Writes all business flags (overdue invoices, compliance deadlines, stalled proposals, expense
@@ -18,7 +18,7 @@ Deduplicates: before writing a new flag, checks whether the same item (same invo
 
 ## Triggers
 
-Called internally at the end of every business op: `aireadylife-business-op-pl-review`, `aireadylife-business-op-compliance-review`, `aireadylife-business-op-pipeline-review`, `aireadylife-business-op-monthly-synthesis`, and `aireadylife-business-task-flag-overdue-invoice`.
+Called internally at the end of every business op: `business-op-pl-review`, `business-op-compliance-review`, `business-op-pipeline-review`, `business-op-monthly-synthesis`, and `business-task-flag-overdue-invoice`.
 
 ## Steps
 

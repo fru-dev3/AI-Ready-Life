@@ -1,5 +1,5 @@
 ---
-name: aireadylife-home-task-flag-maintenance-item
+name: home-task-flag-maintenance-item
 type: task
 description: >
   Writes a maintenance flag to open-loops.md and creates a maintenance item record in
@@ -8,7 +8,7 @@ description: >
   and proactive scheduled maintenance.
 ---
 
-# aireadylife-home-flag-maintenance-item
+# home-flag-maintenance-item
 
 **Trigger:** Called by home seasonal and review flows, or directly when the user reports a home issue
 **Produces:** Maintenance item in `~/Documents/aireadylife/vault/home/00_current/` and flag in `~/Documents/aireadylife/vault/home/open-loops.md`

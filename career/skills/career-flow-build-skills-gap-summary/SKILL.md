@@ -1,5 +1,5 @@
 ---
-name: aireadylife-career-flow-build-skills-gap-summary
+name: career-flow-build-skills-gap-summary
 type: flow
 trigger: called-by-op
 description: >
@@ -8,7 +8,7 @@ description: >
 
 ## What It Does
 
-Called by `aireadylife-career-op-skills-gap-review` to produce the core skills gap analysis. The flow operates at the intersection of what you know and what target roles require — it is the bridge between your skills inventory and your learning plan.
+Called by `career-op-skills-gap-review` to produce the core skills gap analysis. The flow operates at the intersection of what you know and what target roles require — it is the bridge between your skills inventory and your learning plan.
 
 **Reading the inventory:** Loads all skills from `vault/career/00_current/skills.md` with their proficiency level (beginner / working / proficient / expert), years of experience, and last-used date. Before gap analysis, applies recency decay: technical skills not used in the last 24 months are downgraded one proficiency level (e.g., proficient → working, working → beginner). This reflects the real dynamic that technical skills decay — a Python skill from 3 years ago without recent use is not the same as one used daily.
 

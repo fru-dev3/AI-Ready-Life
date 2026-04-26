@@ -1,5 +1,5 @@
 ---
-name: aireadylife-intel-op-topic-deep-dive
+name: intel-op-topic-deep-dive
 type: op
 cadence: on-demand
 description: >
@@ -12,7 +12,7 @@ description: >
 
 Produces a structured intelligence brief on a single topic the user wants to understand deeply. Unlike the morning brief which covers 5-8 topics at one sentence each, the topic deep dive covers one topic at paragraph depth. This is for when the user has encountered a story in the morning brief and wants to go deeper, or when they need background on a topic before a meeting, investment decision, or content creation session.
 
-Calls `aireadylife-intel-flow-build-topic-summary` to do the analytical synthesis work. The deep dive op adds the user-facing experience layer: clarifying the topic scope if it is ambiguous, asking whether to track this as an ongoing thread in the vault, and providing the formatted output with clear sections.
+Calls `intel-flow-build-topic-summary` to do the analytical synthesis work. The deep dive op adds the user-facing experience layer: clarifying the topic scope if it is ambiguous, asking whether to track this as an ongoing thread in the vault, and providing the formatted output with clear sections.
 
 After presenting the topic brief, asks whether to: (1) save the brief to vault/intel/02_briefs/ as a one-time reference, (2) create a new thread in vault/intel/00_current/ to track this topic across future daily briefings, or (3) both. If the user creates a thread, writes a thread file with today's brief as the opening entry and a thread status of "developing." Future daily briefings will then append updates to this thread automatically.
 
@@ -32,12 +32,12 @@ Also checks vault/intel/config.md to see whether this topic should be added to t
 
 1. Identify the topic from the user's request; if ambiguous, ask a clarifying question ("You mentioned AI regulation — do you want to focus on the EU AI Act, US executive orders, or China's AI governance framework?")
 2. Check `~/Documents/aireadylife/vault/intel/00_current/` for an existing thread on this topic; if found, offer to update the existing thread rather than creating a new brief
-3. Call `aireadylife-intel-flow-build-topic-summary` with the topic name and any focus angle specified
+3. Call `intel-flow-build-topic-summary` with the topic name and any focus angle specified
 4. Present the formatted topic brief to the user
 5. After presenting the brief: ask "Would you like to track this as an ongoing thread in your intel vault? I'll update it in each morning briefing when new developments appear."
 6. If user says yes to thread tracking: write thread file to vault/intel/00_current/{topic-slug}.md with today's brief as the opening entry and status: developing
 7. Ask if this topic should be added to active interest topics in config.md (if it is not already configured)
-8. Call `aireadylife-intel-task-update-open-loops` if any priority story or watch signal emerged from the deep dive
+8. Call `intel-task-update-open-loops` if any priority story or watch signal emerged from the deep dive
 
 ## Input
 

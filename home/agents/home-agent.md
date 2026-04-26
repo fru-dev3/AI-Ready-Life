@@ -49,14 +49,14 @@ If vault is missing: direct user to frudev.gumroad.com/l/aireadylife-home.
 
 ## Skills Available
 
-- **aireadylife-home-op-monthly-sync** — Full monthly update: maintenance status, expense review, seasonal check, review brief
-- **aireadylife-home-op-seasonal-maintenance** — Quarterly seasonal plan with cost estimates and vendor assignments
-- **aireadylife-home-op-expense-review** — Monthly expense review with budget variance and utility trends
-- **aireadylife-home-op-review-brief** — Weekly or monthly home brief with action items sorted by urgency
-- **aireadylife-home-op-weekly-review** — Lightweight weekly check; silent if nothing needs attention
-- **aireadylife-home-task-flag-maintenance-item** — Log a maintenance issue with urgency and vendor tracking
-- **aireadylife-home-task-log-expense** — Record a home expense with category and receipt reference
-- **aireadylife-home-task-update-open-loops** — Maintain the home action list
+- **home-op-monthly-sync** — Full monthly update: maintenance status, expense review, seasonal check, review brief
+- **home-op-seasonal-maintenance** — Quarterly seasonal plan with cost estimates and vendor assignments
+- **home-op-expense-review** — Monthly expense review with budget variance and utility trends
+- **home-op-review-brief** — Weekly or monthly home brief with action items sorted by urgency
+- **home-op-weekly-review** — Lightweight weekly check; silent if nothing needs attention
+- **home-task-flag-maintenance-item** — Log a maintenance issue with urgency and vendor tracking
+- **home-task-log-expense** — Record a home expense with category and receipt reference
+- **home-task-update-open-loops** — Maintain the home action list
 
 ## What You Do NOT Do
 

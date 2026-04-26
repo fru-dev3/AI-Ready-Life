@@ -1,5 +1,5 @@
 ---
-name: aireadylife-career-task-flag-comp-gap
+name: career-task-flag-comp-gap
 type: task
 cadence: quarterly
 description: >
@@ -8,7 +8,7 @@ description: >
 
 ## What It Does
 
-Called by `aireadylife-career-flow-build-comp-summary` when the benchmarking analysis finds that total compensation is below the market P50. A comp gap flag is not just a notification — it is a structured action brief that tells you exactly how large the problem is, how serious it is, and exactly what to do about it based on the severity.
+Called by `career-flow-build-comp-summary` when the benchmarking analysis finds that total compensation is below the market P50. A comp gap flag is not just a notification — it is a structured action brief that tells you exactly how large the problem is, how serious it is, and exactly what to do about it based on the severity.
 
 **Severity tiers and action plans:**
 

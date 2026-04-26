@@ -1,5 +1,5 @@
 ---
-name: aireadylife-vision-flow-score-domain-progress
+name: vision-flow-score-domain-progress
 type: flow
 trigger: called-by-op
 description: >
@@ -8,9 +8,9 @@ description: >
   remaining in the quarter.
 ---
 
-# aireadylife-vision-score-domain-progress
+# vision-score-domain-progress
 
-**Trigger:** Called by `aireadylife-vision-op-quarterly-planning`, `aireadylife-vision-op-monthly-scorecard`, `aireadylife-vision-op-annual-review`, `aireadylife-vision-op-review-brief`
+**Trigger:** Called by `vision-op-quarterly-planning`, `vision-op-monthly-scorecard`, `vision-op-annual-review`, `vision-op-review-brief`
 **Produces:** Per-OKR progress report with completion percentages, pace ratings, and at-risk flags returned to calling op
 
 ## What It Does

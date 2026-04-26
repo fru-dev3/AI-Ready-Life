@@ -1,5 +1,5 @@
 ---
-name: aireadylife-learning-op-monthly-sync
+name: learning-op-monthly-sync
 type: op
 cadence: monthly
 description: >
@@ -18,7 +18,7 @@ Full monthly sync that refreshes the learning vault across all data sources. Run
 
 **Monthly goal vs. actual review:** Reads the monthly learning targets from `vault/learning/00_current/` (how many hours, which milestones, what completion targets) and compares against actual progress logged in the sync. Calculates the achievement rate (actual hours ÷ target hours, milestones hit ÷ milestones planned).
 
-Ends by triggering `aireadylife-learning-op-review-brief` with the freshly synced data to produce the weekly brief for the new month.
+Ends by triggering `learning-op-review-brief` with the freshly synced data to produce the weekly brief for the new month.
 
 ## Triggers
 
@@ -37,10 +37,10 @@ Ends by triggering `aireadylife-learning-op-review-brief` with the freshly synce
 5. Count books completed YTD — compare to annual goal pace (goal ÷ 12 × months_elapsed).
 6. Read certification goals from `vault/learning/00_current/certs.md` — for each: calculate hours logged, hours remaining, and required daily pace to reach exam date.
 7. Read monthly milestone targets from `vault/learning/00_current/` — compare to actual progress.
-8. Identify all active learning items where completion % is behind time-elapsed %: calculate the deficit and flag to `aireadylife-learning-task-flag-falling-behind`.
+8. Identify all active learning items where completion % is behind time-elapsed %: calculate the deficit and flag to `learning-task-flag-falling-behind`.
 9. Update `vault/learning/00_current/status.md` with sync timestamp and summary statistics.
-10. Call `aireadylife-learning-op-review-brief` to produce the monthly brief.
-11. Call `aireadylife-learning-task-update-open-loops` with all flags from this sync.
+10. Call `learning-op-review-brief` to produce the monthly brief.
+11. Call `learning-task-update-open-loops` with all flags from this sync.
 
 ## Input
 

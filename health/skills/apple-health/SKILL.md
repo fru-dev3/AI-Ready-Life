@@ -57,8 +57,8 @@ When both `oura` and `apple_health` are configured as `wearable_type: both` in c
 
 ## Used By
 
-- `aireadylife-health-sync-wearable-data` — read and append Apple Health daily records
-- `aireadylife-health-build-wellness-summary` — supplement Oura data or serve as primary source
+- `health-sync-wearable-data` — read and append Apple Health daily records
+- `health-build-wellness-summary` — supplement Oura data or serve as primary source
 
 ## Vault Output
 

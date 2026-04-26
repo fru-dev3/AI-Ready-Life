@@ -1,5 +1,5 @@
 ---
-name: aireadylife-brand-flow-build-analytics-summary
+name: brand-flow-build-analytics-summary
 type: flow
 trigger: called-by-op
 description: >
@@ -19,7 +19,7 @@ Formats the complete result as a structured summary table with one row per platf
 
 ## Triggers
 
-Called internally by `aireadylife-brand-op-monthly-synthesis` and `aireadylife-brand-op-content-review`. Not invoked directly by the user.
+Called internally by `brand-op-monthly-synthesis` and `brand-op-content-review`. Not invoked directly by the user.
 
 ## Steps
 

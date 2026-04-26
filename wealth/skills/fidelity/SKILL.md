@@ -51,8 +51,8 @@ fidelity_accounts:
 
 ## Used By
 
-- `aireadylife-wealth-investment-review` — pull account balances, holdings, and performance data
-- `aireadylife-wealth-net-worth-review` — contribute retirement and brokerage balances to net worth
+- `wealth-investment-review` — pull account balances, holdings, and performance data
+- `wealth-net-worth-review` — contribute retirement and brokerage balances to net worth
 - Tax document sync — download 1099s when available (typically mid-to-late January)
 
 ## Vault Output

@@ -1,6 +1,6 @@
 {
   "version": "1.0.2",
-  "plugin": "aireadylife-business",
+  "plugin": "business",
   "structure": {
     "subfolders": [
       {"folder": "01_revenue", "description": "Invoices, payment records, revenue by stream"},

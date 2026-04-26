@@ -1,5 +1,5 @@
 ---
-name: aireadylife-wealth-task-flag-savings-milestone
+name: wealth-task-flag-savings-milestone
 type: task
 cadence: called-by-op
 description: >
@@ -10,7 +10,7 @@ description: >
   suggestion for where to redirect the freed cash flow or next savings priority.
 ---
 
-# aireadylife-wealth-flag-savings-milestone
+# wealth-flag-savings-milestone
 
 **Cadence:** Called by debt review and net worth review ops
 **Produces:** Milestone entries in `vault/wealth/open-loops.md`

@@ -1,5 +1,5 @@
 ---
-name: aireadylife-insurance-flow-check-renewal-dates
+name: insurance-flow-check-renewal-dates
 type: flow
 trigger: called-by-op
 description: >
@@ -8,7 +8,7 @@ description: >
 
 ## What It Does
 
-Called by `aireadylife-insurance-op-renewal-watch` to perform the renewal date scan and action categorization. This flow handles the data layer — reading dates, categorizing renewals, and generating specific action steps — while the op handles brief writing and open loop flagging.
+Called by `insurance-op-renewal-watch` to perform the renewal date scan and action categorization. This flow handles the data layer — reading dates, categorizing renewals, and generating specific action steps — while the op handles brief writing and open loop flagging.
 
 **Renewal scan:** Reads all active policy records from `vault/insurance/00_current/` and calculates days_until_renewal for each as of today. Policies renewing within 60 days are included in the output. Policies renewing in 31-60 days are "upcoming" (time to shop or review). Policies renewing in ≤30 days are "urgent" (action must happen now — typically shopping takes 1-2 weeks).
 

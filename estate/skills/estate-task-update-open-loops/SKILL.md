@@ -1,5 +1,5 @@
 ---
-name: aireadylife-estate-task-update-open-loops
+name: estate-task-update-open-loops
 type: task
 description: >
   Writes estate flags (overdue maintenance, lease expirations, cash flow anomalies, vacancy risks,
@@ -7,7 +7,7 @@ description: >
   Maintains the canonical estate action list readable by calendar and wealth plugins.
 ---
 
-# aireadylife-estate-update-open-loops
+# estate-update-open-loops
 
 **Produces:** Updated `~/Documents/aireadylife/vault/estate/open-loops.md` with new flags appended and resolved items archived
 

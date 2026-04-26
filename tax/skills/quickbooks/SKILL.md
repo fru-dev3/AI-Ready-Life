@@ -57,9 +57,9 @@ Find company ID in QBO: Settings → Account and Settings → Billing & Subscrip
 
 ## Used By
 
-- `aireadylife-tax-deduction-review` — pull categorized business expenses for deduction analysis
-- `aireadylife-tax-build-estimate` — read net SE income for quarterly tax calculation
-- `aireadylife-business-pl-review` — pull P&L for business performance review (if business plugin installed)
+- `tax-deduction-review` — pull categorized business expenses for deduction analysis
+- `tax-build-estimate` — read net SE income for quarterly tax calculation
+- `business-pl-review` — pull P&L for business performance review (if business plugin installed)
 
 ## Vault Output
 

@@ -1,5 +1,5 @@
 ---
-name: aireadylife-estate-flow-check-maintenance-schedule
+name: estate-flow-check-maintenance-schedule
 type: flow
 trigger: called-by-op
 description: >
@@ -8,9 +8,9 @@ description: >
   urgency by days overdue, and checks vendor appointment status for scheduled tasks.
 ---
 
-# aireadylife-estate-check-maintenance-schedule
+# estate-check-maintenance-schedule
 
-**Trigger:** Called by `aireadylife-estate-maintenance-review`
+**Trigger:** Called by `estate-maintenance-review`
 **Produces:** Maintenance status list with open items, overdue flags, seasonal tasks due, and urgency escalations returned to the calling op
 
 ## What It Does

@@ -1,5 +1,5 @@
 ---
-name: aireadylife-career-op-network-review
+name: career-op-network-review
 type: op
 cadence: monthly
 description: >
@@ -12,7 +12,7 @@ Your professional network is your highest-value career asset — and it decays f
 
 The op reads your contact log from `vault/career/` — which stores each strategic contact with their current role, company, how you know them, the date and nature of your last interaction, and any notes about their situation or interests. It calculates recency for each contact and categorizes them into three groups: active (last contact within 60 days — no action needed), warm (60-90 days — prime reconnect window), and cooling (90-180 days — reconnect while the relationship still has context to anchor to).
 
-From the warm and cooling groups, it selects the highest-priority contacts for outreach based on strategic value: hiring managers or team leads at target companies, former colleagues now in relevant roles or at interesting companies, connectors with wide networks in your target industry, and mentors or sponsors whose perspective is periodically valuable. For each selected contact, it calls `aireadylife-career-task-draft-outreach-message` with the contact's record and a context type (warm reconnect, referral request, networking maintenance, or intro request). The resulting message draft is specific — it references something real about the contact's current work, a shared experience, or a relevant industry development — not a template with the contact's name swapped in.
+From the warm and cooling groups, it selects the highest-priority contacts for outreach based on strategic value: hiring managers or team leads at target companies, former colleagues now in relevant roles or at interesting companies, connectors with wide networks in your target industry, and mentors or sponsors whose perspective is periodically valuable. For each selected contact, it calls `career-task-draft-outreach-message` with the contact's record and a context type (warm reconnect, referral request, networking maintenance, or intro request). The resulting message draft is specific — it references something real about the contact's current work, a shared experience, or a relevant industry development — not a template with the contact's name swapped in.
 
 The op also scans for new first-degree connections added in the last 30 days and flags any from target companies for immediate light engagement (commenting on their recent posts or a brief welcome message). It also surfaces any open pipeline items with a named contact who has not been followed up on within the standard window — these are treated as pipeline follow-ups, not network maintenance.
 
@@ -33,12 +33,12 @@ The op also scans for new first-degree connections added in the last 30 days and
 3. Categorize: active (<60 days), warm (60-90 days), cooling (90-180 days), dormant (180+ days).
 4. Score warm and cooling contacts by strategic priority: target company hiring managers (highest), former colleagues in relevant roles, connectors in your industry, mentors/sponsors.
 5. Select top 3-5 contacts for outreach this month from warm and cooling groups, weighted by strategic priority.
-6. For each selected contact, call `aireadylife-career-task-draft-outreach-message` with contact record and context type.
+6. For each selected contact, call `career-task-draft-outreach-message` with contact record and context type.
 7. Review open pipeline items from `vault/career/00_current/` — identify any with a named contact who needs follow-up separate from the network maintenance pass.
 8. Scan LinkedIn new connections from last 30 days — flag any from target companies for light engagement.
 9. Write network review summary to `vault/career/02_briefs/YYYY-MM-network-review.md` with selected contacts, draft messages, and rationale.
 10. Update contact log with planned outreach date for each selected contact.
-11. Call `aireadylife-career-task-update-open-loops` with follow-up reminders for each drafted message (2-week follow-up window if no response).
+11. Call `career-task-update-open-loops` with follow-up reminders for each drafted message (2-week follow-up window if no response).
 
 ## Input
 

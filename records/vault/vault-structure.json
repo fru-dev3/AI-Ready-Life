@@ -1,6 +1,6 @@
 {
   "version": "1.0.2",
-  "plugin": "aireadylife-records",
+  "plugin": "records",
   "structure": {
     "subfolders": [
       {"folder": "00_current", "description": "Active document inventory and subscription list"},

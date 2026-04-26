@@ -1,5 +1,5 @@
 ---
-name: aireadylife-brand-task-update-open-loops
+name: brand-task-update-open-loops
 type: task
 description: >
   Writes all brand flags (profile inconsistencies, content gaps, unanswered mentions, publishing
@@ -18,7 +18,7 @@ Deduplicates: before appending a new flag, checks whether the same issue (same p
 
 ## Triggers
 
-Called at the end of every brand op: `aireadylife-brand-op-profile-audit`, `aireadylife-brand-op-monthly-synthesis`, `aireadylife-brand-op-content-review`, and `aireadylife-brand-task-flag-profile-inconsistency`.
+Called at the end of every brand op: `brand-op-profile-audit`, `brand-op-monthly-synthesis`, `brand-op-content-review`, and `brand-task-flag-profile-inconsistency`.
 
 ## Steps
 

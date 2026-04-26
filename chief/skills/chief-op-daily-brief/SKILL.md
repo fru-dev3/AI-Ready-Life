@@ -1,5 +1,5 @@
 ---
-name: aireadylife-chief-op-daily-brief
+name: chief-op-daily-brief
 type: op
 cadence: daily
 description: >
@@ -8,7 +8,7 @@ description: >
   "chief brief", "what do I need to do today".
 ---
 
-# aireadylife-chief-daily-brief
+# chief-daily-brief
 
 **Cadence:** Daily (morning)
 **Produces:** Prioritized daily brief written to ~/Documents/aireadylife/vault/chief/02_briefs/daily-YYYY-MM-DD.md

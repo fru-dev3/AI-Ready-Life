@@ -1,5 +1,5 @@
 ---
-name: aireadylife-insurance-op-coverage-audit
+name: insurance-op-coverage-audit
 type: op
 cadence: annual
 description: >
@@ -45,10 +45,10 @@ Runs once per year (January is the standard timing) or immediately after a major
 10. For each property: compare dwelling coverage to estimated replacement cost. Flag coinsurance risk if coverage < 80% of replacement cost.
 11. Check for flood and earthquake coverage flags based on property location (stored in config).
 12. Identify potential over-insurance (old vehicles with collision, excess personal property coverage).
-13. Call `aireadylife-insurance-flow-analyze-coverage-gaps` for the detailed gap scoring.
-14. Call `aireadylife-insurance-task-flag-coverage-gap` for each identified gap with severity and dollar impact.
+13. Call `insurance-flow-analyze-coverage-gaps` for the detailed gap scoring.
+14. Call `insurance-task-flag-coverage-gap` for each identified gap with severity and dollar impact.
 15. Write coverage audit report to `vault/insurance/00_current/coverage-audit-YYYY.md`.
-16. Call `aireadylife-insurance-task-update-open-loops` with all findings.
+16. Call `insurance-task-update-open-loops` with all findings.
 
 ## Input
 

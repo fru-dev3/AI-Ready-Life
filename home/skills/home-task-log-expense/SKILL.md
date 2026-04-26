@@ -1,5 +1,5 @@
 ---
-name: aireadylife-home-task-log-expense
+name: home-task-log-expense
 type: task
 cadence: as-received
 description: >
@@ -8,7 +8,7 @@ description: >
   tagging feeds directly into monthly budget variance calculations.
 ---
 
-# aireadylife-home-log-expense
+# home-log-expense
 
 **Cadence:** As-received (when a bill is paid, a repair is completed, or a service is rendered)
 **Produces:** New expense record in `~/Documents/aireadylife/vault/home/00_current/YYYY-MM-expenses.md`

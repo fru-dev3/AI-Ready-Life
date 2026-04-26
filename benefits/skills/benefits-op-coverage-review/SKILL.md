@@ -1,5 +1,5 @@
 ---
-name: aireadylife-benefits-op-coverage-review
+name: benefits-op-coverage-review
 type: op
 cadence: quarterly
 description: >
@@ -46,9 +46,9 @@ The quarterly cadence catches administrative issues early (not 11 months after t
 8. Check STD waiting period vs. liquid emergency fund in config — flag if emergency fund is shorter than STD waiting period.
 9. Verify health, dental, and vision elections are all active.
 10. Check dependent coverage tier matches actual dependent status.
-11. Call `aireadylife-benefits-flow-build-coverage-summary` for structured coverage table.
+11. Call `benefits-flow-build-coverage-summary` for structured coverage table.
 12. Write coverage audit to `vault/benefits/02_briefs/coverage-audit-QN-YYYY.md` with per-line status and gap analysis.
-13. Call `aireadylife-benefits-task-update-open-loops` with all identified gaps and any administrative discrepancies.
+13. Call `benefits-task-update-open-loops` with all identified gaps and any administrative discrepancies.
 
 ## Input
 

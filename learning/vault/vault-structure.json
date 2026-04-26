@@ -1,6 +1,6 @@
 {
   "version": "1.0.2",
-  "plugin": "aireadylife-learning",
+  "plugin": "learning",
   "structure": {
     "subfolders": [
       {"folder": "00_current", "description": "Active learning state and current goals"},

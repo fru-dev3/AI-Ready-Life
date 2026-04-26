@@ -1,5 +1,5 @@
 ---
-name: aireadylife-estate-flow-build-portfolio-summary
+name: estate-flow-build-portfolio-summary
 type: flow
 trigger: called-by-op
 description: >
@@ -8,9 +8,9 @@ description: >
   cash-on-cash return. Includes portfolio-level totals and YoY performance comparison.
 ---
 
-# aireadylife-estate-build-portfolio-summary
+# estate-build-portfolio-summary
 
-**Trigger:** Called by `aireadylife-estate-portfolio-review`, `aireadylife-estate-tenant-review`
+**Trigger:** Called by `estate-portfolio-review`, `estate-tenant-review`
 **Produces:** Structured portfolio snapshot with per-property financials and portfolio-level summary returned to the calling op
 
 ## What It Does

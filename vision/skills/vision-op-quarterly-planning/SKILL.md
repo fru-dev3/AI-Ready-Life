@@ -1,5 +1,5 @@
 ---
-name: aireadylife-vision-op-quarterly-planning
+name: vision-op-quarterly-planning
 type: op
 cadence: quarterly
 description: >
@@ -8,7 +8,7 @@ description: >
   Triggers: "quarterly planning", "set goals", "quarterly review", "Q planning session".
 ---
 
-# aireadylife-vision-quarterly-planning
+# vision-quarterly-planning
 
 **Cadence:** Quarterly (first week of January, April, July, October)
 **Produces:** Quarterly retrospective + new OKRs at ~/Documents/aireadylife/vault/vision/00_current/YYYY-QN-okrs.md and planning session at vault/vision/00_current/YYYY-QN-planning-session.md

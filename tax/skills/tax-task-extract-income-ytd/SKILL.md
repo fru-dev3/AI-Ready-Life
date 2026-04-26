@@ -1,5 +1,5 @@
 ---
-name: aireadylife-tax-task-extract-income-ytd
+name: tax-task-extract-income-ytd
 type: task
 cadence: called-by-op
 description: >
@@ -11,9 +11,9 @@ description: >
   withholding and prior quarterly estimated payments.
 ---
 
-# aireadylife-tax-extract-income-ytd
+# tax-extract-income-ytd
 
-**Cadence:** Called by `aireadylife-tax-build-estimate` and other flows needing YTD income figures
+**Cadence:** Called by `tax-build-estimate` and other flows needing YTD income figures
 **Produces:** Structured YTD income summary returned in memory to the calling flow
 
 ## What It Does
@@ -32,7 +32,7 @@ A utility task called whenever a flow needs current year-to-date income and with
 
 **YTD withholding and prior payments.** Total federal income tax withheld from W-2 records. Total estimated payments made YTD from `vault/tax/00_current/payment-log.md`. Prior year overpayment applied to current year (from config if applicable).
 
-**Return structure.** The task returns a structured record (not a vault-written document) with all the above fields populated and labeled, so the calling flow (`aireadylife-tax-build-estimate`) can immediately use the data without additional parsing.
+**Return structure.** The task returns a structured record (not a vault-written document) with all the above fields populated and labeled, so the calling flow (`tax-build-estimate`) can immediately use the data without additional parsing.
 
 ## Apps
 

@@ -1,5 +1,5 @@
 ---
-name: aireadylife-tax-task-log-deductible-expense
+name: tax-task-log-deductible-expense
 type: task
 cadence: as-received
 description: >
@@ -12,14 +12,14 @@ description: >
   purchase is made in real time.
 ---
 
-# aireadylife-tax-log-deductible-expense
+# tax-log-deductible-expense
 
 **Cadence:** As-received (called by deduction review op or triggered directly by user)
 **Produces:** New deduction entry in `vault/tax/00_current/YYYY/deduction-log.md`
 
 ## What It Does
 
-Records a single deductible expense to the vault's deductions log with all the fields needed to support the deduction if examined by the IRS. This task is the write end of the deduction capture pipeline — `aireadylife-tax-review-deductions` identifies deductible items; this task logs them.
+Records a single deductible expense to the vault's deductions log with all the fields needed to support the deduction if examined by the IRS. This task is the write end of the deduction capture pipeline — `tax-review-deductions` identifies deductible items; this task logs them.
 
 **Required fields per entry:**
 - **Date** — the date the expense was incurred (not the date it was logged)

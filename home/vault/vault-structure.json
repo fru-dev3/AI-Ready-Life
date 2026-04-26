@@ -1,6 +1,6 @@
 {
   "version": "1.0.2",
-  "plugin": "aireadylife-home",
+  "plugin": "home",
   "structure": {
     "subfolders": [
       {"folder": "00_current", "description": "Active home state, open maintenance list, and current expenses"},

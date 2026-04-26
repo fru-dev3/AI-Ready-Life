@@ -1,5 +1,5 @@
 ---
-name: aireadylife-benefits-op-hsa-review
+name: benefits-op-hsa-review
 type: op
 cadence: monthly
 description: >
@@ -41,7 +41,7 @@ Runs monthly to maximize the value of your HSA — the only triple-tax-advantage
 9. Read `vault/benefits/00_current/pending-reimbursements.md` — list all unpaid qualified expenses with receipt confirmed, sorted by date.
 10. Sum pending reimbursements by category and in total.
 11. Write HSA review to `vault/benefits/00_current/hsa-review-YYYY-MM.md`.
-12. Call `aireadylife-benefits-task-update-open-loops` with: contribution shortfall flag (if any), investment threshold action (if needed), pending reimbursement count and total.
+12. Call `benefits-task-update-open-loops` with: contribution shortfall flag (if any), investment threshold action (if needed), pending reimbursement count and total.
 
 ## Input
 

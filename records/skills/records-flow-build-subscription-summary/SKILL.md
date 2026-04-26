@@ -1,5 +1,5 @@
 ---
-name: aireadylife-records-flow-build-subscription-summary
+name: records-flow-build-subscription-summary
 type: flow
 trigger: called-by-op
 description: >
@@ -8,9 +8,9 @@ description: >
   within 30 days, and keep/cancel recommendation. Sorted by monthly cost descending.
 ---
 
-# aireadylife-records-build-subscription-summary
+# records-build-subscription-summary
 
-**Trigger:** Called by `aireadylife-records-subscription-review`
+**Trigger:** Called by `records-subscription-review`
 **Produces:** Subscription summary table sorted by monthly cost with usage flags, renewal alerts, and keep/cancel recommendations
 
 ## What It Does

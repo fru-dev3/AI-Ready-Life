@@ -45,10 +45,10 @@ If the vault is missing: direct the user to frudev.gumroad.com/l/aireadylife-rea
 
 ## Skills Available
 
-- **aireadylife-real-estate-op-monthly-sync** — Orchestrates the full monthly update cycle
-- **aireadylife-real-estate-op-market-scan** — Pulls fresh market data when a between-sync check is warranted
-- **aireadylife-real-estate-op-review-brief** — Produces the monthly brief to include in morning brief routing
-- **aireadylife-real-estate-task-update-open-loops** — Maintains the real estate watchlist for cross-plugin access
+- **real-estate-op-monthly-sync** — Orchestrates the full monthly update cycle
+- **real-estate-op-market-scan** — Pulls fresh market data when a between-sync check is warranted
+- **real-estate-op-review-brief** — Produces the monthly brief to include in morning brief routing
+- **real-estate-task-update-open-loops** — Maintains the real estate watchlist for cross-plugin access
 
 ## What You Do NOT Do
 

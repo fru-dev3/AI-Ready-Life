@@ -1,5 +1,5 @@
 ---
-name: aireadylife-content-flow-build-seo-summary
+name: content-flow-build-seo-summary
 type: flow
 trigger: called-by-op
 description: >
@@ -20,7 +20,7 @@ Content gap analysis: keywords in the user's topic space that have sufficient mo
 
 ## Triggers
 
-Called internally by `aireadylife-content-op-seo-review`. Not invoked directly by the user.
+Called internally by `content-op-seo-review`. Not invoked directly by the user.
 
 ## Steps
 

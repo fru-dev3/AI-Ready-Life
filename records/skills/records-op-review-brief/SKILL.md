@@ -1,5 +1,5 @@
 ---
-name: aireadylife-records-op-review-brief
+name: records-op-review-brief
 type: op
 cadence: monthly
 description: >
@@ -9,7 +9,7 @@ description: >
   Triggers: "records brief", "document review", "subscription audit", "what's expiring".
 ---
 
-# aireadylife-records-review-brief
+# records-review-brief
 
 **Cadence:** Monthly (1st of month, after monthly sync) or on-demand
 **Produces:** Records brief — expiring documents, subscription cost and usage, document gaps, action items
@@ -50,7 +50,7 @@ Action items are sorted by urgency across all sections. The user should be able 
 7. Calculate headline numbers: total subscription spend, documents expiring <90 days, open loops count
 8. Compile all sections into brief structure
 9. Write brief to `~/Documents/aireadylife/vault/records/02_briefs/YYYY-MM-records-brief.md`
-10. Call `aireadylife-records-update-open-loops` with any new flags from the brief
+10. Call `records-update-open-loops` with any new flags from the brief
 
 ## Input
 

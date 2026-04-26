@@ -1,5 +1,5 @@
 ---
-name: aireadylife-records-op-monthly-sync
+name: records-op-monthly-sync
 type: op
 cadence: monthly
 description: >
@@ -9,7 +9,7 @@ description: >
   Triggers: "records monthly sync", "sync records", "refresh records vault".
 ---
 
-# aireadylife-records-monthly-sync
+# records-monthly-sync
 
 **Cadence:** Monthly (1st of month)
 **Produces:** Records vault refreshed with updated expiration countdowns, subscription review, and a records review brief
@@ -44,9 +44,9 @@ After these three updates, the sync triggers the records review brief.
 7. Check for subscriptions unused for 60+ days; flag for cancellation consideration
 8. Check subscription prices against logged amounts; flag any discrepancy
 9. Read legal document review dates from `01_legal/`; check against life events in config.md
-10. Call `aireadylife-records-update-open-loops` with all new flags; resolve any items from prior sync that are no longer relevant
+10. Call `records-update-open-loops` with all new flags; resolve any items from prior sync that are no longer relevant
 11. Write sync completion record to `~/Documents/aireadylife/vault/records/00_current/last-sync.md`
-12. Trigger `aireadylife-records-review-brief` to compile all results
+12. Trigger `records-review-brief` to compile all results
 13. Present sync summary with counts of documents updated, documents flagged, subscriptions reviewed
 
 ## Input

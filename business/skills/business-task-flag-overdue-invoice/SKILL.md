@@ -1,5 +1,5 @@
 ---
-name: aireadylife-business-task-flag-overdue-invoice
+name: business-task-flag-overdue-invoice
 type: task
 description: >
   Writes an overdue invoice flag to vault/business/open-loops.md when an invoice is unpaid more
@@ -18,7 +18,7 @@ Writes a structured flag to `~/Documents/aireadylife/vault/business/open-loops.m
 
 ## Triggers
 
-Called internally by `aireadylife-business-op-pl-review` and `aireadylife-business-task-log-invoice` when an overdue condition is detected.
+Called internally by `business-op-pl-review` and `business-task-log-invoice` when an overdue condition is detected.
 
 ## Steps
 

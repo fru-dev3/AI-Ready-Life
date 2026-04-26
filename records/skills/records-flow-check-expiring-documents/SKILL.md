@@ -1,5 +1,5 @@
 ---
-name: aireadylife-records-flow-check-expiring-documents
+name: records-flow-check-expiring-documents
 type: flow
 trigger: called-by-op
 description: >
@@ -9,9 +9,9 @@ description: >
   Returns structured action items with renewal steps and agency links.
 ---
 
-# aireadylife-records-check-expiring-documents
+# records-check-expiring-documents
 
-**Trigger:** Called by `aireadylife-records-document-audit`
+**Trigger:** Called by `records-document-audit`
 **Produces:** Expiration report with per-document status, renewal lead times, and specific action steps
 
 ## What It Does

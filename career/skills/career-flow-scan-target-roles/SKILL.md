@@ -1,5 +1,5 @@
 ---
-name: aireadylife-career-flow-scan-target-roles
+name: career-flow-scan-target-roles
 type: flow
 trigger: called-by-op
 description: >
@@ -8,7 +8,7 @@ description: >
 
 ## What It Does
 
-Called by `aireadylife-career-op-market-scan` to execute the actual job board search. This flow handles the data collection layer — reading criteria, querying sources, filtering and ranking results, and returning structured data — while the op handles routing, brief writing, and pipeline logging.
+Called by `career-op-market-scan` to execute the actual job board search. This flow handles the data collection layer — reading criteria, querying sources, filtering and ranking results, and returning structured data — while the op handles routing, brief writing, and pipeline logging.
 
 **Reading search criteria:** Loads target role criteria from `vault/career/config.md`. This includes: target job titles (search with all configured variants), seniority level filter (e.g., "Senior", "Staff", "Principal", "Manager"), company tier preferences (FAANG / well-funded startup / Fortune 500 / remote-first), required tech stack keywords (used for secondary filter after initial results are collected), minimum compensation threshold (postings without stated comp are estimated from Levels.fyi and Glassdoor data for that company and role), and remote/hybrid requirement.
 

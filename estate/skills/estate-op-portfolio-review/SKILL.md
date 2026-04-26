@@ -1,5 +1,5 @@
 ---
-name: aireadylife-estate-op-portfolio-review
+name: estate-op-portfolio-review
 type: op
 cadence: quarterly
 description: >
@@ -9,7 +9,7 @@ description: >
   Triggers: "portfolio review", "property performance", "cap rate", "rental return", "hold or sell".
 ---
 
-# aireadylife-estate-portfolio-review
+# estate-portfolio-review
 
 **Cadence:** Quarterly (first week of January, April, July, October)
 **Produces:** Comprehensive quarterly portfolio report in `~/Documents/aireadylife/vault/estate/00_current/` with per-property financials, equity positions, hold/sell analysis, and open loop flags
@@ -37,15 +37,15 @@ Capital improvement ROI modeling: for each property where significant deferred m
 
 ## Steps
 
-1. Call `aireadylife-estate-build-portfolio-summary` to pull current values, equity, and tenant data
-2. Call `aireadylife-estate-analyze-cash-flow` for the detailed quarterly expense breakdown and NCF per property
+1. Call `estate-build-portfolio-summary` to pull current values, equity, and tenant data
+2. Call `estate-analyze-cash-flow` for the detailed quarterly expense breakdown and NCF per property
 3. Calculate cap rate and cash-on-cash return per property
 4. Calculate annual depreciation benefit per property using (purchase price minus land value) ÷ 27.5
 5. Apply hold vs. sell decision framework to each property; flag sell signals if criteria met
 6. For any flagged sell: calculate estimated net proceeds including selling costs (6%) and estimated capital gains tax
 7. Check if a 1031 exchange is viable for any sell scenario (flag if equity ≥ $50,000 and comparable properties are available in target markets)
 8. For each property with deferred maintenance or value-add opportunities: model capital improvement ROI
-9. Call `aireadylife-estate-update-open-loops` with hold/sell flags and strategic recommendations
+9. Call `estate-update-open-loops` with hold/sell flags and strategic recommendations
 10. Write quarterly portfolio report to `~/Documents/aireadylife/vault/estate/00_current/YYYY-Q{N}-portfolio-review.md`
 11. Present full report with per-property analysis and portfolio-level strategic summary
 

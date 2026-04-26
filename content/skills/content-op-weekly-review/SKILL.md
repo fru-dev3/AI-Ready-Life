@@ -1,5 +1,5 @@
 ---
-name: aireadylife-content-op-weekly-review
+name: content-op-weekly-review
 type: op
 cadence: weekly
 description: >

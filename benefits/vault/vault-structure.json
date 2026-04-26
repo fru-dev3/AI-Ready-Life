@@ -1,6 +1,6 @@
 {
   "version": "1.0.2",
-  "plugin": "aireadylife-benefits",
+  "plugin": "benefits",
   "structure": {
     "subfolders": [
       {"folder": "01_retirement", "description": "401k statements and employer match records"},

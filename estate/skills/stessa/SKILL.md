@@ -51,8 +51,8 @@ stessa_chrome_profile: /Users/YOU/Library/Application Support/Google/Chrome/Defa
 
 ## Used By
 
-- `aireadylife-estate-cash-flow-review` — pull property-level income and expense report for the current month
-- `aireadylife-estate-portfolio-review` — pull cross-property NOI summary and Stessa AVM for equity calculations
+- `estate-cash-flow-review` — pull property-level income and expense report for the current month
+- `estate-portfolio-review` — pull cross-property NOI summary and Stessa AVM for equity calculations
 
 ## Vault Output
 

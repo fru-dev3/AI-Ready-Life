@@ -1,5 +1,5 @@
 ---
-name: aireadylife-brand-op-profile-audit
+name: brand-op-profile-audit
 type: op
 cadence: quarterly
 description: >
@@ -12,7 +12,7 @@ description: >
 
 Runs quarterly (January, April, July, October) to produce a complete brand profile consistency assessment across all configured platforms. Profile drift is one of the most common and damaging brand problems — a LinkedIn bio that was updated but a Twitter/X bio that was not, a website URL changed but not reflected on 3 platforms, a new headshot rolled out to some platforms but not others. Audiences notice inconsistency even when they cannot articulate why it feels off.
 
-Calls `aireadylife-brand-flow-check-profile-consistency` to perform the field-by-field comparison of each platform's current-state snapshot against the master brand profile. For each discrepancy found, calls `aireadylife-brand-task-flag-profile-inconsistency` to write a prioritized fix action to open-loops. Presents the full audit results in a format that makes it easy for the user to go update each platform in a single session — a "profile update checklist" rather than just a list of problems.
+Calls `brand-flow-check-profile-consistency` to perform the field-by-field comparison of each platform's current-state snapshot against the master brand profile. For each discrepancy found, calls `brand-task-flag-profile-inconsistency` to write a prioritized fix action to open-loops. Presents the full audit results in a format that makes it easy for the user to go update each platform in a single session — a "profile update checklist" rather than just a list of problems.
 
 Checks LinkedIn specifically for profile completeness signals that affect algorithmic discoverability: headline is present and keyword-rich, summary is filled (2,000 characters is the limit — use it), featured section has at least one item, skills section has 10+ endorsed skills, and all experience entries have descriptions. A complete LinkedIn profile generates 40x more opportunities than an incomplete one.
 
@@ -31,15 +31,15 @@ Also checks for the user's author presence across any blogs, guest publications,
 ## Steps
 
 1. Confirm master-profile.md exists; if not, prompt user to create it and provide field template
-2. Call `aireadylife-brand-flow-check-profile-consistency`; receive discrepancy list, consistency score, and missing-snapshot warnings
-3. For each 🔴 discrepancy: call `aireadylife-brand-task-flag-profile-inconsistency` to write to open-loops
-4. For each 🟡 discrepancy: call `aireadylife-brand-task-flag-profile-inconsistency` with 🟡 priority
+2. Call `brand-flow-check-profile-consistency`; receive discrepancy list, consistency score, and missing-snapshot warnings
+3. For each 🔴 discrepancy: call `brand-task-flag-profile-inconsistency` to write to open-loops
+4. For each 🟡 discrepancy: call `brand-task-flag-profile-inconsistency` with 🟡 priority
 5. For each missing platform snapshot: add a note prompting manual verification and snapshot update after the user has checked the platform
 6. Check LinkedIn specifically for completeness signals: headline, summary character count, featured section items, skills count; flag any that are below target
 7. Check for consistent author name/bio on any external publications or media mentions configured in config.md
 8. Compile full audit report with: consistency score, per-platform status table (green / needs update), update checklist ordered by priority
 9. Write audit report to vault/brand/02_briefs/profile-audit-{Q}-{YYYY}.md
-10. Call `aireadylife-brand-task-update-open-loops` with all flags from the audit
+10. Call `brand-task-update-open-loops` with all flags from the audit
 
 ## Input
 

@@ -1,5 +1,5 @@
 ---
-name: aireadylife-real-estate-op-monthly-sync
+name: real-estate-op-monthly-sync
 type: op
 cadence: monthly
 description: >
@@ -9,7 +9,7 @@ description: >
   Triggers: "real estate monthly sync", "sync market data", "refresh real estate vault".
 ---
 
-# aireadylife-real-estate-monthly-sync
+# real-estate-monthly-sync
 
 **Cadence:** Monthly (1st of month)
 **Produces:** Real estate vault refreshed with current market data, updated affordability analysis, and a review brief
@@ -37,13 +37,13 @@ After these three updates, the monthly sync triggers the review brief, which for
 
 1. Confirm `~/Documents/aireadylife/vault/real-estate/config.md` is populated; halt and prompt if required fields are blank
 2. Check if `current_30yr_rate` is older than 30 days; prompt user to confirm or update rate before proceeding
-3. Call `aireadylife-real-estate-market-scan` to pull fresh market data for all target markets
-4. Call `aireadylife-real-estate-affordability-review` to recalculate max purchase price at updated rate
+3. Call `real-estate-market-scan` to pull fresh market data for all target markets
+4. Call `real-estate-affordability-review` to recalculate max purchase price at updated rate
 5. Note delta from prior month affordability ceiling (e.g., "Rate increase of 0.25% reduced max purchase price by $18,000")
-6. Call `aireadylife-real-estate-run-buy-vs-rent` with updated market prices and current rent
+6. Call `real-estate-run-buy-vs-rent` with updated market prices and current rent
 7. Check for any active listings saved in `~/Documents/aireadylife/vault/real-estate/00_current/` and update their DOM count
-8. Call `aireadylife-real-estate-update-open-loops` to add new flags and resolve any completed items
-9. Trigger `aireadylife-real-estate-review-brief` to compile results into the monthly brief
+8. Call `real-estate-update-open-loops` to add new flags and resolve any completed items
+9. Trigger `real-estate-review-brief` to compile results into the monthly brief
 10. Write sync completion record to `~/Documents/aireadylife/vault/real-estate/00_current/last-sync.md`
 
 ## Input

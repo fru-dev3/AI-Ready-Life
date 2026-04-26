@@ -1,5 +1,5 @@
 ---
-name: aireadylife-wealth-flow-build-net-worth-summary
+name: wealth-flow-build-net-worth-summary
 type: flow
 trigger: called-by-op
 description: >
@@ -11,9 +11,9 @@ description: >
   movement greater than $500 vs. prior month snapshot.
 ---
 
-# aireadylife-wealth-build-net-worth-summary
+# wealth-build-net-worth-summary
 
-**Trigger:** Called by `aireadylife-wealth-net-worth-review`
+**Trigger:** Called by `wealth-net-worth-review`
 **Produces:** Net worth table at `vault/wealth/02_briefs/YYYY-MM-net-worth.md`
 
 ## What It Does

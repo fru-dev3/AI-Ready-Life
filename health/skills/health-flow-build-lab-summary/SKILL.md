@@ -1,5 +1,5 @@
 ---
-name: aireadylife-health-flow-build-lab-summary
+name: health-flow-build-lab-summary
 type: flow
 trigger: called-by-op
 description: >
@@ -10,9 +10,9 @@ description: >
   with severity tier (borderline, elevated, critical).
 ---
 
-# aireadylife-health-build-lab-summary
+# health-build-lab-summary
 
-**Trigger:** Called by `aireadylife-health-lab-review`
+**Trigger:** Called by `health-lab-review`
 **Produces:** Formatted lab summary document in `vault/health/00_current/YYYY-MM-lab-summary.md` with out-of-range items surfaced first
 
 ## What It Does

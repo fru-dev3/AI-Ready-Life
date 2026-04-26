@@ -1,5 +1,5 @@
 ---
-name: aireadylife-content-task-update-open-loops
+name: content-task-update-open-loops
 type: task
 description: >
   Writes all content flags (revenue dips, SEO gaps, publishing misses, channel
@@ -18,7 +18,7 @@ Unlike the business and brand open-loops files, content open-loops also tracks o
 
 ## Triggers
 
-Called at the end of every content op: `aireadylife-content-op-channel-review`, `aireadylife-content-op-revenue-review`, `aireadylife-content-op-seo-review`, `aireadylife-content-op-weekly-review`, and `aireadylife-content-task-flag-seo-gap`.
+Called at the end of every content op: `content-op-channel-review`, `content-op-revenue-review`, `content-op-seo-review`, `content-op-weekly-review`, and `content-task-flag-seo-gap`.
 
 ## Steps
 

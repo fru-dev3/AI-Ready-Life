@@ -1,5 +1,5 @@
 ---
-name: aireadylife-explore-op-document-check
+name: explore-op-document-check
 type: op
 cadence: quarterly
 description: >
@@ -8,7 +8,7 @@ description: >
   "travel documents", "Global Entry renewal".
 ---
 
-# aireadylife-explore-document-check
+# explore-document-check
 
 **Cadence:** Quarterly (1st of January, April, July, October)
 **Produces:** Travel document status report at ~/Documents/aireadylife/vault/explore/00_current/

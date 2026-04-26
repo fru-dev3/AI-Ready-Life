@@ -42,11 +42,11 @@ If the vault does not exist, direct the user to: frudev.gumroad.com/l/aireadylif
 
 ## Skills Available
 
-- **aireadylife-benefits-op-review-brief** — Monthly benefits brief
-- **aireadylife-benefits-op-401k-review** — Monthly 401k match and allocation review
-- **aireadylife-benefits-op-hsa-review** — Monthly HSA review
-- **aireadylife-benefits-op-enrollment-review** — Annual open enrollment planner
-- **aireadylife-benefits-op-coverage-review** — Quarterly coverage adequacy audit
+- **benefits-op-review-brief** — Monthly benefits brief
+- **benefits-op-401k-review** — Monthly 401k match and allocation review
+- **benefits-op-hsa-review** — Monthly HSA review
+- **benefits-op-enrollment-review** — Annual open enrollment planner
+- **benefits-op-coverage-review** — Quarterly coverage adequacy audit
 
 ## What You Do NOT Do
 

@@ -1,5 +1,5 @@
 ---
-name: aireadylife-records-op-subscription-review
+name: records-op-subscription-review
 type: op
 cadence: monthly
 description: >
@@ -10,7 +10,7 @@ description: >
   "recurring charges", "cancel subscriptions", "subscription audit", "what am I paying for".
 ---
 
-# aireadylife-records-subscription-review
+# records-subscription-review
 
 **Cadence:** Monthly (1st of month)
 **Produces:** Subscription table with total recurring cost, usage flags, renewal alerts, and cancel recommendations
@@ -46,13 +46,13 @@ The headline figure — total monthly subscription spend — is always shown pro
 ## Steps
 
 1. Read subscription registry from `~/Documents/aireadylife/vault/records/00_current/subscriptions.md`
-2. Call `aireadylife-records-build-subscription-summary` to produce the full table
+2. Call `records-build-subscription-summary` to produce the full table
 3. Apply keep/review/cancel tier to each subscription based on usage recency and price
 4. Surface annual renewals within 30 days at the top of the output
 5. Calculate total monthly spend, total annual spend, and potential savings from canceling all "cancel" tier subscriptions
 6. Identify category duplicates; flag pairs
 7. Write subscription review to `~/Documents/aireadylife/vault/records/00_current/YYYY-MM-subscription-review.md`
-8. Call `aireadylife-records-update-open-loops` with any subscription flags (renewals approaching, unused services, large unused annual subscription)
+8. Call `records-update-open-loops` with any subscription flags (renewals approaching, unused services, large unused annual subscription)
 9. Present full table sorted by monthly cost with headline totals and action items
 
 ## Input

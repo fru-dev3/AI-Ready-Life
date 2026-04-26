@@ -1,5 +1,5 @@
 ---
-name: aireadylife-vision-flow-build-scorecard
+name: vision-flow-build-scorecard
 type: flow
 trigger: called-by-op
 description: >
@@ -8,9 +8,9 @@ description: >
   open loop velocity and milestone activity.
 ---
 
-# aireadylife-vision-build-scorecard
+# vision-build-scorecard
 
-**Trigger:** Called by `aireadylife-vision-op-monthly-scorecard`, `aireadylife-vision-op-review-brief`
+**Trigger:** Called by `vision-op-monthly-scorecard`, `vision-op-review-brief`
 **Produces:** Structured scorecard data with per-domain scores, trend indicators, and status notes returned to calling op
 
 ## What It Does

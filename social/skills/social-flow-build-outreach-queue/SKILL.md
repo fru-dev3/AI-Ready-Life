@@ -1,5 +1,5 @@
 ---
-name: aireadylife-social-flow-build-outreach-queue
+name: social-flow-build-outreach-queue
 type: flow
 trigger: called-by-op
 description: >
@@ -7,9 +7,9 @@ description: >
   warm reconnect opportunities.
 ---
 
-# aireadylife-social-build-outreach-queue
+# social-build-outreach-queue
 
-**Trigger:** Called by `aireadylife-social-op-birthday-watch`, `aireadylife-social-op-review-brief`, `aireadylife-social-op-relationship-review`
+**Trigger:** Called by `social-op-birthday-watch`, `social-op-review-brief`, `social-op-relationship-review`
 **Produces:** Prioritized outreach queue with suggested action and conversation context per person
 
 ## What It Does

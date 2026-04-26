@@ -1,5 +1,5 @@
 ---
-name: aireadylife-social-op-review-brief
+name: social-op-review-brief
 type: op
 cadence: weekly
 description: >
@@ -8,7 +8,7 @@ description: >
   Triggers: "social brief", "relationship update", "who should I reach out to", "birthday reminders".
 ---
 
-# aireadylife-social-review-brief
+# social-review-brief
 
 **Cadence:** Weekly (Monday)
 **Produces:** Weekly social brief at ~/Documents/aireadylife/vault/social/02_briefs/YYYY-MM-DD-social-brief.md

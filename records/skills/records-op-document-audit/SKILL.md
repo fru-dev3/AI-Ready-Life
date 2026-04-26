@@ -1,5 +1,5 @@
 ---
-name: aireadylife-records-op-document-audit
+name: records-op-document-audit
 type: op
 cadence: quarterly
 description: >
@@ -9,7 +9,7 @@ description: >
   Triggers: "document audit", "records check", "ID expiration", "important documents".
 ---
 
-# aireadylife-records-document-audit
+# records-document-audit
 
 **Cadence:** Quarterly (1st of January, April, July, October)
 **Produces:** Document status report with expiration flags, missing document gaps, review recommendations, and storage gap alerts
@@ -38,14 +38,14 @@ This op runs quarterly to audit the complete document inventory against five dim
 
 ## Steps
 
-1. Call `aireadylife-records-check-expiring-documents` to produce the expiration report for all tracked documents
+1. Call `records-check-expiring-documents` to produce the expiration report for all tracked documents
 2. Run document gap checklist against vault contents for identity, legal, financial, and insurance categories
 3. For each document in vault: check physical and digital storage locations; flag single-point-of-failure
 4. Check each household member for REAL ID-compliant driver's license status
 5. Check legal document review dates and life event triggers in config.md
-6. Call `aireadylife-records-flag-expiring-id` for any document entering its alert window for the first time
+6. Call `records-flag-expiring-id` for any document entering its alert window for the first time
 7. Write document audit report to `~/Documents/aireadylife/vault/records/00_current/YYYY-MM-document-audit.md`
-8. Call `aireadylife-records-update-open-loops` with all flags (expiring, missing, storage gaps, legal review)
+8. Call `records-update-open-loops` with all flags (expiring, missing, storage gaps, legal review)
 9. Present full report organized by urgency
 
 ## Input

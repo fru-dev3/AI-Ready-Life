@@ -1,6 +1,6 @@
 {
   "version": "1.0.2",
-  "plugin": "aireadylife-chief",
+  "plugin": "chief",
   "structure": {
     "subfolders": [
       {"folder": "01_briefs", "description": "Daily AM/PM briefs archive"},

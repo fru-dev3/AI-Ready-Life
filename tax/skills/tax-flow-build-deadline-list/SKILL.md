@@ -1,5 +1,5 @@
 ---
-name: aireadylife-tax-flow-build-deadline-list
+name: tax-flow-build-deadline-list
 type: flow
 trigger: called-by-op
 description: >
@@ -12,9 +12,9 @@ description: >
   and specific payment or filing method.
 ---
 
-# aireadylife-tax-build-deadline-list
+# tax-build-deadline-list
 
-**Trigger:** Called by `aireadylife-tax-deadline-watch`
+**Trigger:** Called by `tax-deadline-watch`
 **Produces:** Deadline list document at `vault/tax/00_current/YYYY-MM-deadlines.md`
 
 ## What It Does

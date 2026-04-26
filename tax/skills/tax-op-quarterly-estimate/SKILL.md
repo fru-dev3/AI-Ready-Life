@@ -1,5 +1,5 @@
 ---
-name: aireadylife-tax-op-quarterly-estimate
+name: tax-op-quarterly-estimate
 type: op
 cadence: quarterly
 description: >
@@ -12,7 +12,7 @@ description: >
   estimate", "safe harbor payment".
 ---
 
-# aireadylife-tax-quarterly-estimate
+# tax-quarterly-estimate
 
 **Cadence:** Quarterly (due dates: April 15, June 15, September 15, January 15)
 **Produces:** Estimated tax calculation at `vault/tax/00_current/YYYY-QN-estimate.md`; deadline flag in `vault/tax/open-loops.md`
@@ -21,11 +21,11 @@ description: >
 
 Runs in the 2–4 weeks before each quarterly estimated tax deadline to determine whether a payment is needed and exactly how much to pay. The op is designed to give a definitive answer — not a range — by running both recognized IRS methods and returning the lower result.
 
-The op calls `aireadylife-tax-build-estimate` to produce the full calculation. The calculation logic applies the key IRS rules:
+The op calls `tax-build-estimate` to produce the full calculation. The calculation logic applies the key IRS rules:
 
 **Safe harbor method.** The most reliable method when prior year income is known: pay 100% of prior year tax liability (or 110% if prior year AGI exceeded $150,000) divided by 4 per quarter. This method entirely eliminates underpayment penalties regardless of what the actual current-year tax turns out to be. Example: prior year tax = $28,000, prior year AGI = $190,000 → safe harbor = $28,000 × 1.10 ÷ 4 = $7,700/quarter. If two quarterly payments have already been made, the safe harbor balance for Q3 = ($7,700 × 3) − payments made. This is the calculation the op performs: cumulative safe harbor requirement through this quarter, minus cumulative payments already made.
 
-**Actual method.** Projects full-year tax from YTD income, annualizes it, divides by 4. More complex but can produce a lower payment when income is declining or front-loaded. The op uses YTD income data from `aireadylife-tax-extract-income-ytd` and applies the current year's tax brackets and standard or itemized deductions.
+**Actual method.** Projects full-year tax from YTD income, annualizes it, divides by 4. More complex but can produce a lower payment when income is declining or front-loaded. The op uses YTD income data from `tax-extract-income-ytd` and applies the current year's tax brackets and standard or itemized deductions.
 
 **Self-employment tax.** If SE income is present, the op adds 15.3% SE tax (12.4% Social Security on first $176,100 of net SE income + 2.9% Medicare with no cap; plus 0.9% Additional Medicare on net SE income above $200,000 single / $250,000 MFJ) and subtracts half the SE tax as a deduction from AGI.
 
@@ -37,8 +37,8 @@ The op flags the payment with the due date and specific payment method: IRS Dire
 
 ## Calls
 
-- **Flows:** `aireadylife-tax-build-estimate`
-- **Tasks:** `aireadylife-tax-flag-approaching-deadline`, `aireadylife-tax-update-open-loops`
+- **Flows:** `tax-build-estimate`
+- **Tasks:** `tax-flag-approaching-deadline`, `tax-update-open-loops`
 
 ## Apps
 

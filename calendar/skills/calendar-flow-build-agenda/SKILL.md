@@ -1,5 +1,5 @@
 ---
-name: aireadylife-calendar-flow-build-agenda
+name: calendar-flow-build-agenda
 type: flow
 trigger: called-by-op
 description: >
@@ -7,9 +7,9 @@ description: >
   and priority open loops — then suggests 2-3 focus blocks for deep work items.
 ---
 
-# aireadylife-calendar-build-agenda
+# calendar-build-agenda
 
-**Trigger:** Called by `aireadylife-calendar-op-weekly-agenda`
+**Trigger:** Called by `calendar-op-weekly-agenda`
 **Produces:** Structured week-ahead agenda document written to ~/Documents/aireadylife/vault/calendar/00_current/YYYY-MM-DD-week-agenda.md
 
 ## What It Does

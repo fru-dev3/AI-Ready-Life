@@ -1,7 +1,7 @@
 {
   "name": "home",
   "description": "Home management \u2014 maintenance tracking, contractor reviews, home value",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "author": {
     "name": "AI-Ready U.",
     "email": "hello@fru.dev"

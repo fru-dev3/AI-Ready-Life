@@ -1,5 +1,5 @@
 ---
-name: aireadylife-benefits-task-update-open-loops
+name: benefits-task-update-open-loops
 type: task
 description: >
   Maintains vault/benefits/open-loops.md as the canonical list of outstanding benefits action items. Appends new flags from any benefits op (enrollment deadlines, 401k match gaps, HSA investment threshold actions, coverage gaps, FSA deadlines, ESPP/RSU calendar events). Resolves completed items. Prioritizes by severity. Called at the end of every benefits op.

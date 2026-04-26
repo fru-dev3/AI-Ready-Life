@@ -1,5 +1,5 @@
 ---
-name: aireadylife-home-op-expense-review
+name: home-op-expense-review
 type: op
 cadence: monthly
 description: >
@@ -9,7 +9,7 @@ description: >
   Triggers: "home expenses", "utility review", "repair costs", "home budget", "what did I spend on the house".
 ---
 
-# aireadylife-home-expense-review
+# home-expense-review
 
 **Cadence:** Monthly (1st of month)
 **Produces:** Home expense summary with category totals, budget variance, utility trends, and repair system tracker
@@ -37,7 +37,7 @@ For homeowners specifically, the op also checks home improvement ROI for any cap
 ## Steps
 
 1. Read all expense records from `~/Documents/aireadylife/vault/home/00_current/YYYY-MM-expenses.md`
-2. Call `aireadylife-home-build-expense-summary` to produce the full expense summary table
+2. Call `home-build-expense-summary` to produce the full expense summary table
 3. Read annual budget from config.md; calculate MoM and YTD vs. budget per category
 4. Flag categories more than 20% over monthly budget
 5. Compare utility amounts to prior month and same-month prior year; calculate YoY delta
@@ -45,7 +45,7 @@ For homeowners specifically, the op also checks home improvement ROI for any cap
 7. Check if any repair exceeds $2,500 (potential CapEx threshold for homeowners — not deductible unless rental property)
 8. Check for any home improvement projects logged above $5,000; note estimated resale ROI range
 9. Write expense review to `~/Documents/aireadylife/vault/home/00_current/YYYY-MM-expense-review.md`
-10. Call `aireadylife-home-update-open-loops` with budget overrun flags and repair replacement signals
+10. Call `home-update-open-loops` with budget overrun flags and repair replacement signals
 11. Present results with table, headline numbers, and plain-language summary
 
 ## Input

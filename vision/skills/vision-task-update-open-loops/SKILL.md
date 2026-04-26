@@ -1,12 +1,12 @@
 ---
-name: aireadylife-vision-task-update-open-loops
+name: vision-task-update-open-loops
 type: task
 description: >
   Writes all vision flags (stalled goals, OKRs off-pace, domain score declines)
   to vault/vision/open-loops.md and resolves completed items.
 ---
 
-# aireadylife-vision-update-open-loops
+# vision-update-open-loops
 
 **Produces:** Updated ~/Documents/aireadylife/vault/vision/open-loops.md with new flags added and resolved items marked complete
 

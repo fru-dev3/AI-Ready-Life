@@ -51,8 +51,8 @@ mychart_chrome_profile: /Users/YOU/Library/Application Support/Google/Chrome/Def
 
 ## Used By
 
-- `aireadylife-health-lab-review` — download and parse recent lab result PDFs
-- `aireadylife-health-monthly-sync` — pull new visit notes, current medication list, and upcoming appointments
+- `health-lab-review` — download and parse recent lab result PDFs
+- `health-monthly-sync` — pull new visit notes, current medication list, and upcoming appointments
 
 ## Vault Output
 

@@ -1,6 +1,6 @@
 {
   "version": "1.0.2",
-  "plugin": "aireadylife-brand",
+  "plugin": "brand",
   "structure": {
     "subfolders": [
       {"folder": "01_analytics", "description": "Platform metrics history by month"},

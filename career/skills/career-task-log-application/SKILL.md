@@ -1,5 +1,5 @@
 ---
-name: aireadylife-career-task-log-application
+name: career-task-log-application
 type: task
 cadence: as-received
 description: >

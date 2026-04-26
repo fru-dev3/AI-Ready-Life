@@ -1,5 +1,5 @@
 ---
-name: aireadylife-career-flow-build-comp-summary
+name: career-flow-build-comp-summary
 type: flow
 trigger: called-by-op
 description: >
@@ -8,7 +8,7 @@ description: >
 
 ## What It Does
 
-Called by `aireadylife-career-op-comp-review` to produce the core compensation benchmarking table. Reads the full current compensation picture from `vault/career/00_current/` and computes a component-level TC comparison against market benchmarks.
+Called by `career-op-comp-review` to produce the core compensation benchmarking table. Reads the full current compensation picture from `vault/career/00_current/` and computes a component-level TC comparison against market benchmarks.
 
 **Reading current comp:** Pulls base salary, annual bonus target (as a percent of base), current RSU grant value and vesting schedule, and employer benefits contributions from the vault. The bonus component uses target (not actual) because actual fluctuates; target is the stable plan design metric. For RSU equity: annualized value = (total grant shares × current stock price) ÷ remaining vesting years. If the stock is below the grant price (underwater), the annualized equity value is still calculated at current price — economic value is what matters, not the paper gain/loss vs. grant price. Benefits value is quantified as: annual 401k employer match (contribution rate × salary × match rate, capped at employer match cap) + annual health insurance employer premium contribution.
 

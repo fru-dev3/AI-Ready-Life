@@ -1,6 +1,6 @@
 {
   "version": "1.0.2",
-  "plugin": "aireadylife-realestate",
+  "plugin": "realestate",
   "structure": {
     "subfolders": [
       {"folder": "00_current", "description": "Active market snapshots and current strategy"},

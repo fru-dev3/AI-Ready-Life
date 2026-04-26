@@ -47,8 +47,8 @@ explore_min_rating: 4.5
 
 ## Used By
 
-- `aireadylife-explore-op-trip-planning-review` — compare accommodation options for a planned trip when hotel/accommodation is still unbooked
-- `aireadylife-explore-flow-build-trip-summary` — surface current pricing for unbooked accommodation in trip budget section
+- `explore-op-trip-planning-review` — compare accommodation options for a planned trip when hotel/accommodation is still unbooked
+- `explore-flow-build-trip-summary` — surface current pricing for unbooked accommodation in trip budget section
 
 ## Vault Output
 

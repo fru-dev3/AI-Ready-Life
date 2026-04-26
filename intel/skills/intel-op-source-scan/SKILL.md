@@ -1,5 +1,5 @@
 ---
-name: aireadylife-intel-op-source-scan
+name: intel-op-source-scan
 type: op
 cadence: weekly
 description: >
@@ -38,7 +38,7 @@ Produces a source health report with a status per source and a coverage gap asse
 7. Check for duplicate coverage: identify topic areas where more than 5 Tier 2-3 sources cover the same angle with no Tier 1 — this is over-sourced on opinion and under-sourced on facts
 8. Compile source health report: per-source status table, coverage gap table, and replacement suggestions
 9. Write report to vault/intel/00_current/{YYYY-MM-DD}-source-health.md
-10. Call `aireadylife-intel-task-update-open-loops` if any priority topic has zero Tier 1 coverage
+10. Call `intel-task-update-open-loops` if any priority topic has zero Tier 1 coverage
 
 ## Input
 

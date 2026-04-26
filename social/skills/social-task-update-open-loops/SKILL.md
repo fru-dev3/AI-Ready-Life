@@ -1,12 +1,12 @@
 ---
-name: aireadylife-social-task-update-open-loops
+name: social-task-update-open-loops
 type: task
 description: >
   Writes all social flags (overdue relationships, upcoming birthdays, promised follow-ups) to
   vault/social/open-loops.md and resolves completed items.
 ---
 
-# aireadylife-social-update-open-loops
+# social-update-open-loops
 
 **Trigger:** Called by social ops and flows
 **Produces:** Updated ~/Documents/aireadylife/vault/social/open-loops.md with current relationship action items

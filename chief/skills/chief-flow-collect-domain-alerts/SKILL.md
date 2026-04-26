@@ -1,5 +1,5 @@
 ---
-name: aireadylife-chief-flow-collect-domain-alerts
+name: chief-flow-collect-domain-alerts
 type: flow
 trigger: called-by-op
 description: >
@@ -7,9 +7,9 @@ description: >
   by priority and domain.
 ---
 
-# aireadylife-chief-collect-domain-alerts
+# chief-collect-domain-alerts
 
-**Trigger:** Called by `aireadylife-chief-op-daily-brief`, `aireadylife-chief-op-weekly-preview`
+**Trigger:** Called by `chief-op-daily-brief`, `chief-op-weekly-preview`
 **Produces:** Consolidated sorted list of all unresolved domain flags across installed plugins
 
 ## What It Does

@@ -1,5 +1,5 @@
 ---
-name: aireadylife-health-flow-sync-wearable-data
+name: health-flow-sync-wearable-data
 type: flow
 trigger: called-by-op
 description: >
@@ -10,9 +10,9 @@ description: >
   greater than 3 consecutive days.
 ---
 
-# aireadylife-health-sync-wearable-data
+# health-sync-wearable-data
 
-**Trigger:** Called by `aireadylife-health-monthly-sync` and `aireadylife-health-anomaly-watch`
+**Trigger:** Called by `health-monthly-sync` and `health-anomaly-watch`
 **Produces:** Updated wearable records in `vault/health/00_current/`
 
 ## What It Does

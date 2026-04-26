@@ -1,14 +1,14 @@
 ---
-name: aireadylife-chief-task-check-open-loops
+name: chief-task-check-open-loops
 type: task
 description: >
   Reads all open-loops.md files across installed plugin vaults and returns a count and priority
   summary. Used by chief flows to understand what needs attention.
 ---
 
-# aireadylife-chief-check-open-loops
+# chief-check-open-loops
 
-**Trigger:** Called by `aireadylife-chief-op-weekly-preview` and any flow needing a current backlog snapshot
+**Trigger:** Called by `chief-op-weekly-preview` and any flow needing a current backlog snapshot
 **Produces:** Structured backlog summary — total open-loop count, count by domain, count by priority tier
 
 ## What It Does

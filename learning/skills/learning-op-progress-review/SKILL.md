@@ -1,5 +1,5 @@
 ---
-name: aireadylife-learning-op-progress-review
+name: learning-op-progress-review
 type: op
 cadence: monthly
 description: >
@@ -36,13 +36,13 @@ Runs monthly on the 1st (typically triggered by the monthly sync) to evaluate wh
 2. For each item: calculate completion_pct and time_elapsed_pct. Compute pace deficit.
 3. Classify each item: ahead (>15 pts ahead), on-pace (±15 pts), or behind (>15 pts behind).
 4. For each "behind" item: calculate required daily/weekly pace to complete on time from today.
-5. Call `aireadylife-learning-task-flag-falling-behind` for each behind item with full pace data.
+5. Call `learning-task-flag-falling-behind` for each behind item with full pace data.
 6. Read active quarterly plan from `vault/learning/00_current/` — extract monthly milestone targets.
 7. Compare milestones hit this month vs. planned. Calculate monthly achievement rate.
-8. Call `aireadylife-learning-flow-build-reading-summary` — get reading pace and annual goal projection.
+8. Call `learning-flow-build-reading-summary` — get reading pace and annual goal projection.
 9. Read certification study hours from `vault/learning/00_current/certs/` — calculate exam readiness %.
 10. Write progress review to `vault/learning/00_current/progress-YYYY-MM.md`.
-11. Call `aireadylife-learning-task-update-open-loops` with all flagged items.
+11. Call `learning-task-update-open-loops` with all flagged items.
 
 ## Input
 

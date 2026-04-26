@@ -1,5 +1,5 @@
 ---
-name: aireadylife-tax-task-flag-approaching-deadline
+name: tax-task-flag-approaching-deadline
 type: task
 cadence: called-by-op
 description: >
@@ -11,7 +11,7 @@ description: >
   deadline-watch and quarterly-estimate ops.
 ---
 
-# aireadylife-tax-flag-approaching-deadline
+# tax-flag-approaching-deadline
 
 **Cadence:** Called by quarterly estimate and deadline watch ops
 **Produces:** Deadline alert entries in `vault/tax/open-loops.md`
@@ -38,7 +38,7 @@ Each flag entry contains:
 
 **EFTPS enrollment warning.** If the payment amount exceeds $1,000 and the user hasn't previously used EFTPS (flagged in config.md), the alert adds: "Note: EFTPS enrollment takes 5–7 business days. For immediate payment, use IRS Direct Pay instead. Consider enrolling in EFTPS for future quarters."
 
-**Auto-resolution.** Deadline alerts are auto-resolved by `aireadylife-tax-update-open-loops` once the due date has passed, with a status update of RESOLVED and a resolution note of "Deadline passed — confirm payment was made and record in vault/tax/00_current/payment-log.md."
+**Auto-resolution.** Deadline alerts are auto-resolved by `tax-update-open-loops` once the due date has passed, with a status update of RESOLVED and a resolution note of "Deadline passed — confirm payment was made and record in vault/tax/00_current/payment-log.md."
 
 ## Apps
 

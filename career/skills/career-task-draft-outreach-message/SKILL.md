@@ -1,5 +1,5 @@
 ---
-name: aireadylife-career-task-draft-outreach-message
+name: career-task-draft-outreach-message
 type: task
 cadence: called-by-op
 description: >
@@ -8,7 +8,7 @@ description: >
 
 ## What It Does
 
-Called by `aireadylife-career-op-network-review` for each contact selected for outreach. A generic "just checking in" message is worse than no message — it signals that you are not paying attention to the person, which is the opposite of what networking is supposed to do. This task produces messages that are specific, human, and have a clear but low-pressure purpose.
+Called by `career-op-network-review` for each contact selected for outreach. A generic "just checking in" message is worse than no message — it signals that you are not paying attention to the person, which is the opposite of what networking is supposed to do. This task produces messages that are specific, human, and have a clear but low-pressure purpose.
 
 **Reading the contact record:** Loads the contact's data from `vault/career/` including their current role and company, how you know them (shared employer, conference, introduction, etc.), the date and substance of the last interaction, any notes about their current work or situation, and any recent activity visible on LinkedIn (new role, post, promotion). The more context in the contact record, the stronger the message.
 

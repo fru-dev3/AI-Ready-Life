@@ -1,5 +1,5 @@
 ---
-name: aireadylife-calendar-op-deadline-planning
+name: calendar-op-deadline-planning
 type: op
 cadence: on-demand
 description: >
@@ -9,7 +9,7 @@ description: >
   Triggers: "plan deadline", "work backward from deadline", "deadline prep".
 ---
 
-# aireadylife-calendar-deadline-planning
+# calendar-deadline-planning
 
 **Cadence:** On-demand (any time the user provides a new deadline to plan for)
 **Produces:** Milestone preparation schedule in ~/Documents/aireadylife/vault/calendar/00_current/YYYY-MM-DD-{slug}.md

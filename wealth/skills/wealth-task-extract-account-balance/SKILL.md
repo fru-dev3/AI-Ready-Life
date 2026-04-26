@@ -1,5 +1,5 @@
 ---
-name: aireadylife-wealth-task-extract-account-balance
+name: wealth-task-extract-account-balance
 type: task
 cadence: called-by-op
 description: >
@@ -10,14 +10,14 @@ description: >
   account type (e.g., "primary checking") as lookup key.
 ---
 
-# aireadylife-wealth-extract-account-balance
+# wealth-extract-account-balance
 
 **Cadence:** Called by wealth flows that need a specific account balance
 **Produces:** Structured balance record returned in memory to the calling flow
 
 ## What It Does
 
-A utility task called by wealth flows — particularly `aireadylife-wealth-build-net-worth-summary` and `aireadylife-wealth-analyze-investment-performance` — that need to look up a specific account's balance without iterating through every account file in `vault/wealth/00_current/`. This is especially useful when a flow only needs one or two account balances (e.g., the cash flow review needs the checking balance to verify a deposit was received) rather than the full portfolio aggregate.
+A utility task called by wealth flows — particularly `wealth-build-net-worth-summary` and `wealth-analyze-investment-performance` — that need to look up a specific account's balance without iterating through every account file in `vault/wealth/00_current/`. This is especially useful when a flow only needs one or two account balances (e.g., the cash flow review needs the checking balance to verify a deposit was received) rather than the full portfolio aggregate.
 
 The task accepts a lookup key — either an account nickname as configured in config.md (e.g., "Fidelity 401k", "Ally HYSA", "M1 Brokerage") or an account type (e.g., "primary checking", "emergency fund", "ira-roth") — and returns a standardized balance record containing: account nickname, institution name, account type (checking/savings/HYSA/brokerage/401k/IRA-roth/IRA-traditional/HSA/529/other), last-updated date, current balance, and prior period balance.
 

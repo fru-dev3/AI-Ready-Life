@@ -1,5 +1,5 @@
 ---
-name: aireadylife-tax-op-document-sync
+name: tax-op-document-sync
 type: op
 cadence: as-received
 description: >
@@ -11,7 +11,7 @@ description: >
   "tax document arrived", "W-2 came in", "1099 received", "log a tax doc".
 ---
 
-# aireadylife-tax-document-sync
+# tax-document-sync
 
 **Cadence:** As-received (active January 1 through April 15)
 **Produces:** Updated document inventory in `vault/tax/00_current/`; missing document flags in `vault/tax/open-loops.md`
@@ -22,7 +22,7 @@ Serves as the intake op for all tax documents during filing season. Each time a 
 
 **Document intake.** When triggered, the op asks the user to confirm: document type (W-2, 1099-NEC, 1099-B, etc.), payer/issuer name, tax year it covers, and whether the file has been placed in `vault/tax/00_current/YYYY/`. If the file is not yet in the vault, the user is prompted to save it there before the intake is logged. The op applies the standard naming convention and flags any deviation.
 
-**Completeness check.** After logging the new document, the op calls `aireadylife-tax-document-completeness` to update the full expected vs. received picture. This ensures the completeness report is always current after each intake event rather than only during scheduled reviews.
+**Completeness check.** After logging the new document, the op calls `tax-document-completeness` to update the full expected vs. received picture. This ensures the completeness report is always current after each intake event rather than only during scheduled reviews.
 
 **Issuer deadline tracking.** W-2s and 1099s are due from issuers by January 31. If the deadline has passed for any expected document that hasn't been received, the flag escalates: for January 31 deadline, if running in mid-February and a W-2 from an active employer is still missing, the flag is HIGH severity with action: "Contact [employer HR/payroll] to resend W-2" or "Download from payroll portal." K-1s from partnerships are due March 15 but are frequently late — K-1 delays are noted as MEDIUM severity (a known, common occurrence) with an action: "Request estimated K-1 from partnership if filing before March 15; otherwise consider extension."
 
@@ -32,8 +32,8 @@ Serves as the intake op for all tax documents during filing season. Each time a 
 
 ## Calls
 
-- **Flows:** `aireadylife-tax-document-completeness`
-- **Tasks:** `aireadylife-tax-update-open-loops`
+- **Flows:** `tax-document-completeness`
+- **Tasks:** `tax-update-open-loops`
 
 ## Apps
 

@@ -1,5 +1,5 @@
 ---
-name: aireadylife-benefits-task-extract-coverage-limit
+name: benefits-task-extract-coverage-limit
 type: task
 description: >
   Reads a specific coverage limit value — deductible, OOP max, HSA IRS limit, life insurance face value, disability benefit amount, dental annual max — from vault/benefits/00_current/ plan documents. Returns the exact value, plan year, coverage tier, and source document to the calling flow or op.

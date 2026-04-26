@@ -1,5 +1,5 @@
 ---
-name: aireadylife-calendar-task-flag-approaching-deadline
+name: calendar-task-flag-approaching-deadline
 type: task
 description: >
   Writes a deadline alert to vault/calendar/open-loops.md when a cross-domain item
@@ -7,7 +7,7 @@ description: >
   due date, effort estimate, and recommended prep start date.
 ---
 
-# aireadylife-calendar-flag-approaching-deadline
+# calendar-flag-approaching-deadline
 
 **Produces:** New urgent flag entry in ~/Documents/aireadylife/vault/calendar/open-loops.md
 

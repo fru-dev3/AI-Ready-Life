@@ -1,5 +1,5 @@
 ---
-name: aireadylife-calendar-task-add-deadline
+name: calendar-task-add-deadline
 type: task
 cadence: as-received
 description: >
@@ -8,7 +8,7 @@ description: >
   a new deadline is identified during any op run or directly on-demand.
 ---
 
-# aireadylife-calendar-add-deadline
+# calendar-add-deadline
 
 **Cadence:** As-received (triggered whenever a new deadline is identified)
 **Produces:** New deadline record in ~/Documents/aireadylife/vault/calendar/00_current/YYYY-MM-DD-{slug}.md

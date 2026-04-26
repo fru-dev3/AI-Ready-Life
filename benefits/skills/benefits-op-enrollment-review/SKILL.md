@@ -1,5 +1,5 @@
 ---
-name: aireadylife-benefits-op-enrollment-review
+name: benefits-op-enrollment-review
 type: op
 cadence: annual
 description: >
@@ -32,7 +32,7 @@ Open enrollment is the single most financially consequential benefits decision m
 
 ## Steps
 
-1. Confirm enrollment window dates from `vault/benefits/00_current/` or user input. Call `aireadylife-benefits-task-flag-enrollment-window` with start and end dates.
+1. Confirm enrollment window dates from `vault/benefits/00_current/` or user input. Call `benefits-task-flag-enrollment-window` with start and end dates.
 2. Read all available plan options from `vault/benefits/00_current/` — extract for each medical option: monthly employee premium (by tier: employee / employee+spouse / family), annual deductible (individual and family), OOP max (individual and family), coinsurance rate after deductible, copay structure, HSA-eligible flag.
 3. Read user's family situation from `vault/benefits/config.md` — dependents, coverage tier needed, any known planned medical expenses for next year.
 4. Read historical claims/spending data from `vault/benefits/` if available — estimate annual OOP spending per scenario.
@@ -45,7 +45,7 @@ Open enrollment is the single most financially consequential benefits decision m
 11. Check supplemental life and disability options — cross-reference coverage gaps from most recent quarterly audit.
 12. Generate election recommendation: medical plan, coverage tier, HSA contribution election (if HDHP), FSA election (if non-HDHP), dental plan, vision plan, supplemental life/disability if needed.
 13. Write enrollment analysis to `vault/benefits/02_briefs/enrollment-YYYY.md` with comparison table and recommended elections.
-14. Call `aireadylife-benefits-task-update-open-loops` with enrollment deadline and recommended actions.
+14. Call `benefits-task-update-open-loops` with enrollment deadline and recommended actions.
 
 ## Input
 

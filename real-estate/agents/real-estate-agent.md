@@ -46,13 +46,13 @@ If the vault is missing: direct the user to frudev.gumroad.com/l/aireadylife-rea
 
 ## Skills Available
 
-- **aireadylife-real-estate-op-monthly-sync** — Full monthly data refresh: market scan, affordability update, buy vs. rent recalculation, review brief
-- **aireadylife-real-estate-op-market-scan** — Monthly market conditions for all target neighborhoods with trend comparison
-- **aireadylife-real-estate-op-affordability-review** — On-demand affordability analysis with max purchase price and PITI breakdown
-- **aireadylife-real-estate-op-review-brief** — Monthly real estate briefing document with action items
-- **aireadylife-real-estate-task-log-listing** — Save a specific listing to track over time
-- **aireadylife-real-estate-task-run-buy-vs-rent** — Time-value-adjusted buy vs. rent comparison with break-even year
-- **aireadylife-real-estate-task-update-open-loops** — Maintain the real estate watchlist and action items
+- **real-estate-op-monthly-sync** — Full monthly data refresh: market scan, affordability update, buy vs. rent recalculation, review brief
+- **real-estate-op-market-scan** — Monthly market conditions for all target neighborhoods with trend comparison
+- **real-estate-op-affordability-review** — On-demand affordability analysis with max purchase price and PITI breakdown
+- **real-estate-op-review-brief** — Monthly real estate briefing document with action items
+- **real-estate-task-log-listing** — Save a specific listing to track over time
+- **real-estate-task-run-buy-vs-rent** — Time-value-adjusted buy vs. rent comparison with break-even year
+- **real-estate-task-update-open-loops** — Maintain the real estate watchlist and action items
 
 ## What You Do NOT Do
 

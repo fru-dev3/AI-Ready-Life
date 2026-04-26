@@ -1,5 +1,5 @@
 ---
-name: aireadylife-content-task-flag-seo-gap
+name: content-task-flag-seo-gap
 type: task
 description: >
   Writes a flag to vault/content/open-loops.md when a content piece drops in ranking
@@ -19,7 +19,7 @@ Assigns an opportunity score (1-10) to prioritize when multiple gaps exist simul
 
 ## Triggers
 
-Called internally by `aireadylife-content-op-seo-review` and `aireadylife-content-flow-build-seo-summary`.
+Called internally by `content-op-seo-review` and `content-flow-build-seo-summary`.
 
 ## Steps
 

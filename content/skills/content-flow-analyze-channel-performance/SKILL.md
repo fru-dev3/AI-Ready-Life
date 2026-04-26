@@ -1,5 +1,5 @@
 ---
-name: aireadylife-content-flow-analyze-channel-performance
+name: content-flow-analyze-channel-performance
 type: flow
 trigger: called-by-op
 description: >
@@ -17,7 +17,7 @@ For flagged underperforming channels, runs a 1-line diagnosis: checks whether th
 
 ## Triggers
 
-Called internally by `aireadylife-content-op-channel-review`. Not invoked directly by the user.
+Called internally by `content-op-channel-review`. Not invoked directly by the user.
 
 ## Steps
 

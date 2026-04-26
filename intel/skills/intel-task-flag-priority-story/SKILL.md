@@ -1,5 +1,5 @@
 ---
-name: aireadylife-intel-task-flag-priority-story
+name: intel-task-flag-priority-story
 type: task
 description: >
   Writes a flag to vault/intel/open-loops.md when a story on a configured priority topic appears
@@ -18,7 +18,7 @@ Before writing, checks vault/intel/open-loops.md for an existing unresolved flag
 
 ## Triggers
 
-Called internally by `aireadylife-intel-op-daily-briefing` and `aireadylife-intel-op-review-brief` when a priority story is detected.
+Called internally by `intel-op-daily-briefing` and `intel-op-review-brief` when a priority story is detected.
 
 ## Steps
 

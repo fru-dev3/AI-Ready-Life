@@ -1,6 +1,6 @@
 {
   "version": "1.0.2",
-  "plugin": "aireadylife-estate",
+  "plugin": "estate",
   "structure": {
     "subfolders": [
       {"folder": "00_current", "description": "Active portfolio state and current property status"},

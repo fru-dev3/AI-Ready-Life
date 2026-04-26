@@ -1,5 +1,5 @@
 ---
-name: aireadylife-health-op-preventive-care-review
+name: health-op-preventive-care-review
 type: op
 cadence: quarterly
 description: >
@@ -12,7 +12,7 @@ description: >
   "preventive health review".
 ---
 
-# aireadylife-health-preventive-care-review
+# health-preventive-care-review
 
 **Cadence:** Quarterly (1st of January, April, July, October)
 **Produces:** Preventive care gap flags in `vault/health/open-loops.md`; updated care schedule in `vault/health/00_current/`
@@ -25,11 +25,11 @@ The op reads the care schedule file from `vault/health/00_current/care-schedule.
 
 For each screening, the op calculates days since the last-completed date (read from the completion log at `vault/health/00_current/completion-log.md`) and compares it to the recommended interval. Items are categorized: CURRENT (within schedule), DUE SOON (within 30 days of the interval deadline), OVERDUE (past the interval deadline), or NEVER COMPLETED (no completion record and age-appropriate). Overdue items are further tiered: routine (1–30 days overdue), soon (31–90 days overdue), and overdue (90+ days, flag as high urgency).
 
-Each gap is passed to `aireadylife-health-flag-preventive-care-gap` with the care type, last completed date, recommended interval, days overdue, and a specific suggested action (e.g., "Call [PCP name] at [number] to schedule annual physical" or "Use online scheduling at [portal URL]"). The care schedule file in `vault/health/00_current/` is updated with the current run timestamp so the next quarterly review has an accurate baseline.
+Each gap is passed to `health-flag-preventive-care-gap` with the care type, last completed date, recommended interval, days overdue, and a specific suggested action (e.g., "Call [PCP name] at [number] to schedule annual physical" or "Use online scheduling at [portal URL]"). The care schedule file in `vault/health/00_current/` is updated with the current run timestamp so the next quarterly review has an accurate baseline.
 
 ## Calls
 
-- **Tasks:** `aireadylife-health-flag-preventive-care-gap`, `aireadylife-health-update-open-loops`
+- **Tasks:** `health-flag-preventive-care-gap`, `health-update-open-loops`
 
 ## Apps
 

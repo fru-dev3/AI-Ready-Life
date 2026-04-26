@@ -1,5 +1,5 @@
 ---
-name: aireadylife-estate-flow-analyze-cash-flow
+name: estate-flow-analyze-cash-flow
 type: flow
 trigger: called-by-op
 description: >
@@ -8,9 +8,9 @@ description: >
   Flags properties with negative cash flow, expense ratio above 50%, or >15% QoQ decline.
 ---
 
-# aireadylife-estate-analyze-cash-flow
+# estate-analyze-cash-flow
 
-**Trigger:** Called by `aireadylife-estate-cash-flow-review`, `aireadylife-estate-portfolio-review`
+**Trigger:** Called by `estate-cash-flow-review`, `estate-portfolio-review`
 **Produces:** Per-property income statement and portfolio-level cash flow summary returned to the calling op
 
 ## What It Does

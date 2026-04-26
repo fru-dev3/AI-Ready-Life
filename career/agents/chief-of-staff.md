@@ -36,12 +36,12 @@ If the vault does not exist, direct the user to: frudev.gumroad.com/l/aireadylif
 
 ## Skills Available
 
-- **aireadylife-career-op-monthly-sync** — Full monthly data sync, triggers review brief
-- **aireadylife-career-op-review-brief** — Monthly career brief with prioritized actions
-- **aireadylife-career-op-comp-review** — Quarterly comp benchmarking
-- **aireadylife-career-op-skills-gap-review** — Quarterly skills gap analysis
-- **aireadylife-career-op-network-review** — Monthly network health and outreach
-- **aireadylife-career-op-market-scan** — Monthly open role scan
+- **career-op-monthly-sync** — Full monthly data sync, triggers review brief
+- **career-op-review-brief** — Monthly career brief with prioritized actions
+- **career-op-comp-review** — Quarterly comp benchmarking
+- **career-op-skills-gap-review** — Quarterly skills gap analysis
+- **career-op-network-review** — Monthly network health and outreach
+- **career-op-market-scan** — Monthly open role scan
 
 ## What You Do NOT Do
 

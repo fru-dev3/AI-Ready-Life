@@ -1,5 +1,5 @@
 ---
-name: aireadylife-estate-op-cash-flow-review
+name: estate-op-cash-flow-review
 type: op
 cadence: monthly
 description: >
@@ -9,7 +9,7 @@ description: >
   "property cash flow", "how much am I making on my rentals".
 ---
 
-# aireadylife-estate-cash-flow-review
+# estate-cash-flow-review
 
 **Cadence:** Monthly (5th of month — after rent collection window closes)
 **Produces:** Cash flow report with per-property income statement, portfolio totals, and flagged anomalies
@@ -38,13 +38,13 @@ The op also computes the recommended monthly reserves that should be held back f
 
 1. Confirm vault and config.md are present; halt if missing
 2. Check rent payment logs in `~/Documents/aireadylife/vault/estate/00_current/` — flag any unit with no payment record for the current month
-3. Call `aireadylife-estate-analyze-cash-flow` to produce per-property income statement
+3. Call `estate-analyze-cash-flow` to produce per-property income statement
 4. Read prior month cash flow from `~/Documents/aireadylife/vault/estate/00_current/` for QoQ comparison
 5. Flag: negative NCF, expense ratio >50%, DSCR <1.25, QoQ decline >15%
 6. Calculate recommended maintenance and CapEx reserves per property
 7. Show "economic cash flow" (accounting cash flow minus reserves) alongside standard NCF
 8. Write monthly cash flow report to `~/Documents/aireadylife/vault/estate/00_current/YYYY-MM-cashflow.md`
-9. Call `aireadylife-estate-update-open-loops` with any flagged conditions
+9. Call `estate-update-open-loops` with any flagged conditions
 10. Present results with per-property table, portfolio totals, and plain-language summary
 
 ## Input

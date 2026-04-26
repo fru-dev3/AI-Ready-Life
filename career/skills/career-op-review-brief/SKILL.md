@@ -1,5 +1,5 @@
 ---
-name: aireadylife-career-op-review-brief
+name: career-op-review-brief
 type: op
 cadence: monthly
 description: >
@@ -38,7 +38,7 @@ The brief is formatted for a 2-minute read — executive summary at the top, det
 10. Synthesize skills section: top 3 gaps with specific learning resource recommendations.
 11. Synthesize next actions: select 3-5 highest-impact actions from open loops and current briefing data, assign target dates.
 12. Write complete monthly brief to `vault/career/02_briefs/YYYY-MM-career-brief.md`.
-13. Call `aireadylife-career-task-update-open-loops` with any new flags from this synthesis.
+13. Call `career-task-update-open-loops` with any new flags from this synthesis.
 
 ## Input
 

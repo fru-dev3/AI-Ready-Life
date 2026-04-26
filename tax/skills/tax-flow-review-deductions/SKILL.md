@@ -1,5 +1,5 @@
 ---
-name: aireadylife-tax-flow-review-deductions
+name: tax-flow-review-deductions
 type: flow
 trigger: called-by-op
 description: >
@@ -11,9 +11,9 @@ description: >
   and flags categories running more than 20% behind prior year same-period pace.
 ---
 
-# aireadylife-tax-review-deductions
+# tax-review-deductions
 
-**Trigger:** Called by `aireadylife-tax-deduction-review`
+**Trigger:** Called by `tax-deduction-review`
 **Produces:** Updated deduction totals in `vault/tax/00_current/YYYY-deductions.md`
 
 ## What It Does

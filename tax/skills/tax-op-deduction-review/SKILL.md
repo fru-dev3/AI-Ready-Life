@@ -1,5 +1,5 @@
 ---
-name: aireadylife-tax-op-deduction-review
+name: tax-op-deduction-review
 type: op
 cadence: monthly
 description: >
@@ -13,7 +13,7 @@ description: >
   deduct", "are my deductions documented".
 ---
 
-# aireadylife-tax-deduction-review
+# tax-deduction-review
 
 **Cadence:** Monthly (1st of month)
 **Produces:** Updated deductions log in `vault/tax/00_current/`; deduction gap flags in `vault/tax/open-loops.md`
@@ -22,7 +22,7 @@ description: >
 
 Runs monthly to ensure no deductible expense slips through uncaptured between reviews. Monthly capture is more effective than year-end scrambling: receipts are current, business purpose notes are fresh, and charitable acknowledgment letters can be requested before they're needed for filing.
 
-The op calls `aireadylife-tax-review-deductions` to scan transaction records and vault documents for all deductible items across the applicable categories. Each item identified is classified by deduction category, checked for documentation completeness, and passed to `aireadylife-tax-log-deductible-expense` to record it in the deductions log with the required metadata.
+The op calls `tax-review-deductions` to scan transaction records and vault documents for all deductible items across the applicable categories. Each item identified is classified by deduction category, checked for documentation completeness, and passed to `tax-log-deductible-expense` to record it in the deductions log with the required metadata.
 
 **Documentation enforcement.** The op enforces IRS documentation requirements at the point of capture rather than at filing time: cash charitable donations ≥$250 require a written acknowledgment letter reference; business meals require a record of who attended and what business was discussed; home office expenses require the square footage calculation to be on file in config; vehicle deductions require a contemporaneous mileage log. Items without required documentation are flagged as "Documentation pending" rather than rejected — the expense is captured now and documentation is requested.
 
@@ -32,8 +32,8 @@ The op calls `aireadylife-tax-review-deductions` to scan transaction records and
 
 ## Calls
 
-- **Flows:** `aireadylife-tax-review-deductions`
-- **Tasks:** `aireadylife-tax-log-deductible-expense`, `aireadylife-tax-update-open-loops`
+- **Flows:** `tax-review-deductions`
+- **Tasks:** `tax-log-deductible-expense`, `tax-update-open-loops`
 
 ## Apps
 

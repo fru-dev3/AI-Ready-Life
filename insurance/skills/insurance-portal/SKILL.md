@@ -77,9 +77,9 @@ insurance_portals:
 
 ## Used By
 
-- `aireadylife-insurance-op-coverage-audit` — download current declarations pages before running gap analysis
-- `aireadylife-insurance-op-renewal-watch` — verify renewal date and current premium from carrier portal
-- `aireadylife-insurance-op-claims-review` — check open claim status from carrier claims portal
+- `insurance-op-coverage-audit` — download current declarations pages before running gap analysis
+- `insurance-op-renewal-watch` — verify renewal date and current premium from carrier portal
+- `insurance-op-claims-review` — check open claim status from carrier claims portal
 
 ## Vault Output
 

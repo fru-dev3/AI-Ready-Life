@@ -1,5 +1,5 @@
 ---
-name: aireadylife-chief-op-system-health
+name: chief-op-system-health
 type: op
 cadence: weekly
 description: >
@@ -8,7 +8,7 @@ description: >
   Triggers: "system health", "check all agents", "life OS health".
 ---
 
-# aireadylife-chief-system-health
+# chief-system-health
 
 **Cadence:** Weekly (Sunday)
 **Produces:** System health report written to ~/Documents/aireadylife/vault/chief/00_current/health-YYYY-MM-DD.md

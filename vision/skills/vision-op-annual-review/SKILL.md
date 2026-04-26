@@ -1,5 +1,5 @@
 ---
-name: aireadylife-vision-op-annual-review
+name: vision-op-annual-review
 type: op
 cadence: annual
 description: >
@@ -9,7 +9,7 @@ description: >
   Triggers: "annual review", "year review", "end of year", "life vision review".
 ---
 
-# aireadylife-vision-annual-review
+# vision-annual-review
 
 **Cadence:** Annual (December, first two weeks)
 **Produces:** Annual retrospective and refreshed vision doc in ~/Documents/aireadylife/vault/vision/01_prior/ plus Q1 draft OKRs in vault/vision/00_current/

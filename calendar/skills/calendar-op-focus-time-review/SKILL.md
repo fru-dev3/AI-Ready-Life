@@ -1,5 +1,5 @@
 ---
-name: aireadylife-calendar-op-focus-time-review
+name: calendar-op-focus-time-review
 type: op
 cadence: weekly
 description: >
@@ -9,7 +9,7 @@ description: >
   Triggers: "focus review", "meeting overload", "deep work time", "calendar audit".
 ---
 
-# aireadylife-calendar-focus-time-review
+# calendar-focus-time-review
 
 **Cadence:** Weekly (Friday or Sunday)
 **Produces:** Focus-time audit report in ~/Documents/aireadylife/vault/calendar/00_current/YYYY-MM-DD-focus-audit.md

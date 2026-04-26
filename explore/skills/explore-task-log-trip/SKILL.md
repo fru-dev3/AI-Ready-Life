@@ -1,5 +1,5 @@
 ---
-name: aireadylife-explore-task-log-trip
+name: explore-task-log-trip
 type: task
 cadence: as-planned
 description: >
@@ -7,7 +7,7 @@ description: >
   booking status, and companions.
 ---
 
-# aireadylife-explore-log-trip
+# explore-log-trip
 
 **Cadence:** As-planned (when a new trip is being planned or booked)
 **Produces:** New trip record in ~/Documents/aireadylife/vault/explore/00_current/YYYY-{destination}-trip.md

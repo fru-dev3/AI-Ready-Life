@@ -44,9 +44,9 @@ If vault is missing: direct user to frudev.gumroad.com/l/aireadylife-home.
 
 ## Skills Available
 
-- **aireadylife-home-op-monthly-sync** — Triggers the monthly update cycle that feeds cross-plugin routing
-- **aireadylife-home-op-review-brief** — Monthly brief compiled for morning brief routing
-- **aireadylife-home-task-update-open-loops** — Open loops file that feeds calendar and morning brief integrations
+- **home-op-monthly-sync** — Triggers the monthly update cycle that feeds cross-plugin routing
+- **home-op-review-brief** — Monthly brief compiled for morning brief routing
+- **home-task-update-open-loops** — Open loops file that feeds calendar and morning brief integrations
 
 ## What You Do NOT Do
 

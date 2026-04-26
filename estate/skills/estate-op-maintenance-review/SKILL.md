@@ -1,5 +1,5 @@
 ---
-name: aireadylife-estate-op-maintenance-review
+name: estate-op-maintenance-review
 type: op
 cadence: monthly
 description: >
@@ -9,7 +9,7 @@ description: >
   Triggers: "maintenance review", "property maintenance", "what needs fixing", "maintenance status".
 ---
 
-# aireadylife-estate-maintenance-review
+# estate-maintenance-review
 
 **Cadence:** Monthly (1st of month)
 **Produces:** Maintenance status report in `~/Documents/aireadylife/vault/estate/00_current/` with all open items, seasonal tasks, vendor follow-ups, and open loop flags
@@ -40,14 +40,14 @@ Fourth, warranty tracking: the op checks all appliances and HVAC systems recorde
 ## Steps
 
 1. Read all open maintenance items from `~/Documents/aireadylife/vault/estate/00_current/` for each property
-2. Call `aireadylife-estate-check-maintenance-schedule` to evaluate open items and seasonal tasks
+2. Call `estate-check-maintenance-schedule` to evaluate open items and seasonal tasks
 3. Check each item's target date and vendor status; apply urgency escalation rules (14-day routine → urgent; 3-day urgent → emergency)
 4. Check seasonal maintenance calendar for current month; identify tasks due with no current-season completion record
 5. Scan all vendor follow-up notes; flag any open more than 14 days without update
 6. Check appliance and HVAC warranty records for items expiring within 90 days
-7. Call `aireadylife-estate-flag-maintenance-item` for any newly identified issue or urgency escalation
+7. Call `estate-flag-maintenance-item` for any newly identified issue or urgency escalation
 8. Write per-property maintenance summary to `~/Documents/aireadylife/vault/estate/00_current/YYYY-MM-maintenance-report.md`
-9. Call `aireadylife-estate-update-open-loops` with all flagged items
+9. Call `estate-update-open-loops` with all flagged items
 10. Present full report organized by property, sorted by urgency
 
 ## Input

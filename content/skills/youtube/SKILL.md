@@ -43,8 +43,8 @@ Scopes: https://www.googleapis.com/auth/youtube.readonly
 
 ## Used By
 
-- `aireadylife-content-channel-review` — pull 28-day views, watch time, and subscriber growth
-- `aireadylife-content-revenue-review` — pull estimated AdSense revenue and RPM
+- `content-channel-review` — pull 28-day views, watch time, and subscriber growth
+- `content-revenue-review` — pull estimated AdSense revenue and RPM
 
 ## Vault Output
 

@@ -1,5 +1,5 @@
 ---
-name: aireadylife-benefits-flow-check-hsa-balance
+name: benefits-flow-check-hsa-balance
 type: flow
 trigger: called-by-op
 description: >
@@ -8,7 +8,7 @@ description: >
 
 ## What It Does
 
-Called by `aireadylife-benefits-op-hsa-review` to produce the core HSA analysis data. Reads all HSA account data from `vault/benefits/00_current/` and performs all calculations needed for the monthly HSA review. Returns structured data to the calling op for brief writing and open loop flagging.
+Called by `benefits-op-hsa-review` to produce the core HSA analysis data. Reads all HSA account data from `vault/benefits/00_current/` and performs all calculations needed for the monthly HSA review. Returns structured data to the calling op for brief writing and open loop flagging.
 
 **Balance breakdown:** Reads the most recent HSA statement and extracts: cash balance (the money market portion held liquid), invested balance (the investment sleeve), and total balance. Distinguishes between these because only the invested balance is compounding; cash above the investment threshold is essentially idle.
 

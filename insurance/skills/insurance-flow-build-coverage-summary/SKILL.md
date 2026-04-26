@@ -1,5 +1,5 @@
 ---
-name: aireadylife-insurance-flow-build-coverage-summary
+name: insurance-flow-build-coverage-summary
 type: flow
 trigger: called-by-op
 description: >
@@ -8,7 +8,7 @@ description: >
 
 ## What It Does
 
-Called by `aireadylife-insurance-op-review-brief` and `aireadylife-insurance-op-claims-review` to produce the core coverage inventory table. This flow is the data assembly layer — it reads all policy records and organizes them into a structured, comparable format. The calling ops use this table for brief writing, gap identification, and claims context.
+Called by `insurance-op-review-brief` and `insurance-op-claims-review` to produce the core coverage inventory table. This flow is the data assembly layer — it reads all policy records and organizes them into a structured, comparable format. The calling ops use this table for brief writing, gap identification, and claims context.
 
 **Policy inventory:** Reads all policy files from `vault/insurance/00_current/` and `vault/insurance/00_current/`. For each active policy, extracts: carrier name, policy type (auto, home/renters, life-term, life-group, LTD, STD, umbrella, landlord, dental, vision, health), policy number, coverage limits appropriate to the policy type (per-accident and property for auto, dwelling and personal property for home, face value for life, monthly benefit for disability, liability limit for umbrella), deductible (per-claim or per-occurrence as applicable), monthly and annual premium (employee-paid portion), and policy renewal date.
 

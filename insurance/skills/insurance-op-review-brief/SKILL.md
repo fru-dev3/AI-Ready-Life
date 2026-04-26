@@ -1,5 +1,5 @@
 ---
-name: aireadylife-insurance-op-review-brief
+name: insurance-op-review-brief
 type: op
 cadence: monthly
 description: >
@@ -37,7 +37,7 @@ The brief has five sections. Active policies: a matrix of all current policies w
 8. Extract top 3 open coverage gaps from open-loops.md.
 9. Synthesize all data into brief with "Requires Action" section first.
 10. Write monthly brief to `vault/insurance/02_briefs/YYYY-MM-insurance-brief.md`.
-11. Call `aireadylife-insurance-task-update-open-loops` if any new flags surfaced during synthesis.
+11. Call `insurance-task-update-open-loops` if any new flags surfaced during synthesis.
 
 ## Input
 

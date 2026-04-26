@@ -1,5 +1,5 @@
 ---
-name: aireadylife-wealth-flow-build-debt-summary
+name: wealth-flow-build-debt-summary
 type: flow
 trigger: called-by-op
 description: >
@@ -11,9 +11,9 @@ description: >
   milestone.
 ---
 
-# aireadylife-wealth-build-debt-summary
+# wealth-build-debt-summary
 
-**Trigger:** Called by `aireadylife-wealth-debt-review`
+**Trigger:** Called by `wealth-debt-review`
 **Produces:** Debt summary table at `vault/wealth/00_current/YYYY-MM-debt-summary.md`
 
 ## What It Does
@@ -31,7 +31,7 @@ For both scenarios, the "freed cash flow" is shown: when the highest-rate debt i
 
 **Debt-to-income ratio.** Total monthly minimum debt payments ÷ gross monthly income (from config.md). Normal: below 36%. Warning: 36–43%. High: above 43%.
 
-**Milestone detection.** When a debt's outstanding balance crosses a configured milestone (e.g., mortgage below $300k, student loan below $10k, auto loan paid off), `aireadylife-wealth-flag-savings-milestone` is called.
+**Milestone detection.** When a debt's outstanding balance crosses a configured milestone (e.g., mortgage below $300k, student loan below $10k, auto loan paid off), `wealth-flag-savings-milestone` is called.
 
 ## Triggers
 
@@ -54,7 +54,7 @@ For both scenarios, the "freed cash flow" is shown: when the highest-rate debt i
 6. Model Scenario A ($100/month extra to highest-rate debt): recalculate payoff date and interest saved
 7. Model Scenario B ($500/month extra to highest-rate debt): recalculate payoff date and interest saved
 8. For both scenarios, calculate rollover effect for second-highest-rate debt after first is paid off
-9. Check each debt balance against configured milestones; call `aireadylife-wealth-flag-savings-milestone` for any crossed
+9. Check each debt balance against configured milestones; call `wealth-flag-savings-milestone` for any crossed
 10. Write formatted debt summary to `vault/wealth/00_current/YYYY-MM-debt-summary.md`
 
 ## Input

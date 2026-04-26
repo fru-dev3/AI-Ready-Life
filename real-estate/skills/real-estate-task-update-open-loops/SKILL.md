@@ -1,5 +1,5 @@
 ---
-name: aireadylife-real-estate-task-update-open-loops
+name: real-estate-task-update-open-loops
 type: task
 description: >
   Writes all real-estate flags (market shifts, affordability changes, buy-window signals, interesting
@@ -7,7 +7,7 @@ description: >
   are no longer relevant.
 ---
 
-# aireadylife-real-estate-update-open-loops
+# real-estate-update-open-loops
 
 **Trigger:** Called by real-estate ops and flows at the end of every run
 **Produces:** Updated `~/Documents/aireadylife/vault/real-estate/open-loops.md` with current action items

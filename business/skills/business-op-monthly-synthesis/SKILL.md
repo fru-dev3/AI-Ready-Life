@@ -1,5 +1,5 @@
 ---
-name: aireadylife-business-op-monthly-synthesis
+name: business-op-monthly-synthesis
 type: op
 cadence: monthly
 description: >
@@ -31,16 +31,16 @@ Reviews open-loops.md for any business items that have been unresolved for more 
 
 1. Confirm vault/business/ is set up with all required subfolders and config.md complete
 2. Determine review period: the month just ended (1st through last day)
-3. Call `aireadylife-business-flow-build-pl-summary` for the month's P&L with MoM comparison
+3. Call `business-flow-build-pl-summary` for the month's P&L with MoM comparison
 4. Calculate YTD totals: sum all pl-{YYYY-MM}.md briefs from January through current month to produce cumulative YTD revenue, expenses, and net income
 5. Calculate YTD profit margin (YTD net income / YTD gross revenue) and compare to prior year if available
 6. Calculate estimated SE tax liability: YTD net income × 15.3% × (estimated business-use % if sole prop) — compare to estimated payments made YTD; flag if behind safe harbor pace
-7. Call `aireadylife-business-flow-check-compliance-status` for all entities; surface any items due within 60 days
+7. Call `business-flow-check-compliance-status` for all entities; surface any items due within 60 days
 8. Review vault/business/open-loops.md for unresolved items older than 30 days; escalate with 🔴
 9. Identify the single most important business priority for the coming month based on the full picture
 10. Write synthesis report to vault/business/02_briefs/synthesis-{YYYY-MM}.md
 11. Update or create vault/business/00_current/pl-{YYYY}.md with YTD cumulative figures
-12. Call `aireadylife-business-task-update-open-loops` with any new flags
+12. Call `business-task-update-open-loops` with any new flags
 
 ## Input
 

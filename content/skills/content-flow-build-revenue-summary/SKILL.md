@@ -1,5 +1,5 @@
 ---
-name: aireadylife-content-flow-build-revenue-summary
+name: content-flow-build-revenue-summary
 type: flow
 trigger: called-by-op
 description: >
@@ -17,7 +17,7 @@ Sums all streams to produce total content revenue for the month. Calculates MoM 
 
 ## Triggers
 
-Called internally by `aireadylife-content-op-revenue-review`. Not invoked directly by the user.
+Called internally by `content-op-revenue-review`. Not invoked directly by the user.
 
 ## Steps
 

@@ -1,5 +1,5 @@
 ---
-name: aireadylife-brand-task-log-mention
+name: brand-task-log-mention
 type: task
 cadence: as-received
 description: >

@@ -1,5 +1,5 @@
 ---
-name: aireadylife-calendar-op-weekly-agenda
+name: calendar-op-weekly-agenda
 type: op
 cadence: weekly
 description: >
@@ -8,7 +8,7 @@ description: >
   and effort. Triggers: "weekly agenda", "what's this week", "week ahead", "monday preview".
 ---
 
-# aireadylife-calendar-weekly-agenda
+# calendar-weekly-agenda
 
 **Cadence:** Weekly (Monday morning)
 **Produces:** Prioritized week-ahead brief in ~/Documents/aireadylife/vault/calendar/00_current/YYYY-MM-DD-week-agenda.md

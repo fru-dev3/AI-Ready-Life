@@ -1,14 +1,14 @@
 ---
-name: aireadylife-chief-task-pull-domain-status
+name: chief-task-pull-domain-status
 type: task
 description: >
   Reads the state.md file from a specified plugin vault and returns a summary of current domain
   status: last updated, wellness or score if present, and open item count.
 ---
 
-# aireadylife-chief-pull-domain-status
+# chief-pull-domain-status
 
-**Trigger:** Called by `aireadylife-chief-op-daily-brief` for each installed plugin
+**Trigger:** Called by `chief-op-daily-brief` for each installed plugin
 **Produces:** Per-domain status snapshot for population of the domain alert table in the daily brief
 
 ## What It Does

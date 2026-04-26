@@ -1,5 +1,5 @@
 ---
-name: aireadylife-insurance-task-flag-renewal-within-60-days
+name: insurance-task-flag-renewal-within-60-days
 type: task
 description: >
   Writes a structured renewal alert to vault/insurance/open-loops.md with policy type, carrier, renewal date, current premium, prior year premium (if available for change detection), action category (shop/auto-renew/coverage-review), and specific action steps. Action-by date is set 30 days before renewal. Called by insurance-op-renewal-watch for each flagged renewal.
@@ -7,7 +7,7 @@ description: >
 
 ## What It Does
 
-Called by `aireadylife-insurance-op-renewal-watch` for each policy renewal identified within 60 days. The renewal alert is structured to make action immediate and unambiguous — everything the user needs to act is in the flag, without looking up the policy or re-running an op.
+Called by `insurance-op-renewal-watch` for each policy renewal identified within 60 days. The renewal alert is structured to make action immediate and unambiguous — everything the user needs to act is in the flag, without looking up the policy or re-running an op.
 
 **Action-by date logic:** The action-by date is always 30 days before the renewal date, not the renewal date itself. Insurance carriers typically require 30 days notice for mid-term cancellation; shopping, comparing quotes, and completing a carrier change realistically takes 1-2 weeks for most personal lines policies. An action-by date of 30 days before renewal builds in enough buffer for a smooth transition without rushing. For shop renewals, the flag also includes a quote request initiation date (45 days before renewal) as a softer prompt.
 

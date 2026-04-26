@@ -1,5 +1,5 @@
 ---
-name: aireadylife-career-flow-review-pipeline
+name: career-flow-review-pipeline
 type: flow
 trigger: called-by-op
 description: >
@@ -8,7 +8,7 @@ description: >
 
 ## What It Does
 
-Called by `aireadylife-career-op-monthly-sync` and `aireadylife-career-op-network-review` to audit the active pipeline and surface what needs attention. Most job searches fail not because of a lack of applications but because of poor pipeline management — following up too late, letting promising opportunities go cold, or losing track of what stage each opportunity is at.
+Called by `career-op-monthly-sync` and `career-op-network-review` to audit the active pipeline and surface what needs attention. Most job searches fail not because of a lack of applications but because of poor pipeline management — following up too late, letting promising opportunities go cold, or losing track of what stage each opportunity is at.
 
 **Reading the pipeline:** Loads all active pipeline entries from `vault/career/00_current/`. Each entry stores: company, role title, source (how you found the role — LinkedIn, referral, company site, recruiter), stage (watch / applied / phone-screen / technical / final / offer), date of last activity, contact name, and next planned action. The flow does not process archived (closed) pipeline items.
 

@@ -1,7 +1,7 @@
 {
   "name": "chief",
   "description": "Personal Chief of Staff \u2014 daily briefs, task orchestration, inbox management",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "author": {
     "name": "AI-Ready U.",
     "email": "hello@fru.dev"

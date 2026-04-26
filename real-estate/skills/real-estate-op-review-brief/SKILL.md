@@ -1,5 +1,5 @@
 ---
-name: aireadylife-real-estate-op-review-brief
+name: real-estate-op-review-brief
 type: op
 cadence: monthly
 description: >
@@ -9,7 +9,7 @@ description: >
   Triggers: "real estate brief", "housing update", "market analysis", "real estate summary".
 ---
 
-# aireadylife-real-estate-review-brief
+# real-estate-review-brief
 
 **Cadence:** Monthly (1st of month, after monthly sync) or on-demand
 **Produces:** Real estate brief — market conditions, affordability update, buy vs. rent verdict, action items
@@ -48,7 +48,7 @@ Action items are sorted by urgency and categorized: things to do this week (rene
 8. Read open-loops.md for existing flags; include unresolved items in action items section
 9. Compile all sections into structured brief
 10. Write brief to `~/Documents/aireadylife/vault/real-estate/02_briefs/YYYY-MM-realestate-brief.md`
-11. Call `aireadylife-real-estate-update-open-loops` to record any new flags from the brief
+11. Call `real-estate-update-open-loops` to record any new flags from the brief
 
 ## Input
 

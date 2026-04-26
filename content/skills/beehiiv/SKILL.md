@@ -41,8 +41,8 @@ Authorization: Bearer $BEEHIIV_API_KEY
 
 ## Used By
 
-- `aireadylife-content-channel-review` — pull subscriber count and engagement rates
-- `aireadylife-content-revenue-review` — pull MRR and boost revenue
+- `content-channel-review` — pull subscriber count and engagement rates
+- `content-revenue-review` — pull MRR and boost revenue
 
 ## Vault Output
 

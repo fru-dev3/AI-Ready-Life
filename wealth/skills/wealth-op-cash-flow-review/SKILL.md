@@ -1,5 +1,5 @@
 ---
-name: aireadylife-wealth-op-cash-flow-review
+name: wealth-op-cash-flow-review
 type: op
 cadence: monthly
 description: >
@@ -11,16 +11,16 @@ description: >
   over budget", "monthly budget review", "how much did I spend this month".
 ---
 
-# aireadylife-wealth-cash-flow-review
+# wealth-cash-flow-review
 
 **Cadence:** Monthly (1st of month)
 **Produces:** Cash flow summary at `vault/wealth/00_current/YYYY-MM-cashflow.md`; budget variance flags in `vault/wealth/open-loops.md`
 
 ## What It Does
 
-Aggregates income and expense data for the prior month and compares spending in each category against its configured budget target. The op calls `aireadylife-wealth-build-cash-flow-summary` to produce the full income-minus-expenses analysis, then routes findings to the appropriate task handlers.
+Aggregates income and expense data for the prior month and compares spending in each category against its configured budget target. The op calls `wealth-build-cash-flow-summary` to produce the full income-minus-expenses analysis, then routes findings to the appropriate task handlers.
 
-For each expense category that exceeds its budget by more than 20%, `aireadylife-wealth-flag-budget-variance` is called to write a structured flag. The flag includes the category name, actual spend, budget target, dollar overage, percentage overage, and a context note when the overage has a plausible one-time explanation (e.g., "Healthcare: January deductible reset"). The 20% threshold filters out normal month-to-month variation while catching genuine budget overruns. Recurring overages — when the same category is flagged 3+ consecutive months — are automatically escalated to HIGH severity as a signal that the budget target needs revision, not just willpower.
+For each expense category that exceeds its budget by more than 20%, `wealth-flag-budget-variance` is called to write a structured flag. The flag includes the category name, actual spend, budget target, dollar overage, percentage overage, and a context note when the overage has a plausible one-time explanation (e.g., "Healthcare: January deductible reset"). The 20% threshold filters out normal month-to-month variation while catching genuine budget overruns. Recurring overages — when the same category is flagged 3+ consecutive months — are automatically escalated to HIGH severity as a signal that the budget target needs revision, not just willpower.
 
 The op calculates two savings metrics: gross savings rate (total savings contributions ÷ gross income) and net savings rate (net cash flow ÷ net income). Both are compared to the configured savings rate target (default 20% gross). A savings rate below 10% for any month is flagged as a concern; below 0% (spending more than earning) is flagged as critical.
 
@@ -28,8 +28,8 @@ The review also checks whether the prior month's cash flow is consistent with th
 
 ## Calls
 
-- **Flows:** `aireadylife-wealth-build-cash-flow-summary`
-- **Tasks:** `aireadylife-wealth-flag-budget-variance`, `aireadylife-wealth-update-open-loops`
+- **Flows:** `wealth-build-cash-flow-summary`
+- **Tasks:** `wealth-flag-budget-variance`, `wealth-update-open-loops`
 
 ## Apps
 

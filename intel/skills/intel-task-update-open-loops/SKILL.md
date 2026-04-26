@@ -1,5 +1,5 @@
 ---
-name: aireadylife-intel-task-update-open-loops
+name: intel-task-update-open-loops
 type: task
 description: >
   Writes all intel flags (breaking priority stories, source gaps, follow-up items) to
@@ -20,7 +20,7 @@ Note the sort difference from other plugins: intel open-loops sorts 🔴 items n
 
 ## Triggers
 
-Called by `aireadylife-intel-op-daily-briefing`, `aireadylife-intel-op-review-brief`, `aireadylife-intel-op-source-scan`, `aireadylife-intel-op-topic-deep-dive`, and `aireadylife-intel-task-flag-priority-story`.
+Called by `intel-op-daily-briefing`, `intel-op-review-brief`, `intel-op-source-scan`, `intel-op-topic-deep-dive`, and `intel-task-flag-priority-story`.
 
 ## Steps
 

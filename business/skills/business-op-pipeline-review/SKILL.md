@@ -1,5 +1,5 @@
 ---
-name: aireadylife-business-op-pipeline-review
+name: business-op-pipeline-review
 type: op
 cadence: monthly
 description: >
@@ -12,7 +12,7 @@ description: >
 
 Runs monthly alongside the P&L review to give a complete forward-looking picture of the business. While the P&L review is backward-looking (what happened last month), the pipeline review is forward-looking (what revenue is coming and from where). Reads all proposal and contract records from `~/Documents/aireadylife/vault/business/00_current/` to produce a snapshot of all active commercial opportunities.
 
-Calls `aireadylife-business-flow-build-pipeline-summary` to compute the stage breakdown, weighted pipeline value, stale proposal list, and 90-day conversion rate. Reviews the stale list — any proposal with no response in more than 7 days — and generates a specific recommended follow-up action for each based on its stage and days stale: 7-14 days stale = send a brief follow-up email; 15-21 days stale = phone call or alternate contact; 22+ days stale = assume no response, mark as low probability or closed-lost unless there is a clear reason to continue pursuing.
+Calls `business-flow-build-pipeline-summary` to compute the stage breakdown, weighted pipeline value, stale proposal list, and 90-day conversion rate. Reviews the stale list — any proposal with no response in more than 7 days — and generates a specific recommended follow-up action for each based on its stage and days stale: 7-14 days stale = send a brief follow-up email; 15-21 days stale = phone call or alternate contact; 22+ days stale = assume no response, mark as low probability or closed-lost unless there is a clear reason to continue pursuing.
 
 Calculates MoM pipeline change: is the total opportunity book growing or shrinking? A shrinking pipeline in the sent and in-review stages is an early warning sign of revenue risk 60-90 days out. Writes a dated pipeline brief to vault/business/02_briefs/ and pushes all stale proposals and shrinking pipeline flags to open-loops.
 
@@ -30,13 +30,13 @@ Calculates MoM pipeline change: is the total opportunity book growing or shrinki
 ## Steps
 
 1. Confirm vault/business/00_current/ exists and has proposal records; if empty, prompt to add pipeline data
-2. Call `aireadylife-business-flow-build-pipeline-summary` to get stage breakdown, weighted value, stale list, conversion rate, and MoM comparison
+2. Call `business-flow-build-pipeline-summary` to get stage breakdown, weighted value, stale list, conversion rate, and MoM comparison
 3. For each stale proposal, assign a follow-up action based on days stale: 7-14 days = email; 15-21 days = phone; 22+ days = decision needed (continue or close-lost)
 4. Identify the top 3 opportunities by weighted value in verbal-yes or closing stage — these deserve the most attention
 5. Flag if total pipeline is below a minimum healthy threshold (configurable in config.md; e.g., 3x monthly revenue target) — insufficient pipeline signals future revenue risk
 6. Note conversion rate trend: if 90-day conversion rate has dropped more than 5 percentage points from the prior period, flag as a lead quality or proposal quality issue
 7. Write pipeline brief to vault/business/02_briefs/pipeline-{YYYY-MM}.md
-8. Call `aireadylife-business-task-update-open-loops` with stale proposal follow-ups and pipeline health flags
+8. Call `business-task-update-open-loops` with stale proposal follow-ups and pipeline health flags
 
 ## Input
 

@@ -1,5 +1,5 @@
 ---
-name: aireadylife-chief-task-flag-urgent-item
+name: chief-task-flag-urgent-item
 type: task
 cadence: as-received
 description: >
@@ -7,7 +7,7 @@ description: >
   priority. Includes domain, item description, due date, and recommended action.
 ---
 
-# aireadylife-chief-flag-urgent-item
+# chief-flag-urgent-item
 
 **Trigger:** Called at the end of every chief op when any 🔴 priority items are found across domains
 **Produces:** Dated urgent alert record in ~/Documents/aireadylife/vault/chief/00_current/

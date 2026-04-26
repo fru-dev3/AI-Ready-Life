@@ -1,5 +1,5 @@
 ---
-name: aireadylife-brand-flow-check-profile-consistency
+name: brand-flow-check-profile-consistency
 type: flow
 trigger: called-by-op
 description: >
@@ -19,7 +19,7 @@ Returns the full discrepancy list with prioritization to the calling op.
 
 ## Triggers
 
-Called internally by `aireadylife-brand-op-profile-audit`. Not invoked directly by the user.
+Called internally by `brand-op-profile-audit`. Not invoked directly by the user.
 
 ## Steps
 

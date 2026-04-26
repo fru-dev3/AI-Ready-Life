@@ -65,8 +65,8 @@ EFTPS requires enrollment (5–7 business days to receive PIN by mail). Once enr
 
 ## Used By
 
-- `aireadylife-tax-quarterly-estimate` — verify prior estimated payments on transcript before calculating new payment
-- `aireadylife-tax-deadline-watch` — confirm payment received and transcript updated; download any new notices
+- `tax-quarterly-estimate` — verify prior estimated payments on transcript before calculating new payment
+- `tax-deadline-watch` — confirm payment received and transcript updated; download any new notices
 
 ## Vault Output
 

@@ -53,8 +53,8 @@ estate_properties:
 
 ## Used By
 
-- `aireadylife-estate-portfolio-review` — pull Zestimate for each owned property for equity and cap rate calculation
-- `aireadylife-estate-tenant-review` — pull Rental Zestimate to benchmark current rent against market
+- `estate-portfolio-review` — pull Zestimate for each owned property for equity and cap rate calculation
+- `estate-tenant-review` — pull Rental Zestimate to benchmark current rent against market
 
 ## Vault Output
 

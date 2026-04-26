@@ -1,6 +1,6 @@
 {
   "version": "1.0.2",
-  "plugin": "aireadylife-content",
+  "plugin": "content",
   "structure": {
     "subfolders": [
       {"folder": "00_current", "description": "Active content state and current publishing schedule"},

@@ -1,5 +1,5 @@
 ---
-name: aireadylife-tax-op-review-brief
+name: tax-op-review-brief
 type: op
 cadence: monthly
 description: >
@@ -11,7 +11,7 @@ description: >
   "tax summary".
 ---
 
-# aireadylife-tax-review-brief
+# tax-review-brief
 
 **Cadence:** Monthly (1st of month)
 **Produces:** Tax review brief at `vault/tax/02_briefs/YYYY-MM-tax-brief.md`
@@ -40,8 +40,8 @@ Items sourced directly from `vault/tax/open-loops.md`, filtered to OPEN status, 
 
 ## Calls
 
-- **Flows:** `aireadylife-tax-build-deadline-list` (for next deadline data)
-- **Tasks:** `aireadylife-tax-update-open-loops`
+- **Flows:** `tax-build-deadline-list` (for next deadline data)
+- **Tasks:** `tax-update-open-loops`
 
 ## Vault Output
 

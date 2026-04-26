@@ -1,22 +1,22 @@
 ---
-name: aireadylife-health-task-flag-preventive-care-gap
+name: health-task-flag-preventive-care-gap
 type: task
 cadence: quarterly
 description: >
   Writes a flag to vault/health/open-loops.md for any overdue or due-soon preventive
   care screening. Records: care type, last completed date, recommended interval, days
   overdue, urgency tier (routine/soon/overdue), and a specific scheduling action.
-  Called by aireadylife-health-preventive-care-review for each identified gap.
+  Called by health-preventive-care-review for each identified gap.
 ---
 
-# aireadylife-health-flag-preventive-care-gap
+# health-flag-preventive-care-gap
 
 **Cadence:** Quarterly (called by preventive care review op)
 **Produces:** Preventive care gap entries in `vault/health/open-loops.md`
 
 ## What It Does
 
-Called by `aireadylife-health-preventive-care-review` for each screening or checkup that is overdue or coming due within the next 90 days. The task writes a structured, actionable flag rather than a vague reminder.
+Called by `health-preventive-care-review` for each screening or checkup that is overdue or coming due within the next 90 days. The task writes a structured, actionable flag rather than a vague reminder.
 
 Covered care types and their recommended intervals:
 - **Annual physical** — every 12 months with PCP; includes blood pressure check, BMI, general exam, and routine lab orders

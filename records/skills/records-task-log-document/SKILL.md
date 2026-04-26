@@ -1,5 +1,5 @@
 ---
-name: aireadylife-records-task-log-document
+name: records-task-log-document
 type: task
 cadence: as-received
 description: >
@@ -8,7 +8,7 @@ description: >
   to the correct subfolder by document type. Creates the expiration tracking record.
 ---
 
-# aireadylife-records-log-document
+# records-log-document
 
 **Cadence:** As-received (when a new document is issued, renewed, or discovered during a records cleanout)
 **Produces:** Document record in the appropriate `~/Documents/aireadylife/vault/records/` subfolder

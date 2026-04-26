@@ -1,5 +1,5 @@
 ---
-name: aireadylife-business-op-compliance-review
+name: business-op-compliance-review
 type: op
 cadence: quarterly
 description: >
@@ -10,7 +10,7 @@ description: >
 
 ## What It Does
 
-Runs quarterly (January, April, July, October) to produce a complete compliance snapshot for all configured business entities. Reads the compliance checklist from `~/Documents/aireadylife/vault/business/00_current/compliance-checklist.md` which tracks every recurring obligation with last-completed date and next-due date. Calls `aireadylife-business-flow-check-compliance-status` to calculate days until due and assign traffic-light status for each item.
+Runs quarterly (January, April, July, October) to produce a complete compliance snapshot for all configured business entities. Reads the compliance checklist from `~/Documents/aireadylife/vault/business/00_current/compliance-checklist.md` which tracks every recurring obligation with last-completed date and next-due date. Calls `business-flow-check-compliance-status` to calculate days until due and assign traffic-light status for each item.
 
 Covers the full range of entity obligations: state annual report filing (deadline and fee vary by state — Delaware charges $300 minimum franchise tax due March 1; California charges $800 minimum franchise tax due April 15; Wyoming and Nevada charge annual fees of ~$60 with no report), registered agent status and address currency, S-Corp election confirmation (Form 2553 on file), operating agreement version and last review date, quarterly federal and state estimated tax payment dates, 1099-NEC preparation for contractors paid $600+ in the year, and any state-specific licenses or permits.
 
@@ -30,7 +30,7 @@ Checks for backing documentation — a filed annual report should have a confirm
 ## Steps
 
 1. Confirm vault/business/00_current/compliance-checklist.md exists; if missing, prompt user to create it from the template in config.md
-2. Call `aireadylife-business-flow-check-compliance-status` to evaluate all checklist items and return status table
+2. Call `business-flow-check-compliance-status` to evaluate all checklist items and return status table
 3. Review the checklist for completeness — check that all standard obligation types are present for the configured entity types (LLC: annual report, registered agent, operating agreement; S-Corp adds: quarterly 941 payroll tax, 1099-NEC for contractors, S-Corp election on file)
 4. For any registered agent entry: verify the configured registered agent address in config.md matches the filed address; flag any discrepancy
 5. For entities in states with annual franchise taxes (CA, DE): confirm current year payment is logged or scheduled
@@ -38,7 +38,7 @@ Checks for backing documentation — a filed annual report should have a confirm
 7. Check Q4 estimated tax was paid (January 15 deadline) and confirm Q1 estimated tax is scheduled if net income pace warrants it
 8. Compile all items into compliance brief with status table sorted by urgency
 9. Write brief to vault/business/02_briefs/compliance-{quarter}-{year}.md
-10. Call `aireadylife-business-task-update-open-loops` with all 🔴 and 🟡 items
+10. Call `business-task-update-open-loops` with all 🔴 and 🟡 items
 
 ## Input
 

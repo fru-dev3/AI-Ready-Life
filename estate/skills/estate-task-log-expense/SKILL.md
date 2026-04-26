@@ -1,5 +1,5 @@
 ---
-name: aireadylife-estate-task-log-expense
+name: estate-task-log-expense
 type: task
 cadence: as-received
 description: >
@@ -8,7 +8,7 @@ description: >
   CapEx vs. maintenance classification is flagged automatically for amounts above $2,500.
 ---
 
-# aireadylife-estate-log-expense
+# estate-log-expense
 
 **Cadence:** As-received (logged at the time the expense is incurred or the bill is paid)
 **Produces:** Expense record appended to `~/Documents/aireadylife/vault/estate/00_current/{property-slug}-expenses.md`

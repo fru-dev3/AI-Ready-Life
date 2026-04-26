@@ -1,5 +1,5 @@
 ---
-name: aireadylife-vision-task-log-milestone
+name: vision-task-log-milestone
 type: task
 cadence: as-achieved
 description: >
@@ -8,7 +8,7 @@ description: >
   scorecard positive signals.
 ---
 
-# aireadylife-vision-log-milestone
+# vision-log-milestone
 
 **Cadence:** As-achieved (logged whenever a meaningful milestone is reached)
 **Produces:** New milestone entry in ~/Documents/aireadylife/vault/vision/00_current/milestones.md

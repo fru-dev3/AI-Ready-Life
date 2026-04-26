@@ -1,5 +1,5 @@
 ---
-name: aireadylife-learning-op-review-brief
+name: learning-op-review-brief
 type: op
 cadence: weekly
 description: >
@@ -37,7 +37,7 @@ The brief is designed for a Monday morning read. It anchors the week's learning 
 9. Read open loops from `vault/learning/open-loops.md` — extract highest-priority items.
 10. Synthesize 1-3 next actions for the coming week, prioritized by what most advances the top-priority learning goals.
 11. Write weekly brief to `vault/learning/02_briefs/YYYY-MM-DD-learning-brief.md`.
-12. Call `aireadylife-learning-task-update-open-loops` with any new flags.
+12. Call `learning-task-update-open-loops` with any new flags.
 
 ## Input
 

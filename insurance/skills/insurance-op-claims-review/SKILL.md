@@ -1,5 +1,5 @@
 ---
-name: aireadylife-insurance-op-claims-review
+name: insurance-op-claims-review
 type: op
 cadence: on-demand
 description: >
@@ -38,7 +38,7 @@ Manages insurance claims from the moment an incident occurs through final settle
 5. **Denial appeal:** Read denial reason from claims log. Identify appeal strategy based on denial type. Calculate appeal deadline. Generate appeal letter outline.
 6. Update claims log entries with current status and next action.
 7. Write claims review summary to `vault/insurance/00_current/claims-review-YYYY-MM-DD.md`.
-8. Call `aireadylife-insurance-task-update-open-loops` with all claim action items and deadlines.
+8. Call `insurance-task-update-open-loops` with all claim action items and deadlines.
 
 ## Input
 

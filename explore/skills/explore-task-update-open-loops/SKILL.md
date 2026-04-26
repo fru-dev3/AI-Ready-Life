@@ -1,12 +1,12 @@
 ---
-name: aireadylife-explore-task-update-open-loops
+name: explore-task-update-open-loops
 type: task
 description: >
   Writes all explore flags (expiring documents, unbooked trip items, budget overruns) to
   vault/explore/open-loops.md and resolves completed items.
 ---
 
-# aireadylife-explore-update-open-loops
+# explore-update-open-loops
 
 **Trigger:** Called by explore ops and flows
 **Produces:** Updated ~/Documents/aireadylife/vault/explore/open-loops.md with current action items

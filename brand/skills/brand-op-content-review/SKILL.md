@@ -1,5 +1,5 @@
 ---
-name: aireadylife-brand-op-content-review
+name: brand-op-content-review
 type: op
 cadence: monthly
 description: >
@@ -13,7 +13,7 @@ Runs on the first of each month to evaluate the prior month's content output acr
 
 Reads the content log from `~/Documents/aireadylife/vault/brand/00_current/` for the prior month to count posts published per platform. Compares to the user's configured cadence targets (e.g., 4 LinkedIn posts/month, 2 YouTube videos/month, 1 newsletter/week). Flags any cadence misses — a platform that published fewer posts than the minimum target for the month. A cadence miss on a primary platform is 🔴 if it is the second consecutive month of misses; 🟡 for a first miss.
 
-Calls `aireadylife-brand-flow-build-analytics-summary` for cross-platform engagement metrics and top content identification. Surfaces the top 3 performing pieces by engagement and labels the topic area each belongs to — this reveals which content pillars are generating the most brand traction. Calculates MoM change in follower counts and engagement rate per platform.
+Calls `brand-flow-build-analytics-summary` for cross-platform engagement metrics and top content identification. Surfaces the top 3 performing pieces by engagement and labels the topic area each belongs to — this reveals which content pillars are generating the most brand traction. Calculates MoM change in follower counts and engagement rate per platform.
 
 Surfaces content gaps: any platform that had zero output in the prior month, and any topic area from the user's configured content pillars that had no coverage in the month. Topic area with above-average engagement is flagged as a "double down" opportunity — create more content in this area. Writes a dated brief to vault/brand/02_briefs/ and pushes cadence misses and engagement anomalies to open-loops.
 
@@ -33,13 +33,13 @@ Surfaces content gaps: any platform that had zero output in the prior month, and
 3. Compare posts per platform to configured cadence targets in config.md; calculate cadence achievement % per platform
 4. Flag platforms below minimum cadence target: 🔴 if second consecutive miss, 🟡 for first miss, 🟢 if within 10% of target
 5. Flag any platform with zero output in the period as a "content gap" — 🔴 if primary platform, 🟡 if secondary
-6. Call `aireadylife-brand-flow-build-analytics-summary` for cross-platform engagement metrics and top content
+6. Call `brand-flow-build-analytics-summary` for cross-platform engagement metrics and top content
 7. Calculate MoM follower growth and engagement rate trend per platform; surface notable changes (>10% shift)
 8. Identify top 3 posts by engagement; map each to its content pillar from config.md
 9. Calculate average engagement rate per content pillar; flag which pillars are above and below average
 10. Identify any configured content pillar with zero posts this month (topic coverage gap)
 11. Write content review brief to vault/brand/02_briefs/content-review-{YYYY-MM}.md
-12. Call `aireadylife-brand-task-update-open-loops` with cadence misses, engagement anomalies, and topic gaps
+12. Call `brand-task-update-open-loops` with cadence misses, engagement anomalies, and topic gaps
 
 ## Input
 

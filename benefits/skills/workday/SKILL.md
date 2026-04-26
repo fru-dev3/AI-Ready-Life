@@ -114,11 +114,11 @@ When Workday payroll is active (not ADP), use this skill instead of the ADP skil
 
 ## Used By
 
-- `aireadylife-benefits-op-enrollment-review` — navigate open enrollment, capture plan options, confirm elections submitted
-- `aireadylife-benefits-op-401k-review` — verify contribution rate matches elected rate, extract YTD contribution total
-- `aireadylife-benefits-op-hsa-review` — confirm HSA payroll election amount per pay period
-- `aireadylife-benefits-op-coverage-review` — confirm enrolled plans, tiers, and effective dates match expected elections
-- `aireadylife-benefits-op-monthly-sync` — monthly deduction verification pass when Workday is the payroll system
+- `benefits-op-enrollment-review` — navigate open enrollment, capture plan options, confirm elections submitted
+- `benefits-op-401k-review` — verify contribution rate matches elected rate, extract YTD contribution total
+- `benefits-op-hsa-review` — confirm HSA payroll election amount per pay period
+- `benefits-op-coverage-review` — confirm enrolled plans, tiers, and effective dates match expected elections
+- `benefits-op-monthly-sync` — monthly deduction verification pass when Workday is the payroll system
 
 ## Vault Output
 

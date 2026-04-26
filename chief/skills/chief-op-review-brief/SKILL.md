@@ -1,5 +1,5 @@
 ---
-name: aireadylife-chief-op-review-brief
+name: chief-op-review-brief
 type: op
 cadence: daily
 description: >
@@ -8,18 +8,18 @@ description: >
   Triggers: "morning brief", "daily brief", "what's on my plate today", "life summary".
 ---
 
-# aireadylife-chief-review-brief
+# chief-review-brief
 
 **Cadence:** Daily (morning)
 **Produces:** Executive AM brief written to ~/Documents/aireadylife/vault/chief/02_briefs/daily-YYYY-MM-DD.md
 
 ## What It Does
 
-Review brief is the standard entry point for the daily brief. It is functionally identical to `aireadylife-chief-op-daily-brief` and produces the same output — it exists as a named alias so users can invoke it by natural language phrases like "review brief" or "life summary" in addition to "daily brief."
+Review brief is the standard entry point for the daily brief. It is functionally identical to `chief-op-daily-brief` and produces the same output — it exists as a named alias so users can invoke it by natural language phrases like "review brief" or "life summary" in addition to "daily brief."
 
 It polls all installed plugin vaults, synthesizes domain alerts by urgency tier (🔴/🟡/🟢), selects the top 3 actions for today, assembles the domain alert table, incorporates calendar data if the calendar plugin is installed, and delivers the full brief in the standard four-section format: ACTION TODAY → Domain Alerts → Calendar Today → Open Loops.
 
-For full documentation on logic, steps, and output format, see `aireadylife-chief-op-daily-brief`.
+For full documentation on logic, steps, and output format, see `chief-op-daily-brief`.
 
 ## Triggers
 
@@ -34,7 +34,7 @@ For full documentation on logic, steps, and output format, see `aireadylife-chie
 ## Steps
 
 1. Verify vault/chief/config.md exists; if missing, stop and prompt setup
-2. Delegate to `aireadylife-chief-op-daily-brief` full execution flow
+2. Delegate to `chief-op-daily-brief` full execution flow
 3. Write brief to vault/chief/02_briefs/daily-YYYY-MM-DD.md
 4. Return formatted brief to user
 
@@ -48,7 +48,7 @@ For full documentation on logic, steps, and output format, see `aireadylife-chie
 
 ## Output Format
 
-Same as `aireadylife-chief-op-daily-brief`:
+Same as `chief-op-daily-brief`:
 ```
 # Daily Brief — [Day, Month DD YYYY]
 
@@ -73,7 +73,7 @@ Same as `aireadylife-chief-op-daily-brief`:
 
 ## Error Handling
 
-- Same as `aireadylife-chief-op-daily-brief` — all error handling delegates to that skill
+- Same as `chief-op-daily-brief` — all error handling delegates to that skill
 
 ## Vault Paths
 

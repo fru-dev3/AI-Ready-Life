@@ -64,9 +64,9 @@ Oura API v2: 5,000 requests/day per token. The health agent's monthly sync reque
 
 ## Used By
 
-- `aireadylife-health-sync-wearable-data` — pull nightly sleep, readiness, and activity data
-- `aireadylife-health-anomaly-watch` — flag HRV drops, low readiness streaks, and resting HR elevation
-- `aireadylife-health-build-wellness-summary` — provide data for 30-day and 90-day trend calculations
+- `health-sync-wearable-data` — pull nightly sleep, readiness, and activity data
+- `health-anomaly-watch` — flag HRV drops, low readiness streaks, and resting HR elevation
+- `health-build-wellness-summary` — provide data for 30-day and 90-day trend calculations
 
 ## Vault Output
 

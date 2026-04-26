@@ -74,8 +74,8 @@ The learning brief prompts the user to update this file if the last_updated date
 
 ## Used By
 
-- `aireadylife-learning-flow-build-reading-summary` — compile reading progress, YTD count, and annual goal pace
-- `aireadylife-learning-op-monthly-sync` — update reading list status and completed book count
+- `learning-flow-build-reading-summary` — compile reading progress, YTD count, and annual goal pace
+- `learning-op-monthly-sync` — update reading list status and completed book count
 
 ## Vault Output
 

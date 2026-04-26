@@ -1,5 +1,5 @@
 ---
-name: aireadylife-brand-op-monthly-synthesis
+name: brand-op-monthly-synthesis
 type: op
 cadence: monthly
 description: >
@@ -11,7 +11,7 @@ description: >
 
 Runs at the end of each month to produce a complete brand health assessment across all configured platforms. This is the deepest monthly brand review — it goes beyond individual platform metrics to produce a unified brand health score (0-100) that tells the user, in a single number with supporting detail, whether their personal brand is gaining strength or losing ground.
 
-Calls `aireadylife-brand-flow-build-analytics-summary` to compile cross-platform metrics with MoM comparisons. Calls `aireadylife-brand-flow-analyze-mentions` to assess sentiment distribution and identify notable mentions. Evaluates four scoring dimensions and combines them into the 0-100 health score.
+Calls `brand-flow-build-analytics-summary` to compile cross-platform metrics with MoM comparisons. Calls `brand-flow-analyze-mentions` to assess sentiment distribution and identify notable mentions. Evaluates four scoring dimensions and combines them into the 0-100 health score.
 
 Scoring rubric (25 points each): Profile consistency (0-25): full 25 if all profiles match master and consistency score is 100%; proportional deduction — each 🔴 inconsistency costs 10 points, each 🟡 costs 3 points. Content cadence (0-25): full 25 if all primary platforms are within 10% of their set posting targets this month; 2 points deducted per cadence miss per platform; 0 for any platform with zero content in 30 days. Follower growth (0-25): full 25 if at least 2 primary platforms show positive MoM growth; 15 if 1 platform growing; 5 if all flat; 0 if any primary platform is declining. Mention sentiment (0-25): full 25 if >80% positive; 18 for 61-80%; 10 for 40-60%; 0 for <40% positive.
 
@@ -30,9 +30,9 @@ Tracks the health score trend: current month vs. prior 3 months average. A score
 ## Steps
 
 1. Confirm vault/brand/ is set up with analytics and config.md; if missing data, list what is needed
-2. Call `aireadylife-brand-flow-build-analytics-summary` for cross-platform metrics and top content
-3. Call `aireadylife-brand-flow-analyze-mentions` for sentiment distribution and notable mentions
-4. Call `aireadylife-brand-flow-check-profile-consistency` (lightweight — for consistency score component only)
+2. Call `brand-flow-build-analytics-summary` for cross-platform metrics and top content
+3. Call `brand-flow-analyze-mentions` for sentiment distribution and notable mentions
+4. Call `brand-flow-check-profile-consistency` (lightweight — for consistency score component only)
 5. Evaluate cadence performance: compare posts published per platform this month vs. configured targets in config.md; calculate cadence score component (0-25)
 6. Evaluate follower growth: count platforms with positive MoM growth; calculate growth score component (0-25)
 7. Evaluate mention sentiment: use distribution from analyze-mentions flow; calculate sentiment score component (0-25)
@@ -40,7 +40,7 @@ Tracks the health score trend: current month vs. prior 3 months average. A score
 9. Load prior month score from vault/brand/00_current/synthesis-{prior YYYY-MM}.md for trend line
 10. Identify the single most impactful action to improve the brand health score next month
 11. Write synthesis to vault/brand/00_current/synthesis-{YYYY-MM}.md
-12. Call `aireadylife-brand-task-update-open-loops` with all flags from this synthesis
+12. Call `brand-task-update-open-loops` with all flags from this synthesis
 
 ## Input
 

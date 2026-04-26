@@ -1,5 +1,5 @@
 ---
-name: aireadylife-wealth-op-review-brief
+name: wealth-op-review-brief
 type: op
 cadence: monthly
 description: >
@@ -10,9 +10,9 @@ description: >
   "what happened with my wealth this month".
 ---
 
-# aireadylife-wealth-review-brief
+# wealth-review-brief
 
-**Cadence:** Monthly (after `aireadylife-wealth-monthly-synthesis` completes)
+**Cadence:** Monthly (after `wealth-monthly-synthesis` completes)
 **Produces:** Wealth review brief at `vault/wealth/02_briefs/YYYY-MM-wealth-brief.md`
 
 ## What It Does
@@ -38,8 +38,8 @@ Generates the monthly wealth review brief — a single document that synthesizes
 
 ## Calls
 
-- **Flows:** `aireadylife-wealth-build-review-brief` (internal flow for formatting)
-- **Tasks:** `aireadylife-wealth-update-open-loops`
+- **Flows:** `wealth-build-review-brief` (internal flow for formatting)
+- **Tasks:** `wealth-update-open-loops`
 
 ## Apps
 

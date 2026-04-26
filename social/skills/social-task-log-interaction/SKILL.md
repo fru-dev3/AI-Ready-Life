@@ -1,5 +1,5 @@
 ---
-name: aireadylife-social-task-log-interaction
+name: social-task-log-interaction
 type: task
 cadence: as-happened
 description: >
@@ -7,7 +7,7 @@ description: >
   notes, and any follow-up promised.
 ---
 
-# aireadylife-social-log-interaction
+# social-log-interaction
 
 **Cadence:** As-happened (after any meaningful contact with a tracked person)
 **Produces:** Interaction record in ~/Documents/aireadylife/vault/social/00_current/

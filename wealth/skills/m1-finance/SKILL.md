@@ -50,8 +50,8 @@ m1_accounts:
 
 ## Used By
 
-- `aireadylife-wealth-investment-review` — pull portfolio value, allocation, and dividend income
-- `aireadylife-wealth-net-worth-review` — contribute brokerage value to net worth snapshot
+- `wealth-investment-review` — pull portfolio value, allocation, and dividend income
+- `wealth-net-worth-review` — contribute brokerage value to net worth snapshot
 
 ## Vault Output
 

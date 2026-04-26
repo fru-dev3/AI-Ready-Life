@@ -1,5 +1,5 @@
 ---
-name: aireadylife-vision-op-monthly-scorecard
+name: vision-op-monthly-scorecard
 type: op
 cadence: monthly
 description: >
@@ -9,7 +9,7 @@ description: >
   Triggers: "life scorecard", "monthly scorecard", "how am I doing", "life review".
 ---
 
-# aireadylife-vision-monthly-scorecard
+# vision-monthly-scorecard
 
 **Cadence:** Monthly (last day of month or first of new month)
 **Produces:** Monthly scorecard at ~/Documents/aireadylife/vault/vision/00_current/YYYY-MM-scorecard.md

@@ -1,5 +1,5 @@
 ---
-name: aireadylife-records-task-update-open-loops
+name: records-task-update-open-loops
 type: task
 description: >
   Writes records flags (expiring IDs with renewal deadlines, outdated legal documents,
@@ -7,7 +7,7 @@ description: >
   and resolves completed items. Archives resolved items with outcome notes.
 ---
 
-# aireadylife-records-update-open-loops
+# records-update-open-loops
 
 **Trigger:** Called by records ops and flows at the end of every run
 **Produces:** Updated `~/Documents/aireadylife/vault/records/open-loops.md` with new flags and resolved items archived

@@ -1,5 +1,5 @@
 ---
-name: aireadylife-real-estate-task-run-buy-vs-rent
+name: real-estate-task-run-buy-vs-rent
 type: task
 description: >
   Runs a time-value-adjusted buy vs. rent comparison for a specific purchase price and holding
@@ -7,7 +7,7 @@ description: >
   price-to-rent ratio verdict, and a plain-language recommendation.
 ---
 
-# aireadylife-real-estate-run-buy-vs-rent
+# real-estate-run-buy-vs-rent
 
 **Trigger:** Called by affordability-review and review-brief ops, or directly on-demand
 **Produces:** Buy vs. rent analysis saved to `~/Documents/aireadylife/vault/real-estate/00_current/`

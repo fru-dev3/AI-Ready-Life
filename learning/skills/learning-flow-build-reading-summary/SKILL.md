@@ -1,5 +1,5 @@
 ---
-name: aireadylife-learning-flow-build-reading-summary
+name: learning-flow-build-reading-summary
 type: flow
 trigger: called-by-op
 description: >
@@ -8,7 +8,7 @@ description: >
 
 ## What It Does
 
-Called by `aireadylife-learning-op-progress-review` to produce the reading progress layer of the monthly review. Reading is the most frequently tracked learning activity for most people, and the annual book goal is the most commonly set personal learning metric. This flow ensures the vault's reading data translates into a clear status report rather than requiring the user to manually calculate where they stand against their annual goal.
+Called by `learning-op-progress-review` to produce the reading progress layer of the monthly review. Reading is the most frequently tracked learning activity for most people, and the annual book goal is the most commonly set personal learning metric. This flow ensures the vault's reading data translates into a clear status report rather than requiring the user to manually calculate where they stand against their annual goal.
 
 **Reading list data sources:** Primary source is `vault/learning/00_current/` — the reading log and completion records maintained in the vault. If Goodreads is configured and an RSS feed URL is set in `vault/learning/config.md`, the flow reads the "currently-reading" shelf RSS for current book progress and "read" shelf for completion dates. If Kindle highlights are exported to `vault/learning/00_current/highlights/`, these are noted as supplementary data for completeness tracking but are not required for the summary.
 

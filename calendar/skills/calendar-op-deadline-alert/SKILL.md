@@ -1,5 +1,5 @@
 ---
-name: aireadylife-calendar-op-deadline-alert
+name: calendar-op-deadline-alert
 type: op
 cadence: weekly
 description: >
@@ -7,7 +7,7 @@ description: >
   Triggers: "deadline alert", "what's due", "upcoming deadlines", "30-day deadlines".
 ---
 
-# aireadylife-calendar-deadline-alert
+# calendar-deadline-alert
 
 **Cadence:** Weekly (Monday)
 **Produces:** 30-day deadline alert report written to ~/Documents/aireadylife/vault/calendar/00_current/alert-YYYY-MM-DD.md

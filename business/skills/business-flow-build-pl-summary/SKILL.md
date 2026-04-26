@@ -1,5 +1,5 @@
 ---
-name: aireadylife-business-flow-build-pl-summary
+name: business-flow-build-pl-summary
 type: flow
 trigger: called-by-op
 description: >
@@ -17,7 +17,7 @@ Formats the result as a structured two-section table: first the revenue breakdow
 
 ## Triggers
 
-Called internally by `aireadylife-business-op-pl-review` and `aireadylife-business-op-monthly-synthesis`. Not invoked directly by the user.
+Called internally by `business-op-pl-review` and `business-op-monthly-synthesis`. Not invoked directly by the user.
 
 ## Steps
 

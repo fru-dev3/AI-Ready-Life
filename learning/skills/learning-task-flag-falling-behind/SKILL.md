@@ -1,5 +1,5 @@
 ---
-name: aireadylife-learning-task-flag-falling-behind
+name: learning-task-flag-falling-behind
 type: task
 description: >
   Writes a behind-pace flag to vault/learning/open-loops.md when a learning item's completion percentage is more than 15 percentage points behind the time-elapsed percentage. Flag includes item title, type, platform, completion percentage, time-elapsed percentage, pace deficit, remaining content, days remaining, required daily pace to recover, and a decision prompt (accelerate / adjust deadline / drop).
@@ -7,7 +7,7 @@ description: >
 
 ## What It Does
 
-Called by `aireadylife-learning-flow-build-progress-summary` and `aireadylife-learning-op-progress-review` whenever a learning item's pace is more than 15 percentage points behind schedule. The 15-point threshold is intentional: it is large enough to filter out minor fluctuations (a busy week that slightly delays progress) while catching meaningful pace problems that will result in a missed target if the pattern continues.
+Called by `learning-flow-build-progress-summary` and `learning-op-progress-review` whenever a learning item's pace is more than 15 percentage points behind schedule. The 15-point threshold is intentional: it is large enough to filter out minor fluctuations (a busy week that slightly delays progress) while catching meaningful pace problems that will result in a missed target if the pattern continues.
 
 **What makes this flag useful:** The flag does not just say "you're behind on Course X." It gives the user everything needed to make a decision: exactly how far behind, exactly how much content remains, exactly how many days are left, and exactly what daily pace is needed to recover. "You need 18 minutes/day for 12 more days to finish this course by your target date" is a decision — you either commit to 18 minutes/day or you adjust the deadline or you drop the course. Vague "you're falling behind" flags produce inaction.
 

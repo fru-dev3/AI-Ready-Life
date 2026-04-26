@@ -1,5 +1,5 @@
 ---
-name: aireadylife-brand-flow-analyze-mentions
+name: brand-flow-analyze-mentions
 type: flow
 trigger: called-by-op
 description: >
@@ -19,7 +19,7 @@ Identifies patterns: which topics or content pieces are driving the most mention
 
 ## Triggers
 
-Called internally by `aireadylife-brand-op-monthly-synthesis`. Not invoked directly by the user.
+Called internally by `brand-op-monthly-synthesis`. Not invoked directly by the user.
 
 ## Steps
 

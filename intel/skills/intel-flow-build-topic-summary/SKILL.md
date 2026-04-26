@@ -1,5 +1,5 @@
 ---
-name: aireadylife-intel-flow-build-topic-summary
+name: intel-flow-build-topic-summary
 type: flow
 trigger: called-by-op
 description: >
@@ -19,7 +19,7 @@ Returns the formatted multi-paragraph topic brief to the calling op. The calling
 
 ## Triggers
 
-Called internally by `aireadylife-intel-op-topic-deep-dive`. Not invoked directly by the user.
+Called internally by `intel-op-topic-deep-dive`. Not invoked directly by the user.
 
 ## Steps
 

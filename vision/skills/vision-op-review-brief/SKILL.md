@@ -1,5 +1,5 @@
 ---
-name: aireadylife-vision-op-review-brief
+name: vision-op-review-brief
 type: op
 cadence: monthly
 description: >
@@ -8,7 +8,7 @@ description: >
   Triggers: "vision brief", "life scorecard", "goal review", "how am I doing", "life check-in".
 ---
 
-# aireadylife-vision-review-brief
+# vision-review-brief
 
 **Cadence:** Monthly (1st of month)
 **Produces:** Vision brief at ~/Documents/aireadylife/vault/vision/02_briefs/YYYY-MM-vision-brief.md

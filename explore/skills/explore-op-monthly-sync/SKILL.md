@@ -1,5 +1,5 @@
 ---
-name: aireadylife-explore-op-monthly-sync
+name: explore-op-monthly-sync
 type: op
 cadence: monthly
 description: >
@@ -7,7 +7,7 @@ description: >
   requiring preparation. Triggers: "explore monthly sync", "sync travel documents", "check passport".
 ---
 
-# aireadylife-explore-monthly-sync
+# explore-monthly-sync
 
 **Cadence:** Monthly (1st of month)
 **Produces:** Document expiry alerts and upcoming trip preparation checklist; updates vault/explore/00_current/state.md

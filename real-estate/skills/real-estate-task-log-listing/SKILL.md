@@ -1,5 +1,5 @@
 ---
-name: aireadylife-real-estate-task-log-listing
+name: real-estate-task-log-listing
 type: task
 cadence: as-found
 description: >
@@ -8,7 +8,7 @@ description: >
   link, and status. Used to track listings over time and flag price reductions.
 ---
 
-# aireadylife-real-estate-log-listing
+# real-estate-log-listing
 
 **Cadence:** As-found (when a listing worth tracking is identified)
 **Produces:** Listing record in `~/Documents/aireadylife/vault/real-estate/00_current/`

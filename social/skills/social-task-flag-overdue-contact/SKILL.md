@@ -1,5 +1,5 @@
 ---
-name: aireadylife-social-task-flag-overdue-contact
+name: social-task-flag-overdue-contact
 type: task
 description: >
   Writes a relationship flag to vault/social/open-loops.md when a close contact hasn't been reached
@@ -7,7 +7,7 @@ description: >
   outreach type.
 ---
 
-# aireadylife-social-flag-overdue-contact
+# social-flag-overdue-contact
 
 **Trigger:** Called by social relationship review flows when a contact crosses the overdue threshold
 **Produces:** Overdue relationship flag in ~/Documents/aireadylife/vault/social/open-loops.md
