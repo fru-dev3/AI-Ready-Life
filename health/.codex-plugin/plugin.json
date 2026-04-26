@@ -1,0 +1,35 @@
+{
+  "name": "aireadylife-health",
+  "version": "1.0.2",
+  "description": "2 AI agents that manage your personal health \u2014 wellness tracking, lab review, medication monitoring, appointment management, and insurance/HSA oversight.",
+  "author": {
+    "name": "fru.dev",
+    "email": "hello@fru.dev",
+    "url": "https://fru.dev"
+  },
+  "homepage": "https://aireadyu.dev",
+  "repository": "https://github.com/fru-dev3/AI-Ready-Life",
+  "license": "MIT",
+  "keywords": [
+    "health",
+    "wellness",
+    "labs",
+    "medications",
+    "appointments",
+    "insurance",
+    "hsa"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "AI Ready Life: Health",
+    "shortDescription": "2 AI agents that manage your personal health \u2014 wellness tracking, lab review, medication monitoring, appointment management, and insurance/HSA oversight.",
+    "longDescription": "Personal health management \u2014 labs, wellness, medications, appointments, insurance Vault template: https://frudev.gumroad.com/l/aireadylife-health",
+    "developerName": "fru.dev",
+    "category": "Personal",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://aireadyu.dev"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "aireadylife-brand",
+  "version": "1.0.2",
+  "description": "2 AI agents \u2014 Chief of Staff + Brand Director. Consistent brand presence, mention monitoring, analytics tracking, and monthly synthesis reports.",
+  "author": {
+    "name": "fru.dev",
+    "email": "hello@fru.dev",
+    "url": "https://fru.dev"
+  },
+  "homepage": "https://aireadyu.dev",
+  "repository": "https://github.com/fru-dev3/AI-Ready-Life",
+  "license": "MIT",
+  "keywords": [
+    "brand",
+    "online-presence",
+    "reputation",
+    "analytics",
+    "social"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "AI Ready Life: Brand",
+    "shortDescription": "2 AI agents \u2014 Chief of Staff + Brand Director. Consistent brand presence, mention monitoring, analytics tracking, and monthly synthesis reports.",
+    "longDescription": "Personal brand management \u2014 online presence, reputation, content performance Vault template: https://frudev.gumroad.com/l/aireadylife-brand",
+    "developerName": "fru.dev",
+    "category": "Content",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://aireadyu.dev"
+  }
+}

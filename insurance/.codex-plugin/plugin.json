@@ -1,0 +1,34 @@
+{
+  "name": "aireadylife-insurance",
+  "version": "1.0.2",
+  "description": "2 AI agents that manage all your insurance policies \u2014 health, life, auto, home/renters, umbrella. Renewal tracking, coverage gap analysis, and claims.",
+  "author": {
+    "name": "fru.dev",
+    "email": "hello@fru.dev",
+    "url": "https://fru.dev"
+  },
+  "homepage": "https://aireadyu.dev",
+  "repository": "https://github.com/fru-dev3/AI-Ready-Life",
+  "license": "MIT",
+  "keywords": [
+    "insurance",
+    "policies",
+    "renewals",
+    "coverage",
+    "claims",
+    "gaps"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "AI Ready Life: Insurance",
+    "shortDescription": "2 AI agents that manage all your insurance policies \u2014 health, life, auto, home/renters, umbrella. Renewal tracking, coverage gap analysis, and claims.",
+    "longDescription": "Insurance management \u2014 policy coverage, renewals, claims, gap analysis Vault template: https://frudev.gumroad.com/l/aireadylife-insurance",
+    "developerName": "fru.dev",
+    "category": "Finance",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://aireadyu.dev"
+  }
+}

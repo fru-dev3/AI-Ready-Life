@@ -4,7 +4,9 @@
 
 Built by [fru.dev](https://fru.dev)
 
-AI Ready Life packages your most important life domains as installable Claude Desktop plugins — each one a self-contained expert with its own skills, vault, and AI integration. Start with one domain. Add more as needed.
+AI Ready Life packages your most important life domains as installable plugins — each one a self-contained expert with its own skills, vault, and AI integration. Start with one domain. Add more as needed.
+
+Works with **Claude Desktop / Claude Code** and **Codex CLI**. Install in either ecosystem from the same repo.
 
 ## Plugins
 
@@ -80,7 +82,11 @@ Unzip the download and place the vault folder at the correct path for your OS:
 
 Open `config.md` and fill in your details.
 
-### Step 2 — Install the plugin in Claude Desktop
+### Step 2 — Install the plugin
+
+Pick your AI tool:
+
+#### Option A — Claude Desktop / Claude Code
 
 1. Open Claude Desktop → Settings → Integrations
 2. Add this GitHub repo as a project source: `fru-dev3/AI-Ready-Life`
@@ -90,12 +96,21 @@ Open `config.md` and fill in your details.
 
 The plugin reads your vault automatically via the path in `config.md`.
 
-> **Mac only:** If Claude can't access your vault, go to System Settings → Privacy & Security → Full Disk Access and add Claude, then restart.  
+> **Mac only:** If Claude can't access your vault, go to System Settings → Privacy & Security → Full Disk Access and add Claude, then restart.
 > **Windows:** No additional access configuration needed.
+
+#### Option B — Codex CLI
+
+```bash
+codex plugin marketplace add fru-dev3/AI-Ready-Life
+codex plugin install health     # or wealth, tax, career, etc.
+```
+
+The marketplace manifest lives at `.agents/plugins/marketplace.json` and exposes all 20 domains. Install one or many. Skills are auto-discovered; if a new skill doesn't appear, restart Codex.
 
 ### Step 3 — Run your first skill
 
-Open Claude and try:
+In Claude or Codex, try:
 
 ```
 Give me a health brief

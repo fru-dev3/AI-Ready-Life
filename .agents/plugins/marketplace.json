@@ -1,0 +1,249 @@
+{
+  "name": "aireadylife",
+  "interface": {
+    "displayName": "AI Ready Life",
+    "shortDescription": "20 AI plugins for personal life management \u2014 health, wealth, tax, career, and 16 more"
+  },
+  "plugins": [
+    {
+      "name": "health",
+      "source": {
+        "source": "local",
+        "path": "./health"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Personal"
+    },
+    {
+      "name": "wealth",
+      "source": {
+        "source": "local",
+        "path": "./wealth"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Finance"
+    },
+    {
+      "name": "tax",
+      "source": {
+        "source": "local",
+        "path": "./tax"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Finance"
+    },
+    {
+      "name": "career",
+      "source": {
+        "source": "local",
+        "path": "./career"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "benefits",
+      "source": {
+        "source": "local",
+        "path": "./benefits"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Finance"
+    },
+    {
+      "name": "brand",
+      "source": {
+        "source": "local",
+        "path": "./brand"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Content"
+    },
+    {
+      "name": "business",
+      "source": {
+        "source": "local",
+        "path": "./business"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Business"
+    },
+    {
+      "name": "chief",
+      "source": {
+        "source": "local",
+        "path": "./chief"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Personal"
+    },
+    {
+      "name": "calendar",
+      "source": {
+        "source": "local",
+        "path": "./calendar"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Personal"
+    },
+    {
+      "name": "content",
+      "source": {
+        "source": "local",
+        "path": "./content"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Content"
+    },
+    {
+      "name": "estate",
+      "source": {
+        "source": "local",
+        "path": "./estate"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Finance"
+    },
+    {
+      "name": "explore",
+      "source": {
+        "source": "local",
+        "path": "./explore"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Personal"
+    },
+    {
+      "name": "home",
+      "source": {
+        "source": "local",
+        "path": "./home"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Personal"
+    },
+    {
+      "name": "insurance",
+      "source": {
+        "source": "local",
+        "path": "./insurance"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Finance"
+    },
+    {
+      "name": "intel",
+      "source": {
+        "source": "local",
+        "path": "./intel"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Personal"
+    },
+    {
+      "name": "learning",
+      "source": {
+        "source": "local",
+        "path": "./learning"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "real-estate",
+      "source": {
+        "source": "local",
+        "path": "./real-estate"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Finance"
+    },
+    {
+      "name": "records",
+      "source": {
+        "source": "local",
+        "path": "./records"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Personal"
+    },
+    {
+      "name": "social",
+      "source": {
+        "source": "local",
+        "path": "./social"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Personal"
+    },
+    {
+      "name": "vision",
+      "source": {
+        "source": "local",
+        "path": "./vision"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Personal"
+    }
+  ]
+}

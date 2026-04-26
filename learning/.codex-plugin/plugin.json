@@ -1,0 +1,34 @@
+{
+  "name": "aireadylife-learning",
+  "version": "1.0.2",
+  "description": "1 AI agent that manages your skill development \u2014 active courses, reading list, certifications, and learning goals.",
+  "author": {
+    "name": "fru.dev",
+    "email": "hello@fru.dev",
+    "url": "https://fru.dev"
+  },
+  "homepage": "https://aireadyu.dev",
+  "repository": "https://github.com/fru-dev3/AI-Ready-Life",
+  "license": "MIT",
+  "keywords": [
+    "learning",
+    "courses",
+    "certifications",
+    "reading",
+    "skills",
+    "development"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "AI Ready Life: Learning",
+    "shortDescription": "1 AI agent that manages your skill development \u2014 active courses, reading list, certifications, and learning goals.",
+    "longDescription": "Learning management \u2014 courses, reading, skill development, certifications Vault template: https://frudev.gumroad.com/l/aireadylife-learning",
+    "developerName": "fru.dev",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://aireadyu.dev"
+  }
+}

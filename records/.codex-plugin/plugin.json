@@ -1,0 +1,34 @@
+{
+  "name": "aireadylife-records",
+  "version": "1.0.2",
+  "description": "1 AI agent that manages your document inventory and subscriptions \u2014 tracks expiring IDs, memberships, subscriptions to cancel.",
+  "author": {
+    "name": "fru.dev",
+    "email": "hello@fru.dev",
+    "url": "https://fru.dev"
+  },
+  "homepage": "https://aireadyu.dev",
+  "repository": "https://github.com/fru-dev3/AI-Ready-Life",
+  "license": "MIT",
+  "keywords": [
+    "records",
+    "documents",
+    "subscriptions",
+    "vault",
+    "passwords",
+    "ids"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "AI Ready Life: Records",
+    "shortDescription": "1 AI agent that manages your document inventory and subscriptions \u2014 tracks expiring IDs, memberships, subscriptions to cancel.",
+    "longDescription": "Records management \u2014 document vault, subscriptions, IDs, legal documents Vault template: https://frudev.gumroad.com/l/aireadylife-records",
+    "developerName": "fru.dev",
+    "category": "Personal",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://aireadyu.dev"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "aireadylife-home",
+  "version": "1.0.2",
+  "description": "1 AI agent that manages your home \u2014 maintenance tracking, home expenses, seasonal task lists, and household organization.",
+  "author": {
+    "name": "fru.dev",
+    "email": "hello@fru.dev",
+    "url": "https://fru.dev"
+  },
+  "homepage": "https://aireadyu.dev",
+  "repository": "https://github.com/fru-dev3/AI-Ready-Life",
+  "license": "MIT",
+  "keywords": [
+    "home",
+    "maintenance",
+    "contractors",
+    "seasonal",
+    "household"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "AI Ready Life: Home",
+    "shortDescription": "1 AI agent that manages your home \u2014 maintenance tracking, home expenses, seasonal task lists, and household organization.",
+    "longDescription": "Home management \u2014 maintenance tracking, expenses, seasonal tasks Vault template: https://frudev.gumroad.com/l/aireadylife-home",
+    "developerName": "fru.dev",
+    "category": "Personal",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://aireadyu.dev"
+  }
+}
