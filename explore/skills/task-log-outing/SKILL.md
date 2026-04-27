@@ -21,7 +21,7 @@ Captures a single outdoor or local-exploration outing as a structured record so 
 **Outing schema (universal across all activity types):**
 - `date` — YYYY-MM-DD
 - `type` — user-defined string (hike / run / bike / walk / paddle / ski / climb / city-visit / museum / restaurant / other)
-- `location` — name + region (e.g., "Lebanon Hills, Eagan MN")
+- `location` — name + region (e.g., "Griffith Park, Los Angeles CA")
 - `distance` — number + unit, optional (miles, km, laps)
 - `duration` — minutes, optional
 - `elevation_gain` — feet/meters, optional

@@ -56,7 +56,7 @@ Maintains the property-tax record per property, including:
 - `property_tax_appeal_window_days` (e.g., 30, 60, 90)
 - `assessment_increase_threshold_pct` (default 10)
 - `property_tax_escrowed` (true / false)
-- `property_tax_due_dates` (e.g., May 15 / Oct 15 for Minnesota)
+- `property_tax_due_dates` (varies by jurisdiction — e.g., one annual installment, or two semi-annual installments)
 
 ## Vault Paths
 

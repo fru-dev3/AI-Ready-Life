@@ -27,7 +27,7 @@ description: >
 
 Add to `~/Documents/aireadylife/vault/home/config.md`:
 ```
-home_zip_code: "55344"
+home_zip_code: "YOUR_ZIP"
 thumbtack_email: YOUR_THUMBTACK_EMAIL
 thumbtack_chrome_profile: /Users/YOU/Library/Application Support/Google/Chrome/Default
 ```

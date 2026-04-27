@@ -63,13 +63,13 @@ _Updated: YYYY-MM-DD_
 
 ---
 
-## Memosa Published on App Store
+## Promoted to Senior Engineer
 **Domain:** career
-**Date:** 2026-03-19
+**Date:** YYYY-MM-DD
 
-Launched Memosa — an AI-powered memory assistant — on the Mac App Store after 6 months of development. First public software product published under the fru.dev brand. App is live and receiving downloads.
+Received promotion after 18 months in current role. Title change, comp bump, expanded scope into platform team.
 
-**What it unlocks:** Foundation for AI Ready Life product line and content business.
+**What it unlocks:** Eligible to lead the next quarter's platform initiative; opens door to manager track conversation in Q3.
 
 ---
 [additional entries...]

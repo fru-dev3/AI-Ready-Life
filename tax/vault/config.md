@@ -7,7 +7,7 @@ Fill in the fields below before running your first tax skill. **Optional section
 ## Identity
 name:
 filing_status:          # single | married_filing_jointly | married_filing_separately | head_of_household
-state:                  # primary state of residence, e.g. MN
+state:                  # primary state of residence, e.g. CA
 age:                    # drives catch-up contributions, RMDs, QCDs
 
 ---

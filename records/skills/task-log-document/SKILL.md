@@ -41,7 +41,7 @@ The task routes each document to the correct subfolder based on its type:
 - Property deed
 - Vehicle title(s)
 
-Each record captures: document type, holder's full name, issue date, expiration date (or "no expiration" with last-reviewed date for legal documents), issuing authority (State Department, MN DMV, County Court, etc.), physical storage location (fireproof safe in home office, safety deposit box at First National Bank, filing cabinet drawer 2), digital storage location (1Password > Documents > Passport, encrypted Google Drive folder /Records/IDs/, etc.), and a file path or reference to the scanned copy if it has been digitized.
+Each record captures: document type, holder's full name, issue date, expiration date (or "no expiration" with last-reviewed date for legal documents), issuing authority (State Department, state DMV, County Court, etc.), physical storage location (fireproof safe in home office, safety deposit box at First National Bank, filing cabinet drawer 2), digital storage location (1Password > Documents > Passport, encrypted Google Drive folder /Records/IDs/, etc.), and a file path or reference to the scanned copy if it has been digitized.
 
 For legal documents, instead of expiration date, the record captures: date document was created, the attorney or firm that prepared it, last-reviewed date, and a notes field for any known review triggers (e.g., "will created before daughter's birth — needs update").
 

@@ -26,7 +26,7 @@ description: >
 
 Add to `~/Documents/aireadylife/vault/home/config.md`:
 ```
-home_zip_code: "55344"
+home_zip_code: "YOUR_ZIP"
 angi_chrome_profile: /Users/YOU/Library/Application Support/Google/Chrome/Default
 angi_email: YOUR_ANGI_EMAIL   # optional; for booking history access
 ```
