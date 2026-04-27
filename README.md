@@ -23,20 +23,20 @@ Each plugin reads only its own vault folder. Each vault stays on your machine. N
 
 ## Plugins
 
-| Plugin | What it does | Price |
-|---|---|---|
-| [`health`](https://frudev.gumroad.com/l/aireadylife-health) | Labs, medications, preventive care, wearables | $29 |
-| [`wealth`](https://frudev.gumroad.com/l/aireadylife-wealth) | Net worth, investments, debt, cash flow | $29 |
-| [`tax`](https://frudev.gumroad.com/l/aireadylife-tax) | Deadlines, estimates, deductions, year-end planning, CPA packet | $29 |
-| [`career`](https://frudev.gumroad.com/l/aireadylife-career) | Compensation, market data, job search, skills | $29 |
-| [`calendar`](https://frudev.gumroad.com/l/aireadylife-calendar) | Deadlines, focus time, agenda | $29 |
-| [`insurance`](https://frudev.gumroad.com/l/aireadylife-insurance) | Policies, claims, renewals, coverage gaps | $29 |
-| [`vision`](https://frudev.gumroad.com/l/aireadylife-vision) | Goals, OKRs, quarterly planning, scorecard | $29 |
-| [`explore`](https://frudev.gumroad.com/l/aireadylife-explore) | Travel, trips, documents, wishlist | $19 |
-| [`home`](https://frudev.gumroad.com/l/aireadylife-home) | Maintenance, expenses, seasonal tasks | $19 |
-| [`learning`](https://frudev.gumroad.com/l/aireadylife-learning) | Courses, books, goals, progress | $19 |
-| [`records`](https://frudev.gumroad.com/l/aireadylife-records) | Identity documents, legal, subscriptions | $19 |
-| [`social`](https://frudev.gumroad.com/l/aireadylife-social) | Contacts, relationships, birthdays, outreach | $19 |
+| Plugin | What it does |
+|---|---|
+| [`health`](https://frudev.gumroad.com/l/aireadylife-health) | Labs, medications, preventive care, wearables |
+| [`wealth`](https://frudev.gumroad.com/l/aireadylife-wealth) | Net worth, investments, debt, cash flow |
+| [`tax`](https://frudev.gumroad.com/l/aireadylife-tax) | Deadlines, estimates, deductions, year-end planning, CPA packet |
+| [`career`](https://frudev.gumroad.com/l/aireadylife-career) | Compensation, market data, job search, skills |
+| [`calendar`](https://frudev.gumroad.com/l/aireadylife-calendar) | Deadlines, focus time, agenda |
+| [`insurance`](https://frudev.gumroad.com/l/aireadylife-insurance) | Policies, claims, renewals, coverage gaps |
+| [`vision`](https://frudev.gumroad.com/l/aireadylife-vision) | Goals, OKRs, quarterly planning, scorecard |
+| [`explore`](https://frudev.gumroad.com/l/aireadylife-explore) | Travel, trips, documents, wishlist |
+| [`home`](https://frudev.gumroad.com/l/aireadylife-home) | Maintenance, expenses, seasonal tasks |
+| [`learning`](https://frudev.gumroad.com/l/aireadylife-learning) | Courses, books, goals, progress |
+| [`records`](https://frudev.gumroad.com/l/aireadylife-records) | Identity documents, legal, subscriptions |
+| [`social`](https://frudev.gumroad.com/l/aireadylife-social) | Contacts, relationships, birthdays, outreach |
 
 More domains (benefits, brand, business, content, real estate, intel) are in development and will be added as they're tested.
 
