@@ -31,17 +31,21 @@ Runs monthly to ensure no insurance policy auto-renews without your awareness an
 
 ## Steps
 
-1. Read all active policies from `vault/insurance/00_current/` — extract policy type, carrier, renewal date, and current annual premium for each.
-2. Calculate days_until_renewal for each policy as of today.
-3. Filter to policies with days_until_renewal ≤ 60.
-4. For each upcoming renewal: apply categorization rules (shop / auto-renew / coverage-review) based on policy type and signals.
-5. Check for premium increase signal: read prior year premium from `vault/insurance/01_prior/` if available; flag if current year premium is >10% higher.
-6. For "shop" categorized renewals: compile current coverage parameters (limits, deductible, endorsements) and generate competing quote action steps.
-7. For "coverage-review" categorized renewals: identify the specific coverage parameter needing reassessment and the triggering life event or change.
-8. Call `flow-check-renewal-dates` for the detailed renewal timeline analysis.
-9. Call `task-flag-renewal-within-60-days` for each flagged renewal.
-10. Write renewal watch summary to `vault/insurance/00_current/renewal-alerts.md`.
-11. Call `task-update-open-loops` with all renewal flags.
+1. Read all active policies from `vault/insurance/00_current/policies/` — extract policy type, carrier, renewal date, and current annual premium for each.
+2. Calculate `days_until_renewal` for each policy as of today.
+3. Filter to policies with `days_until_renewal ≤ 60`. Sub-bucket: ≤30 days = urgent, 31-60 days = upcoming.
+4. For each upcoming renewal:
+   - Read prior year premium from `vault/insurance/01_prior/` when available.
+   - Apply primary categorization rule based on policy type:
+     - **Shop:** auto, home/renters, landlord property; any policy with current premium >10% higher than prior year (insurer signaling a re-price — shop regardless of type).
+     - **Auto-renew:** term life (locked premium), employer disability, pet insurance, any line with a competitive review within the last 18 months.
+     - **Coverage-review:** triggered by recent life events in `vault/insurance/config.md` (renovation, salary change, new dependent, new vehicle, new driver, property purchase).
+   - For shop: compile exact coverage parameters (liability limits, deductibles, endorsements) and generate a recommended carrier list for that policy type.
+   - For coverage-review: identify the specific changed parameter and the triggering event.
+5. Compute `action_by_date` = `renewal_date − 30 days` (carriers typically need 30 days notice for mid-term cancellation; quote-and-bind cycle is 1-2 weeks).
+6. Sort renewals by `days_until_renewal` (most urgent first).
+7. Write renewal watch summary to `vault/insurance/00_current/renewal-alerts.md` (format below).
+8. Call `task-update-open-loops` once with all RENEWAL-type flags (auto-renewal warning included for shop/coverage-review entries).
 
 ## Input
 

@@ -44,10 +44,16 @@ Runs once per year (January is the standard timing) or immediately after a major
 10. For each property: compare dwelling coverage to estimated replacement cost. Flag coinsurance risk if coverage < 80% of replacement cost.
 11. Check for flood and earthquake coverage flags based on property location (stored in config).
 12. Identify potential over-insurance (old vehicles with collision, excess personal property coverage).
-13. Call `flow-analyze-coverage-gaps` for the detailed gap scoring.
+13. Score each identified gap inline (was previously delegated to `flow-analyze-coverage-gaps`):
+    - Life: shortfall = need − total coverage; severity minor (<25% of need), moderate (25-50%), significant (>50%). Premium estimate to close: $500-$1,500/year per $500K of 20-year term, age-adjusted.
+    - Disability: STD-liquidity gap if waiting period > emergency fund days; LTD replacement-rate gap if (monthly LTD ÷ monthly gross) <60% — annualized as (monthly_gross × 0.60 − monthly_LTD) × 12. Severity: minor 55-60%, moderate 45-55%, significant <45% or no LTD. Flag any-occupation definition separately.
+    - Liability/umbrella: unprotected exposure = net worth − total underlying. Severity minor <$100K, moderate $100K-$500K, significant >$500K or missing umbrella with net worth >$300K. Premium estimate $200-$400/year per $1M of umbrella.
+    - Property coinsurance: severity minor at 75-80% of replacement cost, moderate 65-75%, significant <65% or shortfall >$100K. Premium delta typically $10-$25/year per $10K of additional dwelling coverage.
 14. Call `task-flag-coverage-gap` for each identified gap with severity and dollar impact.
 15. Write coverage audit report to `vault/insurance/00_current/coverage-audit-YYYY.md`.
 16. Call `task-update-open-loops` with all findings.
+17. Call `task-sync-to-cross-agents` so health, home, real-estate, wealth, and career vaults receive the refreshed insurance facts.
+18. Call `task-review-beneficiaries` as the final step (annual sweep is most efficient at audit time).
 
 ## Input
 

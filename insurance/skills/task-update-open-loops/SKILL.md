@@ -9,13 +9,15 @@ description: >
 The insurance open-loops file is the domain's single source of truth for what needs attention. All insurance ops write their flags here. The calendar agent reads this file for renewal action-by dates. The morning brief reads this file for insurance urgency items. If this file is cluttered with stale items, the signal-to-noise ratio drops and the user stops acting on it. This task keeps it clean, current, and reliably prioritized.
 
 **Flag types managed:**
-- `RENEWAL` — policy renewal within 60 days, with shop/auto-renew/coverage-review action
+- `RENEWAL` — policy renewal within 60 days, with shop/auto-renew/coverage-review action. Action-by date is always `renewal_date − 30 days` (carriers typically require 30 days notice for cancellation; quote-and-bind cycle is 1-2 weeks). Shop and coverage-review entries include an explicit auto-renewal warning ("policy WILL auto-renew at $X on [date] if no action taken"). Shop entries include the exact coverage parameters to bring to quote comparison so quotes are apples-to-apples (this is the merged behavior of the former `task-flag-renewal-within-60-days`).
 - `COVERAGE-GAP` — coverage amount shortfall identified in annual audit (life, disability, liability, property)
 - `MISSING-POLICY` — policy type expected in baseline but not found in vault (no umbrella, no renters, etc.)
 - `CLAIM-ACTION` — active claim requiring a specific action by a specific date (file, follow up, submit documents, respond to settlement)
 - `CLAIM-STALLED` — claim open 30+ days with no status update — escalation needed
 - `PREMIUM-INCREASE` — renewal premium > 10% higher than prior year — shopping recommended
 - `COVERAGE-DATA-STALE` — policy record more than 12 months old — verify limits are current
+- `BENEFICIARY-STALE` — beneficiary designation last verified before a relevant life event
+- `LIFE-EVENT-COVERAGE` — coverage adjustment recommended after a logged life event (marriage, baby, home purchase, job change, retirement, death)
 
 **Priority ordering:** Claims with imminent deadlines (settlement response, appeal filing) are at the top — these have real deadlines with real consequences. Urgent renewals (action-by date within 14 days) are next. Active coverage gaps (significant) follow. Moderate and minor gaps, stale data, and informational items at the bottom.
 
