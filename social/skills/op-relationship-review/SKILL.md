@@ -20,6 +20,8 @@ The op calls `flow-build-relationship-health-summary` to produce the full health
 
 The monthly review also identifies structural patterns in relationship health that the weekly brief can't see. If multiple Tier 1 contacts are all fading in the same month, this suggests a systemic attention deficit to the inner circle — not just individual outreach items. If professional contacts as a group are all going dormant, this may suggest the user has entered a busy period and needs to intentionally protect time for relationship maintenance. The review surfaces these patterns as observations, not just as individual contact flags.
 
+**Full-recalc + vault hygiene (absorbed from prior op-monthly-sync):** The monthly review also performs a from-scratch health recalculation rather than relying on incremental updates, so any signals or interactions added since the last run are reflected. It runs a vault-hygiene pass on `contacts.md` and surfaces — as housekeeping, not urgent flags — contacts with no interactions logged ever, contacts with no tier assigned, contacts missing birthday records, and contacts with no next-action note. It also runs a 30-day forward scan of birthdays/anniversaries (broader than the weekly 14-day window) and reviews outstanding follow-up promises from the interaction log so the user sees commitments that haven't been delivered.
+
 After producing the health table, the op calls `flow-build-outreach-queue` to generate the month's outreach plan — a broader list of 10-15 contacts to reach out to over the course of the month (not just this week), organized by urgency tier. The monthly outreach plan complements the weekly queue by giving a fuller picture of the month's social intentions.
 
 ## Triggers
@@ -34,15 +36,21 @@ After producing the health table, the op calls `flow-build-outreach-queue` to ge
 ## Steps
 
 1. Verify vault/social/ exists and has contacts and interaction log data
-2. Call `flow-build-relationship-health-summary` to compute health status for all contacts
-3. Receive health table: each contact with tier, last contact date, days since contact, health status
-4. Identify structural patterns: tier-level health concentration, overall portfolio health trend vs. prior month
-5. Segment contacts: identify overdue, fading, healthy by tier
-6. Call `flow-build-outreach-queue` for full month's outreach plan (10-15 contacts)
-7. For each overdue Tier 1 or Tier 2 contact: call `task-flag-overdue-contact`
-8. Write health summary to vault/social/00_current/health-YYYY-MM.md
-9. Call `task-update-open-loops` to write all new overdue flags and resolve completed items
-10. Return formatted relationship review to user
+2. Call `task-pull-relationship-signals-from-gmail-calendar` for refreshed last-contact data
+3. Run vault-hygiene scan: contacts with no interactions, no tier, no birthday, no next-action — collect for housekeeping section
+4. Call `flow-build-relationship-health-summary` for from-scratch health recalculation
+5. Receive health table: each contact with tier, last contact date, days since contact, health status
+6. Identify structural patterns: tier-level health concentration, overall portfolio health trend vs. prior month
+7. Run 30-day forward scan of birthdays/anniversaries from `contacts.md`
+8. Review outstanding follow-up promises in `01_interactions/` (status: open)
+9. Call `task-detect-reciprocity-gap`
+10. Segment contacts: identify overdue, fading, healthy by tier
+11. Call `flow-build-outreach-queue` for full month's outreach plan (10-15 contacts)
+12. For each overdue Tier 1 or Tier 2 contact: call `task-flag-overdue-contact`
+13. Run archive sweep on stale `task-log-new-person-met` entries
+14. Write health summary to vault/social/00_current/health-YYYY-MM.md
+15. Call `task-update-open-loops` to write all new overdue flags and resolve completed items
+16. Return formatted relationship review to user
 
 ## Input
 
