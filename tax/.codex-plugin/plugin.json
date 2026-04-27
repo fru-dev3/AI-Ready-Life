@@ -1,0 +1,37 @@
+{
+  "name": "tax",
+  "version": "1.0.11",
+  "description": "2 AI agents that manage your personal tax picture \u2014 deadline tracking, estimate calculations, deduction reviews, entity compliance, and accountant readiness.",
+  "author": {
+    "name": "fru.dev",
+    "email": "hello@fru.dev",
+    "url": "https://fru.dev"
+  },
+  "homepage": "https://aireadyu.dev",
+  "repository": "https://github.com/fru-dev3/AI-Ready-Life",
+  "license": "MIT",
+  "keywords": [
+    "tax",
+    "deadlines",
+    "estimates",
+    "deductions",
+    "compliance",
+    "filing"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "AI Ready Life: Tax",
+    "shortDescription": "2 AI agents that manage your personal tax picture \u2014 deadline tracking, estimate calculations, deduction reviews, entity compliance, and accountant readiness.",
+    "longDescription": "Tax planning \u2014 deadlines, estimates, deductions, entity compliance, filing Vault template: https://frudev.gumroad.com/l/aireadylife-tax",
+    "developerName": "fru.dev",
+    "category": "Finance",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://aireadyu.dev",
+    "composerIcon": "./.codex-plugin/icon.svg",
+    "logo": "./.codex-plugin/logo.svg",
+    "brandColor": "#3B8A6A"
+  }
+}

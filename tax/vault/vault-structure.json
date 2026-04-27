@@ -1,0 +1,24 @@
+{
+  "version": "1.0.2",
+  "plugin": "tax",
+  "structure": {
+    "subfolders": [
+      {"folder": "00_current", "description": "Current tax year: documents, estimates, open loops"},
+      {"folder": "01_federal", "description": "Federal returns, W-2s, 1099s, K-1s by year"},
+      {"folder": "02_state", "description": "State returns and payments by state/year"},
+      {"folder": "03_entities", "description": "Entity filings: LLC/S-corp returns, registered agent, annual reports"},
+      {"folder": "04_briefs", "description": "Monthly tax review briefs"},
+      {"folder": "05_archive", "description": "Prior years (fully filed)"}
+    ]
+  },
+  "domains": [
+    {"id": "federal", "folder": "federal", "agent": "tax-agent", "description": "Federal W-2s, 1099s, K-1s, deduction receipts, return filings, IRS correspondence"},
+    {"id": "state", "folder": "state", "agent": "tax-agent", "description": "State returns, estimated payment confirmations, state notices"},
+    {"id": "entities", "folder": "entities", "agent": "tax-agent", "description": "LLC/S-corp annual reports, operating agreements, EIN docs, entity tax returns"},
+    {"id": "estimates", "folder": "estimates", "agent": "tax-agent", "description": "Quarterly estimate calculations, payment confirmations, underpayment analysis"}
+  ],
+  "config": {
+    "template": "vault/tax/config.md",
+    "fields": ["filing_status", "residence_state", "entities", "cpa_name", "cpa_email", "prior_year_agi"]
+  }
+}

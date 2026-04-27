@@ -41,6 +41,21 @@
       "license": "MIT"
     },
     {
+      "name": "tax",
+      "source": "./tax",
+      "description": "2 AI agents that manage your tax life — federal and state deadlines, quarterly estimates, deductions, retirement contribution limits, year-end planning, and CPA packet preparation.",
+      "category": "finance",
+      "keywords": [
+        "tax",
+        "deadlines",
+        "estimates",
+        "deductions",
+        "cpa",
+        "filing"
+      ],
+      "license": "MIT"
+    },
+    {
       "name": "career",
       "source": "./career",
       "description": "2 AI agents that manage your career — compensation benchmarking, job market scanning, application pipeline, skills gap analysis, and network outreach.",

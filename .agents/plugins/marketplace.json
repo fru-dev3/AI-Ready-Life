@@ -30,6 +30,18 @@
       "category": "Finance"
     },
     {
+      "name": "tax",
+      "source": {
+        "source": "local",
+        "path": "./tax"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Finance"
+    },
+    {
       "name": "career",
       "source": {
         "source": "local",
