@@ -81,3 +81,36 @@ Before running **any skill or flow** in this domain — including flows called b
 > You don't need everything perfect to start — add what you have and the skills will tell you what's still missing.
 >
 > **Stop here.** Do not scaffold files, do not offer options, do not ask questions. Wait for the user to complete setup and re-run the skill.
+
+## Skill Index
+
+Skills live in `skills/<skill-name>/SKILL.md`. To run a skill, read its `SKILL.md` and follow the instructions inside.
+
+**Apps (data connectors — fallback when no native MCP connector available):**
+- `app-coursera` — Course progress / certificate status / assignment deadlines via Playwright + Chrome cookie session.
+- `app-kindle` — Reading progress and highlights via Amazon's Manage Content page or Goodreads RSS sync.
+
+**Operations (user-facing routines):**
+- `op-monthly-theme-set` — Monthly (1st). One named theme, one resource, one applied output, weekly milestones.
+- `op-monthly-sync` — Full monthly process: platform refresh, reading sync, certification timeline, unified pace review, monthly brief.
+- `op-monthly-reflection` — End-of-month qualitative reflection — what changed, what blocked, what's next.
+- `op-goal-review` — Quarterly learning-portfolio alignment vs. career and vision priorities.
+- `op-review-brief` — Weekly snapshot of pace, current book, streak, and next actions.
+
+**Flows (multi-step internals called by ops):**
+- `flow-build-learning-summary` — Unified pace + per-type rollup across courses / certs / books / papers / projects. Replaces former progress + reading summaries.
+- `flow-build-streak-summary` — Daily/weekly consistency: streak length, target adherence, weekday/weekend split.
+- `flow-scan-emerging-sources` — Field-agnostic horizon scan from user-configured RSS / newsletters / arxiv / podcasts.
+- `flow-language-learning-progress` *(v2)* — Per-language vocabulary, app streak, CEFR self-eval. Only if a language is configured.
+
+**Tasks (atomic operations called by flows / ops):**
+- `task-log-applied-output` — Records the artifact (project, repo, post, cert, talk, deck) that proves a skill was applied.
+- `task-track-learning-budget` — Spend ledger against a user-configured budget; 90 / 30-day expiry flags. Skips cleanly with no budget.
+- `task-update-reading-list` — Single canonical queue across books, articles, papers, posts.
+- `task-log-conference-workshop` — Conference / workshop / meetup log with takeaways, contacts, follow-ups.
+- `task-capture-note` — Atomic note capture with theme + source tags.
+- `task-link-learning-to-domain` — Tags a learning item with the life domain it serves; writes a one-line application note to that domain.
+- `task-mentor-mentee-log` *(v2)* — Per-meeting log for mentor / mentee / coaching relationships.
+- `task-flag-falling-behind` — Behind-pace alert with recovery calculation.
+- `task-log-completion` — Records a completed course, certification, or book.
+- `task-update-open-loops` — Single write point for `open-loops.md`.

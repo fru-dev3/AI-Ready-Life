@@ -88,14 +88,31 @@ Before running **any skill or flow** in this domain — including flows called b
 
 Skills live in `skills/<skill-name>/SKILL.md`. To run a skill, read its `SKILL.md` and follow the instructions inside.
 
-- **`coursera`** — Tracks enrolled course progress, completion percentages, certificate status, and upcoming assignment deadlines on Coursera via Playwright with Chrome cookie session.
-- **`kindle`** — Accesses Kindle reading progress and highlights via Amazon's Manage Content page or Goodreads RSS sync.
-- **`flow-build-progress-summary`** — Reads all active learning items from vault, calculates completion percentage vs.
-- **`flow-build-reading-summary`** — Reads the reading list and completion log to produce a reading progress summary: books completed YTD (count and titles), current book with percentage complete and projected completion date at current pace, books/month pace vs.
-- **`op-goal-review`** — Quarterly learning goal alignment review evaluating whether the active learning portfolio is pointed at career and life vision priorities for the next quarter.
-- **`op-monthly-sync`** — Full learning data sync on the 1st of each month.
-- **`op-progress-review`** — Monthly learning progress review checking all active courses and certifications for completion pace vs.
-- **`op-review-brief`** — Weekly learning brief compiling active course progress with pace status, current book chapter and reading pace vs.
-- **`task-flag-falling-behind`** — Writes a behind-pace flag to vault/learning/open-loops.md when a learning item's completion percentage is more than 15 percentage points behind the time-elapsed percentage.
-- **`task-log-completion`** — Records a completed course, certification, or book to vault/learning/01_prior/ with full context: title, type, platform, completion date, estimated hours invested, 1-3 key takeaways in plain language (Feynman-style), personal rating (1-5), and any credential earned with ID or URL.
-- **`task-update-open-loops`** — Maintains vault/learning/open-loops.md as the canonical list of outstanding learning action items.
+**Apps (data connectors — fallback when no native MCP connector available):**
+- **`app-coursera`** — Tracks enrolled course progress, completion percentages, certificate status, and upcoming assignment deadlines on Coursera via Playwright with Chrome cookie session.
+- **`app-kindle`** — Accesses Kindle reading progress and highlights via Amazon's Manage Content page or Goodreads RSS sync.
+
+**Operations (user-facing routines):**
+- **`op-monthly-theme-set`** — Monthly (1st). Picks one named theme with chosen resource, planned applied output, deadline, and weekly milestones. Single-thread discipline.
+- **`op-monthly-sync`** — Full monthly process: platform refresh, reading sync, certification timeline, unified pace review (absorbs former `op-progress-review`), goal vs actual, monthly brief.
+- **`op-monthly-reflection`** — End-of-month qualitative reflection: what was learned, what changed, what blocked, what's next. Distinct from pace review.
+- **`op-goal-review`** — Quarterly alignment of the active learning portfolio against career and life-vision priorities.
+- **`op-review-brief`** — Weekly lightweight learning snapshot — pace, current book, streak, next actions.
+
+**Flows (multi-step internals called by ops):**
+- **`flow-build-learning-summary`** — Unified pace + per-type rollup across courses, certifications, books, papers, projects. Replaces former `flow-build-progress-summary` + `flow-build-reading-summary`.
+- **`flow-build-streak-summary`** — Daily/weekly study consistency: current streak, longest streak, weekday/weekend split, target adherence.
+- **`flow-scan-emerging-sources`** — Field-agnostic horizon scan from user-configured sources (RSS, newsletters, arxiv, podcasts, conferences). Ranks 5–10 emerging topics.
+- **`flow-language-learning-progress`** *(v2)* — Per-language vocabulary, app streak, CEFR self-eval, practice minutes by skill. Only if a language is configured.
+
+**Tasks (atomic operations called by flows / ops):**
+- **`task-log-applied-output`** — Records the artifact (project, repo, post, certification, talk, deck, app) that proves a learned skill was applied.
+- **`task-track-learning-budget`** — Logs spend against a user-configured budget cap (employer stipend, personal annual, tuition reimbursement). Flags 90 / 30-day expiry. Skips cleanly when no budget configured.
+- **`task-update-reading-list`** — Single canonical reading queue across books, articles, papers, posts. Hygiene rules cap stale and high-priority items.
+- **`task-log-conference-workshop`** — Conference / workshop / meetup attendance log with takeaways, contacts, follow-ups. Cross-pollinates social.
+- **`task-capture-note`** — Atomic note capture into vault (with optional Obsidian / Notion mirror). Theme + source tags.
+- **`task-link-learning-to-domain`** — Tags a learning item with the life domain it serves; writes a one-line application note to that domain.
+- **`task-mentor-mentee-log`** *(v2)* — Per-meeting log for mentor / mentee / coaching relationships. Action items + reciprocity check.
+- **`task-flag-falling-behind`** — Behind-pace alert with recovery calculation (>15-point pace deficit).
+- **`task-log-completion`** — Records a completed course, certification, or book with takeaways, rating, hours invested, and credential.
+- **`task-update-open-loops`** — Single write point for `open-loops.md`.

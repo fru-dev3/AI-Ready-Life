@@ -55,12 +55,22 @@ If the vault does not exist, direct the user to: frudev.gumroad.com/l/aireadylif
 
 ## Skills Available
 
+- **op-monthly-theme-set** — Sets the named monthly theme with resource, applied output, and weekly milestones
+- **op-monthly-sync** — Full monthly process: data refresh + unified pace review + goal vs actual + brief
+- **op-monthly-reflection** — End-of-month qualitative reflection (what changed, what blocked, what's next)
 - **op-goal-review** — Quarterly learning goal alignment vs. career priorities
-- **op-monthly-sync** — Full monthly sync across all platforms
-- **op-progress-review** — Monthly course and reading progress analysis
 - **op-review-brief** — Weekly learning brief with pace and next actions
-- **flow-build-progress-summary** — Course completion pace table vs. target dates
-- **flow-build-reading-summary** — Reading pace and annual goal tracking
+- **flow-build-learning-summary** — Unified pace + per-type rollup across courses, certs, books, papers, projects
+- **flow-build-streak-summary** — Daily/weekly study consistency, current streak, longest streak
+- **flow-scan-emerging-sources** — Field-agnostic horizon scan of user-configured sources
+- **flow-language-learning-progress** *(v2)* — Vocabulary, app streak, CEFR, practice-by-skill (only if a language is configured)
+- **task-log-applied-output** — Records the artifact that proves a skill was applied
+- **task-track-learning-budget** — Logs spend against a configured budget cap; flags expiry
+- **task-update-reading-list** — Single canonical reading queue (books, articles, papers)
+- **task-log-conference-workshop** — Conference / workshop attendance log with takeaways and contacts
+- **task-capture-note** — Atomic note capture with theme + source tags
+- **task-link-learning-to-domain** — Tags a learning item with the life domain it serves
+- **task-mentor-mentee-log** *(v2)* — Mentor / mentee meeting log with action items and reciprocity check
 - **task-flag-falling-behind** — Behind-pace alert with recovery calculation
 - **task-log-completion** — Records completed course, cert, or book to archive
 - **task-update-open-loops** — Maintains learning open-loops.md
