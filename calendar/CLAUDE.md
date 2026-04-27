@@ -80,3 +80,40 @@ Before running **any skill or flow** in this domain — including flows called b
 > You don't need everything perfect to start — add what you have and the skills will tell you what's still missing.
 >
 > **Stop here.** Do not scaffold files, do not offer options, do not ask questions. Wait for the user to complete setup and re-run the skill.
+
+## Skill Index
+
+Skills live in `skills/<skill-name>/SKILL.md`. To run a skill, read its `SKILL.md` and follow the instructions inside.
+
+**Apps (data connectors — manual fallback when no native MCP connector available):**
+- `app-gcalendar` — Google Calendar API. Fallback for users without a native Google Calendar MCP connector.
+- `app-notion` — Notion API. Fallback for users without a native Notion MCP connector.
+
+**Operations (user-facing routines):**
+- `op-daily-brief` — 10-min start-of-day brief across all configured calendars: today's events, meeting-prep status, urgent deadlines (≤7d), today's protected blocks. Daily.
+- `op-weekly-agenda` — Monday morning agenda builder; covers the 8–30 day deadline window, ranks priorities, places focus blocks. Weekly.
+- `op-conflict-scan` — Cross-calendar double-booking + protected-block-violation detector across every configured calendar. User-triggered + called by daily/weekly ops.
+- `op-time-allocation-review` — Monthly retrospective: hours allocated across time buckets vs. paragon balance; flags imbalance. Monthly.
+- `op-quarterly-time-design-rebalance` — Big quarterly retro + redesign of protected blocks and targets. Quarterly.
+- `op-recurring-event-audit` — Quarterly hygiene scan for "zombie" recurring events. Quarterly.
+- `op-holiday-observance-sync` — Annual sync of federal + user-configured cultural/religious holidays as protected events. Annual + on-demand.
+- `op-deadline-planning` — On-demand backward-planner from a deadline date.
+- `op-focus-time-review` — Weekly focus time audit.
+
+**Flows (multi-step internals called by ops):**
+- `flow-protect-recurring-blocks` — Reads `recurring_blocks` config, writes consistently-named recurring protected events via `task-create-confirmed-event`.
+- `flow-build-agenda` — Builds the week-ahead agenda; ranks items; proposes focus blocks.
+- `flow-collect-deadlines` — Cross-plugin scan of `open-loops.md` for items with due dates ≤60d.
+- `flow-analyze-focus-time` — Meeting-load vs. focus-block ratio across configured calendars.
+- `flow-energy-aware-scheduling` *(v2)* — Scores candidate focus windows against chronotype + energy log.
+
+**Tasks (atomic operations called by flows / ops):**
+- `task-create-confirmed-event` — Single write-point for every agent-initiated event create/update; enforces approval + naming convention.
+- `task-add-meeting-prep` — Drafts agenda + context for any meeting >30 min; writes to event description.
+- `task-add-deadline` — Records a deadline to `00_current/` with description, due date, domain, effort, priority.
+- `task-add-travel-buffer` — Pre-departure, transit, arrival, and (conditional) jet-lag buffers around a trip.
+- `task-block-after-travel-recovery` *(v2)* — Recovery block after long-haul / extended travel.
+- `task-track-pto-ooo` — PTO ledger, balance, use-it-or-lose-it surface (W-2 only; no-ops for contractors).
+- `task-import-birthdays-from-social` — Imports birthdays from the social plugin roster as recurring all-day events.
+- `task-decline-template` — Pre-built decline / counter-propose / async-instead / delegate / defer drafts. Never sends.
+- `task-update-open-loops` — Single write point for `open-loops.md`; handles deadline clusters, focus deficits, unscheduled priorities, and approaching-deadline flags (≤7d, no prep).

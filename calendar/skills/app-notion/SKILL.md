@@ -1,10 +1,13 @@
 ---
 type: app
 description: >
-  Reads and writes Notion pages and databases via the Notion API. Used by calendar-agent to
-  publish weekly agendas and deadline tracking tables to Notion for cross-device access. Optional
-  — all calendar data lives locally in vault/calendar/ first; Notion is a display and sharing layer.
-  Configure integration token and page IDs in vault/calendar/config.md.
+  Manual fallback for users without a native Notion MCP connector (e.g., Codex CLI users, or
+  installs where the native connector is disabled). When Claude Desktop's native Notion
+  connector is available, calendar skills should prefer that path and use this app skill only
+  on degrade. Reads and writes Notion pages and databases via the Notion API to publish weekly
+  agendas and deadline tracking tables for cross-device access. Optional — all calendar data
+  lives locally in vault/calendar/ first; Notion is a display and sharing layer. Configure
+  integration token and page IDs in vault/calendar/config.md.
 ---
 
 # Notion — Calendar Plugin

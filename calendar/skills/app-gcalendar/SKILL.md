@@ -1,10 +1,14 @@
 ---
 type: app
 description: >
-  Reads and creates calendar events via the Google Calendar API. Used by calendar-agent for
-  weekly agenda generation, focus time block analysis, multi-calendar event aggregation, and
-  deadline event creation. Supports multiple calendars (personal, work, shared). Configure
-  OAuth credentials and calendar IDs in vault/calendar/config.md.
+  Manual fallback for users without a native Google Calendar MCP connector (e.g., Codex CLI
+  users, or installs where the native connector is disabled). When Claude Desktop's native
+  Google Calendar connector is available, all calendar skills should prefer that path and
+  use this app skill only on degrade. Reads and creates calendar events via the Google Calendar
+  API: weekly agenda generation, focus time block analysis, multi-calendar event aggregation,
+  and deadline event creation. Supports multiple calendars (personal, work, family/shared, plus
+  any additional calendars the user configures). Configure OAuth credentials and calendar IDs
+  in vault/calendar/config.md.
 ---
 
 # Google Calendar — Calendar Plugin
