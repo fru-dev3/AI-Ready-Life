@@ -81,3 +81,39 @@ Before running **any skill or flow** in this domain — including flows called b
 > You don't need everything perfect to start — add what you have and the skills will tell you what's still missing.
 >
 > **Stop here.** Do not scaffold files, do not offer options, do not ask questions. Wait for the user to complete setup and re-run the skill.
+
+## Skill Index
+
+Skills live in `skills/<skill-name>/SKILL.md`. To run a skill, read its `SKILL.md` and follow the instructions inside.
+
+**Apps (data connectors — fallback when no native MCP connector available):**
+- `app-airbnb.portal` — Scrapes Airbnb for property listings, availability, and pricing via Playwright.
+- `app-google-flights` — Scrapes flight prices, route options, and price calendar from Google Flights via Playwright.
+- `app-trip-it` — Reads unified trip itineraries from TripIt for confirmation aggregation.
+
+**Operations (user-facing routines):**
+- `op-monthly-sync` — Monthly explore sync.
+- `op-review-brief` — Lightweight current-state snapshot for "where do I stand right now."
+- `op-document-check` — Quarterly travel document audit (passport, Global Entry, TSA PreCheck, vaccinations within 12 months).
+- `op-trip-planning-review` — On-demand pre-trip readiness check for a specific upcoming trip.
+- `op-activity-goal-review` — Weekly review of the user-configurable annual activity goal; flags shortfall and surfaces next-outing candidates.
+
+**Flows (multi-step internals called by ops):**
+- `flow-build-trip-summary` — Trip brief covering destination, dates, lodging, transport, total budget, and open booking items.
+- `flow-check-travel-docs` — Verifies travel documents for upcoming trips (6-month passport rule, vaccination requirements).
+- `flow-suggest-next-outing` — Suggests next outing given pace deficit, weather, season, and wishlist; configurable scope (solo/partner/family/group).
+- `flow-trip-pattern-analysis` — Annual pattern analysis across logged trips and outings (preferred types, length, season, companions, cost).
+- `flow-cotraveler-coordination` *(v2)* — Group-trip coordination: shared itinerary, expense splits, activity votes. Optional, group-trip only.
+
+**Tasks (atomic operations called by flows / ops):**
+- `task-log-trip` — Records a trip in vault/explore/00_current/ with destination, dates, purpose, budget, booking status, companions.
+- `task-log-outing` — Records an outdoor activity or local adventure (any type — hike/run/bike/walk/visit/etc.).
+- `task-log-experience-reflection` — Lightweight post-experience reflection (highlight, remember, differently). Used by both outing and trip flows.
+- `task-update-gear-inventory` — Maintains travel + outdoor gear inventory with condition and replacement flags.
+- `task-add-to-wishlist` — Adds destinations, trails, restaurants, or experiences to a structured wishlist.
+- `task-track-travel-budget` — Per-trip budget vs. actual across categories; cross-domain with wealth.
+- `task-track-loyalty-status` — Airline / hotel / rental / credit-card loyalty programs: tier, balance, expiry.
+- `task-pretrip-packing-checklist` — Generates packing checklist from trip type, weather, duration, activities, and gear inventory.
+- `task-check-entry-requirements` — International trips: visa, eTA, passport blank pages, vaccinations, entry forms.
+- `task-evaluate-travel-insurance` *(v2)* — Per-trip insurance worth-it evaluation given trip cost, destination risk, and existing coverage.
+- `task-update-open-loops` — Single canonical writer for `open-loops.md` (document expiry, booking gaps, budget overruns, gear, loyalty, entry-requirement flags).

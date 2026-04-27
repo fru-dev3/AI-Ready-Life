@@ -1,8 +1,10 @@
 ---
 type: task
 description: >
-  Writes all explore flags (expiring documents, unbooked trip items, budget overruns) to
-  vault/explore/open-loops.md and resolves completed items.
+  Writes all explore flags (expiring documents, unbooked trip items, budget overruns, gear
+  replacement, loyalty expiry, entry-requirement gaps) to vault/explore/open-loops.md and
+  resolves completed items. This is the single canonical writer; document-expiration logic
+  was merged in from the former task-flag-expiring-document.
 ---
 
 # explore-update-open-loops
@@ -14,9 +16,15 @@ description: >
 
 This task maintains vault/explore/open-loops.md as the canonical explore domain action list. It handles both writing new flags and resolving completed ones, keeping the file clean and actionable rather than accumulating stale entries.
 
-**New flags written:** Three types of flags are written by this task. (1) Document expiration flags: written when any travel document enters its alert window (delegated to task-flag-expiring-document for creation, but this task manages the file's overall state). (2) Booking gap flags: written when a trip has departure within 60 days and one or more critical booking categories (flights, accommodation, insurance) are still unbooked. Format: "🟡 Book travel insurance for [destination] — departure [N] days." (3) Budget overrun flags: written when a trip's actual spend has exceeded the estimated budget for any category by 15% or more: "🟡 [Destination] accommodation over budget — est. $1,200, currently $1,600."
+**New flags written:** Six flag types are written by this task.
+(1) **Document expiration flags** (merged in from the former task-flag-expiring-document): written when any travel document — passport, Global Entry, TSA PreCheck, Nexus, country visa, Yellow Fever or other vaccination, REAL ID — is within the alert window for its type. Each entry captures: document type, person it belongs to, exact expiration date, days remaining, renewal lead time specific to that document type, recommended action with URL or phone number, and urgency tier. Urgency calibrates by lead time: a passport with 9 months left and a 10-13 week renewal gets 🟡; same passport at 5 months gets 🔴. Global Entry (2-6 month processing + 3-12 month interview wait) flags 🔴 starting 12 months before expiry. Document flags deduplicate on `{document, person}` — repeated scans update the existing entry's days-remaining and append an escalation timestamp instead of creating duplicates.
+(2) **Booking gap flags**: written when a trip has departure within 60 days and one or more critical booking categories (flights, accommodation, insurance) are still unbooked. Format: "🟡 Book travel insurance for [destination] — departure [N] days."
+(3) **Budget overrun flags**: written when a trip's actual spend exceeds the estimated budget for any category by 15% or more (🟡) or 30% or more (🔴): "🟡 [Destination] accommodation over budget — est. $1,200, currently $1,600."
+(4) **Gear replacement flags**: written when `task-update-gear-inventory` marks an item `needs-replacement` or `retired`. Includes item name and "buy before next {activity} trip" guidance.
+(5) **Loyalty expiry flags**: written when `task-track-loyalty-status` finds points or status within 60 days (🔴) or 180 days (🟡) of expiry.
+(6) **Entry-requirement flags**: written when `task-check-entry-requirements` finds an unmet visa, eTA, vaccination, or passport-validity requirement for a trip with departure within 90 days.
 
-**Resolution logic:** On every call, the task scans existing open-loop items for resolution conditions. Document flag resolution: the document record in vault/explore/00_current/ has been updated with a new expiry date beyond the alert window — confirmed renewal. Booking gap resolution: the trip record in vault/explore/00_current/ now shows the booking as completed (confirmation number added). Budget overrun resolution: the trip record shows actual cost has been updated and the overrun has been addressed. Items are marked resolved with a checked checkbox and a resolution note.
+**Resolution logic:** On every call, the task scans existing open-loop items for resolution conditions. Document flag resolution: the document record in vault/explore/00_current/ has been updated with a new expiry date beyond the alert window — confirmed renewal. Booking gap resolution: the trip record in vault/explore/00_current/ now shows the booking as completed (confirmation number added). Budget overrun resolution: the trip record shows actual cost has been updated and the overrun has been addressed. Gear replacement resolution: the gear inventory shows the item replaced (new `purchased` date and `condition: new` or `good`). Loyalty expiry resolution: balance / tier renewal date pushed past the alert window. Entry-requirement resolution: the trip's `## Entry Requirements` row marks the item ✅. Items are marked resolved with a checked checkbox and a resolution note.
 
 **Priority ordering:** The file is ordered with 🔴 items first (critical document issues, trips within 30 days with missing critical bookings), then 🟡 items (important but not immediate), then 🟢 items (on-radar monitoring). Within each tier, items are sorted by urgency date (nearest date first).
 
