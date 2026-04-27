@@ -88,15 +88,30 @@ Before running **any skill or flow** in this domain — including flows called b
 
 Skills live in `skills/<skill-name>/SKILL.md`. To run a skill, read its `SKILL.md` and follow the instructions inside.
 
-- **`gdrive`** — Reads and writes files in configured Google Drive folders via the Drive API.
-- **`notion`** — Reads and writes Notion pages and databases via the Notion API.
-- **`flow-build-scorecard`** — Assembles a domain-by-domain life scorecard with score (1-10), trend indicator, open loop count, and 1-line status per installed plugin.
-- **`flow-draft-quarterly-plan`** — Drafts next quarter's OKRs based on current domain scores, open milestones, and life vision priorities.
-- **`flow-score-domain-progress`** — Evaluates progress toward quarterly OKRs across all domains; calculates percent complete per key result and flags OKRs at less than 50% with less than 2 weeks remaining in the quarter.
-- **`op-annual-review`** — December annual life review; retrospective on goals achieved across all domains, life vision document refresh, and next year's priority targets.
-- **`op-monthly-scorecard`** — Monthly life scorecard; scores each active life domain (1-10) based on open loops resolved, goals on pace, and positive milestones.
-- **`op-quarterly-planning`** — Structured quarterly planning session.
-- **`op-review-brief`** — Monthly vision review brief.
-- **`task-flag-stalled-goal`** — Writes a stalled goal flag to vault/vision/open-loops.md when a goal has had no progress for more than 42 days.
-- **`task-log-milestone`** — Records a life milestone to vault/vision/00_current/ with domain, description, date achieved, and notes.
-- **`task-update-open-loops`** — Writes all vision flags (stalled goals, OKRs off-pace, domain score declines) to vault/vision/open-loops.md and resolves completed items.
+**External Mirrors (Drive / Notion):** Use Claude Desktop's native Drive/Notion connectors if you want to mirror briefs to those services. The vision plugin no longer ships dedicated `app-gdrive` or `app-notion` skills.
+
+**Operations (user-facing routines):**
+- `op-monthly-scorecard` — Monthly life scorecard across configured domains; supports `--brief` mode for a read-only strategic snapshot (replaces the former `op-review-brief`).
+- `op-quarterly-planning` — Structured quarterly planning session.
+- `op-vision-snapshot` — 10-minute readable digest of life vision, values, theme, OKRs, and active bucket-list focus.
+- `op-year-in-review` — Annual backward-looking reflection (Dec / Jan); distinct from `op-annual-review` which is forward-looking.
+- `op-annual-review` — December annual review and next-year goal setting.
+
+**Flows (multi-step internals called by ops):**
+- `flow-build-scorecard` — Assembles a per-domain life scorecard from open-loops, OKR pace, milestones.
+- `flow-cross-domain-vision-pull` — Single helper that synthesizes state from every installed domain plugin; replaces scattered cross-domain reads.
+- `flow-draft-quarterly-plan` — Drafts next-quarter OKRs from current scores, milestones, vision priorities.
+- `flow-okr-scoring-rubric` — Reproducible OKR retrospective scoring (commit / target / stretch thresholds → 0.0–1.0).
+- `flow-score-domain-progress` — Evaluates progress toward quarterly OKRs across domains.
+- `flow-validate-vision-completeness` — Checks the vision document covers every configured horizon and domain.
+
+**Tasks (atomic operations called by flows / ops):**
+- `task-decision-alignment-check` — On-demand "is this aligned?" filter for major decisions; returns ALIGNED / MISALIGNED / CONDITIONAL.
+- `task-flag-stalled-goal` — Writes a stalled-goal flag when a goal has had no progress for >42 days.
+- `task-log-milestone` — Records a life milestone with domain, description, date, notes.
+- `task-mark-life-chapter` — Tags the current life chapter (early career, young parent, second act, etc.); informs which v2 skills apply.
+- `task-set-theme-of-year` — Captures the year's word or short-phrase framing.
+- `task-update-bucket-list` — Maintains the lifetime-goals roster.
+- `task-update-life-vision` — Writes and versions the life vision document with configurable horizons and domains.
+- `task-update-open-loops` — Single write point for `open-loops.md`.
+- `task-update-values-statement` — Captures and versions the explicit values statement.

@@ -81,3 +81,37 @@ Before running **any skill or flow** in this domain — including flows called b
 > You don't need everything perfect to start — add what you have and the skills will tell you what's still missing.
 >
 > **Stop here.** Do not scaffold files, do not offer options, do not ask questions. Wait for the user to complete setup and re-run the skill.
+
+## External Mirrors (Drive / Notion)
+
+Use Claude Desktop's native Drive/Notion connectors if you want to mirror briefs to those services. The vision plugin no longer ships dedicated `app-gdrive` or `app-notion` skills — the native connectors handle authentication and folder mapping without per-plugin OAuth setup. The vault on disk remains the source of truth; mirroring is opportunistic.
+
+## Skill Index
+
+Skills live in `skills/<skill-name>/SKILL.md`. To run a skill, read its `SKILL.md` and follow the instructions inside.
+
+**Operations (user-facing routines):**
+- `op-monthly-scorecard` — Monthly life scorecard across configured domains; supports `--brief` mode for a read-only strategic snapshot (replaces the former `op-review-brief`).
+- `op-quarterly-planning` — Structured quarterly planning session.
+- `op-vision-snapshot` — 10-minute readable digest of life vision, values, theme, OKRs, and active bucket-list focus.
+- `op-year-in-review` — Annual backward-looking reflection (Dec / Jan); distinct from `op-annual-review` which is forward-looking.
+- `op-annual-review` — December annual review and next-year goal setting.
+
+**Flows (multi-step internals called by ops):**
+- `flow-build-scorecard` — Assembles per-domain life scorecard from open-loops, OKR pace, milestones.
+- `flow-cross-domain-vision-pull` — Single helper that synthesizes state from every installed domain plugin; replaces scattered cross-domain reads.
+- `flow-draft-quarterly-plan` — Drafts next-quarter OKRs from current scores, milestones, vision priorities.
+- `flow-okr-scoring-rubric` — Reproducible OKR retrospective scoring (commit / target / stretch thresholds → 0.0–1.0).
+- `flow-score-domain-progress` — Evaluates progress toward quarterly OKRs across domains.
+- `flow-validate-vision-completeness` — Checks the vision document covers every configured horizon and domain.
+
+**Tasks (atomic operations called by flows / ops):**
+- `task-decision-alignment-check` — On-demand "is this aligned?" filter for major decisions; returns ALIGNED / MISALIGNED / CONDITIONAL.
+- `task-flag-stalled-goal` — Writes a stalled-goal flag when a goal has had no progress for >42 days.
+- `task-log-milestone` — Records a life milestone with domain, description, date, notes.
+- `task-mark-life-chapter` — Tags the current life chapter (early career, young parent, second act, etc.); informs which v2 skills apply.
+- `task-set-theme-of-year` — Captures the year's word or short-phrase framing.
+- `task-update-bucket-list` — Maintains the lifetime-goals roster.
+- `task-update-life-vision` — Writes and versions the life vision document with configurable horizons and domains.
+- `task-update-open-loops` — Single write point for `open-loops.md`.
+- `task-update-values-statement` — Captures and versions the explicit values statement.

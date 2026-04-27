@@ -4,14 +4,22 @@ cadence: monthly
 description: >
   Monthly life scorecard; scores each active life domain (1-10) based on open loops
   resolved, goals on pace, and positive milestones. Produces a trend view showing
-  which domains are improving, stalling, or declining.
-  Triggers: "life scorecard", "monthly scorecard", "how am I doing", "life review".
+  which domains are improving, stalling, or declining. Supports a `--brief` mode that
+  emits a lightweight read-only snapshot from cached state without recomputation.
+  Triggers: "life scorecard", "monthly scorecard", "how am I doing", "life review",
+  "vision brief".
 ---
 
 # vision-monthly-scorecard
 
-**Cadence:** Monthly (last day of month or first of new month)
-**Produces:** Monthly scorecard at ~/Documents/aireadylife/vault/vision/00_current/YYYY-MM-scorecard.md
+**Cadence:** Monthly (last day of month or first of new month).
+**Produces (default):** Monthly scorecard at ~/Documents/aireadylife/vault/vision/00_current/YYYY-MM-scorecard.md.
+**Produces (`--brief`):** Lightweight strategic summary at ~/Documents/aireadylife/vault/vision/02_briefs/YYYY-MM-vision-brief.md — read-only, no recomputation.
+
+## Modes
+
+- **Default (full):** runs `flow-build-scorecard` and `flow-score-domain-progress` from scratch, writes a fresh scorecard, updates open-loops. Use at month close.
+- **`--brief`:** read-only snapshot. Reads the most recent monthly scorecard already on disk, the current quarter OKRs, and (if calendar plugin installed) the past 4 weeks of focus blocks. Emits a 1-page strategic summary surfacing the 2 momentum domains, the 2 needs-attention domains, the top 3 at-risk KRs with diagnoses, and any intention-vs-attention gaps. No recomputation, no writes outside the brief. Trigger: "vision brief", "show me my brief". Equivalent to the prior `op-review-brief` skill.
 
 ## What It Does
 
