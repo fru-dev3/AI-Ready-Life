@@ -1,55 +1,43 @@
 ---
 type: op
-cadence: monthly
+cadence: on-demand
 description: >
-  Monthly wealth review brief. Compiles net worth delta, cash flow summary, investment
-  performance highlights, active open-loop count, and prioritized action items into a
-  single concise briefing document. Designed to be read in 3 minutes and acted on in
-  15. Triggers: "wealth review brief", "monthly wealth brief", "wealth summary brief",
-  "what happened with my wealth this month".
+  Lightweight current-state snapshot of wealth. Reads the most recent net worth, cash
+  flow, and any active open-loops, returns a 30-second summary. Distinct from
+  op-monthly-synthesis (which is the full monthly process that runs all flows fresh
+  and produces deep briefs). Use this when you want to know "where do I stand right now"
+  without re-running anything heavy.
 ---
 
 # wealth-review-brief
 
-**Cadence:** Monthly (after `wealth-monthly-synthesis` completes)
-**Produces:** Wealth review brief at `vault/wealth/02_briefs/YYYY-MM-wealth-brief.md`
+**Trigger phrases:**
+- "wealth snapshot"
+- "where do I stand financially right now"
+- "quick wealth review"
+- "what's the wealth picture"
+
+**Cadence:** On-demand. Runs against the most recent stored briefs without re-computing them.
 
 ## What It Does
 
-Generates the monthly wealth review brief — a single document that synthesizes the entire wealth picture into an executive summary with prioritized actions. This is the document the user reads first; the detailed sub-reports in `vault/wealth/02_briefs/` are available for drilling down.
+Reads the latest available wealth artifacts and returns a 30-second snapshot. No new analysis is performed; this is a read-only view of what's already in `02_briefs/` and `open-loops.md`.
 
-**Brief structure:**
+**Output (one screen):**
+- Net worth: most recent figure + MoM delta (from latest `02_briefs/YYYY-MM-net-worth.md`)
+- Cash flow: latest month income vs expenses (from latest `02_briefs/YYYY-MM-cash-flow.md`)
+- Top 3 open loops by severity from `open-loops.md`
+- Last full synthesis date — flags if older than 35 days with note: "Run `op-monthly-synthesis` for fresh analysis"
 
-**Headline.** Net worth as of [date]: $X. Change from last month: +/−$Y (+/−Z%). Direction: Up / Down / Flat.
+## Steps
 
-**Net Worth Breakdown.** Key drivers of the MoM change: which accounts moved most (in plain language, not a table). "Your 401k grew by $2,100 (market gain + contributions), your checking dropped $1,800 (annual car insurance payment), and your mortgage balance fell $650 (principal paydown)."
-
-**Cash Flow.** Income this month: $X. Expenses: $Y. Net: +/−$Z. Savings rate: W%. Budget status: N categories over budget (listed by name and overage amount). Top budget flag: "[Category]: $X over budget — [context]."
-
-**Investments.** Portfolio total: $X. 30-day return: Y%. YTD return: Z%. Allocation status: In range / Rebalancing needed (flag count). 401k pace: On track / $X short of $23,500 limit.
-
-**Open Items.** N open items in open-loops.md — [count] HIGH, [count] MEDIUM, [count] LOW.
-
-**Action Items (prioritized).** Numbered list of concrete next steps, ordered by impact and urgency. Each item is a single sentence describing exactly what to do. Examples:
-1. "Increase 401k contribution to $X/paycheck by logging into Fidelity NetBenefits."
-2. "Review the $3,200 unexplained movement in Checking #1234 and annotate in vault."
-3. "Rebalance: buy $1,800 of bonds in your Roth IRA to restore 15% bond allocation."
-
-## Calls
-
-- **Flows:** `wealth-build-review-brief` (internal flow for formatting)
-- **Tasks:** `wealth-update-open-loops`
-
-## Apps
-
-None
-
-## Vault Output
-
-- `vault/wealth/02_briefs/YYYY-MM-wealth-brief.md` — monthly wealth review brief
+1. Find newest net-worth brief in `vault/wealth/02_briefs/` matching `*-net-worth.md`
+2. Find newest cash-flow brief
+3. Read open-loops.md, sort by severity, take top 3
+4. Compose snapshot, no fresh computation
+5. Note synthesis freshness; if stale, prompt user
 
 ## Vault Paths
 
-- Reads from: `~/Documents/aireadylife/vault/wealth/00_current/` — active records and current state
-- Reads from: `~/Documents/aireadylife/vault/wealth/01_prior/` — prior period records for trend comparison
-- Reads from: `~/Documents/aireadylife/vault/wealth/02_briefs/` — prior briefs for period-over-period context
+- Reads only: `vault/wealth/02_briefs/`, `vault/wealth/open-loops.md`
+- Writes nothing

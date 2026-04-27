@@ -81,3 +81,43 @@ Before running **any skill or flow** in this domain — including flows called b
 > You don't need everything perfect to start — add what you have and the skills will tell you what's still missing.
 >
 > **Stop here.** Do not scaffold files, do not offer options, do not ask questions. Wait for the user to complete setup and re-run the skill.
+## Skill Index
+
+Skills live in `skills/<skill-name>/SKILL.md`. To run a skill, read its `SKILL.md` and follow the instructions inside.
+
+**Apps (data connectors — fallback when no native MCP connector available):**
+- `app-fidelity.portal` — 401(k) / brokerage / retirement data from Fidelity via Playwright + Chrome cookie auth.
+- `app-m1-finance.portal` — Pies / positions / portfolio from M1 Finance via Playwright.
+- `app-monarch-money` — Transactions / spend / budget from Monarch (fallback when Plaid native connector isn't available).
+
+**Operations (user-facing routines):**
+- `op-net-worth-review` — Monthly net worth snapshot with MoM delta and account-level flags.
+- `op-cash-flow-review` — Monthly income vs expense review with category variance and runway.
+- `op-investment-review` — Monthly + quarterly investment performance, allocation drift, concentration, benchmarks.
+- `op-debt-review` — Quarterly debt review with payoff projections and rate-opportunity check.
+- `op-monthly-synthesis` — Full monthly wealth process: runs every flow fresh, produces deep briefs.
+- `op-review-brief` — Lightweight current-state snapshot (read-only; no recomputation). For "where do I stand right now."
+- `op-subscription-audit` — Annual subscription review. Detects from records-plugin / transactions / manual. Recommends cancels.
+- `op-accountant-packet` — Year-end tax-prep packet (W-2s, 1099s, 1098s, K-1s, summaries). Cross-domain with tax.
+- `op-estate-plan-review` — Annual estate-plan freshness check (will, beneficiaries, directives, POAs).
+
+**Flows (multi-step internals called by ops):**
+- `flow-build-net-worth-summary` — Categorized net-worth table with per-account MoM deltas.
+- `flow-build-cash-flow-summary` — Income / expense / category / variance summary.
+- `flow-build-debt-summary` — Debt table with payoff projections.
+- `flow-analyze-investment-performance` — Per-account returns over multiple periods.
+- `flow-flag-account-anomalies` — >5% MoM balance changes or >$500 unrecognized transactions.
+- `flow-calculate-emergency-fund-runway` — Liquid balance ÷ trailing burn → months of runway vs floor.
+- `flow-separate-income-streams` — W-2 / self-employment / rental / investment / other, with volatility flags.
+- `flow-benchmark-investment-returns` — Per-account return vs reference benchmark with alpha and underperformance flag.
+- `flow-asset-allocation-drift` — Current allocation vs target; rebalance recommendations.
+- `flow-retirement-on-track` — Deterministic retirement-readiness projection with three remedies.
+- `flow-concentration-risk` — Single positions >10% (>5% for employer stock) flagged.
+- `flow-tax-efficient-account-placement` — Bonds / REITs / growth in the right tax bucket; relocation recommendations.
+
+**Tasks (atomic operations called by flows / ops):**
+- `task-extract-account-balance` — Reads one account's balance + prior period.
+- `task-flag-budget-variance` — Flag when category exceeds monthly budget >20%.
+- `task-flag-rate-opportunity` — Combined cash-drag + mortgage-refi + balance-transfer scanner; quantified annual savings.
+- `task-track-credit-score` — Logs scores per bureau; flags >20-point drops.
+- `task-update-open-loops` — Single write point for `open-loops.md`.
