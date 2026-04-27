@@ -88,20 +88,40 @@ Before running **any skill or flow** in this domain — including flows called b
 
 Skills live in `skills/<skill-name>/SKILL.md`. To run a skill, read its `SKILL.md` and follow the instructions inside.
 
-- **`flow-build-comp-summary`** — Builds a total compensation comparison table showing your current TC broken down by component (base, bonus, equity, benefits) versus market P25/P50/P75 for your role, level, and location.
-- **`flow-build-skills-gap-summary`** — Compares the current skills inventory (with proficiency levels and recency) to target role requirements aggregated from recent market scan data.
-- **`flow-review-pipeline`** — Reviews the active application pipeline for staleness and stall signals.
-- **`flow-scan-target-roles`** — Searches LinkedIn Jobs, Glassdoor, and Levels.fyi for open roles matching your configured target criteria.
-- **`op-comp-review`** — Quarterly total comp benchmarking vs.
-- **`op-market-scan`** — Monthly job market scan searching for open roles matching your target criteria: role titles, company tier, tech stack, compensation minimums, and remote policy.
-- **`op-monthly-sync`** — Full career data sync on the 1st of each month.
-- **`op-network-review`** — Monthly professional network health check.
-- **`op-review-brief`** — Monthly career review brief compiling market position, application pipeline status, comp vs.
-- **`op-skills-gap-review`** — Quarterly skills gap analysis comparing your current skills inventory to target role requirements scraped from the monthly market scan.
-- **`task-draft-outreach-message`** — Drafts a personalized professional outreach message for a specific contact, tailored to the context type (warm reconnect, referral request, networking maintenance, or intro request).
-- **`task-flag-comp-gap`** — Writes a structured compensation gap flag to vault/career/open-loops.md when current TC falls below market P50 for role, level, and metro.
-- **`task-log-application`** — Records a new job application (or pre-application watch item) to vault/career/00_current/ with full context: company, role, date, source, contact, comp range, tech stack, work arrangement, fit notes, and default follow-up window.
-- **`task-update-open-loops`** — Maintains vault/career/open-loops.md as the canonical list of outstanding career action items.
-- **`greenhouse`** — Tracks job application status, interview stages, offer details, and recruiter contacts from employer Greenhouse ATS candidate portals via Playwright.
-- **`levels-fyi`** — Scrapes compensation data by company, role, and level from Levels.fyi — the most accurate source for tech compensation benchmarking.
-- **`linkedin`** — Accesses LinkedIn for job market scanning, compensation research, professional network review, and recruiter message monitoring via Playwright with Chrome cookie session.
+**Apps (data connectors — fallback when no native MCP connector is available):**
+- **`app-greenhouse.api`** — Tracks job application status, interview stages, offer details, and recruiter contacts from employer Greenhouse ATS candidate portals via Playwright.
+- **`app-levels-fyi.portal`** — Scrapes compensation data by company, role, and level from Levels.fyi — the most accurate source for tech compensation benchmarking.
+- **`app-linkedin.portal`** — Accesses LinkedIn for job market scanning, compensation research, professional network review, and recruiter message monitoring via Playwright with Chrome cookie session.
+
+**Operations (user-facing routines):**
+- **`op-review-brief`** — Single monthly entry point. Refreshes pay-stub data, pipeline freshness, recruiter touches, and document organization, then synthesizes market position, comp summary, skills-gap priorities, and 3-5 next actions into a dated brief.
+- **`op-comp-review`** — Quarterly total comp benchmarking vs. market P25/P50/P75 for role, level, and metro.
+- **`op-market-scan`** — Monthly job market scan: orchestrates `flow-scan-target-roles` and writes the market scan brief.
+- **`op-weekly-market-pulse`** — Lightweight weekly scan: recruiter inbox sweep + tight-fit (fit ≥ 90, posted ≤ 7 days) role check + target-company posting-volume signal.
+- **`op-network-review`** — Monthly professional network health check; calls `task-flag-stale-contact`.
+- **`op-skills-gap-review`** — Quarterly skills gap analysis vs. recent market scan data; calls `flow-build-forward-skills-plan` annually.
+- **`op-interview-prep`** — Per-interview packet: company snapshot, JD analysis, prepared questions, behavioral STAR bank pre-filled from achievements, comp prep.
+- **`op-performance-review-prep`** — Pulls every achievement in the review period, drafts a competency-organized self-eval narrative, flags resume/LinkedIn refresh items.
+- **`op-promotion-campaign`** — Active during a promotion cycle: visibility log, sponsor list, stretch projects, gap-vs-bar analysis, decision-timeline reminders.
+
+**Flows (multi-step internals called by ops):**
+- **`flow-build-comp-summary`** — Builds the total comp vs. market P25/P50/P75 comparison table.
+- **`flow-build-skills-gap-summary`** — Reactive: compares current skills to today's target-role JDs.
+- **`flow-build-forward-skills-plan`** — Forward-looking: projects 18-24 month skill demand from horizon-scan + frontier-company JDs and recommends 2-3 high-conviction bets.
+- **`flow-review-pipeline`** — Audits active applications for staleness and stall signals.
+- **`flow-scan-target-roles`** — Data-collection only: queries LinkedIn / Levels.fyi / Glassdoor and returns ranked qualifying postings + market statistics. Routing belongs to the calling op.
+- **`flow-negotiation-prep`** — Moment-of-decision packet: BATNA, leverage, anchor/target/walk-away numbers, objection counters.
+
+**Tasks (atomic operations called by ops / flows / on demand):**
+- **`task-capture-achievement`** — Logs a dated STAR-format achievement; flags resume + LinkedIn refresh if either is >14 days stale.
+- **`task-flag-stale-contact`** — Scans contacts for last_contact_date >90 days; flags with severity tier and suggested next action.
+- **`task-parse-pay-stub`** — Extracts gross / net / withholdings / pre-tax / employer contributions from any payroll provider's stub; appends to log; flags anomalies.
+- **`task-export-comp-to-wealth`** — Writes structured comp + YTD payload to wealth/benefits plugins so cross-agent feeds work without those plugins reading career internals.
+- **`task-log-application`** — Records a job application (or pre-application watch) with comp, tech-stack match, contact, follow-up window.
+- **`task-log-recruiter-touch`** — Light CRM row per recruiter touch with quality scoring and `keep_warm` follow-up cadence.
+- **`task-draft-outreach-message`** — Drafts a personalized professional outreach for a specific contact and context.
+- **`task-update-reference-list`** — Maintains references with vouch strength + last-consent date; flags stale or insufficient references before a search begins.
+- **`task-snapshot-resume-linkedin`** — Versions resume + LinkedIn profile to `01_prior/snapshots/YYYY-MM-DD/` with section-level diff manifest.
+- **`task-track-license-cert-renewal`** — Tracks licenses, certifications, and CEU credits; flags renewals at 90/60/30 days and CEU off-pace.
+- **`task-flag-comp-gap`** — Writes a structured comp-gap flag to open-loops when current TC falls below market P50.
+- **`task-update-open-loops`** — Single write point for `vault/career/open-loops.md`.

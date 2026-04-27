@@ -2,7 +2,11 @@
 type: flow
 trigger: called-by-op
 description: >
-  Searches LinkedIn Jobs, Glassdoor, and Levels.fyi for open roles matching your configured target criteria. Filters results by title match, comp floor, remote policy, and company tier. Extracts compensation ranges, required skills, and company details. Returns a ranked list of qualifying roles for pipeline logging and market health statistics for the brief.
+  Data-collection flow only. Searches LinkedIn Jobs, Glassdoor, and Levels.fyi for open roles
+  matching configured target criteria, filters by title / comp floor / remote / company tier,
+  extracts compensation ranges and required skills, and returns a ranked list plus market
+  statistics. Does not write briefs, does not log to pipeline, does not send notifications —
+  all routing belongs to the calling op (op-market-scan or op-weekly-market-pulse).
 ---
 
 ## What It Does

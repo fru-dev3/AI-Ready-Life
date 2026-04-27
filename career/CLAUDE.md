@@ -81,3 +81,45 @@ Before running **any skill or flow** in this domain — including flows called b
 > You don't need everything perfect to start — add what you have and the skills will tell you what's still missing.
 >
 > **Stop here.** Do not scaffold files, do not offer options, do not ask questions. Wait for the user to complete setup and re-run the skill.
+
+## Skill Index
+
+Skills live in `skills/<skill-name>/SKILL.md`. To run a skill, read its `SKILL.md` and follow the instructions inside.
+
+**Apps (data connectors — fallback when no native MCP connector is available):**
+- `app-greenhouse.api` — Tracks job application status, interview stages, offers, and recruiter contacts from employer Greenhouse ATS portals via Playwright.
+- `app-levels-fyi.portal` — Compensation data by company / role / level from Levels.fyi.
+- `app-linkedin.portal` — LinkedIn job market scanning, comp research, network review, recruiter inbox via Playwright.
+
+**Operations (user-facing routines):**
+- `op-review-brief` — Single monthly entry point. Refreshes pay-stub / pipeline / recruiter / docs, then synthesizes the brief.
+- `op-comp-review` — Quarterly total comp benchmarking vs. market P25/P50/P75 for role, level, and metro.
+- `op-market-scan` — Monthly market scan; orchestrates `flow-scan-target-roles` and writes the market brief.
+- `op-weekly-market-pulse` — Weekly: recruiter inbox sweep + tight-fit role check + target-company signal.
+- `op-network-review` — Monthly professional network health check; calls `task-flag-stale-contact`.
+- `op-skills-gap-review` — Quarterly reactive gap analysis; calls `flow-build-forward-skills-plan` annually.
+- `op-interview-prep` — Per-interview packet: company snapshot, JD analysis, questions, STAR bank, comp prep.
+- `op-performance-review-prep` — Self-eval narrative organized by competency, drawn from achievements log.
+- `op-promotion-campaign` — Active during a promo cycle: visibility, sponsors, stretch, gap-vs-bar, timeline.
+
+**Flows (multi-step internals):**
+- `flow-build-comp-summary` — Total comp vs. market P25/P50/P75 table.
+- `flow-build-skills-gap-summary` — Reactive: current skills vs. today's target JDs.
+- `flow-build-forward-skills-plan` — Forward: 18-24 month skill bets from horizon scan + frontier JDs.
+- `flow-review-pipeline` — Stale and stalled-application detection.
+- `flow-scan-target-roles` — Data collection only: returns ranked postings + market stats. Routing is the op's job.
+- `flow-negotiation-prep` — Moment-of-decision packet: BATNA, leverage, target numbers, objection counters.
+
+**Tasks (atomic operations):**
+- `task-capture-achievement` — Logs a dated STAR achievement; flags resume/LinkedIn refresh if >14 days stale.
+- `task-flag-stale-contact` — Flags warm contacts with last_contact_date >90 days.
+- `task-parse-pay-stub` — Extracts every line item from one pay stub; flags anomalies vs. prior.
+- `task-export-comp-to-wealth` — Writes structured comp + YTD payload to wealth and benefits plugins.
+- `task-log-application` — Records a job application or pre-application watch item.
+- `task-log-recruiter-touch` — Light CRM row per recruiter touch with quality scoring and follow-up cadence.
+- `task-draft-outreach-message` — Drafts a personalized professional outreach.
+- `task-update-reference-list` — Maintains references with vouch strength and last-consent date.
+- `task-snapshot-resume-linkedin` — Versions resume + LinkedIn to `01_prior/snapshots/YYYY-MM-DD/` with diff manifest.
+- `task-track-license-cert-renewal` — Tracks licenses, certs, CEU credits; renewal proximity flags.
+- `task-flag-comp-gap` — Writes a comp-gap flag when TC falls below market P50.
+- `task-update-open-loops` — Single write point for `vault/career/open-loops.md`.
