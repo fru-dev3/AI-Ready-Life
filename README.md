@@ -27,6 +27,7 @@ Each plugin reads only its own vault folder. Each vault stays on your machine. N
 |---|---|---|
 | [`health`](https://frudev.gumroad.com/l/aireadylife-health) | Labs, medications, preventive care, wearables | $29 |
 | [`wealth`](https://frudev.gumroad.com/l/aireadylife-wealth) | Net worth, investments, debt, cash flow | $29 |
+| [`tax`](https://frudev.gumroad.com/l/aireadylife-tax) | Deadlines, estimates, deductions, year-end planning, CPA packet | $29 |
 | [`career`](https://frudev.gumroad.com/l/aireadylife-career) | Compensation, market data, job search, skills | $29 |
 | [`calendar`](https://frudev.gumroad.com/l/aireadylife-calendar) | Deadlines, focus time, agenda | $29 |
 | [`insurance`](https://frudev.gumroad.com/l/aireadylife-insurance) | Policies, claims, renewals, coverage gaps | $29 |
@@ -37,7 +38,7 @@ Each plugin reads only its own vault folder. Each vault stays on your machine. N
 | [`records`](https://frudev.gumroad.com/l/aireadylife-records) | Identity documents, legal, subscriptions | $19 |
 | [`social`](https://frudev.gumroad.com/l/aireadylife-social) | Contacts, relationships, birthdays, outreach | $19 |
 
-More domains (taxes, benefits, brand, business, content, real estate, intel) are in development and will be added as they're tested.
+More domains (benefits, brand, business, content, real estate, intel) are in development and will be added as they're tested.
 
 ---
 
