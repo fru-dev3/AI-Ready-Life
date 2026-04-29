@@ -112,6 +112,7 @@ Works with both. Pick whichever you already use.
 
 - **Claude Code** ([install](https://docs.anthropic.com/en/docs/claude-code)) — easiest if you're new
 - **Codex CLI** ([install](https://github.com/openai/codex)) — needs version 0.125 or later (`brew upgrade --cask codex`)
+- **Paperclip** ([install](https://paperclip.ing)) — turns each domain into a 24/7 agent on your machine. See the Paperclip section below.
 
 ### 2. Add the plugin
 
@@ -146,6 +147,59 @@ After purchase, unzip and place the folder at:
 | Windows | `%USERPROFILE%\Documents\aireadylife\vault\{domain}\` |
 
 Then open `config.md` and fill in your details. That's the only setup.
+
+---
+
+## Install in Paperclip (1-click)
+
+Paperclip turns each domain plugin into a persistent agent that runs on your machine, reads from your vault, and produces briefs on a schedule (or on demand). The whole AI Ready Life marketplace installs as a single Paperclip company in one HTTP call.
+
+**Prerequisites**
+
+- Paperclip is installed and running locally: `npx paperclipai dashboard`
+- The Paperclip API is reachable at `http://127.0.0.1:3100`
+- You have a gateway auth token at `~/.openclaw/openclaw.json` (created by the Paperclip install)
+
+**Preview before installing** (optional, recommended for the first run):
+
+```bash
+TOKEN=$(jq -r .gateway.auth.token ~/.openclaw/openclaw.json)
+
+curl -X POST http://127.0.0.1:3100/api/companies/imports/preview \
+  -H "Authorization: Bearer $TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "source": {"type":"github","url":"https://github.com/fru-dev3/AI-Ready-Life"},
+    "target": {"mode":"new_company","newCompanyName":"AI Ready Life"}
+  }' | jq '{agents: (.manifest.agents|length), skills: (.manifest.skills|length), warnings}'
+```
+
+You should see `{"agents": 12, "skills": 298, "warnings": []}`.
+
+**Install** (creates the company):
+
+```bash
+curl -X POST http://127.0.0.1:3100/api/companies/imports/apply \
+  -H "Authorization: Bearer $TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "source": {"type":"github","url":"https://github.com/fru-dev3/AI-Ready-Life"},
+    "target": {"mode":"new_company","newCompanyName":"AI Ready Life"}
+  }'
+```
+
+Open the Paperclip dashboard. You'll see a new **AI Ready Life** company with twelve director agents (Health, Wealth, Tax, Career, Calendar, Insurance, Vision, Explore, Home, Learning, Records, Social) and 298 skills attached. Each agent's `instructionsFilePath` points at its `<domain>/agents/<domain>-agent.md`, so the agent inherits the same domain knowledge as the Claude Code / Codex CLI versions.
+
+**Defaults** — heartbeat is **off** by default. Agents wake on demand only. You can flip individual agents to scheduled runs from the Paperclip dashboard if you want monthly briefs to fire automatically.
+
+**Update to a newer version** — re-run the same `imports/apply` call against your existing company:
+
+```bash
+"target": {"mode":"existing_company","companyId":"<your-company-id>"},
+"collisionStrategy": "rename"
+```
+
+**Add into your existing personal Paperclip company** instead of creating a new one — same as above with the company ID of your choice.
 
 ---
 
