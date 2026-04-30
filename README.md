@@ -152,54 +152,38 @@ Then open `config.md` and fill in your details. That's the only setup.
 
 ## Install in Paperclip (1-click)
 
-Paperclip turns each domain plugin into a persistent agent that runs on your machine, reads from your vault, and produces briefs on a schedule (or on demand). The whole AI Ready Life marketplace installs as a single Paperclip company in one HTTP call.
+Paperclip turns each domain plugin into a persistent agent that runs on your machine. The whole AI Ready Life marketplace installs as a single Paperclip company in **one command** — no curl, no token wrangling, no manual setup.
 
-**Prerequisites**
+**Prerequisites:** Paperclip installed and running locally (`npx paperclipai run`).
 
-- Paperclip is installed and running locally: `npx paperclipai dashboard`
-- The Paperclip API is reachable at `http://127.0.0.1:3100`
-- You have a gateway auth token at `~/.openclaw/openclaw.json` (created by the Paperclip install)
-
-**Preview before installing** (optional, recommended for the first run):
+**Install:**
 
 ```bash
-TOKEN=$(jq -r .gateway.auth.token ~/.openclaw/openclaw.json)
-
-curl -X POST http://127.0.0.1:3100/api/companies/imports/preview \
-  -H "Authorization: Bearer $TOKEN" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "source": {"type":"github","url":"https://github.com/fru-dev3/AI-Ready-Life"},
-    "target": {"mode":"new_company","newCompanyName":"AI Ready Life"}
-  }' | jq '{agents: (.manifest.agents|length), skills: (.manifest.skills|length), warnings}'
+npx paperclipai company import https://github.com/fru-dev3/AI-Ready-Life/tree/main/paperclip-pkg \
+  --target new --new-company-name "AI Ready Life" --yes
 ```
 
-You should see `{"agents": 12, "skills": 298, "warnings": []}`.
+That's it. Open the Paperclip dashboard and you'll see a new **AI Ready Life** company with twelve director agents (Health, Wealth, Tax, Career, Calendar, Insurance, Vision, Explore, Home, Learning, Records, Social) and 298 skills available. Each agent uses the `claude_local` adapter and reads the same `AGENTS.md` instructions as the Claude Code / Codex CLI versions — same brain, different runtime.
 
-**Install** (creates the company):
+**Preview first** (optional dry-run that doesn't create anything):
 
 ```bash
-curl -X POST http://127.0.0.1:3100/api/companies/imports/apply \
-  -H "Authorization: Bearer $TOKEN" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "source": {"type":"github","url":"https://github.com/fru-dev3/AI-Ready-Life"},
-    "target": {"mode":"new_company","newCompanyName":"AI Ready Life"}
-  }'
+npx paperclipai company import https://github.com/fru-dev3/AI-Ready-Life/tree/main/paperclip-pkg \
+  --target new --new-company-name "AI Ready Life" --yes --dry-run
 ```
 
-Open the Paperclip dashboard. You'll see a new **AI Ready Life** company with twelve director agents (Health, Wealth, Tax, Career, Calendar, Insurance, Vision, Explore, Home, Learning, Records, Social) and 298 skills attached. Each agent's `instructionsFilePath` points at its `<domain>/agents/<domain>-agent.md`, so the agent inherits the same domain knowledge as the Claude Code / Codex CLI versions.
-
-**Defaults** — heartbeat is **off** by default. Agents wake on demand only. You can flip individual agents to scheduled runs from the Paperclip dashboard if you want monthly briefs to fire automatically.
-
-**Update to a newer version** — re-run the same `imports/apply` call against your existing company:
+**Install into an existing company** instead of creating a new one:
 
 ```bash
-"target": {"mode":"existing_company","companyId":"<your-company-id>"},
-"collisionStrategy": "rename"
+npx paperclipai company import https://github.com/fru-dev3/AI-Ready-Life/tree/main/paperclip-pkg \
+  --target existing --company-id <your-company-id> --yes --collision rename
 ```
 
-**Add into your existing personal Paperclip company** instead of creating a new one — same as above with the company ID of your choice.
+**Notes**
+
+- After install, skills are available at the company level. Attach them to specific agents from the Paperclip dashboard, or use `paperclipai agent ... skills sync`.
+- Agents default to **on-demand** (no heartbeat). Enable scheduled runs per agent in the dashboard if you want monthly briefs to fire automatically.
+- The `paperclip-pkg/` subdirectory in this repo is auto-generated from the same source files Claude Code / Codex CLI use — see [`scripts/generate-paperclip-package.mjs`](scripts/generate-paperclip-package.mjs).
 
 ---
 

@@ -1,0 +1,52 @@
+schema: "paperclip/v1"
+agents:
+  health:
+    adapter:
+      type: "claude_local"
+  wealth:
+    adapter:
+      type: "claude_local"
+  tax:
+    adapter:
+      type: "claude_local"
+  career:
+    adapter:
+      type: "claude_local"
+  calendar:
+    adapter:
+      type: "claude_local"
+  explore:
+    adapter:
+      type: "claude_local"
+  home:
+    adapter:
+      type: "claude_local"
+  insurance:
+    adapter:
+      type: "claude_local"
+  learning:
+    adapter:
+      type: "claude_local"
+  records:
+    adapter:
+      type: "claude_local"
+  social:
+    adapter:
+      type: "claude_local"
+  vision:
+    adapter:
+      type: "claude_local"
+sidebar:
+  agents:
+    - "health"
+    - "wealth"
+    - "tax"
+    - "career"
+    - "calendar"
+    - "explore"
+    - "home"
+    - "insurance"
+    - "learning"
+    - "records"
+    - "social"
+    - "vision"
